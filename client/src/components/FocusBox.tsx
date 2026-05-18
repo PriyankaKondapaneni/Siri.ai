@@ -3,9 +3,10 @@ import { api, Task } from '../lib/api';
 import { useUI } from '../store/ui';
 import Popover from './Popover';
 import TaskForm, { PriorityFlag } from './TaskForm';
+import SelectTasksModal from './SelectTasksModal';
 import {
   Plus, ChevronDown, ChevronRight, ChevronLeft, Target, X, CheckSquare,
-  Calendar as CalendarIcon, ArrowUpDown, FolderOpen, Trash2, ListTodo,
+  Calendar as CalendarIcon, ArrowUpDown, FolderOpen,
 } from 'lucide-react';
 import { format, parse, isSameDay, startOfDay } from 'date-fns';
 import clsx from 'clsx';
@@ -14,9 +15,10 @@ type FilterView = 'starred' | 'today' | 'all';
 type SortKey = 'due' | 'priority' | 'created';
 
 export default function FocusBox() {
-  const { focusOpen } = useUI();
+  const { focusOpen, tasksVersion, bumpTasks } = useUI();
   const [tasks, setTasks] = useState<Task[]>([]);
   const [adding, setAdding] = useState(false);
+  const [picking, setPicking] = useState(false);
   const [view, setView] = useState<FilterView>('starred');
   const [sort, setSort] = useState<SortKey>('due');
 
@@ -25,12 +27,16 @@ export default function FocusBox() {
     setTasks(tasks);
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(); }, [tasksVersion]);
 
   const filtered = useMemo(() => {
     let list = tasks.filter(t => !t.parent_id);
     if (view === 'starred') list = list.filter(t => t.starred);
-    if (view === 'today') list = list.filter(t => t.list === 'today' || (t.due_date && isSameDay(parse(t.due_date, 'yyyy-MM-dd', new Date()), startOfDay(new Date()))));
+    if (view === 'today') {
+      const today = startOfDay(new Date());
+      list = list.filter(t => t.list === 'today' ||
+        (t.due_date && isSameDay(parse(t.due_date, 'yyyy-MM-dd', new Date()), today)));
+    }
 
     list.sort((a, b) => {
       if (sort === 'due') {
@@ -49,15 +55,23 @@ export default function FocusBox() {
 
   async function patch(t: Task, updates: Partial<Task>) {
     await api.patch(`/tasks/${t.id}`, updates);
-    load();
+    bumpTasks();
   }
 
   async function remove(t: Task) {
     await api.delete(`/tasks/${t.id}`);
-    load();
+    bumpTasks();
+  }
+
+  async function confirmPick(ids: string[]) {
+    await Promise.all(ids.map(id => api.patch(`/tasks/${id}`, { starred: 1 })));
+    setPicking(false);
+    bumpTasks();
   }
 
   if (!focusOpen) return null;
+
+  const pickable = tasks.filter(t => !t.parent_id && !t.starred && t.status === 'pending');
 
   return (
     <aside className="w-80 shrink-0 border-l border-ink-200 bg-canvas flex flex-col">
@@ -75,7 +89,7 @@ export default function FocusBox() {
             setView={setView}
             sort={sort}
             setSort={setSort}
-            onAdd={() => setAdding(true)}
+            onAdd={() => setPicking(true)}
           />
         </div>
       </header>
@@ -88,7 +102,7 @@ export default function FocusBox() {
               defaultStarred={view === 'starred'}
               defaultList={view === 'today' ? 'today' : undefined}
               onCancel={() => setAdding(false)}
-              onSaved={() => { setAdding(false); load(); }}
+              onSaved={() => { setAdding(false); bumpTasks(); }}
             />
           </div>
         )}
@@ -110,13 +124,21 @@ export default function FocusBox() {
 
           {filtered.length === 0 && !adding && (
             <div className="text-center mt-6 text-[12px] text-ink-400">
-              {view === 'starred' && 'No focused tasks. Star a task to bring it here.'}
+              {view === 'starred' && 'No focused tasks. Click "Option → Add" to pull some in.'}
               {view === 'today' && 'Nothing scheduled for today.'}
               {view === 'all' && 'No open tasks.'}
             </div>
           )}
         </div>
       </div>
+
+      {picking && (
+        <SelectTasksModal
+          tasks={pickable}
+          onClose={() => setPicking(false)}
+          onConfirm={confirmPick}
+        />
+      )}
     </aside>
   );
 }
@@ -168,8 +190,9 @@ function FocusTaskCard({
           <PriorityFlag value={task.priority} onChange={(p) => onPatch(task, { priority: p })} />
         </div>
         <button
-          onClick={() => onRemove(task)}
+          onClick={() => onPatch(task, { starred: 0 } as any)}
           className="text-ink-300 hover:text-warm-600 opacity-0 group-hover:opacity-100 transition mt-0.5"
+          title="Remove from focus box"
         >
           <X size={13} />
         </button>

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { api, Task } from '../lib/api';
+import { useUI } from '../store/ui';
 import TopBar from '../components/TopBar';
 import Popover from '../components/Popover';
 import TaskForm, { PriorityFlag, formatDuration } from '../components/TaskForm';
@@ -15,6 +16,7 @@ type Sort = 'created' | 'due' | 'priority';
 type Filter = 'all' | 'pending' | 'done';
 
 export default function Tasks() {
+  const { tasksVersion, bumpTasks } = useUI();
   const [tasks, setTasks] = useState<Task[]>([]);
   const [search, setSearch] = useState('');
   const [showSearch, setShowSearch] = useState(false);
@@ -30,16 +32,16 @@ export default function Tasks() {
     setTasks(tasks);
   }
 
-  useEffect(() => { load(); /* eslint-disable-next-line */ }, [filter]);
+  useEffect(() => { load(); /* eslint-disable-next-line */ }, [filter, tasksVersion]);
 
   async function patch(t: Task, updates: Partial<Task>) {
-    const { task } = await api.patch<{ task: Task }>(`/tasks/${t.id}`, updates);
-    setTasks(prev => prev.map(x => x.id === task.id ? task : x));
+    await api.patch(`/tasks/${t.id}`, updates);
+    bumpTasks();
   }
 
   async function remove(t: Task) {
     await api.delete(`/tasks/${t.id}`);
-    setTasks(prev => prev.filter(x => x.id !== t.id && x.parent_id !== t.id));
+    bumpTasks();
   }
 
   const childrenMap = useMemo(() => {
@@ -142,7 +144,7 @@ export default function Tasks() {
                 editingId={editingId}
                 setEditingId={setEditingId}
                 childrenMap={childrenMap}
-                reload={load}
+                reload={bumpTasks}
                 onPatch={patch}
                 onRemove={remove}
               />
