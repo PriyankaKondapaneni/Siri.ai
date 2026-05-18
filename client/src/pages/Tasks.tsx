@@ -2,9 +2,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { api, Task } from '../lib/api';
 import TopBar from '../components/TopBar';
 import DatePicker, { ScheduleValue, EMPTY_SCHEDULE } from '../components/DatePicker';
+import Popover from '../components/Popover';
 import {
   Search, ChevronDown, ChevronUp, CheckSquare, Flag, Calendar as CalendarIcon,
-  Pencil, FileText, Target, MoreHorizontal, Trash2, Plus, X,
+  Pencil, FileText, Target, Trash2, Plus,
 } from 'lucide-react';
 import { format, isPast, isSameDay, parse, startOfDay } from 'date-fns';
 import clsx from 'clsx';
@@ -368,17 +369,6 @@ function AddTaskForm({
 }
 
 function PriorityFlag({ value, onChange }: { value: Task['priority']; onChange: (p: Task['priority']) => void }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function onDoc(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    }
-    if (open) document.addEventListener('mousedown', onDoc);
-    return () => document.removeEventListener('mousedown', onDoc);
-  }, [open]);
-
   const color =
     value === 'high' ? 'text-warm-600' :
     value === 'medium' ? 'text-ink-700' :
@@ -386,16 +376,20 @@ function PriorityFlag({ value, onChange }: { value: Task['priority']; onChange: 
     'text-ink-300';
 
   return (
-    <div ref={ref} className="relative">
-      <button onClick={() => setOpen(o => !o)} className={clsx('icon-btn h-6 w-6', color)}>
-        <Flag size={12} fill={value !== 'none' ? 'currentColor' : 'none'} />
-      </button>
-      {open && (
-        <div className="absolute right-0 top-7 z-30 card shadow-pop py-1 w-32">
+    <Popover
+      width={128}
+      trigger={(open, toggle, ref) => (
+        <button ref={ref} onClick={toggle} className={clsx('icon-btn h-6 w-6', color)}>
+          <Flag size={12} fill={value !== 'none' ? 'currentColor' : 'none'} />
+        </button>
+      )}
+    >
+      {(close) => (
+        <div className="py-1">
           {(['high', 'medium', 'low', 'none'] as const).map(p => (
             <button
               key={p}
-              onClick={() => { onChange(p); setOpen(false); }}
+              onClick={() => { onChange(p); close(); }}
               className="w-full text-left px-3 py-1.5 text-[12px] flex items-center gap-2 hover:bg-ink-100"
             >
               <Flag
@@ -412,7 +406,7 @@ function PriorityFlag({ value, onChange }: { value: Task['priority']; onChange: 
           ))}
         </div>
       )}
-    </div>
+    </Popover>
   );
 }
 
@@ -450,33 +444,27 @@ function DropdownLabel({
   onChange: (v: string) => void;
   options: { value: string; label: string }[];
 }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function onDoc(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    }
-    if (open) document.addEventListener('mousedown', onDoc);
-    return () => document.removeEventListener('mousedown', onDoc);
-  }, [open]);
-
   return (
-    <div ref={ref} className="relative">
-      <button
-        onClick={() => setOpen(o => !o)}
-        className="inline-flex items-center gap-1 px-2 h-8 text-[13px] text-ink-600 hover:text-ink-900 hover:bg-ink-100 rounded-md"
-      >
-        {icon}
-        {label}
-        <ChevronDown size={11} className="text-ink-400" />
-      </button>
-      {open && (
-        <div className="absolute right-0 top-9 z-30 card shadow-pop py-1 w-36">
+    <Popover
+      width={144}
+      trigger={(open, toggle, ref) => (
+        <button
+          ref={ref}
+          onClick={toggle}
+          className="inline-flex items-center gap-1 px-2 h-8 text-[13px] text-ink-600 hover:text-ink-900 hover:bg-ink-100 rounded-md"
+        >
+          {icon}
+          {label}
+          <ChevronDown size={11} className="text-ink-400" />
+        </button>
+      )}
+    >
+      {(close) => (
+        <div className="py-1">
           {options.map(o => (
             <button
               key={o.value}
-              onClick={() => { onChange(o.value); setOpen(false); }}
+              onClick={() => { onChange(o.value); close(); }}
               className={clsx(
                 'w-full text-left px-3 py-1.5 text-[12px] hover:bg-ink-100',
                 current === o.value && 'bg-ink-100 text-ink-900 font-medium'
@@ -487,7 +475,7 @@ function DropdownLabel({
           ))}
         </div>
       )}
-    </div>
+    </Popover>
   );
 }
 

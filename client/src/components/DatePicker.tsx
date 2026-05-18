@@ -63,17 +63,38 @@ export default function DatePicker({
   );
   const [timeEnabled, setTimeEnabled] = useState(!!value.time);
   const [repeatEnabled, setRepeatEnabled] = useState(!!value.repeat);
-  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+  const [pos, setPos] = useState<{ top: number; left: number; maxHeight: number } | null>(null);
 
   useEffect(() => {
-    if (anchorRef.current) {
+    function compute() {
+      if (!anchorRef.current) return;
       const r = anchorRef.current.getBoundingClientRect();
       const popW = 320;
+      const margin = 12;
       let left = r.right - popW;
       if (left < 8) left = 8;
       if (left + popW > window.innerWidth - 8) left = window.innerWidth - popW - 8;
-      setPos({ top: r.bottom + 6, left });
+
+      const below = window.innerHeight - r.bottom - margin;
+      const above = r.top - margin;
+      let top: number;
+      let maxHeight: number;
+      if (below >= 320 || below >= above) {
+        top = r.bottom + 6;
+        maxHeight = Math.max(220, below);
+      } else {
+        maxHeight = Math.max(220, above);
+        top = Math.max(margin, r.top - maxHeight - 6);
+      }
+      setPos({ top, left, maxHeight });
     }
+    compute();
+    window.addEventListener('resize', compute);
+    window.addEventListener('scroll', compute, true);
+    return () => {
+      window.removeEventListener('resize', compute);
+      window.removeEventListener('scroll', compute, true);
+    };
   }, [anchorRef]);
 
   useEffect(() => {
@@ -113,8 +134,8 @@ export default function DatePicker({
   return (
     <div
       ref={popRef}
-      className="fixed z-50 w-80 card shadow-pop overflow-hidden bg-white"
-      style={{ top: pos.top, left: pos.left }}
+      className="fixed z-50 w-80 card shadow-pop overflow-y-auto bg-white"
+      style={{ top: pos.top, left: pos.left, maxHeight: pos.maxHeight }}
     >
       <div className="px-4 pt-3 pb-2">
         {presets.map(p => (

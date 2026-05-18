@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { api, Task } from '../lib/api';
 import { useUI } from '../store/ui';
-import { Plus, MoreHorizontal, X, ChevronDown, Target } from 'lucide-react';
+import Popover from './Popover';
+import { Plus, X, ChevronDown, Target } from 'lucide-react';
 import { format } from 'date-fns';
 import clsx from 'clsx';
 
@@ -154,31 +155,32 @@ export default function FocusBox() {
 }
 
 function FilterMenu({ current, onChange }: { current: string; onChange: (v: 'starred' | 'today' | 'all') => void }) {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="relative">
-      <button
-        onClick={() => setOpen(o => !o)}
-        className="inline-flex items-center gap-1 px-2 h-7 rounded border border-ink-200 bg-white text-[12px] text-ink-700 hover:bg-ink-50"
-      >
-        {current} <ChevronDown size={11} className="text-ink-400" />
-      </button>
-      {open && (
-        <>
-          <div className="fixed inset-0 z-10" onClick={() => setOpen(false)} />
-          <div className="absolute right-0 top-8 z-20 card shadow-pop py-1 w-32">
-            {(['starred', 'today', 'all'] as const).map(v => (
-              <button
-                key={v}
-                onClick={() => { onChange(v); setOpen(false); }}
-                className="w-full text-left px-3 py-1.5 text-[12px] text-ink-700 hover:bg-ink-100 capitalize"
-              >
-                {v === 'all' ? 'All open' : v}
-              </button>
-            ))}
-          </div>
-        </>
+    <Popover
+      width={128}
+      trigger={(open, toggle, ref) => (
+        <button
+          ref={ref}
+          onClick={toggle}
+          className="inline-flex items-center gap-1 px-2 h-7 rounded border border-ink-200 bg-white text-[12px] text-ink-700 hover:bg-ink-50"
+        >
+          {current} <ChevronDown size={11} className="text-ink-400" />
+        </button>
       )}
-    </div>
+    >
+      {(close) => (
+        <div className="py-1">
+          {(['starred', 'today', 'all'] as const).map(v => (
+            <button
+              key={v}
+              onClick={() => { onChange(v); close(); }}
+              className="w-full text-left px-3 py-1.5 text-[12px] text-ink-700 hover:bg-ink-100 capitalize"
+            >
+              {v === 'all' ? 'All open' : v}
+            </button>
+          ))}
+        </div>
+      )}
+    </Popover>
   );
 }
