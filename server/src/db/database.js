@@ -105,5 +105,6 @@ safeAlter("ALTER TABLE tasks ADD COLUMN due_time TEXT");
 safeAlter("ALTER TABLE tasks ADD COLUMN duration INTEGER");
 safeAlter("ALTER TABLE tasks ADD COLUMN reminder TEXT");
 safeAlter("ALTER TABLE tasks ADD COLUMN repeat_rule TEXT");
+safeAlter("ALTER TABLE tasks ADD COLUMN parent_id TEXT");
 
 export default db;

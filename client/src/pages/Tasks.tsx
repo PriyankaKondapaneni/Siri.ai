@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { api, Task } from '../lib/api';
 import TopBar from '../components/TopBar';
-import DatePicker, { ScheduleValue, EMPTY_SCHEDULE } from '../components/DatePicker';
+import DatePicker, { ScheduleValue } from '../components/DatePicker';
 import Popover from '../components/Popover';
 import {
-  Search, ChevronDown, ChevronUp, CheckSquare, Flag, Calendar as CalendarIcon,
-  Clock, Pencil, FileText, Target, Trash2, Plus,
+  Search, ChevronDown, ChevronUp, ChevronRight, CheckSquare, Flag,
+  Calendar as CalendarIcon, Clock, Pencil, FileText, Target, Trash2,
+  Plus, ListTree,
 } from 'lucide-react';
 import { format, isPast, isSameDay, parse, startOfDay } from 'date-fns';
 import clsx from 'clsx';
@@ -20,6 +21,7 @@ export default function Tasks() {
   const [sort, setSort] = useState<Sort>('due');
   const [filter, setFilter] = useState<Filter>('pending');
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
+  const [editingId, setEditingId] = useState<string | null>(null);
 
   async function load() {
     const params = new URLSearchParams();
@@ -37,8 +39,19 @@ export default function Tasks() {
 
   async function remove(t: Task) {
     await api.delete(`/tasks/${t.id}`);
-    setTasks(prev => prev.filter(x => x.id !== t.id));
+    setTasks(prev => prev.filter(x => x.id !== t.id && x.parent_id !== t.id));
   }
+
+  const childrenMap = useMemo(() => {
+    const m = new Map<string, Task[]>();
+    for (const t of tasks) {
+      if (!t.parent_id) continue;
+      const arr = m.get(t.parent_id) || [];
+      arr.push(t);
+      m.set(t.parent_id, arr);
+    }
+    return m;
+  }, [tasks]);
 
   const grouped = useMemo(() => {
     const today = startOfDay(new Date());
@@ -47,9 +60,10 @@ export default function Tasks() {
     const upcomingList: Task[] = [];
     const othersList: Task[] = [];
 
+    const topLevel = tasks.filter(t => !t.parent_id);
     const filtered = search
-      ? tasks.filter(t => t.title.toLowerCase().includes(search.toLowerCase()))
-      : tasks;
+      ? topLevel.filter(t => t.title.toLowerCase().includes(search.toLowerCase()))
+      : topLevel;
 
     for (const t of filtered) {
       if (!t.due_date) { othersList.push(t); continue; }
@@ -90,12 +104,7 @@ export default function Tasks() {
           <div className="flex items-center justify-between mb-5">
             <h1 className="text-2xl font-semibold tracking-tight text-ink-900">Tasks</h1>
             <div className="flex items-center gap-1">
-              <SearchControl
-                show={showSearch}
-                value={search}
-                onToggle={() => setShowSearch(v => !v)}
-                onChange={setSearch}
-              />
+              <SearchControl show={showSearch} value={search} onToggle={() => setShowSearch(v => !v)} onChange={setSearch} />
               <DropdownLabel
                 icon={<SortIcon />}
                 label="Sort by"
@@ -130,6 +139,9 @@ export default function Tasks() {
                 collapsed={!!collapsed[s.key]}
                 onToggleCollapse={() => setCollapsed(c => ({ ...c, [s.key]: !c[s.key] }))}
                 defaultDate={s.key === 'today' ? format(new Date(), 'yyyy-MM-dd') : null}
+                editingId={editingId}
+                setEditingId={setEditingId}
+                childrenMap={childrenMap}
                 reload={load}
                 onPatch={patch}
                 onRemove={remove}
@@ -143,19 +155,22 @@ export default function Tasks() {
 }
 
 function Section({
-  label, tasks, collapsed, onToggleCollapse, defaultDate, reload, onPatch, onRemove,
+  label, tasks, collapsed, onToggleCollapse, defaultDate,
+  editingId, setEditingId, childrenMap, reload, onPatch, onRemove,
 }: {
   label: string;
   tasks: Task[];
   collapsed: boolean;
   onToggleCollapse: () => void;
   defaultDate: string | null;
+  editingId: string | null;
+  setEditingId: (id: string | null) => void;
+  childrenMap: Map<string, Task[]>;
   reload: () => void;
   onPatch: (t: Task, u: Partial<Task>) => void;
   onRemove: (t: Task) => void;
 }) {
   const [adding, setAdding] = useState(false);
-  const [editingId, setEditingId] = useState<string | null>(null);
 
   return (
     <div className="card overflow-hidden">
@@ -192,12 +207,16 @@ function Section({
                   onSaved={() => { setEditingId(null); reload(); }}
                 />
               ) : (
-                <TaskRow
+                <TaskItem
                   key={t.id}
                   task={t}
+                  subTasks={childrenMap.get(t.id) || []}
                   onPatch={onPatch}
                   onRemove={onRemove}
                   onEdit={() => setEditingId(t.id)}
+                  editingId={editingId}
+                  setEditingId={setEditingId}
+                  reload={reload}
                 />
               )
             ))}
@@ -226,51 +245,141 @@ function Section({
   );
 }
 
-function TaskRow({
-  task, onPatch, onRemove, onEdit,
+function TaskItem({
+  task, subTasks, onPatch, onRemove, onEdit, editingId, setEditingId, reload, depth = 0,
 }: {
   task: Task;
+  subTasks: Task[];
   onPatch: (t: Task, u: Partial<Task>) => void;
   onRemove: (t: Task) => void;
   onEdit: () => void;
+  editingId: string | null;
+  setEditingId: (id: string | null) => void;
+  reload: () => void;
+  depth?: number;
 }) {
+  const [expanded, setExpanded] = useState(false);
+  const [addingSub, setAddingSub] = useState(false);
+  const hasSubs = subTasks.length > 0;
+
+  function startAddSub() {
+    setExpanded(true);
+    setAddingSub(true);
+  }
+
   return (
-    <div
-      onClick={onEdit}
-      className="group flex items-center gap-3 px-4 py-2 hover:bg-ink-50 border-b border-ink-150 last:border-b-0 cursor-pointer"
-    >
-      <button
-        onClick={(e) => { e.stopPropagation(); onPatch(task, { status: task.status === 'done' ? 'pending' : 'done' }); }}
+    <div className="border-b border-ink-150 last:border-b-0">
+      <div
+        onClick={onEdit}
         className={clsx(
-          'h-4 w-4 rounded-full border-2 grid place-items-center shrink-0 transition',
-          task.status === 'done' ? 'bg-ink-900 border-ink-900' : 'border-ink-300 hover:border-ink-700'
+          'group flex items-start gap-3 px-4 py-2 hover:bg-ink-50 cursor-pointer',
+          depth > 0 && 'pl-12'
         )}
       >
-        {task.status === 'done' && (
-          <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4">
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
+        <button
+          onClick={(e) => { e.stopPropagation(); onPatch(task, { status: task.status === 'done' ? 'pending' : 'done' }); }}
+          className={clsx(
+            'h-4 w-4 rounded-full border-2 grid place-items-center shrink-0 transition mt-0.5',
+            task.status === 'done' ? 'bg-ink-900 border-ink-900' : 'border-ink-300 hover:border-ink-700'
+          )}
+        >
+          {task.status === 'done' && (
+            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          )}
+        </button>
+
+        <div className="flex-1 min-w-0">
+          <div className={clsx(
+            'text-[13px] truncate',
+            task.status === 'done' ? 'line-through text-ink-400' : 'text-ink-900'
+          )}>
+            {task.title}
+          </div>
+          {hasSubs && (
+            <button
+              onClick={(e) => { e.stopPropagation(); setExpanded(v => !v); }}
+              className="mt-0.5 inline-flex items-center gap-1 text-2xs text-ink-400 hover:text-ink-700"
+            >
+              {expanded ? <ChevronDown size={10} /> : <ChevronRight size={10} />}
+              <ListTree size={11} />
+              {subTasks.length} sub-tasks
+            </button>
+          )}
+        </div>
+
+        {task.repeat_rule && (
+          <span className="text-2xs text-ink-400 mt-0.5" title={`Repeats ${task.repeat_rule}`}>↻</span>
         )}
-      </button>
-      <span className={clsx(
-        'flex-1 text-[13px] truncate',
-        task.status === 'done' ? 'line-through text-ink-400' : 'text-ink-900'
-      )}>
-        {task.title}
-      </span>
-      {task.repeat_rule && (
-        <span className="text-2xs text-ink-400" title={`Repeats ${task.repeat_rule}`}>↻</span>
-      )}
-      <ScheduleSummary task={task} />
-      <div onClick={(e) => e.stopPropagation()}>
-        <PriorityFlag value={task.priority} onChange={(p) => onPatch(task, { priority: p })} />
+        <div className="mt-0.5"><ScheduleSummary task={task} /></div>
+        <div className="mt-0.5" onClick={(e) => e.stopPropagation()}>
+          <PriorityFlag value={task.priority} onChange={(p) => onPatch(task, { priority: p })} />
+        </div>
+        {depth === 0 && (
+          <button
+            onClick={(e) => { e.stopPropagation(); startAddSub(); }}
+            className="icon-btn h-6 w-6 text-ink-300 hover:text-ink-700 opacity-0 group-hover:opacity-100"
+            title="Add sub-task"
+          >
+            <Plus size={12} />
+          </button>
+        )}
+        <button
+          onClick={(e) => { e.stopPropagation(); onRemove(task); }}
+          className="icon-btn h-6 w-6 text-ink-300 hover:text-warm-600 opacity-0 group-hover:opacity-100"
+        >
+          <Trash2 size={12} />
+        </button>
       </div>
-      <button
-        onClick={(e) => { e.stopPropagation(); onRemove(task); }}
-        className="icon-btn h-6 w-6 text-ink-300 hover:text-warm-600 opacity-0 group-hover:opacity-100"
-      >
-        <Trash2 size={12} />
-      </button>
+
+      {expanded && depth === 0 && (
+        <div className="bg-ink-50/40">
+          {subTasks.map(sub => (
+            editingId === sub.id ? (
+              <div key={sub.id} className="px-4 py-2 pl-12">
+                <TaskForm
+                  existing={sub}
+                  onCancel={() => setEditingId(null)}
+                  onSaved={() => { setEditingId(null); reload(); }}
+                />
+              </div>
+            ) : (
+              <TaskItem
+                key={sub.id}
+                task={sub}
+                subTasks={[]}
+                onPatch={onPatch}
+                onRemove={onRemove}
+                onEdit={() => setEditingId(sub.id)}
+                editingId={editingId}
+                setEditingId={setEditingId}
+                reload={reload}
+                depth={1}
+              />
+            )
+          ))}
+          {addingSub && (
+            <div className="px-4 py-2 pl-12">
+              <TaskForm
+                parentId={task.id}
+                defaultDate={task.due_date || undefined}
+                onCancel={() => setAddingSub(false)}
+                onSaved={() => { setAddingSub(false); reload(); }}
+              />
+            </div>
+          )}
+          {!addingSub && (
+            <button
+              onClick={() => setAddingSub(true)}
+              className="w-full text-left pl-12 pr-4 py-1.5 flex items-center gap-1.5 text-[12px] text-ink-500 hover:text-ink-900 hover:bg-ink-50"
+            >
+              <Plus size={11} />
+              Add sub-task
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -313,10 +422,11 @@ function ScheduleSummary({ task }: { task: Task }) {
 }
 
 function TaskForm({
-  existing, defaultDate, onCancel, onSaved,
+  existing, defaultDate, parentId, onCancel, onSaved,
 }: {
   existing?: Task;
   defaultDate?: string | null;
+  parentId?: string;
   onCancel: () => void;
   onSaved: () => void;
 }) {
@@ -339,7 +449,7 @@ function TaskForm({
     if (!title.trim()) return;
     setSubmitting(true);
     try {
-      const body = {
+      const body: any = {
         title: title.trim(),
         due_date: schedule.date,
         due_time: schedule.time,
@@ -354,6 +464,7 @@ function TaskForm({
         await api.post('/tasks', {
           ...body,
           list: schedule.date === format(new Date(), 'yyyy-MM-dd') ? 'today' : 'inbox',
+          parent_id: parentId || null,
         });
       }
       onSaved();
@@ -383,7 +494,7 @@ function TaskForm({
             if (e.key === 'Enter' && title.trim()) submit();
             if (e.key === 'Escape') onCancel();
           }}
-          placeholder="Add a task"
+          placeholder={parentId ? 'Add a sub-task' : 'Add a task'}
           className="flex-1 bg-transparent border-0 focus:outline-none text-[13px] placeholder-ink-400"
         />
         {timeOrDurationLabel && (
@@ -477,7 +588,7 @@ function PriorityFlag({ value, onChange }: { value: Task['priority']; onChange: 
                 }
                 fill={p !== 'none' ? 'currentColor' : 'none'}
               />
-              <span className="capitalize">{p}</span>
+              <span className="capitalize">{p === 'none' ? 'No priority' : p}</span>
             </button>
           ))}
         </div>

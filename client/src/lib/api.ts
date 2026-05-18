@@ -52,6 +52,7 @@ export type Task = {
   status: 'pending' | 'done';
   list: string;
   starred: number;
+  parent_id: string | null;
   created_at: number;
   updated_at: number;
 };

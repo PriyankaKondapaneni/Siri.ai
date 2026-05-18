@@ -20,21 +20,22 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   const {
     title, description, due_date, due_time, duration, reminder, repeat_rule,
-    priority, list,
+    priority, list, parent_id,
   } = req.body || {};
   if (!title) return res.status(400).json({ error: 'title is required' });
   const id = nanoid();
   const now = Date.now();
   db.prepare(
     `INSERT INTO tasks
-      (id, user_id, title, description, due_date, due_time, duration, reminder, repeat_rule, priority, status, list, starred, created_at, updated_at)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      (id, user_id, title, description, due_date, due_time, duration, reminder, repeat_rule, priority, status, list, starred, parent_id, created_at, updated_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).run(
     id, req.user.id, title, description || null,
     due_date || null, due_time || null,
     duration != null ? Number(duration) : null,
     reminder || null, repeat_rule || null,
-    priority || 'medium', 'pending', list || 'inbox', 0, now, now
+    priority || 'medium', 'pending', list || 'inbox', 0,
+    parent_id || null, now, now
   );
   const task = db.prepare('SELECT * FROM tasks WHERE id = ?').get(id);
   res.json({ task });
@@ -47,6 +48,7 @@ router.patch('/:id', (req, res) => {
   const fields = [
     'title', 'description', 'due_date', 'due_time', 'duration',
     'reminder', 'repeat_rule', 'priority', 'status', 'list', 'starred',
+    'parent_id',
   ];
   const updates = [];
   const values = [];
