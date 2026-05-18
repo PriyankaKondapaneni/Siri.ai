@@ -44,7 +44,11 @@ export type Task = {
   title: string;
   description: string | null;
   due_date: string | null;
-  priority: 'low' | 'medium' | 'high';
+  due_time: string | null;
+  duration: number | null;
+  reminder: string | null;
+  repeat_rule: string | null;
+  priority: 'none' | 'low' | 'medium' | 'high';
   status: 'pending' | 'done';
   list: string;
   starred: number;

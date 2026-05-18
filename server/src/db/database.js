@@ -94,4 +94,16 @@ db.exec(`
   );
 `);
 
+function safeAlter(sql) {
+  try {
+    db.exec(sql);
+  } catch (e) {
+    if (!String(e.message || '').toLowerCase().includes('duplicate column')) throw e;
+  }
+}
+safeAlter("ALTER TABLE tasks ADD COLUMN due_time TEXT");
+safeAlter("ALTER TABLE tasks ADD COLUMN duration INTEGER");
+safeAlter("ALTER TABLE tasks ADD COLUMN reminder TEXT");
+safeAlter("ALTER TABLE tasks ADD COLUMN repeat_rule TEXT");
+
 export default db;

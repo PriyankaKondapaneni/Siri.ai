@@ -12,20 +12,28 @@ router.get('/', (req, res) => {
   const params = [req.user.id];
   if (list) { sql += ' AND list = ?'; params.push(list); }
   if (status) { sql += ' AND status = ?'; params.push(status); }
-  sql += ' ORDER BY starred DESC, created_at DESC';
+  sql += ' ORDER BY starred DESC, due_date ASC, created_at DESC';
   const tasks = db.prepare(sql).all(...params);
   res.json({ tasks });
 });
 
 router.post('/', (req, res) => {
-  const { title, description, due_date, priority, list } = req.body || {};
+  const {
+    title, description, due_date, due_time, duration, reminder, repeat_rule,
+    priority, list,
+  } = req.body || {};
   if (!title) return res.status(400).json({ error: 'title is required' });
   const id = nanoid();
   const now = Date.now();
   db.prepare(
-    'INSERT INTO tasks (id, user_id, title, description, due_date, priority, status, list, starred, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    `INSERT INTO tasks
+      (id, user_id, title, description, due_date, due_time, duration, reminder, repeat_rule, priority, status, list, starred, created_at, updated_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).run(
-    id, req.user.id, title, description || null, due_date || null,
+    id, req.user.id, title, description || null,
+    due_date || null, due_time || null,
+    duration != null ? Number(duration) : null,
+    reminder || null, repeat_rule || null,
     priority || 'medium', 'pending', list || 'inbox', 0, now, now
   );
   const task = db.prepare('SELECT * FROM tasks WHERE id = ?').get(id);
@@ -36,13 +44,18 @@ router.patch('/:id', (req, res) => {
   const existing = db.prepare('SELECT * FROM tasks WHERE id = ? AND user_id = ?').get(req.params.id, req.user.id);
   if (!existing) return res.status(404).json({ error: 'Task not found' });
 
-  const fields = ['title', 'description', 'due_date', 'priority', 'status', 'list', 'starred'];
+  const fields = [
+    'title', 'description', 'due_date', 'due_time', 'duration',
+    'reminder', 'repeat_rule', 'priority', 'status', 'list', 'starred',
+  ];
   const updates = [];
   const values = [];
   for (const f of fields) {
     if (f in req.body) {
       updates.push(`${f} = ?`);
-      values.push(f === 'starred' ? (req.body[f] ? 1 : 0) : req.body[f]);
+      if (f === 'starred') values.push(req.body[f] ? 1 : 0);
+      else if (f === 'duration') values.push(req.body[f] != null ? Number(req.body[f]) : null);
+      else values.push(req.body[f]);
     }
   }
   if (!updates.length) return res.json({ task: existing });
