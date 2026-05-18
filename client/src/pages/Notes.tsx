@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { api, Note } from '../lib/api';
-import PageHeader from '../components/PageHeader';
-import { Plus, Pin, Trash2, Sparkles } from 'lucide-react';
+import TopBar from '../components/TopBar';
+import { Plus, Pin, Trash2, FileText } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
+import clsx from 'clsx';
 
 export default function Notes() {
   const { id } = useParams();
@@ -47,119 +48,119 @@ export default function Notes() {
     load();
   }
 
-  async function togglePin(n: Note) {
-    await api.patch(`/notes/${n.id}`, { pinned: n.pinned ? 0 : 1 });
+  async function patch(n: Note, updates: any) {
+    await api.patch(`/notes/${n.id}`, updates);
     load();
-  }
-
-  async function remove(n: Note) {
-    await api.delete(`/notes/${n.id}`);
-    if (current?.id === n.id) setCurrent(null);
-    navigate('/notes');
-    load();
-  }
-
-  async function summarize() {
-    if (!current) return;
-    const { result } = await api.post<{ result: string }>('/assistant/summarize', {
-      text: current.content,
-      instruction: 'Summarize this note in 3-5 bullets, then suggest 2 next actions.',
-    });
-    setContent(prev => `${prev}\n\n---\n\n### Siri summary\n${result}`);
-    setEditing(true);
   }
 
   return (
-    <div className="h-full flex">
-      <aside className="w-72 border-r border-ink-200 bg-white flex flex-col">
-        <div className="p-3 border-b border-ink-200 flex items-center justify-between">
-          <div className="text-sm font-semibold text-ink-900">All notes</div>
-          <button onClick={createNote} className="btn-ghost p-1.5">
-            <Plus size={16} />
-          </button>
-        </div>
-        <div className="flex-1 overflow-y-auto">
-          {notes.length === 0 && <div className="p-6 text-sm text-ink-400 text-center">No notes yet.</div>}
-          {notes.map(n => (
-            <button
-              key={n.id}
-              onClick={() => navigate(`/notes/${n.id}`)}
-              className={`w-full text-left px-4 py-3 border-b border-ink-100 hover:bg-ink-50 ${current?.id === n.id ? 'bg-brand-50' : ''}`}
-            >
-              <div className="flex items-start justify-between gap-2">
-                <div className="font-medium text-sm text-ink-900 truncate">{n.title || 'Untitled'}</div>
-                {n.pinned ? <Pin size={12} className="text-amber-500 shrink-0 mt-0.5" fill="currentColor" /> : null}
-              </div>
-              <div className="text-xs text-ink-500 truncate mt-0.5">
-                {(n.content || '').replace(/[#*`>]/g, '').slice(0, 80) || 'Empty note'}
-              </div>
-              <div className="text-xs text-ink-400 mt-1">{formatDistanceToNow(n.updated_at, { addSuffix: true })}</div>
+    <>
+      <TopBar />
+      <div className="flex-1 min-h-0 flex overflow-hidden">
+        <aside className="w-72 shrink-0 border-r border-ink-200 bg-white flex flex-col">
+          <div className="h-12 px-4 border-b border-ink-200 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <FileText size={14} className="text-warm-500" />
+              <span className="text-[14px] font-semibold text-ink-900">Notes</span>
+              <span className="text-2xs text-ink-500">{notes.length}</span>
+            </div>
+            <button onClick={createNote} className="icon-btn">
+              <Plus size={14} />
             </button>
-          ))}
-        </div>
-      </aside>
+          </div>
+          <div className="flex-1 overflow-y-auto">
+            {notes.length === 0 && <div className="p-6 text-[13px] text-ink-400 text-center">No notes yet.</div>}
+            {notes.map(n => (
+              <button
+                key={n.id}
+                onClick={() => navigate(`/notes/${n.id}`)}
+                className={clsx(
+                  'w-full text-left px-4 py-2.5 border-b border-ink-150 hover:bg-ink-50',
+                  current?.id === n.id && 'bg-ink-100'
+                )}
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <div className="text-[13px] font-medium text-ink-900 truncate">
+                    {n.title || 'Untitled'}
+                  </div>
+                  {n.pinned ? <Pin size={11} className="text-warm-500 shrink-0 mt-0.5" fill="currentColor" /> : null}
+                </div>
+                <div className="text-2xs text-ink-500 truncate mt-0.5">
+                  {(n.content || '').replace(/[#*`>]/g, '').slice(0, 80) || 'Empty note'}
+                </div>
+                <div className="text-2xs text-ink-400 mt-1">
+                  {formatDistanceToNow(n.updated_at, { addSuffix: true })}
+                </div>
+              </button>
+            ))}
+          </div>
+        </aside>
 
-      <div className="flex-1 flex flex-col overflow-hidden">
-        {current ? (
-          <>
-            <PageHeader
-              title={current.title || 'Untitled'}
-              subtitle={`Updated ${formatDistanceToNow(current.updated_at, { addSuffix: true })}`}
-              actions={
-                <div className="flex items-center gap-2">
-                  <button onClick={summarize} className="btn-secondary">
-                    <Sparkles size={16} /> Summarize
+        <div className="flex-1 flex flex-col overflow-hidden">
+          {current ? (
+            <>
+              <div className="h-12 px-6 border-b border-ink-200 bg-white flex items-center justify-between">
+                <div className="text-[14px] font-semibold text-ink-900 truncate">{title || current.title || 'Untitled'}</div>
+                <div className="flex items-center gap-1">
+                  <button onClick={() => patch(current, { pinned: current.pinned ? 0 : 1 })} className="icon-btn">
+                    <Pin size={14} fill={current.pinned ? 'currentColor' : 'none'} className={current.pinned ? 'text-warm-500' : ''} />
                   </button>
-                  <button onClick={() => togglePin(current)} className="btn-ghost">
-                    <Pin size={16} fill={current.pinned ? 'currentColor' : 'none'} />
-                  </button>
-                  <button onClick={() => remove(current)} className="btn-ghost text-red-500 hover:text-red-700">
-                    <Trash2 size={16} />
+                  <button
+                    onClick={async () => {
+                      await api.delete(`/notes/${current.id}`);
+                      setCurrent(null);
+                      navigate('/notes');
+                      load();
+                    }}
+                    className="icon-btn text-ink-500 hover:text-warm-600"
+                  >
+                    <Trash2 size={14} />
                   </button>
                   {editing ? (
-                    <button onClick={save} className="btn-primary">Save</button>
+                    <button onClick={save} className="btn-primary h-7 px-2.5 text-[12px]">Save</button>
                   ) : (
-                    <button onClick={() => setEditing(true)} className="btn-primary">Edit</button>
+                    <button onClick={() => setEditing(true)} className="btn-secondary h-7 px-2.5 text-[12px]">Edit</button>
                   )}
                 </div>
-              }
-            />
-            <div className="flex-1 overflow-y-auto px-8 py-6">
-              <div className="max-w-3xl mx-auto">
-                {editing ? (
-                  <>
-                    <input
-                      value={title}
-                      onChange={e => setTitle(e.target.value)}
-                      className="w-full text-2xl font-semibold bg-transparent border-0 focus:outline-none placeholder-ink-300 mb-4"
-                      placeholder="Title"
-                    />
-                    <textarea
-                      value={content}
-                      onChange={e => setContent(e.target.value)}
-                      className="w-full min-h-[60vh] bg-transparent border-0 focus:outline-none text-ink-800 leading-relaxed resize-none font-mono text-sm"
-                      placeholder="Start writing… Markdown supported."
-                    />
-                  </>
-                ) : (
-                  <div className="prose-chat text-ink-800">
-                    {current.content ? <ReactMarkdown>{current.content}</ReactMarkdown> : <div className="text-ink-400">Empty note. Click Edit to start writing.</div>}
-                  </div>
-                )}
+              </div>
+              <div className="flex-1 overflow-y-auto px-8 py-6">
+                <div className="max-w-3xl mx-auto">
+                  {editing ? (
+                    <>
+                      <input
+                        value={title}
+                        onChange={e => setTitle(e.target.value)}
+                        className="w-full text-2xl font-semibold tracking-tight bg-transparent border-0 focus:outline-none placeholder-ink-300 mb-4"
+                        placeholder="Title"
+                      />
+                      <textarea
+                        value={content}
+                        onChange={e => setContent(e.target.value)}
+                        className="w-full min-h-[55vh] bg-transparent border-0 focus:outline-none text-ink-800 leading-relaxed resize-none font-mono text-[13px]"
+                        placeholder="Markdown supported."
+                      />
+                    </>
+                  ) : (
+                    <div className="prose-chat text-ink-800 text-[14px]">
+                      {current.content ? <ReactMarkdown>{current.content}</ReactMarkdown> : <div className="text-ink-400">Empty note. Click Edit to start writing.</div>}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className="flex-1 grid place-items-center text-ink-400">
+              <div className="text-center">
+                <FileText size={32} className="mx-auto mb-2 opacity-50" />
+                <div className="text-[13px]">No note selected.</div>
+                <button onClick={createNote} className="btn-primary mt-3">
+                  <Plus size={13} /> New note
+                </button>
               </div>
             </div>
-          </>
-        ) : (
-          <div className="flex-1 grid place-items-center text-ink-400">
-            <div className="text-center">
-              <div>No note selected.</div>
-              <button onClick={createNote} className="btn-primary mt-4">
-                <Plus size={16} /> New note
-              </button>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { api, Task } from '../lib/api';
-import PageHeader from '../components/PageHeader';
-import { Plus, Star, Trash2, Inbox, Sun, ListChecks } from 'lucide-react';
+import TopBar from '../components/TopBar';
+import { Plus, Star, Trash2, ListTodo, Inbox as InboxIcon, Sun } from 'lucide-react';
 import { format } from 'date-fns';
+import clsx from 'clsx';
 
 const LISTS = [
-  { id: 'inbox', label: 'Inbox', icon: Inbox },
+  { id: 'inbox', label: 'Inbox', icon: InboxIcon },
   { id: 'today', label: 'Today', icon: Sun },
-  { id: 'all', label: 'All tasks', icon: ListChecks },
-];
+  { id: 'all', label: 'All', icon: ListTodo },
+] as const;
 
 export default function Tasks() {
-  const { list = 'inbox' } = useParams();
+  const [list, setList] = useState<'inbox' | 'today' | 'all'>('inbox');
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTitle, setNewTitle] = useState('');
   const [filter, setFilter] = useState<'pending' | 'done' | 'all'>('pending');
@@ -34,66 +34,56 @@ export default function Tasks() {
     load();
   }
 
-  async function toggle(t: Task) {
-    await api.patch(`/tasks/${t.id}`, { status: t.status === 'done' ? 'pending' : 'done' });
-    load();
-  }
-
-  async function toggleStar(t: Task) {
-    await api.patch(`/tasks/${t.id}`, { starred: t.starred ? 0 : 1 });
-    load();
-  }
-
-  async function remove(t: Task) {
-    await api.delete(`/tasks/${t.id}`);
-    load();
-  }
-
-  async function updatePriority(t: Task, priority: 'low' | 'medium' | 'high') {
-    await api.patch(`/tasks/${t.id}`, { priority });
+  async function patch(t: Task, updates: Partial<Task>) {
+    await api.patch(`/tasks/${t.id}`, updates);
     load();
   }
 
   return (
-    <div className="h-full flex">
-      <aside className="w-56 border-r border-ink-200 bg-white p-4">
-        <div className="text-xs uppercase tracking-wide text-ink-400 mb-2 px-2">Lists</div>
-        <nav className="space-y-1">
-          {LISTS.map(l => (
-            <a
-              key={l.id}
-              href={`/tasks/${l.id}`}
-              onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', `/tasks/${l.id}`); window.dispatchEvent(new PopStateEvent('popstate')); }}
-              className={`nav-item ${list === l.id ? 'active' : ''}`}
-            >
-              <l.icon size={16} />
-              {l.label}
-            </a>
-          ))}
-        </nav>
-      </aside>
-
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <PageHeader
-          title={LISTS.find(l => l.id === list)?.label || 'Tasks'}
-          subtitle={`${tasks.length} ${tasks.length === 1 ? 'task' : 'tasks'}`}
-          actions={
-            <div className="flex items-center gap-1 bg-ink-100 rounded-lg p-1">
+    <>
+      <TopBar />
+      <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
+        <div className="h-12 px-6 border-b border-ink-200 bg-white flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <ListTodo size={14} className="text-warm-500" />
+            <h1 className="text-[14px] font-semibold text-ink-900">Tasks</h1>
+            <span className="text-2xs text-ink-500">{tasks.length}</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-0.5 bg-ink-100 rounded-md p-0.5">
+              {LISTS.map(l => (
+                <button
+                  key={l.id}
+                  onClick={() => setList(l.id)}
+                  className={clsx(
+                    'inline-flex items-center gap-1 px-2 h-6 text-[12px] font-medium rounded',
+                    list === l.id ? 'bg-white text-ink-900 shadow-soft' : 'text-ink-500'
+                  )}
+                >
+                  <l.icon size={11} />
+                  {l.label}
+                </button>
+              ))}
+            </div>
+            <div className="flex items-center gap-0.5 bg-ink-100 rounded-md p-0.5">
               {(['pending', 'done', 'all'] as const).map(f => (
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`px-3 py-1 text-xs font-medium rounded-md capitalize ${filter === f ? 'bg-white shadow-soft text-ink-900' : 'text-ink-500'}`}
+                  className={clsx(
+                    'px-2 h-6 text-[12px] font-medium rounded capitalize',
+                    filter === f ? 'bg-white text-ink-900 shadow-soft' : 'text-ink-500'
+                  )}
                 >
                   {f}
                 </button>
               ))}
             </div>
-          }
-        />
+          </div>
+        </div>
 
-        <div className="px-8 py-4 border-b border-ink-200 bg-white">
-          <div className="flex gap-2 max-w-3xl">
+        <div className="px-6 py-3 border-b border-ink-200 bg-white">
+          <div className="max-w-3xl mx-auto flex gap-2">
             <input
               value={newTitle}
               onChange={e => setNewTitle(e.target.value)}
@@ -102,66 +92,76 @@ export default function Tasks() {
               className="input flex-1"
             />
             <button onClick={addTask} className="btn-primary">
-              <Plus size={16} /> Add
+              <Plus size={13} /> Add
             </button>
           </div>
         </div>
 
         <div className="flex-1 overflow-y-auto">
-          <div className="max-w-3xl mx-auto py-4">
+          <div className="max-w-3xl mx-auto px-2 py-2">
             {tasks.length === 0 && (
               <div className="text-center py-16 text-ink-400">
-                <ListChecks size={32} className="mx-auto mb-3 opacity-50" />
-                <div className="text-sm">No tasks here. Capture one above.</div>
+                <ListTodo size={26} className="mx-auto mb-2 opacity-50" />
+                <div className="text-[13px]">Nothing here yet.</div>
               </div>
             )}
             {tasks.map(t => (
-              <div key={t.id} className="group flex items-center gap-3 px-4 py-3 hover:bg-ink-50 border-b border-ink-100">
+              <div key={t.id} className="group flex items-center gap-2.5 px-3 py-2 rounded hover:bg-white border-b border-ink-150">
                 <button
-                  onClick={() => toggle(t)}
-                  className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${t.status === 'done' ? 'bg-brand-600 border-brand-600' : 'border-ink-300 hover:border-brand-500'}`}
+                  onClick={() => patch(t, { status: t.status === 'done' ? 'pending' : 'done' })}
+                  className={clsx(
+                    'h-4 w-4 rounded-full border-2 grid place-items-center transition shrink-0',
+                    t.status === 'done' ? 'bg-ink-900 border-ink-900' : 'border-ink-300 hover:border-ink-700'
+                  )}
                 >
-                  {t.status === 'done' && <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>}
+                  {t.status === 'done' && (
+                    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  )}
                 </button>
-                <div className="flex-1 min-w-0">
-                  <div className={`text-sm ${t.status === 'done' ? 'line-through text-ink-400' : 'text-ink-900'}`}>
-                    {t.title}
-                  </div>
-                  {t.description && <div className="text-xs text-ink-500 mt-0.5 truncate">{t.description}</div>}
-                </div>
+                <span className={clsx(
+                  'text-[13px] flex-1 truncate',
+                  t.status === 'done' ? 'line-through text-ink-400' : 'text-ink-900'
+                )}>
+                  {t.title}
+                </span>
                 <select
                   value={t.priority}
-                  onChange={(e) => updatePriority(t, e.target.value as any)}
-                  className={`text-xs px-2 py-1 rounded border-0 bg-transparent cursor-pointer ${
-                    t.priority === 'high' ? 'text-red-700 bg-red-50' :
-                    t.priority === 'medium' ? 'text-amber-700 bg-amber-50' :
-                    'text-ink-500 bg-ink-100'
-                  }`}
+                  onChange={e => patch(t, { priority: e.target.value as any })}
+                  className={clsx(
+                    'text-2xs px-1.5 py-0.5 rounded border-0 bg-transparent cursor-pointer',
+                    t.priority === 'high' ? 'text-warm-700 bg-warm-100' :
+                    t.priority === 'medium' ? 'text-ink-700 bg-ink-100' : 'text-ink-500'
+                  )}
                 >
                   <option value="low">low</option>
                   <option value="medium">medium</option>
                   <option value="high">high</option>
                 </select>
                 {t.due_date && (
-                  <span className="text-xs text-ink-500">{format(new Date(t.due_date), 'MMM d')}</span>
+                  <span className="text-2xs text-ink-500 shrink-0">{format(new Date(t.due_date), 'MMM d')}</span>
                 )}
                 <button
-                  onClick={() => toggleStar(t)}
-                  className={`p-1 rounded hover:bg-ink-200 ${t.starred ? 'text-amber-500' : 'text-ink-300 opacity-0 group-hover:opacity-100'}`}
+                  onClick={() => patch(t, { starred: t.starred ? 0 : 1 } as any)}
+                  className={clsx(
+                    'icon-btn h-6 w-6',
+                    t.starred ? 'text-warm-500' : 'text-ink-300 opacity-0 group-hover:opacity-100'
+                  )}
                 >
-                  <Star size={16} fill={t.starred ? 'currentColor' : 'none'} />
+                  <Star size={12} fill={t.starred ? 'currentColor' : 'none'} />
                 </button>
                 <button
-                  onClick={() => remove(t)}
-                  className="p-1 rounded hover:bg-red-100 text-ink-300 hover:text-red-600 opacity-0 group-hover:opacity-100"
+                  onClick={async () => { await api.delete(`/tasks/${t.id}`); load(); }}
+                  className="icon-btn h-6 w-6 text-ink-300 hover:text-warm-600 opacity-0 group-hover:opacity-100"
                 >
-                  <Trash2 size={16} />
+                  <Trash2 size={12} />
                 </button>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

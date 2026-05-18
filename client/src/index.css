@@ -4,12 +4,10 @@
 
 :root {
   color-scheme: light;
-  --canvas: #fbfbfa;
+  --canvas: #fbfaf8;
 }
 
-html, body, #root {
-  height: 100%;
-}
+html, body, #root { height: 100%; }
 
 body {
   margin: 0;
@@ -29,7 +27,7 @@ button { font-family: inherit; }
     @apply inline-flex items-center justify-center gap-1.5 px-3 h-8 rounded-md text-[13px] font-medium transition-colors;
   }
   .btn-primary {
-    @apply btn bg-ink-900 text-white hover:bg-ink-800 active:bg-black disabled:opacity-40 disabled:hover:bg-ink-900;
+    @apply btn bg-ink-900 text-white hover:bg-ink-800 disabled:opacity-40;
   }
   .btn-secondary {
     @apply btn bg-white text-ink-700 border border-ink-200 hover:bg-ink-50 hover:border-ink-300;
@@ -37,11 +35,8 @@ button { font-family: inherit; }
   .btn-ghost {
     @apply btn text-ink-600 hover:bg-ink-100 hover:text-ink-900;
   }
-  .btn-accent {
-    @apply btn bg-accent-400 text-ink-900 hover:bg-accent-300;
-  }
   .icon-btn {
-    @apply inline-flex items-center justify-center h-7 w-7 rounded-md text-ink-500 hover:bg-ink-100 hover:text-ink-900 transition-colors;
+    @apply inline-flex items-center justify-center h-8 w-8 rounded-md text-ink-500 hover:bg-ink-100 hover:text-ink-900 transition-colors;
   }
   .input {
     @apply w-full rounded-md border border-ink-200 bg-white px-3 h-9 text-[13px] placeholder-ink-400 focus:outline-none focus:ring-2 focus:ring-ink-300/40 focus:border-ink-400 transition;
@@ -49,14 +44,14 @@ button { font-family: inherit; }
   .card {
     @apply bg-white border border-ink-200 rounded-lg;
   }
-  .nav-item {
-    @apply flex items-center gap-2 px-2 h-7 rounded-md text-[13px] font-normal text-ink-600 hover:bg-ink-100 hover:text-ink-900 transition-colors cursor-pointer;
+  .side-item {
+    @apply flex items-center gap-2 px-2.5 h-8 rounded-md text-[13px] font-normal text-ink-700 hover:bg-ink-150 transition-colors cursor-pointer;
   }
-  .nav-item.active {
-    @apply bg-ink-150 text-ink-900 font-medium;
+  .side-item.active {
+    @apply bg-white border border-ink-200/70 shadow-soft text-ink-900 font-medium;
   }
-  .nav-section {
-    @apply text-2xs uppercase tracking-wider text-ink-400 font-medium px-2 mt-4 mb-1;
+  .side-section {
+    @apply text-2xs uppercase tracking-wider text-ink-500 font-semibold px-2.5 mt-4 mb-1.5 flex items-center gap-1;
   }
   .kbd {
     @apply inline-flex items-center justify-center min-w-[18px] h-[18px] px-1 text-2xs font-medium text-ink-500 bg-ink-100 border border-ink-200 rounded;
@@ -64,8 +59,11 @@ button { font-family: inherit; }
   .chip {
     @apply inline-flex items-center gap-1 px-1.5 h-5 rounded text-2xs font-medium bg-ink-100 text-ink-600;
   }
-  .divider {
-    @apply h-px bg-ink-200;
+  .tab {
+    @apply inline-flex items-center gap-1.5 h-9 px-3 text-[13px] font-medium text-ink-500 hover:text-ink-900 border-b-2 border-transparent transition;
+  }
+  .tab.active {
+    @apply text-ink-900 border-ink-900;
   }
 }
 
@@ -79,38 +77,11 @@ button { font-family: inherit; }
 .prose-chat h3 { font-size: 0.95rem; }
 .prose-chat ul, .prose-chat ol { margin: 0.4em 0; padding-left: 1.2em; }
 .prose-chat li { margin: 0.15em 0; }
-.prose-chat code {
-  background: #f4f4f5;
-  padding: 0.1em 0.3em;
-  border-radius: 3px;
-  font-size: 0.85em;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-.prose-chat pre {
-  background: #18181b;
-  color: #e4e4e7;
-  padding: 0.6rem 0.8rem;
-  border-radius: 6px;
-  overflow-x: auto;
-  margin: 0.4em 0;
-  font-size: 0.85em;
-}
+.prose-chat code { background: #f4f4f5; padding: 0.1em 0.3em; border-radius: 3px; font-size: 0.85em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.prose-chat pre { background: #18181b; color: #e4e4e7; padding: 0.6rem 0.8rem; border-radius: 6px; overflow-x: auto; margin: 0.4em 0; font-size: 0.85em; }
 .prose-chat pre code { background: transparent; color: inherit; padding: 0; }
-.prose-chat a { color: #27272a; text-decoration: underline; text-underline-offset: 2px; }
-.prose-chat blockquote {
-  border-left: 2px solid #d4d4d8;
-  padding-left: 0.7em;
-  color: #52525b;
-  margin: 0.5em 0;
-}
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d4d4d8; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
-
-.fade-in { animation: fadeIn 0.15s ease-out; }
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(2px); }
-  to { opacity: 1; transform: translateY(0); }
-}

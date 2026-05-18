@@ -1,39 +1,17 @@
 import express from 'express';
 import { nanoid } from 'nanoid';
-import Anthropic from '@anthropic-ai/sdk';
 import db from '../db/database.js';
 import { requireAuth } from '../middleware/auth.js';
 
 const router = express.Router();
 router.use(requireAuth);
 
-const CLAUDE_MODEL = process.env.CLAUDE_MODEL || 'claude-opus-4-7';
-
-function getClient() {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) return null;
-  return new Anthropic({ apiKey });
-}
-
-function buildSystemPrompt(user) {
-  const today = new Date().toLocaleDateString('en-US', {
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-  });
-  return `You are Siri, an AI productivity assistant inside the Siri.ai app — an all-in-one workspace for tasks, notes, calendar, and email.
-
-You help ${user?.name || 'the user'} stay focused, plan their day, draft emails and notes, summarize meetings, triage their inbox, and answer questions.
-
-Today is ${today}.
-
-Style guidelines:
-- Be concise, warm, and direct. Avoid filler.
-- When asked to plan a day or week, propose a clear schedule with time blocks.
-- When drafting, return well-formatted markdown with a clear structure.
-- When asked to summarize, lead with the most important takeaway.
-- Ask one clarifying question only if essential; otherwise make a reasonable best attempt.
-
-You are inside Siri.ai. Never refer to yourself as Saner. Refer to yourself as Siri.`;
-}
+const STUB_REPLIES = [
+  "Got it. I'm running in stub mode right now — Claude isn't wired in yet. Once you connect your API key in `server/.env`, I'll give a real answer here.\n\nFor now, here's a sketch of what I'd do:\n\n- Pull in what you have on your plate\n- Group by theme\n- Surface the 1–2 highest-leverage things",
+  "Quick note — I'm in stub mode (no AI calls yet). When you turn on the Claude API, I'll have real context across your tasks, notes, and inbox.\n\nIn the meantime, try jotting it as a quick note and I'll help you organize it later.",
+  "Thanks for the prompt. I'm running without an LLM connection at the moment, but once Claude is enabled I'll be able to:\n\n1. Plan your day based on your schedule and tasks\n2. Summarize emails and notes\n3. Turn freeform thoughts into next steps\n\nSwitch on the API key whenever you're ready.",
+  "Stub reply: I hear you. Once Claude is connected I'll respond with real reasoning here. Until then, treat me as a placeholder — the rest of the app (tasks, inbox, notes, timeline) is fully functional.",
+];
 
 router.get('/', (req, res) => {
   const chats = db
@@ -80,34 +58,9 @@ router.post('/:id/messages', async (req, res) => {
     'INSERT INTO messages (id, chat_id, role, content, created_at) VALUES (?, ?, ?, ?, ?)'
   ).run(userMessageId, chat.id, 'user', content, now);
 
-  const history = db
-    .prepare('SELECT role, content FROM messages WHERE chat_id = ? ORDER BY created_at ASC')
-    .all(chat.id);
-
-  const user = db.prepare('SELECT id, email, name FROM users WHERE id = ?').get(req.user.id);
-  const client = getClient();
-
-  let assistantText;
-  if (!client) {
-    assistantText = `Siri here. I'm running without an ANTHROPIC_API_KEY configured, so I can't reach Claude right now. Add your key in server/.env to enable full responses.\n\nYou said: "${content}"`;
-  } else {
-    try {
-      const response = await client.messages.create({
-        model: CLAUDE_MODEL,
-        max_tokens: 1024,
-        system: buildSystemPrompt(user),
-        messages: history.map(m => ({ role: m.role, content: m.content })),
-      });
-      assistantText = response.content
-        .filter(b => b.type === 'text')
-        .map(b => b.text)
-        .join('\n')
-        .trim() || '(no response)';
-    } catch (err) {
-      console.error('Claude API error:', err);
-      assistantText = `I hit an error reaching Claude: ${err.message || err}. Check that your ANTHROPIC_API_KEY is valid.`;
-    }
-  }
+  // Stub mode — Claude API not wired in yet. Pick a varied placeholder reply.
+  await new Promise(r => setTimeout(r, 600 + Math.random() * 600));
+  const assistantText = STUB_REPLIES[Math.floor(Math.random() * STUB_REPLIES.length)];
 
   const assistantMessageId = nanoid();
   const replyTime = Date.now();
@@ -117,7 +70,7 @@ router.post('/:id/messages', async (req, res) => {
 
   let title = chat.title;
   const messageCount = db.prepare('SELECT COUNT(*) AS c FROM messages WHERE chat_id = ?').get(chat.id).c;
-  if (messageCount <= 2 && (!title || title === 'New chat')) {
+  if (messageCount <= 2 && (!title || title === 'New chat' || title === 'Conversation' || title === 'Quick chat')) {
     title = content.slice(0, 60);
     db.prepare('UPDATE chats SET title = ?, updated_at = ? WHERE id = ?').run(title, replyTime, chat.id);
   } else {
