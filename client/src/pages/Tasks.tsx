@@ -1,12 +1,12 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { api, Task } from '../lib/api';
 import TopBar from '../components/TopBar';
-import DatePicker, { ScheduleValue } from '../components/DatePicker';
 import Popover from '../components/Popover';
+import TaskForm, { PriorityFlag, formatDuration } from '../components/TaskForm';
 import {
-  Search, ChevronDown, ChevronUp, ChevronRight, CheckSquare, Flag,
-  Calendar as CalendarIcon, Clock, Pencil, FileText, Target, Trash2,
-  Plus, ListTree,
+  Search, ChevronDown, ChevronUp, ChevronRight, CheckSquare, Sparkles,
+  Calendar as CalendarIcon, Clock, Pencil, Target, Trash2, Plus, ListTree,
+  MoreHorizontal,
 } from 'lucide-react';
 import { format, isPast, isSameDay, parse, startOfDay } from 'date-fns';
 import clsx from 'clsx';
@@ -297,7 +297,7 @@ function TaskItem({
           )}>
             {task.title}
           </div>
-          {hasSubs && (
+          {hasSubs ? (
             <button
               onClick={(e) => { e.stopPropagation(); setExpanded(v => !v); }}
               className="mt-0.5 inline-flex items-center gap-1 text-2xs text-ink-400 hover:text-ink-700"
@@ -306,7 +306,15 @@ function TaskItem({
               <ListTree size={11} />
               {subTasks.length} sub-tasks
             </button>
-          )}
+          ) : depth === 0 ? (
+            <button
+              onClick={(e) => { e.stopPropagation(); startAddSub(); }}
+              className="mt-0.5 hidden group-hover:inline-flex items-center gap-1 text-2xs text-ink-400 hover:text-ink-700"
+            >
+              <ListTree size={11} />
+              Add sub-task
+            </button>
+          ) : null}
         </div>
 
         {task.repeat_rule && (
@@ -316,21 +324,15 @@ function TaskItem({
         <div className="mt-0.5" onClick={(e) => e.stopPropagation()}>
           <PriorityFlag value={task.priority} onChange={(p) => onPatch(task, { priority: p })} />
         </div>
-        {depth === 0 && (
-          <button
-            onClick={(e) => { e.stopPropagation(); startAddSub(); }}
-            className="icon-btn h-6 w-6 text-ink-300 hover:text-ink-700 opacity-0 group-hover:opacity-100"
-            title="Add sub-task"
-          >
-            <Plus size={12} />
-          </button>
-        )}
-        <button
-          onClick={(e) => { e.stopPropagation(); onRemove(task); }}
-          className="icon-btn h-6 w-6 text-ink-300 hover:text-warm-600 opacity-0 group-hover:opacity-100"
-        >
-          <Trash2 size={12} />
-        </button>
+        <div onClick={(e) => e.stopPropagation()} className="mt-0.5 opacity-0 group-hover:opacity-100 transition">
+          <TaskRowMenu
+            task={task}
+            onAskAI={() => { /* TODO: hook up when Claude is wired */ }}
+            onToggleFocus={() => onPatch(task, { starred: task.starred ? 0 : 1 } as any)}
+            onAddSubTask={depth === 0 ? startAddSub : undefined}
+            onDelete={() => onRemove(task)}
+          />
+        </div>
       </div>
 
       {expanded && depth === 0 && (
@@ -384,6 +386,93 @@ function TaskItem({
   );
 }
 
+function TaskRowMenu({
+  task, onAskAI, onToggleFocus, onAddSubTask, onDelete,
+}: {
+  task: Task;
+  onAskAI: () => void;
+  onToggleFocus: () => void;
+  onAddSubTask?: () => void;
+  onDelete: () => void;
+}) {
+  return (
+    <Popover
+      width={200}
+      trigger={(open, toggle, ref) => (
+        <button
+          ref={ref}
+          onClick={toggle}
+          className="icon-btn h-6 w-6 text-ink-400 hover:text-ink-900"
+          title="More"
+        >
+          <MoreHorizontal size={14} />
+        </button>
+      )}
+    >
+      {(close) => (
+        <div className="py-1">
+          <MenuItem
+            icon={<Sparkles size={13} className="text-warm-500" />}
+            label="Ask AI"
+            labelClass="text-warm-600"
+            onClick={() => { onAskAI(); close(); }}
+          />
+          <MenuItem
+            icon={<CheckSquare size={13} />}
+            label="Select"
+            onClick={() => { close(); }}
+          />
+          <MenuItem
+            icon={<Target size={13} />}
+            label={task.starred ? 'Remove from focus box' : 'Add to focus box'}
+            onClick={() => { onToggleFocus(); close(); }}
+          />
+          {onAddSubTask && (
+            <MenuItem
+              icon={<Plus size={13} />}
+              label="Add sub-task"
+              onClick={() => { onAddSubTask(); close(); }}
+            />
+          )}
+          <div className="my-1 border-t border-ink-150" />
+          <MenuItem
+            icon={<Trash2 size={13} className="text-warm-600" />}
+            label="Delete"
+            labelClass="text-warm-700"
+            hoverClass="hover:bg-warm-50"
+            onClick={() => { onDelete(); close(); }}
+          />
+        </div>
+      )}
+    </Popover>
+  );
+}
+
+function MenuItem({
+  icon, label, labelClass, hoverClass, trailing, onClick,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  labelClass?: string;
+  hoverClass?: string;
+  trailing?: React.ReactNode;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={clsx(
+        'w-full text-left px-3 py-1.5 text-[13px] flex items-center gap-2',
+        hoverClass || 'hover:bg-ink-100'
+      )}
+    >
+      {icon}
+      <span className={clsx('flex-1', labelClass || 'text-ink-800')}>{label}</span>
+      {trailing}
+    </button>
+  );
+}
+
 function ScheduleSummary({ task }: { task: Task }) {
   if (!task.due_date && !task.duration && !task.due_time) return null;
   const today = startOfDay(new Date());
@@ -418,182 +507,6 @@ function ScheduleSummary({ task }: { task: Task }) {
       )}
       {dateBadge}
     </div>
-  );
-}
-
-function TaskForm({
-  existing, defaultDate, parentId, onCancel, onSaved,
-}: {
-  existing?: Task;
-  defaultDate?: string | null;
-  parentId?: string;
-  onCancel: () => void;
-  onSaved: () => void;
-}) {
-  const [title, setTitle] = useState(existing?.title || '');
-  const [schedule, setSchedule] = useState<ScheduleValue>(() => ({
-    date: existing?.due_date ?? defaultDate ?? null,
-    time: existing?.due_time ?? null,
-    duration: existing?.duration ?? null,
-    reminder: existing?.reminder ?? null,
-    repeat: existing?.repeat_rule ?? null,
-  }));
-  const [priority, setPriority] = useState<Task['priority']>(existing?.priority || 'none');
-  const [showDate, setShowDate] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const dateBtnRef = useRef<HTMLButtonElement>(null);
-
-  const isEdit = !!existing;
-
-  async function submit() {
-    if (!title.trim()) return;
-    setSubmitting(true);
-    try {
-      const body: any = {
-        title: title.trim(),
-        due_date: schedule.date,
-        due_time: schedule.time,
-        duration: schedule.duration,
-        reminder: schedule.reminder,
-        repeat_rule: schedule.repeat,
-        priority,
-      };
-      if (isEdit) {
-        await api.patch(`/tasks/${existing!.id}`, body);
-      } else {
-        await api.post('/tasks', {
-          ...body,
-          list: schedule.date === format(new Date(), 'yyyy-MM-dd') ? 'today' : 'inbox',
-          parent_id: parentId || null,
-        });
-      }
-      onSaved();
-    } finally {
-      setSubmitting(false);
-    }
-  }
-
-  const dateLabel = schedule.date
-    ? format(parse(schedule.date, 'yyyy-MM-dd', new Date()), 'MMM d')
-    : 'Date';
-
-  const showTime = schedule.time && schedule.time !== '00:00';
-  const timeOrDurationLabel = schedule.duration
-    ? formatDuration(schedule.duration)
-    : showTime ? schedule.time : null;
-
-  return (
-    <div className="card border-ink-200 overflow-hidden">
-      <div className="flex items-center gap-3 px-3 py-2.5">
-        <div className="h-4 w-4 rounded-full border-2 border-ink-300 shrink-0" />
-        <input
-          autoFocus
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-          onKeyDown={e => {
-            if (e.key === 'Enter' && title.trim()) submit();
-            if (e.key === 'Escape') onCancel();
-          }}
-          placeholder={parentId ? 'Add a sub-task' : 'Add a task'}
-          className="flex-1 bg-transparent border-0 focus:outline-none text-[13px] placeholder-ink-400"
-        />
-        {timeOrDurationLabel && (
-          <button
-            onClick={() => setShowDate(true)}
-            className="inline-flex items-center gap-1 text-2xs text-ink-600 hover:text-ink-900"
-          >
-            <Clock size={11} />
-            {timeOrDurationLabel}
-          </button>
-        )}
-        <button
-          ref={dateBtnRef}
-          onClick={() => setShowDate(s => !s)}
-          className="inline-flex items-center gap-1 text-2xs text-ink-600 hover:text-ink-900"
-        >
-          <CalendarIcon size={11} />
-          {dateLabel}
-        </button>
-        <PriorityFlag value={priority} onChange={setPriority} />
-      </div>
-      <div className="flex items-center justify-between px-3 py-2 border-t border-ink-150 bg-ink-50/50">
-        <div className="flex items-center gap-1.5 text-2xs text-ink-500">
-          <FileText size={11} />
-          <span>{schedule.date || format(new Date(), 'yyyy-MM-dd')}</span>
-          <button onClick={() => setShowDate(true)} className="icon-btn h-5 w-5">
-            <Pencil size={10} />
-          </button>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <button onClick={onCancel} className="px-3 h-7 rounded-md bg-ink-100 text-ink-700 text-[12px] font-medium hover:bg-ink-200">
-            Cancel
-          </button>
-          <button
-            onClick={submit}
-            disabled={!title.trim() || submitting}
-            className={clsx(
-              'px-3 h-7 rounded-md text-[12px] font-medium transition',
-              !title.trim() || submitting
-                ? 'bg-warm-200 text-white cursor-not-allowed'
-                : 'bg-warm-500 text-white hover:bg-warm-600'
-            )}
-          >
-            {isEdit ? 'Update' : 'Add'}
-          </button>
-        </div>
-      </div>
-
-      {showDate && (
-        <DatePicker
-          value={schedule}
-          onChange={setSchedule}
-          onClose={() => setShowDate(false)}
-          anchorRef={dateBtnRef}
-        />
-      )}
-    </div>
-  );
-}
-
-function PriorityFlag({ value, onChange }: { value: Task['priority']; onChange: (p: Task['priority']) => void }) {
-  const color =
-    value === 'high' ? 'text-warm-600' :
-    value === 'medium' ? 'text-ink-700' :
-    value === 'low' ? 'text-ink-400' :
-    'text-ink-300';
-
-  return (
-    <Popover
-      width={128}
-      trigger={(open, toggle, ref) => (
-        <button ref={ref} onClick={toggle} className={clsx('icon-btn h-6 w-6', color)}>
-          <Flag size={12} fill={value !== 'none' ? 'currentColor' : 'none'} />
-        </button>
-      )}
-    >
-      {(close) => (
-        <div className="py-1">
-          {(['high', 'medium', 'low', 'none'] as const).map(p => (
-            <button
-              key={p}
-              onClick={() => { onChange(p); close(); }}
-              className="w-full text-left px-3 py-1.5 text-[12px] flex items-center gap-2 hover:bg-ink-100"
-            >
-              <Flag
-                size={11}
-                className={
-                  p === 'high' ? 'text-warm-600' :
-                  p === 'medium' ? 'text-ink-700' :
-                  p === 'low' ? 'text-ink-400' : 'text-ink-300'
-                }
-                fill={p !== 'none' ? 'currentColor' : 'none'}
-              />
-              <span className="capitalize">{p === 'none' ? 'No priority' : p}</span>
-            </button>
-          ))}
-        </div>
-      )}
-    </Popover>
   );
 }
 
@@ -688,12 +601,4 @@ function AskAIDot() {
       <span className="text-[8px] font-semibold text-ink-500">S</span>
     </div>
   );
-}
-
-function formatDuration(mins: number): string {
-  if (mins < 60) return `${mins}m`;
-  const h = Math.floor(mins / 60);
-  const m = mins % 60;
-  if (m === 0) return `${h}h`;
-  return `${h}h ${m}m`;
 }
