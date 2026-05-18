@@ -197,7 +197,6 @@ export default function DatePicker({
         <ToggleRow label="Time" enabled={timeEnabled} onChange={(v) => {
           setTimeEnabled(v);
           if (!v) onChange({ ...value, time: null, duration: null, reminder: null });
-          else if (!value.time) onChange({ ...value, time: '00:00' });
         }} />
         {timeEnabled && (
           <div className="space-y-1.5 mt-2">

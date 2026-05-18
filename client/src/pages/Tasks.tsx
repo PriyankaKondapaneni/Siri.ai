@@ -5,7 +5,7 @@ import DatePicker, { ScheduleValue, EMPTY_SCHEDULE } from '../components/DatePic
 import Popover from '../components/Popover';
 import {
   Search, ChevronDown, ChevronUp, CheckSquare, Flag, Calendar as CalendarIcon,
-  Pencil, FileText, Target, Trash2, Plus,
+  Clock, Pencil, FileText, Target, Trash2, Plus,
 } from 'lucide-react';
 import { format, isPast, isSameDay, parse, startOfDay } from 'date-fns';
 import clsx from 'clsx';
@@ -130,7 +130,7 @@ export default function Tasks() {
                 collapsed={!!collapsed[s.key]}
                 onToggleCollapse={() => setCollapsed(c => ({ ...c, [s.key]: !c[s.key] }))}
                 defaultDate={s.key === 'today' ? format(new Date(), 'yyyy-MM-dd') : null}
-                onCreated={() => load()}
+                reload={load}
                 onPatch={patch}
                 onRemove={remove}
               />
@@ -143,18 +143,19 @@ export default function Tasks() {
 }
 
 function Section({
-  label, tasks, collapsed, onToggleCollapse, defaultDate, onCreated, onPatch, onRemove,
+  label, tasks, collapsed, onToggleCollapse, defaultDate, reload, onPatch, onRemove,
 }: {
   label: string;
   tasks: Task[];
   collapsed: boolean;
   onToggleCollapse: () => void;
   defaultDate: string | null;
-  onCreated: () => void;
+  reload: () => void;
   onPatch: (t: Task, u: Partial<Task>) => void;
   onRemove: (t: Task) => void;
 }) {
   const [adding, setAdding] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
 
   return (
     <div className="card overflow-hidden">
@@ -183,16 +184,31 @@ function Section({
               <div className="px-4 py-2 text-[12px] text-ink-400 italic">No tasks</div>
             )}
             {tasks.map(t => (
-              <TaskRow key={t.id} task={t} onPatch={onPatch} onRemove={onRemove} />
+              editingId === t.id ? (
+                <TaskForm
+                  key={t.id}
+                  existing={t}
+                  onCancel={() => setEditingId(null)}
+                  onSaved={() => { setEditingId(null); reload(); }}
+                />
+              ) : (
+                <TaskRow
+                  key={t.id}
+                  task={t}
+                  onPatch={onPatch}
+                  onRemove={onRemove}
+                  onEdit={() => setEditingId(t.id)}
+                />
+              )
             ))}
           </div>
 
           <div className="px-3 py-2 border-t border-ink-150">
             {adding ? (
-              <AddTaskForm
+              <TaskForm
                 defaultDate={defaultDate}
                 onCancel={() => setAdding(false)}
-                onCreated={() => { setAdding(false); onCreated(); }}
+                onSaved={() => { setAdding(false); reload(); }}
               />
             ) : (
               <button
@@ -211,12 +227,20 @@ function Section({
 }
 
 function TaskRow({
-  task, onPatch, onRemove,
-}: { task: Task; onPatch: (t: Task, u: Partial<Task>) => void; onRemove: (t: Task) => void }) {
+  task, onPatch, onRemove, onEdit,
+}: {
+  task: Task;
+  onPatch: (t: Task, u: Partial<Task>) => void;
+  onRemove: (t: Task) => void;
+  onEdit: () => void;
+}) {
   return (
-    <div className="group flex items-center gap-3 px-4 py-2 hover:bg-ink-50 border-b border-ink-150 last:border-b-0">
+    <div
+      onClick={onEdit}
+      className="group flex items-center gap-3 px-4 py-2 hover:bg-ink-50 border-b border-ink-150 last:border-b-0 cursor-pointer"
+    >
       <button
-        onClick={() => onPatch(task, { status: task.status === 'done' ? 'pending' : 'done' })}
+        onClick={(e) => { e.stopPropagation(); onPatch(task, { status: task.status === 'done' ? 'pending' : 'done' }); }}
         className={clsx(
           'h-4 w-4 rounded-full border-2 grid place-items-center shrink-0 transition',
           task.status === 'done' ? 'bg-ink-900 border-ink-900' : 'border-ink-300 hover:border-ink-700'
@@ -237,10 +261,12 @@ function TaskRow({
       {task.repeat_rule && (
         <span className="text-2xs text-ink-400" title={`Repeats ${task.repeat_rule}`}>↻</span>
       )}
-      <DueLabel task={task} />
-      <PriorityFlag value={task.priority} onChange={(p) => onPatch(task, { priority: p })} />
+      <ScheduleSummary task={task} />
+      <div onClick={(e) => e.stopPropagation()}>
+        <PriorityFlag value={task.priority} onChange={(p) => onPatch(task, { priority: p })} />
+      </div>
       <button
-        onClick={() => onRemove(task)}
+        onClick={(e) => { e.stopPropagation(); onRemove(task); }}
         className="icon-btn h-6 w-6 text-ink-300 hover:text-warm-600 opacity-0 group-hover:opacity-100"
       >
         <Trash2 size={12} />
@@ -249,52 +275,88 @@ function TaskRow({
   );
 }
 
-function DueLabel({ task }: { task: Task }) {
-  if (!task.due_date) return null;
-  const d = parse(task.due_date, 'yyyy-MM-dd', new Date());
+function ScheduleSummary({ task }: { task: Task }) {
+  if (!task.due_date && !task.duration && !task.due_time) return null;
   const today = startOfDay(new Date());
-  const overdue = isPast(d) && !isSameDay(d, today);
-  const label = isSameDay(d, today) ? 'Today' : format(d, 'MMM d');
-  const time = task.due_time ? ` · ${task.due_time}` : '';
+
+  let dateBadge: React.ReactNode = null;
+  if (task.due_date) {
+    const d = parse(task.due_date, 'yyyy-MM-dd', new Date());
+    const overdue = isPast(d) && !isSameDay(d, today);
+    const label = isSameDay(d, today) ? 'Today' : format(d, 'MMM d');
+    dateBadge = (
+      <span className={clsx(
+        'inline-flex items-center gap-1 text-2xs px-1.5 py-0.5 rounded',
+        overdue ? 'bg-warm-100 text-warm-700' : 'text-ink-500'
+      )}>
+        <CalendarIcon size={10} />
+        {label}
+      </span>
+    );
+  }
+
+  const showTime = task.due_time && task.due_time !== '00:00';
+  const timeOrDuration = task.duration
+    ? formatDuration(task.duration)
+    : showTime ? task.due_time : null;
+
   return (
-    <span className={clsx(
-      'inline-flex items-center gap-1 text-2xs px-1.5 py-0.5 rounded',
-      overdue ? 'bg-warm-100 text-warm-700' : 'text-ink-500'
-    )}>
-      <CalendarIcon size={10} />
-      {label}{time}
-    </span>
+    <div className="inline-flex items-center gap-1.5">
+      {timeOrDuration && (
+        <span className="inline-flex items-center gap-1 text-2xs text-ink-500">
+          <Clock size={10} /> {timeOrDuration}
+        </span>
+      )}
+      {dateBadge}
+    </div>
   );
 }
 
-function AddTaskForm({
-  defaultDate, onCancel, onCreated,
-}: { defaultDate: string | null; onCancel: () => void; onCreated: () => void }) {
-  const [title, setTitle] = useState('');
-  const [schedule, setSchedule] = useState<ScheduleValue>({
-    ...EMPTY_SCHEDULE,
-    date: defaultDate,
-  });
-  const [priority, setPriority] = useState<Task['priority']>('none');
+function TaskForm({
+  existing, defaultDate, onCancel, onSaved,
+}: {
+  existing?: Task;
+  defaultDate?: string | null;
+  onCancel: () => void;
+  onSaved: () => void;
+}) {
+  const [title, setTitle] = useState(existing?.title || '');
+  const [schedule, setSchedule] = useState<ScheduleValue>(() => ({
+    date: existing?.due_date ?? defaultDate ?? null,
+    time: existing?.due_time ?? null,
+    duration: existing?.duration ?? null,
+    reminder: existing?.reminder ?? null,
+    repeat: existing?.repeat_rule ?? null,
+  }));
+  const [priority, setPriority] = useState<Task['priority']>(existing?.priority || 'none');
   const [showDate, setShowDate] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const dateBtnRef = useRef<HTMLButtonElement>(null);
+
+  const isEdit = !!existing;
 
   async function submit() {
     if (!title.trim()) return;
     setSubmitting(true);
     try {
-      await api.post('/tasks', {
+      const body = {
         title: title.trim(),
-        list: schedule.date === format(new Date(), 'yyyy-MM-dd') ? 'today' : 'inbox',
         due_date: schedule.date,
         due_time: schedule.time,
         duration: schedule.duration,
         reminder: schedule.reminder,
         repeat_rule: schedule.repeat,
         priority,
-      });
-      onCreated();
+      };
+      if (isEdit) {
+        await api.patch(`/tasks/${existing!.id}`, body);
+      } else {
+        await api.post('/tasks', {
+          ...body,
+          list: schedule.date === format(new Date(), 'yyyy-MM-dd') ? 'today' : 'inbox',
+        });
+      }
+      onSaved();
     } finally {
       setSubmitting(false);
     }
@@ -303,6 +365,11 @@ function AddTaskForm({
   const dateLabel = schedule.date
     ? format(parse(schedule.date, 'yyyy-MM-dd', new Date()), 'MMM d')
     : 'Date';
+
+  const showTime = schedule.time && schedule.time !== '00:00';
+  const timeOrDurationLabel = schedule.duration
+    ? formatDuration(schedule.duration)
+    : showTime ? schedule.time : null;
 
   return (
     <div className="card border-ink-200 overflow-hidden">
@@ -319,6 +386,15 @@ function AddTaskForm({
           placeholder="Add a task"
           className="flex-1 bg-transparent border-0 focus:outline-none text-[13px] placeholder-ink-400"
         />
+        {timeOrDurationLabel && (
+          <button
+            onClick={() => setShowDate(true)}
+            className="inline-flex items-center gap-1 text-2xs text-ink-600 hover:text-ink-900"
+          >
+            <Clock size={11} />
+            {timeOrDurationLabel}
+          </button>
+        )}
         <button
           ref={dateBtnRef}
           onClick={() => setShowDate(s => !s)}
@@ -333,7 +409,7 @@ function AddTaskForm({
         <div className="flex items-center gap-1.5 text-2xs text-ink-500">
           <FileText size={11} />
           <span>{schedule.date || format(new Date(), 'yyyy-MM-dd')}</span>
-          <button className="icon-btn h-5 w-5">
+          <button onClick={() => setShowDate(true)} className="icon-btn h-5 w-5">
             <Pencil size={10} />
           </button>
         </div>
@@ -351,7 +427,7 @@ function AddTaskForm({
                 : 'bg-warm-500 text-white hover:bg-warm-600'
             )}
           >
-            Add
+            {isEdit ? 'Update' : 'Add'}
           </button>
         </div>
       </div>
@@ -501,4 +577,12 @@ function AskAIDot() {
       <span className="text-[8px] font-semibold text-ink-500">S</span>
     </div>
   );
+}
+
+function formatDuration(mins: number): string {
+  if (mins < 60) return `${mins}m`;
+  const h = Math.floor(mins / 60);
+  const m = mins % 60;
+  if (m === 0) return `${h}h`;
+  return `${h}h ${m}m`;
 }
