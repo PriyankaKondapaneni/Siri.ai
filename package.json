@@ -2,12 +2,14 @@
   "name": "siri-ai",
   "version": "1.0.0",
   "private": true,
-  "description": "Siri.ai — AI productivity assistant powered by Claude",
+  "description": "Siri.ai — ADHD-focused task orchestrator (Python FastAPI backend + React client)",
   "scripts": {
-    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
-    "dev": "concurrently -k -n server,client -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "install:all": "npm --prefix client install && cd server-py && python3 -m pip install -r requirements.txt",
+    "dev": "concurrently -k -n server,client -c blue,green \"npm run dev:server\" \"npm --prefix client run dev\"",
+    "dev:server": "cd server-py && python3 -m uvicorn app.main:app --reload --port 4000",
     "build": "npm --prefix client run build",
-    "start": "npm --prefix server start"
+    "start": "cd server-py && python3 -m uvicorn app.main:app --port 4000",
+    "test": "cd server-py && python3 -m pytest"
   },
   "devDependencies": {
     "concurrently": "^9.0.1"

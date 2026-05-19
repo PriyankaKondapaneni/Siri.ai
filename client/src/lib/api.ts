@@ -86,12 +86,29 @@ export type Email = {
   is_starred: number;
   label: string | null;
 };
-export type ADHDPlan = {
-  state: 'overwhelmed' | 'stressed' | 'low-energy' | 'frozen' | 'okay';
+export type ActionStep = { order: number; text: string };
+export type EmotionalState = 'okay' | 'stressed' | 'overwhelmed' | 'low_energy' | 'shutdown_risk';
+export type EmotionalAssessment = {
+  state: EmotionalState;
   energy: 'low' | 'medium' | 'high';
+  overwhelm_score: number;
+  distress_signals: string[];
+};
+export type PlannedTask = {
+  raw: string;
+  rewrite: string;
+  category: string;
+  duration_minutes: number;
+  priority: 'high' | 'medium' | 'low';
+  why: string;
+  tiny_steps: ActionStep[];
+};
+export type ADHDPlan = {
+  assessment: EmotionalAssessment;
+  do_now: PlannedTask[];
   skip_today: string[];
-  do_now: { task: string; time: string }[];
-  freeze_steps: string[];
+  one_tiny_step: ActionStep;
+  encouragement: string | null;
 };
 export type Chat = { id: string; title: string; created_at: number; updated_at: number };
 export type Message = {

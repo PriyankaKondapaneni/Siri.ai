@@ -1,16 +1,24 @@
 import { useRef, useState } from 'react';
 import clsx from 'clsx';
-import { api, ADHDPlan } from '../lib/api';
+import { api, ADHDPlan, EmotionalState } from '../lib/api';
 import TopBar from '../components/TopBar';
 
 type Screen = 'dump' | 'results' | 'freeze';
 
-const STATE_BG: Record<ADHDPlan['state'], string> = {
+const STATE_BG: Record<EmotionalState, string> = {
   overwhelmed: 'bg-red-500',
   stressed: 'bg-orange-500',
-  'low-energy': 'bg-amber-500',
-  frozen: 'bg-blue-500',
+  low_energy: 'bg-amber-500',
+  shutdown_risk: 'bg-rose-700',
   okay: 'bg-emerald-500',
+};
+
+const STATE_LABEL: Record<EmotionalState, string> = {
+  overwhelmed: 'overwhelmed',
+  stressed: 'stressed',
+  low_energy: 'low energy',
+  shutdown_risk: 'shutdown risk',
+  okay: 'okay',
 };
 
 export default function Home() {
@@ -68,7 +76,7 @@ export default function Home() {
           )}
           {screen === 'freeze' && plan && (
             <FreezeScreen
-              steps={plan.freeze_steps}
+              plan={plan}
               onBack={() => setScreen('results')}
               onReset={reset}
             />
@@ -122,15 +130,20 @@ function DumpScreen({
 function ResultsScreen({ plan, onFreeze, onReset }: {
   plan: ADHDPlan; onFreeze: () => void; onReset: () => void;
 }) {
+  const { assessment, do_now, skip_today, encouragement } = plan;
   return (
     <div>
-      <StateBadge state={plan.state} energy={plan.energy} />
+      <StateBadge assessment={assessment} />
 
-      {plan.skip_today?.length > 0 && (
+      {encouragement && (
+        <p className="mt-3 text-[13px] text-ink-700 italic">{encouragement}</p>
+      )}
+
+      {skip_today.length > 0 && (
         <section className="mt-6">
           <Label>NOT TODAY</Label>
           <div className="mt-2 flex flex-wrap gap-1.5">
-            {plan.skip_today.map((t, i) => (
+            {skip_today.map((t, i) => (
               <span
                 key={i}
                 className="inline-block px-2 py-0.5 text-[12px] text-ink-400 bg-ink-100 rounded line-through"
@@ -147,13 +160,16 @@ function ResultsScreen({ plan, onFreeze, onReset }: {
       <section>
         <Label>DO THESE NOW</Label>
         <ol className="mt-2 divide-y divide-ink-200">
-          {plan.do_now.map((item, i) => (
+          {do_now.map((item, i) => (
             <li key={i} className="flex items-start gap-3 py-3">
               <span className="flex-none w-6 h-6 grid place-items-center bg-ink-900 text-white text-[12px] font-semibold rounded">
                 {i + 1}
               </span>
-              <span className="flex-1 text-[14px] text-ink-900 leading-snug">{item.task}</span>
-              <span className="flex-none text-[12px] text-ink-400 pt-0.5">{item.time}</span>
+              <div className="flex-1">
+                <div className="text-[14px] text-ink-900 leading-snug">{item.rewrite}</div>
+                <div className="text-[11px] text-ink-400 mt-0.5">{item.why}</div>
+              </div>
+              <span className="flex-none text-[12px] text-ink-400 pt-0.5">{item.duration_minutes} min</span>
             </li>
           ))}
         </ol>
@@ -177,20 +193,29 @@ function ResultsScreen({ plan, onFreeze, onReset }: {
   );
 }
 
-function FreezeScreen({ steps, onBack, onReset }: {
-  steps: string[]; onBack: () => void; onReset: () => void;
+function FreezeScreen({ plan, onBack, onReset }: {
+  plan: ADHDPlan; onBack: () => void; onReset: () => void;
 }) {
+  const top = plan.do_now[0];
+  const steps = top ? top.tiny_steps : [plan.one_tiny_step];
+
   return (
     <div>
       <Label>FREEZE MODE</Label>
       <h1 className="text-2xl font-semibold text-ink-900 mt-2">Pick one step. Just that.</h1>
       <p className="text-[13px] text-ink-500 mt-1 mb-6">Don't think about the rest yet.</p>
 
+      {top && (
+        <p className="text-[12px] text-ink-400 mb-4">
+          Breaking down: <span className="text-ink-700">{top.rewrite}</span>
+        </p>
+      )}
+
       <ol className="divide-y divide-ink-200">
         {steps.map((step, i) => (
           <li key={i} className="py-4">
-            <div className="text-[10px] font-semibold tracking-widest text-ink-400">STEP {i + 1}</div>
-            <div className="text-[14px] text-ink-900 leading-snug mt-1">{step}</div>
+            <div className="text-[10px] font-semibold tracking-widest text-ink-400">STEP {step.order}</div>
+            <div className="text-[14px] text-ink-900 leading-snug mt-1">{step.text}</div>
           </li>
         ))}
       </ol>
@@ -213,11 +238,13 @@ function FreezeScreen({ steps, onBack, onReset }: {
   );
 }
 
-function StateBadge({ state, energy }: { state: ADHDPlan['state']; energy: ADHDPlan['energy'] }) {
+function StateBadge({ assessment }: { assessment: ADHDPlan['assessment'] }) {
   return (
     <div className="inline-flex items-center gap-2 px-3 py-1 bg-ink-100 rounded">
-      <span className={clsx('w-2 h-2 rounded-full', STATE_BG[state])} />
-      <span className="text-[12px] text-ink-600 font-mono">{state} · {energy} energy</span>
+      <span className={clsx('w-2 h-2 rounded-full', STATE_BG[assessment.state])} />
+      <span className="text-[12px] text-ink-600 font-mono">
+        {STATE_LABEL[assessment.state]} · {assessment.energy} energy · overwhelm {assessment.overwhelm_score}/10
+      </span>
     </div>
   );
 }

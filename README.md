@@ -1,30 +1,27 @@
 # siri.ai
 
-An AI productivity workspace — tasks, notes, calendar, and inbox in one calm UI, with an in-app
-assistant powered by the Claude API.
+An ADHD-focused task orchestrator. You dump everything in your head, and a
+deterministic backend decides what to actually do right now.
 
-This is a full-stack app built with:
-- **Frontend:** React 18 + TypeScript + Vite + Tailwind CSS + Zustand
-- **Backend:** Node.js + Express + SQLite (better-sqlite3) + JWT auth
-- **AI:** Anthropic Claude API (via `@anthropic-ai/sdk`)
+Stack:
 
-## Features
-
-- Unified workspace: Today view, Tasks, Notes (markdown), Calendar (week view), Inbox
-- "Ask Siri" — a chat assistant powered by Claude with conversation history
-- One-click "Plan my day", note summarization, and inbox triage helpers
-- Multi-user with email/password auth and per-user data
-- Demo data seeded on signup so the app feels alive immediately
+- **Frontend:** React 18 + TypeScript + Vite + Tailwind
+- **Backend:** Python 3.11+ + FastAPI + SQLite (stdlib `sqlite3`)
+- **AI:** optional. Claude is only used to soften tone — never to prioritize,
+  reorder, or decide what's important. All planning logic is in `server-py/app/engine/`.
 
 ## Quick start
 
 ```bash
 # 1) install everything
 npm run install:all
+# (or manually: npm --prefix client install
+#                cd server-py && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt)
 
-# 2) add your Anthropic key
-cp server/.env.example server/.env
-# edit server/.env and set ANTHROPIC_API_KEY=sk-ant-...
+# 2) optional: add a Claude key for tone refinement
+cp server-py/.env.example server-py/.env
+# edit server-py/.env and set ANTHROPIC_API_KEY=sk-ant-...
+# (the planner works without it)
 
 # 3) run server + client in dev
 npm run dev
@@ -33,42 +30,121 @@ npm run dev
 - Client: http://localhost:5173
 - API:    http://localhost:4000
 
-Create an account on `/signup` — the app will seed demo tasks, notes, events, and emails for you.
+Sign up on `/signup` — the backend seeds demo tasks, notes, events, and emails.
 
-## Production build
+## Architecture
+
+```
+server-py/
+├── app/
+│   ├── main.py                  FastAPI entry; serves /api/* and the built client
+│   ├── config.py                env vars, paths
+│   ├── db.py                    SQLite connection + schema
+│   ├── security.py              bcrypt + JWT
+│   ├── deps.py                  require_auth FastAPI dependency
+│   ├── api/                     HTTP routes
+│   │   ├── auth.py              signup, login, me (+ demo seed)
+│   │   ├── tasks.py
+│   │   ├── notes.py
+│   │   ├── events.py
+│   │   ├── emails.py
+│   │   ├── chats.py
+│   │   ├── assistant.py         /plan-day, /summarize, /adhd-plan
+│   │   └── health.py
+│   ├── models/                  Pydantic models
+│   ├── data/                    keyword tables, weight matrix, templates
+│   │   ├── keywords.py
+│   │   ├── weights.py
+│   │   └── templates.py
+│   ├── engine/                  pure-Python planner. No I/O.
+│   │   ├── parser.py
+│   │   ├── categorizer.py
+│   │   ├── scoring.py
+│   │   ├── time_estimator.py
+│   │   ├── emotional_state.py
+│   │   ├── prioritizer.py
+│   │   ├── breakdown.py
+│   │   └── formatter.py         orchestrates everything end-to-end
+│   └── ai/
+│       └── refiner.py           optional Claude tone pass
+└── tests/                       engine tests (pytest)
+```
+
+## How the planner works
+
+1. **parser** splits the dump on commas/newlines/" and ", strips lead filler
+   ("need to", "i should"), separates meta phrases like "feeling exhausted".
+2. **categorizer** assigns one of:
+   `survival | communication | self_care | chore | work | emotional | other`.
+3. **scoring** produces 7 scores per task (urgency, importance, activation
+   energy, emotional resistance, focus required, duration minutes, dopamine
+   reward) using keyword tables + category baselines.
+4. **emotional_state** classifies the overall state from distress keywords
+   plus task density. States: `okay | stressed | overwhelmed | low_energy | shutdown_risk`.
+5. **prioritizer** applies a state-adaptive weight matrix, then floats the
+   cheapest-highest-dopamine task to position 1 ("momentum boost"), then
+   breaks up runs of three consecutive high-focus tasks. Task cap shrinks
+   as state worsens (4 → 1).
+6. **breakdown** picks 3 tiny steps per task from a per-category template.
+7. **formatter** assembles a `PlanResponse` and (optionally) hands it to
+   `ai/refiner.py` to warm up the wording.
+
+AI is never allowed to reorder, add, or remove tasks or change durations.
+
+## Endpoints (relevant subset)
+
+| Method | Path                          | Notes                                 |
+| ------ | ----------------------------- | ------------------------------------- |
+| POST   | `/api/auth/signup`            | Returns `{ token, user }`, seeds demo |
+| POST   | `/api/auth/login`             |                                       |
+| GET    | `/api/auth/me`                | Bearer auth required                  |
+| GET    | `/api/tasks` `?list=...`      |                                       |
+| POST   | `/api/tasks`                  |                                       |
+| PATCH  | `/api/tasks/{id}`             |                                       |
+| DELETE | `/api/tasks/{id}`             |                                       |
+| GET    | `/api/notes`                  |                                       |
+| GET    | `/api/events?from=&to=`       |                                       |
+| GET    | `/api/emails`                 |                                       |
+| GET    | `/api/chats`                  |                                       |
+| POST   | `/api/chats/{id}/messages`    | Stub reply (chat AI not wired yet)    |
+| POST   | `/api/assistant/adhd-plan`    | The deterministic planner             |
+| POST   | `/api/assistant/plan-day`     | Requires Claude key                   |
+| POST   | `/api/assistant/summarize`    | Requires Claude key                   |
+
+Example:
 
 ```bash
-npm run build       # builds the client into client/dist
-npm start           # runs the server, which also serves the built client
+curl -s -X POST http://localhost:4000/api/assistant/adhd-plan \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $TOKEN" \
+  -d '{"dump":"Need to clean room, reply to manager, study DSA, bathe, groceries, feeling exhausted, too many things pending"}'
 ```
 
-## How the AI is wired up
+returns:
 
-The assistant lives in two server routes:
-
-- `POST /api/chats/:id/messages` — sends the full conversation to Claude with a Siri-specific system
-  prompt (see `server/src/routes/chat.js`).
-- `POST /api/assistant/plan-day` and `/api/assistant/summarize` — task-specific helpers used by the
-  Today view, Notes, and Inbox.
-
-The model is configurable via `CLAUDE_MODEL` in `server/.env` (defaults to `claude-opus-4-7`).
-
-> Note: Claude.ai projects (the ones at `claude.ai/project/...`) are a Claude.ai web-app feature and
-> aren't exposed through the API. To get equivalent behavior in this app, edit the system prompt in
-> `server/src/routes/chat.js` to match the instructions you've set up in your Claude.ai project.
-
-## Project structure
-
+```json
+{
+  "assessment": {"state":"shutdown_risk","energy":"low","overwhelm_score":10,"distress_signals":["exhausted","pending","too many"]},
+  "do_now": [{"raw":"reply to manager","rewrite":"Send 1 line about: reply to manager","category":"communication","duration_minutes":2,"priority":"high","why":"Only 2 min, quick win, time-sensitive, removes a lingering worry fast.","tiny_steps":[...]}],
+  "skip_today": ["bathe","clean room","groceries","study DSA"],
+  "one_tiny_step": {"order":1,"text":"Open the chat or email"},
+  "encouragement": null
+}
 ```
-client/   React + Vite frontend
-server/   Express API + SQLite + Claude integration
+
+## Tests
+
+```bash
+npm test
+# or:
+cd server-py && .venv/bin/python -m pytest
 ```
 
 ## Environment variables
 
-| Var                  | Where           | Purpose                                       |
-| -------------------- | --------------- | --------------------------------------------- |
-| `ANTHROPIC_API_KEY`  | `server/.env`   | Required to enable real AI responses          |
-| `JWT_SECRET`         | `server/.env`   | Used to sign auth tokens                      |
-| `PORT`               | `server/.env`   | API port (default 4000)                       |
-| `CLAUDE_MODEL`       | `server/.env`   | Claude model id (default `claude-opus-4-7`)   |
+| Var                  | Where                | Purpose                                  |
+| -------------------- | -------------------- | ---------------------------------------- |
+| `ANTHROPIC_API_KEY`  | `server-py/.env`     | Optional. Enables AI tone refinement     |
+| `JWT_SECRET`         | `server-py/.env`     | Signs auth tokens                        |
+| `PORT`               | `server-py/.env`     | API port (default 4000)                  |
+| `CLAUDE_MODEL`       | `server-py/.env`     | Claude model id (default `claude-opus-4-7`) |

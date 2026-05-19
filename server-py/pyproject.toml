@@ -1,0 +1,9 @@
+[project]
+name = "siri-ai-server"
+version = "1.0.0"
+description = "Python FastAPI backend for the Siri.ai ADHD orchestrator"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
