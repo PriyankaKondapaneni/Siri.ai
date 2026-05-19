@@ -86,6 +86,13 @@ export type Email = {
   is_starred: number;
   label: string | null;
 };
+export type ADHDPlan = {
+  state: 'overwhelmed' | 'stressed' | 'low-energy' | 'frozen' | 'okay';
+  energy: 'low' | 'medium' | 'high';
+  skip_today: string[];
+  do_now: { task: string; time: string }[];
+  freeze_steps: string[];
+};
 export type Chat = { id: string; title: string; created_at: number; updated_at: number };
 export type Message = {
   id: string;

@@ -6,7 +6,7 @@ import { api, Chat, Note } from '../lib/api';
 import {
   Sparkles, ListTodo, Inbox as InboxIcon, Calendar,
   Plus, ChevronDown, ChevronRight, Folder, FolderOpen,
-  MessageSquare, LogOut, FileText, Cable,
+  MessageSquare, LogOut, FileText, Cable, Brain,
 } from 'lucide-react';
 import clsx from 'clsx';
 
@@ -75,8 +75,8 @@ export default function Sidebar() {
 
       <nav className="px-2 flex-1 overflow-y-auto">
         <NavLink to="/" end className={({ isActive }) => clsx('side-item', isActive && 'active')}>
-          <Sparkles size={14} className="text-warm-500" />
-          <span>Ask AI</span>
+          <Brain size={14} className="text-warm-500" />
+          <span>Plan</span>
         </NavLink>
         <NavLink to="/tasks" className={({ isActive }) => clsx('side-item', isActive && 'active')}>
           <ListTodo size={14} className="text-ink-500" />
