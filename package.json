@@ -4,12 +4,13 @@
   "private": true,
   "description": "Siri.ai — ADHD-focused task orchestrator (Python FastAPI backend + React client)",
   "scripts": {
-    "install:all": "npm --prefix client install && cd server-py && (test -d .venv || python3 -m venv .venv) && .venv/bin/pip install --quiet -r requirements.txt",
+    "ensure:py": "cd server-py && (test -d .venv || python3 -m venv .venv) && (test -f .venv/bin/uvicorn || .venv/bin/pip install --quiet -r requirements.txt)",
+    "install:all": "npm --prefix client install && npm run ensure:py",
     "dev": "concurrently -k -n server,client -c blue,green \"npm run dev:server\" \"npm --prefix client run dev\"",
-    "dev:server": "cd server-py && .venv/bin/python -m uvicorn app.main:app --reload --port 4000",
+    "dev:server": "npm run ensure:py && cd server-py && .venv/bin/python -m uvicorn app.main:app --reload --port 4000",
     "build": "npm --prefix client run build",
-    "start": "cd server-py && .venv/bin/python -m uvicorn app.main:app --port 4000",
-    "test": "cd server-py && .venv/bin/python -m pytest"
+    "start": "npm run ensure:py && cd server-py && .venv/bin/python -m uvicorn app.main:app --port 4000",
+    "test": "npm run ensure:py && cd server-py && .venv/bin/python -m pytest"
   },
   "devDependencies": {
     "concurrently": "^9.0.1"
