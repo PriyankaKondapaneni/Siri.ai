@@ -13,10 +13,14 @@ Stack:
 ## Quick start
 
 ```bash
-# 1) install everything
+# 1) install everything (creates server-py/.venv automatically)
 npm run install:all
-# (or manually: npm --prefix client install
-#                cd server-py && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt)
+# manual equivalent:
+#   npm --prefix client install
+#   cd server-py && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+#
+# On Windows, the npm scripts use Unix paths (.venv/bin/python). Either run
+# them under Git Bash / WSL, or invoke uvicorn directly: server-py\.venv\Scripts\python -m uvicorn app.main:app --port 4000
 
 # 2) optional: add a Claude key for tone refinement
 cp server-py/.env.example server-py/.env
