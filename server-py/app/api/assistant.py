@@ -5,10 +5,12 @@ import anthropic
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
+from app import store
 from app.ai.refiner import refine
 from app.config import ANTHROPIC_API_KEY, CLAUDE_MODEL
 from app.db import query_all, query_one
 from app.deps import require_auth
+from app.engine import recovery
 from app.engine.anti_shame import sanitize_plan
 from app.engine.formatter import build_plan
 from app.models.plan import PlanRequest, PlanResponse
@@ -26,9 +28,26 @@ def _claude() -> Optional[anthropic.Anthropic]:
 def adhd_plan(body: PlanRequest, user=Depends(require_auth)):
     if not body.dump or not body.dump.strip():
         raise HTTPException(400, "dump is required")
+
     plan = build_plan(body.dump)
+
+    # Recovery Mode: derived from this user's history (read-only) before we
+    # persist the current plan, so the check reflects prior activity.
+    stats = store.recovery_stats(user["id"])
+    in_recovery, hint = recovery.evaluate(
+        stats.days_since_seen, stats.open_outcomes, stats.overwhelm_streak
+    )
+    if in_recovery:
+        plan = recovery.apply(plan, hint)
+        store.archive_old_tasks(user["id"])
+
     if body.refine_with_ai:
         plan = sanitize_plan(refine(plan))  # re-scrub any wording the LLM introduced
+
+    plan_id = store.save_plan(user["id"], body.dump, plan)
+    if body.energy_self_report:
+        store.set_energy_self_report(plan_id, user["id"], body.energy_self_report)
+    plan.plan_id = plan_id
     return plan
 
 

@@ -5,7 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api import assistant, auth, chats, emails, events, health, notes, tasks
+from app.api import (
+    assistant, auth, chats, emails, events, health, notes, plans, recovery, tasks,
+)
 from app.config import ANTHROPIC_API_KEY, CLIENT_DIST
 from app.db import init_db
 
@@ -29,6 +31,8 @@ app.include_router(events.router, prefix="/api")
 app.include_router(emails.router, prefix="/api")
 app.include_router(chats.router, prefix="/api")
 app.include_router(assistant.router, prefix="/api")
+app.include_router(plans.router, prefix="/api")
+app.include_router(recovery.router, prefix="/api")
 
 
 # Serve the built React client in production (mirror of the Node setup).

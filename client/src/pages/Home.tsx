@@ -130,10 +130,28 @@ function DumpScreen({
 function ResultsScreen({ plan, onFreeze, onReset }: {
   plan: ADHDPlan; onFreeze: () => void; onReset: () => void;
 }) {
-  const { assessment, do_now, skip_today, encouragement } = plan;
+  const { assessment, do_now, skip_today, encouragement, recovery_hint } = plan;
+  const [done, setDone] = useState<Set<number>>(new Set());
+
+  function toggle(i: number) {
+    const next = new Set(done);
+    next.has(i) ? next.delete(i) : next.add(i);
+    setDone(next);
+    // Fire-and-forget: record the outcome so the data flywheel fills up.
+    if (plan.plan_id && next.has(i)) {
+      api.post(`/plans/${plan.plan_id}/complete`, { completed: [i] }).catch(() => {});
+    }
+  }
+
   return (
     <div>
       <StateBadge assessment={assessment} />
+
+      {recovery_hint && (
+        <p className="mt-3 text-[13px] text-ink-700 bg-ink-50 border border-ink-200 rounded-md px-3 py-2">
+          {recovery_hint}
+        </p>
+      )}
 
       {encouragement && (
         <p className="mt-3 text-[13px] text-ink-700 italic">{encouragement}</p>
@@ -160,18 +178,32 @@ function ResultsScreen({ plan, onFreeze, onReset }: {
       <section>
         <Label>DO THESE NOW</Label>
         <ol className="mt-2 divide-y divide-ink-200">
-          {do_now.map((item, i) => (
-            <li key={i} className="flex items-start gap-3 py-3">
-              <span className="flex-none w-6 h-6 grid place-items-center bg-ink-900 text-white text-[12px] font-semibold rounded">
-                {i + 1}
-              </span>
-              <div className="flex-1">
-                <div className="text-[14px] text-ink-900 leading-snug">{item.rewrite}</div>
-                <div className="text-[11px] text-ink-400 mt-0.5">{item.why}</div>
-              </div>
-              <span className="flex-none text-[12px] text-ink-400 pt-0.5">{item.duration_minutes} min</span>
-            </li>
-          ))}
+          {do_now.map((item, i) => {
+            const isDone = done.has(i);
+            return (
+              <li key={i} className="flex items-start gap-3 py-3">
+                <button
+                  onClick={() => toggle(i)}
+                  aria-label={isDone ? 'mark not done' : 'mark done'}
+                  className={clsx(
+                    'flex-none w-6 h-6 grid place-items-center text-[12px] font-semibold rounded border transition-colors',
+                    isDone
+                      ? 'bg-emerald-500 border-emerald-500 text-white'
+                      : 'bg-white border-ink-300 text-ink-400 hover:border-ink-900'
+                  )}
+                >
+                  {isDone ? '✓' : i + 1}
+                </button>
+                <div className="flex-1">
+                  <div className={clsx('text-[14px] leading-snug', isDone ? 'text-ink-400 line-through' : 'text-ink-900')}>
+                    {item.rewrite}
+                  </div>
+                  <div className="text-[11px] text-ink-400 mt-0.5">{item.why}</div>
+                </div>
+                <span className="flex-none text-[12px] text-ink-400 pt-0.5">{item.duration_minutes} min</span>
+              </li>
+            );
+          })}
         </ol>
       </section>
 

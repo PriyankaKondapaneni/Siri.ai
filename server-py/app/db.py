@@ -89,6 +89,45 @@ CREATE TABLE IF NOT EXISTS messages (
   created_at INTEGER NOT NULL,
   FOREIGN KEY (chat_id) REFERENCES chats(id) ON DELETE CASCADE
 );
+
+-- Phase B: the data flywheel. Every generated plan is persisted with its full
+-- feature set so a future ADHD model can train on (input -> plan -> outcome).
+CREATE TABLE IF NOT EXISTS plans (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  dump TEXT NOT NULL,
+  state TEXT NOT NULL,
+  energy TEXT NOT NULL,
+  energy_mode TEXT NOT NULL,
+  overwhelm_score INTEGER NOT NULL,
+  cognitive_load_budget REAL NOT NULL,
+  in_recovery INTEGER NOT NULL DEFAULT 0,
+  energy_self_report TEXT,
+  helpful INTEGER,
+  plan_json TEXT NOT NULL,
+  created_at INTEGER NOT NULL,
+  hour_of_day INTEGER NOT NULL,
+  weekday INTEGER NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- One row per do_now task. scores_json snapshots the features; status +
+-- completed_at are the training labels.
+CREATE TABLE IF NOT EXISTS task_outcomes (
+  id TEXT PRIMARY KEY,
+  plan_id TEXT NOT NULL,
+  user_id TEXT NOT NULL,
+  task_raw TEXT NOT NULL,
+  rewrite TEXT NOT NULL,
+  category TEXT NOT NULL,
+  position INTEGER NOT NULL,
+  scores_json TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pending',
+  completed_at INTEGER,
+  created_at INTEGER NOT NULL,
+  FOREIGN KEY (plan_id) REFERENCES plans(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
 """
 
 
@@ -103,8 +142,16 @@ def _connect() -> sqlite3.Connection:
 _db = _connect()
 
 
+def _safe_add_column(table: str, column: str, decl: str) -> None:
+    existing = {r["name"] for r in _db.execute(f"PRAGMA table_info({table})")}
+    if column not in existing:
+        _db.execute(f"ALTER TABLE {table} ADD COLUMN {column} {decl}")
+
+
 def init_db() -> None:
     _db.executescript(SCHEMA)
+    # Migrations for DBs created before Phase B.
+    _safe_add_column("users", "last_recovery_restart", "INTEGER")
     _db.commit()
 
 

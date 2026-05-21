@@ -111,6 +111,7 @@ export type PlannedTask = {
   shutdown_step: ActionStep;
 };
 export type ADHDPlan = {
+  plan_id: string | null;
   assessment: EmotionalAssessment;
   do_now: PlannedTask[];
   skip_today: string[];
