@@ -60,10 +60,13 @@ def test_feedback_records_helpful_and_energy():
 
 def test_recovery_stats_backlog_and_streak():
     uid = _make_user()
-    # Three high-overwhelm plans in a row -> streak should be 3.
+    # Three high-overwhelm plans in a row -> streak should be 3. The user reports
+    # feeling overwhelmed each time.
     for _ in range(3):
-        p = build_plan("clean whole house, study DSA for exam, finish overdue report, "
-                       "feeling exhausted and frozen, cant start, too much pending")
+        p = build_plan(
+            "clean whole house, study DSA for exam, finish report",
+            feelings=["overwhelmed"],
+        )
         store.save_plan(uid, "x", p)
     stats = store.recovery_stats(uid)
     assert stats.overwhelm_streak >= 3

@@ -21,20 +21,35 @@ const STATE_LABEL: Record<EmotionalState, string> = {
   okay: 'okay',
 };
 
+// Emoji feeling options. `key` matches the backend FEELING_TO_STATE_ENERGY map.
+const FEELINGS: { key: string; emoji: string; label: string }[] = [
+  { key: 'okay', emoji: '🙂', label: 'Okay / steady' },
+  { key: 'energized', emoji: '⚡', label: 'Energized' },
+  { key: 'stressed', emoji: '😰', label: 'Stressed' },
+  { key: 'overwhelmed', emoji: '😵‍💫', label: 'Overwhelmed' },
+  { key: 'drained', emoji: '🪫', label: 'Drained / low energy' },
+  { key: 'frozen', emoji: '🧊', label: "Frozen / can't start" },
+];
+
 export default function Home() {
   const [screen, setScreen] = useState<Screen>('dump');
   const [dump, setDump] = useState('');
+  const [feelings, setFeelings] = useState<string[]>([]);
   const [plan, setPlan] = useState<ADHDPlan | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  function toggleFeeling(key: string) {
+    setFeelings(prev => prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]);
+  }
 
   async function analyze() {
     if (!dump.trim() || loading) return;
     setLoading(true);
     setError(null);
     try {
-      const result = await api.post<ADHDPlan>('/assistant/adhd-plan', { dump });
+      const result = await api.post<ADHDPlan>('/assistant/adhd-plan', { dump, feelings });
       setPlan(result);
       setScreen('results');
     } catch (e: any) {
@@ -46,6 +61,7 @@ export default function Home() {
 
   function reset() {
     setDump('');
+    setFeelings([]);
     setPlan(null);
     setError(null);
     setScreen('dump');
@@ -62,6 +78,8 @@ export default function Home() {
               textareaRef={textareaRef}
               value={dump}
               onChange={setDump}
+              feelings={feelings}
+              onToggleFeeling={toggleFeeling}
               onSubmit={analyze}
               loading={loading}
               error={error}
@@ -88,11 +106,13 @@ export default function Home() {
 }
 
 function DumpScreen({
-  textareaRef, value, onChange, onSubmit, loading, error,
+  textareaRef, value, onChange, feelings, onToggleFeeling, onSubmit, loading, error,
 }: {
   textareaRef: React.RefObject<HTMLTextAreaElement>;
   value: string;
   onChange: (v: string) => void;
+  feelings: string[];
+  onToggleFeeling: (key: string) => void;
   onSubmit: () => void;
   loading: boolean;
   error: string | null;
@@ -102,7 +122,7 @@ function DumpScreen({
       <Label>ADHD PLAN</Label>
       <h1 className="text-2xl font-semibold text-ink-900 mt-2">What's in your head?</h1>
       <p className="text-[13px] text-ink-500 mt-1 mb-6">
-        Dump everything. One thing per line. No format needed.
+        Dump everything. One thing per line — each becomes a task for today.
       </p>
       <textarea
         ref={textareaRef}
@@ -114,11 +134,47 @@ function DumpScreen({
         autoFocus
         className="w-full bg-white border border-ink-200 rounded-md p-3 text-[14px] text-ink-900 leading-relaxed resize-none focus:outline-none focus:border-ink-900"
       />
-      {error && <p className="text-red-500 text-[13px] mt-2">{error}</p>}
+
+      <div className="mt-5">
+        <Label>HOW ARE YOU FEELING?</Label>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {FEELINGS.map(f => {
+            const selected = feelings.includes(f.key);
+            return (
+              <button
+                key={f.key}
+                type="button"
+                title={f.label}
+                aria-label={f.label}
+                aria-pressed={selected}
+                onClick={() => onToggleFeeling(f.key)}
+                className={clsx(
+                  'group relative h-10 w-10 grid place-items-center rounded-md border text-[18px] transition-colors',
+                  selected
+                    ? 'bg-ink-900 border-ink-900'
+                    : 'bg-white border-ink-200 hover:border-ink-400'
+                )}
+              >
+                <span>{f.emoji}</span>
+                {selected && (
+                  <span className="absolute -top-1 -right-1 h-3.5 w-3.5 grid place-items-center rounded-full bg-emerald-500 text-white text-[8px] leading-none">
+                    ✓
+                  </span>
+                )}
+                <span className="pointer-events-none absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-ink-900 px-1.5 py-0.5 text-[10px] text-white opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                  {f.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {error && <p className="text-red-500 text-[13px] mt-3">{error}</p>}
       <button
         onClick={onSubmit}
         disabled={!value.trim() || loading}
-        className="w-full mt-3 h-11 rounded-md bg-ink-900 text-white text-[14px] font-medium hover:bg-ink-800 disabled:bg-ink-200 disabled:text-ink-400 disabled:cursor-not-allowed transition-colors"
+        className="w-full mt-4 h-11 rounded-md bg-ink-900 text-white text-[14px] font-medium hover:bg-ink-800 disabled:bg-ink-200 disabled:text-ink-400 disabled:cursor-not-allowed transition-colors"
       >
         {loading ? 'working on it…' : 'what should I do now →'}
       </button>
@@ -130,7 +186,7 @@ function DumpScreen({
 function ResultsScreen({ plan, onFreeze, onReset }: {
   plan: ADHDPlan; onFreeze: () => void; onReset: () => void;
 }) {
-  const { assessment, do_now, skip_today, encouragement, recovery_hint } = plan;
+  const { assessment, do_now, skip_today, encouragement, recovery_hint, tasks_created } = plan;
   const [done, setDone] = useState<Set<number>>(new Set());
 
   function toggle(i: number) {
@@ -146,6 +202,12 @@ function ResultsScreen({ plan, onFreeze, onReset }: {
   return (
     <div>
       <StateBadge assessment={assessment} />
+
+      {tasks_created > 0 && (
+        <p className="mt-3 text-[12px] text-ink-500">
+          Added {tasks_created} task{tasks_created === 1 ? '' : 's'} to Today.
+        </p>
+      )}
 
       {recovery_hint && (
         <p className="mt-3 text-[13px] text-ink-700 bg-ink-50 border border-ink-200 rounded-md px-3 py-2">

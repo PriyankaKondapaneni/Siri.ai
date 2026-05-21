@@ -7,6 +7,7 @@ from app.models.task import ActionStep, PlannedTask
 
 class PlanRequest(BaseModel):
     dump: str
+    feelings: list[str] = []
     refine_with_ai: bool = False
     energy_self_report: Optional[Literal["low", "medium", "high"]] = None
 
@@ -19,6 +20,7 @@ class PlanResponse(BaseModel):
     one_tiny_step: ActionStep
     encouragement: Optional[str] = None
     recovery_hint: Optional[str] = None
+    tasks_created: int = 0
 
 
 class OutcomeReport(BaseModel):

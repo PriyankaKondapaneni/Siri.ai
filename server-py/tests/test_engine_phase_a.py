@@ -29,11 +29,11 @@ def test_each_task_has_three_variants():
 
 
 def test_shutdown_mode_leads_with_permission_step():
-    # Heavy distress -> shutdown_risk -> energy_mode shutdown -> tiny_steps is the
-    # single permission line.
+    # User picks 'frozen' -> shutdown_risk -> energy_mode shutdown -> tiny_steps
+    # is the single permission line.
     plan = build_plan(
-        "clean whole house, study DSA for exam, finish overdue work report, "
-        "feeling completely exhausted and frozen, cant start anything, too much pending"
+        "clean whole house, study DSA for exam, finish overdue work report",
+        feelings=["frozen"],
     )
     assert plan.assessment.energy_mode == "shutdown"
     assert len(plan.do_now) == 1

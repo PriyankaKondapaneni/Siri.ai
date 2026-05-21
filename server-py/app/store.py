@@ -7,6 +7,7 @@ engine needs. Pure DB access; no ADHD logic lives here.
 import json
 import time
 from dataclasses import dataclass
+from datetime import date
 
 from nanoid import generate as nanoid
 
@@ -18,6 +19,36 @@ DAY_MS = 24 * 60 * 60 * 1000
 
 def _now_ms() -> int:
     return int(time.time() * 1000)
+
+
+def create_today_tasks(user_id: str, raw_tasks: list[str]) -> list[str]:
+    """Create a pending task dated today for each brain-dump item. Dedupes
+    against pending tasks already on today's list (case-insensitive title)."""
+    today = date.today().isoformat()
+    now = _now_ms()
+    existing = {
+        r["title"].strip().lower()
+        for r in query_all(
+            "SELECT title FROM tasks WHERE user_id=? AND due_date=? AND status='pending'",
+            (user_id, today),
+        )
+    }
+    created: list[str] = []
+    for raw in raw_tasks:
+        title = raw.strip()
+        if not title or title.lower() in existing:
+            continue
+        tid = nanoid()
+        execute(
+            """INSERT INTO tasks
+               (id, user_id, title, description, due_date, due_time, duration, reminder,
+                repeat_rule, priority, status, list, starred, parent_id, created_at, updated_at)
+               VALUES (?, ?, ?, NULL, ?, NULL, NULL, NULL, NULL, 'medium', 'pending', 'today', 0, NULL, ?, ?)""",
+            (tid, user_id, title, today, now, now),
+        )
+        existing.add(title.lower())
+        created.append(tid)
+    return created
 
 
 def save_plan(user_id: str, dump: str, plan: PlanResponse) -> str:

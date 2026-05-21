@@ -118,6 +118,7 @@ export type ADHDPlan = {
   one_tiny_step: ActionStep;
   encouragement: string | null;
   recovery_hint: string | null;
+  tasks_created: number;
 };
 export type Chat = { id: string; title: string; created_at: number; updated_at: number };
 export type Message = {

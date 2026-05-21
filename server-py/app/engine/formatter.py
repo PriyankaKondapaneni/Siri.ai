@@ -45,7 +45,7 @@ def _why(task: ScoredTask) -> str:
     return ", ".join(bits).capitalize() + "."
 
 
-def build_plan(dump: str) -> PlanResponse:
+def build_plan(dump: str, feelings: list[str] | None = None) -> PlanResponse:
     raw_tasks, meta = parse(dump)
 
     scored: list[ScoredTask] = []
@@ -53,7 +53,7 @@ def build_plan(dump: str) -> PlanResponse:
         cat = categorize(raw)
         scored.append(ScoredTask(raw=raw, category=cat, scores=score_task(raw, cat)))
 
-    assessment = assess(dump, meta, scored)
+    assessment = assess(dump, meta, scored, feelings)
     do_now, skipped = prioritize(scored, assessment.state)
 
     top_score = do_now[0].priority_score if do_now else 0.0

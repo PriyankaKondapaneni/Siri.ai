@@ -3,8 +3,8 @@ from app.engine.formatter import build_plan
 
 def test_user_example_produces_minimal_plan_when_shutdown_risk():
     dump = "Need to clean room, reply to manager, study DSA, bathe, groceries, feeling exhausted, too many things pending"
-    plan = build_plan(dump)
-    # Distress + low energy + many tasks should classify as shutdown_risk or overwhelmed.
+    # State now comes from the user's selected feeling, not auto-detection.
+    plan = build_plan(dump, feelings=["overwhelmed"])
     assert plan.assessment.state in ("shutdown_risk", "overwhelmed", "low_energy")
     # do_now is small when the state is bad.
     assert 1 <= len(plan.do_now) <= 3

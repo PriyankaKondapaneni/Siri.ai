@@ -13,6 +13,7 @@ from app.deps import require_auth
 from app.engine import recovery
 from app.engine.anti_shame import sanitize_plan
 from app.engine.formatter import build_plan
+from app.engine.parser import parse
 from app.models.plan import PlanRequest, PlanResponse
 
 router = APIRouter(prefix="/assistant")
@@ -29,7 +30,13 @@ def adhd_plan(body: PlanRequest, user=Depends(require_auth)):
     if not body.dump or not body.dump.strip():
         raise HTTPException(400, "dump is required")
 
-    plan = build_plan(body.dump)
+    # Brain-dump items are today's tasks — create them in the Tasks tab, dated today.
+    raw_tasks, _meta = parse(body.dump)
+    created = store.create_today_tasks(user["id"], raw_tasks)
+
+    # State + energy come from the user's selected feelings, not auto-detection.
+    plan = build_plan(body.dump, feelings=body.feelings)
+    plan.tasks_created = len(created)
 
     # Recovery Mode + persistence are both gated on data collection. While
     # paused, plans aren't stored and recovery (which needs that history) is off.
