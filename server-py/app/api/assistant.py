@@ -7,7 +7,7 @@ from pydantic import BaseModel
 
 from app import store
 from app.ai.refiner import refine
-from app.config import ANTHROPIC_API_KEY, CLAUDE_MODEL
+from app.config import ANTHROPIC_API_KEY, CLAUDE_MODEL, COLLECT_PLAN_DATA
 from app.db import query_all, query_one
 from app.deps import require_auth
 from app.engine import recovery
@@ -31,23 +31,26 @@ def adhd_plan(body: PlanRequest, user=Depends(require_auth)):
 
     plan = build_plan(body.dump)
 
-    # Recovery Mode: derived from this user's history (read-only) before we
-    # persist the current plan, so the check reflects prior activity.
-    stats = store.recovery_stats(user["id"])
-    in_recovery, hint = recovery.evaluate(
-        stats.days_since_seen, stats.open_outcomes, stats.overwhelm_streak
-    )
-    if in_recovery:
-        plan = recovery.apply(plan, hint)
-        store.archive_old_tasks(user["id"])
+    # Recovery Mode + persistence are both gated on data collection. While
+    # paused, plans aren't stored and recovery (which needs that history) is off.
+    if COLLECT_PLAN_DATA:
+        stats = store.recovery_stats(user["id"])
+        in_recovery, hint = recovery.evaluate(
+            stats.days_since_seen, stats.open_outcomes, stats.overwhelm_streak
+        )
+        if in_recovery:
+            plan = recovery.apply(plan, hint)
+            store.archive_old_tasks(user["id"])
 
     if body.refine_with_ai:
         plan = sanitize_plan(refine(plan))  # re-scrub any wording the LLM introduced
 
-    plan_id = store.save_plan(user["id"], body.dump, plan)
-    if body.energy_self_report:
-        store.set_energy_self_report(plan_id, user["id"], body.energy_self_report)
-    plan.plan_id = plan_id
+    if COLLECT_PLAN_DATA:
+        plan_id = store.save_plan(user["id"], body.dump, plan)
+        if body.energy_self_report:
+            store.set_energy_self_report(plan_id, user["id"], body.energy_self_report)
+        plan.plan_id = plan_id
+
     return plan
 
 
