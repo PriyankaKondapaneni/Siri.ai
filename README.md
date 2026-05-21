@@ -36,6 +36,36 @@ npm run dev
 
 Sign up on `/signup` — the backend seeds demo tasks, notes, events, and emails.
 
+## Use it on your iPhone (no App Store)
+
+The app is an installable PWA, and the backend already serves the built client,
+so your laptop is the "server" and your phone just logs into the same account —
+that's the sync. All data stays on your laptop.
+
+```bash
+# 1) build the client and run the single-origin server (serves UI + API on :4000)
+npm run build
+npm start
+
+# 2) put your laptop + iPhone on the same private network with Tailscale.
+#    Install the Tailscale app on both and sign into the SAME account.
+#    Then expose the server over HTTPS on your tailnet:
+tailscale serve --bg 4000
+tailscale serve status      # prints the URL, e.g. https://<your-mac>.<tailnet>.ts.net/
+```
+
+3. On the iPhone (Tailscale connected), open that HTTPS URL in **Safari**.
+4. **Share → Add to Home Screen** — you now have a full-screen app icon.
+5. Sign in with your account. Same login on laptop + phone = same data.
+
+Notes:
+- Keep the laptop awake while using the phone — it's serving the app.
+- Set a stable `JWT_SECRET` in `server-py/.env` so logins survive restarts.
+- HTTPS (via Tailscale) is what unlocks clean install + future web-push reminders.
+- Sync is "same source of truth," not live push — reopen / pull to refresh to see
+  the latest from the other device.
+- Nothing is published anywhere; data never leaves your devices.
+
 ## Architecture
 
 ```

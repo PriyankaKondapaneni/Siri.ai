@@ -1,6 +1,6 @@
 import logging
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -38,15 +38,21 @@ app.include_router(recovery.router, prefix="/api")
 # Serve the built React client in production (mirror of the Node setup).
 if CLIENT_DIST.exists():
     app.mount("/assets", StaticFiles(directory=CLIENT_DIST / "assets"), name="assets")
+    _client_root = CLIENT_DIST.resolve()
 
     @app.get("/{full_path:path}")
     def spa_fallback(full_path: str):
         if full_path.startswith("api/"):
-            return {"error": "not found"}
+            raise HTTPException(status_code=404, detail="not found")
+        # Serve real static files at the root (manifest, icons, favicon, etc.).
+        if full_path:
+            candidate = (CLIENT_DIST / full_path).resolve()
+            if str(candidate).startswith(str(_client_root)) and candidate.is_file():
+                return FileResponse(candidate)
         index = CLIENT_DIST / "index.html"
         if index.exists():
             return FileResponse(index)
-        return {"error": "client build not found"}
+        raise HTTPException(status_code=404, detail="client build not found")
 
 
 if not ANTHROPIC_API_KEY:
