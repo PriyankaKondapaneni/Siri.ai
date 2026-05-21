@@ -1,5 +1,6 @@
 """Per-task scoring. Pure functions, deterministic, keyword-driven."""
 from app.data.keywords import URGENCY_KEYWORDS, EMOTIONAL_LOAD_KEYWORDS
+from app.engine.cognitive_load import task_load
 from app.engine.time_estimator import estimate as estimate_minutes
 from app.models.task import TaskScores
 
@@ -13,6 +14,30 @@ CATEGORY_BASELINES: dict[str, tuple[int, int, int, int, int]] = {
     "work":          (5, 8, 4, 5, 4),
     "emotional":     (3, 7, 8, 3, 5),
     "other":         (4, 5, 3, 3, 5),
+}
+
+# Per-category context-switching cost (0-5): how jarring it is to enter/leave
+# this mode. Deep-focus work is the most expensive to switch into.
+CONTEXT_SWITCHING_COST: dict[str, int] = {
+    "survival": 1,
+    "self_care": 1,
+    "communication": 2,
+    "chore": 2,
+    "emotional": 3,
+    "work": 4,
+    "other": 2,
+}
+
+# Per-category maintenance burden (0-10): how much ongoing upkeep a single
+# completion implies. Chores and basic care recur; a one-off message doesn't.
+MAINTENANCE_BURDEN: dict[str, int] = {
+    "survival": 8,
+    "self_care": 8,
+    "communication": 1,
+    "chore": 6,
+    "work": 3,
+    "emotional": 4,
+    "other": 3,
 }
 
 
@@ -49,12 +74,25 @@ def score(raw: str, category: str) -> TaskScores:
 
     duration = estimate_minutes(category, raw)
 
+    context_switching_cost = CONTEXT_SWITCHING_COST.get(category, 2)
+    maintenance_burden = MAINTENANCE_BURDEN.get(category, 3)
+    foc_c = _clamp(foc, 1, 5)
+    emo_c = _clamp(emotional_resistance, 0, 10)
+    dur_c = max(1, duration)
+
+    cognitive_load = task_load(
+        foc_c, dur_c, emo_c, context_switching_cost, maintenance_burden
+    )
+
     return TaskScores(
         urgency=_clamp(urgency, 0, 10),
         importance=_clamp(imp, 0, 10),
         activation_energy=_clamp(act, 0, 10),
-        emotional_resistance=_clamp(emotional_resistance, 0, 10),
-        focus_required=_clamp(foc, 1, 5),
-        duration_minutes=max(1, duration),
+        emotional_resistance=emo_c,
+        focus_required=foc_c,
+        duration_minutes=dur_c,
         dopamine_reward=_clamp(dop, 0, 10),
+        context_switching_cost=context_switching_cost,
+        maintenance_burden=maintenance_burden,
+        cognitive_load=cognitive_load,
     )

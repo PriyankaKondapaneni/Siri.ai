@@ -16,3 +16,4 @@ class PlanResponse(BaseModel):
     skip_today: list[str]
     one_tiny_step: ActionStep
     encouragement: Optional[str] = None
+    recovery_hint: Optional[str] = None

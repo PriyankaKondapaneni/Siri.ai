@@ -9,6 +9,7 @@ from app.data.keywords import (
     DISTRESS_KEYWORDS_SHUTDOWN,
     DISTRESS_KEYWORDS_EMOTIONAL,
 )
+from app.data.weights import COGNITIVE_LOAD_BUDGETS, ENERGY_MODE_BY_STATE
 from app.models.state import EmotionalAssessment
 from app.models.task import ScoredTask
 
@@ -56,6 +57,9 @@ def assess(dump: str, meta: list[str], scored: list[ScoredTask]) -> EmotionalAss
     return EmotionalAssessment(
         state=state,
         energy=energy,
+        energy_mode=ENERGY_MODE_BY_STATE[state],
         overwhelm_score=overwhelm,
+        cognitive_load_budget=COGNITIVE_LOAD_BUDGETS[state],
         distress_signals=distress,
+        in_recovery=False,  # set by the recovery engine in Phase B
     )

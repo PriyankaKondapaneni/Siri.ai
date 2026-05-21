@@ -88,11 +88,15 @@ export type Email = {
 };
 export type ActionStep = { order: number; text: string };
 export type EmotionalState = 'okay' | 'stressed' | 'overwhelmed' | 'low_energy' | 'shutdown_risk';
+export type EnergyMode = 'normal' | 'low_energy' | 'shutdown';
 export type EmotionalAssessment = {
   state: EmotionalState;
   energy: 'low' | 'medium' | 'high';
+  energy_mode: EnergyMode;
   overwhelm_score: number;
+  cognitive_load_budget: number;
   distress_signals: string[];
+  in_recovery: boolean;
 };
 export type PlannedTask = {
   raw: string;
@@ -101,7 +105,10 @@ export type PlannedTask = {
   duration_minutes: number;
   priority: 'high' | 'medium' | 'low';
   why: string;
+  cognitive_load: number;
   tiny_steps: ActionStep[];
+  low_energy_steps: ActionStep[];
+  shutdown_step: ActionStep;
 };
 export type ADHDPlan = {
   assessment: EmotionalAssessment;
@@ -109,6 +116,7 @@ export type ADHDPlan = {
   skip_today: string[];
   one_tiny_step: ActionStep;
   encouragement: string | null;
+  recovery_hint: string | null;
 };
 export type Chat = { id: string; title: string; created_at: number; updated_at: number };
 export type Message = {

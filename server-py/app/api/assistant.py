@@ -9,6 +9,7 @@ from app.ai.refiner import refine
 from app.config import ANTHROPIC_API_KEY, CLAUDE_MODEL
 from app.db import query_all, query_one
 from app.deps import require_auth
+from app.engine.anti_shame import sanitize_plan
 from app.engine.formatter import build_plan
 from app.models.plan import PlanRequest, PlanResponse
 
@@ -27,7 +28,7 @@ def adhd_plan(body: PlanRequest, user=Depends(require_auth)):
         raise HTTPException(400, "dump is required")
     plan = build_plan(body.dump)
     if body.refine_with_ai:
-        plan = refine(plan)
+        plan = sanitize_plan(refine(plan))  # re-scrub any wording the LLM introduced
     return plan
 
 

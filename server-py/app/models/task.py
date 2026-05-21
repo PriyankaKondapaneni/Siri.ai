@@ -13,6 +13,9 @@ class TaskScores(BaseModel):
     focus_required: int = Field(ge=1, le=5)
     duration_minutes: int = Field(ge=1)
     dopamine_reward: int = Field(ge=0, le=10)
+    context_switching_cost: int = Field(ge=0, le=5)
+    maintenance_burden: int = Field(ge=0, le=10)
+    cognitive_load: float = Field(ge=0)
 
 
 class ScoredTask(BaseModel):
@@ -34,7 +37,10 @@ class PlannedTask(BaseModel):
     duration_minutes: int
     priority: Priority
     why: str
+    cognitive_load: float
     tiny_steps: list[ActionStep]
+    low_energy_steps: list[ActionStep]
+    shutdown_step: ActionStep
 
 
 # Persistent task model (matches the SQLite tasks table)
