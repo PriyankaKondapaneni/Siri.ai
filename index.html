@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One thing</title>
+<style>
+  :root{
+    --bg:#FAF8F3; --card:#FFFFFF; --ink:#2C2C2A; --muted:#888780; --line:#E6E3DA;
+    --teal:#1D9E75; --teal-bg:#E1F5EE; --teal-ink:#085041;
+    --blue:#378ADD; --blue-bg:#E6F1FB; --blue-ink:#0C447C;
+    --amber:#EF9F27; --amber-bg:#FAEEDA; --amber-ink:#633806;
+    --coral:#D85A30; --coral-bg:#FAECE7; --coral-ink:#712B13;
+    --green-bg:#EAF3DE; --green-ink:#27500A;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{margin:0; padding:20px 16px 48px; background:var(--bg); color:var(--ink);
+    font-family:-apple-system, "Segoe UI", Roboto, sans-serif; max-width:430px; margin-inline:auto;}
+  h1{font-size:20px; font-weight:600; margin:0 0 2px;}
+  .sub{font-size:13px; color:var(--muted); margin:0 0 16px;}
+  .badge{display:inline-block; background:var(--amber-bg); color:var(--amber-ink);
+    font-size:12px; font-weight:600; padding:4px 12px; border-radius:999px; margin-bottom:10px;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; margin-bottom:14px;}
+  .row{display:flex; align-items:center; gap:12px; padding:11px 6px; border-radius:10px; cursor:pointer; user-select:none; min-height:48px;}
+  .row:active{background:var(--bg);}
+  .chip{width:36px; height:36px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:17px;}
+  .row span.t{font-size:15px;}
+  .row.done span.t{text-decoration:line-through; color:var(--muted);}
+  .row.done{opacity:.6;}
+  .top{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;}
+  .count{font-size:13px; font-weight:600; color:var(--blue-ink);}
+  .pass{display:none; margin-top:10px; background:var(--green-bg); color:var(--green-ink);
+    border-radius:10px; padding:10px 12px; font-size:14px;}
+  .streak{font-size:13px; color:var(--muted); margin:4px 0 0;}
+  button.flood{width:100%; padding:14px; font-size:15px; font-weight:600; color:var(--blue-ink);
+    background:var(--blue-bg); border:none; border-radius:12px; cursor:pointer;}
+  button.flood:active{transform:scale(.98);}
+  .floodbox{display:none; margin-top:10px; background:var(--blue-bg); border-radius:12px; padding:12px 14px;}
+  .floodbox p{margin:0; color:var(--blue-ink);}
+  .floodbox .small{font-size:13px; opacity:.85; margin-bottom:4px;}
+  .floodbox .big{font-size:16px; font-weight:600;}
+  .qtitle{font-size:13px; color:var(--muted); margin:20px 0 8px;}
+  .q{display:flex; align-items:center; gap:10px; padding:12px 14px; margin-bottom:8px;
+    border-radius:12px; border:1px solid var(--line); background:var(--card);}
+  .q.locked{background:transparent; opacity:.65;}
+  .q .ic{font-size:16px; flex-shrink:0;}
+  .q p{margin:0;}
+  .q .qt{font-size:14px; font-weight:600;}
+  .q .qs{font-size:12px; color:var(--muted);}
+  .q.open{border-color:var(--blue); background:var(--blue-bg);}
+  .q.open .qt,.q.open .qs{color:var(--blue-ink);}
+  .foot{font-size:12px; color:var(--muted); text-align:center; margin-top:24px; line-height:1.6;}
+</style>
+</head>
+<body>
+
+<h1>One thing</h1>
+<p class="sub" id="dateLine"></p>
+
+<div class="card">
+  <span class="badge">Hold-steady mode · till mom leaves (July 2nd week)</span>
+  <div class="top">
+    <strong style="font-size:15px;">Today</strong>
+    <span class="count" id="count">0 / 4</span>
+  </div>
+  <div id="habits"></div>
+  <div class="pass" id="pass"></div>
+  <p class="streak" id="streak"></p>
+</div>
+
+<button class="flood" id="floodBtn">My mind is flooding / feeling watched</button>
+<div class="floodbox" id="floodBox">
+  <p class="small">Everything is in the queue. Right now, only one thing:</p>
+  <p class="big" id="oneThing"></p>
+</div>
+
+<p class="qtitle">The queue — locked on purpose, nothing forgotten</p>
+<div id="queue"></div>
+
+<p class="foot">Missed day = just continue next day.<br>No starting over. No guilt.</p>
+
+<script>
+var HABITS = [
+  {t:"1 buttermilk", icon:"🥛", bg:"var(--blue-bg)", fg:"var(--blue-ink)"},
+  {t:"Water through the day", icon:"💧", bg:"var(--teal-bg)", fg:"var(--teal-ink)"},
+  {t:"1 omelette or dal", icon:"🍳", bg:"var(--amber-bg)", fg:"var(--amber-ink)"},
+  {t:"10-min walk — your unwatched pocket", icon:"🚶", bg:"var(--coral-bg)", fg:"var(--coral-ink)"}
+];
+var QUEUE = [
+  {t:"Health: iron from doctor, hold habits", s:"Active now", open:true},
+  {t:"Mom-season ends, space returns", s:"July 2nd week", open:false},
+  {t:"Lemon dash + bigger movement", s:"Mid-July", open:false},
+  {t:"Job switch: DSA, Java, system design", s:"Planned fresh after health settles", open:false},
+  {t:"Chore systems before marriage", s:"August-ish", open:false},
+  {t:"December: glow + feeling good", s:"Handled by all of the above", open:false}
+];
+
+function todayKey(){
+  var d = new Date();
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+function load(){
+  var raw = localStorage.getItem("oneThing");
+  var data = raw ? JSON.parse(raw) : {day:null, done:[false,false,false,false], streak:0, lastWin:null};
+  var tk = todayKey();
+  if(data.day !== tk){
+    var yesterday = new Date(); yesterday.setDate(yesterday.getDate()-1);
+    var yk = yesterday.getFullYear()+"-"+String(yesterday.getMonth()+1).padStart(2,"0")+"-"+String(yesterday.getDate()).padStart(2,"0");
+    if(data.lastWin !== yk && data.lastWin !== tk){ data.streak = 0; }
+    data.day = tk;
+    data.done = [false,false,false,false];
+  }
+  return data;
+}
+function save(d){ localStorage.setItem("oneThing", JSON.stringify(d)); }
+
+var state = load();
+
+function render(){
+  var el = document.getElementById("habits");
+  el.innerHTML = "";
+  var n = 0;
+  HABITS.forEach(function(h,i){
+    if(state.done[i]) n++;
+    var row = document.createElement("div");
+    row.className = "row" + (state.done[i] ? " done" : "");
+    row.setAttribute("role","button");
+    row.setAttribute("tabindex","0");
+    row.innerHTML = '<span class="chip" style="background:'+h.bg+';color:'+h.fg+';">'+(state.done[i] ? "✓" : h.icon)+'</span><span class="t">'+h.t+'</span>';
+    function toggle(){
+      state.done[i] = !state.done[i];
+      var c = state.done.filter(Boolean).length;
+      if(c >= 2 && state.lastWin !== state.day){
+        state.lastWin = state.day;
+        state.streak = (state.streak||0) + 1;
+      }
+      save(state); render();
+    }
+    row.onclick = toggle;
+    row.onkeydown = function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(); } };
+    el.appendChild(row);
+  });
+  document.getElementById("count").textContent = n + " / 4";
+  var pass = document.getElementById("pass");
+  if(n >= 2){
+    pass.style.display = "block";
+    pass.textContent = n === 4 ? "Full day won. Nothing else owed to anyone." : "2+ done in mom-season = a pass. Anything more is bonus.";
+  } else { pass.style.display = "none"; }
+  document.getElementById("streak").textContent = state.streak > 0 ? ("Pass-day streak: " + state.streak) : "";
+}
+
+function renderQueue(){
+  var el = document.getElementById("queue");
+  QUEUE.forEach(function(q){
+    var d = document.createElement("div");
+    d.className = "q " + (q.open ? "open" : "locked");
+    d.innerHTML = '<span class="ic">'+(q.open ? "🎯" : "🔒")+'</span><div><p class="qt">'+q.t+'</p><p class="qs">'+q.s+'</p></div>';
+    el.appendChild(d);
+  });
+}
+
+document.getElementById("floodBtn").onclick = function(){
+  var idx = state.done.findIndex(function(x){ return !x; });
+  document.getElementById("oneThing").textContent = idx === -1 ? "Nothing. All done. Rest is allowed — even while watched." : HABITS[idx].t;
+  document.getElementById("floodBox").style.display = "block";
+};
+
+var d = new Date();
+document.getElementById("dateLine").textContent = d.toLocaleDateString("en-IN", {weekday:"long", day:"numeric", month:"long"});
+
+render();
+renderQueue();
+</script>
+</body>
+</html>
