@@ -72,7 +72,8 @@ def test_regime_rule_moves_stock_money_to_nifty(ctx_factory):
     ctx.signals.risk_on.loc[ctx.as_of] = False
     plan = monthly_plan(ctx)
     assert plan.stock_buys["qty"].sum() == 0
-    assert plan.bucket_amounts["nifty50"] == pytest.approx(25_000 * 0.65)
+    alloc = ctx.cfg["allocation"]
+    assert plan.bucket_amounts["nifty50"] == pytest.approx(25_000 * (alloc["nifty50"] + alloc["momentum"]))
 
 
 def test_rebalance_sells_below_buffer_with_tax_estimate(ctx_factory):
@@ -107,3 +108,10 @@ def test_rebalance_with_no_holdings_says_so(ctx_factory):
     from sipquant.live.plan import format_rebalance
     text = format_rebalance(rebalance_plan(ctx_factory()))
     assert "nothing to rebalance" in text
+
+
+def test_international_bucket_is_bought_as_an_etf(ctx_factory):
+    plan = monthly_plan(ctx_factory())
+    intl = plan.etf_units[plan.etf_units["bucket"] == "international"]
+    assert intl["ticker"].tolist() == ["MON100.NS"] and intl["units"].iloc[0] > 0
+    assert any("iNAV" in n for n in plan.notes)

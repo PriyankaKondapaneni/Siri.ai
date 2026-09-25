@@ -11,7 +11,7 @@ Each month, on the first trading day:
      directed to the names furthest below equal weight, so we never trim
      winners (no extra tax) yet drift back towards equal weight over time.
      Whole shares only; leftover rupees go to the Nifty 50 bucket.
-  5. Index buckets (Nifty 50, midcap, gold) are bought in fractional units
+  5. Index buckets (Nifty 50, midcap, international, gold) are bought in fractional units
      (like a mutual fund) and never sold during the simulation.
 
 Signals are read from the previous trading day's close and trades execute at

@@ -96,6 +96,9 @@ def monthly_plan(ctx: LiveContext) -> MonthlyPlan:
             leftover += money - units * _unit_cost(ctx, price)
         if leftover > 0.5:
             notes.append(f"Rs {leftover:,.0f} can't buy a whole ETF unit; keep it for next month.")
+        if "international" in flows:
+            notes.append(f"{cfg['live']['instruments']['international'].removesuffix('.NS')} can trade above its "
+                         "real value (iNAV, shown on nseindia.com). Check the premium and use a limit order.")
     etfs = pd.DataFrame(etf_rows, columns=["bucket", "ticker", "price", "units", "cost"])
 
     not_buying = [t for t in held.index if t not in sel.final]

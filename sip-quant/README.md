@@ -4,9 +4,10 @@ A personal, local-only tool to backtest (and later run) a ₹25,000/month SIP sp
 
 | Bucket | Default | Instrument |
 |---|---|---|
-| Momentum-quality stocks | 40% | Top 15 Nifty 500 stocks by risk-adjusted 12-1 momentum, with liquidity and quality filters |
-| Nifty Midcap 150 | 25% | Index/ETF proxy ticker (see `config.yaml`) |
-| Nifty 50 | 25% | `NIFTYBEES.NS` (falls back to `^NSEI`) |
+| Momentum-quality stocks | 35% | Top 15 Nifty 500 stocks by risk-adjusted 12-1 momentum, with liquidity and quality filters |
+| Nifty Midcap 150 | 20% | Index/ETF proxy ticker (see `config.yaml`) |
+| Nifty 50 | 20% | `NIFTYBEES.NS` (falls back to `^NSEI`) |
+| International (US) | 15% | `MON100.NS`, the Nasdaq 100 ETF listed on NSE, priced in rupees |
 | Gold | 10% | `GOLDBEES.NS` |
 
 All numbers (allocation, filters, costs, tax rates, tickers) are in `config.yaml`.
@@ -188,6 +189,10 @@ The scripts write to `logs/notify.log`. Point `SIPQUANT_PYTHON` at your environm
 - **Prices**: Yahoo *adjusted* closes are used for returns (dividends reinvested). The ₹50 filter uses split-adjusted close, so a stock that later split looks cheaper in the past than it really was. Yahoo data for small NSE names has gaps and errors.
 - **Index proxies**: `^NSEI`/`^CRSMID`-type indices are price indices (no dividends) and have no expense ratio. ETF tickers are used first where available. The midcap proxy that was actually used is printed in the output.
 - **Tax**: today's rates (20% / 12.5% / ₹1.25 L) are applied to all years, which is conservative before July 2024 (15% / 10% / ₹1 L, and LTCG was exempt before Feb 2018). Not modelled: cess, surcharge, grandfathering, the 8-year limit on loss carry-forward, and tax on dividends.
+- **International ETF**:
+  - Nasdaq 100 is a concentrated US tech index, and 2011–2026 was an unusually strong period for it, so the "Without international" column probably flatters the international bucket.
+  - MON100 can trade at a premium to its iNAV.
+  - Tax: the backtest taxes every sale at the equity rates, but gains on international ETFs are taxed differently (long-term only after 24 months, and short-term at your slab rate, under the current rules). The "exit tax" figure is therefore somewhat understated for this bucket. Check the current rules before selling.
 - Costs are a flat percentage. DP charges per sell and the ₹20 minimum brokerage on small orders are ignored, and those matter on ₹600 orders.
 
 ## Project layout

@@ -40,3 +40,11 @@ def test_nifty_only_pays_no_tax_until_exit(setup):
     r = Simulator(m, B.nifty50_only(cfg)).run()
     assert r.tax_paid == 0
     assert (r.trades["side"] == "BUY").all()
+
+
+def test_without_bucket_reweights_pro_rata():
+    cfg = load_config()
+    out = B.without_bucket(cfg, "international")["allocation"]
+    assert "international" not in out and sum(out.values()) == pytest.approx(1.0)
+    ratio = cfg["allocation"]["momentum"] / cfg["allocation"]["nifty50"]
+    assert out["momentum"] / out["nifty50"] == pytest.approx(ratio)

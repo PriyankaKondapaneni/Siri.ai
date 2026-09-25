@@ -50,12 +50,15 @@ def main(argv: list[str] | None = None) -> int:
     signals = compute_signals(market, cfg)  # computed once, shared by every run below
 
     # ---- main comparison -------------------------------------------------
-    main_run = run_backtest(market, cfg, "4-bucket portfolio", signals)
+    n_buckets = sum(1 for v in cfg["allocation"].values() if v > 0)
+    main_run = run_backtest(market, cfg, f"{n_buckets}-bucket portfolio", signals)
     n50 = run_backtest(market, B.nifty50_only(cfg), "Nifty 50 SIP", signals)
     m30_cfg, m30_label = B.momentum30(cfg, market)
     m30 = run_backtest(market, m30_cfg, m30_label, signals)
     mom = run_backtest(market, B.momentum_alone(cfg), "Momentum sleeve alone", signals)
     results = [main_run, n50, m30, mom]
+    if cfg["allocation"].get("international", 0) > 0:  # what does the international bucket add?
+        results.append(run_backtest(market, B.without_bucket(cfg, "international"), "Without international", signals))
 
     table = R.metrics_table(results)
     print(f"\nSIP of Rs {cfg['sip']['monthly_amount']:,}/month, "
@@ -75,7 +78,7 @@ def main(argv: list[str] | None = None) -> int:
                 "Worst year", "Annual turnover (momentum sleeve)", "Tax paid during SIP", "Final value",
                 "Eligible stocks at rebalance (min / median)", "Stocks held (min / median)"]
         variants_table = R.metrics_table(vres).loc[keep].T
-        print("\nVARIANTS (4-bucket portfolio; Q = quality filter, R = regime rule)\n")
+        print(f"\nVARIANTS ({n_buckets}-bucket portfolio; Q = quality filter, R = regime rule)\n")
         print(variants_table.to_string())
 
     # ---- files ---------------------------------------------------------------
@@ -92,7 +95,7 @@ def main(argv: list[str] | None = None) -> int:
         fh.write("## Comparison\n\n" + R.to_markdown(table) + "\n\n")
         if variants_table is not None:
             fh.write("## Variants\n\n" + R.to_markdown(variants_table) + "\n\n")
-        fh.write("## Tax by financial year (4-bucket portfolio)\n\n" + R.to_markdown(
+        fh.write(f"## Tax by financial year ({main_run.name})\n\n" + R.to_markdown(
                  main_run.tax_by_fy.to_frame("tax").map(lambda v: f"Rs {v:,.0f}")) + "\n")
 
     print(f"\nCharts and CSVs written to {out}")
