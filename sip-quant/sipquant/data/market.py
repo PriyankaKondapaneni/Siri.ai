@@ -12,6 +12,7 @@ import pandas as pd
 
 from ..config import resolve_path
 from . import fundamentals as fmod
+from .clean import clean_frame
 from .prices import PriceCache
 from .synthetic import SYNTHETIC_BANNER, make_market
 from .universe import load_universe
@@ -56,17 +57,28 @@ def load_market(cfg: dict, synthetic: bool = False, update: bool = True) -> Mark
                   if update else cache.load())
         if prices["adj_close"].empty:
             raise RuntimeError("Price cache is empty. Run without --no-download first.")
-        fcache = fmod.FundamentalsCache(cache_dir)
+        fcache = fmod.FundamentalsCache(cache_dir, cfg["data"].get("fundamentals_delay_seconds", 0.5))
         fund = (fcache.update(list(universe.index), cfg["data"]["fundamentals_max_age_days"])
                 if update else fcache.load().reindex(universe.index))
         raw_bench = {t: prices["adj_close"][t] for t in bench_candidates if t in prices["adj_close"]}
 
     fund = fund.reindex(universe.index)
-    fmod.report_missing(fund)
+    notes += fmod.report_missing(fund)
     notes.append("WARNING: Fundamentals are today's values applied to all past dates -> look-ahead bias "
                  "whenever the quality filter is on.")
 
+    # Repair bad prints / unadjusted splits before anything uses the prices.
     stocks = [t for t in universe.index if t in prices["adj_close"].columns]
+    prices = dict(prices)
+    prices["adj_close"], fixed = clean_frame(prices["adj_close"][stocks], "stocks, adjusted close")
+    prices["close"], _ = clean_frame(prices["close"][stocks], "stocks, close")
+    bench_df, bench_fixed = clean_frame(pd.DataFrame(raw_bench), "benchmarks")
+    raw_bench = {t: bench_df[t] for t in bench_df.columns}
+    if fixed:
+        notes.append(f"NOTE: repaired bad prices in {len(fixed)} stocks (bad prints / unadjusted splits); see log.")
+    for t, fixes in bench_fixed.items():
+        notes.append(f"NOTE: {t} price data repaired: " + "; ".join(fixes))
+
     bench, used = _pick_benchmarks(cfg, raw_bench, notes)
     return Market(
         close=prices["close"][stocks], adj_close=prices["adj_close"][stocks], volume=prices["volume"][stocks],
@@ -95,4 +107,7 @@ def _pick_benchmarks(cfg: dict, raw: dict[str, pd.Series], notes: list[str]):
         bench[role], used[role] = s, t
         if t != candidates[0]:
             notes.append(f"NOTE: {role} uses fallback ticker {t} (preferred {candidates[0]} unavailable/too short).")
+        if role == "midcap" and t == "JUNIORBEES.NS":
+            notes.append("WARNING: the midcap bucket is using JUNIORBEES (Nifty Next 50 = large caps), "
+                         "so it understates midcap risk and return.")
     return bench, used

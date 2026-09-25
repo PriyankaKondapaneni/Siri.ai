@@ -68,6 +68,9 @@ def make_market(start: str = "2009-06-01", end: str = "2026-09-24", n_stocks: in
             "debt_to_equity": rng.lognormal(np.log(0.5), 0.9, n_stocks),
             "eps": rng.normal(25, 30, n_stocks),
             "fetched_at": pd.Timestamp.now(),
+            "ok": True,
+            "source": "info",
+            "schema": 2,
         },
         index=pd.Index(tickers, name="ticker"),
     )

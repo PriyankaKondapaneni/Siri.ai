@@ -57,6 +57,7 @@ class BacktestResult:
     risk_on: pd.Series        # regime state per SIP month (True = normal)
     picks: dict = field(default_factory=dict)  # rebalance date -> list of picks
     metrics: dict = field(default_factory=dict)
+    diag: dict = field(default_factory=dict)   # sanity-check numbers (eligible counts, diverted money...)
 
 
 def allocate_to_picks(cash: float, picks: list[str], held_value: dict[str, float],
@@ -177,6 +178,9 @@ class Simulator:
         units = 0.0
         snapshots, cashflows, unit_log, risk_log, picks_log = {}, [], {}, {}, {}
         sell_value = 0.0
+        # Diagnostics: is the momentum sleeve actually getting (and spending) its money?
+        eligible_counts, held_counts = [], []
+        mom_budget = to_nifty_regime = to_nifty_leftover = 0.0
 
         dates = self.sip_dates()
         for i, d in enumerate(dates):
@@ -194,13 +198,16 @@ class Simulator:
             flows = {k: amount * v for k, v in self.alloc.items()}
             on = bool(self.sig.risk_on.loc[prev])
             risk_log[d] = on
+            mom_budget += flows.get(MOMENTUM, 0.0)
             if regime_on and not on and MOMENTUM in flows:
+                to_nifty_regime += flows[MOMENTUM]
                 flows[NIFTY50] = flows.get(NIFTY50, 0.0) + flows.pop(MOMENTUM)
 
             # 3. rebalance the momentum sleeve.
             if MOMENTUM in self.alloc and (i == 0 or d.month in rebal_months or (not picks and MOMENTUM in flows)):
                 held = [t for t in self.pos if t not in self.buckets and t != NIFTY50]
                 ranked = rank_stocks(self.sig.score.loc[prev], eligible_mask(self.sig, prev, self.cfg))
+                eligible_counts.append(len(ranked))
                 sel = select_with_buffer(ranked, held, self.s["top_n"], self.s["sell_rank_buffer"])
                 for t in sel.sell:
                     if pd.isna(px.get(t)):  # can't trade without a price: keep holding it
@@ -222,6 +229,7 @@ class Simulator:
                 flows[NIFTY50] = flows.get(NIFTY50, 0.0) + cash
                 cash = 0.0
             flows[NIFTY50] = flows.get(NIFTY50, 0.0) + cash  # leftover rupees roll into Nifty 50
+            to_nifty_leftover += cash
             cash = 0.0
 
             # 5. index buckets: fractional units.
@@ -229,7 +237,14 @@ class Simulator:
                 if money > 0:
                     self._buy(d, role, money / self._unit_cost(role, px[role]), px[role])
             snapshots[d] = dict(self.pos)
+            held_counts.append(sum(1 for t in self.pos if t not in self.buckets and t != NIFTY50))
 
+        self.diag = {
+            "eligible": pd.Series(eligible_counts, dtype=float),
+            "held": pd.Series(held_counts if MOMENTUM in self.alloc else [], dtype=float),
+            "diverted_regime": to_nifty_regime / mom_budget if mom_budget else float("nan"),
+            "diverted_leftover": to_nifty_leftover / mom_budget if mom_budget else float("nan"),
+        }
         return self._finish(dates, snapshots, cashflows, unit_log, risk_log, picks_log, sell_value, amount)
 
     # ------------------------------------------------------------- results
@@ -262,7 +277,7 @@ class Simulator:
             name=self.name, value=value, nav=nav, invested=invested, sleeve_value=sleeve,
             cashflows=cashflows, trades=trades, tax_by_fy=self.ledger.tax_by_fy(),
             tax_paid=self.ledger.total_tax, exit_tax=exit_tax, exit_value=exit_value,
-            risk_on=pd.Series(risk_log), picks=picks_log,
+            risk_on=pd.Series(risk_log), picks=picks_log, diag=self.diag,
         )
         res.metrics = summarise(res, sell_value, self.s["regime"]["enabled"] and MOMENTUM in self.alloc)
         return res
@@ -287,7 +302,21 @@ def summarise(r: BacktestResult, sell_value: float, regime_applies: bool) -> dic
         "Tax if exited today": r.exit_tax,
         # Months where the rule actually redirected money (n/a if the rule is off or there's no momentum sleeve).
         "Regime-off months": int((~r.risk_on).sum()) if regime_applies else "n/a",
+        # Sanity checks: a healthy sleeve has far more eligible stocks than top_n, holds ~top_n names,
+        # and sends little of its money to Nifty 50 as leftover.
+        "Eligible stocks at rebalance (min / median)": _min_median(r.diag.get("eligible")),
+        "Stocks held (min / median)": _min_median(r.diag.get("held")),
+        "Momentum money -> Nifty 50 (regime / leftover)": _pct_pair(r.diag),
     }
+
+
+def _min_median(s) -> str:
+    return "n/a" if s is None or s.empty else f"{s.min():.0f} / {s.median():.0f}"
+
+
+def _pct_pair(diag: dict) -> str:
+    a, b = diag.get("diverted_regime", float("nan")), diag.get("diverted_leftover", float("nan"))
+    return "n/a" if pd.isna(a) else f"{a:.0%} / {b:.0%}"
 
 
 def run_backtest(market, cfg: dict, name: str = "Portfolio", signals: Signals | None = None) -> BacktestResult:
