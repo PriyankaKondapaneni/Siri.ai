@@ -9,17 +9,26 @@ import pandas as pd
 
 from ..config import with_overrides
 
-INDEX_ONLY = {"momentum": 0.0, "midcap": 0.0, "nifty50": 0.0, "gold": 0.0}
+
+def _only(cfg: dict, bucket: str) -> dict:
+    """Allocation with 100% in ``bucket`` and 0% in every other configured bucket."""
+    return {**{k: 0.0 for k in cfg["allocation"]}, bucket: 1.0}  # {**d, k: v} = copy d, then set k
 
 
 def nifty50_only(cfg: dict) -> dict:
-    return with_overrides(cfg, {"allocation": {**INDEX_ONLY, "nifty50": 1.0},  # {**d, k: v} = copy d, set k
-                                "strategy.regime.enabled": False})
+    return with_overrides(cfg, {"allocation": _only(cfg, "nifty50"), "strategy.regime.enabled": False})
 
 
 def momentum_alone(cfg: dict) -> dict:
     """The momentum-quality sleeve on its own (100% of the SIP; regime/leftover money still goes to Nifty 50)."""
-    return with_overrides(cfg, {"allocation": {**INDEX_ONLY, "momentum": 1.0}})
+    return with_overrides(cfg, {"allocation": _only(cfg, "momentum")})
+
+
+def without_bucket(cfg: dict, bucket: str) -> dict:
+    """Same portfolio with ``bucket`` removed and its weight spread pro rata over the others."""
+    alloc = {k: v for k, v in cfg["allocation"].items() if k != bucket}
+    total = sum(alloc.values())
+    return with_overrides(cfg, {"allocation": {k: v / total for k, v in alloc.items()}})
 
 
 def momentum30(cfg: dict, market) -> tuple[dict, str]:
@@ -32,12 +41,12 @@ def momentum30(cfg: dict, market) -> tuple[dict, str]:
     """
     series = market.bench.get("momentum30_benchmark")
     if series is not None and series.first_valid_index() <= pd.Timestamp(cfg["sip"]["start"]) + pd.Timedelta(days=7):
-        c = with_overrides(cfg, {"allocation": {**INDEX_ONLY, "momentum30_benchmark": 1.0},
+        c = with_overrides(cfg, {"allocation": _only(cfg, "momentum30_benchmark"),
                                  "strategy.regime.enabled": False})
         return c, f"Nifty200 Mom30 ({market.bench_ticker['momentum30_benchmark']})"
     p = cfg["momentum30_proxy"]
     c = with_overrides(cfg, {
-        "allocation": {**INDEX_ONLY, "momentum": 1.0},
+        "allocation": _only(cfg, "momentum"),
         "strategy.top_n": p["top_n"],
         "strategy.sell_rank_buffer": p["top_n"],
         "strategy.rebalance": p["rebalance"],

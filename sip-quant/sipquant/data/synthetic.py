@@ -59,6 +59,7 @@ def make_market(start: str = "2009-06-01", end: str = "2026-09-24", n_stocks: in
         "GOLDBEES.NS": series(rng.normal(0.10 / 252, 0.14 / np.sqrt(252), T)),
         "MID150BEES.NS": series(1.15 * m)[dates >= "2019-01-15"] / 5,  # ETF listed 2019, like the real one
         "^CRSLDX": series(1.05 * m),
+        "MON100.NS": series(rng.normal(0.16 / 252, 0.20 / np.sqrt(252), T), level=15.0),  # "US tech" in rupees
         # Too short on purpose (like the real ETF), so the proxy path gets used.
         "MOM30IETF.NS": series(m * 1.2)[dates >= "2022-03-01"],
     }

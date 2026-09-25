@@ -10,9 +10,10 @@ sip:
 
 # How each month's SIP is split. Must sum to 1.0.
 allocation:
-  momentum: 0.40             # momentum-quality stock picks from Nifty 500
-  midcap: 0.25               # Nifty Midcap 150 (via proxy ticker)
-  nifty50: 0.25              # Nifty 50
+  momentum: 0.35             # momentum-quality stock picks from Nifty 500
+  midcap: 0.20               # Nifty Midcap 150 (via proxy ticker)
+  nifty50: 0.20              # Nifty 50
+  international: 0.15        # US equity via an NSE-listed ETF (Nasdaq 100)
   gold: 0.10                 # gold ETF
 
 # Yahoo Finance tickers. Where a list is given, the first ticker with enough
@@ -23,6 +24,9 @@ tickers:
   # JUNIORBEES is Nifty NEXT 50 (large caps, not midcaps) - last resort only.
   midcap: ["^NSEMDCP150", "MID150BEES.NS", "^NSEMDCP50", "^CRSMID", "JUNIORBEES.NS"]
   gold: ["GOLDBEES.NS"]
+  # Motilal Oswal Nasdaq 100 ETF: listed on NSE since 2011, trades in rupees (so it includes
+  # the rupee/dollar move). Can trade at a premium to its iNAV when overseas limits bite.
+  international: ["MON100.NS"]
   regime_signal: ["^CRSLDX", "^NSEI"]           # Nifty 500 index, Nifty 50 as fallback
   momentum30_benchmark: ["MOM30IETF.NS"]        # Nifty 200 Momentum 30 ETF (only listed 2022 -> proxy is built if too short)
 
@@ -90,6 +94,7 @@ live:
     nifty50: "NIFTYBEES.NS"
     midcap: "MID150BEES.NS"
     gold: "GOLDBEES.NS"
+    international: "MON100.NS"
   index_buckets_as: "etf"             # etf = whole ETF units | amount = rupee amounts (index mutual funds)
   market_close_ist: "15:45"           # before this time, today's (incomplete) price bar is ignored
   # NSE trading holidays (YYYY-MM-DD). Used to find the first trading day of a month.
