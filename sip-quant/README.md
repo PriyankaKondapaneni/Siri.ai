@@ -32,7 +32,7 @@ cd sip-quant
 python3.11 -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python -m pytest                     # should say "40 passed"
+python -m pytest                     # should say "43 passed"
 ```
 
 Get the constituent list: go to niftyindices.com → Indices → Broad Market → **Nifty 500** →
@@ -67,7 +67,7 @@ request per ticker (10–20 minutes). Later runs only fetch the new days. Output
   - an *unadjusted split*: the jump is close to 1/2, 1/5, 1/10 and so on, and the price stays there. Earlier prices are rescaled to match.
 
   Every fix is listed in the log and in `report.md`. For example, NIFTYBEES had a one-day bad print in Dec 2019 that showed up as a −90% "drawdown".
-- **Fundamentals**: requests are spaced out, retried with increasing waits, and stopped after 5 failures in a row. A failed fetch is *not* saved as "missing"; it is retried on the next run. The report tells apart "Yahoo has no such field" and "Yahoo returned nothing".
+- **Fundamentals**: Yahoo's summary (`.info`) has no ROE for most NSE stocks. When it's missing, ROE is calculated from the annual statements as net income ÷ average shareholders' equity, and D/E as total debt ÷ equity. The report says how many stocks needed this. Requests are spaced out, retried with increasing waits, and stopped after 5 failures in a row. A failed fetch is *not* saved as "missing"; it is retried on the next run. The report tells apart "Yahoo has no such field" and "Yahoo returned nothing".
 - **Diagnostic rows** in the comparison table:
   - *Eligible stocks at rebalance*: should be well above 25. If it isn't, the filters are starving the strategy.
   - *Stocks held*: should be about 15.

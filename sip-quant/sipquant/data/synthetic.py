@@ -69,6 +69,8 @@ def make_market(start: str = "2009-06-01", end: str = "2026-09-24", n_stocks: in
             "eps": rng.normal(25, 30, n_stocks),
             "fetched_at": pd.Timestamp.now(),
             "ok": True,
+            "source": "info",
+            "schema": 2,
         },
         index=pd.Index(tickers, name="ticker"),
     )
