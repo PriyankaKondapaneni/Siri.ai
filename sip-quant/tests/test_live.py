@@ -101,3 +101,9 @@ def test_tracker_value_xirr_and_drawdown(ctx_factory):
     assert st.xirr == pytest.approx((price / 100) ** (365 / (ctx.as_of - pd.Timestamp("2025-09-24")).days) - 1,
                                     rel=1e-3)
     assert -1 < st.drawdown <= 0 and st.max_drawdown <= st.drawdown
+
+
+def test_rebalance_with_no_holdings_says_so(ctx_factory):
+    from sipquant.live.plan import format_rebalance
+    text = format_rebalance(rebalance_plan(ctx_factory()))
+    assert "nothing to rebalance" in text
