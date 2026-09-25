@@ -9,3 +9,4 @@ __pycache__/
 .pytest_cache/
 data/state.json
 logs/
+holdings.csv.bak-*
