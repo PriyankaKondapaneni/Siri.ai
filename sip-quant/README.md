@@ -32,7 +32,7 @@ cd sip-quant
 python3.11 -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python -m pytest                     # should say "57 passed"
+python -m pytest                     # should say "65 passed"
 ```
 
 Get the constituent list: go to niftyindices.com → Indices → Broad Market → **Nifty 500** →
@@ -129,6 +129,18 @@ python -m sipquant.rebalance   # sells (rank below 25 or filtered out) with esti
 python -m sipquant.rebalance --realised-ltcg 80000   # if you already booked Rs 80k LTCG this FY elsewhere
 python -m sipquant.tracker     # value, invested, XIRR, drawdown from peak, per-holding returns
 ```
+
+**Zerodha users:** instead of typing rows by hand, download your tradebook from console.zerodha.com → Reports → Tradebook (segment **Equity**) → CSV. Then run:
+
+```bash
+python -m sipquant.import_zerodha ~/Downloads/tradebook-*.csv   # add --dry-run to preview
+```
+
+- Buy fills of a stock on the same day become one lot at the average price.
+- Sells are matched against the oldest lots first (FIFO, the same order the tax rules use).
+- Trades that appear in more than one file are counted once, so overlapping downloads are fine.
+- An existing `holdings.csv` is backed up before it's replaced.
+- Splits and bonuses aren't in the tradebook. After one, fix that stock's `qty` and `buy_price` by hand.
 
 All three accept `--synthetic` to try them without real data, and `--no-download` to use the cache only.
 

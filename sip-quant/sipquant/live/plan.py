@@ -202,6 +202,9 @@ def rebalance_plan(ctx: LiveContext, realised_stcg: float = 0.0, realised_ltcg: 
 
 def format_rebalance(p: RebalancePlan) -> str:
     lines = [f"Quarterly rebalance  (prices as of {p.as_of:%d %b %Y})", ""]
+    if p.sells.empty and not p.keep:
+        return "\n".join(lines + ["No stock holdings in holdings.csv yet, so there's nothing to rebalance.",
+                                   "Use `python -m sipquant.monthly` for this month's buys.", "", DISCLAIMER])
     if p.sells.empty:
         lines.append("No sells: every holding is still inside the top-25 buffer.")
     else:
