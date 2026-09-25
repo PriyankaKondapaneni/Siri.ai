@@ -78,3 +78,31 @@ momentum30_proxy:
 backtest:
   output_dir: "output"
   run_variants: true                  # quality on/off x regime on/off x monthly/quarterly
+
+# ---------------------------------------------------------------------------
+# Live use (python -m sipquant.monthly / rebalance / tracker) and notifications
+# ---------------------------------------------------------------------------
+live:
+  holdings_csv: "holdings.csv"        # symbol, qty, buy_date, buy_price (one row per purchase lot)
+  state_file: "data/state.json"       # remembers sent reports and alerts (so nothing is sent twice)
+  # What you actually buy for each index bucket (Yahoo tickers).
+  instruments:
+    nifty50: "NIFTYBEES.NS"
+    midcap: "MID150BEES.NS"
+    gold: "GOLDBEES.NS"
+  index_buckets_as: "etf"             # etf = whole ETF units | amount = rupee amounts (index mutual funds)
+  market_close_ist: "15:45"           # before this time, today's (incomplete) price bar is ignored
+  # NSE trading holidays (YYYY-MM-DD). Used to find the first trading day of a month.
+  # Copy them from nseindia.com -> Holidays each year. Weekends are handled automatically.
+  nse_holidays: []
+
+alerts:
+  holding_drop_from_buy: -0.25        # alert when a holding is 25% below your average buy price
+  portfolio_drawdown_levels: [-0.20, -0.30]
+  rearm_margin: 0.05                  # a level can fire again once drawdown recovers 5 pts above it
+
+news:
+  enabled: true                       # only used if ANTHROPIC_API_KEY is set in .env
+  model: "claude-opus-5"
+  max_headlines_per_stock: 8
+  max_age_days: 14

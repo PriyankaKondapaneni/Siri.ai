@@ -65,7 +65,10 @@ def allocate_to_picks(cash: float, picks: list[str], held_value: dict[str, float
     """Split ``cash`` across ``picks`` so each moves towards an equal share of the sleeve.
 
     Returns {ticker: quantity}. With whole shares, a second greedy pass spends the
-    remainder one share at a time on the most under-weight name that is affordable.
+    remainder one share at a time on the most under-weight affordable name - but only
+    if that share brings the name *closer* to its target (shortfall >= half a share).
+    So a Rs 2,500 share isn't bought against a Rs 660 target; its shortfall builds up
+    over the months until a share is justified, and meanwhile the money goes elsewhere.
     """
     if not picks or cash <= 0:
         return {}
@@ -86,7 +89,7 @@ def allocate_to_picks(cash: float, picks: list[str], held_value: dict[str, float
     while True:
         def deficit(p):
             return target - held_value.get(p, 0.0) - qty[p] * unit_cost[p]
-        affordable = [p for p in picks if unit_cost[p] <= left + 1e-9 and deficit(p) > 0]
+        affordable = [p for p in picks if unit_cost[p] <= left + 1e-9 and deficit(p) >= unit_cost[p] / 2]
         if not affordable:
             break
         best = max(affordable, key=deficit)
