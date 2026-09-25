@@ -35,24 +35,45 @@ class Market:
     bench_ticker: dict[str, str] # role -> which Yahoo ticker was actually used
     notes: list[str] = field(default_factory=list)  # caveats printed with every report
     synthetic: bool = False
+    # Split-adjusted (not dividend-adjusted) close for non-universe tickers: ETFs you buy,
+    # benchmark candidates, and any holding outside the Nifty 500. Used for live prices.
+    other_close: pd.DataFrame = field(default_factory=pd.DataFrame)
 
     @property
     def calendar(self) -> pd.DatetimeIndex:
         """Trading days = days the Nifty 50 series has a price."""
         return self.bench["nifty50"].dropna().index
 
+    def close_series(self, ticker: str) -> pd.Series:
+        """Actual traded (split-adjusted) closes for any ticker we have; empty if unknown."""
+        for frame in (self.close, self.other_close):
+            if ticker in frame.columns:
+                return frame[ticker].dropna()
+        return pd.Series(dtype=float)
 
-def load_market(cfg: dict, synthetic: bool = False, update: bool = True) -> Market:
+    def last_price(self, ticker: str, as_of: pd.Timestamp | None = None) -> float:
+        s = self.close_series(ticker)
+        if as_of is not None:
+            s = s[s.index <= as_of]
+        return float(s.iloc[-1]) if not s.empty else float("nan")
+
+
+def load_market(cfg: dict, synthetic: bool = False, update: bool = True,
+                extra_tickers: list[str] = ()) -> Market:
+    """Build the Market. ``extra_tickers`` (e.g. your holdings) are downloaded and cached too."""
     notes = [SURVIVORSHIP_WARNING]
+    instruments = list(cfg.get("live", {}).get("instruments", {}).values())
     if synthetic:
         prices, raw_bench, fund, universe = make_market(start=cfg["data"]["history_start"])
         notes.insert(0, SYNTHETIC_BANNER)
+        other_close = pd.DataFrame(raw_bench)
     else:
         universe = load_universe(resolve_path(cfg["data"]["universe_csv"]))
         cache_dir = resolve_path(cfg["data"]["cache_dir"])
         bench_candidates = sorted({t for lst in cfg["tickers"].values() for t in lst})
+        others = sorted((set(bench_candidates) | set(instruments) | set(extra_tickers)) - set(universe.index))
         cache = PriceCache(cache_dir)
-        all_tickers = list(universe.index) + bench_candidates
+        all_tickers = list(universe.index) + others
         prices = (cache.update(all_tickers, cfg["data"]["history_start"], cfg["data"]["download_batch_size"])
                   if update else cache.load())
         if prices["adj_close"].empty:
@@ -61,6 +82,7 @@ def load_market(cfg: dict, synthetic: bool = False, update: bool = True) -> Mark
         fund = (fcache.update(list(universe.index), cfg["data"]["fundamentals_max_age_days"])
                 if update else fcache.load().reindex(universe.index))
         raw_bench = {t: prices["adj_close"][t] for t in bench_candidates if t in prices["adj_close"]}
+        other_close = prices["close"][[t for t in others if t in prices["close"].columns]]
 
     fund = fund.reindex(universe.index)
     notes += fmod.report_missing(fund)
@@ -73,6 +95,7 @@ def load_market(cfg: dict, synthetic: bool = False, update: bool = True) -> Mark
     prices["adj_close"], fixed = clean_frame(prices["adj_close"][stocks], "stocks, adjusted close")
     prices["close"], _ = clean_frame(prices["close"][stocks], "stocks, close")
     bench_df, bench_fixed = clean_frame(pd.DataFrame(raw_bench), "benchmarks")
+    other_close, _ = clean_frame(other_close, "ETFs / other holdings, close")
     raw_bench = {t: bench_df[t] for t in bench_df.columns}
     if fixed:
         notes.append(f"NOTE: repaired bad prices in {len(fixed)} stocks (bad prints / unadjusted splits); see log.")
@@ -83,6 +106,7 @@ def load_market(cfg: dict, synthetic: bool = False, update: bool = True) -> Mark
     return Market(
         close=prices["close"][stocks], adj_close=prices["adj_close"][stocks], volume=prices["volume"][stocks],
         fundamentals=fund, universe=universe, bench=bench, bench_ticker=used, notes=notes, synthetic=synthetic,
+        other_close=other_close,
     )
 
 

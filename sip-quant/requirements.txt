@@ -2,7 +2,9 @@ pandas>=2.1
 numpy>=1.26
 yfinance>=0.2.54
 matplotlib>=3.8
-pyarrow>=14        # Parquet cache
+pyarrow>=14              # Parquet cache
 PyYAML>=6.0
-pytest>=8          # tests
-# Modules 4-5 (live + notify) will add: python-telegram-bot, python-dotenv, anthropic
+python-telegram-bot>=21  # notifications
+python-dotenv>=1.0       # reads secrets from .env
+anthropic>=1.0           # optional: news summaries (only used if ANTHROPIC_API_KEY is set)
+pytest>=8                # tests

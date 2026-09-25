@@ -22,8 +22,8 @@ All numbers (allocation, filters, costs, tax rates, tickers) are in `config.yaml
 - [x] Module 1 `sipquant/data` — universe CSV, Parquet price cache with incremental updates, fundamentals cache
 - [x] Module 2 `sipquant/strategy` — liquidity, momentum, quality, regime, top-N with sell buffer
 - [x] Module 3 `sipquant/backtest` — SIP simulator, costs, FIFO capital-gains tax, metrics, benchmarks, variants, charts
-- [ ] Module 4 `live` (monthly buy list, rebalance list, tracker)
-- [ ] Module 5 `notify` (Telegram, optional Claude news summaries, scheduling)
+- [x] Module 4 `sipquant/live`: monthly buy list, quarterly rebalance list with tax estimates, portfolio tracker
+- [x] Module 5 `sipquant/notify`: Telegram reports and alerts, optional neutral news summaries, scheduling
 
 ## Setup
 
@@ -32,7 +32,7 @@ cd sip-quant
 python3.11 -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python -m pytest                     # should say "43 passed"
+python -m pytest                     # should say "57 passed"
 ```
 
 Get the constituent list: go to niftyindices.com → Indices → Broad Market → **Nifty 500** →
@@ -88,7 +88,7 @@ On the first trading day of each month:
 1. ₹25,000 is split by `allocation`.
 2. **Regime rule** (toggle `strategy.regime.enabled`): if the Nifty 500 (`^CRSLDX`, or the Nifty 50 as fallback) closed below its 200-day SMA the day before, that month's momentum money goes to the Nifty 50 bucket. Existing stock holdings are kept.
 3. **Rebalance months** (`strategy.rebalance`: quarterly = Jan/Apr/Jul/Oct, or monthly): the stocks are ranked. A holding is sold only if its rank drops **below 25** (`sell_rank_buffer`) or it fails a filter. The empty slots are filled from the top of the ranking, giving 15 names.
-4. The momentum money plus any sale proceeds buys the picks. Cash goes to the names furthest below equal weight, so winners are never trimmed (trimming would trigger tax), yet weights drift back towards equal. Only whole shares are bought, and leftover rupees go to the Nifty 50 bucket.
+4. The momentum money plus any sale proceeds buys the picks. Cash goes to the names furthest below equal weight, so winners are never trimmed (trimming would trigger tax), yet weights drift back towards equal. Only whole shares are bought, and only when a share brings the name closer to its target. A ₹2,500 share isn't bought against a ₹660 target; that name's shortfall builds up until a share is justified. Leftover rupees go to the Nifty 50 bucket.
 5. Index buckets are bought as fractional units and never sold.
 
 Ranking uses the day before the trade, and trades fill at the day's close ± 0.1% slippage plus 0.1% charges per side.
@@ -111,6 +111,63 @@ Ranking uses the day before the trade, and trades fill at the day's close ± 0.1
 
 The variants table runs the 4-bucket portfolio with quality on/off × regime on/off × monthly/quarterly rebalancing.
 
+## Monthly use (Module 4)
+
+Keep `holdings.csv` in the project folder, one row per purchase (see `holdings.example.csv`):
+
+```
+symbol,qty,buy_date,buy_price
+RELIANCE,4,2025-07-01,1512.40
+NIFTYBEES,20,2025-07-01,281.35
+```
+
+Add a row each time you buy. When you sell, remove the oldest rows (FIFO) or reduce their quantity. Index ETFs listed under `live.instruments` in `config.yaml` count as the index buckets, and everything else counts as the stock sleeve.
+
+```bash
+python -m sipquant.monthly     # this month: split of Rs 25,000, the 15 picks with share quantities, ETF units
+python -m sipquant.rebalance   # sells (rank below 25 or filtered out) with estimated tax, and buys from the proceeds
+python -m sipquant.rebalance --realised-ltcg 80000   # if you already booked Rs 80k LTCG this FY elsewhere
+python -m sipquant.tracker     # value, invested, XIRR, drawdown from peak, per-holding returns
+```
+
+All three accept `--synthetic` to try them without real data, and `--no-download` to use the cache only.
+
+- They use the same rules as the backtest: ranking, sell buffer, allocation to the most under-weight names, and whole shares.
+- Leftover stock money goes to the Nifty 50 bucket. ETF amounts that don't make a whole unit are carried to next month.
+- Before 15:45 IST, today's partial price bar is ignored, so a 9:30 run uses yesterday's close.
+- Set `live.index_buckets_as: amount` if you use index mutual funds; you then get rupee amounts instead of ETF units.
+- The tracker's XIRR covers only what's in `holdings.csv`, because sold lots aren't recorded there.
+
+## Notifications and scheduling (Module 5)
+
+1. Create a bot: in Telegram, message **@BotFather** → `/newbot` → copy the token. Send your new bot any message. Then open `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy the `"chat":{"id": ...}` number.
+2. `cp .env.example .env` and fill in `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`. You can also add `ANTHROPIC_API_KEY` for news summaries. `.env` is git-ignored; keys never go in code or config.
+3. `python -m sipquant.notify test` sends a test message.
+4. `python -m sipquant.notify daily --dry-run` prints what would be sent, without sending it.
+
+`daily` is the only command to schedule. Run it every weekday at 09:30 IST. It:
+- sends the **monthly report** (buy plan, portfolio status, optional news) on the first trading day of the month. If your computer was off that day, it sends on the next run instead. `data/state.json` stops it from sending twice.
+- adds the **rebalance list** in rebalance months (Jan/Apr/Jul/Oct).
+- sends **alerts** whenever one fires:
+  - a holding is more than 25% below your average buy price
+  - the regime flips (the Nifty 500 crosses its 200-day average)
+  - portfolio drawdown crosses −20% or −30%
+
+  Each alert fires once, and fires again only after the condition clears.
+
+Add each year's NSE holidays to `live.nse_holidays` (from nseindia.com → Holidays), so "first trading day" skips them.
+
+**News summaries** run only if `ANTHROPIC_API_KEY` is set. For each stock you hold, recent yfinance headlines go to Claude (`news.model`, default `claude-opus-5`) with instructions to write 2–3 neutral, factual sentences, with no opinions, predictions, targets or buy/sell/hold language. Two safeguards back this up:
+- A filter also withholds any summary that still contains advice-like wording.
+- Requests use the API's server-side refusal fallback (`fallbacks: "default"`).
+
+**Scheduling examples** (fix the paths in each):
+- macOS (recommended on a laptop): `scripts/com.sipquant.daily.plist` for launchd. It runs a missed job as soon as the Mac wakes.
+- Linux / macOS cron: `scripts/crontab.example`. It calls `scripts/run_daily.sh`.
+- Windows: `scripts/windows_task.txt` (a `schtasks` command) and `scripts/run_daily.bat`.
+
+The scripts write to `logs/notify.log`. Point `SIPQUANT_PYTHON` at your environment's Python (`conda activate sipquant && which python`).
+
 ## Known biases and simplifications (read before trusting any number)
 
 - **Survivorship bias**: the universe is today's Nifty 500. Companies that collapsed or were dropped since 2011 aren't in it, so real returns are likely lower. This is the biggest caveat.
@@ -129,7 +186,11 @@ sipquant/config.py          load config, make variant copies (dotted-key overrid
 sipquant/data/              universe.py, prices.py (Parquet cache), fundamentals.py, market.py, synthetic.py
 sipquant/strategy/          signals.py (filters, momentum, regime), selection.py (ranking, buffer)
 sipquant/backtest/          engine.py, tax.py, metrics.py, benchmarks.py, report.py, __main__.py
-tests/                      pytest: XIRR, FIFO tax + FY exemption, momentum, buffer, cache, engine smoke
+sipquant/live/              holdings.py, context.py (data + "as of" date), plan.py (monthly/rebalance), tracker.py
+sipquant/monthly.py, rebalance.py, tracker.py   the `python -m sipquant.<name>` commands
+sipquant/notify/            telegram.py, alerts.py, news.py, state.py, __main__.py (python -m sipquant.notify)
+scripts/                    cron, launchd (macOS) and Windows Task Scheduler examples
+tests/                      pytest: XIRR, FIFO tax + FY exemption, momentum, buffer, cache, engine, live, notify
 ```
 
 ### Python notes for Java developers

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- macOS launchd job: better than cron on a laptop, because a run missed while the Mac
+     was asleep happens as soon as it wakes. Fix the two paths, then:
+       cp scripts/com.sipquant.daily.plist ~/Library/LaunchAgents/
+       launchctl load ~/Library/LaunchAgents/com.sipquant.daily.plist
+     Times are in the Mac's time zone (set it to IST, or adjust Hour/Minute). -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.sipquant.daily</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/you/siri.ai/sip-quant/scripts/run_daily.sh</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>SIPQUANT_PYTHON</key><string>/Users/you/miniconda3/envs/sipquant/bin/python</string>
+  </dict>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Weekday</key><integer>3</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Weekday</key><integer>4</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Weekday</key><integer>5</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>30</integer></dict>
+  </array>
+</dict>
+</plist>

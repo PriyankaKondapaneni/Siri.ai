@@ -1,0 +1,5 @@
+# Edit with `crontab -e` and paste one line (fix both paths).
+# Runs Monday-Friday at 09:30. cron uses your computer's time zone - set it to IST,
+# or on Linux (cronie) uncomment CRON_TZ. macOS cron ignores CRON_TZ: use launchd instead.
+# CRON_TZ=Asia/Kolkata
+30 9 * * 1-5 SIPQUANT_PYTHON=/Users/you/miniconda3/envs/sipquant/bin/python /Users/you/siri.ai/sip-quant/scripts/run_daily.sh

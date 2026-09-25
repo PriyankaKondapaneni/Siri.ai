@@ -1,0 +1,9 @@
+Windows Task Scheduler (run once in a Command Prompt; fix the path):
+
+  schtasks /Create /TN "sip-quant daily" /SC WEEKLY /D MON,TUE,WED,THU,FRI /ST 09:30 ^
+           /TR "C:\Users\you\siri.ai\sip-quant\scripts\run_daily.bat"
+
+Then in Task Scheduler -> "sip-quant daily" -> Properties -> Settings, tick
+"Run task as soon as possible after a scheduled start is missed", so a run missed
+while the PC was off happens when it's next switched on.
+Times use the PC's time zone (set it to India Standard Time, or adjust /ST).
