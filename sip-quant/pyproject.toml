@@ -1,0 +1,9 @@
+[project]
+name = "sip-quant"
+version = "0.1.0"
+description = "Personal SIP backtester for an Indian momentum-quality + index portfolio"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
