@@ -1,0 +1,77 @@
+# ---------------------------------------------------------------------------
+# sip-quant configuration. Every number the code uses lives here.
+# Percentages are written as fractions (0.40 = 40%). Money is in rupees.
+# ---------------------------------------------------------------------------
+
+sip:
+  monthly_amount: 25000
+  start: "2011-01-01"        # first SIP month
+  end: null                  # null = latest available data
+
+# How each month's SIP is split. Must sum to 1.0.
+allocation:
+  momentum: 0.40             # momentum-quality stock picks from Nifty 500
+  midcap: 0.25               # Nifty Midcap 150 (via proxy ticker)
+  nifty50: 0.25              # Nifty 50
+  gold: 0.10                 # gold ETF
+
+# Yahoo Finance tickers. Where a list is given, the first ticker with enough
+# history (data starting before sip.start) is used, and the choice is printed.
+tickers:
+  nifty50: ["NIFTYBEES.NS", "^NSEI"]            # ETF first (tracks total return better than the price index)
+  midcap: ["^NSEMDCP150", "MID150BEES.NS", "^CRSMID", "JUNIORBEES.NS"]   # ^CRSMID = Nifty Midcap 100
+  gold: ["GOLDBEES.NS"]
+  regime_signal: ["^CRSLDX", "^NSEI"]           # Nifty 500 index, Nifty 50 as fallback
+  momentum30_benchmark: ["MOM30IETF.NS"]        # Nifty 200 Momentum 30 ETF (only listed 2022 -> proxy is built if too short)
+
+data:
+  universe_csv: "data/nifty500.csv"   # columns: Symbol, Industry (NSE's official file works as-is)
+  cache_dir: "data/cache"
+  history_start: "2009-06-01"         # extra history so 12-month momentum exists on day one
+  fundamentals_max_age_days: 30       # re-fetch .info after this many days
+  download_batch_size: 50             # tickers per yfinance request
+
+strategy:
+  liquidity:
+    lookback_days: 63                 # ~3 months of trading days
+    min_median_traded_value: 50000000 # Rs 5 crore
+    min_price: 50
+  momentum:
+    lookback_days: 252                # 12 months
+    skip_days: 21                     # exclude the most recent month (the "-1" in 12-1)
+    min_history_days: 240             # need this many non-missing prices in the window
+  quality:
+    enabled: true
+    min_roe: 0.15
+    max_debt_to_equity: 1.0           # ratio (Yahoo reports it in %, we convert)
+    min_eps: 0.0
+  top_n: 15
+  sell_rank_buffer: 25                # a holding is only sold if its rank drops below this
+  regime:
+    enabled: true
+    sma_days: 200
+  rebalance: quarterly                # monthly | quarterly | semiannual
+  whole_shares: true                  # stock purchases in whole shares; leftover goes to nifty50 bucket
+
+costs:
+  brokerage_and_charges: 0.001        # per side (brokerage + STT + exchange + GST + stamp, approx)
+  slippage: 0.001                     # per side
+  apply_to_index_buckets: true        # ETFs pay the same costs; set false if you use index mutual funds
+
+tax:
+  stcg_rate: 0.20                     # add 4% cess yourself if you want (0.208)
+  ltcg_rate: 0.125
+  ltcg_exemption_per_fy: 125000
+  carry_forward_losses: true          # unused capital losses carry to later FYs (8-yr expiry not modelled)
+
+# Nifty 200 Momentum 30 proxy (used when the real index/ETF lacks history).
+momentum30_proxy:
+  universe_top_by_liquidity: 200      # approximate "Nifty 200" = 200 most traded names in our universe
+  top_n: 30
+  rebalance: semiannual               # the real index rebalances every 6 months
+  quality: false
+  regime: false
+
+backtest:
+  output_dir: "output"
+  run_variants: true                  # quality on/off x regime on/off x monthly/quarterly
