@@ -51,8 +51,8 @@ strategy:
   top_n: 15
   sell_rank_buffer: 25                # a holding is only sold if its rank drops below this
   regime:
-    enabled: true
-    sma_days: 200
+    enabled: false                    # off: in the 2011-2026 backtest it cost ~3 pts/yr with no drawdown benefit.
+    sma_days: 200                     # (state is still computed and shown in reports; variants test on/off)
   rebalance: quarterly                # monthly | quarterly | semiannual
   whole_shares: true                  # stock purchases in whole shares; leftover goes to nifty50 bucket
 
