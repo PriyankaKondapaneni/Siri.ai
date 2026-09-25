@@ -19,7 +19,9 @@ allocation:
 # history (data starting before sip.start) is used, and the choice is printed.
 tickers:
   nifty50: ["NIFTYBEES.NS", "^NSEI"]            # ETF first (tracks total return better than the price index)
-  midcap: ["^NSEMDCP150", "MID150BEES.NS", "^CRSMID", "JUNIORBEES.NS"]   # ^CRSMID = Nifty Midcap 100
+  # Midcap proxies, best first. ^NSEMDCP50 = Nifty Midcap 50, ^CRSMID = Nifty Midcap 100.
+  # JUNIORBEES is Nifty NEXT 50 (large caps, not midcaps) - last resort only.
+  midcap: ["^NSEMDCP150", "MID150BEES.NS", "^NSEMDCP50", "^CRSMID", "JUNIORBEES.NS"]
   gold: ["GOLDBEES.NS"]
   regime_signal: ["^CRSLDX", "^NSEI"]           # Nifty 500 index, Nifty 50 as fallback
   momentum30_benchmark: ["MOM30IETF.NS"]        # Nifty 200 Momentum 30 ETF (only listed 2022 -> proxy is built if too short)
@@ -28,7 +30,8 @@ data:
   universe_csv: "data/nifty500.csv"   # columns: Symbol, Industry (NSE's official file works as-is)
   cache_dir: "data/cache"
   history_start: "2009-06-01"         # extra history so 12-month momentum exists on day one
-  fundamentals_max_age_days: 30       # re-fetch .info after this many days
+  fundamentals_max_age_days: 30       # re-fetch .info after this many days (failed fetches retry every run)
+  fundamentals_delay_seconds: 0.5     # pause between .info requests to avoid Yahoo rate limits
   download_batch_size: 50             # tickers per yfinance request
 
 strategy:

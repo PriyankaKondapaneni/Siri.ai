@@ -72,7 +72,8 @@ def main(argv: list[str] | None = None) -> int:
     if cfg["backtest"]["run_variants"] and not args.no_variants:
         vres = [run_backtest(market, c, label, signals) for label, c in B.variant_grid(cfg)]
         keep = ["XIRR", "XIRR after exit tax", "CAGR (NAV)", "Max drawdown", "Longest underwater (months)",
-                "Worst year", "Annual turnover (momentum sleeve)", "Tax paid during SIP", "Final value"]
+                "Worst year", "Annual turnover (momentum sleeve)", "Tax paid during SIP", "Final value",
+                "Eligible stocks at rebalance (min / median)", "Stocks held (min / median)"]
         variants_table = R.metrics_table(vres).loc[keep].T
         print("\nVARIANTS (4-bucket portfolio; Q = quality filter, R = regime rule)\n")
         print(variants_table.to_string())
