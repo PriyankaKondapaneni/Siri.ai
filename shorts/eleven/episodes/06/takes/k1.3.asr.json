@@ -1,0 +1,54 @@
+{
+ "duration": 5.712125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "565b4b15-3009-4c52-a38a-020d752b6913",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "Mira"
+  },
+  {
+   "end": 1.6,
+   "start": 1.36,
+   "text": "I've"
+  },
+  {
+   "end": 1.92,
+   "start": 1.6,
+   "text": "never"
+  },
+  {
+   "end": 2.56,
+   "start": 1.92,
+   "text": "recorded"
+  },
+  {
+   "end": 2.56,
+   "start": 2.56,
+   "text": "a"
+  },
+  {
+   "end": 3.12,
+   "start": 2.56,
+   "text": "single"
+  },
+  {
+   "end": 3.68,
+   "start": 3.12,
+   "text": "message"
+  },
+  {
+   "end": 4.72,
+   "start": 4.4,
+   "text": "Not"
+  },
+  {
+   "end": 5.28,
+   "start": 4.72,
+   "text": "one"
+  }
+ ],
+ "text": "Mira, I've never recorded a single message. Not one."
+}

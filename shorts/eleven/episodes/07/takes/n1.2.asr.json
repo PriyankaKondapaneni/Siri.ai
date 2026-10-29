@@ -1,0 +1,49 @@
+{
+ "duration": 4.08675,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "c3530e0d-7160-41f4-a4fc-64195685e466",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "Day"
+  },
+  {
+   "end": 1.04,
+   "start": 0.4,
+   "text": "seven"
+  },
+  {
+   "end": 1.76,
+   "start": 1.6,
+   "text": "We"
+  },
+  {
+   "end": 2.24,
+   "start": 1.76,
+   "text": "didn't"
+  },
+  {
+   "end": 2.56,
+   "start": 2.24,
+   "text": "leave"
+  },
+  {
+   "end": 2.72,
+   "start": 2.56,
+   "text": "each"
+  },
+  {
+   "end": 3.04,
+   "start": 2.72,
+   "text": "other's"
+  },
+  {
+   "end": 3.68,
+   "start": 3.04,
+   "text": "side"
+  }
+ ],
+ "text": "Day seven. We didn't leave each other's side."
+}

@@ -35,9 +35,9 @@ S.lines.forEach((l, li) => {
   const src = l.take || l.id, k = picks[src];
   const { channels } = readWav(stretched(`${dir}/takes/${src}.${k}.wav`));
   const x = channels[0];
-  const segs = JSON.parse(fs.readFileSync(`${dir}/takes/${src}.${k}.asr.json`, 'utf8')).segments.slice(l.from || 0).map((g) => ({ ...g, start: g.start / TEMPO, end: g.end / TEMPO }));
+  const segs = JSON.parse(fs.readFileSync(`${dir}/takes/${src}.${k}.asr.json`, 'utf8')).segments.slice(l.from || 0, l.to ?? undefined).map((g) => ({ ...g, start: g.start / TEMPO, end: g.end / TEMPO }));
   // gap before this line
-  if (li > 0) t += l.kind === 'note' ? GAP.note : GAP[l.id] ?? (prevKind === 'note' ? GAP.after_note : GAP.default);
+  if (li > 0) t += l.gap ?? (l.kind === 'note' ? GAP.note : GAP[l.id] ?? (prevKind === 'note' ? GAP.after_note : GAP.default));
   // the clip: from just before the first word to just after the last, pauses tightened
   const a = Math.max(0, segs[0].start - 0.07), z = Math.min(x.length / RATE, segs.at(-1).end + 0.16);
   const cap = CAP[l.id] ?? CAP.default;

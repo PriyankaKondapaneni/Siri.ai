@@ -1,0 +1,29 @@
+{
+ "duration": 2.1826875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "251c4da4-5477-4003-b8c2-99ea89d32e8c",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0.08,
+   "text": "Until"
+  },
+  {
+   "end": 0.64,
+   "start": 0.48,
+   "text": "the"
+  },
+  {
+   "end": 1.2,
+   "start": 0.8,
+   "text": "eighth"
+  },
+  {
+   "end": 1.84,
+   "start": 1.2,
+   "text": "night"
+  }
+ ],
+ "text": "Until the eighth night."
+}

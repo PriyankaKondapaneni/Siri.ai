@@ -1,0 +1,74 @@
+{
+ "duration": 6.223,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "47a27c8f-4e97-40a6-8c12-3add2dcf533b",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0.08,
+   "text": "That"
+  },
+  {
+   "end": 0.8,
+   "start": 0.4,
+   "text": "night"
+  },
+  {
+   "end": 1.28,
+   "start": 1.04,
+   "text": "we"
+  },
+  {
+   "end": 1.6,
+   "start": 1.28,
+   "text": "sat"
+  },
+  {
+   "end": 1.76,
+   "start": 1.6,
+   "text": "on"
+  },
+  {
+   "end": 2,
+   "start": 1.76,
+   "text": "his"
+  },
+  {
+   "end": 2.56,
+   "start": 2,
+   "text": "floor"
+  },
+  {
+   "end": 3.12,
+   "start": 2.88,
+   "text": "my"
+  },
+  {
+   "end": 3.44,
+   "start": 3.12,
+   "text": "head"
+  },
+  {
+   "end": 3.6,
+   "start": 3.44,
+   "text": "on"
+  },
+  {
+   "end": 3.76,
+   "start": 3.6,
+   "text": "his"
+  },
+  {
+   "end": 4.48,
+   "start": 3.76,
+   "text": "shoulder"
+  },
+  {
+   "end": 5.68,
+   "start": 4.96,
+   "text": "waiting"
+  }
+ ],
+ "text": "That night, we sat on his floor, my head on his shoulder, waiting."
+}

@@ -1,0 +1,64 @@
+{
+ "duration": 5.99075,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "9902bdfc-3454-4558-bf3f-6cc5ccbd9f48",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "showed"
+  },
+  {
+   "end": 0.8,
+   "start": 0.56,
+   "text": "me"
+  },
+  {
+   "end": 0.96,
+   "start": 0.8,
+   "text": "his"
+  },
+  {
+   "end": 1.68,
+   "start": 0.96,
+   "text": "phone"
+  },
+  {
+   "end": 2.64,
+   "start": 2.08,
+   "text": "Nothing"
+  },
+  {
+   "end": 3.2,
+   "start": 2.64,
+   "text": "sent"
+  },
+  {
+   "end": 4.08,
+   "start": 3.52,
+   "text": "Nothing"
+  },
+  {
+   "end": 4.24,
+   "start": 4.16,
+   "text": "at"
+  },
+  {
+   "end": 4.72,
+   "start": 4.24,
+   "text": "11"
+  },
+  {
+   "end": 5.52,
+   "start": 4.72,
+   "text": "11"
+  }
+ ],
+ "text": "He showed me his phone. Nothing sent. Nothing at 11:11."
+}

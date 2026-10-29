@@ -1,0 +1,59 @@
+{
+ "duration": 3.71525,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "068c4976-73e6-4c00-af6f-4b5665bb1ba3",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "Told"
+  },
+  {
+   "end": 0.56,
+   "start": 0.4,
+   "text": "you"
+  },
+  {
+   "end": 0.64,
+   "start": 0.56,
+   "text": "I"
+  },
+  {
+   "end": 0.96,
+   "start": 0.64,
+   "text": "don't"
+  },
+  {
+   "end": 1.28,
+   "start": 0.96,
+   "text": "make"
+  },
+  {
+   "end": 1.44,
+   "start": 1.28,
+   "text": "it"
+  },
+  {
+   "end": 2.64,
+   "start": 2.4,
+   "text": "Guess"
+  },
+  {
+   "end": 2.8,
+   "start": 2.64,
+   "text": "I"
+  },
+  {
+   "end": 3.04,
+   "start": 2.8,
+   "text": "was"
+  },
+  {
+   "end": 3.52,
+   "start": 3.04,
+   "text": "wrong"
+  }
+ ],
+ "text": "Told you I don't make it. Guess I was wrong."
+}

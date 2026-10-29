@@ -1,0 +1,74 @@
+{
+ "duration": 7.56975,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "f96a758f-996f-459e-a474-fc1a6af82af6",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "For"
+  },
+  {
+   "end": 0.32,
+   "start": 0.24,
+   "text": "the"
+  },
+  {
+   "end": 0.88,
+   "start": 0.32,
+   "text": "first"
+  },
+  {
+   "end": 1.28,
+   "start": 0.88,
+   "text": "time"
+  },
+  {
+   "end": 1.52,
+   "start": 1.28,
+   "text": "in"
+  },
+  {
+   "end": 2.16,
+   "start": 1.52,
+   "text": "seven"
+  },
+  {
+   "end": 2.72,
+   "start": 2.16,
+   "text": "days"
+  },
+  {
+   "end": 3.84,
+   "start": 3.2,
+   "text": "11"
+  },
+  {
+   "end": 4.48,
+   "start": 3.84,
+   "text": "11"
+  },
+  {
+   "end": 5.2,
+   "start": 4.48,
+   "text": "passed"
+  },
+  {
+   "end": 6.08,
+   "start": 5.76,
+   "text": "and"
+  },
+  {
+   "end": 6.56,
+   "start": 6.08,
+   "text": "nothing"
+  },
+  {
+   "end": 7.2,
+   "start": 6.56,
+   "text": "came"
+  }
+ ],
+ "text": "For the first time in seven days, 11:11 passed, and nothing came."
+}

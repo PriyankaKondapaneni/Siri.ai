@@ -1,0 +1,59 @@
+{
+ "duration": 5.805,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "6bdb2645-efaa-4b9d-b199-e2b1c626ba2d",
+ "segments": [
+  {
+   "end": 0.8,
+   "start": 0,
+   "text": "Coffee"
+  },
+  {
+   "end": 1.12,
+   "start": 0.96,
+   "text": "the"
+  },
+  {
+   "end": 2,
+   "start": 1.12,
+   "text": "cafe"
+  },
+  {
+   "end": 2.64,
+   "start": 2.32,
+   "text": "his"
+  },
+  {
+   "end": 3.36,
+   "start": 2.64,
+   "text": "laugh"
+  },
+  {
+   "end": 3.76,
+   "start": 3.52,
+   "text": "like"
+  },
+  {
+   "end": 3.92,
+   "start": 3.76,
+   "text": "there"
+  },
+  {
+   "end": 4.16,
+   "start": 3.92,
+   "text": "was"
+  },
+  {
+   "end": 4.56,
+   "start": 4.16,
+   "text": "no"
+  },
+  {
+   "end": 5.44,
+   "start": 4.56,
+   "text": "tomorrow"
+  }
+ ],
+ "text": "Coffee, the cafe, his laugh, like there was no tomorrow."
+}

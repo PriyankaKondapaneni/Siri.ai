@@ -1,0 +1,54 @@
+{
+ "duration": 4.2260625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "40ec146a-71cc-42cf-9e9f-4c9227a16d19",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.64,
+   "start": 0.24,
+   "text": "pushed"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "me"
+  },
+  {
+   "end": 1.44,
+   "start": 0.88,
+   "text": "back"
+  },
+  {
+   "end": 2.32,
+   "start": 1.92,
+   "text": "just"
+  },
+  {
+   "end": 2.64,
+   "start": 2.32,
+   "text": "like"
+  },
+  {
+   "end": 2.72,
+   "start": 2.64,
+   "text": "the"
+  },
+  {
+   "end": 3.2,
+   "start": 2.72,
+   "text": "first"
+  },
+  {
+   "end": 3.76,
+   "start": 3.2,
+   "text": "time"
+  }
+ ],
+ "text": "He pushed me back, just like the first time."
+}

@@ -56,7 +56,8 @@
         ctx.fillStyle = '#3a4560'; ctx.beginPath(); ctx.arc(110, 160, 40, 0, 7); ctx.fill();
         ctx.fillStyle = '#c9d3ee'; ctx.font = '600 44px Inter'; ctx.textAlign = 'center'; ctx.fillText('?', 110, 176); ctx.textAlign = 'left';
         ctx.fillStyle = '#f2f5ff'; ctx.font = '600 38px Inter'; ctx.fillText(o.header || 'Unknown', 170, 156);
-        ctx.fillStyle = 'rgba(200,210,240,0.6)'; ctx.font = '500 26px Inter'; ctx.fillText('voice message', 170, 192);
+        ctx.fillStyle = 'rgba(200,210,240,0.6)'; ctx.font = '500 26px Inter'; ctx.fillText(o.sub || 'voice message', 170, 192);
+        if (o.emptyText && !(o.msgs || []).length) { ctx.fillStyle = 'rgba(200,210,240,0.45)'; ctx.font = '500 32px Inter'; ctx.textAlign = 'center'; ctx.fillText(o.emptyText, W / 2, H / 2 + 40); ctx.textAlign = 'left'; }
         // messages: newest at the bottom
         let by = H - 120;
         const shown = (o.msgs || []).filter((m) => t >= m.s - 0.5);

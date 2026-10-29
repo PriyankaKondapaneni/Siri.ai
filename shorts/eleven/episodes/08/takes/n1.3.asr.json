@@ -1,0 +1,34 @@
+{
+ "duration": 3.8545625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "cb550dad-d2e0-4869-9114-a23a668c3a82",
+ "segments": [
+  {
+   "end": 0.64,
+   "start": 0.16,
+   "text": "11"
+  },
+  {
+   "end": 1.2,
+   "start": 0.64,
+   "text": "12"
+  },
+  {
+   "end": 2.32,
+   "start": 2.16,
+   "text": "He"
+  },
+  {
+   "end": 2.56,
+   "start": 2.32,
+   "text": "was"
+  },
+  {
+   "end": 3.36,
+   "start": 2.56,
+   "text": "breathing"
+  }
+ ],
+ "text": "11:12. He was breathing."
+}

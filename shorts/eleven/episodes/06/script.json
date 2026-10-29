@@ -1,0 +1,82 @@
+{
+ "episode": 6,
+ "title": "Not Me",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "text": "Mira... I've never recorded a single message.",
+   "take": "k1",
+   "from": 0,
+   "to": 7
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quiet] One day left. I finally asked him what future him knows."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[confused, gentle] Mira... I've never recorded a single message. Not one."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[stunned] He showed me his phone. Nothing sent. Nothing at eleven eleven.",
+   "show": "He showed me his phone. Nothing sent. Nothing at 11:11."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[uneasy, low] And the ones in your voice... you didn't send those either. Did you?"
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[afraid] I didn't. I never had."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low] So who has been talking to us?"
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[soft] That night, we sat on his floor, my head on his shoulder. Waiting."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[whisper] Eleven ten. Eleven eleven.",
+   "show": "11:10. 11:11."
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[frozen] Both phones lit up. The same number."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[barely breathing] That's... that's Arjun's number."
+  }
+ ]
+}

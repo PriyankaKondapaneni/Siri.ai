@@ -1,0 +1,44 @@
+{
+ "duration": 2.92575,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "acd6f894-650c-4501-8449-45000624d068",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0,
+   "text": "So"
+  },
+  {
+   "end": 0.88,
+   "start": 0.56,
+   "text": "who"
+  },
+  {
+   "end": 1.12,
+   "start": 0.88,
+   "text": "has"
+  },
+  {
+   "end": 1.28,
+   "start": 1.12,
+   "text": "been"
+  },
+  {
+   "end": 1.92,
+   "start": 1.28,
+   "text": "talking"
+  },
+  {
+   "end": 2.08,
+   "start": 2,
+   "text": "to"
+  },
+  {
+   "end": 2.64,
+   "start": 2.08,
+   "text": "us"
+  }
+ ],
+ "text": "So who has been talking to us?"
+}

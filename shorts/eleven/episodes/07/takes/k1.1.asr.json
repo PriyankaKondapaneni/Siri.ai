@@ -1,0 +1,39 @@
+{
+ "duration": 4.551125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "82123175-570f-4fc4-9d71-8d87f964eaad",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "It's"
+  },
+  {
+   "end": 1.76,
+   "start": 1.68,
+   "text": "a"
+  },
+  {
+   "end": 2.24,
+   "start": 1.76,
+   "text": "voice"
+  },
+  {
+   "end": 2.56,
+   "start": 2.24,
+   "text": "note"
+  },
+  {
+   "end": 3.84,
+   "start": 3.52,
+   "text": "from"
+  },
+  {
+   "end": 4.32,
+   "start": 3.84,
+   "text": "me"
+  }
+ ],
+ "text": "It's a voice note from me."
+}

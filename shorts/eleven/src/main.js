@@ -44,6 +44,7 @@
   PP.renderFrame = function (f) {
     const t = f / PP.FPS;
     PP.FRAME.phone = false;
+    PP.FRAME.noSubs = false;
     const i = shotAt(t);
     const [start, , , , tr] = PP.SHOTS[i];
     const ctx = bufA.getContext('2d');
@@ -61,7 +62,7 @@
     if (tr === 'fadeIn' && t < start + FADE_IN) PP.with(ctx, () => { ctx.fillStyle = `rgba(0,0,0,${1 - PP.ease.inOut((t - start) / FADE_IN)})`; ctx.fillRect(0, 0, W, H); });
     if (t < C.endCard) {
       const ch = subs.find((c) => t >= c.s && t < c.e);
-      if (ch && !(ch.kind === 'note' && PP.FRAME.phone)) PP.subtitle(ctx, ch, t, PP.FRAME.phone ? 1640 : 1500);
+      if (ch && !PP.FRAME.noSubs && !(ch.kind === 'note' && PP.FRAME.phone)) PP.subtitle(ctx, ch, t, PP.FRAME.phone ? 1640 : 1500);
     }
     grain(ctx, t);
     out.drawImage(bufA, 0, 0);

@@ -1,0 +1,44 @@
+{
+ "duration": 4.4118125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "beab6e1f-f7b7-4d59-8186-44611c373a7c",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0.08,
+   "text": "Both"
+  },
+  {
+   "end": 1.04,
+   "start": 0.56,
+   "text": "phones"
+  },
+  {
+   "end": 1.44,
+   "start": 1.04,
+   "text": "lit"
+  },
+  {
+   "end": 1.76,
+   "start": 1.44,
+   "text": "up"
+  },
+  {
+   "end": 2.48,
+   "start": 2.32,
+   "text": "The"
+  },
+  {
+   "end": 3.28,
+   "start": 2.48,
+   "text": "same"
+  },
+  {
+   "end": 4.08,
+   "start": 3.36,
+   "text": "number"
+  }
+ ],
+ "text": "Both phones lit up. The same number."
+}

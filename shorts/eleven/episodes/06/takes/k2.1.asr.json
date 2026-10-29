@@ -1,0 +1,74 @@
+{
+ "duration": 5.526375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "c8cf3bc3-301d-4e5b-b81b-2943a37ae998",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "And"
+  },
+  {
+   "end": 0.24,
+   "start": 0.16,
+   "text": "the"
+  },
+  {
+   "end": 0.72,
+   "start": 0.24,
+   "text": "ones"
+  },
+  {
+   "end": 0.8,
+   "start": 0.72,
+   "text": "in"
+  },
+  {
+   "end": 0.96,
+   "start": 0.8,
+   "text": "your"
+  },
+  {
+   "end": 1.68,
+   "start": 0.96,
+   "text": "voice"
+  },
+  {
+   "end": 2.64,
+   "start": 2.48,
+   "text": "you"
+  },
+  {
+   "end": 2.88,
+   "start": 2.64,
+   "text": "didn't"
+  },
+  {
+   "end": 3.28,
+   "start": 2.88,
+   "text": "send"
+  },
+  {
+   "end": 3.52,
+   "start": 3.28,
+   "text": "those"
+  },
+  {
+   "end": 4.08,
+   "start": 3.6,
+   "text": "either"
+  },
+  {
+   "end": 5.12,
+   "start": 4.88,
+   "text": "did"
+  },
+  {
+   "end": 5.44,
+   "start": 5.12,
+   "text": "you"
+  }
+ ],
+ "text": "And the ones in your voice, you didn't send those either, did you?"
+}

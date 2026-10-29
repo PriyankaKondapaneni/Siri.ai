@@ -1,0 +1,24 @@
+{
+ "duration": 2.322,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "f3084be5-04d6-4dd4-8424-ef84517ed1c6",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0,
+   "text": "He'd"
+  },
+  {
+   "end": 1.12,
+   "start": 0.48,
+   "text": "already"
+  },
+  {
+   "end": 1.92,
+   "start": 1.12,
+   "text": "chosen"
+  }
+ ],
+ "text": "He'd already chosen."
+}

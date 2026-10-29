@@ -1,0 +1,44 @@
+{
+ "duration": 5.4799375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "d896deda-17b2-4a29-b657-85fce2855524",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0.08,
+   "text": "A"
+  },
+  {
+   "end": 0.64,
+   "start": 0.16,
+   "text": "week"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "of"
+  },
+  {
+   "end": 1.6,
+   "start": 0.8,
+   "text": "nothing"
+  },
+  {
+   "end": 2.96,
+   "start": 2.16,
+   "text": "Coffee"
+  },
+  {
+   "end": 4.08,
+   "start": 3.28,
+   "text": "rain"
+  },
+  {
+   "end": 5.12,
+   "start": 4.48,
+   "text": "him"
+  }
+ ],
+ "text": "A week of nothing. Coffee, rain, him."
+}

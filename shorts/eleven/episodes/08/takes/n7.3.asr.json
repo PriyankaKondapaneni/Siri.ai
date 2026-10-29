@@ -1,0 +1,24 @@
+{
+ "duration": 2.3684375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "0578647a-d89c-44f3-8528-8a7ebbacec0c",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "My"
+  },
+  {
+   "end": 1.12,
+   "start": 0.56,
+   "text": "own"
+  },
+  {
+   "end": 2,
+   "start": 1.2,
+   "text": "voice"
+  }
+ ],
+ "text": "My own voice."
+}

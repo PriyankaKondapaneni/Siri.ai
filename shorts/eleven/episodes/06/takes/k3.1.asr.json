@@ -1,0 +1,29 @@
+{
+ "duration": 3.018625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "a3056c41-da9a-4ed6-b720-a09d037b8b41",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.08,
+   "text": "That's"
+  },
+  {
+   "end": 1.52,
+   "start": 1.28,
+   "text": "That's"
+  },
+  {
+   "end": 2.24,
+   "start": 1.6,
+   "text": "Arjun's"
+  },
+  {
+   "end": 2.8,
+   "start": 2.24,
+   "text": "number"
+  }
+ ],
+ "text": "That's... That's Arjun's number."
+}

@@ -1,0 +1,64 @@
+{
+ "duration": 6.2694375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "70222b43-e96f-4719-87ac-4b9c527d222f",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "Then"
+  },
+  {
+   "end": 0.48,
+   "start": 0.4,
+   "text": "the"
+  },
+  {
+   "end": 0.88,
+   "start": 0.48,
+   "text": "rain"
+  },
+  {
+   "end": 1.44,
+   "start": 0.88,
+   "text": "came"
+  },
+  {
+   "end": 2.24,
+   "start": 2.08,
+   "text": "At"
+  },
+  {
+   "end": 2.88,
+   "start": 2.24,
+   "text": "11"
+  },
+  {
+   "end": 3.28,
+   "start": 3.04,
+   "text": "his"
+  },
+  {
+   "end": 3.68,
+   "start": 3.28,
+   "text": "phone"
+  },
+  {
+   "end": 4.24,
+   "start": 3.68,
+   "text": "buzzed"
+  },
+  {
+   "end": 5.28,
+   "start": 4.64,
+   "text": "Arjun's"
+  },
+  {
+   "end": 5.84,
+   "start": 5.28,
+   "text": "number"
+  }
+ ],
+ "text": "Then the rain came. At 11, his phone buzzed. Arjun's number."
+}

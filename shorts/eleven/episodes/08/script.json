@@ -1,0 +1,82 @@
+{
+ "episode": 8,
+ "title": "11:12",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "lines": [
+  {
+   "id": "h0",
+   "who": "mira",
+   "kind": "note",
+   "text": "Ask Kabir what really happened the night Arjun died.",
+   "take": "m2",
+   "from": 0
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[shaky] Eleven twelve. He was breathing.",
+   "show": "11:12. He was breathing."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[weak, smiling] Told you I don't make it. Guess I was wrong."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[laughing through tears] I'd never laughed and cried at the same time before."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[soft] For the first time in seven days, eleven eleven passed... and nothing came.",
+   "show": "For the first time in seven days, 11:11 passed… and nothing came."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[warm] A week of nothing. Coffee. Rain. Him."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[uneasy] Until the eighth night."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low] Eleven eleven. A new message. In a voice I knew too well.",
+   "show": "11:11. A new message. In a voice I knew too well."
+  },
+  {
+   "id": "m1",
+   "who": "mira",
+   "kind": "note",
+   "text": "[calm, older, a little tired] Hey. Don't freak out. It's me... you. Ten years from now."
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[frozen] My own voice."
+  },
+  {
+   "id": "m2",
+   "who": "mira",
+   "kind": "note",
+   "text": "[quiet, serious] Ask Kabir what really happened the night Arjun died. He wasn't at home."
+  }
+ ]
+}

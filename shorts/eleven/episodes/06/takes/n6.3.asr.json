@@ -1,0 +1,28 @@
+{
+ "duration": 3.622375,
+ "language_code": "en",
+ "request_id": "39fd6bdd-6c27-4371-a01d-c425fa8973cb",
+ "segments": [
+  {
+   "end": 0.72,
+   "start": 0.08,
+   "text": "11"
+  },
+  {
+   "end": 1.28,
+   "start": 1.12,
+   "text": "10"
+  },
+  {
+   "end": 1.84,
+   "start": 1.84,
+   "text": "11"
+  },
+  {
+   "end": 2.4,
+   "start": 2.16,
+   "text": "11"
+  }
+ ],
+ "text": "11:10, 11:11."
+}

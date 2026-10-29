@@ -1,0 +1,54 @@
+{
+ "duration": 3.808125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "d1b8a73e-7d72-4362-9a3e-4cdfeb61662d",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0.08,
+   "text": "11"
+  },
+  {
+   "end": 0.88,
+   "start": 0.48,
+   "text": "10"
+  },
+  {
+   "end": 1.2,
+   "start": 1.12,
+   "text": "the"
+  },
+  {
+   "end": 1.68,
+   "start": 1.2,
+   "text": "bridge"
+  },
+  {
+   "end": 2.48,
+   "start": 2,
+   "text": "headlights"
+  },
+  {
+   "end": 2.72,
+   "start": 2.56,
+   "text": "out"
+  },
+  {
+   "end": 2.8,
+   "start": 2.72,
+   "text": "of"
+  },
+  {
+   "end": 2.88,
+   "start": 2.8,
+   "text": "the"
+  },
+  {
+   "end": 3.44,
+   "start": 2.88,
+   "text": "rain"
+  }
+ ],
+ "text": "11:10, the bridge, headlights out of the rain!"
+}

@@ -1,0 +1,74 @@
+{
+ "duration": 6.2694375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "7583733a-f5b9-4936-85f4-2bedcb86815a",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0.08,
+   "text": "Ask"
+  },
+  {
+   "end": 0.96,
+   "start": 0.4,
+   "text": "Kabir"
+  },
+  {
+   "end": 1.2,
+   "start": 0.96,
+   "text": "what"
+  },
+  {
+   "end": 1.84,
+   "start": 1.2,
+   "text": "really"
+  },
+  {
+   "end": 2.48,
+   "start": 1.84,
+   "text": "happened"
+  },
+  {
+   "end": 2.56,
+   "start": 2.48,
+   "text": "the"
+  },
+  {
+   "end": 2.88,
+   "start": 2.56,
+   "text": "night"
+  },
+  {
+   "end": 3.36,
+   "start": 2.88,
+   "text": "Arjun"
+  },
+  {
+   "end": 3.84,
+   "start": 3.36,
+   "text": "died"
+  },
+  {
+   "end": 4.56,
+   "start": 4.4,
+   "text": "He"
+  },
+  {
+   "end": 5.04,
+   "start": 4.56,
+   "text": "wasn't"
+  },
+  {
+   "end": 5.28,
+   "start": 5.04,
+   "text": "at"
+  },
+  {
+   "end": 5.76,
+   "start": 5.28,
+   "text": "home"
+  }
+ ],
+ "text": "Ask Kabir what really happened the night Arjun died. He wasn't at home."
+}

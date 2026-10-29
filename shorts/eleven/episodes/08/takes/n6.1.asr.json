@@ -1,0 +1,69 @@
+{
+ "duration": 6.78025,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "5c5dd769-c397-484a-b7f6-c87c53415d98",
+ "segments": [
+  {
+   "end": 0.72,
+   "start": 0.08,
+   "text": "11"
+  },
+  {
+   "end": 1.52,
+   "start": 0.72,
+   "text": "11"
+  },
+  {
+   "end": 2.24,
+   "start": 2.08,
+   "text": "A"
+  },
+  {
+   "end": 2.56,
+   "start": 2.24,
+   "text": "new"
+  },
+  {
+   "end": 3.44,
+   "start": 2.56,
+   "text": "message"
+  },
+  {
+   "end": 3.92,
+   "start": 3.84,
+   "text": "In"
+  },
+  {
+   "end": 4,
+   "start": 3.92,
+   "text": "a"
+  },
+  {
+   "end": 4.56,
+   "start": 4,
+   "text": "voice"
+  },
+  {
+   "end": 4.8,
+   "start": 4.64,
+   "text": "I"
+  },
+  {
+   "end": 5.2,
+   "start": 4.8,
+   "text": "knew"
+  },
+  {
+   "end": 5.68,
+   "start": 5.28,
+   "text": "too"
+  },
+  {
+   "end": 6.32,
+   "start": 5.68,
+   "text": "well"
+  }
+ ],
+ "text": "11:11. A new message. In a voice I knew too well."
+}

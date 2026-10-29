@@ -1,0 +1,89 @@
+{
+ "duration": 9.195125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "809b34e9-232d-49be-91dc-be04a1d959df",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "If"
+  },
+  {
+   "end": 0.4,
+   "start": 0.16,
+   "text": "she's"
+  },
+  {
+   "end": 0.72,
+   "start": 0.4,
+   "text": "with"
+  },
+  {
+   "end": 0.88,
+   "start": 0.72,
+   "text": "you"
+  },
+  {
+   "end": 1.04,
+   "start": 0.88,
+   "text": "on"
+  },
+  {
+   "end": 1.12,
+   "start": 1.04,
+   "text": "the"
+  },
+  {
+   "end": 1.68,
+   "start": 1.12,
+   "text": "bridge"
+  },
+  {
+   "end": 2.4,
+   "start": 2.16,
+   "text": "she"
+  },
+  {
+   "end": 3.04,
+   "start": 2.4,
+   "text": "lives"
+  },
+  {
+   "end": 4.16,
+   "start": 4,
+   "text": "If"
+  },
+  {
+   "end": 4.48,
+   "start": 4.16,
+   "text": "she"
+  },
+  {
+   "end": 4.96,
+   "start": 4.48,
+   "text": "isn't"
+  },
+  {
+   "end": 6.16,
+   "start": 5.84,
+   "text": "you"
+  },
+  {
+   "end": 6.64,
+   "start": 6.16,
+   "text": "do"
+  },
+  {
+   "end": 8.48,
+   "start": 7.92,
+   "text": "Choose"
+  },
+  {
+   "end": 8.88,
+   "start": 8.48,
+   "text": "her"
+  }
+ ],
+ "text": "If she's with you on the bridge, she lives. If she isn't, you do. Choose her."
+}

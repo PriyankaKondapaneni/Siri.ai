@@ -1,0 +1,64 @@
+{
+ "duration": 5.6656875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "fbd16ea5-2acc-4b8d-a92e-a21a29534e26",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "One"
+  },
+  {
+   "end": 0.72,
+   "start": 0.48,
+   "text": "day"
+  },
+  {
+   "end": 1.36,
+   "start": 0.72,
+   "text": "left"
+  },
+  {
+   "end": 2,
+   "start": 1.84,
+   "text": "I"
+  },
+  {
+   "end": 2.72,
+   "start": 2,
+   "text": "finally"
+  },
+  {
+   "end": 3.2,
+   "start": 2.8,
+   "text": "asked"
+  },
+  {
+   "end": 3.52,
+   "start": 3.2,
+   "text": "him"
+  },
+  {
+   "end": 3.68,
+   "start": 3.52,
+   "text": "what"
+  },
+  {
+   "end": 4.32,
+   "start": 3.68,
+   "text": "future"
+  },
+  {
+   "end": 4.64,
+   "start": 4.32,
+   "text": "him"
+  },
+  {
+   "end": 5.28,
+   "start": 4.64,
+   "text": "knows"
+  }
+ ],
+ "text": "One day left. I finally asked him what future him knows."
+}

@@ -1,0 +1,59 @@
+{
+ "duration": 5.805,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "b9626a02-fe94-4afa-bdb8-475e08f6ec69",
+ "segments": [
+  {
+   "end": 1.84,
+   "start": 1.6,
+   "text": "I'd"
+  },
+  {
+   "end": 2.48,
+   "start": 1.84,
+   "text": "never"
+  },
+  {
+   "end": 2.88,
+   "start": 2.48,
+   "text": "laughed"
+  },
+  {
+   "end": 3.04,
+   "start": 2.88,
+   "text": "and"
+  },
+  {
+   "end": 3.6,
+   "start": 3.04,
+   "text": "cried"
+  },
+  {
+   "end": 3.68,
+   "start": 3.6,
+   "text": "at"
+  },
+  {
+   "end": 3.76,
+   "start": 3.68,
+   "text": "the"
+  },
+  {
+   "end": 4.24,
+   "start": 3.76,
+   "text": "same"
+  },
+  {
+   "end": 4.72,
+   "start": 4.24,
+   "text": "time"
+  },
+  {
+   "end": 5.44,
+   "start": 4.72,
+   "text": "before"
+  }
+ ],
+ "text": "I'd never laughed and cried at the same time before."
+}

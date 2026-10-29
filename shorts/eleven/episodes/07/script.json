@@ -1,0 +1,88 @@
+{
+ "episode": 7,
+ "title": "Day Seven",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "text": "Whatever happens... don't let go.",
+   "take": "k3",
+   "from": 0
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[steady] Day seven. We didn't leave each other's side."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[warm] Coffee. The café. His laugh. Like there was no tomorrow."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low] Then the rain came. At eleven, his phone buzzed. Arjun's number."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[shaking] It's... a voice note. From me."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[calm, sad] If she's with you on the bridge, she lives. If she isn't... you do. Choose her."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[breaking] He'd already chosen."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[gentle, firm] Whatever happens... don't let go."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[fast, breathless] Eleven ten. The bridge. Headlights out of the rain.",
+   "show": "11:10. The bridge. Headlights out of the rain."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[whisper] He pushed me back. Just like the first time."
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[shattered] Eleven eleven.",
+   "show": "11:11."
+  },
+  {
+   "id": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[barely a whisper, disbelief] Then... his watch started ticking.",
+   "gap": 1.8
+  }
+ ]
+}
