@@ -13,7 +13,8 @@
    "kind": "note",
    "text": "Ask Kabir what really happened the night Arjun died.",
    "take": "m2",
-   "from": 0
+   "from": 0,
+   "to": 9
   },
   {
    "id": "n1",

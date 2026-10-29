@@ -86,6 +86,11 @@ Every episode must look and sound like a professionally directed short film. Epi
 - `text`: one short bracketed direction, then the words. Spell numbers out for the voice (`eleven eleven`, `eight-oh-two`).
 - optional `show`: the display text with digits (`11:11`, `8:02`).
 
+**Extra line options:**
+- `to`: the hook's end word index, exclusive, so the hook stops before the end of the source take.
+- `gap`: seconds of silence before a line, overriding the default. Use it for a dramatic beat, such as the 1.8 s silence before "his watch started ticking".
+- A `note` line can be in either voice. Mira's voice notes go through the phone EQ too.
+
 **The hook line** is line `h0`, the first line. It reuses a powerful line from later in the same episode, without spoiling the final cliffhanger. Use `take` (the source line id) and `from` (the first word's index in that take), so it costs nothing extra. Example: `{ "id": "h0", "who": "kabir", "kind": "note", "take": "k6", "from": 6, "text": "Don't fall in love with me.", "show": "Don't fall in love with me." }`
 
 **Directions are short and subtle,** two to six words: `[quiet, intimate, as if telling you a secret]`, `[calm, serious]`, `[quiet, hurt]`, `[urgent but controlled, low]`, `[almost a whisper]`. Use at most one direction at the start of a line and at most one mid-line change. Never stack dramatic directions, and avoid bracketed sound effects unless one is truly needed.
@@ -129,7 +134,40 @@ Always reuse it first. It lives in `assets/art/v2/`; `gen/` holds the originals 
 - `B4`: street crosswalk at dusk (red light at 0.594, 0.146; vanishing point at 0.594, 0.52)
 - `B5`: bed sheets close-up (backdrop for phone shots)
 
-**Identity references** for new images: `source/CM4.png` (Mira) and `source/CK4.png` (Kabir).
+**Added in Episodes 2–8** (all in `assets/art/v2/`):
+- Mira:
+  - `M8`: street, hopeful, bag strap
+  - `M9`: café table, shy smile, chin on hand
+  - `M10`: hand over mouth, shocked
+  - `M11`: fallen on wet ground in the rain
+- Kabir:
+  - `K6`: café table, laughing
+  - `K7`: coffee-soaked
+  - `K8`: at night, phone light on his face
+  - `K9`: holding his phone out
+  - `K10`: looking down at a photo
+  - `K11`: lunging to push someone clear, in the rain
+- Two-shots:
+  - `MK1`: sitting side by side on a ledge
+  - `MK2`: on the floor, her head on his shoulder
+  - `MK3`: hurt in the rain, Mira holding his face (her hand hides his mouth)
+- Inserts:
+  - `H1`: their hands holding
+  - `A1`: photo of Arjun (Kabir's brother)
+  - `F1`: memory/flashback of Mira on the bridge (used full-frame with a sepia filter)
+- Backgrounds:
+  - `B6`: metro platform
+  - `B7`: rooftop at night
+  - `B8`: old bridge in the rain (lamps at 0.127, 0.27; 0.31, 0.4; 0.39, 0.47)
+  - `B9`: Kabir's apartment (floor lamp at 0.757, 0.27)
+
+**Identity references** for new images: `source/CM4.png` (Mira) and `source/CK4.png` (Kabir). For a two-shot, use refs `["STYLE", "CM4", "CK4"]` with the `MK1` style string in `art2.json`.
+
+**Lessons from generating new art:**
+- Always add "IMPORTANT: the background must be completely plain flat light grey, with no scenery at all." Without it, the model sometimes paints a full scene that can't be cut out.
+- Say the expression outright (for example "frightened, mouth closed, absolutely NOT smiling"). Grins are the model's default.
+- For any character who will talk on screen, ask for "mouth closed" so the code-drawn mouth has a clean place to go.
+- Register every new cut-out in `CUTS` and every background in `BGS` in `src/art.js`, or the page fails with "reading 'height'".
 
 ### New art (only when the story truly needs a new pose or place)
 - Add jobs to `art2.json`. Characters use refs `["STYLE", "CM4"]` or `["STYLE", "CK4"]`; backgrounds use `["STYLEBG"]`.
@@ -193,6 +231,14 @@ Don't rewrite the engine for each episode.
 - **Characters:** they blink. Use `blink: false` on eye-focused shots. Characters who speak live use `talk: true` and need a correct `mouth` box. Breathing is on by default; use wind sway for outdoor drama.
 - **Text:** use subtitles only (white Inter 600, 52 px, soft shadow), with a phrase of about 26 characters at most and no trailing one-word phrases. Voice-note lines appear in italics. Hide them while the phone is on screen, because the phone shows the words.
 - **Endings:** the end card is about 1.8 s: "11:11", "X DAYS LEFT" in red, "TO BE CONTINUED".
+- **Big type instead of a subtitle:** when a shot shows a time or word in large type ("6:40", "11:10", "11:12"), set `K.F.noSubs = true` in that shot so the subtitle doesn't repeat it.
+- **Phone options** (via `phoneShot` or `PP.phone`):
+  - `banner` start time, `bannerTitle`, `bannerText`, `bannerHold` (news alerts, numbers);
+  - `header` and `sub` (the chat header);
+  - `emptyText` (for example an empty "Sent" folder);
+  - `clock`;
+  - `msg(id, { time, urgent })` for a voice-note bubble.
+- **Testing face boxes:** before rendering, check each new eye and mouth box by drawing it on a gridded crop. The automatic detection often misses Kabir's eyes, which sit under his bangs.
 
 ## 7. Sound
 
