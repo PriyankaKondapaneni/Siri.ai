@@ -1,0 +1,29 @@
+{
+ "duration": 1.6643125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "436de48a-2087-4295-906e-19cd00f28238",
+ "segments": [
+  {
+   "end": 0.72,
+   "start": 0.16,
+   "text": "Sorry"
+  },
+  {
+   "end": 0.96,
+   "start": 0.8,
+   "text": "have"
+  },
+  {
+   "end": 1.04,
+   "start": 0.96,
+   "text": "we"
+  },
+  {
+   "end": 1.44,
+   "start": 1.04,
+   "text": "met"
+  }
+ ],
+ "text": "Sorry, have we met?"
+}

@@ -1,0 +1,54 @@
+{
+ "duration": 4.2260625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "6b0059ff-2eb2-4e1d-ab79-483a5c58247c",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.72,
+   "start": 0.16,
+   "text": "asked"
+  },
+  {
+   "end": 1.36,
+   "start": 1.28,
+   "text": "I"
+  },
+  {
+   "end": 1.76,
+   "start": 1.36,
+   "text": "lied"
+  },
+  {
+   "end": 2.24,
+   "start": 2.08,
+   "text": "My"
+  },
+  {
+   "end": 2.56,
+   "start": 2.24,
+   "text": "hands"
+  },
+  {
+   "end": 2.8,
+   "start": 2.56,
+   "text": "wouldn't"
+  },
+  {
+   "end": 3.04,
+   "start": 2.8,
+   "text": "stop"
+  },
+  {
+   "end": 3.68,
+   "start": 3.04,
+   "text": "shaking"
+  }
+ ],
+ "text": "He asked. I lied. My hands wouldn't stop shaking."
+}

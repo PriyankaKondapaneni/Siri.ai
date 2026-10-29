@@ -1,0 +1,44 @@
+{
+ "duration": 2.8464375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "9c8544dd-baa5-4c91-9688-a3d4b7f84e2c",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.16,
+   "text": "In"
+  },
+  {
+   "end": 0.8,
+   "start": 0.32,
+   "text": "seven"
+  },
+  {
+   "end": 1.36,
+   "start": 0.8,
+   "text": "days"
+  },
+  {
+   "end": 2.08,
+   "start": 1.92,
+   "text": "I"
+  },
+  {
+   "end": 2.32,
+   "start": 2.08,
+   "text": "don't"
+  },
+  {
+   "end": 2.56,
+   "start": 2.32,
+   "text": "make"
+  },
+  {
+   "end": 2.72,
+   "start": 2.56,
+   "text": "it"
+  }
+ ],
+ "text": "In seven days, I don't make it."
+}

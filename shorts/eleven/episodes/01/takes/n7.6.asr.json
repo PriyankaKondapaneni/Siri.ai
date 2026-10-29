@@ -1,0 +1,54 @@
+{
+ "duration": 3.564125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "62a02df4-46da-414f-b37f-9bbfba8bfdf1",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.16,
+   "text": "It"
+  },
+  {
+   "end": 0.48,
+   "start": 0.24,
+   "text": "was"
+  },
+  {
+   "end": 0.64,
+   "start": 0.48,
+   "text": "his"
+  },
+  {
+   "end": 1.28,
+   "start": 0.64,
+   "text": "voice"
+  },
+  {
+   "end": 1.92,
+   "start": 1.84,
+   "text": "The"
+  },
+  {
+   "end": 2.24,
+   "start": 1.92,
+   "text": "one"
+  },
+  {
+   "end": 2.4,
+   "start": 2.24,
+   "text": "from"
+  },
+  {
+   "end": 2.56,
+   "start": 2.4,
+   "text": "my"
+  },
+  {
+   "end": 3.2,
+   "start": 2.56,
+   "text": "phone"
+  }
+ ],
+ "text": "It was his voice. The one from my phone."
+}

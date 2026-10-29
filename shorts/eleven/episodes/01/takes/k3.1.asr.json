@@ -1,0 +1,69 @@
+{
+ "duration": 6.501625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "9af5fddb-4dfb-478d-92a2-7f5485bbb541",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "Mira"
+  },
+  {
+   "end": 1.6,
+   "start": 0.88,
+   "text": "tomorrow"
+  },
+  {
+   "end": 2.08,
+   "start": 1.6,
+   "text": "6"
+  },
+  {
+   "end": 2.64,
+   "start": 2.08,
+   "text": "40"
+  },
+  {
+   "end": 2.72,
+   "start": 2.72,
+   "text": "5th"
+  },
+  {
+   "end": 3.52,
+   "start": 3.04,
+   "text": "Street"
+  },
+  {
+   "end": 4.24,
+   "start": 3.84,
+   "text": "Stay"
+  },
+  {
+   "end": 4.48,
+   "start": 4.24,
+   "text": "on"
+  },
+  {
+   "end": 4.48,
+   "start": 4.48,
+   "text": "the"
+  },
+  {
+   "end": 4.96,
+   "start": 4.48,
+   "text": "curb"
+  },
+  {
+   "end": 5.92,
+   "start": 5.36,
+   "text": "Promise"
+  },
+  {
+   "end": 6.24,
+   "start": 5.92,
+   "text": "me"
+  }
+ ],
+ "text": "Mira, tomorrow, 6:40, 5th Street. Stay on the curb. Promise me."
+}

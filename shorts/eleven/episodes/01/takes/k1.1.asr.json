@@ -1,0 +1,94 @@
+{
+ "duration": 7.8019375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "5340499c-9d06-496c-9b94-60bf9351b79b",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "Hey"
+  },
+  {
+   "end": 1.2,
+   "start": 0.88,
+   "text": "don't"
+  },
+  {
+   "end": 1.52,
+   "start": 1.2,
+   "text": "freak"
+  },
+  {
+   "end": 1.84,
+   "start": 1.52,
+   "text": "out"
+  },
+  {
+   "end": 2.8,
+   "start": 2.24,
+   "text": "Tomorrow"
+  },
+  {
+   "end": 2.88,
+   "start": 2.8,
+   "text": "at"
+  },
+  {
+   "end": 3.28,
+   "start": 2.96,
+   "text": "8"
+  },
+  {
+   "end": 3.76,
+   "start": 3.28,
+   "text": "02"
+  },
+  {
+   "end": 4.08,
+   "start": 3.84,
+   "text": "you'll"
+  },
+  {
+   "end": 4.48,
+   "start": 4.08,
+   "text": "spill"
+  },
+  {
+   "end": 4.64,
+   "start": 4.48,
+   "text": "your"
+  },
+  {
+   "end": 5.28,
+   "start": 4.64,
+   "text": "coffee"
+  },
+  {
+   "end": 6.08,
+   "start": 5.76,
+   "text": "Wear"
+  },
+  {
+   "end": 6.16,
+   "start": 6.08,
+   "text": "the"
+  },
+  {
+   "end": 6.48,
+   "start": 6.16,
+   "text": "blue"
+  },
+  {
+   "end": 6.8,
+   "start": 6.48,
+   "text": "dress"
+  },
+  {
+   "end": 7.44,
+   "start": 6.88,
+   "text": "anyway"
+  }
+ ],
+ "text": "Hey, don't freak out. Tomorrow at 8:02, you'll spill your coffee. Wear the blue dress anyway."
+}

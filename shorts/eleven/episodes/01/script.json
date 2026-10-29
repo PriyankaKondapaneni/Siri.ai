@@ -1,0 +1,24 @@
+{
+  "episode": 1,
+  "title": "The Voice From My Phone",
+  "model": "drama-3",
+  "voices": { "mira": "933563129e564b19a115bedd57b7406a", "kabir": "f983ef416c87413f986e1a5a000c385e" },
+  "lines": [
+    { "id": "n1", "who": "mira", "kind": "narr", "text": "[whispering, close to the mic, intimate, telling a secret] Every night at eleven eleven... a stranger sends me a voice message.", "show": "Every night at 11:11… a stranger sends me a voice message." },
+    { "id": "n2", "who": "mira", "kind": "narr", "text": "[quiet, unsettled] And everything he says comes true." },
+    { "id": "k1", "who": "kabir", "kind": "note", "text": "[warm, a little out of breath, amused] Hey. Don't freak out. Tomorrow at eight-oh-two, you'll spill your coffee. [softer, a smile in his voice] Wear the blue dress anyway.", "show": "Hey. Don't freak out. Tomorrow at 8:02, you'll spill your coffee. Wear the blue dress anyway." },
+    { "id": "n3", "who": "mira", "kind": "narr", "text": "[dry, dismissive, then shaken] I deleted it. [beat] At eight-oh-two... I spilled my coffee.", "show": "I deleted it. At 8:02… I spilled my coffee." },
+    { "id": "k2", "who": "kabir", "kind": "note", "text": "[serious, careful, quiet] The guy on the train will ask your name. Lie." },
+    { "id": "n4", "who": "mira", "kind": "narr", "text": "[tense, quick] He asked. I lied. My hands wouldn't stop shaking." },
+    { "id": "k3", "who": "kabir", "kind": "note", "text": "[urgent, low, trying to stay calm] Mira. Tomorrow, six-forty, Fifth Street. Stay on the curb. Promise me.", "show": "Mira. Tomorrow, 6:40, Fifth Street. Stay on the curb. Promise me." },
+    { "id": "n5", "who": "mira", "kind": "narr", "text": "[fast, breathless, adrenaline] Six-forty. A car ran the red light... and someone pulled me back.", "show": "6:40. A car ran the red light… and someone pulled me back." },
+    { "id": "n6", "who": "mira", "kind": "narr", "text": "[breathless, awed, slowing down] Dark eyes. A watch stopped at eleven eleven.", "show": "Dark eyes. A watch stopped at 11:11." },
+    { "id": "k4", "who": "kabir", "kind": "live", "text": "[gentle, concerned, close] Hey. You okay?" },
+    { "id": "n7", "who": "mira", "kind": "narr", "text": "[whisper, stunned] It was his voice. The one from my phone." },
+    { "id": "k5", "who": "kabir", "kind": "live", "text": "[puzzled, a polite half-smile] Sorry... have we met?" },
+    { "id": "n8", "who": "mira", "kind": "narr", "text": "[hurt, quiet] He had no idea who I was." },
+    { "id": "n9", "who": "mira", "kind": "narr", "text": "[low, dread] That night... one last message." },
+    { "id": "k6", "who": "kabir", "kind": "note", "text": "[voice breaking, close to the phone, barely holding it together] If you've met me... I'm sorry. Don't fall in love with me." },
+    { "id": "k7", "who": "kabir", "kind": "note", "text": "[a broken whisper, final] In seven days... I don't make it." }
+  ]
+}

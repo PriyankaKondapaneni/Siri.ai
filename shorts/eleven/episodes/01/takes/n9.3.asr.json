@@ -1,0 +1,34 @@
+{
+ "duration": 3.6688125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "2bf7854f-d5cd-408f-8b97-3f0e96d57a2c",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "That"
+  },
+  {
+   "end": 0.64,
+   "start": 0.24,
+   "text": "night"
+  },
+  {
+   "end": 2,
+   "start": 1.6,
+   "text": "one"
+  },
+  {
+   "end": 2.4,
+   "start": 2,
+   "text": "last"
+  },
+  {
+   "end": 3.12,
+   "start": 2.4,
+   "text": "message"
+  }
+ ],
+ "text": "That night, one last message."
+}

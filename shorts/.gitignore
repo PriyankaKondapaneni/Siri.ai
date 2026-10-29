@@ -3,3 +3,5 @@ node_modules/
 build/
 *.log
 paper-planes/episodes/*/takes/*.wav
+eleven/episodes/*/takes/*.wav
+eleven/build/

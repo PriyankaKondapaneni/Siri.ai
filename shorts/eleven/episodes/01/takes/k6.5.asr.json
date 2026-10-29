@@ -1,0 +1,69 @@
+{
+ "duration": 4.6618125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "b4253743-6cd3-4ab7-b993-c2da3841f960",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0.16,
+   "text": "If"
+  },
+  {
+   "end": 0.48,
+   "start": 0.32,
+   "text": "you've"
+  },
+  {
+   "end": 0.8,
+   "start": 0.48,
+   "text": "met"
+  },
+  {
+   "end": 1.12,
+   "start": 0.8,
+   "text": "me"
+  },
+  {
+   "end": 1.76,
+   "start": 1.6,
+   "text": "I'm"
+  },
+  {
+   "end": 2.4,
+   "start": 1.76,
+   "text": "sorry"
+  },
+  {
+   "end": 3.36,
+   "start": 3.04,
+   "text": "Don't"
+  },
+  {
+   "end": 3.6,
+   "start": 3.36,
+   "text": "fall"
+  },
+  {
+   "end": 3.76,
+   "start": 3.6,
+   "text": "in"
+  },
+  {
+   "end": 3.92,
+   "start": 3.76,
+   "text": "love"
+  },
+  {
+   "end": 4.16,
+   "start": 3.92,
+   "text": "with"
+  },
+  {
+   "end": 4.4,
+   "start": 4.16,
+   "text": "me"
+  }
+ ],
+ "text": "If you've met me, I'm sorry. Don't fall in love with me."
+}

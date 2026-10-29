@@ -1,0 +1,24 @@
+{
+ "duration": 1.74875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "76499910-ae07-413b-84fd-47e4eb988bac",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.16,
+   "text": "Hey"
+  },
+  {
+   "end": 1.04,
+   "start": 0.8,
+   "text": "you"
+  },
+  {
+   "end": 1.44,
+   "start": 1.12,
+   "text": "okay"
+  }
+ ],
+ "text": "Hey, you okay?"
+}

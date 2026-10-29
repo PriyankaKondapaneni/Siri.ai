@@ -1,0 +1,44 @@
+{
+ "duration": 2.80425,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "81254dcd-cfc7-47ca-84b4-f578fc632736",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0.08,
+   "text": "He"
+  },
+  {
+   "end": 0.48,
+   "start": 0.32,
+   "text": "had"
+  },
+  {
+   "end": 0.96,
+   "start": 0.48,
+   "text": "no"
+  },
+  {
+   "end": 1.52,
+   "start": 0.96,
+   "text": "idea"
+  },
+  {
+   "end": 1.68,
+   "start": 1.52,
+   "text": "who"
+  },
+  {
+   "end": 1.84,
+   "start": 1.68,
+   "text": "I"
+  },
+  {
+   "end": 2.4,
+   "start": 1.84,
+   "text": "was"
+  }
+ ],
+ "text": "He had no idea who I was."
+}

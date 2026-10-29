@@ -1,0 +1,1239 @@
+{
+ "duration": 58.096,
+ "words": [
+  {
+   "w": "Every",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 0.27,
+   "e": 1.15
+  },
+  {
+   "w": "night",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 0.67,
+   "e": 1.39
+  },
+  {
+   "w": "at",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 1.31,
+   "e": 1.87
+  },
+  {
+   "w": "11:11…",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 1.71,
+   "e": 2.51
+  },
+  {
+   "w": "a",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 2.27,
+   "e": 3.01
+  },
+  {
+   "w": "stranger",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 3.01,
+   "e": 3.81
+  },
+  {
+   "w": "sends",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 3.09,
+   "e": 4.29
+  },
+  {
+   "w": "me",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 3.81,
+   "e": 4.37
+  },
+  {
+   "w": "a",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 4.29,
+   "e": 4.45
+  },
+  {
+   "w": "voice",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 4.37,
+   "e": 4.93
+  },
+  {
+   "w": "message.",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 4.45,
+   "e": 5.57
+  },
+  {
+   "w": "And",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 5.9,
+   "e": 5.98
+  },
+  {
+   "w": "everything",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 6.06,
+   "e": 6.54
+  },
+  {
+   "w": "he",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 6.54,
+   "e": 6.62
+  },
+  {
+   "w": "says",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 6.62,
+   "e": 7.1
+  },
+  {
+   "w": "comes",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 7.1,
+   "e": 7.42
+  },
+  {
+   "w": "true.",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 7.42,
+   "e": 7.9
+  },
+  {
+   "w": "Hey.",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 8.65,
+   "e": 9.37
+  },
+  {
+   "w": "Don't",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 9.13,
+   "e": 9.61
+  },
+  {
+   "w": "freak",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 9.37,
+   "e": 9.93
+  },
+  {
+   "w": "out.",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 9.61,
+   "e": 10.65
+  },
+  {
+   "w": "Tomorrow",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 10.17,
+   "e": 10.65
+  },
+  {
+   "w": "at",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 10.65,
+   "e": 10.97
+  },
+  {
+   "w": "8:02,",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 10.73,
+   "e": 11.45
+  },
+  {
+   "w": "you'll",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 10.97,
+   "e": 11.69
+  },
+  {
+   "w": "spill",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 11.45,
+   "e": 12.01
+  },
+  {
+   "w": "your",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 11.69,
+   "e": 12.17
+  },
+  {
+   "w": "coffee.",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 12.01,
+   "e": 12.73
+  },
+  {
+   "w": "Wear",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 12.17,
+   "e": 13.27
+  },
+  {
+   "w": "the",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 13.03,
+   "e": 13.35
+  },
+  {
+   "w": "blue",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 13.27,
+   "e": 13.59
+  },
+  {
+   "w": "dress",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 13.35,
+   "e": 13.91
+  },
+  {
+   "w": "anyway.",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 13.59,
+   "e": 14.55
+  },
+  {
+   "w": "I",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 14.92,
+   "e": 15.4
+  },
+  {
+   "w": "deleted",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 15,
+   "e": 15.56
+  },
+  {
+   "w": "it.",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 15.4,
+   "e": 16.17
+  },
+  {
+   "w": "At",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 16.01,
+   "e": 16.33
+  },
+  {
+   "w": "8:02…",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 16.17,
+   "e": 16.97
+  },
+  {
+   "w": "I",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 16.49,
+   "e": 17.37
+  },
+  {
+   "w": "spilled",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 17.37,
+   "e": 17.77
+  },
+  {
+   "w": "my",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 17.45,
+   "e": 17.93
+  },
+  {
+   "w": "coffee.",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 17.77,
+   "e": 18.49
+  },
+  {
+   "w": "The",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 19.24,
+   "e": 19.32
+  },
+  {
+   "w": "guy",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 19.32,
+   "e": 19.64
+  },
+  {
+   "w": "on",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 19.64,
+   "e": 19.72
+  },
+  {
+   "w": "the",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 19.72,
+   "e": 19.8
+  },
+  {
+   "w": "train",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 19.8,
+   "e": 20.2
+  },
+  {
+   "w": "will",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 20.2,
+   "e": 20.36
+  },
+  {
+   "w": "ask",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 20.36,
+   "e": 20.68
+  },
+  {
+   "w": "your",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 20.68,
+   "e": 20.76
+  },
+  {
+   "w": "name.",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 20.76,
+   "e": 21.24
+  },
+  {
+   "w": "Lie.",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 21.54,
+   "e": 22.1
+  },
+  {
+   "w": "He",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 22.47,
+   "e": 22.63
+  },
+  {
+   "w": "asked.",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 22.63,
+   "e": 23.03
+  },
+  {
+   "w": "I",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 23.33,
+   "e": 23.41
+  },
+  {
+   "w": "lied.",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 23.41,
+   "e": 23.89
+  },
+  {
+   "w": "My",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 24.05,
+   "e": 24.13
+  },
+  {
+   "w": "hands",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 24.13,
+   "e": 24.45
+  },
+  {
+   "w": "wouldn't",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 24.45,
+   "e": 24.69
+  },
+  {
+   "w": "stop",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 24.69,
+   "e": 24.93
+  },
+  {
+   "w": "shaking.",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 24.93,
+   "e": 25.41
+  },
+  {
+   "w": "Mira.",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 26.16,
+   "e": 27.28
+  },
+  {
+   "w": "Tomorrow,",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 26.72,
+   "e": 27.68
+  },
+  {
+   "w": "6:40,",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 27.36,
+   "e": 28.16
+  },
+  {
+   "w": "Fifth",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 27.68,
+   "e": 28.16
+  },
+  {
+   "w": "Street.",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 28.16,
+   "e": 28.86
+  },
+  {
+   "w": "Stay",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 28.46,
+   "e": 29.34
+  },
+  {
+   "w": "on",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 29.02,
+   "e": 29.5
+  },
+  {
+   "w": "the",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 29.34,
+   "e": 29.5
+  },
+  {
+   "w": "curb.",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 29.5,
+   "e": 29.98
+  },
+  {
+   "w": "Promise",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 29.5,
+   "e": 30.62
+  },
+  {
+   "w": "me.",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 30.14,
+   "e": 30.86
+  },
+  {
+   "w": "6:40.",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 31.23,
+   "e": 31.79
+  },
+  {
+   "w": "A",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 31.47,
+   "e": 31.79
+  },
+  {
+   "w": "car",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 31.79,
+   "e": 32.35
+  },
+  {
+   "w": "ran",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 32.11,
+   "e": 32.51
+  },
+  {
+   "w": "the",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 32.35,
+   "e": 32.59
+  },
+  {
+   "w": "red",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 32.51,
+   "e": 32.75
+  },
+  {
+   "w": "light…",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 32.59,
+   "e": 32.99
+  },
+  {
+   "w": "and",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 32.75,
+   "e": 33.15
+  },
+  {
+   "w": "someone",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 32.99,
+   "e": 33.39
+  },
+  {
+   "w": "pulled",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 33.15,
+   "e": 33.63
+  },
+  {
+   "w": "me",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 33.39,
+   "e": 33.71
+  },
+  {
+   "w": "back.",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 33.63,
+   "e": 34.19
+  },
+  {
+   "w": "Dark",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 34.52,
+   "e": 35.56
+  },
+  {
+   "w": "eyes.",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 34.92,
+   "e": 36
+  },
+  {
+   "w": "A",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 35.92,
+   "e": 36.48
+  },
+  {
+   "w": "watch",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 36,
+   "e": 37.28
+  },
+  {
+   "w": "stopped",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 36.48,
+   "e": 37.44
+  },
+  {
+   "w": "at",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 37.36,
+   "e": 38
+  },
+  {
+   "w": "11:11.",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 37.44,
+   "e": 38.56
+  },
+  {
+   "w": "Hey.",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "live",
+   "s": 38.87,
+   "e": 39.19
+  },
+  {
+   "w": "You",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "live",
+   "s": 39.43,
+   "e": 39.59
+  },
+  {
+   "w": "okay?",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "live",
+   "s": 39.67,
+   "e": 39.99
+  },
+  {
+   "w": "It",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 40.46,
+   "e": 40.54
+  },
+  {
+   "w": "was",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 40.54,
+   "e": 40.78
+  },
+  {
+   "w": "his",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 40.78,
+   "e": 40.94
+  },
+  {
+   "w": "voice.",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 40.94,
+   "e": 41.58
+  },
+  {
+   "w": "The",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 41.88,
+   "e": 41.96
+  },
+  {
+   "w": "one",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 41.96,
+   "e": 42.28
+  },
+  {
+   "w": "from",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 42.28,
+   "e": 42.44
+  },
+  {
+   "w": "my",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 42.44,
+   "e": 42.6
+  },
+  {
+   "w": "phone.",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 42.6,
+   "e": 43.24
+  },
+  {
+   "w": "Sorry...",
+   "line": "k5",
+   "who": "kabir",
+   "kind": "live",
+   "s": 43.57,
+   "e": 44.13
+  },
+  {
+   "w": "have",
+   "line": "k5",
+   "who": "kabir",
+   "kind": "live",
+   "s": 44.29,
+   "e": 44.37
+  },
+  {
+   "w": "we",
+   "line": "k5",
+   "who": "kabir",
+   "kind": "live",
+   "s": 44.37,
+   "e": 44.53
+  },
+  {
+   "w": "met?",
+   "line": "k5",
+   "who": "kabir",
+   "kind": "live",
+   "s": 44.53,
+   "e": 44.85
+  },
+  {
+   "w": "He",
+   "line": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "s": 45.13,
+   "e": 45.29
+  },
+  {
+   "w": "had",
+   "line": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "s": 45.29,
+   "e": 45.45
+  },
+  {
+   "w": "no",
+   "line": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "s": 45.45,
+   "e": 45.77
+  },
+  {
+   "w": "idea",
+   "line": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "s": 45.77,
+   "e": 46.33
+  },
+  {
+   "w": "who",
+   "line": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "s": 46.33,
+   "e": 46.49
+  },
+  {
+   "w": "I",
+   "line": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "s": 46.49,
+   "e": 46.57
+  },
+  {
+   "w": "was.",
+   "line": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "s": 46.57,
+   "e": 47.21
+  },
+  {
+   "w": "That",
+   "line": "n9",
+   "who": "mira",
+   "kind": "narr",
+   "s": 47.68,
+   "e": 47.92
+  },
+  {
+   "w": "night...",
+   "line": "n9",
+   "who": "mira",
+   "kind": "narr",
+   "s": 47.92,
+   "e": 48.24
+  },
+  {
+   "w": "one",
+   "line": "n9",
+   "who": "mira",
+   "kind": "narr",
+   "s": 48.54,
+   "e": 48.86
+  },
+  {
+   "w": "last",
+   "line": "n9",
+   "who": "mira",
+   "kind": "narr",
+   "s": 48.86,
+   "e": 49.18
+  },
+  {
+   "w": "message.",
+   "line": "n9",
+   "who": "mira",
+   "kind": "narr",
+   "s": 49.18,
+   "e": 49.82
+  },
+  {
+   "w": "If",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 50.57,
+   "e": 50.81
+  },
+  {
+   "w": "you've",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 50.81,
+   "e": 50.97
+  },
+  {
+   "w": "met",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 50.97,
+   "e": 51.21
+  },
+  {
+   "w": "me...",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 51.21,
+   "e": 51.53
+  },
+  {
+   "w": "I'm",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 51.93,
+   "e": 52.01
+  },
+  {
+   "w": "sorry.",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 52.09,
+   "e": 52.73
+  },
+  {
+   "w": "Don't",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 53.23,
+   "e": 53.55
+  },
+  {
+   "w": "fall",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 53.55,
+   "e": 53.87
+  },
+  {
+   "w": "in",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 53.87,
+   "e": 53.95
+  },
+  {
+   "w": "love",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 53.95,
+   "e": 54.19
+  },
+  {
+   "w": "with",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 54.19,
+   "e": 54.35
+  },
+  {
+   "w": "me.",
+   "line": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 54.35,
+   "e": 54.67
+  },
+  {
+   "w": "In",
+   "line": "k7",
+   "who": "kabir",
+   "kind": "note",
+   "s": 55.42,
+   "e": 55.5
+  },
+  {
+   "w": "seven",
+   "line": "k7",
+   "who": "kabir",
+   "kind": "note",
+   "s": 55.58,
+   "e": 56.06
+  },
+  {
+   "w": "days...",
+   "line": "k7",
+   "who": "kabir",
+   "kind": "note",
+   "s": 56.06,
+   "e": 56.62
+  },
+  {
+   "w": "I",
+   "line": "k7",
+   "who": "kabir",
+   "kind": "note",
+   "s": 57.17,
+   "e": 57.33
+  },
+  {
+   "w": "don't",
+   "line": "k7",
+   "who": "kabir",
+   "kind": "note",
+   "s": 57.33,
+   "e": 57.57
+  },
+  {
+   "w": "make",
+   "line": "k7",
+   "who": "kabir",
+   "kind": "note",
+   "s": 57.57,
+   "e": 57.81
+  },
+  {
+   "w": "it.",
+   "line": "k7",
+   "who": "kabir",
+   "kind": "note",
+   "s": 57.81,
+   "e": 57.97
+  }
+ ],
+ "lines": [
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 0.2,
+   "e": 5.73,
+   "text": "Every night at 11:11… a stranger sends me a voice message."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 5.83,
+   "e": 8.06,
+   "text": "And everything he says comes true."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "note",
+   "s": 8.58,
+   "e": 14.71,
+   "text": "Hey. Don't freak out. Tomorrow at 8:02, you'll spill your coffee. Wear the blue dress anyway."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 14.85,
+   "e": 18.65,
+   "text": "I deleted it. At 8:02… I spilled my coffee."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 19.17,
+   "e": 22.26,
+   "text": "The guy on the train will ask your name. Lie."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 22.4,
+   "e": 25.57,
+   "text": "He asked. I lied. My hands wouldn't stop shaking."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 26.09,
+   "e": 31.02,
+   "text": "Mira. Tomorrow, 6:40, Fifth Street. Stay on the curb. Promise me."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 31.16,
+   "e": 34.35,
+   "text": "6:40. A car ran the red light… and someone pulled me back."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 34.45,
+   "e": 38.72,
+   "text": "Dark eyes. A watch stopped at 11:11."
+  },
+  {
+   "id": "k4",
+   "who": "kabir",
+   "kind": "live",
+   "s": 38.8,
+   "e": 40.15,
+   "text": "Hey. You okay?"
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 40.39,
+   "e": 43.4,
+   "text": "It was his voice. The one from my phone."
+  },
+  {
+   "id": "k5",
+   "who": "kabir",
+   "kind": "live",
+   "s": 43.5,
+   "e": 45.01,
+   "text": "Sorry... have we met?"
+  },
+  {
+   "id": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "s": 45.13,
+   "e": 47.37,
+   "text": "He had no idea who I was."
+  },
+  {
+   "id": "n9",
+   "who": "mira",
+   "kind": "narr",
+   "s": 47.61,
+   "e": 49.98,
+   "text": "That night... one last message."
+  },
+  {
+   "id": "k6",
+   "who": "kabir",
+   "kind": "note",
+   "s": 50.5,
+   "e": 54.83,
+   "text": "If you've met me... I'm sorry. Don't fall in love with me."
+  },
+  {
+   "id": "k7",
+   "who": "kabir",
+   "kind": "note",
+   "s": 55.35,
+   "e": 58.096,
+   "text": "In seven days... I don't make it."
+  }
+ ]
+}

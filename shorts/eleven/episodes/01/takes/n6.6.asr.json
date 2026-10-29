@@ -1,0 +1,49 @@
+{
+ "duration": 5.084,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "61798026-349b-4ac4-bfe1-d7debe43a349",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.16,
+   "text": "Dark"
+  },
+  {
+   "end": 1.28,
+   "start": 0.64,
+   "text": "eyes"
+  },
+  {
+   "end": 2.08,
+   "start": 1.92,
+   "text": "A"
+  },
+  {
+   "end": 2.64,
+   "start": 2.08,
+   "text": "watch"
+  },
+  {
+   "end": 3.28,
+   "start": 2.64,
+   "text": "stopped"
+  },
+  {
+   "end": 3.44,
+   "start": 3.28,
+   "text": "at"
+  },
+  {
+   "end": 4.08,
+   "start": 3.44,
+   "text": "11"
+  },
+  {
+   "end": 4.72,
+   "start": 4.08,
+   "text": "11"
+  }
+ ],
+ "text": "Dark eyes. A watch stopped at 11:11."
+}

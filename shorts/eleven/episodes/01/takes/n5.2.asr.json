@@ -1,0 +1,74 @@
+{
+ "duration": 4.3189375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "884cde5b-2786-4391-9da4-ed0f222fdded",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0,
+   "text": "6"
+  },
+  {
+   "end": 0.72,
+   "start": 0.32,
+   "text": "40"
+  },
+  {
+   "end": 0.72,
+   "start": 0.72,
+   "text": "a"
+  },
+  {
+   "end": 1.28,
+   "start": 0.96,
+   "text": "car"
+  },
+  {
+   "end": 1.52,
+   "start": 1.28,
+   "text": "ran"
+  },
+  {
+   "end": 1.6,
+   "start": 1.52,
+   "text": "the"
+  },
+  {
+   "end": 1.84,
+   "start": 1.6,
+   "text": "red"
+  },
+  {
+   "end": 2.16,
+   "start": 1.84,
+   "text": "light"
+  },
+  {
+   "end": 2.4,
+   "start": 2.32,
+   "text": "and"
+  },
+  {
+   "end": 2.88,
+   "start": 2.4,
+   "text": "someone"
+  },
+  {
+   "end": 3.12,
+   "start": 2.88,
+   "text": "pulled"
+  },
+  {
+   "end": 3.2,
+   "start": 3.12,
+   "text": "me"
+  },
+  {
+   "end": 3.84,
+   "start": 3.2,
+   "text": "back"
+  }
+ ],
+ "text": "6:40, a car ran the red light, and someone pulled me back!"
+}

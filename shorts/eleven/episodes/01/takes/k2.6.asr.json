@@ -1,0 +1,59 @@
+{
+ "duration": 3.39525,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "acfe0dd8-348e-4512-8835-d57b57f343be",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.16,
+   "text": "The"
+  },
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "guy"
+  },
+  {
+   "end": 0.64,
+   "start": 0.56,
+   "text": "on"
+  },
+  {
+   "end": 0.72,
+   "start": 0.64,
+   "text": "the"
+  },
+  {
+   "end": 1.12,
+   "start": 0.72,
+   "text": "train"
+  },
+  {
+   "end": 1.28,
+   "start": 1.12,
+   "text": "will"
+  },
+  {
+   "end": 1.6,
+   "start": 1.28,
+   "text": "ask"
+  },
+  {
+   "end": 1.68,
+   "start": 1.6,
+   "text": "your"
+  },
+  {
+   "end": 2.16,
+   "start": 1.68,
+   "text": "name"
+  },
+  {
+   "end": 3.04,
+   "start": 2.48,
+   "text": "Lie"
+  }
+ ],
+ "text": "The guy on the train will ask your name. Lie."
+}
