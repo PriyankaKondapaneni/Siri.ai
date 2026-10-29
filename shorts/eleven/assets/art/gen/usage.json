@@ -284,5 +284,31 @@
    "text_tokens": 0
   },
   "total_tokens": 4000
+ },
+ "CK4": {
+  "input_tokens": 2690,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 257
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4062
+ },
+ "CM4": {
+  "input_tokens": 2681,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 248
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4053
  }
 }

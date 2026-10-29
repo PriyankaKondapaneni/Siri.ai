@@ -153,6 +153,24 @@
    "quality": "medium",
    "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines, and stick-figure arms drawn as single black lines with small round circle hands. Simple, charming, clearly drawn by hand by a webtoon artist. Do not copy the character in the first image; use the character design from the SECOND image. Waist-up, on a plain white background. No text, no watermark.",
    "prompt": "Kabir: a very handsome young man with messy black hair falling over his brow, dark intense eyes under strong brows, a dark charcoal coat over a black turtleneck, a small wristwatch drawn on his stick wrist. A calm, mysterious half-smile."
+  },
+  "CM4": {
+   "refs": [
+    "STYLE",
+    "CM3"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image; use the character, outfit and pose from the SECOND image, keeping the face exactly as it is. Waist-up, on a plain white background. No text, no watermark.",
+   "prompt": "Mira: the same girl as the second image, same face, hair, flower clip, blue dress and red scarf, same sweet slightly nervous smile, holding her phone up in one hand, the other arm relaxed at her side."
+  },
+  "CK4": {
+   "refs": [
+    "STYLE",
+    "CK3"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image; use the character, outfit and pose from the SECOND image, keeping the face exactly as it is. Waist-up, on a plain white background. No text, no watermark.",
+   "prompt": "Kabir: the same young man as the second image, same face, messy black hair, charcoal coat and black turtleneck, same calm mysterious half-smile. One hand in his coat pocket, the other arm raised slightly so the wristwatch on his wrist shows."
   }
  }
 }
