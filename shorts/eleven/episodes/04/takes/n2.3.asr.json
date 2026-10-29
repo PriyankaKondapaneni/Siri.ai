@@ -1,0 +1,54 @@
+{
+ "duration": 5.340625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "2beae981-5626-4003-a2f0-218bfb9ee742",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "His"
+  },
+  {
+   "end": 0.96,
+   "start": 0.24,
+   "text": "messages"
+  },
+  {
+   "end": 1.12,
+   "start": 0.96,
+   "text": "were"
+  },
+  {
+   "end": 1.76,
+   "start": 1.12,
+   "text": "saving"
+  },
+  {
+   "end": 2.16,
+   "start": 1.76,
+   "text": "me"
+  },
+  {
+   "end": 3.44,
+   "start": 2.8,
+   "text": "Mine"
+  },
+  {
+   "end": 3.6,
+   "start": 3.44,
+   "text": "were"
+  },
+  {
+   "end": 4.24,
+   "start": 3.6,
+   "text": "saving"
+  },
+  {
+   "end": 4.72,
+   "start": 4.24,
+   "text": "him"
+  }
+ ],
+ "text": "His messages were saving me. Mine were saving him."
+}

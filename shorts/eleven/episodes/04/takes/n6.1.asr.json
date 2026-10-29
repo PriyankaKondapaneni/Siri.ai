@@ -1,0 +1,34 @@
+{
+ "duration": 3.7616875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "94252a95-45e0-497d-a6cf-e01f55749e19",
+ "segments": [
+  {
+   "end": 0.96,
+   "start": 0,
+   "text": "Friday"
+  },
+  {
+   "end": 2.16,
+   "start": 1.68,
+   "text": "Three"
+  },
+  {
+   "end": 2.56,
+   "start": 2.16,
+   "text": "days"
+  },
+  {
+   "end": 2.88,
+   "start": 2.56,
+   "text": "from"
+  },
+  {
+   "end": 3.36,
+   "start": 2.88,
+   "text": "now"
+  }
+ ],
+ "text": "Friday. Three days from now."
+}

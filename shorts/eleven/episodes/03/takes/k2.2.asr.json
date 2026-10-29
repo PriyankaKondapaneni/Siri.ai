@@ -1,0 +1,59 @@
+{
+ "duration": 5.712125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "db4ae808-63bb-46fa-b2ed-38ddb06dcc33",
+ "segments": [
+  {
+   "end": 0.96,
+   "start": 0.48,
+   "text": "Okay"
+  },
+  {
+   "end": 2,
+   "start": 1.68,
+   "text": "That's"
+  },
+  {
+   "end": 2.64,
+   "start": 2,
+   "text": "twice"
+  },
+  {
+   "end": 3.12,
+   "start": 2.64,
+   "text": "now"
+  },
+  {
+   "end": 3.84,
+   "start": 3.84,
+   "text": "Are"
+  },
+  {
+   "end": 4,
+   "start": 3.84,
+   "text": "you"
+  },
+  {
+   "end": 4.4,
+   "start": 4,
+   "text": "doing"
+  },
+  {
+   "end": 4.56,
+   "start": 4.4,
+   "text": "this"
+  },
+  {
+   "end": 4.8,
+   "start": 4.56,
+   "text": "on"
+  },
+  {
+   "end": 5.44,
+   "start": 4.8,
+   "text": "purpose"
+  }
+ ],
+ "text": "Okay. That's twice now. Are you doing this on purpose?"
+}

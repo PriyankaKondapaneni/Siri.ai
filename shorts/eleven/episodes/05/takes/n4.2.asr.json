@@ -1,0 +1,49 @@
+{
+ "duration": 3.018625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "8c615127-00cf-4780-a7f7-b2d3b966462b",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0.08,
+   "text": "Then"
+  },
+  {
+   "end": 0.56,
+   "start": 0.4,
+   "text": "he"
+  },
+  {
+   "end": 0.88,
+   "start": 0.56,
+   "text": "showed"
+  },
+  {
+   "end": 1.04,
+   "start": 0.88,
+   "text": "me"
+  },
+  {
+   "end": 1.12,
+   "start": 1.04,
+   "text": "a"
+  },
+  {
+   "end": 1.68,
+   "start": 1.12,
+   "text": "photo"
+  },
+  {
+   "end": 1.76,
+   "start": 1.68,
+   "text": "of"
+  },
+  {
+   "end": 2.56,
+   "start": 1.84,
+   "text": "Arjun"
+  }
+ ],
+ "text": "Then he showed me a photo of Arjun."
+}

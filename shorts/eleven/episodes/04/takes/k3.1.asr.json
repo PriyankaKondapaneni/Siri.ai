@@ -1,0 +1,59 @@
+{
+ "duration": 4.08675,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "d2b687ac-bb93-4a5d-b4c4-6f33ed58a7f0",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "Then"
+  },
+  {
+   "end": 0.4,
+   "start": 0.16,
+   "text": "I'm"
+  },
+  {
+   "end": 0.72,
+   "start": 0.4,
+   "text": "not"
+  },
+  {
+   "end": 1.12,
+   "start": 0.72,
+   "text": "leaving"
+  },
+  {
+   "end": 1.28,
+   "start": 1.12,
+   "text": "your"
+  },
+  {
+   "end": 1.92,
+   "start": 1.28,
+   "text": "side"
+  },
+  {
+   "end": 2.96,
+   "start": 2.56,
+   "text": "Not"
+  },
+  {
+   "end": 3.28,
+   "start": 2.96,
+   "text": "for"
+  },
+  {
+   "end": 3.28,
+   "start": 3.28,
+   "text": "a"
+  },
+  {
+   "end": 3.92,
+   "start": 3.28,
+   "text": "minute"
+  }
+ ],
+ "text": "Then I'm not leaving your side. Not for a minute."
+}

@@ -1,0 +1,64 @@
+{
+ "duration": 5.4799375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "f48ffc55-a40a-4c1a-bbd7-fb2ba1b4c3ab",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "An"
+  },
+  {
+   "end": 0.64,
+   "start": 0.32,
+   "text": "hour"
+  },
+  {
+   "end": 1.28,
+   "start": 0.64,
+   "text": "later"
+  },
+  {
+   "end": 2.08,
+   "start": 1.68,
+   "text": "every"
+  },
+  {
+   "end": 2.56,
+   "start": 2.08,
+   "text": "phone"
+  },
+  {
+   "end": 2.72,
+   "start": 2.56,
+   "text": "on"
+  },
+  {
+   "end": 2.8,
+   "start": 2.72,
+   "text": "the"
+  },
+  {
+   "end": 3.28,
+   "start": 2.8,
+   "text": "street"
+  },
+  {
+   "end": 4,
+   "start": 3.52,
+   "text": "buzzed"
+  },
+  {
+   "end": 4.16,
+   "start": 4,
+   "text": "at"
+  },
+  {
+   "end": 4.96,
+   "start": 4.16,
+   "text": "once"
+  }
+ ],
+ "text": "An hour later, every phone on the street buzzed at once."
+}

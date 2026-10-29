@@ -9,7 +9,7 @@
     night: { wash: 'rgba(70,110,200,0.16)', shade: 'rgba(222,226,246,1)', sat: 1 },
     phone: { wash: 'rgba(70,120,210,0.2)', shade: 'rgba(190,200,235,1)', sat: 0.9 },
     morning: { wash: 'rgba(255,190,120,0.26)', shade: 'rgba(255,236,214,1)', sat: 1 },
-    train: { wash: 'rgba(80,165,160,0.26)', shade: 'rgba(200,222,220,1)', sat: 0.85 },
+    train: { wash: 'rgba(80,160,165,0.16)', shade: 'rgba(222,232,232,1)', sat: 0.95 },
     dusk: { wash: 'rgba(255,140,80,0.28)', shade: 'rgba(235,205,200,1)', sat: 1 },
     danger: { wash: 'rgba(255,50,40,0.30)', shade: 'rgba(230,170,170,1)', sat: 0.9 },
     dark: { wash: 'rgba(255,170,110,0.18)', shade: 'rgba(200,190,200,1)', sat: 0.9 },
@@ -74,6 +74,12 @@
     const a = Math.min(PP.clamp((t - ch.s) / 0.12), PP.clamp((ch.e - t) / 0.15));
     if (a <= 0) return;
     const text = ch.words.map((w) => w.w).join(' ').replace(/\.\.\./g, '…');
+    // a soft dark band behind the line keeps it readable over bright frames
+    PP.with(ctx, () => {
+      const gr = ctx.createLinearGradient(0, y - 110, 0, y + 110);
+      gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(0.5, `rgba(0,0,0,${0.32 * a})`); gr.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gr; ctx.fillRect(0, y - 110, W, 220);
+    });
     PP.with(ctx, () => {
       ctx.globalAlpha = a;
       ctx.font = `${ch.kind === 'note' ? 'italic 500' : '600'} 52px Inter`;

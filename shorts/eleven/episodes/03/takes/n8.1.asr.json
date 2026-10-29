@@ -1,0 +1,69 @@
+{
+ "duration": 5.340625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "2738789d-ea06-45ca-aeab-5f647ec05397",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "That"
+  },
+  {
+   "end": 0.8,
+   "start": 0.4,
+   "text": "night"
+  },
+  {
+   "end": 0.96,
+   "start": 0.8,
+   "text": "at"
+  },
+  {
+   "end": 1.52,
+   "start": 0.96,
+   "text": "11"
+  },
+  {
+   "end": 2.16,
+   "start": 1.52,
+   "text": "11"
+  },
+  {
+   "end": 2.8,
+   "start": 2.64,
+   "text": "it"
+  },
+  {
+   "end": 3.36,
+   "start": 2.8,
+   "text": "wasn't"
+  },
+  {
+   "end": 3.6,
+   "start": 3.36,
+   "text": "my"
+  },
+  {
+   "end": 4.08,
+   "start": 3.6,
+   "text": "phone"
+  },
+  {
+   "end": 4.24,
+   "start": 4.08,
+   "text": "that"
+  },
+  {
+   "end": 4.48,
+   "start": 4.24,
+   "text": "lit"
+  },
+  {
+   "end": 4.8,
+   "start": 4.48,
+   "text": "up"
+  }
+ ],
+ "text": "That night at 11:11, it wasn't my phone that lit up."
+}

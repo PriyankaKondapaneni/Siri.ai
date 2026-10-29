@@ -1,0 +1,84 @@
+{
+ "duration": 7.3375625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "0e7b1cff-8aef-4878-982d-6db712db9520",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "Three"
+  },
+  {
+   "end": 0.8,
+   "start": 0.4,
+   "text": "years"
+  },
+  {
+   "end": 1.36,
+   "start": 0.8,
+   "text": "ago"
+  },
+  {
+   "end": 1.84,
+   "start": 1.6,
+   "text": "on"
+  },
+  {
+   "end": 2.08,
+   "start": 1.84,
+   "text": "that"
+  },
+  {
+   "end": 2.72,
+   "start": 2.08,
+   "text": "bridge"
+  },
+  {
+   "end": 3.44,
+   "start": 3.28,
+   "text": "I"
+  },
+  {
+   "end": 3.76,
+   "start": 3.44,
+   "text": "held"
+  },
+  {
+   "end": 3.84,
+   "start": 3.76,
+   "text": "a"
+  },
+  {
+   "end": 4.64,
+   "start": 3.84,
+   "text": "stranger's"
+  },
+  {
+   "end": 5.12,
+   "start": 4.64,
+   "text": "hand"
+  },
+  {
+   "end": 5.44,
+   "start": 5.12,
+   "text": "until"
+  },
+  {
+   "end": 5.6,
+   "start": 5.44,
+   "text": "the"
+  },
+  {
+   "end": 6.32,
+   "start": 5.68,
+   "text": "ambulance"
+  },
+  {
+   "end": 6.88,
+   "start": 6.32,
+   "text": "came"
+  }
+ ],
+ "text": "Three years ago, on that bridge, I held a stranger's hand until the ambulance came."
+}

@@ -1,0 +1,87 @@
+{
+ "episode": 5,
+ "title": "The Brother",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "text": "He died on the old bridge. At 11:11.",
+   "take": "k2",
+   "from": 0
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quiet, careful] I had to know why his watch stopped. So I asked."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[holding it together] My brother, Arjun. Three years ago."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[quiet, heavy] He died on the old bridge. At eleven eleven.",
+   "show": "He died on the old bridge. At 11:11."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[soft] The same bridge. The same minute."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[a sad half-smile] He believed in signs. I never did."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[warm] I held his hand. This time, he let me."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[unsettled] Then he showed me a photo of Arjun."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[shaken, quiet] Three years ago, on that bridge, I held a stranger's hand until the ambulance came."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[barely a whisper] It was him. Arjun."
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low] That night. Eleven eleven.",
+   "show": "That night. 11:11."
+  },
+  {
+   "id": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[slow, heavy] Now you know. You were there that night. That's why it has to be you."
+  }
+ ]
+}

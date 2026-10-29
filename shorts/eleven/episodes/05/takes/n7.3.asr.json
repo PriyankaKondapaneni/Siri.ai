@@ -1,0 +1,29 @@
+{
+ "duration": 3.2508125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "5e80f633-b255-486b-a4ba-49d9297ee1fe",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0.08,
+   "text": "That"
+  },
+  {
+   "end": 0.96,
+   "start": 0.4,
+   "text": "night"
+  },
+  {
+   "end": 2.24,
+   "start": 1.52,
+   "text": "11"
+  },
+  {
+   "end": 2.24,
+   "start": 2.24,
+   "text": "11"
+  }
+ ],
+ "text": "That night, 11:11."
+}

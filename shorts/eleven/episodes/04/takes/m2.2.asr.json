@@ -1,0 +1,54 @@
+{
+ "duration": 5.6656875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "e7b5a86e-846a-4525-bd7a-f3b9973409cb",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.32,
+   "text": "Kabir"
+  },
+  {
+   "end": 2.16,
+   "start": 1.6,
+   "text": "Friday"
+  },
+  {
+   "end": 2.64,
+   "start": 2.24,
+   "text": "night"
+  },
+  {
+   "end": 3.36,
+   "start": 3.04,
+   "text": "don't"
+  },
+  {
+   "end": 3.6,
+   "start": 3.36,
+   "text": "let"
+  },
+  {
+   "end": 3.84,
+   "start": 3.6,
+   "text": "her"
+  },
+  {
+   "end": 4.16,
+   "start": 3.92,
+   "text": "near"
+  },
+  {
+   "end": 4.32,
+   "start": 4.16,
+   "text": "the"
+  },
+  {
+   "end": 4.48,
+   "start": 4.32,
+   "text": "bridge"
+  }
+ ],
+ "text": "Kabir, Friday night, don't let her near the bridge!"
+}

@@ -1,0 +1,54 @@
+{
+ "duration": 4.4118125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "bf1358ec-13ed-4fb6-96bf-96486a04f4a1",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.64,
+   "start": 0.16,
+   "text": "died"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "on"
+  },
+  {
+   "end": 0.88,
+   "start": 0.8,
+   "text": "the"
+  },
+  {
+   "end": 1.2,
+   "start": 0.88,
+   "text": "old"
+  },
+  {
+   "end": 1.76,
+   "start": 1.2,
+   "text": "bridge"
+  },
+  {
+   "end": 2.72,
+   "start": 2.56,
+   "text": "at"
+  },
+  {
+   "end": 3.36,
+   "start": 2.72,
+   "text": "11"
+  },
+  {
+   "end": 4.24,
+   "start": 3.6,
+   "text": "11"
+  }
+ ],
+ "text": "He died on the old bridge at 11:11."
+}

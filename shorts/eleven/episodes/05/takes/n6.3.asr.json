@@ -1,0 +1,28 @@
+{
+ "duration": 3.29725,
+ "language_code": "en",
+ "request_id": "1bf40fb4-3037-4b6c-ac53-6043ea26bffc",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "It"
+  },
+  {
+   "end": 0.48,
+   "start": 0.24,
+   "text": "was"
+  },
+  {
+   "end": 1.04,
+   "start": 0.48,
+   "text": "him"
+  },
+  {
+   "end": 2.88,
+   "start": 1.92,
+   "text": "Arjun"
+  }
+ ],
+ "text": "It was him, Arjun."
+}

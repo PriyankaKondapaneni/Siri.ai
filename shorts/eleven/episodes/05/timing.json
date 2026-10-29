@@ -1,0 +1,903 @@
+{
+ "duration": 45.795,
+ "words": [
+  {
+   "w": "He",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 0.25,
+   "e": 0.991
+  },
+  {
+   "w": "died",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 0.398,
+   "e": 1.139
+  },
+  {
+   "w": "on",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 0.991,
+   "e": 1.287
+  },
+  {
+   "w": "the",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 1.139,
+   "e": 1.657
+  },
+  {
+   "w": "old",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 1.287,
+   "e": 2.25
+  },
+  {
+   "w": "bridge.",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 1.657,
+   "e": 2.658
+  },
+  {
+   "w": "At",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 2.51,
+   "e": 3.251
+  },
+  {
+   "w": "11:11.",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 2.658,
+   "e": 3.917
+  },
+  {
+   "w": "I",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 4.697,
+   "e": 4.846
+  },
+  {
+   "w": "had",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 4.846,
+   "e": 5.216
+  },
+  {
+   "w": "to",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 5.216,
+   "e": 5.29
+  },
+  {
+   "w": "know",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 5.29,
+   "e": 5.66
+  },
+  {
+   "w": "why",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 5.66,
+   "e": 6.031
+  },
+  {
+   "w": "his",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 6.031,
+   "e": 6.253
+  },
+  {
+   "w": "watch",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 6.253,
+   "e": 6.623
+  },
+  {
+   "w": "stopped.",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 6.623,
+   "e": 7.29
+  },
+  {
+   "w": "So",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 7.66,
+   "e": 7.957
+  },
+  {
+   "w": "I",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 7.957,
+   "e": 8.105
+  },
+  {
+   "w": "asked.",
+   "line": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 8.105,
+   "e": 8.771
+  },
+  {
+   "w": "My",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "s": 9.051,
+   "e": 9.274
+  },
+  {
+   "w": "brother,",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "s": 9.274,
+   "e": 9.792
+  },
+  {
+   "w": "Arjun.",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "s": 10.052,
+   "e": 10.719
+  },
+  {
+   "w": "Three",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "s": 10.979,
+   "e": 11.349
+  },
+  {
+   "w": "years",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "s": 11.349,
+   "e": 11.72
+  },
+  {
+   "w": "ago.",
+   "line": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "s": 11.72,
+   "e": 12.164
+  },
+  {
+   "w": "He",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 12.444,
+   "e": 13.185
+  },
+  {
+   "w": "died",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 12.592,
+   "e": 13.333
+  },
+  {
+   "w": "on",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 13.185,
+   "e": 13.481
+  },
+  {
+   "w": "the",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 13.333,
+   "e": 13.851
+  },
+  {
+   "w": "old",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 13.481,
+   "e": 14.444
+  },
+  {
+   "w": "bridge.",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 13.851,
+   "e": 14.852
+  },
+  {
+   "w": "At",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 14.704,
+   "e": 15.445
+  },
+  {
+   "w": "11:11.",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 14.852,
+   "e": 16.111
+  },
+  {
+   "w": "The",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 16.461,
+   "e": 16.536
+  },
+  {
+   "w": "same",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 16.536,
+   "e": 16.98
+  },
+  {
+   "w": "bridge.",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 16.98,
+   "e": 17.647
+  },
+  {
+   "w": "The",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 17.907,
+   "e": 17.981
+  },
+  {
+   "w": "same",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 17.981,
+   "e": 18.573
+  },
+  {
+   "w": "minute.",
+   "line": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 18.573,
+   "e": 19.092
+  },
+  {
+   "w": "He",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "s": 19.372,
+   "e": 19.52
+  },
+  {
+   "w": "believed",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "s": 19.52,
+   "e": 20.113
+  },
+  {
+   "w": "in",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "s": 20.113,
+   "e": 20.261
+  },
+  {
+   "w": "signs.",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "s": 20.261,
+   "e": 20.927
+  },
+  {
+   "w": "I",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "s": 21.187,
+   "e": 21.336
+  },
+  {
+   "w": "never",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "s": 21.336,
+   "e": 21.558
+  },
+  {
+   "w": "did.",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "s": 21.558,
+   "e": 22.076
+  },
+  {
+   "w": "I",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 22.356,
+   "e": 22.579
+  },
+  {
+   "w": "held",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 22.579,
+   "e": 22.875
+  },
+  {
+   "w": "his",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 22.875,
+   "e": 23.023
+  },
+  {
+   "w": "hand.",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 23.023,
+   "e": 23.616
+  },
+  {
+   "w": "This",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 23.976,
+   "e": 24.272
+  },
+  {
+   "w": "time,",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 24.272,
+   "e": 24.642
+  },
+  {
+   "w": "he",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 24.79,
+   "e": 25.013
+  },
+  {
+   "w": "let",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 25.013,
+   "e": 25.235
+  },
+  {
+   "w": "me.",
+   "line": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 25.235,
+   "e": 25.605
+  },
+  {
+   "w": "Then",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 25.955,
+   "e": 26.251
+  },
+  {
+   "w": "he",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 26.251,
+   "e": 26.4
+  },
+  {
+   "w": "showed",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 26.4,
+   "e": 26.696
+  },
+  {
+   "w": "me",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 26.696,
+   "e": 26.844
+  },
+  {
+   "w": "a",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 26.844,
+   "e": 26.918
+  },
+  {
+   "w": "photo",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 26.918,
+   "e": 27.437
+  },
+  {
+   "w": "of",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 27.437,
+   "e": 27.511
+  },
+  {
+   "w": "Arjun.",
+   "line": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 27.585,
+   "e": 28.326
+  },
+  {
+   "w": "Three",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 28.676,
+   "e": 28.898
+  },
+  {
+   "w": "years",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 28.898,
+   "e": 29.416
+  },
+  {
+   "w": "ago,",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 29.416,
+   "e": 29.935
+  },
+  {
+   "w": "on",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 30.195,
+   "e": 30.417
+  },
+  {
+   "w": "that",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 30.417,
+   "e": 30.713
+  },
+  {
+   "w": "bridge,",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 30.713,
+   "e": 31.306
+  },
+  {
+   "w": "I",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 31.566,
+   "e": 31.714
+  },
+  {
+   "w": "held",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 31.714,
+   "e": 32.084
+  },
+  {
+   "w": "a",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 32.158,
+   "e": 32.233
+  },
+  {
+   "w": "stranger's",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 32.233,
+   "e": 33.047
+  },
+  {
+   "w": "hand",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 33.047,
+   "e": 33.566
+  },
+  {
+   "w": "until",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 33.714,
+   "e": 34.01
+  },
+  {
+   "w": "the",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 34.01,
+   "e": 34.158
+  },
+  {
+   "w": "ambulance",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 34.233,
+   "e": 34.825
+  },
+  {
+   "w": "came.",
+   "line": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 34.825,
+   "e": 35.344
+  },
+  {
+   "w": "It",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 35.804,
+   "e": 36.026
+  },
+  {
+   "w": "was",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 36.026,
+   "e": 36.248
+  },
+  {
+   "w": "him.",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 36.248,
+   "e": 36.618
+  },
+  {
+   "w": "Arjun.",
+   "line": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 36.978,
+   "e": 37.793
+  },
+  {
+   "w": "That",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 38.243,
+   "e": 39.058
+  },
+  {
+   "w": "night.",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 38.54,
+   "e": 39.985
+  },
+  {
+   "w": "11:11.",
+   "line": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 39.318,
+   "e": 39.985
+  },
+  {
+   "w": "Now",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 40.635,
+   "e": 41.005
+  },
+  {
+   "w": "you",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 41.005,
+   "e": 41.227
+  },
+  {
+   "w": "know.",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 41.227,
+   "e": 41.746
+  },
+  {
+   "w": "You",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 42.006,
+   "e": 42.228
+  },
+  {
+   "w": "were",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 42.228,
+   "e": 42.376
+  },
+  {
+   "w": "there",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 42.376,
+   "e": 42.821
+  },
+  {
+   "w": "that",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 42.821,
+   "e": 43.043
+  },
+  {
+   "w": "night.",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 43.043,
+   "e": 43.487
+  },
+  {
+   "w": "That's",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 43.747,
+   "e": 44.192
+  },
+  {
+   "w": "why",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 44.192,
+   "e": 44.488
+  },
+  {
+   "w": "it",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 44.488,
+   "e": 44.71
+  },
+  {
+   "w": "has",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 44.71,
+   "e": 44.933
+  },
+  {
+   "w": "to",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 45.007,
+   "e": 45.081
+  },
+  {
+   "w": "be",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 45.081,
+   "e": 45.155
+  },
+  {
+   "w": "you.",
+   "line": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 45.155,
+   "e": 45.747
+  }
+ ],
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "s": 0.25,
+   "e": 4.077,
+   "text": "He died on the old bridge. At 11:11."
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "s": 4.627,
+   "e": 8.931,
+   "text": "I had to know why his watch stopped. So I asked."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "s": 9.051,
+   "e": 12.324,
+   "text": "My brother, Arjun. Three years ago."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "s": 12.444,
+   "e": 16.271,
+   "text": "He died on the old bridge. At 11:11."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "s": 16.391,
+   "e": 19.252,
+   "text": "The same bridge. The same minute."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "s": 19.372,
+   "e": 22.236,
+   "text": "He believed in signs. I never did."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "s": 22.356,
+   "e": 25.765,
+   "text": "I held his hand. This time, he let me."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "s": 25.885,
+   "e": 28.486,
+   "text": "Then he showed me a photo of Arjun."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "s": 28.606,
+   "e": 35.504,
+   "text": "Three years ago, on that bridge, I held a stranger's hand until the ambulance came."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "s": 35.804,
+   "e": 37.953,
+   "text": "It was him. Arjun."
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 38.173,
+   "e": 40.145,
+   "text": "That night. 11:11."
+  },
+  {
+   "id": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "s": 40.565,
+   "e": 45.795,
+   "text": "Now you know. You were there that night. That's why it has to be you."
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "duration": 4.4118125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "1f7aa628-23bc-4b74-a968-e6f33c6ccc34",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "My"
+  },
+  {
+   "end": 0.8,
+   "start": 0.24,
+   "text": "brother"
+  },
+  {
+   "end": 2.16,
+   "start": 1.44,
+   "text": "Arjun"
+  },
+  {
+   "end": 3.36,
+   "start": 2.96,
+   "text": "three"
+  },
+  {
+   "end": 3.76,
+   "start": 3.36,
+   "text": "years"
+  },
+  {
+   "end": 4.24,
+   "start": 3.76,
+   "text": "ago"
+  }
+ ],
+ "text": "My brother, Arjun, three years ago."
+}

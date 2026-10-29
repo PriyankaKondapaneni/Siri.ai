@@ -1,0 +1,54 @@
+{
+ "duration": 2.6006875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "5628b559-5cb6-4e09-b2b7-edc62ed42345",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "said"
+  },
+  {
+   "end": 0.72,
+   "start": 0.56,
+   "text": "it"
+  },
+  {
+   "end": 0.88,
+   "start": 0.72,
+   "text": "like"
+  },
+  {
+   "end": 0.96,
+   "start": 0.88,
+   "text": "it"
+  },
+  {
+   "end": 1.2,
+   "start": 0.96,
+   "text": "was"
+  },
+  {
+   "end": 1.28,
+   "start": 1.2,
+   "text": "a"
+  },
+  {
+   "end": 1.6,
+   "start": 1.28,
+   "text": "good"
+  },
+  {
+   "end": 2.24,
+   "start": 1.68,
+   "text": "thing"
+  }
+ ],
+ "text": "He said it like it was a good thing."
+}

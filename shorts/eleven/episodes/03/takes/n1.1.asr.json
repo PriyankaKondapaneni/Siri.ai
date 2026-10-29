@@ -1,0 +1,84 @@
+{
+ "duration": 5.1084375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "1db389d7-86e4-409d-bb90-fbcafd66098b",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "told"
+  },
+  {
+   "end": 0.72,
+   "start": 0.56,
+   "text": "me"
+  },
+  {
+   "end": 1.12,
+   "start": 0.72,
+   "text": "not"
+  },
+  {
+   "end": 1.28,
+   "start": 1.2,
+   "text": "to"
+  },
+  {
+   "end": 1.6,
+   "start": 1.28,
+   "text": "let"
+  },
+  {
+   "end": 1.76,
+   "start": 1.6,
+   "text": "him"
+  },
+  {
+   "end": 2,
+   "start": 1.76,
+   "text": "get"
+  },
+  {
+   "end": 2.16,
+   "start": 2,
+   "text": "on"
+  },
+  {
+   "end": 2.24,
+   "start": 2.16,
+   "text": "the"
+  },
+  {
+   "end": 2.8,
+   "start": 2.24,
+   "text": "train"
+  },
+  {
+   "end": 3.6,
+   "start": 3.36,
+   "text": "so"
+  },
+  {
+   "end": 3.68,
+   "start": 3.6,
+   "text": "I"
+  },
+  {
+   "end": 4.08,
+   "start": 3.68,
+   "text": "didn't"
+  },
+  {
+   "end": 4.64,
+   "start": 4.08,
+   "text": "sleep"
+  }
+ ],
+ "text": "He told me not to let him get on the train, so I didn't sleep."
+}

@@ -1,0 +1,44 @@
+{
+ "duration": 4.0403125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "8bd0a6c5-9d74-4a9c-aa96-b33e4b81ee71",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.8,
+   "start": 0.24,
+   "text": "believed"
+  },
+  {
+   "end": 0.88,
+   "start": 0.8,
+   "text": "in"
+  },
+  {
+   "end": 1.68,
+   "start": 0.88,
+   "text": "signs"
+  },
+  {
+   "end": 2.88,
+   "start": 2.64,
+   "text": "I"
+  },
+  {
+   "end": 3.2,
+   "start": 2.88,
+   "text": "never"
+  },
+  {
+   "end": 3.68,
+   "start": 3.2,
+   "text": "did"
+  }
+ ],
+ "text": "He believed in signs. I never did."
+}

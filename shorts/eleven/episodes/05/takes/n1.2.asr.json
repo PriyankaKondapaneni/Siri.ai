@@ -1,0 +1,64 @@
+{
+ "duration": 5.1084375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "9e0216e9-a561-4d6d-9c04-ce5613a33481",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "I"
+  },
+  {
+   "end": 0.64,
+   "start": 0.16,
+   "text": "had"
+  },
+  {
+   "end": 0.8,
+   "start": 0.72,
+   "text": "to"
+  },
+  {
+   "end": 1.12,
+   "start": 0.8,
+   "text": "know"
+  },
+  {
+   "end": 1.68,
+   "start": 1.12,
+   "text": "why"
+  },
+  {
+   "end": 2,
+   "start": 1.68,
+   "text": "his"
+  },
+  {
+   "end": 2.48,
+   "start": 2,
+   "text": "watch"
+  },
+  {
+   "end": 3.12,
+   "start": 2.48,
+   "text": "stopped"
+  },
+  {
+   "end": 3.76,
+   "start": 3.52,
+   "text": "so"
+  },
+  {
+   "end": 3.92,
+   "start": 3.76,
+   "text": "I"
+  },
+  {
+   "end": 4.72,
+   "start": 4,
+   "text": "asked"
+  }
+ ],
+ "text": "I had to know why his watch stopped, so I asked."
+}

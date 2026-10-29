@@ -1,0 +1,84 @@
+{
+ "duration": 6.40875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "51e4e3f4-7a65-45a9-bae6-c203171414e1",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "The"
+  },
+  {
+   "end": 0.56,
+   "start": 0.16,
+   "text": "doors"
+  },
+  {
+   "end": 1.28,
+   "start": 0.56,
+   "text": "closed"
+  },
+  {
+   "end": 1.92,
+   "start": 1.84,
+   "text": "The"
+  },
+  {
+   "end": 2.4,
+   "start": 1.92,
+   "text": "train"
+  },
+  {
+   "end": 2.8,
+   "start": 2.4,
+   "text": "left"
+  },
+  {
+   "end": 3.2,
+   "start": 2.8,
+   "text": "without"
+  },
+  {
+   "end": 3.52,
+   "start": 3.2,
+   "text": "him"
+  },
+  {
+   "end": 4.32,
+   "start": 4.16,
+   "text": "I"
+  },
+  {
+   "end": 4.64,
+   "start": 4.32,
+   "text": "didn't"
+  },
+  {
+   "end": 4.88,
+   "start": 4.64,
+   "text": "let"
+  },
+  {
+   "end": 5.12,
+   "start": 4.88,
+   "text": "go"
+  },
+  {
+   "end": 5.2,
+   "start": 5.12,
+   "text": "of"
+  },
+  {
+   "end": 5.44,
+   "start": 5.2,
+   "text": "his"
+  },
+  {
+   "end": 6,
+   "start": 5.44,
+   "text": "hand"
+  }
+ ],
+ "text": "The doors closed. The train left without him. I didn't let go of his hand."
+}

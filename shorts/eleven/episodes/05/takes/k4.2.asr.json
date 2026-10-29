@@ -1,0 +1,84 @@
+{
+ "duration": 6.9195625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "52aa2faa-b18d-4f7b-a98f-9ffe2d0ff05b",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0.08,
+   "text": "Now"
+  },
+  {
+   "end": 0.72,
+   "start": 0.48,
+   "text": "you"
+  },
+  {
+   "end": 1.28,
+   "start": 0.72,
+   "text": "know"
+  },
+  {
+   "end": 2.4,
+   "start": 2.16,
+   "text": "You"
+  },
+  {
+   "end": 2.56,
+   "start": 2.4,
+   "text": "were"
+  },
+  {
+   "end": 3.04,
+   "start": 2.56,
+   "text": "there"
+  },
+  {
+   "end": 3.28,
+   "start": 3.04,
+   "text": "that"
+  },
+  {
+   "end": 3.76,
+   "start": 3.28,
+   "text": "night"
+  },
+  {
+   "end": 5.2,
+   "start": 4.72,
+   "text": "That's"
+  },
+  {
+   "end": 5.52,
+   "start": 5.2,
+   "text": "why"
+  },
+  {
+   "end": 5.76,
+   "start": 5.52,
+   "text": "it"
+  },
+  {
+   "end": 6,
+   "start": 5.76,
+   "text": "has"
+  },
+  {
+   "end": 6.16,
+   "start": 6.08,
+   "text": "to"
+  },
+  {
+   "end": 6.24,
+   "start": 6.16,
+   "text": "be"
+  },
+  {
+   "end": 6.88,
+   "start": 6.24,
+   "text": "you"
+  }
+ ],
+ "text": "Now you know. You were there that night. That's why it has to be you."
+}

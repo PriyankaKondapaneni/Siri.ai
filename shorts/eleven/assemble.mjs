@@ -62,7 +62,7 @@ S.lines.forEach((l, li) => {
       clip.push(x[i] * gn);
     }
   });
-  const stem = l.who === 'mira' ? 'mira' : l.kind === 'note' ? 'note' : 'live';
+  const stem = l.kind === 'note' ? 'note' : l.who === 'mira' ? 'mira' : 'live';
   total.push({ stem, at: t, clip });
   // display words: the script's own words (with punctuation and digits), timed by the transcript's words
   const shown = (l.show || l.text.replace(/\[[^\]]*\]/g, ' ')).replace(/\s+/g, ' ').trim().split(' ');

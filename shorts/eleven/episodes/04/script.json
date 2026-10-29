@@ -1,0 +1,92 @@
+{
+ "episode": 4,
+ "title": "Her Voice",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "lines": [
+  {
+   "id": "h0",
+   "who": "mira",
+   "kind": "note",
+   "text": "Don't let her near the bridge.",
+   "take": "m2",
+   "from": 3
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quiet, unsettled] He played it for me. My voice. Words I've never said."
+  },
+  {
+   "id": "m1",
+   "who": "mira",
+   "kind": "note",
+   "text": "[tired and scared, but holding steady] Kabir, it's me. Mira. You don't know me yet... but you will. Please don't get on the six-forty train.",
+   "show": "Kabir, it's me. Mira. You don't know me yet… but you will. Please don't get on the 6:40 train."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[stunned, quietly] I got that three nights ago. I thought it was a prank. Until today."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[slowly realizing] His messages were saving me. Mine were saving him."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[soft] Somewhere out there... we were trying to save each other."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[a small smile] So in the future... we know each other."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[shy, warm] He said it like it was a good thing."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low] Then he played the newest one."
+  },
+  {
+   "id": "m2",
+   "who": "mira",
+   "kind": "note",
+   "text": "[crying, barely holding on] Kabir. Friday night. Don't let her near the bridge."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[afraid] Friday. Three days from now."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[firm, gentle] Then I'm not leaving your side. Not for a minute."
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[whisper] That's what scared me. Because in seven days... he doesn't make it."
+  }
+ ]
+}

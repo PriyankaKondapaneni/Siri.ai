@@ -1,0 +1,39 @@
+{
+ "duration": 2.92575,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "03219878-3af5-4439-88e2-16a433cbd197",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0.08,
+   "text": "I"
+  },
+  {
+   "end": 0.56,
+   "start": 0.16,
+   "text": "couldn't"
+  },
+  {
+   "end": 0.88,
+   "start": 0.56,
+   "text": "tell"
+  },
+  {
+   "end": 1.28,
+   "start": 0.88,
+   "text": "him"
+  },
+  {
+   "end": 2,
+   "start": 1.68,
+   "text": "Not"
+  },
+  {
+   "end": 2.56,
+   "start": 2,
+   "text": "yet"
+  }
+ ],
+ "text": "I couldn't tell him. Not yet."
+}

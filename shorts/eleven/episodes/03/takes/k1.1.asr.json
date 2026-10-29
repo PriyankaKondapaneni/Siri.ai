@@ -1,0 +1,39 @@
+{
+ "duration": 2.4149375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "164ef4b5-c14d-4eaa-8604-d1c6ce70823b",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0,
+   "text": "Mira"
+  },
+  {
+   "end": 1.36,
+   "start": 1.2,
+   "text": "what"
+  },
+  {
+   "end": 1.44,
+   "start": 1.36,
+   "text": "are"
+  },
+  {
+   "end": 1.6,
+   "start": 1.44,
+   "text": "you"
+  },
+  {
+   "end": 2,
+   "start": 1.6,
+   "text": "doing"
+  },
+  {
+   "end": 2.32,
+   "start": 2,
+   "text": "here"
+  }
+ ],
+ "text": "Mira, what are you doing here?"
+}

@@ -1,0 +1,29 @@
+{
+ "duration": 2.6935625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "8451f974-11ab-40fc-be07-5abaffbdcd8f",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "You"
+  },
+  {
+   "end": 0.8,
+   "start": 0.24,
+   "text": "knew"
+  },
+  {
+   "end": 2.08,
+   "start": 1.76,
+   "text": "didn't"
+  },
+  {
+   "end": 2.4,
+   "start": 2.08,
+   "text": "you"
+  }
+ ],
+ "text": "You knew, didn't you?"
+}

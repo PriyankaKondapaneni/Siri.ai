@@ -1,0 +1,54 @@
+{
+ "duration": 3.901,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "dac99a4b-6ac7-43ee-9303-80c4abea41d2",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "I"
+  },
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "held"
+  },
+  {
+   "end": 0.72,
+   "start": 0.56,
+   "text": "his"
+  },
+  {
+   "end": 1.28,
+   "start": 0.72,
+   "text": "hand"
+  },
+  {
+   "end": 2,
+   "start": 1.68,
+   "text": "This"
+  },
+  {
+   "end": 2.32,
+   "start": 2,
+   "text": "time"
+  },
+  {
+   "end": 2.8,
+   "start": 2.64,
+   "text": "he"
+  },
+  {
+   "end": 3.12,
+   "start": 2.8,
+   "text": "let"
+  },
+  {
+   "end": 3.52,
+   "start": 3.12,
+   "text": "me"
+  }
+ ],
+ "text": "I held his hand. This time, he let me."
+}

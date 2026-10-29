@@ -1,0 +1,49 @@
+{
+ "duration": 3.808125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "0ca02bf6-d3f6-4c1d-affb-7964c6d24916",
+ "segments": [
+  {
+   "end": 0.64,
+   "start": 0,
+   "text": "Mira"
+  },
+  {
+   "end": 1.84,
+   "start": 1.44,
+   "text": "why"
+  },
+  {
+   "end": 2,
+   "start": 1.84,
+   "text": "is"
+  },
+  {
+   "end": 2.16,
+   "start": 2,
+   "text": "your"
+  },
+  {
+   "end": 2.56,
+   "start": 2.16,
+   "text": "voice"
+  },
+  {
+   "end": 2.72,
+   "start": 2.56,
+   "text": "on"
+  },
+  {
+   "end": 2.88,
+   "start": 2.72,
+   "text": "my"
+  },
+  {
+   "end": 3.52,
+   "start": 2.88,
+   "text": "phone"
+  }
+ ],
+ "text": "Mira, why is your voice on my phone?"
+}

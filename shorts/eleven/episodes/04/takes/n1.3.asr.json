@@ -1,0 +1,64 @@
+{
+ "duration": 6.501625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "000e5e63-cf78-47ac-83c7-d5bc15a2ccd5",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.64,
+   "start": 0.24,
+   "text": "played"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "it"
+  },
+  {
+   "end": 1.04,
+   "start": 0.8,
+   "text": "for"
+  },
+  {
+   "end": 1.44,
+   "start": 1.04,
+   "text": "me"
+  },
+  {
+   "end": 2.48,
+   "start": 2.24,
+   "text": "My"
+  },
+  {
+   "end": 3.28,
+   "start": 2.48,
+   "text": "voice"
+  },
+  {
+   "end": 4.48,
+   "start": 4,
+   "text": "Words"
+  },
+  {
+   "end": 4.8,
+   "start": 4.56,
+   "text": "I've"
+  },
+  {
+   "end": 5.36,
+   "start": 4.8,
+   "text": "never"
+  },
+  {
+   "end": 6.16,
+   "start": 5.36,
+   "text": "said"
+  }
+ ],
+ "text": "He played it for me. My voice. Words I've never said."
+}

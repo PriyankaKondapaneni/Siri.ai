@@ -1,0 +1,49 @@
+{
+ "duration": 4.4118125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "0a032683-c2e6-463d-9797-225bdcf18e66",
+ "segments": [
+  {
+   "end": 1.52,
+   "start": 1.28,
+   "text": "So"
+  },
+  {
+   "end": 1.6,
+   "start": 1.52,
+   "text": "in"
+  },
+  {
+   "end": 1.68,
+   "start": 1.6,
+   "text": "the"
+  },
+  {
+   "end": 2.24,
+   "start": 1.68,
+   "text": "future"
+  },
+  {
+   "end": 3.2,
+   "start": 3.04,
+   "text": "we"
+  },
+  {
+   "end": 3.6,
+   "start": 3.2,
+   "text": "know"
+  },
+  {
+   "end": 3.76,
+   "start": 3.6,
+   "text": "each"
+  },
+  {
+   "end": 4.16,
+   "start": 3.76,
+   "text": "other"
+  }
+ ],
+ "text": "So in the future, we know each other."
+}

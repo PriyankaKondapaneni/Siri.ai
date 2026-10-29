@@ -1,0 +1,59 @@
+{
+ "duration": 4.551125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "3ffbe72e-dab1-4511-bd3b-214596b07b9e",
+ "segments": [
+  {
+   "end": 0.64,
+   "start": 0,
+   "text": "Somewhere"
+  },
+  {
+   "end": 0.96,
+   "start": 0.64,
+   "text": "out"
+  },
+  {
+   "end": 1.44,
+   "start": 0.96,
+   "text": "there"
+  },
+  {
+   "end": 2.08,
+   "start": 1.84,
+   "text": "we"
+  },
+  {
+   "end": 2.24,
+   "start": 2.08,
+   "text": "were"
+  },
+  {
+   "end": 2.8,
+   "start": 2.24,
+   "text": "trying"
+  },
+  {
+   "end": 2.96,
+   "start": 2.88,
+   "text": "to"
+  },
+  {
+   "end": 3.36,
+   "start": 2.96,
+   "text": "save"
+  },
+  {
+   "end": 3.6,
+   "start": 3.36,
+   "text": "each"
+  },
+  {
+   "end": 4.16,
+   "start": 3.6,
+   "text": "other"
+  }
+ ],
+ "text": "Somewhere out there, we were trying to save each other."
+}

@@ -1,0 +1,109 @@
+{
+ "duration": 10.959875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "aec03b11-6fdd-4cc1-be3a-87f27378cd1e",
+ "segments": [
+  {
+   "end": 0.64,
+   "start": 0,
+   "text": "Kabir"
+  },
+  {
+   "end": 1.6,
+   "start": 1.36,
+   "text": "it's"
+  },
+  {
+   "end": 2.08,
+   "start": 1.6,
+   "text": "me"
+  },
+  {
+   "end": 3.2,
+   "start": 2.48,
+   "text": "Meera"
+  },
+  {
+   "end": 4.16,
+   "start": 3.92,
+   "text": "You"
+  },
+  {
+   "end": 4.4,
+   "start": 4.16,
+   "text": "don't"
+  },
+  {
+   "end": 4.64,
+   "start": 4.4,
+   "text": "know"
+  },
+  {
+   "end": 4.8,
+   "start": 4.64,
+   "text": "me"
+  },
+  {
+   "end": 5.28,
+   "start": 4.8,
+   "text": "yet"
+  },
+  {
+   "end": 5.92,
+   "start": 5.76,
+   "text": "but"
+  },
+  {
+   "end": 6.16,
+   "start": 5.92,
+   "text": "you"
+  },
+  {
+   "end": 6.72,
+   "start": 6.16,
+   "text": "will"
+  },
+  {
+   "end": 8.16,
+   "start": 7.52,
+   "text": "Please"
+  },
+  {
+   "end": 8.8,
+   "start": 8.4,
+   "text": "don't"
+  },
+  {
+   "end": 8.96,
+   "start": 8.8,
+   "text": "get"
+  },
+  {
+   "end": 9.12,
+   "start": 8.96,
+   "text": "on"
+  },
+  {
+   "end": 9.2,
+   "start": 9.12,
+   "text": "the"
+  },
+  {
+   "end": 9.2,
+   "start": 9.2,
+   "text": "6"
+  },
+  {
+   "end": 10,
+   "start": 9.2,
+   "text": "40"
+  },
+  {
+   "end": 10.56,
+   "start": 10,
+   "text": "train"
+  }
+ ],
+ "text": "Kabir, it's me, Meera. You don't know me yet, but you will. Please, don't get on the 6:40 train."
+}

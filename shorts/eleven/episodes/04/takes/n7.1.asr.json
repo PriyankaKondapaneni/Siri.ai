@@ -1,0 +1,69 @@
+{
+ "duration": 6.4551875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "f4e9c38a-1d51-41ac-b756-f2d951093e9d",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0.08,
+   "text": "That's"
+  },
+  {
+   "end": 0.64,
+   "start": 0.48,
+   "text": "what"
+  },
+  {
+   "end": 1.12,
+   "start": 0.64,
+   "text": "scared"
+  },
+  {
+   "end": 1.52,
+   "start": 1.2,
+   "text": "me"
+  },
+  {
+   "end": 2.4,
+   "start": 2.08,
+   "text": "Because"
+  },
+  {
+   "end": 2.64,
+   "start": 2.48,
+   "text": "in"
+  },
+  {
+   "end": 3.28,
+   "start": 2.64,
+   "text": "seven"
+  },
+  {
+   "end": 3.92,
+   "start": 3.28,
+   "text": "days"
+  },
+  {
+   "end": 4.56,
+   "start": 4.32,
+   "text": "he"
+  },
+  {
+   "end": 5.12,
+   "start": 4.64,
+   "text": "doesn't"
+  },
+  {
+   "end": 5.44,
+   "start": 5.2,
+   "text": "make"
+  },
+  {
+   "end": 6,
+   "start": 5.52,
+   "text": "it"
+  }
+ ],
+ "text": "That's what scared me. Because in seven days, he doesn't make it."
+}

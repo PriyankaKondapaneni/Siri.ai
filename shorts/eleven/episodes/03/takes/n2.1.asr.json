@@ -1,0 +1,49 @@
+{
+ "duration": 4.2725,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "e0163a4c-de39-48ee-89c5-93257e5ae7ea",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "6"
+  },
+  {
+   "end": 0.88,
+   "start": 0.48,
+   "text": "30"
+  },
+  {
+   "end": 1.76,
+   "start": 1.2,
+   "text": "platform"
+  },
+  {
+   "end": 2.24,
+   "start": 1.76,
+   "text": "4"
+  },
+  {
+   "end": 2.64,
+   "start": 2.48,
+   "text": "He"
+  },
+  {
+   "end": 2.8,
+   "start": 2.64,
+   "text": "was"
+  },
+  {
+   "end": 3.36,
+   "start": 2.88,
+   "text": "already"
+  },
+  {
+   "end": 3.92,
+   "start": 3.36,
+   "text": "there"
+  }
+ ],
+ "text": "6:30, platform 4. He was already there."
+}

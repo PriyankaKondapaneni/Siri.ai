@@ -1,0 +1,39 @@
+{
+ "duration": 3.5294375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "7d25a93d-b516-4010-b8ea-c9b2614b6294",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0.08,
+   "text": "The"
+  },
+  {
+   "end": 0.64,
+   "start": 0.16,
+   "text": "same"
+  },
+  {
+   "end": 1.36,
+   "start": 0.64,
+   "text": "bridge"
+  },
+  {
+   "end": 1.92,
+   "start": 1.84,
+   "text": "the"
+  },
+  {
+   "end": 2.56,
+   "start": 1.92,
+   "text": "same"
+  },
+  {
+   "end": 3.12,
+   "start": 2.56,
+   "text": "minute"
+  }
+ ],
+ "text": "The same bridge, the same minute."
+}

@@ -1,0 +1,39 @@
+{
+ "duration": 2.7864375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "1d3f353a-119d-4dc9-a4e3-d7d2db66ab3a",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "Then"
+  },
+  {
+   "end": 0.72,
+   "start": 0.48,
+   "text": "he"
+  },
+  {
+   "end": 1.2,
+   "start": 0.72,
+   "text": "played"
+  },
+  {
+   "end": 1.28,
+   "start": 1.2,
+   "text": "the"
+  },
+  {
+   "end": 1.92,
+   "start": 1.28,
+   "text": "newest"
+  },
+  {
+   "end": 2.4,
+   "start": 1.92,
+   "text": "one"
+  }
+ ],
+ "text": "Then he played the newest one."
+}

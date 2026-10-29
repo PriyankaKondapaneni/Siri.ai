@@ -117,13 +117,17 @@
           by -= bh + 30;
         }
         // the notification banner sliding down
-        if (o.banner != null && t > o.banner && t < o.banner + 1.6) {
-          const k = t - o.banner, slide = k < 0.3 ? PP.ease.out(k / 0.3) : k > 1.3 ? 1 - PP.ease.in((k - 1.3) / 0.3) : 1;
+        const hold = o.bannerHold ?? 1.0;
+        if (o.banner != null && t > o.banner && t < o.banner + hold + 0.6) {
+          const k = t - o.banner, slide = k < 0.3 ? PP.ease.out(k / 0.3) : k > hold + 0.3 ? 1 - PP.ease.in((k - hold - 0.3) / 0.3) : 1;
           PP.with(ctx, () => {
             ctx.translate(0, -180 + slide * 210);
-            roundRect(ctx, 34, 40, W - 68, 130, 30); ctx.fillStyle = 'rgba(40,48,70,0.96)'; ctx.fill();
-            ctx.fillStyle = '#f2f5ff'; ctx.font = '600 30px Inter'; ctx.fillText('Unknown', 70, 94);
-            ctx.fillStyle = 'rgba(210,220,245,0.85)'; ctx.font = '500 26px Inter'; ctx.fillText('Voice message · 11:11 PM', 70, 134);
+            const lines = o.bannerText ? wrap((ctx.font = '500 26px Inter', ctx), o.bannerText, W - 140) : ['Voice message · 11:11 PM'];
+            const bh = 90 + lines.length * 36;
+            roundRect(ctx, 34, 40, W - 68, bh, 30); ctx.fillStyle = 'rgba(40,48,70,0.96)'; ctx.fill();
+            ctx.fillStyle = o.bannerTitle ? '#ff8a80' : '#f2f5ff'; ctx.font = '600 30px Inter'; ctx.fillText(o.bannerTitle || 'Unknown', 70, 94);
+            ctx.fillStyle = 'rgba(210,220,245,0.9)'; ctx.font = '500 26px Inter';
+            lines.forEach((ln, i) => ctx.fillText(ln, 70, 134 + i * 36));
           });
         }
         // glass sheen

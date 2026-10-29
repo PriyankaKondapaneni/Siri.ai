@@ -1,0 +1,94 @@
+{
+ "episode": 3,
+ "title": "The 6:40 Train",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "text": "You knew. Didn't you?",
+   "take": "k3",
+   "from": 0
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quiet, focused] He told me not to let him get on the train. So I didn't sleep."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quick, tense] Six-thirty. Platform four. He was already there.",
+   "show": "6:30. Platform four. He was already there."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[surprised, smiling] Mira? What are you doing here?"
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[nervous, a little embarrassed] I didn't have a plan. So I spilled my coffee... all over him."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[laughing, a little annoyed] Okay. That's twice now. Are you doing this on purpose?"
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[soft] The doors closed. The train left without him. I didn't let go of his hand."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low] An hour later, every phone on the street buzzed at once."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[shaken, quiet] The six-forty train... never made it to the next station.",
+   "show": "The 6:40 train… never made it to the next station."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[quiet, staring at her] You knew. Didn't you?"
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[hesitant] I couldn't tell him. Not yet."
+  },
+  {
+   "id": "n8",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[uneasy] That night, at eleven eleven... it wasn't my phone that lit up.",
+   "show": "That night, at 11:11… it wasn't my phone that lit up."
+  },
+  {
+   "id": "k4",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[barely a whisper, confused] Mira... why is your voice on my phone?"
+  }
+ ]
+}

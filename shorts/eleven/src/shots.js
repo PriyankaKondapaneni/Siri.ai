@@ -60,7 +60,7 @@
       const fy = o.y ?? 850;
       PP.with(ctx, () => {
         if (o.focus) { ctx.translate(540, fy); ctx.scale(o.focus, o.focus); ctx.translate(-540, -fy - (o.focusY ?? 0)); }
-        PP.phone(ctx, 540 + hx, fy + hy + (o.rise ?? 0), sc, { t, rot: (o.rot ?? -0.02) + hr, glow: 1, urgent: o.urgent, banner: o.banner, msgs });
+        PP.phone(ctx, 540 + hx, fy + hy + (o.rise ?? 0), sc, { t, rot: (o.rot ?? -0.02) + hr, glow: 1, urgent: o.urgent, banner: o.banner, bannerTitle: o.bannerTitle, bannerText: o.bannerText, bannerHold: o.bannerHold, clock: o.clock, header: o.header, msgs });
       });
       F.phone = true;
     }
