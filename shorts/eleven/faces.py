@@ -1,8 +1,8 @@
 """Find each cut-out's eyes (the big dark irises inside the face) and its skin tone, for code-drawn blinks and
 mouths. Writes assets/art/v2/faces.json and a review sheet: python faces.py <review.jpg>"""
 import sys, json, numpy as np, cv2
-NAMES = 'M1 M2 M3 M4 M5 M6 M7 K2 K3 K4 S1'.split()
-out, tiles = {}, []
+NAMES = sys.argv[2:] or 'M1 M2 M3 M4 M5 M6 M7 K2 K3 K4 S1'.split()
+out, tiles = (json.load(open('assets/art/v2/faces.json')) if len(sys.argv) > 2 else {}), []
 for n in NAMES:
     im = cv2.imread(f'assets/art/v2/cut/{n}.png', cv2.IMREAD_UNCHANGED)
     bgr = im[..., :3]; H, W = bgr.shape[:2]
