@@ -11,7 +11,9 @@ h, w = bgr.shape[:2]
 lab = cv2.cvtColor(cv2.medianBlur(bgr, 5), cv2.COLOR_BGR2LAB).astype(np.float32)
 border = np.concatenate([lab[:10].reshape(-1, 3), lab[-10:].reshape(-1, 3), lab[:, :10].reshape(-1, 3), lab[:, -10:].reshape(-1, 3)])
 # the backdrop drifts a little across the frame: use the colour of the nearest border region, smoothly
-bgc = np.median(border, 0)
+# only neutral, light border pixels count as backdrop (close-ups have the subject touching the edges)
+neutral = border[(np.abs(border[:, 1] - 128) < 7) & (np.abs(border[:, 2] - 128) < 9) & (border[:, 0] > 140)]
+bgc = np.median(neutral if len(neutral) > 200 else border, 0)
 d = np.linalg.norm(lab - bgc, axis=2)
 cand = (d < tol).astype(np.uint8)
 n, lbl = cv2.connectedComponents(cand, connectivity=4)

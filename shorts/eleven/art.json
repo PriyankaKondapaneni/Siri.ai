@@ -1,0 +1,108 @@
+{
+ "model": "gpt-image-2",
+ "style": "Match the reference images exactly: the same hand-drawn colored-pencil and gouache illustration style, the same paper grain, the same faces. Beautiful, detailed, cinematic, moody lighting. No text, no watermark.",
+ "images": {
+  "M2": {
+   "refs": [
+    "M1"
+   ],
+   "transparent": false,
+   "prompt": "Mira, the same young woman as the reference (same face, long dark-brown wavy hair, amber eyes, coral flower hair clip), now in a soft cream sleep top, sitting up in bed at night holding her phone in both hands, her face lit blue-white by the phone screen, curious and uneasy. Waist-up, three-quarter view, on a plain flat light grey background like the reference."
+  },
+  "M3": {
+   "refs": [
+    "M1"
+   ],
+   "prompt": "Mira, the same young woman as the reference (same face, long dark-brown wavy hair, warm amber eyes, coral flower hair clip), in the cornflower-blue dress and red knit scarf, standing at a caf\u00e9 counter in the morning, startled, her coffee cup tipping and splashing coffee, mouth open in surprise. Waist-up, three-quarter view, on a plain flat light grey background like the reference."
+  },
+  "M4": {
+   "refs": [
+    "M1"
+   ],
+   "prompt": "Mira, the same young woman as the reference (same face, long dark-brown wavy hair, warm amber eyes, coral flower hair clip), in the cornflower-blue dress and red knit scarf, seated on a train, tense and uneasy, eyes glancing sideways toward someone off-frame, hands clasped tightly in her lap. Waist-up, three-quarter view, on a plain flat light grey background like the reference."
+  },
+  "M5": {
+   "refs": [
+    "M1"
+   ],
+   "prompt": "Mira, the same young woman as the reference (same face, long dark-brown wavy hair, warm amber eyes, coral flower hair clip), in the cornflower-blue dress and red knit scarf, at a street curb at dusk, frightened, flinching back, her hair and scarf whipped by a car speeding past, warm orange streetlight on one side of her face. Waist-up, on a plain flat light grey background like the reference."
+  },
+  "M6": {
+   "refs": [
+    "M1"
+   ],
+   "prompt": "Mira, the same young woman as the reference (same face, long dark-brown wavy hair, warm amber eyes, coral flower hair clip). Close-up portrait of her face and shoulders, breathless and stunned, lips parted, looking up at someone just above the camera, eyes glistening, red scarf at her neck. on a plain flat light grey background like the reference."
+  },
+  "M7": {
+   "refs": [
+    "M2"
+   ],
+   "prompt": "The same young woman as the reference in the same cream sleep top. Close-up of her face at night, a single tear rolling down her cheek, lit by the blue glow of a phone held just below the frame, heartbroken. on a plain flat light grey background like the reference."
+  },
+  "K2": {
+   "refs": [
+    "K1"
+   ],
+   "prompt": "Kabir, the same young man as the reference (same face, tousled dark hair with a fringe, sharp jaw, dark eyes, charcoal wool coat over a black turtleneck, vintage leather-strap watch), mid-action, lunging forward and reaching out with his right arm to grab and pull someone back by the arm, urgent and protective expression, coat flaring, watch visible on his wrist. Waist-up, on a plain flat light grey background like the reference."
+  },
+  "K3": {
+   "refs": [
+    "K1"
+   ],
+   "prompt": "Kabir, the same young man as the reference (same face, tousled dark hair with a fringe, sharp jaw, dark eyes, charcoal wool coat over a black turtleneck, vintage leather-strap watch). Close-up portrait of his face, gentle concern, slightly breathless, looking down at someone just below the camera, warm streetlight on one side of his face. on a plain flat light grey background like the reference."
+  },
+  "K4": {
+   "refs": [
+    "K1"
+   ],
+   "prompt": "Kabir, the same young man as the reference (same face, tousled dark hair with a fringe, sharp jaw, dark eyes, charcoal wool coat over a black turtleneck, vintage leather-strap watch). Close-up portrait of his face with a puzzled, polite half-smile, one eyebrow slightly raised, as if meeting a stranger. on a plain flat light grey background like the reference."
+  },
+  "K5": {
+   "refs": [
+    "K1"
+   ],
+   "prompt": "Close-up of the same young man's wrist from the reference: the charcoal coat sleeve, black turtleneck cuff, and a vintage leather-strap watch with a cream face and simple thin hands. The watch shows exactly eleven eleven: the short hour hand points just past the 11, and the long minute hand points just past the 2. Moody light. On a plain flat light grey background like the reference."
+  },
+  "S1": {
+   "refs": [
+    "K1"
+   ],
+   "prompt": "A new character in exactly the same illustration style as the reference: a tall, thin, pale man in his forties in a long black coat with the collar turned up and a dark flat cap whose brim shadows his eyes, an unsettling faint smile, seated on a train, cold greenish fluorescent light. Waist-up. on a plain flat light grey background like the reference."
+  },
+  "B1": {
+   "refs": [
+    "M2"
+   ],
+   "size": "1024x1536",
+   "prompt": "A background with no people, in exactly the same illustration style as the reference: a cosy small bedroom at night, a rumpled bed with soft blankets, a rain-streaked window with blurred city lights, a bedside digital clock glowing 11:11, deep blue shadows and a little warm lamp light."
+  },
+  "B2": {
+   "refs": [
+    "M1"
+   ],
+   "size": "1024x1536",
+   "prompt": "A background with no people, in exactly the same illustration style as the reference: a warm, cosy caf\u00e9 counter in the morning, sunlight through the window, steam from an espresso machine, pastries, a round wall clock showing 8:02."
+  },
+  "B3": {
+   "refs": [
+    "B1"
+   ],
+   "size": "1024x1536",
+   "prompt": "A completely empty background with absolutely no people, in exactly the same illustration style as the reference: inside a subway train carriage at night, two rows of empty seats facing each other, cold greenish fluorescent ceiling lights, dark windows reflecting the empty interior, a little ominous."
+  },
+  "B4": {
+   "refs": [
+    "K1"
+   ],
+   "size": "1024x1536",
+   "prompt": "A background with no people, in exactly the same illustration style as the reference: a city street crosswalk at dusk seen from the curb, a red traffic light glowing, a green 5th St street sign, wet asphalt reflecting orange streetlights and headlights, tense cinematic mood."
+  },
+  "B5": {
+   "refs": [
+    "M2"
+   ],
+   "size": "1024x1536",
+   "prompt": "A close-up still life with no people, in exactly the same illustration style as the reference: a smartphone lying on rumpled bed sheets at night, its screen glowing, lighting the sheets blue; the screen shows a blank glowing panel with no text."
+  }
+ }
+}
