@@ -10,8 +10,11 @@
     };
     const end = T.duration;
     const c = {
+      // the cold open (a flash-forward to his last message), then the story
+      hook: 0,
+      hookEnd: L('n1').s - 0.14,
       // scenes
-      bedroom: 0,
+      bedroom: L('n1').s - 0.14,
       note1: L('k1').s - 0.55,
       cafe: L('n3').s - 0.05,
       train: L('k2').s - 0.55,
@@ -27,7 +30,7 @@
       last: L('k6').s - 0.55,
       seven: L('k7').s - 0.1,
       endCard: end + 0.02,
-      total: end + 1.9,
+      total: end + 1.8,
     };
     Object.assign(c, {
       clock1111: W('n1', '11:11'),
@@ -63,7 +66,11 @@
     });
     // sound effects: [time, clip, gain dB, pan]
     c.sfx = [
-      [0.0, 'rainStart', -14, 0],
+      [0.0, 'buzz', -7, 0.1],
+      [0.05, 'heartbeat', -9, 0],
+      [0.9, 'whooshBy', -12, 0.4],
+      [c.hookEnd - 0.03, 'boomSoft', -7, 0],
+      [c.hookEnd, 'rainStart', -14, 0],
       [c.clock1111 - 0.05, 'clockFlip', -10, 0.3],
       ...c.buzz.map((t) => [t, 'buzz', -6, 0.15]),
       ...c.buzz.map((t) => [t + 0.4, 'blip', -16, 0.15]),
@@ -95,7 +102,8 @@
     ];
     // ambiences: [from, to, kind, gain dB]
     c.beds = [
-      [0, c.cafe, 'rain', -27],
+      [0, c.hookEnd, 'room', -34],
+      [c.hookEnd, c.cafe, 'rain', -27],
       [c.cafe, c.train, 'cafe', -28],
       [c.train, c.note3 + 0.3, 'train', -22],
       [c.note3, c.street, 'room', -34],
@@ -105,7 +113,8 @@
     ];
     // the score's sections (the composer reads these)
     c.music = [
-      { at: 0, kind: 'mystery' },
+      { at: 0, kind: 'hook' },
+      { at: c.hookEnd, kind: 'mystery' },
       { at: c.note1, kind: 'pulse' },
       { at: c.train, kind: 'train' },
       { at: c.note3, kind: 'build' },

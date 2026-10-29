@@ -10,22 +10,32 @@ const dir = `eleven/episodes/${ep}`;
 const S = JSON.parse(fs.readFileSync(`${dir}/script.json`, 'utf8'));
 const picks = JSON.parse(fs.readFileSync(`${dir}/picks.json`, 'utf8'));
 const RATE = 44100;
+// the delivery tempo: every take is time-stretched (pitch kept) by this factor before assembly
+const TEMPO = Number(process.env.TEMPO || 1.08);
+import { execFileSync } from 'node:child_process';
+function stretched(src) {
+  if (TEMPO === 1) return src;
+  const out = src.replace(/\.wav$/, `.t${Math.round(TEMPO * 100)}.wav`);
+  if (!fs.existsSync(out)) execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', src, '-af', `atempo=${TEMPO}`, '-ar', String(RATE), '-ac', '1', '-c:a', 'pcm_s16le', out]);
+  return out;
+}
 
 // pauses inside a line longer than this are cut from the middle; a few lines keep more air on purpose
-const CAP = { default: 0.42, n1: 0.7, n3: 0.6, n6: 0.6, k6: 0.75, k7: 0.8, k5: 0.55, n9: 0.6 };
+const CAP = { default: 0.26, n1: 0.42, n3: 0.36, n6: 0.36, k6: 0.5, k7: 0.55, k5: 0.4, n9: 0.36 };
 // the gap before each line (seconds); voice notes get room for the buzz
-const GAP = { default: 0.26, note: 0.6, after_note: 0.3, n1: 0.3, k4: 0.25, n6: 0.5, n7: 0.4, n9: 0.6, k7: 0.55, n8: 0.35 };
+const GAP = { default: 0.12, note: 0.42, after_note: 0.16, h0: 0.25, n1: 0.55, k4: 0.12, n6: 0.3, n7: 0.22, n9: 0.36, k7: 0.36, n8: 0.18 };
 
 const out = { mira: [], live: [], note: [] };
 const words = [], lines = [];
-let t = GAP.n1;
+let t = GAP[S.lines[0].id] ?? GAP.default;
 const total = [];
 let prevKind = null;
 S.lines.forEach((l, li) => {
-  const k = picks[l.id];
-  const { channels } = readWav(`${dir}/takes/${l.id}.${k}.wav`);
+  // a line can reuse part of another line's take (the cold-open hook): take = source line, from = first word index
+  const src = l.take || l.id, k = picks[src];
+  const { channels } = readWav(stretched(`${dir}/takes/${src}.${k}.wav`));
   const x = channels[0];
-  const segs = JSON.parse(fs.readFileSync(`${dir}/takes/${l.id}.${k}.asr.json`, 'utf8')).segments;
+  const segs = JSON.parse(fs.readFileSync(`${dir}/takes/${src}.${k}.asr.json`, 'utf8')).segments.slice(l.from || 0).map((g) => ({ ...g, start: g.start / TEMPO, end: g.end / TEMPO }));
   // gap before this line
   if (li > 0) t += l.kind === 'note' ? GAP.note : GAP[l.id] ?? (prevKind === 'note' ? GAP.after_note : GAP.default);
   // the clip: from just before the first word to just after the last, pauses tightened

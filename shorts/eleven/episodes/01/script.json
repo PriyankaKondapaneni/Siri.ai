@@ -8,11 +8,20 @@
  },
  "lines": [
   {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "take": "k6",
+   "from": 6,
+   "text": "Don't fall in love with me.",
+   "show": "Don't fall in love with me."
+  },
+  {
    "id": "n1",
    "who": "mira",
    "kind": "narr",
    "text": "[quiet, intimate, as if telling you a secret] Every night at eleven eleven... a stranger sends me a voice message.",
-   "show": "Every night at 11:11… a stranger sends me a voice message."
+   "show": "Every night at 11:11\u2026 a stranger sends me a voice message."
   },
   {
    "id": "n2",
@@ -32,7 +41,7 @@
    "who": "mira",
    "kind": "narr",
    "text": "[matter-of-fact] I deleted it. [quieter, a little shaken] At eight-oh-two... I spilled my coffee.",
-   "show": "I deleted it. At 8:02… I spilled my coffee."
+   "show": "I deleted it. At 8:02\u2026 I spilled my coffee."
   },
   {
    "id": "k2",
@@ -58,7 +67,7 @@
    "who": "mira",
    "kind": "narr",
    "text": "[her breath quickening] Six-forty. A car ran the red light... and someone pulled me back.",
-   "show": "6:40. A car ran the red light… and someone pulled me back."
+   "show": "6:40. A car ran the red light\u2026 and someone pulled me back."
   },
   {
    "id": "n6",

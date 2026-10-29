@@ -8,7 +8,7 @@
   const out = canvas.getContext('2d');
   PP.totalFrames = Math.round(C.total * PP.FPS);
   const subs = PP.subtitleChunks(T);
-  const DISSOLVE = 0.55, FADE_IN = 1.0;
+  const DISSOLVE = 0.35, FADE_IN = 0.3;
 
   const bufA = PP.canvas(W, H), bufB = PP.canvas(W, H);
   const shotAt = (t) => { const i = PP.SHOTS.findIndex(([a, b]) => t >= a && t < b); return i < 0 ? PP.SHOTS.length - 1 : i; };

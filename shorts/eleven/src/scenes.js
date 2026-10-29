@@ -15,7 +15,7 @@
 
   // a character, lit by the scene: breathing, blinking, a soft shadow and a rim of the key light; `talk` lip-syncs
   function char(ctx, t, name, x, y, h, o = {}) {
-    let state = PP.blinking(t, name + (o.id || '')) && PP.FACES[name]?.eyes?.length ? 'b' : '';
+    let state = o.blink !== false && PP.blinking(t, name + (o.id || '')) && PP.FACES[name]?.eyes?.length ? 'b' : '';
     if (o.talk) { const fr = Math.round(t * 30), v = Math.max(ENV.live[fr] || 0, ENV.live[fr - 1] || 0); state += v > 0.45 ? 'm2' : v > 0.12 ? 'm1' : ''; }
     const breath = o.breath ?? Math.sin(t * 1.5 + name.length) * 0.005;
     PP.drawCut(ctx, name, x, y, h, { sticker: false, shadow: { a: 0.3, dx: 18, dy: 26 }, ...o, state, breath });
@@ -68,29 +68,55 @@
   const S = [];
   const shot = (s, e, look, fn, tr) => S.push([s, e, look, fn, tr]);
 
-  // ---------------------------------------------------------------- 1. Night. The clock. Mira.
-  const clockCut = C.clock1111 - 0.12;
-  shot(0, clockCut, 'night', (ctx, t, u) => {
-    bedroom(ctx, t, lerpCam(u, { x: 0.5, y: 0.5, z: 1.0 }, { x: 0.45, y: 0.53, z: 1.12 }), { clock: '11:10' });
-  }, 'fadeIn');
-  shot(clockCut, 3.1, 'night', (ctx, t, u) => {
-    const pulse = t > C.clock1111 ? Math.max(0, 1 - (t - C.clock1111) / 1.4) : 0;
-    bedroom(ctx, t, lerpCam(u, { x: 0.31, y: 0.553, z: 4.2 }, { x: 0.31, y: 0.553, z: 4.6 }, E.out), { clock: t < C.clock1111 ? '11:10' : '11:11', pulse });
+  // ---------------------------------------------------------------- 0. Cold open: a flash-forward, four quick shots
+  const h0 = line('h0'), hk = [0, 0.6, 1.12, 1.62, C.hookEnd];
+  shot(hk[0], hk[1], 'danger', (ctx, t, u) => {
+    phoneShot(ctx, t, 'B5', [msg('h0', { urgent: true })], { u, urgent: true, seed: 29, focus: 1.6 + u * 0.15, focusY: 260 });
   });
-  shot(3.1, 6.6, 'night', (ctx, t, u) => {
+  shot(hk[1], hk[2], 'dusk', (ctx, t, u) => {
+    PP.drawBg(ctx, 'B4', { x: 0.4, y: 0.4, z: 1.6 }, { variant: 'blur' });
+    char(ctx, t, 'K3', 540, 900, 4300 * (1 + u * 0.06), { id: 'hk', blink: false, anchor: [0.52, 0.405], light: { x: 0.1, y: 0.35, r: 0.7, color: 'rgba(255,190,120,0.35)' }, rim: { color: 'rgba(255,180,110,1)', dx: -9, a: 0.85 } });
+  });
+  shot(hk[2], hk[3], 'dusk', (ctx, t, u) => {
+    const [hx, hy, hr] = PP.handheld(t, 12, 31);
+    PP.with(ctx, () => {
+      ctx.translate(hx, hy); ctx.rotate(hr);
+      const bg = PP.drawBgDepth(ctx, 'B4', { ...lerpCam(u, { x: 0.55, y: 0.55, z: 1.1 }, { x: 0.55, y: 0.56, z: 1.3 }, E.in), z0: 1 }, { horizon: 0.52, k: 1.5 });
+      const [vx, vy] = bg.map(0.594, 0.52);
+      PP.headlights(ctx, t, hk[2] - 0.2, hk[3] + 0.05, vx, vy);
+      char(ctx, t, 'M5', 470, 2000, 1800, { id: 'hk', sway: { amp: 16, t, from: 0, to: 0.45, speed: 6 }, light: { x: 0.1, y: 0.4, r: 0.9, color: 'rgba(255,235,200,0.5)' }, rim: { color: 'rgba(255,240,210,1)', dx: -7, a: 0.9 } });
+    });
+    PP.speedLines(ctx, t, 600, 1000, 0.8);
+  });
+  shot(hk[3], hk[4], 'night', (ctx, t, u) => {
+    PP.drawBg(ctx, 'B1', { x: 0.5, y: 0.45, z: 1.5 }, { variant: 'blur' });
+    char(ctx, t, 'M7', 540, 860, 3000 * (1 + u * 0.05), { id: 'hk', anchor: [0.58, 0.41], tint: 'rgba(20,30,90,0.08)', light: { x: 0.85, y: 0.8, r: 0.8, color: 'rgba(200,225,255,0.22)' }, rim: { color: 'rgba(150,200,255,0.9)', dx: 6, a: 0.7 } });
+  });
+
+  // ---------------------------------------------------------------- 1. Night. The clock. Mira.
+  const clockCut = C.clock1111 - 0.12, miraCut = word('n1', 'stranger') - 0.1, titleCut = line('n2').s - 0.1;
+  shot(C.hookEnd, clockCut, 'night', (ctx, t, u) => {
+    bedroom(ctx, t, lerpCam(u, { x: 0.5, y: 0.5, z: 1.04 }, { x: 0.45, y: 0.53, z: 1.16 }), { clock: '11:10' });
+  });
+  shot(clockCut, miraCut, 'night', (ctx, t, u) => {
+    const pulse = t > C.clock1111 ? Math.max(0, 1 - (t - C.clock1111) / 1.4) : 0;
+    bedroom(ctx, t, lerpCam(u, { x: 0.31, y: 0.553, z: 4.2 }, { x: 0.31, y: 0.553, z: 4.7 }, E.out), { clock: t < C.clock1111 ? '11:10' : '11:11', pulse });
+  });
+  shot(miraCut, titleCut, 'night', (ctx, t, u) => {
     bedroom(ctx, t, { x: 0.55, y: 0.5, z: 1.25 }, { variant: 'blur' });
-    const h = 1900 * (1 + u * 0.05);
+    const h = 1900 * (1 + u * 0.07);
     char(ctx, t, 'M2', 600, 2080, h, { tint: 'rgba(30,40,110,0.08)', light: { x: 0.62, y: 0.3, r: 0.55, color: 'rgba(200,225,255,0.22)' }, rim: { color: 'rgba(255,200,140,0.9)', dx: -5, dy: -2, a: 0.7 } });
   });
   // the title: the window in the rain, the name of the show
-  shot(6.6, C.note1, 'night', (ctx, t, u) => {
-    bedroom(ctx, t, lerpCam(u, { x: 0.72, y: 0.22, z: 1.9 }, { x: 0.7, y: 0.24, z: 2.05 }, linear), { variant: 'soft' });
+  shot(titleCut, C.note1, 'night', (ctx, t, u) => {
+    const t0 = titleCut;
+    bedroom(ctx, t, lerpCam(u, { x: 0.72, y: 0.22, z: 1.9 }, { x: 0.7, y: 0.24, z: 2.1 }, linear), { variant: 'soft' });
     PP.with(ctx, () => { ctx.fillStyle = 'rgba(3,5,14,0.45)'; ctx.fillRect(0, 0, W, H); });
-    const a = Math.min(PP.clamp((t - 7.0) / 0.9), PP.clamp((C.note1 - 0.1 - t) / 0.4));
+    const a = Math.min(PP.clamp((t - t0 - 0.15) / 0.6), PP.clamp((C.note1 - 0.05 - t) / 0.3));
     PP.spaced(ctx, '11:11', 540, 820, { font: '200 230px Inter', spacing: 14, glow: 'rgba(130,200,255,0.75)', blur: 40, alpha: a });
-    PP.spaced(ctx, 'EPISODE 1', 540, 1010, { font: '500 30px Inter', spacing: 14, alpha: a * PP.clamp((t - 7.6) / 0.6), color: 'rgba(225,232,255,0.85)' });
-    PP.spaced(ctx, 'THE VOICE FROM MY PHONE', 540, 1062, { font: '300 34px Inter', spacing: 8, alpha: a * PP.clamp((t - 7.8) / 0.6), color: 'rgba(225,232,255,0.85)' });
-  }, 'dissolve');
+    PP.spaced(ctx, 'EPISODE 1', 540, 1010, { font: '500 30px Inter', spacing: 14, alpha: a * PP.clamp((t - t0 - 0.5) / 0.4), color: 'rgba(225,232,255,0.85)' });
+    PP.spaced(ctx, 'THE VOICE FROM MY PHONE', 540, 1062, { font: '300 34px Inter', spacing: 8, alpha: a * PP.clamp((t - t0 - 0.65) / 0.4), color: 'rgba(225,232,255,0.85)' });
+  });
 
   // ---------------------------------------------------------------- 2. The first voice note
   const wearCut = word('k1', 'wear') - 0.05;
@@ -219,7 +245,7 @@
   // ---------------------------------------------------------------- 7. Him
   shot(C.eyes, C.watch, 'dusk', (ctx, t, u) => {
     PP.drawBg(ctx, 'B4', { x: 0.4, y: 0.4, z: 1.5 }, { variant: 'blur' });
-    char(ctx, t, 'K3', 540, 860, 2300 * (1 + u * 0.06), { anchor: [0.52, 0.42], light: { x: 0.1, y: 0.35, r: 0.7, color: 'rgba(255,190,120,0.35)' }, rim: { color: 'rgba(255,180,110,1)', dx: -7, dy: -2, a: 0.85 } });
+    char(ctx, t, 'K3', 540, 860, 2300 * (1 + u * 0.06), { blink: false, anchor: [0.52, 0.42], light: { x: 0.1, y: 0.35, r: 0.7, color: 'rgba(255,190,120,0.35)' }, rim: { color: 'rgba(255,180,110,1)', dx: -7, dy: -2, a: 0.85 } });
   });
   shot(C.watch, C.okay, 'dusk', (ctx, t, u) => {
     PP.drawBg(ctx, 'B4', { x: 0.6, y: 0.5, z: 1.7 }, { variant: 'blur' });
