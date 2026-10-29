@@ -56,6 +56,10 @@
       dontFall: W('k6', "don't"),
       sevenDays: W('k7', 'seven'),
       makeIt: W('k7', 'it', 0, 'e'),
+      cafeCut: W('n3', 'at') - 0.08,
+      trainGuy: W('k2', 'train'),
+      tearCut: W('k6', 'sorry') - 0.12,
+      noteWords: Object.fromEntries(['k1', 'k2', 'k3', 'k6', 'k7'].map((id) => [id, T.words.filter((w) => w.line === id)])),
     });
     // sound effects: [time, clip, gain dB, pan]
     c.sfx = [
