@@ -1,4 +1,4 @@
-# 11:11: Episodes 3–8 (drafts for approval)
+# 11:11: Episodes 3–8 (approved by the user)
 
 **The arc:** the seven-day countdown runs through Episode 7, then Episode 8 opens the next arc.
 
