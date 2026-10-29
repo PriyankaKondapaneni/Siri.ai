@@ -148,6 +148,33 @@
    "style": "Draw a background in exactly the same style as the soft illustrated room backgrounds in the reference image: soft flat pastel colours with gentle texture, simple clean shapes, thin soft outlines, cosy hand-drawn webtoon background art, slightly muted. No people, no characters, no text, no logos.",
    "prompt": "Top-down close view of rumpled bed sheets and a pillow at night, soft blue tones, gentle folds, empty.",
    "quality": "medium"
+  },
+  "M8": {
+   "refs": [
+    "STYLE",
+    "CM4"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image; use the character, outfit and pose from the SECOND image, keeping the face exactly as it is. Waist-up. On a plain flat light grey background. No text, no watermark.",
+   "prompt": "Mira, the same girl as the second image: same face, long dark wavy hair, warm amber-brown eyes, small coral flower hair clip, cornflower-blue dress and chunky red scarf. Standing and waiting, hopeful and a little nervous, both hands holding the strap of a small shoulder bag, looking to our right as if she has just spotted someone. IMPORTANT: the background must be completely plain flat light grey, with no street, no buildings and no scenery at all."
+  },
+  "M9": {
+   "refs": [
+    "STYLE",
+    "CM4"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image; use the character, outfit and pose from the SECOND image, keeping the face exactly as it is. Waist-up. On a plain flat light grey background. No text, no watermark.",
+   "prompt": "Mira, the same girl as the second image: same face, long dark wavy hair, warm amber-brown eyes, small coral flower hair clip, cornflower-blue dress and chunky red scarf. Sitting at a small café table in the evening, chin resting on one hand, smiling shyly with a soft blush, eyes looking to our right at someone across the table. A coffee cup on the table in front of her."
+  },
+  "K6": {
+   "refs": [
+    "STYLE",
+    "CK4"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image; use the character, outfit and pose from the SECOND image, keeping the face exactly as it is. Waist-up. On a plain flat light grey background. No text, no watermark.",
+   "prompt": "Kabir, the same young man as the second image: same face, messy black hair, dark eyes, charcoal coat over a black turtleneck, a leather-strap wristwatch. Sitting at a small café table in the evening, laughing warmly with his eyes crinkled, one hand around a coffee cup, looking to our left at someone across the table."
   }
  }
 }

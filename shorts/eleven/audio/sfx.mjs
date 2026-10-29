@@ -6,7 +6,7 @@ import { RATE, stereo, buf, put, putStereo, noise, osc, svf, biquad, mul, adsr, 
 
 const ep = process.argv[2] || '01';
 const T = JSON.parse(fs.readFileSync(`episodes/${ep}/timing.json`, 'utf8'));
-const C = createRequire(import.meta.url)('../src/cues.js')(T);
+const C = createRequire(import.meta.url)(fs.existsSync(`episodes/${ep}/cues.js`) ? `../episodes/${ep}/cues.js` : '../src/cues.js')(T);
 const n = (s) => Math.ceil(s * RATE);
 
 // ---------------------------------------------------------------- clips (mono unless noted)

@@ -175,7 +175,14 @@ The page is `index.html`, plus `src/*.js`: core, paper, ink, svgpath, kit, type,
   - blinks and mouths are painted over the art in code.
 - `src/phone.js`: a realistic phone UI. The voice-note waveform follows the real voice, and the transcript types out word by word.
 
-**For a new episode:** keep the engine. Write `episodes/NN/` (script, timing, envelope) and a new shot list, and point `index.html` (or a copy, `index-NN.html`, rendered with `PAGE=index-NN.html`) at that episode's timing, cues and scenes. Don't rewrite the engine for each episode.
+**For a new episode:** keep the engine and copy Episode 2's layout (Episode 1 predates it and lives in `src/cues.js` and `src/scenes.js`):
+- `episodes/NN/script.json`, then `timing.json`/`timing.js` from assemble and `envelope.js` from the audio tools.
+- `episodes/NN/cues.js`: the episode's cue sheet. The audio tools pick it up automatically. Sections and effects are optional; use only what the episode needs.
+- `episodes/NN/scenes.js`: the shot list, built with `const K = PP.shotKit(C, T)` from `src/shots.js`. The kit holds `char`, `bedroom`, `phoneShot`, `foreground`, `clockHands`, `onCut`, `lerpCam`, `word`, `line`, `msg` and `shot`. Finish with `PP.SHOTS = K.S`.
+- `index-NN.html`: a copy of `index-02.html` with the episode number changed. Render with `PAGE=index-NN.html node render.mjs …`.
+- Register new cut-outs in `CUTS` in `src/art.js`.
+
+Don't rewrite the engine for each episode.
 
 ### Direction rules
 - **The hook (0–2.5 s):** a cold-open flash-forward of 3–4 quick shots (about 0.5 s each), under the `h0` line. Use the most charged images from the episode: the voice note glowing red, an eye close-up, danger, a tear. Start instantly, then smash-cut with a low hit into the story's first shot.

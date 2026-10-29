@@ -531,5 +531,44 @@
    "text_tokens": 0
   },
   "total_tokens": 2021
+ },
+ "v2:K6": {
+  "input_tokens": 2711,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 278
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4083
+ },
+ "v2:M9": {
+  "input_tokens": 2723,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 290
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4095
+ },
+ "v2:M8": {
+  "input_tokens": 2734,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 301
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4106
  }
 }
