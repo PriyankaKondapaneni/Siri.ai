@@ -1,0 +1,54 @@
+{
+ "duration": 4.8298125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "33d0f112-8068-4492-83d0-9fdaafb801f4",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.88,
+   "start": 0.24,
+   "text": "remembered"
+  },
+  {
+   "end": 0.96,
+   "start": 0.88,
+   "text": "the"
+  },
+  {
+   "end": 1.68,
+   "start": 0.96,
+   "text": "car"
+  },
+  {
+   "end": 2.24,
+   "start": 2.08,
+   "text": "but"
+  },
+  {
+   "end": 2.72,
+   "start": 2.24,
+   "text": "not"
+  },
+  {
+   "end": 2.8,
+   "start": 2.72,
+   "text": "a"
+  },
+  {
+   "end": 3.52,
+   "start": 2.8,
+   "text": "single"
+  },
+  {
+   "end": 4.4,
+   "start": 3.52,
+   "text": "message"
+  }
+ ],
+ "text": "He remembered the car, but not a single message."
+}

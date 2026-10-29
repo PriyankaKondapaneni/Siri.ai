@@ -1,0 +1,79 @@
+{
+ "duration": 6.501625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "7d60669f-7f40-44db-a4e2-55ae8d67f5c1",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "We"
+  },
+  {
+   "end": 0.72,
+   "start": 0.24,
+   "text": "talked"
+  },
+  {
+   "end": 1.12,
+   "start": 0.72,
+   "text": "until"
+  },
+  {
+   "end": 1.28,
+   "start": 1.12,
+   "text": "they"
+  },
+  {
+   "end": 1.84,
+   "start": 1.28,
+   "text": "closed"
+  },
+  {
+   "end": 1.92,
+   "start": 1.84,
+   "text": "the"
+  },
+  {
+   "end": 2.72,
+   "start": 1.92,
+   "text": "cafe"
+  },
+  {
+   "end": 3.36,
+   "start": 3.12,
+   "text": "He"
+  },
+  {
+   "end": 4,
+   "start": 3.36,
+   "text": "laughed"
+  },
+  {
+   "end": 4.24,
+   "start": 4,
+   "text": "like"
+  },
+  {
+   "end": 4.4,
+   "start": 4.24,
+   "text": "he'd"
+  },
+  {
+   "end": 4.8,
+   "start": 4.4,
+   "text": "known"
+  },
+  {
+   "end": 4.96,
+   "start": 4.8,
+   "text": "me"
+  },
+  {
+   "end": 6.08,
+   "start": 4.96,
+   "text": "forever"
+  }
+ ],
+ "text": "We talked until they closed the cafe. He laughed like he'd known me forever."
+}

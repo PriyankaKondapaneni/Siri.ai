@@ -1,0 +1,54 @@
+{
+ "duration": 4.9226875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "d4a757c5-3494-499c-aa0b-d219fa01d60b",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0,
+   "text": "That"
+  },
+  {
+   "end": 0.96,
+   "start": 0.32,
+   "text": "night"
+  },
+  {
+   "end": 1.28,
+   "start": 1.2,
+   "text": "at"
+  },
+  {
+   "end": 1.84,
+   "start": 1.28,
+   "text": "11"
+  },
+  {
+   "end": 2.56,
+   "start": 1.84,
+   "text": "11"
+  },
+  {
+   "end": 3.28,
+   "start": 3.04,
+   "text": "my"
+  },
+  {
+   "end": 3.92,
+   "start": 3.28,
+   "text": "phone"
+  },
+  {
+   "end": 4.08,
+   "start": 3.92,
+   "text": "lit"
+  },
+  {
+   "end": 4.48,
+   "start": 4.08,
+   "text": "up"
+  }
+ ],
+ "text": "That night, at 11:11, my phone lit up."
+}

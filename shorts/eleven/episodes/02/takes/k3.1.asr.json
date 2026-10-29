@@ -1,0 +1,64 @@
+{
+ "duration": 5.2013125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "642d8c6a-473a-4f9d-b66c-e18cfc55ea58",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "It"
+  },
+  {
+   "end": 0.72,
+   "start": 0.16,
+   "text": "stopped"
+  },
+  {
+   "end": 0.8,
+   "start": 0.72,
+   "text": "the"
+  },
+  {
+   "end": 1.12,
+   "start": 0.8,
+   "text": "night"
+  },
+  {
+   "end": 1.28,
+   "start": 1.12,
+   "text": "my"
+  },
+  {
+   "end": 1.68,
+   "start": 1.28,
+   "text": "brother"
+  },
+  {
+   "end": 2.24,
+   "start": 1.68,
+   "text": "died"
+  },
+  {
+   "end": 3.84,
+   "start": 3.68,
+   "text": "I"
+  },
+  {
+   "end": 4.16,
+   "start": 3.84,
+   "text": "never"
+  },
+  {
+   "end": 4.64,
+   "start": 4.16,
+   "text": "fixed"
+  },
+  {
+   "end": 4.8,
+   "start": 4.64,
+   "text": "it"
+  }
+ ],
+ "text": "It stopped the night my brother died. I never fixed it."
+}

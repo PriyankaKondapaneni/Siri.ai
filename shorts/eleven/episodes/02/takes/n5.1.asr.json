@@ -1,0 +1,59 @@
+{
+ "duration": 5.897875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "e31d8efa-2d57-4391-b4da-6c6aed85c7be",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.08,
+   "text": "Then"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "I"
+  },
+  {
+   "end": 1.36,
+   "start": 0.8,
+   "text": "noticed"
+  },
+  {
+   "end": 1.52,
+   "start": 1.36,
+   "text": "his"
+  },
+  {
+   "end": 2.24,
+   "start": 1.52,
+   "text": "watch"
+  },
+  {
+   "end": 3.12,
+   "start": 2.56,
+   "text": "still"
+  },
+  {
+   "end": 3.76,
+   "start": 3.12,
+   "text": "stopped"
+  },
+  {
+   "end": 4,
+   "start": 3.84,
+   "text": "at"
+  },
+  {
+   "end": 4.64,
+   "start": 4,
+   "text": "11"
+  },
+  {
+   "end": 5.52,
+   "start": 4.72,
+   "text": "11"
+  }
+ ],
+ "text": "Then I noticed his watch, still stopped at 11:11."
+}

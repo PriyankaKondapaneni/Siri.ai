@@ -1,0 +1,69 @@
+{
+ "duration": 4.87625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "ccf77235-fa64-4cd5-a629-23cdc68c1613",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "I'm"
+  },
+  {
+   "end": 0.72,
+   "start": 0.24,
+   "text": "Kabir"
+  },
+  {
+   "end": 0.88,
+   "start": 0.72,
+   "text": "by"
+  },
+  {
+   "end": 0.96,
+   "start": 0.88,
+   "text": "the"
+  },
+  {
+   "end": 1.36,
+   "start": 0.96,
+   "text": "way"
+  },
+  {
+   "end": 2.8,
+   "start": 2.24,
+   "text": "Coffee"
+  },
+  {
+   "end": 3.68,
+   "start": 3.52,
+   "text": "You"
+  },
+  {
+   "end": 3.92,
+   "start": 3.68,
+   "text": "look"
+  },
+  {
+   "end": 4.16,
+   "start": 3.92,
+   "text": "like"
+  },
+  {
+   "end": 4.24,
+   "start": 4.16,
+   "text": "you"
+  },
+  {
+   "end": 4.48,
+   "start": 4.24,
+   "text": "need"
+  },
+  {
+   "end": 4.8,
+   "start": 4.48,
+   "text": "one"
+  }
+ ],
+ "text": "I'm Kabir, by the way. Coffee? You look like you need one."
+}

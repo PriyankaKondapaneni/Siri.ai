@@ -1,0 +1,44 @@
+{
+ "duration": 2.3684375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "770b8d25-bd4d-4fb2-8035-98896ed7ad18",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0,
+   "text": "Don't"
+  },
+  {
+   "end": 0.48,
+   "start": 0.32,
+   "text": "let"
+  },
+  {
+   "end": 0.72,
+   "start": 0.48,
+   "text": "him"
+  },
+  {
+   "end": 0.88,
+   "start": 0.72,
+   "text": "get"
+  },
+  {
+   "end": 1.12,
+   "start": 0.88,
+   "text": "on"
+  },
+  {
+   "end": 1.2,
+   "start": 1.12,
+   "text": "the"
+  },
+  {
+   "end": 1.68,
+   "start": 1.2,
+   "text": "train"
+  }
+ ],
+ "text": "Don't let him get on the train?"
+}

@@ -1,0 +1,94 @@
+{
+ "duration": 7.0124375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "9f808fa4-2841-4603-91e4-61310736ed9c",
+ "segments": [
+  {
+   "end": 0.64,
+   "start": 0,
+   "text": "Six"
+  },
+  {
+   "end": 1.04,
+   "start": 0.64,
+   "text": "days"
+  },
+  {
+   "end": 1.6,
+   "start": 1.04,
+   "text": "left"
+  },
+  {
+   "end": 2.32,
+   "start": 2.08,
+   "text": "He"
+  },
+  {
+   "end": 2.64,
+   "start": 2.32,
+   "text": "told"
+  },
+  {
+   "end": 2.8,
+   "start": 2.64,
+   "text": "me"
+  },
+  {
+   "end": 3.2,
+   "start": 2.8,
+   "text": "not"
+  },
+  {
+   "end": 3.36,
+   "start": 3.28,
+   "text": "to"
+  },
+  {
+   "end": 3.68,
+   "start": 3.36,
+   "text": "fall"
+  },
+  {
+   "end": 3.84,
+   "start": 3.68,
+   "text": "for"
+  },
+  {
+   "end": 4.24,
+   "start": 3.84,
+   "text": "him"
+  },
+  {
+   "end": 4.96,
+   "start": 4.64,
+   "text": "so"
+  },
+  {
+   "end": 5.2,
+   "start": 4.96,
+   "text": "I"
+  },
+  {
+   "end": 5.52,
+   "start": 5.2,
+   "text": "went"
+  },
+  {
+   "end": 5.92,
+   "start": 5.52,
+   "text": "looking"
+  },
+  {
+   "end": 6.24,
+   "start": 5.92,
+   "text": "for"
+  },
+  {
+   "end": 6.56,
+   "start": 6.24,
+   "text": "him"
+  }
+ ],
+ "text": "Six days left. He told me not to fall for him, so I went looking for him."
+}

@@ -1,0 +1,74 @@
+{
+ "duration": 5.24775,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "1970b62b-e4d6-435e-a387-d65f73b709b4",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "If"
+  },
+  {
+   "end": 0.4,
+   "start": 0.24,
+   "text": "I"
+  },
+  {
+   "end": 0.64,
+   "start": 0.4,
+   "text": "get"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "on"
+  },
+  {
+   "end": 1.04,
+   "start": 0.88,
+   "text": "that"
+  },
+  {
+   "end": 1.68,
+   "start": 1.04,
+   "text": "train"
+  },
+  {
+   "end": 2.96,
+   "start": 2.56,
+   "text": "you're"
+  },
+  {
+   "end": 3.12,
+   "start": 2.96,
+   "text": "the"
+  },
+  {
+   "end": 3.6,
+   "start": 3.12,
+   "text": "one"
+  },
+  {
+   "end": 3.76,
+   "start": 3.68,
+   "text": "who"
+  },
+  {
+   "end": 4.32,
+   "start": 3.76,
+   "text": "doesn't"
+  },
+  {
+   "end": 4.56,
+   "start": 4.32,
+   "text": "come"
+  },
+  {
+   "end": 5.12,
+   "start": 4.56,
+   "text": "home"
+  }
+ ],
+ "text": "If I get on that train, you're the one who doesn't come home."
+}

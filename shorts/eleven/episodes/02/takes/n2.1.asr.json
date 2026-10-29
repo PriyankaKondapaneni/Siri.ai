@@ -1,0 +1,49 @@
+{
+ "duration": 5.1084375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "d894d3f9-4d06-44c6-a7c5-3e8d8d2e8f39",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "Same"
+  },
+  {
+   "end": 1.12,
+   "start": 0.48,
+   "text": "corner"
+  },
+  {
+   "end": 1.92,
+   "start": 1.44,
+   "text": "6"
+  },
+  {
+   "end": 2.56,
+   "start": 1.92,
+   "text": "40"
+  },
+  {
+   "end": 3.44,
+   "start": 3.12,
+   "text": "and"
+  },
+  {
+   "end": 3.76,
+   "start": 3.44,
+   "text": "there"
+  },
+  {
+   "end": 4,
+   "start": 3.76,
+   "text": "he"
+  },
+  {
+   "end": 4.72,
+   "start": 4,
+   "text": "was"
+  }
+ ],
+ "text": "Same corner, 6:40, and there he was."
+}
