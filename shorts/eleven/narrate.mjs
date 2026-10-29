@@ -22,6 +22,7 @@ fs.mkdirSync(`${dir}/takes`, { recursive: true });
 const before = await credit();
 const pick = {};
 for (const l of S.lines) {
+  if (l.take) continue; // reuses another line's take (the cold-open hook): nothing to record
   const takes = [];
   for (let k = ONLY ? FIRST : 1; k <= N; k++) {
     const wav = `${dir}/takes/${l.id}.${k}.wav`, aj = `${dir}/takes/${l.id}.${k}.asr.json`;
