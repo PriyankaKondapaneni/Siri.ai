@@ -1,0 +1,94 @@
+{
+ "episode": 2,
+ "title": "Don't Let Me Get On The Train",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "text": "Don't let me get on the train.",
+   "take": "k4",
+   "from": 8
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quiet, determined] Six days left. He told me not to fall for him... so I went looking for him."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[softly] Same corner. Six-forty. And there he was.",
+   "show": "Same corner. 6:40. And there he was."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[surprised, a warm smile] You again. The girl who almost got hit by a car."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quietly] He remembered the car. But not a single message."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[a little shy] I'm Kabir, by the way. Coffee? You look like you need one."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[warm, smiling] We talked until they closed the café. He laughed like he'd known me forever."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[softer] Then I noticed his watch. Still stopped at eleven eleven.",
+   "show": "Then I noticed his watch. Still stopped at 11:11."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[quiet, a little sad] It stopped the night my brother died. I never fixed it."
+  },
+  {
+   "id": "n6",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, uneasy] That night, at eleven eleven... my phone lit up.",
+   "show": "That night, at 11:11… my phone lit up."
+  },
+  {
+   "id": "k4",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[tense, low] Mira. You found me, didn't you? Listen. Tomorrow... don't let me get on the train."
+  },
+  {
+   "id": "n7",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[confused, quiet] Don't let him get on the train?"
+  },
+  {
+   "id": "k5",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[almost a whisper] If I get on that train... you're the one who doesn't come home."
+  }
+ ]
+}
