@@ -130,8 +130,8 @@
     await Promise.all(fams.map((f) => document.fonts.load(f.includes('px') ? f : `40px ${f}`)));
     await PP.loadArt();
     // warm up: stickers and graded backgrounds, so frame timing is even
-    for (const n of ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'K1', 'K2', 'K3', 'K4', 'K5', 'S1']) PP.cutSticker(n);
-    for (const [b, v] of [['B1', 'night'], ['B1', 'dark'], ['B5', 'dark'], ['B3', 'soft'], ['B3', 'blur'], ['B4', 'dark'], ['B4', 'grey']]) PP.bgVariant(b, v);
+    for (const n of PP.CUTS) { PP.cutSticker(n); if (PP.FACES[n]?.eyes?.length) PP.cutSticker(n, { state: 'b' }); }
+    for (const [b, v] of [['B1', 'dark'], ['B5', 'dark'], ['B3', 'blur'], ['B4', 'dark'], ['B4', 'grey']]) PP.bgVariant(b, v);
     return true;
   })();
 })(typeof window !== 'undefined' ? window : globalThis);

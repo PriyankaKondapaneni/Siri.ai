@@ -310,5 +310,226 @@
    "text_tokens": 0
   },
   "total_tokens": 4053
+ },
+ "v2:M1": {
+  "input_tokens": 2695,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 262
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4067
+ },
+ "v2:M3": {
+  "input_tokens": 2709,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 276
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4081
+ },
+ "v2:M2": {
+  "input_tokens": 2709,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 276
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4081
+ },
+ "v2:M4": {
+  "input_tokens": 2711,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 278
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4083
+ },
+ "v2:M5": {
+  "input_tokens": 2709,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 276
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4081
+ },
+ "v2:M6": {
+  "input_tokens": 2707,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 274
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4079
+ },
+ "v2:K2": {
+  "input_tokens": 2695,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 262
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4067
+ },
+ "v2:M7": {
+  "input_tokens": 2707,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 274
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4079
+ },
+ "v2:K3": {
+  "input_tokens": 2689,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 256
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4061
+ },
+ "v2:K4": {
+  "input_tokens": 2692,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 259
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4064
+ },
+ "v2:K5": {
+  "input_tokens": 2687,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 254
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4059
+ },
+ "v2:S1": {
+  "input_tokens": 1143,
+  "input_tokens_details": {
+   "image_tokens": 897,
+   "text_tokens": 246
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 2515
+ },
+ "v2:B1": {
+  "input_tokens": 692,
+  "input_tokens_details": {
+   "image_tokens": 560,
+   "text_tokens": 132
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 2064
+ },
+ "v2:B4": {
+  "input_tokens": 669,
+  "input_tokens_details": {
+   "image_tokens": 560,
+   "text_tokens": 109
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 2041
+ },
+ "v2:B3": {
+  "input_tokens": 662,
+  "input_tokens_details": {
+   "image_tokens": 560,
+   "text_tokens": 102
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 2034
+ },
+ "v2:B2": {
+  "input_tokens": 678,
+  "input_tokens_details": {
+   "image_tokens": 560,
+   "text_tokens": 118
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 2050
+ },
+ "v2:B5": {
+  "input_tokens": 649,
+  "input_tokens_details": {
+   "image_tokens": 560,
+   "text_tokens": 89
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 2021
  }
 }

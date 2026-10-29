@@ -1,6 +1,6 @@
 """Cut a character out of a plain backdrop: colour key from the border, GrabCut to settle the boundary, a guided
 filter for soft hair edges, and colour decontamination so no grey halo is left.
-    python cutout.py in.png out.png [--tol 16]
+    python cutout.py in.png out.png [--tol 16] [--flat]
 """
 import sys, numpy as np, cv2
 
@@ -19,6 +19,14 @@ cand = (d < tol).astype(np.uint8)
 n, lbl = cv2.connectedComponents(cand, connectivity=4)
 edge_labels = set(np.unique(np.concatenate([lbl[0], lbl[-1], lbl[:, 0], lbl[:, -1]]))) - {0}
 bg = np.isin(lbl, list(edge_labels))
+flat = '--flat' in sys.argv
+if flat:
+    # line art: backdrop pockets enclosed by outlines (gaps between hair strands, under arms) are backdrop too
+    # strictly the backdrop's own neutral grey, so pale skin and cream cloth never count
+    pocket = ((d < 7) & (np.abs(lab[..., 1] - 128) < 3) & (np.abs(lab[..., 2] - 128) < 3)).astype(np.uint8)
+    n3, l3, st3, _ = cv2.connectedComponentsWithStats(pocket, connectivity=4)
+    for i in range(1, n3):
+        if st3[i, cv2.CC_STAT_AREA] > h * w * 0.0008: bg[l3 == i] = True
 # trimap for GrabCut
 k = np.ones((7, 7), np.uint8)
 sure_bg = cv2.erode(bg.astype(np.uint8), k, iterations=2).astype(bool)
@@ -28,8 +36,10 @@ mask[bg] = cv2.GC_PR_BGD
 mask[sure_bg] = cv2.GC_BGD
 mask[sure_fg] = cv2.GC_FGD
 bgdm, fgdm = np.zeros((1, 65), np.float64), np.zeros((1, 65), np.float64)
-cv2.grabCut(bgr, mask, None, bgdm, fgdm, 4, cv2.GC_INIT_WITH_MASK)
-hard = np.isin(mask, [cv2.GC_FGD, cv2.GC_PR_FGD]).astype(np.float32)
+if flat: hard = (~bg).astype(np.float32)
+else:
+    cv2.grabCut(bgr, mask, None, bgdm, fgdm, 4, cv2.GC_INIT_WITH_MASK)
+    hard = np.isin(mask, [cv2.GC_FGD, cv2.GC_PR_FGD]).astype(np.float32)
 # drop specks: keep components larger than 0.2% of the frame
 n2, l2, stats, _ = cv2.connectedComponentsWithStats((hard > 0.5).astype(np.uint8), connectivity=8)
 keep = np.zeros_like(hard)
