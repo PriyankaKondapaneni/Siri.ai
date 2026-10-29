@@ -135,6 +135,24 @@
    "quality": "medium",
    "style": "A polished hand-made digital chibi illustration, as painted in Clip Studio Paint by a talented professional illustrator with their own recognisable style (Pixiv / artbook quality). Chibi proportions about 2.5 heads tall. Colored lineart: warm dark-brown lines (not pure black), thicker on the outer silhouette and thinner inside, with tapered brush strokes and a few lively overshoots. Crisp cel shading with two shadow tones plus a warm rim light, hair drawn as stylised clumps with sharp glossy highlight bands and a few loose strands, eyes with layered gradient irises, a dark upper lash line and several reflections. A limited, harmonious, slightly muted palette; subtle brush texture and fine grain. Charming, expressive pose with personality and slight asymmetry. Full body on a plain flat light grey background. Not 3D, not generic, not airbrushed. No text, no watermark.",
    "prompt": "The character is Kabir from the reference: a very handsome young man, messy black hair falling over his brow, dark intense eyes, a long charcoal wool coat over a black turtleneck, a vintage leather-strap wristwatch. A calm, mysterious half-smile, one hand in his coat pocket and the other lifted, glancing at his wristwatch."
+  },
+  "CM3": {
+   "refs": [
+    "STYLE",
+    "M1"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines, and stick-figure arms drawn as single black lines with small round circle hands. Simple, charming, clearly drawn by hand by a webtoon artist. Do not copy the character in the first image; use the character design from the SECOND image. Waist-up, on a plain white background. No text, no watermark.",
+   "prompt": "Mira: a very pretty young woman with long dark-brown wavy hair, warm amber-brown eyes with long lashes, a small coral flower hair clip, a cornflower-blue dress and a chunky red scarf. Soft blush on her cheeks. A sweet, slightly nervous smile, holding a phone up with one round hand."
+  },
+  "CK3": {
+   "refs": [
+    "STYLE",
+    "K1"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines, and stick-figure arms drawn as single black lines with small round circle hands. Simple, charming, clearly drawn by hand by a webtoon artist. Do not copy the character in the first image; use the character design from the SECOND image. Waist-up, on a plain white background. No text, no watermark.",
+   "prompt": "Kabir: a very handsome young man with messy black hair falling over his brow, dark intense eyes under strong brows, a dark charcoal coat over a black turtleneck, a small wristwatch drawn on his stick wrist. A calm, mysterious half-smile."
   }
  }
 }
