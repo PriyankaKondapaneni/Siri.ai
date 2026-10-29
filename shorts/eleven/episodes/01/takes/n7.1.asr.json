@@ -1,52 +1,52 @@
 {
- "duration": 4.3189375,
+ "duration": 4.4118125,
  "language": "English",
  "language_code": "en",
- "request_id": "eae08610-0734-4716-8d22-0d5a718eccfe",
+ "request_id": "535a6758-3835-494c-9f2e-557957fd9254",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0,
+   "end": 0.24,
+   "start": 0.08,
    "text": "It"
   },
   {
-   "end": 0.48,
-   "start": 0.16,
+   "end": 0.64,
+   "start": 0.24,
    "text": "was"
   },
   {
-   "end": 0.64,
-   "start": 0.48,
+   "end": 0.96,
+   "start": 0.64,
    "text": "his"
   },
   {
-   "end": 1.44,
-   "start": 0.64,
+   "end": 1.68,
+   "start": 0.96,
    "text": "voice"
   },
   {
-   "end": 2.16,
-   "start": 2.08,
+   "end": 2.48,
+   "start": 2.4,
    "text": "The"
   },
   {
-   "end": 2.48,
-   "start": 2.24,
-   "text": "one"
-  },
-  {
-   "end": 2.8,
+   "end": 2.88,
    "start": 2.48,
-   "text": "from"
+   "text": "one"
   },
   {
    "end": 3.04,
    "start": 2.88,
+   "text": "from"
+  },
+  {
+   "end": 3.2,
+   "start": 3.04,
    "text": "my"
   },
   {
-   "end": 3.84,
-   "start": 3.04,
+   "end": 4,
+   "start": 3.2,
    "text": "phone"
   }
  ],

@@ -1,8 +1,8 @@
 {
- "duration": 5.2941875,
+ "duration": 5.6656875,
  "language": "English",
  "language_code": "en",
- "request_id": "18c1f778-1cf5-461f-9bf9-3e21d4a0f832",
+ "request_id": "de8723f5-43e7-484f-ba8e-680da42c1a6f",
  "segments": [
   {
    "end": 0.16,
@@ -10,48 +10,48 @@
    "text": "I"
   },
   {
-   "end": 0.64,
+   "end": 0.72,
    "start": 0.16,
    "text": "deleted"
   },
   {
-   "end": 0.88,
-   "start": 0.64,
+   "end": 1.12,
+   "start": 0.72,
    "text": "it"
   },
   {
-   "end": 2.24,
-   "start": 2.08,
+   "end": 2,
+   "start": 1.84,
    "text": "At"
   },
   {
-   "end": 2.4,
-   "start": 2.24,
+   "end": 2.32,
+   "start": 2.16,
    "text": "8"
   },
   {
    "end": 3.12,
-   "start": 2.4,
+   "start": 2.32,
    "text": "02"
   },
   {
-   "end": 3.6,
+   "end": 3.76,
    "start": 3.6,
    "text": "I"
   },
   {
-   "end": 4.16,
-   "start": 3.68,
+   "end": 4.24,
+   "start": 3.76,
    "text": "spilled"
   },
   {
-   "end": 4.32,
-   "start": 4.16,
+   "end": 4.48,
+   "start": 4.24,
    "text": "my"
   },
   {
-   "end": 4.96,
-   "start": 4.32,
+   "end": 5.2,
+   "start": 4.48,
    "text": "coffee"
   }
  ],

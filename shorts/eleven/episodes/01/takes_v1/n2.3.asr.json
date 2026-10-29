@@ -1,0 +1,39 @@
+{
+ "duration": 3.1115,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "cea876a3-26e3-4daf-bf24-a8b29c7d6b05",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "And"
+  },
+  {
+   "end": 1.04,
+   "start": 0.32,
+   "text": "everything"
+  },
+  {
+   "end": 1.12,
+   "start": 1.04,
+   "text": "he"
+  },
+  {
+   "end": 1.6,
+   "start": 1.12,
+   "text": "says"
+  },
+  {
+   "end": 2.08,
+   "start": 1.6,
+   "text": "comes"
+  },
+  {
+   "end": 2.56,
+   "start": 2.08,
+   "text": "true"
+  }
+ ],
+ "text": "And everything he says comes true."
+}

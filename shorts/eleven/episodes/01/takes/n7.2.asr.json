@@ -1,54 +1,54 @@
 {
- "duration": 3.7616875,
+ "duration": 4.45825,
  "language": "English",
  "language_code": "en",
- "request_id": "7910edd8-dabe-43f4-8763-0eed73dac6cf",
+ "request_id": "6ffb7b64-a6a9-472a-870d-d47caf4c538f",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0,
+   "end": 0.24,
+   "start": 0.08,
    "text": "It"
   },
   {
-   "end": 0.4,
-   "start": 0.16,
+   "end": 0.48,
+   "start": 0.24,
    "text": "was"
   },
   {
-   "end": 0.64,
-   "start": 0.4,
+   "end": 0.72,
+   "start": 0.48,
    "text": "his"
   },
   {
-   "end": 1.36,
-   "start": 0.64,
+   "end": 1.6,
+   "start": 0.72,
    "text": "voice"
   },
   {
-   "end": 2.08,
-   "start": 1.92,
+   "end": 2.4,
+   "start": 2.32,
    "text": "The"
   },
   {
-   "end": 2.4,
-   "start": 2.08,
+   "end": 2.72,
+   "start": 2.4,
    "text": "one"
   },
   {
-   "end": 2.64,
-   "start": 2.4,
+   "end": 2.96,
+   "start": 2.72,
    "text": "from"
   },
   {
-   "end": 2.8,
-   "start": 2.64,
+   "end": 3.2,
+   "start": 2.96,
    "text": "my"
   },
   {
-   "end": 3.6,
-   "start": 2.8,
+   "end": 4,
+   "start": 3.2,
    "text": "phone"
   }
  ],
- "text": "It was his voice. The one from my phone."
+ "text": "It was his voice! The one from my phone!"
 }

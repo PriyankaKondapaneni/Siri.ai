@@ -1,67 +1,67 @@
 {
- "duration": 5.24775,
+ "duration": 6.3623125,
  "language": "English",
  "language_code": "en",
- "request_id": "a3a5801b-15bf-4ad0-95e2-76b721e9f9d2",
+ "request_id": "1b1da1cb-e58e-4501-aa7a-5e42a5494133",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0,
+   "end": 0.24,
+   "start": 0.08,
    "text": "If"
   },
   {
    "end": 0.4,
-   "start": 0.16,
+   "start": 0.24,
    "text": "you've"
   },
   {
-   "end": 0.64,
+   "end": 0.72,
    "start": 0.4,
    "text": "met"
   },
   {
-   "end": 0.96,
-   "start": 0.64,
+   "end": 1.12,
+   "start": 0.72,
    "text": "me"
   },
   {
-   "end": 1.84,
-   "start": 1.76,
+   "end": 2.48,
+   "start": 2.32,
    "text": "I'm"
   },
   {
-   "end": 2.48,
-   "start": 1.84,
+   "end": 3.12,
+   "start": 2.48,
    "text": "sorry"
   },
   {
-   "end": 3.52,
-   "start": 3.28,
+   "end": 4.96,
+   "start": 4.64,
    "text": "Don't"
   },
   {
-   "end": 3.84,
-   "start": 3.52,
+   "end": 5.28,
+   "start": 4.96,
    "text": "fall"
   },
   {
-   "end": 4,
-   "start": 3.84,
+   "end": 5.52,
+   "start": 5.28,
    "text": "in"
   },
   {
-   "end": 4.16,
-   "start": 4,
+   "end": 5.76,
+   "start": 5.52,
    "text": "love"
   },
   {
-   "end": 4.32,
-   "start": 4.16,
+   "end": 5.92,
+   "start": 5.76,
    "text": "with"
   },
   {
-   "end": 4.64,
-   "start": 4.32,
+   "end": 6.32,
+   "start": 5.92,
    "text": "me"
   }
  ],

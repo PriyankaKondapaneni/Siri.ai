@@ -1,67 +1,67 @@
 {
- "duration": 6.501625,
+ "duration": 8.1734375,
  "language": "English",
  "language_code": "en",
- "request_id": "9af5fddb-4dfb-478d-92a2-7f5485bbb541",
+ "request_id": "bc3ee5d3-bc9b-4178-ad63-89e51417612c",
  "segments": [
   {
-   "end": 0.48,
+   "end": 0.56,
    "start": 0,
    "text": "Mira"
   },
   {
-   "end": 1.6,
-   "start": 0.88,
+   "end": 2,
+   "start": 1.28,
    "text": "tomorrow"
   },
   {
-   "end": 2.08,
-   "start": 1.6,
+   "end": 2.8,
+   "start": 2.4,
    "text": "6"
   },
   {
-   "end": 2.64,
-   "start": 2.08,
+   "end": 3.36,
+   "start": 2.8,
    "text": "40"
   },
   {
-   "end": 2.72,
-   "start": 2.72,
+   "end": 4.08,
+   "start": 3.68,
    "text": "5th"
   },
   {
-   "end": 3.52,
-   "start": 3.04,
+   "end": 4.48,
+   "start": 4.08,
    "text": "Street"
   },
   {
-   "end": 4.24,
-   "start": 3.84,
+   "end": 5.52,
+   "start": 4.48,
    "text": "Stay"
   },
   {
-   "end": 4.48,
-   "start": 4.24,
+   "end": 5.68,
+   "start": 5.52,
    "text": "on"
   },
   {
-   "end": 4.48,
-   "start": 4.48,
+   "end": 5.76,
+   "start": 5.68,
    "text": "the"
   },
   {
-   "end": 4.96,
-   "start": 4.48,
+   "end": 6.24,
+   "start": 5.76,
    "text": "curb"
   },
   {
-   "end": 5.92,
-   "start": 5.36,
+   "end": 7.52,
+   "start": 6.96,
    "text": "Promise"
   },
   {
-   "end": 6.24,
-   "start": 5.92,
+   "end": 7.84,
+   "start": 7.52,
    "text": "me"
   }
  ],

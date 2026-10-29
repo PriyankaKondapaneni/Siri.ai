@@ -1,67 +1,67 @@
 {
- "duration": 5.897875,
+ "duration": 6.5945,
  "language": "English",
  "language_code": "en",
- "request_id": "6fd3540e-c59f-4d08-9528-290882857015",
+ "request_id": "e938aa6f-145d-4082-80d3-5f2d0e06e101",
  "segments": [
   {
-   "end": 0.4,
-   "start": 0,
+   "end": 0.48,
+   "start": 0.08,
    "text": "Every"
   },
   {
-   "end": 0.8,
+   "end": 1.12,
    "start": 0.48,
    "text": "night"
   },
   {
-   "end": 1.12,
-   "start": 0.96,
+   "end": 1.36,
+   "start": 1.2,
    "text": "at"
   },
   {
-   "end": 1.6,
-   "start": 1.44,
+   "end": 2,
+   "start": 1.36,
    "text": "11"
   },
   {
-   "end": 2.24,
-   "start": 1.92,
+   "end": 2,
+   "start": 2,
    "text": "11"
   },
   {
-   "end": 2.24,
-   "start": 2.24,
+   "end": 2.72,
+   "start": 2,
    "text": "a"
   },
   {
-   "end": 3.76,
-   "start": 2.96,
+   "end": 3.44,
+   "start": 3.44,
    "text": "stranger"
   },
   {
-   "end": 4.24,
-   "start": 3.76,
+   "end": 4.72,
+   "start": 4.32,
    "text": "sends"
   },
   {
-   "end": 4.4,
-   "start": 4.24,
+   "end": 4.88,
+   "start": 4.72,
    "text": "me"
   },
   {
-   "end": 4.48,
-   "start": 4.4,
+   "end": 4.96,
+   "start": 4.88,
    "text": "a"
   },
   {
-   "end": 4.88,
-   "start": 4.48,
+   "end": 5.52,
+   "start": 4.96,
    "text": "voice"
   },
   {
-   "end": 5.6,
-   "start": 4.88,
+   "end": 6.24,
+   "start": 5.52,
    "text": "message"
   }
  ],

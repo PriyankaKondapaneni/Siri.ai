@@ -1,92 +1,92 @@
 {
- "duration": 7.5233125,
+ "duration": 8.3591875,
  "language": "English",
  "language_code": "en",
- "request_id": "d0f16e2b-6acd-4ee0-8390-ba6beee31ecd",
+ "request_id": "bb4734a7-e8d6-4c66-b61a-b465fb0694ab",
  "segments": [
   {
    "end": 0.48,
-   "start": 0,
+   "start": 0.08,
    "text": "Hey"
   },
   {
-   "end": 1.04,
-   "start": 0.8,
+   "end": 1.28,
+   "start": 1.12,
    "text": "don't"
   },
   {
-   "end": 1.28,
-   "start": 1.04,
+   "end": 1.6,
+   "start": 1.28,
    "text": "freak"
   },
   {
-   "end": 1.68,
-   "start": 1.28,
+   "end": 2,
+   "start": 1.6,
    "text": "out"
   },
   {
-   "end": 2.64,
-   "start": 2.08,
+   "end": 3.2,
+   "start": 2.64,
    "text": "Tomorrow"
   },
   {
-   "end": 2.72,
-   "start": 2.64,
+   "end": 3.44,
+   "start": 3.28,
    "text": "at"
   },
   {
-   "end": 3.12,
-   "start": 2.72,
+   "end": 3.76,
+   "start": 3.44,
    "text": "8"
   },
   {
-   "end": 3.52,
-   "start": 3.12,
+   "end": 4.24,
+   "start": 3.76,
    "text": "02"
   },
   {
-   "end": 3.84,
-   "start": 3.6,
+   "end": 4.72,
+   "start": 4.56,
    "text": "you'll"
   },
   {
-   "end": 4.24,
-   "start": 3.84,
+   "end": 5.12,
+   "start": 4.72,
    "text": "spill"
   },
   {
-   "end": 4.4,
-   "start": 4.24,
+   "end": 5.28,
+   "start": 5.12,
    "text": "your"
   },
   {
-   "end": 5.04,
-   "start": 4.4,
+   "end": 5.84,
+   "start": 5.28,
    "text": "coffee"
   },
   {
-   "end": 5.84,
-   "start": 5.6,
+   "end": 6.72,
+   "start": 6.48,
    "text": "Wear"
   },
   {
-   "end": 5.92,
-   "start": 5.84,
+   "end": 6.88,
+   "start": 6.72,
    "text": "the"
   },
   {
-   "end": 6.24,
-   "start": 5.92,
+   "end": 7.2,
+   "start": 6.88,
    "text": "blue"
   },
   {
-   "end": 6.64,
-   "start": 6.24,
+   "end": 7.52,
+   "start": 7.2,
    "text": "dress"
   },
   {
-   "end": 7.2,
-   "start": 6.64,
+   "end": 8.16,
+   "start": 7.52,
    "text": "anyway"
   }
  ],

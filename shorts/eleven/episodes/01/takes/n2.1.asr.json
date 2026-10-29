@@ -1,37 +1,37 @@
 {
- "duration": 2.7864375,
+ "duration": 3.622375,
  "language": "English",
  "language_code": "en",
- "request_id": "a536b681-0c0a-4773-a916-97f00629ce47",
+ "request_id": "c578a624-b67a-4d35-b09b-e7449bfa4c42",
  "segments": [
   {
-   "end": 0.16,
+   "end": 0.32,
    "start": 0.08,
    "text": "And"
   },
   {
-   "end": 0.88,
-   "start": 0.24,
+   "end": 1.28,
+   "start": 0.4,
    "text": "everything"
   },
   {
-   "end": 0.96,
-   "start": 0.88,
+   "end": 1.36,
+   "start": 1.28,
    "text": "he"
   },
   {
-   "end": 1.44,
-   "start": 0.96,
+   "end": 2.08,
+   "start": 1.36,
    "text": "says"
   },
   {
-   "end": 1.84,
-   "start": 1.44,
+   "end": 2.56,
+   "start": 2.08,
    "text": "comes"
   },
   {
-   "end": 2.32,
-   "start": 1.84,
+   "end": 3.2,
+   "start": 2.56,
    "text": "true"
   }
  ],

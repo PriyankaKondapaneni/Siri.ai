@@ -27,7 +27,7 @@
       last: L('k6').s - 0.55,
       seven: L('k7').s - 0.1,
       endCard: end + 0.02,
-      total: end + 1.72,
+      total: end + 1.9,
     };
     Object.assign(c, {
       clock1111: W('n1', '11:11'),

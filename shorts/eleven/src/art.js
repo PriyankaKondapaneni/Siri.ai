@@ -59,6 +59,20 @@
       return c;
     });
   }
+  function silhouette(name, color) {
+    return PP.cached(`sil:${name}:${color}`, () => {
+      const im = PP.IMG[name], c = PP.canvas(im.width, im.height), cc = c.getContext('2d');
+      cc.drawImage(im, 0, 0); cc.globalCompositeOperation = 'source-in'; cc.fillStyle = color; cc.fillRect(0, 0, c.width, c.height);
+      return c;
+    });
+  }
+  function shadowOf(name) {
+    return PP.cached(`shd:${name}`, () => {
+      const im = PP.IMG[name], c = PP.canvas(im.width + 120, im.height + 120), cc = c.getContext('2d');
+      cc.filter = 'blur(26px) brightness(0)'; cc.drawImage(im, 60, 60);
+      return c;
+    });
+  }
   // a natural blink pattern: every 2.4-4.6 s, closed for ~0.1 s, sometimes a double blink
   PP.blinking = function (t, id) {
     let t0 = PP.rand('bl0', id) * 2;
@@ -102,7 +116,7 @@
     const im = PP.IMG[name];
     const s = h / im.height;
     const [ax, ay] = o.anchor || [0.5, 1];
-    const src = st ? st.canvas : im, pad = st ? st.pad : 0;
+    const src = st ? st.canvas : o.state ? faceImage(name, o.state) : im, pad = st ? st.pad : 0;
     let img = src;
     if (o.tint || o.light) {
       // lighting on the cut-out only: tint and a key light, applied source-atop on a scratch copy
@@ -130,6 +144,9 @@
       // breathing: a tiny vertical stretch from the bottom, so the shoulders and head rise and settle
       if (o.breath) { ctx.translate(0, (1 - ay) * im.height); ctx.scale(1, 1 + o.breath); ctx.translate(0, -(1 - ay) * im.height); }
       const ox = -pad - ax * im.width, oy = -pad - ay * im.height;
+      // integration without a sticker border: a soft cast shadow and a rim of the scene's light along one edge
+      if (o.shadow) { const sh = shadowOf(name); PP.with(ctx, () => { ctx.globalAlpha *= o.shadow.a ?? 0.35; ctx.drawImage(sh, ox - 60 + (o.shadow.dx ?? 20) / s, oy - 60 + (o.shadow.dy ?? 30) / s); }); }
+      if (o.rim) { const sl = silhouette(name, o.rim.color); PP.with(ctx, () => { ctx.globalAlpha *= o.rim.a ?? 0.8; ctx.drawImage(sl, ox + (o.rim.dx ?? 0) / s, oy + (o.rim.dy ?? 0) / s); }); }
       if (o.sway) {
         // hair and cloth in the wind: vertical strips displaced by a travelling wave, weighted away from the face
         const { amp, t, from = 0, to = 0.4, speed = 5 } = o.sway, sw = 6, W2 = img.width;
@@ -143,6 +160,9 @@
       } else ctx.drawImage(img, ox, oy);
     });
   };
+
+  // keep a camera centre where the image still covers the frame (no empty edges)
+  const coverClamp = (c, frame, size) => { const h = frame / 2 / size; return h >= 0.5 ? 0.5 : PP.clamp(c, h, 1 - h); };
 
   // a softened copy of a background (depth of field), and graded copies (night, cold, warm, desaturated)
   PP.bgVariant = (name, v) => PP.cached(`bgv:${name}:${v}`, () => {
@@ -165,10 +185,11 @@
       ctx.translate(PP.W / 2, PP.H / 2);
       if (cam.rot) ctx.rotate(cam.rot);
       ctx.scale(cover, cover);
-      const cx = PP.clamp(cam.x ?? 0.5, 0, 1) * im.width, cy = PP.clamp(cam.y ?? 0.5, 0, 1) * im.height;
+      const cx = coverClamp(cam.x ?? 0.5, PP.W, im.width * cover) * im.width, cy = coverClamp(cam.y ?? 0.5, PP.H, im.height * cover) * im.height;
       ctx.drawImage(im, -cx, -cy);
     });
-    return { s: cover, map: (ix, iy) => [PP.W / 2 + (ix * im.width - (cam.x ?? 0.5) * im.width) * cover, PP.H / 2 + (iy * im.height - (cam.y ?? 0.5) * im.height) * cover] };
+    const mx = coverClamp(cam.x ?? 0.5, PP.W, im.width * cover), my = coverClamp(cam.y ?? 0.5, PP.H, im.height * cover);
+    return { s: cover, map: (ix, iy) => [PP.W / 2 + (ix - mx) * im.width * cover, PP.H / 2 + (iy - my) * im.height * cover] };
   };
 
   /**
@@ -182,7 +203,8 @@
     const hz = o.horizon ?? 0.5, k = o.k ?? 1.2, z0 = cam.z0 ?? 1, N = 48;
     const depth = (v) => Math.abs(v - hz) / Math.max(hz, 1 - hz);
     const S = (v) => base * (cam.z + k * depth(v) * (cam.z - z0));
-    const cx = cam.x ?? 0.5, cy = cam.y ?? 0.5;
+    const s0 = base * cam.z;
+    const cx = coverClamp(cam.x ?? 0.5, PP.W, im.width * s0), cy = coverClamp(cam.y ?? 0.5, PP.H, im.height * s0);
     const Y = (v) => PP.H / 2 + (v - cy) * im.height * S(v);
     PP.with(ctx, () => {
       ctx.globalAlpha *= o.alpha ?? 1;

@@ -1,32 +1,32 @@
 {
- "duration": 3.9474375,
+ "duration": 3.2508125,
  "language": "English",
  "language_code": "en",
- "request_id": "30b785ac-730a-4095-b936-2bf7f0c43972",
+ "request_id": "41fa2444-cd99-4611-bbe5-ab6719f18f4e",
  "segments": [
   {
    "end": 0.32,
-   "start": 0.08,
+   "start": 0,
    "text": "That"
   },
   {
-   "end": 0.88,
+   "end": 0.72,
    "start": 0.32,
    "text": "night"
   },
   {
-   "end": 2.08,
-   "start": 1.44,
+   "end": 1.68,
+   "start": 1.12,
    "text": "one"
   },
   {
-   "end": 2.88,
-   "start": 2.24,
+   "end": 2.08,
+   "start": 1.68,
    "text": "last"
   },
   {
-   "end": 3.6,
-   "start": 2.88,
+   "end": 2.88,
+   "start": 2.08,
    "text": "message"
   }
  ],

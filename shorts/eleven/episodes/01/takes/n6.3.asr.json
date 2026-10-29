@@ -2,48 +2,48 @@
  "duration": 5.9443125,
  "language": "English",
  "language_code": "en",
- "request_id": "b3281a09-2aa1-473f-b7e9-1def341d3754",
+ "request_id": "ca3a6a9b-c11f-4662-a58b-f568c1ebb551",
  "segments": [
   {
-   "end": 0.4,
-   "start": 0,
+   "end": 1.04,
+   "start": 0.64,
    "text": "Dark"
   },
   {
-   "end": 1.2,
-   "start": 0.48,
+   "end": 1.76,
+   "start": 1.12,
    "text": "eyes"
   },
   {
-   "end": 2,
-   "start": 1.92,
-   "text": "a"
+   "end": 2.64,
+   "start": 2.56,
+   "text": "A"
   },
   {
-   "end": 2.72,
-   "start": 2,
+   "end": 3.28,
+   "start": 2.64,
    "text": "watch"
   },
   {
-   "end": 3.44,
-   "start": 2.72,
+   "end": 3.92,
+   "start": 3.28,
    "text": "stopped"
   },
   {
-   "end": 3.6,
-   "start": 3.44,
+   "end": 4.08,
+   "start": 3.92,
    "text": "at"
   },
   {
-   "end": 4.32,
-   "start": 3.6,
+   "end": 4.64,
+   "start": 4.08,
    "text": "11"
   },
   {
-   "end": 4.4,
-   "start": 4.4,
+   "end": 5.44,
+   "start": 4.72,
    "text": "11"
   }
  ],
- "text": "Dark eyes, a watch stopped at 11:11."
+ "text": "Dark eyes. A watch stopped at 11:11."
 }

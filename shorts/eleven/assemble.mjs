@@ -12,9 +12,9 @@ const picks = JSON.parse(fs.readFileSync(`${dir}/picks.json`, 'utf8'));
 const RATE = 44100;
 
 // pauses inside a line longer than this are cut from the middle; a few lines keep more air on purpose
-const CAP = { default: 0.3, n1: 0.5, n3: 0.45, n5: 0.36, n6: 0.36, k6: 0.5, k7: 0.55, k5: 0.36 };
+const CAP = { default: 0.42, n1: 0.7, n3: 0.6, n6: 0.6, k6: 0.75, k7: 0.8, k5: 0.55, n9: 0.6 };
 // the gap before each line (seconds); voice notes get room for the buzz
-const GAP = { default: 0.1, note: 0.52, after_note: 0.14, n1: 0.2, k4: 0.08, n7: 0.24, n9: 0.24, k7: 0.36, n8: 0.12 };
+const GAP = { default: 0.26, note: 0.6, after_note: 0.3, n1: 0.3, k4: 0.25, n6: 0.5, n7: 0.4, n9: 0.6, k7: 0.55, n8: 0.35 };
 
 const out = { mira: [], live: [], note: [] };
 const words = [], lines = [];

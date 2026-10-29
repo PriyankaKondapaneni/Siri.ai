@@ -1,74 +1,74 @@
 {
- "duration": 4.3189375,
+ "duration": 5.2013125,
  "language": "English",
  "language_code": "en",
- "request_id": "884cde5b-2786-4391-9da4-ed0f222fdded",
+ "request_id": "d92748c9-8c70-42fa-a83e-aca61e81eaf9",
  "segments": [
   {
-   "end": 0.32,
+   "end": 0.4,
    "start": 0,
    "text": "6"
   },
   {
-   "end": 0.72,
-   "start": 0.32,
+   "end": 0.96,
+   "start": 0.4,
    "text": "40"
   },
   {
-   "end": 0.72,
-   "start": 0.72,
+   "end": 1.44,
+   "start": 1.36,
    "text": "a"
   },
   {
-   "end": 1.28,
-   "start": 0.96,
+   "end": 1.84,
+   "start": 1.44,
    "text": "car"
   },
   {
-   "end": 1.52,
-   "start": 1.28,
+   "end": 2.08,
+   "start": 1.84,
    "text": "ran"
   },
   {
-   "end": 1.6,
-   "start": 1.52,
+   "end": 2.16,
+   "start": 2.08,
    "text": "the"
   },
   {
-   "end": 1.84,
-   "start": 1.6,
+   "end": 2.48,
+   "start": 2.16,
    "text": "red"
   },
   {
-   "end": 2.16,
-   "start": 1.84,
+   "end": 2.8,
+   "start": 2.48,
    "text": "light"
   },
   {
-   "end": 2.4,
-   "start": 2.32,
+   "end": 3.12,
+   "start": 2.96,
    "text": "and"
   },
   {
-   "end": 2.88,
-   "start": 2.4,
+   "end": 3.68,
+   "start": 3.12,
    "text": "someone"
   },
   {
-   "end": 3.12,
-   "start": 2.88,
+   "end": 4,
+   "start": 3.68,
    "text": "pulled"
   },
   {
-   "end": 3.2,
-   "start": 3.12,
+   "end": 4.08,
+   "start": 4,
    "text": "me"
   },
   {
-   "end": 3.84,
-   "start": 3.2,
+   "end": 4.72,
+   "start": 4.08,
    "text": "back"
   }
  ],
- "text": "6:40, a car ran the red light, and someone pulled me back!"
+ "text": "6:40, a car ran the red light, and someone pulled me back."
 }

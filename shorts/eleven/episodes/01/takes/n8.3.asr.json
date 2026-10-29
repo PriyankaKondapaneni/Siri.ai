@@ -1,42 +1,42 @@
 {
- "duration": 2.55425,
+ "duration": 2.92575,
  "language": "English",
  "language_code": "en",
- "request_id": "dcc6e752-68cf-45dc-a114-6a6052483a03",
+ "request_id": "4e39d5ae-49f1-42c2-a127-a1ce5a81821e",
  "segments": [
   {
-   "end": 0.16,
+   "end": 0.24,
    "start": 0,
    "text": "He"
   },
   {
-   "end": 0.32,
-   "start": 0.16,
+   "end": 0.48,
+   "start": 0.24,
    "text": "had"
   },
   {
-   "end": 0.64,
-   "start": 0.32,
+   "end": 0.88,
+   "start": 0.48,
    "text": "no"
   },
   {
-   "end": 1.2,
-   "start": 0.64,
+   "end": 1.6,
+   "start": 0.88,
    "text": "idea"
   },
   {
-   "end": 1.36,
-   "start": 1.2,
+   "end": 1.76,
+   "start": 1.6,
    "text": "who"
   },
   {
-   "end": 1.44,
-   "start": 1.36,
+   "end": 1.84,
+   "start": 1.76,
    "text": "I"
   },
   {
-   "end": 2.08,
-   "start": 1.44,
+   "end": 2.56,
+   "start": 1.84,
    "text": "was"
   }
  ],

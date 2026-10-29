@@ -37,24 +37,26 @@
       ctx.translate(-W / 2, -H / 2);
       // the screen's light on the world around it
       if (o.glow) PP.glowAt(ctx, W / 2, H / 2, 900, o.urgent ? '255,90,90' : '150,200,255', 0.35 * o.glow);
-      // body: dark paper with a white cut border and a shadow
+      // body: a graphite frame with a soft drop shadow and a thin metallic edge
       PP.with(ctx, () => {
-        ctx.shadowColor = 'rgba(0,0,0,0.55)'; ctx.shadowBlur = 40; ctx.shadowOffsetY = 20;
-        roundRect(ctx, -12, -12, W + 24, H + 24, 86); ctx.fillStyle = '#f5f1e8'; ctx.fill();
+        ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 60; ctx.shadowOffsetY = 30;
+        roundRect(ctx, 0, 0, W, H, 76); ctx.fillStyle = '#16181d'; ctx.fill();
       });
-      roundRect(ctx, 0, 0, W, H, 76); ctx.fillStyle = PP.pattern(ctx, 'ink'); ctx.fill();
+      const edge = ctx.createLinearGradient(0, 0, W, H);
+      edge.addColorStop(0, '#5a5f6a'); edge.addColorStop(0.5, '#23262d'); edge.addColorStop(1, '#4a4e58');
+      ctx.lineWidth = 5; ctx.strokeStyle = edge; roundRect(ctx, 2, 2, W - 4, H - 4, 74); ctx.stroke();
       roundRect(ctx, 18, 18, W - 36, H - 36, 62); ctx.fillStyle = '#0d1018'; ctx.fill();
       PP.with(ctx, () => {
         roundRect(ctx, 18, 18, W - 36, H - 36, 62); ctx.clip();
         // status bar and header
-        ctx.fillStyle = 'rgba(230,236,255,0.9)'; ctx.font = '600 30px Fredoka'; ctx.fillText(o.clock || '11:11', 60, 74);
+        ctx.fillStyle = 'rgba(230,236,255,0.9)'; ctx.font = '600 30px Inter'; ctx.fillText(o.clock || '11:11', 60, 74);
         roundRect(ctx, W / 2 - 70, 34, 140, 40, 20); ctx.fillStyle = '#000'; ctx.fill();
         ctx.fillStyle = 'rgba(230,236,255,0.9)'; ctx.fillRect(W - 120, 52, 44, 20); ctx.fillRect(W - 74, 58, 4, 8);
         ctx.fillStyle = '#1a2030'; ctx.fillRect(18, 100, W - 36, 120);
         ctx.fillStyle = '#3a4560'; ctx.beginPath(); ctx.arc(110, 160, 40, 0, 7); ctx.fill();
-        ctx.fillStyle = '#c9d3ee'; ctx.font = '600 44px Fredoka'; ctx.textAlign = 'center'; ctx.fillText('?', 110, 176); ctx.textAlign = 'left';
-        ctx.fillStyle = '#f2f5ff'; ctx.font = '600 38px Fredoka'; ctx.fillText(o.header || 'Unknown', 170, 156);
-        ctx.fillStyle = 'rgba(200,210,240,0.6)'; ctx.font = '26px Fredoka'; ctx.fillText('voice message', 170, 192);
+        ctx.fillStyle = '#c9d3ee'; ctx.font = '600 44px Inter'; ctx.textAlign = 'center'; ctx.fillText('?', 110, 176); ctx.textAlign = 'left';
+        ctx.fillStyle = '#f2f5ff'; ctx.font = '600 38px Inter'; ctx.fillText(o.header || 'Unknown', 170, 156);
+        ctx.fillStyle = 'rgba(200,210,240,0.6)'; ctx.font = '500 26px Inter'; ctx.fillText('voice message', 170, 192);
         // messages: newest at the bottom
         let by = H - 120;
         const shown = (o.msgs || []).filter((m) => t >= m.s - 0.5);
@@ -62,7 +64,7 @@
           const m = shown[i];
           const age = t - (m.s - 0.5);
           const pop = PP.ease.outBack(PP.clamp(age / 0.3), 1.8);
-          ctx.font = '29px "Special Elite"';
+          ctx.font = '500 30px Inter';
           const lines = wrap(ctx, m.text, W - 160);
           const bh = 150 + lines.length * 40;
           const del = m.deleted != null ? PP.ease.in(PP.clamp((t - m.deleted) / 0.35)) : 0;
@@ -91,12 +93,12 @@
               roundRect(ctx, x0 + (k * span) / nb, top + 70 - hgt / 2, (span / nb) * 0.6, hgt, 3);
               ctx.fill();
             }
-            ctx.fillStyle = 'rgba(210,220,245,0.75)'; ctx.font = '24px Fredoka';
+            ctx.fillStyle = 'rgba(210,220,245,0.75)'; ctx.font = '500 24px Inter';
             ctx.fillText(m.time || '11:11 PM', bx + bw - 140, top + 128);
             const secs = Math.max(0, Math.round((m.e - m.s) * (1 - prog)));
             ctx.fillText(`0:${String(secs).padStart(2, '0')}`, x0, top + 128);
             // the transcript, typing out with the words
-            ctx.font = '29px "Special Elite"';
+            ctx.font = '500 30px Inter';
             const words = m.words || [];
             let budget = words.filter((w) => t >= w.s).length, wi = 0;
             lines.forEach((ln, li) => {
@@ -120,8 +122,8 @@
           PP.with(ctx, () => {
             ctx.translate(0, -180 + slide * 210);
             roundRect(ctx, 34, 40, W - 68, 130, 30); ctx.fillStyle = 'rgba(40,48,70,0.96)'; ctx.fill();
-            ctx.fillStyle = '#f2f5ff'; ctx.font = '600 30px Fredoka'; ctx.fillText('Unknown', 70, 94);
-            ctx.fillStyle = 'rgba(210,220,245,0.85)'; ctx.font = '26px Fredoka'; ctx.fillText('Voice message · 11:11 PM', 70, 134);
+            ctx.fillStyle = '#f2f5ff'; ctx.font = '600 30px Inter'; ctx.fillText('Unknown', 70, 94);
+            ctx.fillStyle = 'rgba(210,220,245,0.85)'; ctx.font = '500 26px Inter'; ctx.fillText('Voice message · 11:11 PM', 70, 134);
           });
         }
         // glass sheen

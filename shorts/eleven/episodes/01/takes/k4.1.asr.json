@@ -1,8 +1,8 @@
 {
- "duration": 1.8111875,
+ "duration": 1.9969375,
  "language": "English",
  "language_code": "en",
- "request_id": "516a6bd3-c94b-4f86-83bc-d9c11e3e1c88",
+ "request_id": "0063aa03-0282-4c2b-9e61-3a162e7d3bc2",
  "segments": [
   {
    "end": 0.48,
@@ -10,13 +10,13 @@
    "text": "Hey"
   },
   {
-   "end": 0.96,
-   "start": 0.8,
+   "end": 1.28,
+   "start": 1.04,
    "text": "you"
   },
   {
-   "end": 1.52,
-   "start": 1.04,
+   "end": 1.84,
+   "start": 1.36,
    "text": "okay"
   }
  ],

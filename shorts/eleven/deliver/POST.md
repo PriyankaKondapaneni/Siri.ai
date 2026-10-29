@@ -1,6 +1,6 @@
 # 11:11 — Episode 1: "The Voice From My Phone"
 
-**Title (YouTube Shorts):** Every night at 11:11, a stranger's voice note comes true… 📱⏰ #shorts
+**Title (YouTube Shorts):** Every night at 11:11, a stranger's voice note comes true… #shorts
 
 **Caption (Instagram Reels / YouTube description):**
 Every night at 11:11, a stranger sends me a voice message.
@@ -10,4 +10,4 @@ Part 2 tomorrow at 11:11. Follow so you don't miss it.
 
 **Pinned comment:** Would you listen to the next message… or delete it? 👀
 
-**Hashtags:** #1111 #romance #animatedstory #webtoon #chibi #lovestory #mystery #storytime #anime #shorts #reels #fyp
+**Hashtags:** #1111 #romance #animatedstory #webtoon #animation #lovestory #mystery #storytime #anime #shorts #reels #fyp

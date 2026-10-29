@@ -1,8 +1,8 @@
 {
- "duration": 1.76475,
+ "duration": 2.0898125,
  "language": "English",
  "language_code": "en",
- "request_id": "02776a09-0bc4-432f-8a32-fa479e002a73",
+ "request_id": "f401c744-ce7c-4fe4-a5bc-1a0c8ca5b032",
  "segments": [
   {
    "end": 0.64,
@@ -10,20 +10,20 @@
    "text": "Sorry"
   },
   {
-   "end": 1.04,
-   "start": 0.88,
-   "text": "have"
-  },
-  {
-   "end": 1.12,
-   "start": 1.04,
-   "text": "we"
+   "end": 1.44,
+   "start": 1.28,
+   "text": "Have"
   },
   {
    "end": 1.52,
-   "start": 1.12,
+   "start": 1.44,
+   "text": "we"
+  },
+  {
+   "end": 2,
+   "start": 1.52,
    "text": "met"
   }
  ],
- "text": "Sorry, have we met?"
+ "text": "Sorry. Have we met?"
 }
