@@ -1,0 +1,679 @@
+{
+ "duration": 68.731125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "0fe996fb-89ef-4ce0-90f4-bc53e9fbfdaa",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "She"
+  },
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "sent"
+  },
+  {
+   "end": 1.04,
+   "start": 0.56,
+   "text": "him"
+  },
+  {
+   "end": 1.6,
+   "start": 1.04,
+   "text": "47"
+  },
+  {
+   "end": 2.8,
+   "start": 2.4,
+   "text": "paper"
+  },
+  {
+   "end": 3.6,
+   "start": 2.8,
+   "text": "planes"
+  },
+  {
+   "end": 4.48,
+   "start": 4.16,
+   "text": "before"
+  },
+  {
+   "end": 4.72,
+   "start": 4.48,
+   "text": "she"
+  },
+  {
+   "end": 5.28,
+   "start": 4.8,
+   "text": "ever"
+  },
+  {
+   "end": 5.52,
+   "start": 5.28,
+   "text": "heard"
+  },
+  {
+   "end": 5.76,
+   "start": 5.52,
+   "text": "his"
+  },
+  {
+   "end": 6.4,
+   "start": 5.76,
+   "text": "voice"
+  },
+  {
+   "end": 8.08,
+   "start": 7.52,
+   "text": "This"
+  },
+  {
+   "end": 8.32,
+   "start": 8.16,
+   "text": "is"
+  },
+  {
+   "end": 8.8,
+   "start": 8.32,
+   "text": "plane"
+  },
+  {
+   "end": 9.04,
+   "start": 8.8,
+   "text": "number"
+  },
+  {
+   "end": 9.6,
+   "start": 9.04,
+   "text": "one"
+  },
+  {
+   "end": 11.2,
+   "start": 10.8,
+   "text": "Mira"
+  },
+  {
+   "end": 11.44,
+   "start": 11.2,
+   "text": "was"
+  },
+  {
+   "end": 12.16,
+   "start": 11.44,
+   "text": "22"
+  },
+  {
+   "end": 12.96,
+   "start": 12.88,
+   "text": "on"
+  },
+  {
+   "end": 13.04,
+   "start": 12.96,
+   "text": "the"
+  },
+  {
+   "end": 13.44,
+   "start": 13.04,
+   "text": "fifth"
+  },
+  {
+   "end": 13.92,
+   "start": 13.44,
+   "text": "floor"
+  },
+  {
+   "end": 14,
+   "start": 13.92,
+   "text": "of"
+  },
+  {
+   "end": 14.08,
+   "start": 14,
+   "text": "a"
+  },
+  {
+   "end": 14.56,
+   "start": 14.08,
+   "text": "city"
+  },
+  {
+   "end": 14.72,
+   "start": 14.56,
+   "text": "that"
+  },
+  {
+   "end": 15.2,
+   "start": 14.72,
+   "text": "never"
+  },
+  {
+   "end": 15.68,
+   "start": 15.2,
+   "text": "noticed"
+  },
+  {
+   "end": 16,
+   "start": 15.68,
+   "text": "her"
+  },
+  {
+   "end": 17.36,
+   "start": 16.88,
+   "text": "Across"
+  },
+  {
+   "end": 17.44,
+   "start": 17.36,
+   "text": "the"
+  },
+  {
+   "end": 18,
+   "start": 17.44,
+   "text": "alley"
+  },
+  {
+   "end": 18.4,
+   "start": 18.32,
+   "text": "a"
+  },
+  {
+   "end": 18.96,
+   "start": 18.4,
+   "text": "stranger"
+  },
+  {
+   "end": 19.36,
+   "start": 18.96,
+   "text": "kept"
+  },
+  {
+   "end": 19.52,
+   "start": 19.36,
+   "text": "his"
+  },
+  {
+   "end": 19.84,
+   "start": 19.52,
+   "text": "lamp"
+  },
+  {
+   "end": 20.08,
+   "start": 19.84,
+   "text": "on"
+  },
+  {
+   "end": 20.4,
+   "start": 20.08,
+   "text": "until"
+  },
+  {
+   "end": 20.88,
+   "start": 20.4,
+   "text": "2"
+  },
+  {
+   "end": 20.96,
+   "start": 20.88,
+   "text": "a"
+  },
+  {
+   "end": 21.44,
+   "start": 20.96,
+   "text": "m"
+  },
+  {
+   "end": 22.08,
+   "start": 21.68,
+   "text": "every"
+  },
+  {
+   "end": 22.64,
+   "start": 22.08,
+   "text": "single"
+  },
+  {
+   "end": 23.2,
+   "start": 22.64,
+   "text": "night"
+  },
+  {
+   "end": 24.24,
+   "start": 24,
+   "text": "One"
+  },
+  {
+   "end": 24.72,
+   "start": 24.24,
+   "text": "night"
+  },
+  {
+   "end": 25.2,
+   "start": 24.96,
+   "text": "she"
+  },
+  {
+   "end": 25.76,
+   "start": 25.2,
+   "text": "folded"
+  },
+  {
+   "end": 25.84,
+   "start": 25.76,
+   "text": "her"
+  },
+  {
+   "end": 26.4,
+   "start": 25.84,
+   "text": "grocery"
+  },
+  {
+   "end": 26.8,
+   "start": 26.4,
+   "text": "list"
+  },
+  {
+   "end": 27.12,
+   "start": 26.8,
+   "text": "into"
+  },
+  {
+   "end": 27.2,
+   "start": 27.12,
+   "text": "a"
+  },
+  {
+   "end": 27.92,
+   "start": 27.2,
+   "text": "plane"
+  },
+  {
+   "end": 28.4,
+   "start": 28.24,
+   "text": "and"
+  },
+  {
+   "end": 28.8,
+   "start": 28.4,
+   "text": "threw"
+  },
+  {
+   "end": 29.12,
+   "start": 28.8,
+   "text": "it"
+  },
+  {
+   "end": 30,
+   "start": 29.84,
+   "text": "It"
+  },
+  {
+   "end": 30.72,
+   "start": 30,
+   "text": "landed"
+  },
+  {
+   "end": 30.96,
+   "start": 30.72,
+   "text": "right"
+  },
+  {
+   "end": 31.2,
+   "start": 31.04,
+   "text": "on"
+  },
+  {
+   "end": 31.36,
+   "start": 31.2,
+   "text": "his"
+  },
+  {
+   "end": 32.24,
+   "start": 31.36,
+   "text": "windowsill"
+  },
+  {
+   "end": 33.2,
+   "start": 32.96,
+   "text": "His"
+  },
+  {
+   "end": 33.6,
+   "start": 33.2,
+   "text": "lamp"
+  },
+  {
+   "end": 33.84,
+   "start": 33.6,
+   "text": "went"
+  },
+  {
+   "end": 34.32,
+   "start": 33.84,
+   "text": "off"
+  },
+  {
+   "end": 35.76,
+   "start": 35.2,
+   "text": "Great"
+  },
+  {
+   "end": 36.48,
+   "start": 36.24,
+   "text": "She'd"
+  },
+  {
+   "end": 36.96,
+   "start": 36.48,
+   "text": "scared"
+  },
+  {
+   "end": 37.28,
+   "start": 36.96,
+   "text": "him"
+  },
+  {
+   "end": 38.24,
+   "start": 38.08,
+   "text": "But"
+  },
+  {
+   "end": 38.32,
+   "start": 38.24,
+   "text": "the"
+  },
+  {
+   "end": 38.72,
+   "start": 38.32,
+   "text": "next"
+  },
+  {
+   "end": 39.28,
+   "start": 38.72,
+   "text": "morning"
+  },
+  {
+   "end": 39.76,
+   "start": 39.6,
+   "text": "it"
+  },
+  {
+   "end": 40.32,
+   "start": 39.76,
+   "text": "flew"
+  },
+  {
+   "end": 40.96,
+   "start": 40.32,
+   "text": "back"
+  },
+  {
+   "end": 41.68,
+   "start": 41.6,
+   "text": "On"
+  },
+  {
+   "end": 41.76,
+   "start": 41.68,
+   "text": "the"
+  },
+  {
+   "end": 42.16,
+   "start": 41.76,
+   "text": "back"
+  },
+  {
+   "end": 42.32,
+   "start": 42.16,
+   "text": "of"
+  },
+  {
+   "end": 42.4,
+   "start": 42.32,
+   "text": "her"
+  },
+  {
+   "end": 42.96,
+   "start": 42.4,
+   "text": "list"
+  },
+  {
+   "end": 43.44,
+   "start": 43.2,
+   "text": "he'd"
+  },
+  {
+   "end": 44,
+   "start": 43.44,
+   "text": "drawn"
+  },
+  {
+   "end": 44.4,
+   "start": 44,
+   "text": "her"
+  },
+  {
+   "end": 45.92,
+   "start": 45.2,
+   "text": "Badly"
+  },
+  {
+   "end": 46.48,
+   "start": 46.4,
+   "text": "And"
+  },
+  {
+   "end": 47.36,
+   "start": 46.56,
+   "text": "underneath"
+  },
+  {
+   "end": 47.92,
+   "start": 47.84,
+   "text": "a"
+  },
+  {
+   "end": 48.48,
+   "start": 47.92,
+   "text": "tiny"
+  },
+  {
+   "end": 48.96,
+   "start": 48.48,
+   "text": "lamp"
+  },
+  {
+   "end": 49.36,
+   "start": 49.28,
+   "text": "and"
+  },
+  {
+   "end": 49.44,
+   "start": 49.36,
+   "text": "a"
+  },
+  {
+   "end": 50.08,
+   "start": 49.44,
+   "text": "question"
+  },
+  {
+   "end": 50.56,
+   "start": 50.08,
+   "text": "mark"
+  },
+  {
+   "end": 51.44,
+   "start": 51.2,
+   "text": "So"
+  },
+  {
+   "end": 51.76,
+   "start": 51.44,
+   "text": "that"
+  },
+  {
+   "end": 52.16,
+   "start": 51.76,
+   "text": "night"
+  },
+  {
+   "end": 52.56,
+   "start": 52.32,
+   "text": "she"
+  },
+  {
+   "end": 53.12,
+   "start": 52.56,
+   "text": "folded"
+  },
+  {
+   "end": 53.52,
+   "start": 53.12,
+   "text": "plane"
+  },
+  {
+   "end": 53.84,
+   "start": 53.52,
+   "text": "number"
+  },
+  {
+   "end": 54.4,
+   "start": 53.84,
+   "text": "two"
+  },
+  {
+   "end": 55.28,
+   "start": 54.88,
+   "text": "Just"
+  },
+  {
+   "end": 55.68,
+   "start": 55.28,
+   "text": "one"
+  },
+  {
+   "end": 56.16,
+   "start": 55.68,
+   "text": "word"
+  },
+  {
+   "end": 57.28,
+   "start": 56.8,
+   "text": "Hi"
+  },
+  {
+   "end": 58.16,
+   "start": 58,
+   "text": "But"
+  },
+  {
+   "end": 58.24,
+   "start": 58.16,
+   "text": "the"
+  },
+  {
+   "end": 58.8,
+   "start": 58.24,
+   "text": "wind"
+  },
+  {
+   "end": 58.96,
+   "start": 58.8,
+   "text": "had"
+  },
+  {
+   "end": 59.36,
+   "start": 59.04,
+   "text": "other"
+  },
+  {
+   "end": 60.08,
+   "start": 59.36,
+   "text": "plans"
+  },
+  {
+   "end": 60.72,
+   "start": 60.48,
+   "text": "It"
+  },
+  {
+   "end": 61.12,
+   "start": 60.72,
+   "text": "dropped"
+  },
+  {
+   "end": 61.6,
+   "start": 61.12,
+   "text": "five"
+  },
+  {
+   "end": 62.48,
+   "start": 61.6,
+   "text": "floors"
+  },
+  {
+   "end": 62.96,
+   "start": 62.64,
+   "text": "into"
+  },
+  {
+   "end": 63.12,
+   "start": 62.96,
+   "text": "the"
+  },
+  {
+   "end": 63.68,
+   "start": 63.2,
+   "text": "alley"
+  },
+  {
+   "end": 64.32,
+   "start": 64.16,
+   "text": "where"
+  },
+  {
+   "end": 65.04,
+   "start": 64.32,
+   "text": "someone"
+  },
+  {
+   "end": 65.44,
+   "start": 65.04,
+   "text": "picked"
+  },
+  {
+   "end": 65.52,
+   "start": 65.44,
+   "text": "it"
+  },
+  {
+   "end": 65.84,
+   "start": 65.52,
+   "text": "up"
+  },
+  {
+   "end": 66.72,
+   "start": 66.56,
+   "text": "and"
+  },
+  {
+   "end": 66.88,
+   "start": 66.72,
+   "text": "it"
+  },
+  {
+   "end": 67.6,
+   "start": 66.88,
+   "text": "wasn't"
+  },
+  {
+   "end": 68,
+   "start": 67.6,
+   "text": "him"
+  }
+ ],
+ "text": "She sent him 47 paper planes before she ever heard his voice. This is plane number one. Mira was 22 on the fifth floor of a city that never noticed her. Across the alley, a stranger kept his lamp on until 2 a.m. every single night. One night, she folded her grocery list into a plane and threw it. It landed right on his windowsill. His lamp went off. Great. She'd scared him. But the next morning, it flew back. On the back of her list, he'd drawn her. Badly. And underneath, a tiny lamp and a question mark. So that night, she folded plane number two. Just one word. Hi. But the wind had other plans. It dropped five floors into the alley, where someone picked it up, and it wasn't him."
+}

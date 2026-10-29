@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face { font-family: 'Patrick Hand'; src: url(assets/fonts/PatrickHand.ttf); } @font-face { font-family: 'Caveat'; src: url(assets/fonts/Caveat-a.ttf); } body{margin:0}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="src/core.js"></script><script src="src/paper.js"></script><script src="src/ink.js"></script><script src="src/plane.js"></script><script src="src/cast.js"></script><script src="src/people.js"></script>
+<script>
+const PP = window.PP;
+PP.ready = document.fonts.load('40px Caveat');
+PP.totalFrames = 30;
+PP.renderFrame = (f) => {
+  const t = f / 30, ctx = document.getElementById('c').getContext('2d'), b = PP.boil(t);
+  ctx.drawImage(PP.bigPaper('kraft', 1080, 1920, 2), 0, 0);
+  PP.drawSprite(ctx, PP.miraHead({ eyes: 'open', mouth: 'smile', brows: 'soft', look: [5, 0], turn: 0.45 }, b, 1.9), 270, 330);
+  PP.drawSprite(ctx, PP.leoHead({ eyes: 'open', mouth: 'smirk', brows: 'neutral', look: [-5, 0], turn: -0.45 }, b, 1.9), 800, 330);
+  PP.drawSprite(ctx, PP.mira({ arms: 'chin', eyes: 'half', mouth: 'pout', brows: 'flat', tilt: -0.1 }, b, 0.95), 270, 1190);
+  PP.drawSprite(ctx, PP.leo({ arms: 'draw', eyes: 'down', mouth: 'soft', brows: 'soft' }, b, 0.95), 800, 1190);
+  PP.drawSprite(ctx, PP.miraHead({ eyes: 'happy', mouth: 'laugh', brows: 'up', blush: 1 }, b, 1.15), 150, 1500);
+  PP.drawSprite(ctx, PP.miraHead({ eyes: 'wide', mouth: 'o', brows: 'up', blush: 0.4 }, b, 1.15), 420, 1500);
+  PP.drawSprite(ctx, PP.leoHead({ eyes: 'wide', mouth: 'o', brows: 'up' }, b, 1.15), 690, 1500);
+  PP.drawSprite(ctx, PP.leoHead({ eyes: 'happy', mouth: 'grin', brows: 'soft' }, b, 1.15), 950, 1500);
+  PP.drawSprite(ctx, PP.mira({ arms: 'throw', eyes: 'open', mouth: 'grin', brows: 'up' }, b, 0.55), 160, 1910);
+  PP.drawSprite(ctx, PP.mira({ arms: 'cheeks', eyes: 'squeeze', mouth: 'wobble', brows: 'worried', blush: 1.5, sweat: 1 }, b, 0.55), 480, 1910);
+  PP.drawSprite(ctx, PP.leo({ arms: 'wave', eyes: 'happy', mouth: 'smile', brows: 'soft' }, b, 0.55), 840, 1910);
+};
+</script></body></html>

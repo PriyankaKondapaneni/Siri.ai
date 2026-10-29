@@ -1,0 +1,5 @@
+.env
+node_modules/
+build/
+*.log
+paper-planes/episodes/*/takes/*.wav
