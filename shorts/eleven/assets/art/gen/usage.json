@@ -232,5 +232,31 @@
    "text_tokens": 0
   },
   "total_tokens": 3055
+ },
+ "CK2": {
+  "input_tokens": 1770,
+  "input_tokens_details": {
+   "image_tokens": 1508,
+   "text_tokens": 262
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 3142
+ },
+ "CM2": {
+  "input_tokens": 1769,
+  "input_tokens_details": {
+   "image_tokens": 1508,
+   "text_tokens": 261
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 3141
  }
 }

@@ -119,6 +119,22 @@
    "quality": "medium",
    "style": "Redraw as a hand-drawn anime chibi character illustration: about 3 heads tall, big head, large sparkly anime eyes, tiny nose, small body and hands. Clean confident hand-inked black outlines with slight line-weight variation, flat cel colors with one simple shadow tone, a little soft blush. Looks drawn by a human illustrator with ink and markers on paper, not 3D, not glossy, not painterly, not photorealistic. Full body, standing, on a plain flat light grey background. No text, no watermark.",
    "prompt": "The character is Kabir from the reference: very handsome young man, messy black hair, dark intense eyes, dark charcoal wool coat over a black turtleneck, a vintage leather-strap wristwatch. Calm, slightly mysterious soft smile, one hand in his coat pocket."
+  },
+  "CM2": {
+   "refs": [
+    "M1"
+   ],
+   "quality": "medium",
+   "style": "A polished hand-made digital chibi illustration, as painted in Clip Studio Paint by a talented professional illustrator with their own recognisable style (Pixiv / artbook quality). Chibi proportions about 2.5 heads tall. Colored lineart: warm dark-brown lines (not pure black), thicker on the outer silhouette and thinner inside, with tapered brush strokes and a few lively overshoots. Crisp cel shading with two shadow tones plus a warm rim light, hair drawn as stylised clumps with sharp glossy highlight bands and a few loose strands, eyes with layered gradient irises, a dark upper lash line and several reflections. A limited, harmonious, slightly muted palette; subtle brush texture and fine grain. Charming, expressive pose with personality and slight asymmetry. Full body on a plain flat light grey background. Not 3D, not generic, not airbrushed. No text, no watermark.",
+   "prompt": "The character is Mira from the reference: a very pretty young woman, long dark-brown wavy hair, warm amber eyes, a coral flower hair clip, cornflower-blue dress, a chunky red knit scarf and brown boots. She hugs her phone to her chest with both hands, looking up with a curious, slightly nervous smile, one foot turned in."
+  },
+  "CK2": {
+   "refs": [
+    "K1"
+   ],
+   "quality": "medium",
+   "style": "A polished hand-made digital chibi illustration, as painted in Clip Studio Paint by a talented professional illustrator with their own recognisable style (Pixiv / artbook quality). Chibi proportions about 2.5 heads tall. Colored lineart: warm dark-brown lines (not pure black), thicker on the outer silhouette and thinner inside, with tapered brush strokes and a few lively overshoots. Crisp cel shading with two shadow tones plus a warm rim light, hair drawn as stylised clumps with sharp glossy highlight bands and a few loose strands, eyes with layered gradient irises, a dark upper lash line and several reflections. A limited, harmonious, slightly muted palette; subtle brush texture and fine grain. Charming, expressive pose with personality and slight asymmetry. Full body on a plain flat light grey background. Not 3D, not generic, not airbrushed. No text, no watermark.",
+   "prompt": "The character is Kabir from the reference: a very handsome young man, messy black hair falling over his brow, dark intense eyes, a long charcoal wool coat over a black turtleneck, a vintage leather-strap wristwatch. A calm, mysterious half-smile, one hand in his coat pocket and the other lifted, glancing at his wristwatch."
   }
  }
 }
