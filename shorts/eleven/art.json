@@ -13,7 +13,7 @@
    "refs": [
     "M1"
    ],
-   "prompt": "Mira, the same young woman as the reference (same face, long dark-brown wavy hair, warm amber eyes, coral flower hair clip), in the cornflower-blue dress and red knit scarf, standing at a caf\u00e9 counter in the morning, startled, her coffee cup tipping and splashing coffee, mouth open in surprise. Waist-up, three-quarter view, on a plain flat light grey background like the reference."
+   "prompt": "Mira, the same young woman as the reference (same face, long dark-brown wavy hair, warm amber eyes, coral flower hair clip), in the cornflower-blue dress and red knit scarf, standing at a café counter in the morning, startled, her coffee cup tipping and splashing coffee, mouth open in surprise. Waist-up, three-quarter view, on a plain flat light grey background like the reference."
   },
   "M4": {
    "refs": [
@@ -81,7 +81,7 @@
     "M1"
    ],
    "size": "1024x1536",
-   "prompt": "A background with no people, in exactly the same illustration style as the reference: a warm, cosy caf\u00e9 counter in the morning, sunlight through the window, steam from an espresso machine, pastries, a round wall clock showing 8:02."
+   "prompt": "A background with no people, in exactly the same illustration style as the reference: a warm, cosy café counter in the morning, sunlight through the window, steam from an espresso machine, pastries, a round wall clock showing 8:02."
   },
   "B3": {
    "refs": [
@@ -103,6 +103,22 @@
    ],
    "size": "1024x1536",
    "prompt": "A close-up still life with no people, in exactly the same illustration style as the reference: a smartphone lying on rumpled bed sheets at night, its screen glowing, lighting the sheets blue; the screen shows a blank glowing panel with no text."
+  },
+  "CM1": {
+   "refs": [
+    "M1"
+   ],
+   "quality": "medium",
+   "style": "Redraw as a hand-drawn anime chibi character illustration: about 3 heads tall, big head, large sparkly anime eyes, tiny nose, small body and hands. Clean confident hand-inked black outlines with slight line-weight variation, flat cel colors with one simple shadow tone, a little soft blush. Looks drawn by a human illustrator with ink and markers on paper, not 3D, not glossy, not painterly, not photorealistic. Full body, standing, on a plain flat light grey background. No text, no watermark.",
+   "prompt": "The character is Mira from the reference: very pretty young woman, long dark-brown wavy hair, warm amber eyes, a coral flower hair clip, cornflower-blue dress and a chunky red knit scarf. Gentle, curious expression, hands holding her phone near her chest."
+  },
+  "CK1": {
+   "refs": [
+    "K1"
+   ],
+   "quality": "medium",
+   "style": "Redraw as a hand-drawn anime chibi character illustration: about 3 heads tall, big head, large sparkly anime eyes, tiny nose, small body and hands. Clean confident hand-inked black outlines with slight line-weight variation, flat cel colors with one simple shadow tone, a little soft blush. Looks drawn by a human illustrator with ink and markers on paper, not 3D, not glossy, not painterly, not photorealistic. Full body, standing, on a plain flat light grey background. No text, no watermark.",
+   "prompt": "The character is Kabir from the reference: very handsome young man, messy black hair, dark intense eyes, dark charcoal wool coat over a black turtleneck, a vintage leather-strap wristwatch. Calm, slightly mysterious soft smile, one hand in his coat pocket."
   }
  }
 }

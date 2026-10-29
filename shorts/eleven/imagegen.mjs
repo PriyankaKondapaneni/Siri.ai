@@ -14,9 +14,9 @@ const out = `assets/art/gen/${name}.png`;
 if (fs.existsSync(out) && !process.argv.includes('--again')) { console.log(`${name}: already made`); process.exit(0); }
 const form = new FormData();
 form.append('model', ART.model);
-form.append('prompt', `${ART.style} ${job.prompt}`);
+form.append('prompt', `${job.style ?? ART.style} ${job.prompt}`);
 form.append('size', job.size || '1024x1536');
-form.append('quality', 'high');
+form.append('quality', job.quality || 'high');
 form.append('output_format', 'png');
 if (job.transparent) form.append('background', 'transparent');
 for (const ref of job.refs || []) form.append('image[]', new Blob([fs.readFileSync(`assets/art/source/${ref}.png`)], { type: 'image/png' }), `${ref}.png`);
