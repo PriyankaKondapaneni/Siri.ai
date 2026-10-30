@@ -1,22 +1,27 @@
 {
- "duration": 4.2260625,
+ "duration": 4.2725,
  "language": "English",
  "language_code": "en",
- "request_id": "eeb6be41-5b0b-4d1e-81b5-4688880e0dcd",
+ "request_id": "6a233d43-80df-4f16-80a0-a5225b31ed69",
  "segments": [
   {
    "end": 0.16,
-   "start": 0.08,
+   "start": 0,
    "text": "The"
   },
   {
-   "end": 1.28,
+   "end": 0.64,
    "start": 0.16,
-   "text": "640"
+   "text": "6"
+  },
+  {
+   "end": 0.64,
+   "start": 0.64,
+   "text": "40"
   },
   {
    "end": 1.84,
-   "start": 1.28,
+   "start": 1.44,
    "text": "never"
   },
   {
@@ -30,25 +35,25 @@
    "text": "it"
   },
   {
-   "end": 2.48,
-   "start": 2.4,
+   "end": 2.56,
+   "start": 2.48,
    "text": "to"
   },
   {
-   "end": 2.56,
-   "start": 2.48,
+   "end": 2.64,
+   "start": 2.56,
    "text": "the"
   },
   {
-   "end": 2.96,
-   "start": 2.56,
+   "end": 3.12,
+   "start": 2.72,
    "text": "next"
   },
   {
-   "end": 3.76,
-   "start": 2.96,
+   "end": 3.6,
+   "start": 3.12,
    "text": "station"
   }
  ],
- "text": "The 640 never made it to the next station."
+ "text": "The 6:40 never made it to the next station."
 }

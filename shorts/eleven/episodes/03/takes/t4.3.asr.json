@@ -1,28 +1,28 @@
 {
- "duration": 2.55425,
+ "duration": 3.4365625,
  "language_code": "en",
- "request_id": "05c29eee-1f12-4d97-b632-3b54c9fb0b38",
+ "request_id": "5393f81b-c9e5-4dec-b422-e23078b60275",
  "segments": [
   {
-   "end": 0.32,
+   "end": 0.4,
    "start": 0,
    "text": "Ten"
   },
   {
-   "end": 0.96,
-   "start": 0.32,
+   "end": 1.2,
+   "start": 0.4,
    "text": "seconds"
   },
   {
-   "end": 1.68,
-   "start": 1.36,
+   "end": 2.16,
+   "start": 1.84,
    "text": "No"
   },
   {
-   "end": 2.24,
-   "start": 1.68,
+   "end": 3.04,
+   "start": 2.24,
    "text": "plan"
   }
  ],
- "text": "Ten seconds. No plan!"
+ "text": "Ten seconds. No plan."
 }

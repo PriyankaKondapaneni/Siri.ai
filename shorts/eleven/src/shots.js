@@ -16,7 +16,7 @@
     // a character, lit by the scene: breathing, blinking, a soft shadow and a rim of the key light; `talk` lip-syncs
     function char(ctx, t, name, x, y, h, o = {}) {
       let state = o.blink !== false && PP.blinking(t, name + (o.id || '')) && PP.FACES[name]?.eyes?.length ? 'b' : '';
-      if (o.talk) { const fr = Math.round(t * 30), v = Math.max(ENV.live[fr] || 0, ENV.live[fr - 1] || 0); state += v > 0.45 ? 'm2' : v > 0.12 ? 'm1' : ''; }
+      if (o.talk) { const env = ENV[o.talk === true ? 'live' : o.talk] || [], fr = Math.round(t * 30), v = Math.max(env[fr] || 0, env[fr - 1] || 0); state += v > 0.45 ? 'm2' : v > 0.12 ? 'm1' : ''; }
       const breath = o.breath ?? Math.sin(t * 1.5 + name.length) * 0.005;
       PP.drawCut(ctx, name, x, y, h, { sticker: false, shadow: { a: 0.3, dx: 18, dy: 26 }, ...o, state, breath });
     }

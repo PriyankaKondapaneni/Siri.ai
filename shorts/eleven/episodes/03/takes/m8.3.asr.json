@@ -1,0 +1,19 @@
+{
+ "duration": 2.7864375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "708eaca9-b12e-4f62-8441-78e9b2ec2e28",
+ "segments": [
+  {
+   "end": 1.44,
+   "start": 1.04,
+   "text": "Hi"
+  },
+  {
+   "end": 2.4,
+   "start": 1.76,
+   "text": "again"
+  }
+ ],
+ "text": "Hi, again."
+}

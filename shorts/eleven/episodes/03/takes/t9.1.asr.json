@@ -1,12 +1,12 @@
 {
- "duration": 6.0836875,
+ "duration": 5.99075,
  "language": "English",
  "language_code": "en",
- "request_id": "6a53da6b-d636-4bf3-9a32-2ef47f88dbeb",
+ "request_id": "9f9f1799-96b3-42b1-af7b-b4cc57d85bc7",
  "segments": [
   {
    "end": 0.32,
-   "start": 0,
+   "start": 0.08,
    "text": "That"
   },
   {
@@ -15,53 +15,53 @@
    "text": "night"
   },
   {
-   "end": 1.28,
+   "end": 1.36,
    "start": 1.2,
    "text": "at"
   },
   {
-   "end": 1.92,
-   "start": 1.28,
+   "end": 1.84,
+   "start": 1.36,
    "text": "11"
   },
   {
-   "end": 2.56,
-   "start": 1.92,
+   "end": 2.64,
+   "start": 1.84,
    "text": "11"
   },
   {
-   "end": 3.44,
-   "start": 3.28,
+   "end": 3.36,
+   "start": 3.12,
    "text": "it"
   },
   {
-   "end": 4.08,
-   "start": 3.52,
+   "end": 3.92,
+   "start": 3.36,
    "text": "wasn't"
   },
   {
-   "end": 4.32,
-   "start": 4.08,
+   "end": 4.16,
+   "start": 3.92,
    "text": "my"
   },
   {
-   "end": 4.8,
-   "start": 4.32,
+   "end": 4.72,
+   "start": 4.16,
    "text": "phone"
   },
   {
-   "end": 4.96,
-   "start": 4.8,
+   "end": 4.88,
+   "start": 4.72,
    "text": "that"
   },
   {
-   "end": 5.28,
-   "start": 4.96,
+   "end": 5.12,
+   "start": 4.88,
    "text": "lit"
   },
   {
    "end": 5.6,
-   "start": 5.28,
+   "start": 5.12,
    "text": "up"
   }
  ],

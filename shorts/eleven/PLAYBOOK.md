@@ -38,6 +38,19 @@ Every episode must look and sound like a professionally directed short film. Epi
 - **Voices with emotion, never robotic.** Record and assemble at natural speed (`"tempo": 1.0` in the script) with real pauses (`"cap": 0.45`, a 0.25–0.4 s reaction beat between dialogue lines). Give each line a direction with something to play (a nervous laugh, out of breath, voice breaking), kept natural.
 - **Show, don't narrate.** If a beat can be acted on screen (a stolen bite, a laugh), cut the words and show it.
 
+### The standard: a feature anime film (every episode, every shot)
+Work as a master anime director, layout artist, animator and compositor would. Every frame should look like a still from a theatrical anime film, and every second should move like one.
+- **Layout and composition:** every shot is composed in layers (foreground, characters, midground, background) with depth of field. Use the rule of thirds, leading lines (platform edges, rails, light), and negative space for loneliness or tension. Frame through things (a doorway, a train window, a blurred shoulder).
+- **Light and colour like a film:** each scene has a colour script (cool blue dawn platform, warm amber café, cold red for danger, deep blue night). Use soft bloom on bright sources, light rays through windows and doors, rim light on hair, light moving across faces when a train passes, and glows on screens. Shadows and light should agree with the scene's sources.
+- **Animation, not slideshow:** key poses with anticipation, overshoot and settle; holds on key poses for weight; eye darts, blinks and breathing on every visible face; secondary motion in hair, scarves and coats; hands that act.
+- **Every speaker lip-syncs.** Anyone who talks on screen has a mouth moving to their own voice (Kabir from the `live` stem, Mira from the `mira` stem). If a character has no talking art, make a close-up with the mouth closed so a mouth can be painted over it.
+- **Vehicles and machines move like the real thing:** a train arrives with headlights, slows with an ease-out and a little settle, its windows streaming past with motion blur; doors slide open and shut with a chime; it pulls away accelerating. Build these from drawn art (carriage, doors open and closed), never from flat rectangles.
+- **Motion blur and smears for fast motion,** speed lines only for impact, camera shake only for force.
+- **Atmosphere in every frame:** dust in light, steam, rain, breath in cold air, wind, out-of-focus people passing.
+- **Camera like cinema:** slow push-ins on emotion, parallax pans and tracking for travel, rack focus between two faces, a held still for the decisive beat, handheld only in panic.
+- **Design consistency:** every new image uses the existing art of the same place or object as a reference (the same train, the same platform, the same outfits), so nothing changes colour or shape between shots.
+- **Sound tells you what kind of voice you're hearing:** spoken lines are present and centred in the room; inner thoughts are whispered, close and wide, with a soft halo of reverb, so nobody can mistake one for the other.
+
 ### Write it like a professional screenwriter (every episode)
 - **Stakes in the first five seconds.** The viewer knows what can be lost before any setup. Never open on logistics (sleeping, alarms, errands, getting somewhere).
 - **A goal, an obstacle, a ticking clock.** In every episode Mira (or Kabir) wants something now, something is in the way, and time is running out (a departure board, 11:11, a countdown). Show the clock on screen as it runs down.

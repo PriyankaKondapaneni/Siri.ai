@@ -1,28 +1,34 @@
 {
- "duration": 2.6935625,
+ "duration": 4.969125,
+ "language": "English",
  "language_code": "en",
- "request_id": "26e96136-1a36-46c3-9453-f4c39b6876be",
+ "request_id": "2921708d-3ccf-470e-9f2f-41283e801826",
  "segments": [
   {
-   "end": 0.56,
-   "start": 0,
-   "text": "He"
+   "end": 2.32,
+   "start": 2.08,
+   "text": "And"
   },
   {
-   "end": 0.88,
-   "start": 0.56,
+   "end": 2.72,
+   "start": 2.32,
+   "text": "he"
+  },
+  {
+   "end": 3.12,
+   "start": 2.72,
    "text": "had"
   },
   {
-   "end": 1.44,
-   "start": 0.88,
+   "end": 3.84,
+   "start": 3.12,
    "text": "no"
   },
   {
-   "end": 2.32,
-   "start": 1.44,
+   "end": 4.88,
+   "start": 3.84,
    "text": "idea"
   }
  ],
- "text": "He had no idea."
+ "text": "And he had no idea."
 }

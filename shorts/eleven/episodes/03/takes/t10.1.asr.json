@@ -1,11 +1,11 @@
 {
- "duration": 2.74,
+ "duration": 2.7864375,
  "language_code": "en",
- "request_id": "5f4d359c-47fc-4110-bd8c-69f08ae0942e",
+ "request_id": "a7bb2fc3-b3c4-4408-a46b-ea8ac354d296",
  "segments": [
   {
    "end": 0.32,
-   "start": 0,
+   "start": 0.08,
    "text": "Don't"
   },
   {
@@ -29,7 +29,7 @@
    "text": "look"
   },
   {
-   "end": 2.4,
+   "end": 2.32,
    "start": 1.92,
    "text": "up"
   }

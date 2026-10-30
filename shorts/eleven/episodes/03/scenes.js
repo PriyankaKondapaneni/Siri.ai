@@ -111,9 +111,66 @@
     }
   }
 
+  // ---------------------------------------------------------------- the train
+  // TD2 is the train standing at the platform, doors shut; TD1 the same with the doors open; TR1 the side of a
+  // carriage. The train slides in from the right with its headlights leading and slows to a stop with a small
+  // settle; the doors slide open onto the lit carriage and shut again; then it pulls away, accelerating, the
+  // carriages smeared by their speed. Every shot that sees the train draws it from this one timeline.
+  const TR = { in0: C.tenSec + 0.15, in1: C.earring + 0.5, open0: C.hold + 0.35, close0: C.trainOut - 0.75, out0: C.trainOut - 0.05, out1: C.trainOut + 2.6 };
+  const trainX = (t) => {
+    if (t < TR.in0) return 3.2;
+    if (t < TR.in1) return 3.2 * Math.pow(1 - (t - TR.in0) / (TR.in1 - TR.in0), 2.4);
+    if (t < TR.in1 + 0.45) return -0.006 * Math.sin(((t - TR.in1) / 0.45) * Math.PI) ;
+    if (t < TR.out0) return 0;
+    if (t < TR.out1) return -3.2 * Math.pow((t - TR.out0) / (TR.out1 - TR.out0), 2.2);
+    return -3.2;
+  };
+  const trainSpeed = (t) => (trainX(t) - trainX(t - 1 / 30)) * 30;
+  const doorOpen = (t) => kf(t, [[TR.open0, 0], [TR.open0 + 0.6, 1, E.inOut], [TR.close0, 1], [TR.close0 + 0.55, 0, E.inOut]]);
+  function trainSet(ctx, t, cam, o = {}) {
+    const v = o.variant, img = (n) => (v ? PP.bgVariant(n, v) : PP.IMG[n]);
+    const bg = PP.drawBg(ctx, 'TD2', cam, { variant: v });
+    const x = trainX(t), [ax, ay] = bg.map(0, 0), [bx, by] = bg.map(1, 0.725);
+    if (Math.abs(x) < 0.02) {
+      // standing: the doors slide apart onto the warm, empty carriage, and back
+      const f = doorOpen(t);
+      if (f > 0.001) {
+        const [dx0, dy0] = bg.map(0.512 - 0.212 * f, 0.25), [dx1, dy1] = bg.map(0.512 + 0.212 * f, 0.7);
+        PP.with(ctx, () => { ctx.beginPath(); ctx.rect(dx0, dy0, dx1 - dx0, dy1 - dy0); ctx.clip(); PP.drawBg(ctx, 'TD1', cam, { variant: v }); });
+        const [gx, gy] = bg.map(0.512, 0.6); PP.glowAt(ctx, gx, gy, 520 * bg.s, '255,225,170', 0.35 * f);
+        const [fx, fy] = bg.map(0.512, 0.8); PP.glowAt(ctx, fx, fy, 380 * bg.s, '255,225,170', 0.25 * f);
+      }
+      return bg;
+    }
+    // moving: the tunnel wall behind, then the carriages streaming past
+    PP.with(ctx, () => {
+      ctx.beginPath(); ctx.rect(ax, ay, bx - ax, by - ay); ctx.clip();
+      ctx.fillStyle = '#343941'; ctx.fillRect(ax, ay, bx - ax, by - ay);
+      ctx.strokeStyle = 'rgba(255,255,255,0.05)'; ctx.lineWidth = 2;
+      for (let gx = ax; gx < bx; gx += 70 * bg.s) { ctx.beginPath(); ctx.moveTo(gx, ay); ctx.lineTo(gx, by); ctx.stroke(); }
+      const tr = img('TR1'), sy = 0.15 * tr.height, sh = 0.77 * tr.height, dh = by - ay, dw = (tr.width * dh) / sh, cx = (ax + bx) / 2;
+      const vel = trainSpeed(t) * dw, smear = Math.min(260, Math.abs(vel) / 30), left = cx - dw / 2 - 2 * dw + x * dw;
+      const strip = (off, a) => { ctx.globalAlpha = a; for (let k = 0; k < 5; k++) ctx.drawImage(tr, 0, sy, tr.width, sh, left + k * dw + off, ay, dw + 1, dh); };
+      strip(0, 1);
+      if (smear > 3) for (let i = 1; i <= 6; i++) strip(((i / 6) * smear) * Math.sign(vel) * -1, 0.16);
+      ctx.globalAlpha = 1;
+      // the front of the train (arriving, at its left end) with headlights; the rear (leaving) with tail lights
+      const front = x > 0, ex = front ? left : left + 5 * dw;
+      ctx.fillStyle = '#2a2f37'; ctx.strokeStyle = '#1d1a1d'; ctx.lineWidth = 6;
+      ctx.beginPath(); ctx.rect(front ? ex - 90 * bg.s : ex, ay + dh * 0.12, 90 * bg.s, dh * 0.8); ctx.fill(); ctx.stroke();
+      const lx = front ? ex - 50 * bg.s : ex + 50 * bg.s, rgb = front ? '255,244,215' : '255,60,50';
+      for (const ly of [0.72, 0.8]) PP.glowAt(ctx, lx, ay + dh * ly, (front ? 240 : 120) * bg.s, rgb, front ? 0.9 : 0.7);
+    });
+    // light from the passing windows flickering across the platform floor
+    const [fx, fy] = bg.map(0.5, 0.82), sp = Math.min(1, Math.abs(trainSpeed(t)) * 2);
+    PP.glowAt(ctx, fx, fy, 520 * bg.s, '255,230,190', 0.12 + 0.12 * sp * (0.5 + 0.5 * Math.sin(t * 40)));
+    return bg;
+  }
+  const wind = (t) => Math.min(1, Math.abs(trainSpeed(t)) * 1.2);
+
   // ---------------------------------------------------------------- 0. Cold open, built like Episode 2's
   // the buzz and his voice on the first frame: "Don't let me get on the train." the red voice note punching out of a
-  // shake; the board slamming to 6:40; headlights rushing out of the tunnel; her hand flying to her ear; the doors
+  // shake; the board slamming to 6:40; the train's headlights sliding in; her hand flying to her ear; the doors shutting
   const hk = [0, 0.42, 0.86, 1.3, 1.65, C.hookEnd];
   shot(hk[0], hk[1], 'danger', (ctx, t, u) => {
     const [sx, sy, sr] = PP.shake(t, 0, 16, 0.4);
@@ -124,20 +181,16 @@
     PP.with(ctx, () => { ctx.translate(sx, sy); board(ctx, t, 0.3 + u, '6:40', { prev: '6:39', flipAt: hk[1] + 0.02, status: 'BOARDING', red: true }); });
   });
   shot(hk[2], hk[3], 'train', (ctx, t, u) => {
-    const [sx, sy, sr] = PP.shake(t, hk[2], 14, 0.45);
-    PP.with(ctx, () => { ctx.translate(sx, sy); ctx.rotate(sr); platform(ctx, t, lerpCam(u, { x: 0.8, y: 0.42, z: 1.9 }, { x: 0.88, y: 0.42, z: 2.7 }, E.in), { tunnel: 1.2 + 2 * u }); });
-    streaks(ctx, t, u);
+    const [sx, sy, sr] = PP.shake(t, hk[2], 10, 0.45);
+    PP.with(ctx, () => { ctx.translate(sx, sy); ctx.rotate(sr); trainSet(ctx, TR.in0 + 0.3 + (t - hk[2]) * 1.6, lerpCam(u, { x: 0.5, y: 0.42, z: 1.25 }, { x: 0.5, y: 0.42, z: 1.4 }, E.in)); });
   });
   shot(hk[3], hk[4], 'train', (ctx, t, u) => {
-    platform(ctx, t, { x: 0.55, y: 0.45, z: 1.7 }, { variant: 'blur', tunnel: 1.5 });
+    trainSet(ctx, TR.in1 + 0.6, { x: 0.5, y: 0.45, z: 1.6 }, { variant: 'blur' });
     const up = OB(PP.clamp(u * 2.4));
     char(ctx, t, 'M13', 540, 2300 + 140 * (1 - up), 3000, { id: 'hk', blink: false, rot: 0.03 * (1 - up), sway: { amp: 10, t, from: 0, to: 0.5, speed: 7 }, rim: { ...RIM, dx: 7 } });
-    sweep(ctx, u, 0.35);
   });
   shot(hk[4], hk[5], 'train', (ctx, t, u) => {
-    platform(ctx, t, { x: 0.45, y: 0.45, z: 1.35 }, { variant: 'blur', tunnel: 1 });
-    doors(ctx, 1 - E.in(PP.clamp(u * 1.6)), 0.9);
-    streaks(ctx, t, PP.clamp(u * 2) * 0.6);
+    trainSet(ctx, TR.close0 + 0.1 + u * 0.5, { x: 0.5, y: 0.45, z: 1.3 });
   });
 
   // ---------------------------------------------------------------- 1. Platform four, 6:31: nine minutes
@@ -151,6 +204,7 @@
     platform(ctx, t, lerpCam(u, { x: 0.3, y: 0.46, z: 1.25 }, { x: 0.62, y: 0.46, z: 1.25 }, (x) => x));
     const step = Math.abs(Math.sin(t * 8.5)), look = Math.sin(t * 2.2) * 0.03;
     char(ctx, t, 'M8', PP.lerp(260, 640, u), 2040 - 18 * step, 1500, { rot: Math.sin(t * 8.5) * 0.018 + look, breath: 0, sway: { amp: 9, t, from: 0, to: 0.5, speed: 6 }, rim: { ...RIM, dx: 5 } });
+    PP.dust(ctx, t, [0, 300, W, 1200], 26, '220,235,255');
   });
   shot(C.irony, line('k1').s - 0.1, 'train', (ctx, t, u) => {
     // "...and he had no idea." calm, reading, turning a page
@@ -159,12 +213,39 @@
     char(ctx, t, 'K12', 560, 2000, 1900, { id: 'rd', rot: 0.014 * Math.sin(page * Math.PI), breath: Math.sin(t * 1.5) * 0.006, rim: { ...RIM, dx: -6 } });
     PP.dust(ctx, t, [0, 300, W, 1200], 30, '220,235,255');
   });
+
+  // ---------------------------------------------------------------- 2. The conversation: shot / reverse shot, both lip-synced
   // "You again." a dip, the lift, settling
-  shot(line('k1').s - 0.1, line('t3').s - 0.1, 'train', (ctx, t, u) => {
+  shot(line('k1').s - 0.1, line('m8').s - 0.1, 'train', (ctx, t, u) => {
     platform(ctx, t, { x: 0.38, y: 0.42, z: 1.5 }, { variant: 'blur' });
     const y = kf(t, [[line('k1').s - 0.1, 950], [line('k1').s + 0.05, 962, E.out], [line('k1').s + 0.45, 905, OB]]);
     char(ctx, t, 'K4', 600, y, 2150 * (1 + u * 0.04), { id: 'k1', anchor: [0.53, 0.42], talk: true, rim: { ...RIM, dx: -7 } });
-    foreground(ctx, 'M8', -180 + Math.sin(t * 1.2) * 12, 2300, 2500, { blur: 20, bright: 0.45 });
+    foreground(ctx, 'M14', -170 + Math.sin(t * 1.2) * 12, 2350, 2500, { blur: 20, bright: 0.45 });
+  });
+  // "Hi... again." a small, embarrassed tilt of her head, a blush
+  const miraTalk = (ctx, t, u, id, o = {}) => {
+    const h = o.h ?? 2500, x = 540 + (o.dx ?? 0), y = (o.y ?? 2120) + (o.dy ?? 0);
+    char(ctx, t, 'M14', x, y, h * (1 + u * 0.04), { id, talk: 'mira', rot: o.rot ?? 0, sway: { amp: o.sway ?? 4, t, from: 0, to: 0.45, speed: o.speed ?? 2.5 }, rim: { ...RIM, dx: 7 }, light: o.light });
+    if (o.blush) for (const [cu, cv] of [[0.4, 0.4], [0.66, 0.38]]) { const [bx, by] = onCut('M14', x, y, h * (1 + u * 0.04), [0.5, 1], cu, cv); PP.glowAt(ctx, bx, by, 70, '255,120,120', 0.3 * o.blush); }
+  };
+  shot(line('m8').s - 0.1, line('k11').s - 0.1, 'train', (ctx, t, u) => {
+    platform(ctx, t, { x: 0.62, y: 0.45, z: 1.55 }, { variant: 'blur' });
+    const tilt = tl(t, line('m8').s, line('m8').s + 0.5, OB);
+    miraTalk(ctx, t, u, 'm8', { rot: 0.04 * tilt, dy: 10 * tilt, blush: tilt });
+    foreground(ctx, 'K4', 1260, 2350, 2600, { blur: 22, bright: 0.4 });
+  });
+  // "Do you take this train too?" curious; leaning a little
+  shot(line('k11').s - 0.1, line('m9').s - 0.1, 'train', (ctx, t, u) => {
+    platform(ctx, t, { x: 0.4, y: 0.42, z: 1.55 }, { variant: 'blur' });
+    const lean = tl(t, line('k11').s, line('k11').s + 0.6, OB);
+    char(ctx, t, 'K4', 590 - 20 * lean, 905, 2200 * (1 + 0.04 * lean), { id: 'k11', anchor: [0.53, 0.42], rot: 0.035 * lean, talk: true, rim: { ...RIM, dx: -7 } });
+    foreground(ctx, 'M14', -170, 2350, 2500, { blur: 20, bright: 0.45 });
+  });
+  // "Every day." too fast; a quick nod; her eyes slide away
+  shot(line('m9').s - 0.1, line('t3').s - 0.1, 'train', (ctx, t, u) => {
+    platform(ctx, t, { x: 0.62, y: 0.45, z: 1.6 }, { variant: 'blur' });
+    const nod = Math.sin(tl(t, line('m9').s, line('m9').s + 0.35, (x) => x) * Math.PI), away = tl(t, line('m9').e - 0.1, line('m9').e + 0.4, OB);
+    miraTalk(ctx, t, u, 'm9', { h: 2650, dy: 18 * nod, dx: 24 * away, rot: 0.05 * away, blush: 0.6 });
   });
   // "I'd never taken this train in my life." she sits at the far end of his bench; steals a glance; looks away fast
   shot(line('t3').s - 0.1, C.board38, 'train', (ctx, t, u) => {
@@ -173,52 +254,56 @@
     const sit = tl(t, line('t3').s - 0.1, line('t3').s + 0.5, OB);
     const glance = kf(t, [[word('t3', 'never') - 0.2, 0], [word('t3', 'never') + 0.1, 1, OB], [word('t3', 'life') - 0.1, 1], [word('t3', 'life') + 0.15, 0, E.out]]);
     char(ctx, t, 'M8', 300, 2110 - 60 * sit, 1450, { rot: 0.06 * glance, breath: Math.sin(t * 2) * 0.007, rim: { ...RIM, dx: 5 } });
+    PP.dust(ctx, t, [0, 300, W, 1200], 22, '220,235,255');
   });
 
-  // ---------------------------------------------------------------- 2. 6:38. "Well. That's mine."
+  // ---------------------------------------------------------------- 3. 6:38. "Well. That's mine."
   shot(C.board38, line('k3').s - 0.1, 'train', (ctx, t, u) => {
-    const second = t > C.board38 + 0.45;
-    board(ctx, t, u, second ? '6:39' : '6:38', { prev: second ? '6:38' : '6:37', flipAt: second ? C.board38 + 0.45 : C.board38 + 0.05, status: 'ARRIVING' });
+    const second = t > C.board38 + 0.4;
+    board(ctx, t, u, second ? '6:39' : '6:38', { prev: second ? '6:38' : '6:37', flipAt: second ? C.board38 + 0.4 : C.board38 + 0.05, status: 'ARRIVING' });
   });
   shot(line('k3').s - 0.1, C.tenSec, 'train', (ctx, t, u) => {
-    // he stands, tucks the book into his coat, turns toward the train as its light finds him
+    // he stands, tucks the book into his coat, turns toward the tunnel as its light finds him
     platform(ctx, t, { x: 0.4, y: 0.42, z: 1.5 }, { variant: 'blur', tunnel: 0.6 + 1.6 * u });
     const s0 = line('k3').s - 0.1, y = kf(t, [[s0, 1010], [s0 + 0.18, 1030, E.out], [s0 + 0.65, 900, OB]]);
     const turn = tl(t, word('k3', "that's") - 0.15, word('k3', "that's") + 0.45);
     char(ctx, t, 'K4', 600 + 50 * turn, y, 2150, { id: 'k3', anchor: [0.53, 0.42], rot: -0.05 * turn, talk: true, sway: { amp: 3 + 6 * u, t, from: 0, to: 0.3 }, light: { x: 0.95, y: 0.4, r: 0.8, color: `rgba(255,240,210,${0.4 * u})` }, rim: { ...RIM, dx: -7 } });
   });
 
-  // ---------------------------------------------------------------- 3. "Ten seconds. No plan." then the idea
+  // ---------------------------------------------------------------- 4. "Ten seconds. No plan." the train slides in behind her
   const planCut = word('t4', 'no') - 0.08;
   shot(C.tenSec, planCut, 'danger', (ctx, t, u) => {
     board(ctx, t, u, '6:40', { prev: '6:39', flipAt: C.tenSec + 0.02, status: 'BOARDING', red: true });
   });
   shot(planCut, C.earring, 'train', (ctx, t, u) => {
-    // close on her: wind from the train in her hair, eyes darting; then it lands on her, the idea
-    const [hx, hy, hr] = PP.handheld(t, 7, 95);
-    PP.with(ctx, () => { ctx.translate(hx, hy); ctx.rotate(hr);
-      platform(ctx, t, { x: 0.6, y: 0.45, z: 1.6 }, { variant: 'blur', tunnel: 2 });
-      streaks(ctx, t, 0.45);
-      const dart = t < C.idea ? Math.sign(Math.sin(t * 9)) * 0.025 : 0;
-      char(ctx, t, 'M6', 540, 860, 3500 * (1 + u * 0.08), { id: 'dt', blink: false, anchor: [0.55, 0.35], rot: dart, sway: { amp: 20, t, from: 0, to: 0.5, speed: 9 }, rim: { ...RIM, dx: 7 }, light: { x: 0.9, y: 0.4, r: 0.6, color: 'rgba(255,240,210,0.3)' } });
-    });
-    if (t > C.idea) PP.glowAt(ctx, 330, 700, 160, '255,230,170', 0.35 * Math.sin(PP.clamp((t - C.idea) / 0.4) * Math.PI));
+    // close on her; behind her the carriages stream in and slow; the wind tugs her hair; her eyes dart; then the idea
+    trainSet(ctx, t, lerpCam(u, { x: 0.62, y: 0.42, z: 1.12 }, { x: 0.6, y: 0.42, z: 1.18 }), { variant: 'soft' });
+    const dart = t < C.idea ? Math.sign(Math.sin(t * 9)) * 0.022 : 0;
+    char(ctx, t, 'M6', 330, 1000, 2500 * (1 + u * 0.06), { id: 'dt', blink: false, anchor: [0.55, 0.35], rot: dart, sway: { amp: 6 + 22 * wind(t), t, from: 0, to: 0.5, speed: 9 }, rim: { ...RIM, dx: 7 }, light: { x: 0.9, y: 0.4, r: 0.6, color: 'rgba(255,240,210,0.3)' } });
+    if (t > C.idea) PP.glowAt(ctx, 200, 860, 140, '255,230,170', 0.35 * Math.sin(PP.clamp((t - C.idea) / 0.4) * Math.PI));
   });
 
-  // ---------------------------------------------------------------- 4. "Oh no... my earring!"
+  // ---------------------------------------------------------------- 5. "Oh no... my earring!"
   shot(C.earring, C.kneel, 'train', (ctx, t, u) => {
-    // her hand flies to her ear; she drops down toward the floor
-    platform(ctx, t, { x: 0.55, y: 0.45, z: 1.5 }, { variant: 'blur', tunnel: 1.6 });
-    const up = OB(tl(t, C.earring, C.earring + 0.35, (x) => x)), drop = E.in(tl(t, C.kneel - 0.45, C.kneel, (x) => x));
-    char(ctx, t, 'M13', 540, 2150 + 120 * (1 - up) + 500 * drop, 2500, { rot: 0.03 * (1 - up) - 0.04 * drop, sway: { amp: 8, t, from: 0, to: 0.5, speed: 7 }, rim: { ...RIM, dx: 7 } });
+    // her hand flies to her ear; then she drops down toward the floor
+    trainSet(ctx, t, { x: 0.6, y: 0.45, z: 1.25 }, { variant: 'soft' });
+    const up = OB(tl(t, C.earring, C.earring + 0.35, (x) => x)), drop = E.in(tl(t, C.kneel - 0.4, C.kneel, (x) => x));
+    char(ctx, t, 'M13', 420, 2150 + 120 * (1 - up) + 500 * drop, 2200, { talk: 'mira', rot: 0.03 * (1 - up) - 0.04 * drop, sway: { amp: 4 + 10 * wind(t), t, from: 0, to: 0.5, speed: 7 }, rim: { ...RIM, dx: 7 } });
   });
-  // "Don't move. What does it look like?" he turns straight back, already crouching down to her
+  // "Don't move. What does it look like?" he turns straight back from the doors and crouches down to her
   shot(C.kneel, C.search, 'train', (ctx, t, u) => {
-    platform(ctx, t, { x: 0.4, y: 0.42, z: 1.6 }, { variant: 'blur', tunnel: 1.8 });
+    trainSet(ctx, t, { x: 0.45, y: 0.42, z: 1.6 }, { variant: 'blur' });
     const turn = OB(tl(t, C.kneel, C.kneel + 0.45, (x) => x)), down = tl(t, C.kneel + 0.2, C.kneel + 0.9, OB);
-    char(ctx, t, 'K4', PP.lerp(700, 570, turn), 880 + 120 * down, 2300, { id: 'k8', anchor: [0.53, 0.42], rot: PP.lerp(-0.1, 0.02, turn), talk: true, light: { x: 0.95, y: 0.4, r: 0.8, color: 'rgba(255,240,210,0.3)' }, rim: { ...RIM, dx: -7 } });
+    char(ctx, t, 'K4', PP.lerp(700, 570, turn), 880 + 120 * down, 2300, { id: 'k8', anchor: [0.53, 0.42], rot: PP.lerp(-0.1, 0.02, turn), talk: true, rim: { ...RIM, dx: -7 } });
   });
-  // the torch beam sweeping the floor under the bench
+  // "Small. Gold. A little flower." flustered, inventing it as she goes
+  const flowerCut = word('m6', 'little') - 0.1;
+  shot(C.search, flowerCut, 'train', (ctx, t, u) => {
+    trainSet(ctx, t, { x: 0.55, y: 0.45, z: 1.6 }, { variant: 'blur' });
+    const beats = ['small', 'gold'].map((w) => Math.sin(tl(t, word('m6', w) - 0.05, word('m6', w) + 0.3, (x) => x) * Math.PI));
+    miraTalk(ctx, t, u, 'm6', { h: 2600, y: 2350, dy: 14 * (beats[0] + beats[1]), rot: 0.02 * (beats[0] - beats[1]), blush: 0.5 });
+  });
+  // the torch beam sweeping the floor
   function torch(ctx, x, y, ang, a = 1) {
     PP.with(ctx, () => {
       ctx.globalCompositeOperation = 'screen';
@@ -228,54 +313,50 @@
       PP.glowAt(ctx, x + Math.cos(ang) * 420, y + Math.sin(ang) * 420, 200, '255,250,235', 0.6 * a);
     });
   }
-  // the kneeling two-shot: searching together, his torch sweeping, her secret glance at him
+  // the two of them kneeling on the platform floor, the train behind them; his torch sweeping; her secret glance
   const kneelShot = (ctx, t, u, o = {}) => {
-    platform(ctx, t, lerpCam(u, { x: 0.5, y: 0.55, z: o.z0 ?? 1.3 }, { x: 0.5, y: 0.56, z: o.z1 ?? 1.38 }), { variant: 'soft', tunnel: o.tunnel ?? 0 });
-    PP.with(ctx, () => { ctx.fillStyle = 'rgba(6,10,18,0.32)'; ctx.fillRect(0, 0, W, H); });
-    if (o.streaks) streaks(ctx, t, o.streaks);
+    trainSet(ctx, t, lerpCam(u, { x: 0.5, y: 0.6, z: o.z0 ?? 1.3 }, { x: 0.5, y: 0.61, z: o.z1 ?? 1.38 }), { variant: 'soft' });
+    PP.with(ctx, () => { ctx.fillStyle = 'rgba(6,10,18,0.22)'; ctx.fillRect(0, 0, W, H); });
     const h = 1800, x = 540, y = 1960, sw = Math.sin(t * 1.7) * 0.3;
-    char(ctx, t, 'MK4', x, y, h, { breath: Math.sin(t * 2) * 0.006, rot: Math.sin(t * 0.9) * 0.006, rim: { ...RIM, dx: 6 }, light: { x: 0.55, y: 0.8, r: 0.5, color: 'rgba(255,250,235,0.25)' } });
+    char(ctx, t, 'MK4', x, y, h, { breath: Math.sin(t * 2) * 0.006, rot: Math.sin(t * 0.9) * 0.006, sway: { amp: 3 + 12 * wind(t), t, from: 0, to: 0.35, speed: 6 }, rim: { ...RIM, dx: 6 }, light: { x: 0.55, y: 0.8, r: 0.5, color: 'rgba(255,250,235,0.25)' } });
     const [px, py] = onCut('MK4', x, y, h, [0.5, 1], 0.6, 0.83);
     torch(ctx, px, py + 20, Math.PI * 0.82 + sw, 1);
   };
-  shot(C.search, C.hold, 'train', (ctx, t, u) => kneelShot(ctx, t, u, { tunnel: 1.2 + u }));
+  shot(flowerCut, C.hold, 'train', (ctx, t, u) => kneelShot(ctx, t, u));
 
-  // ---------------------------------------------------------------- 5. "Don't look up. Don't look up." the train comes and goes behind them
+  // ---------------------------------------------------------------- 6. "Don't look up. Don't look up." the doors open, wait, and close
   shot(C.hold, C.doors, 'night', (ctx, t, u) => {
-    // her face, very close, breath held; the train's light rakes across her
-    platform(ctx, t, { x: 0.5, y: 0.5, z: 1.8 }, { variant: 'blur', tunnel: 2 });
-    PP.with(ctx, () => { ctx.fillStyle = 'rgba(0,0,0,0.2)'; ctx.fillRect(0, 0, W, H); });
+    // her face, very close, breath held; the open doors' warm light spilling across her
+    trainSet(ctx, t, { x: 0.5, y: 0.5, z: 1.8 }, { variant: 'blur' });
+    PP.with(ctx, () => { ctx.fillStyle = 'rgba(0,0,0,0.18)'; ctx.fillRect(0, 0, W, H); });
     const side = kf(t, [[C.hold, 0], [C.hold + 0.4, 1, OB], [C.doors - 0.3, 1], [C.doors - 0.05, 0.4, E.out]]);
-    char(ctx, t, 'M6', 540 - 26 * side, 880, 3800 * (1 + u * 0.08), { id: 'hd', blink: false, anchor: [0.55, 0.35], rot: 0.03 * side, breath: 0, sway: { amp: 6, t, from: 0, to: 0.45, speed: 4 }, rim: { ...RIM, dx: 8 } });
-    sweep(ctx, u, 0.35);
+    char(ctx, t, 'M6', 540 - 26 * side, 880, 3800 * (1 + u * 0.08), { id: 'hd', blink: false, anchor: [0.55, 0.35], rot: 0.03 * side, breath: 0, sway: { amp: 5, t, from: 0, to: 0.45, speed: 4 }, rim: { ...RIM, dx: 8 }, light: { x: 0.3, y: 0.4, r: 0.8, color: `rgba(255,220,170,${0.3 * doorOpen(t)})` } });
   });
   shot(C.doors, C.trainOut, 'train', (ctx, t, u) => {
-    // over their heads: the doors open, chime, and close on an empty space
-    platform(ctx, t, { x: 0.45, y: 0.42, z: 1.35 }, { variant: 'blur', tunnel: 1 });
-    const open = kf(t, [[C.doors, 0.2], [C.doors + 0.25, 1, E.out], [C.trainOut - 0.55, 1], [C.trainOut - 0.05, 0, E.in]]);
-    doors(ctx, open, 0.9);
+    // over their heads: the doors stand open on nobody, chime, and slide shut
+    trainSet(ctx, t, lerpCam(u, { x: 0.5, y: 0.45, z: 1.15 }, { x: 0.5, y: 0.45, z: 1.22 }));
+    PP.dust(ctx, t, [200, 400, 700, 900], 20, '255,235,200');
   });
-  shot(C.trainOut, C.sorry, 'train', (ctx, t, u) => kneelShot(ctx, t, u, { z0: 1.18, z1: 1.3, streaks: PP.clamp(1 - u * 0.9) * 0.6 }));
+  shot(C.trainOut, C.sorry, 'train', (ctx, t, u) => kneelShot(ctx, t, u, { z0: 1.18, z1: 1.3 }));
 
-  // ---------------------------------------------------------------- 6. "I can't find it." / "Maybe it was never here."
+  // ---------------------------------------------------------------- 7. "I can't find it." / "Maybe it was never here." / "...And there goes my train."
   shot(C.sorry, C.neverHere, 'train', (ctx, t, u) => {
-    // he sits back on his heels, sorry, the torch dropping
-    platform(ctx, t, { x: 0.4, y: 0.42, z: 1.6 }, { variant: 'blur' });
+    // he sits back on his heels, sorry, the torch dropping; behind him the last carriage goes
+    trainSet(ctx, t, { x: 0.45, y: 0.42, z: 1.6 }, { variant: 'blur' });
     const back = tl(t, C.sorry, C.sorry + 0.6, OB);
-    char(ctx, t, 'K4', 570, 1000 - 40 * back, 2300 * (1 + u * 0.04), { id: 'k9', anchor: [0.53, 0.42], rot: -0.02 * back, talk: true, light: { x: 0.5, y: 0.9, r: 0.6, color: 'rgba(255,250,235,0.3)' }, rim: { ...RIM, dx: -7 } });
-    foreground(ctx, 'M8', -200, 2400, 2500, { blur: 20, bright: 0.45 });
+    char(ctx, t, 'K4', 570, 1000 - 40 * back, 2300 * (1 + u * 0.04), { id: 'k9', anchor: [0.53, 0.42], rot: -0.02 * back, talk: true, sway: { amp: 2 + 8 * wind(t), t, from: 0, to: 0.3 }, light: { x: 0.5, y: 0.9, r: 0.6, color: 'rgba(255,250,235,0.3)' }, rim: { ...RIM, dx: -7 } });
+    foreground(ctx, 'M14', -200, 2400, 2500, { blur: 20, bright: 0.45 });
   });
   shot(C.neverHere, C.tracks, 'train', (ctx, t, u) => {
-    // she, gently, with a secret in it; a small smile and a blush she can't help
-    platform(ctx, t, { x: 0.62, y: 0.45, z: 1.6 }, { variant: 'blur' });
-    const h = 2500, tilt = tl(t, word('m7', 'maybe') - 0.2, word('m7', 'maybe') + 0.5);
-    char(ctx, t, 'M9', 540, 960 + 10 * tilt, h * (1 + u * 0.05), { id: 'nh', anchor: [0.56, 0.39], rot: 0.03 * tilt, rim: { ...RIM, dx: 7 }, light: { x: 0.8, y: 0.35, r: 0.7, color: 'rgba(255,215,170,0.2)' } });
-    for (const [cu, cv] of [[0.46, 0.46], [0.66, 0.44]]) { const [bx, by] = onCut('M9', 540, 960 + 10 * tilt, h * (1 + u * 0.05), [0.56, 0.39], cu, cv); PP.glowAt(ctx, bx, by, 70, '255,120,120', 0.25 * tilt); }
+    // gently, with a secret in it
+    trainSet(ctx, t, { x: 0.55, y: 0.45, z: 1.6 }, { variant: 'blur' });
+    const tilt = tl(t, word('m7', 'maybe') - 0.2, word('m7', 'maybe') + 0.5, OB);
+    miraTalk(ctx, t, u, 'm7', { h: 2600, y: 2350, rot: 0.03 * tilt, dy: 8 * tilt, blush: 0.4 + 0.5 * tilt });
     foreground(ctx, 'K4', 1260, 2400, 2600, { blur: 22, bright: 0.4 });
   });
-  // "...And there goes my train." he looks over his shoulder at the empty track, then back, laughing at himself
   shot(C.tracks, C.pocket, 'train', (ctx, t, u) => {
-    platform(ctx, t, { x: 0.45, y: 0.42, z: 1.55 }, { variant: 'blur' });
+    // he looks over his shoulder at the empty track, then back, laughing at himself
+    trainSet(ctx, t, { x: 0.45, y: 0.42, z: 1.55 }, { variant: 'blur' });
     const look = kf(t, [[C.tracks, 0], [C.tracks + 0.4, 1, OB], [word('k10', 'goes') - 0.1, 1], [word('k10', 'goes') + 0.35, 0, E.out]]);
     const laugh = Math.abs(Math.sin(t * 12)) * -9 * tl(t, word('k10', 'train'), word('k10', 'train') + 0.3);
     char(ctx, t, 'K4', 570 + 70 * look, 930 + laugh, 2250, { id: 'k10', anchor: [0.53, 0.42], rot: -0.08 * look, talk: true, rim: { ...RIM, dx: -7 } });
@@ -333,15 +414,15 @@
   });
 
   // ---------------------------------------------------------------- 9. "You knew. Didn't you?" / "I couldn't tell him. Not yet."
-  shot(line('k5').s - 0.1, line('t8').s - 0.1, 'cold', (ctx, t, u) => {
+  shot(line('k5').s - 0.1, line('k5').e + 0.2, 'cold', (ctx, t, u) => {
     cafe(ctx, t, { x: 0.4, y: 0.45, z: 1.6 }, 'blur', 0.3);
     const up = tl(t, line('k5').s - 0.1, line('k5').s + 0.8, E.out);
     char(ctx, t, 'K3', 600, 950 - 50 * up, 2150 * (1 + u * 0.08), { id: 'k5', anchor: [0.52, 0.42], rot: 0.035 * (1 - up), talk: true, blink: false, rim: { ...RIM, dx: -7 } });
     foreground(ctx, 'M1', -200, 2300, 2500, { blur: 20, bright: 0.45 });
   });
-  shot(line('t8').s - 0.1, C.night, 'cold', (ctx, t, u) => {
+  shot(line('k5').e + 0.2, C.night, 'cold', (ctx, t, u) => {
     cafe(ctx, t, { x: 0.65, y: 0.45, z: 1.6 }, 'blur', 0.3);
-    const away = tl(t, line('t8').s, line('t8').s + 0.9, OB);
+    const away = tl(t, line('k5').e + 0.3, line('k5').e + 1.2, OB);
     char(ctx, t, 'M6', 500 - 50 * away, 870 + 34 * away, 2300 * (1 + u * 0.05), { anchor: [0.55, 0.35], rot: -0.06 * away, breath: Math.sin(t * 2.4) * 0.008, rim: { ...RIM, dx: 7 } });
     foreground(ctx, 'K3', 1250, 2350, 2600, { blur: 22, bright: 0.4 });
   });

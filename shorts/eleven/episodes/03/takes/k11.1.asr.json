@@ -1,0 +1,39 @@
+{
+ "duration": 1.8111875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "9e60085d-e8e8-4de1-9775-d522d9e94fd5",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "Do"
+  },
+  {
+   "end": 0.32,
+   "start": 0.16,
+   "text": "you"
+  },
+  {
+   "end": 0.64,
+   "start": 0.32,
+   "text": "take"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "this"
+  },
+  {
+   "end": 1.2,
+   "start": 0.8,
+   "text": "train"
+  },
+  {
+   "end": 1.6,
+   "start": 1.2,
+   "text": "too"
+  }
+ ],
+ "text": "Do you take this train too?"
+}

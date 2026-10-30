@@ -2,20 +2,20 @@
  "duration": 3.6688125,
  "language": "English",
  "language_code": "en",
- "request_id": "20c0f29a-7e87-4ef9-a315-60e11983483c",
+ "request_id": "0a3b1455-9ea1-4558-92da-279d073e2fbc",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0.08,
+   "end": 0.24,
+   "start": 0,
    "text": "I'd"
   },
   {
-   "end": 0.8,
-   "start": 0.32,
+   "end": 0.72,
+   "start": 0.4,
    "text": "never"
   },
   {
-   "end": 1.28,
+   "end": 1.2,
    "start": 0.8,
    "text": "taken"
   },
@@ -25,23 +25,23 @@
    "text": "this"
   },
   {
-   "end": 1.84,
+   "end": 1.92,
    "start": 1.44,
    "text": "train"
   },
   {
-   "end": 2.08,
-   "start": 1.92,
+   "end": 2.16,
+   "start": 2,
    "text": "in"
   },
   {
-   "end": 2.24,
-   "start": 2.08,
+   "end": 2.4,
+   "start": 2.16,
    "text": "my"
   },
   {
-   "end": 3.12,
-   "start": 2.24,
+   "end": 3.2,
+   "start": 2.88,
    "text": "life"
   }
  ],

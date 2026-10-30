@@ -20,16 +20,18 @@
    "id": "t1",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, hushed, heart racing] Six thirty-one. Nine minutes.",
+   "text": "[whispering, hushed, heart racing] Six thirty-one. Nine minutes.",
    "show": "6:31. Nine minutes.",
-   "gap": 0.45
+   "gap": 0.45,
+   "cap": 0.22
   },
   {
    "id": "t2",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, a dry, almost bitter little laugh] ...and he had no idea.",
-   "gap": 0.35
+   "text": "[whispering, a dry, almost bitter little laugh] ...and he had no idea.",
+   "gap": 0.3,
+   "cap": 0.22
   },
   {
    "id": "k1",
@@ -39,25 +41,48 @@
    "gap": 0.35
   },
   {
+   "id": "m8",
+   "who": "mira",
+   "kind": "live",
+   "text": "[a small, embarrassed smile] Hi... again.",
+   "gap": 0.3
+  },
+  {
+   "id": "k11",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[curious, friendly] Do you take this train too?",
+   "gap": 0.3
+  },
+  {
+   "id": "m9",
+   "who": "mira",
+   "kind": "live",
+   "text": "[too quickly] Every day.",
+   "gap": 0.25
+  },
+  {
    "id": "t3",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, hushed, embarrassed] I'd never taken this train in my life.",
-   "gap": 0.35
+   "text": "[whispering, hushed, embarrassed] I'd never taken this train in my life.",
+   "gap": 0.3,
+   "cap": 0.22
   },
   {
    "id": "k3",
    "who": "kabir",
    "kind": "live",
    "text": "[standing up, easy] Well. That's mine.",
-   "gap": 0.8
+   "gap": 0.6
   },
   {
    "id": "t4",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, breathless, panicking] Ten seconds. No plan.",
-   "gap": 0.3
+   "text": "[whispering, breathless, panicking] Ten seconds. No plan.",
+   "gap": 0.3,
+   "cap": 0.22
   },
   {
    "id": "m5",
@@ -84,7 +109,7 @@
    "id": "t10",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, holding her breath, hushed] Don't look up. Don't look up.",
+   "text": "[whispering, holding her breath, hushed] Don't look up. Don't look up.",
    "gap": 0.45
   },
   {
@@ -92,7 +117,7 @@
    "who": "kabir",
    "kind": "live",
    "text": "[sitting back, apologetic] I can't find it. I'm sorry.",
-   "gap": 1.6
+   "gap": 1.15
   },
   {
    "id": "m7",
@@ -112,23 +137,26 @@
    "id": "t11",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, soft, a guilty little smile] The earring was in my pocket the whole time.",
-   "gap": 0.45
+   "text": "[whispering, soft, a guilty little smile] The earring was in my pocket the whole time.",
+   "gap": 0.35,
+   "cap": 0.22
   },
   {
    "id": "t6",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, low] Forty minutes later, every phone in the café lit up at once.",
-   "gap": 0.9
+   "text": "[whispering, low] Forty minutes later, every phone in the café lit up at once.",
+   "gap": 0.7,
+   "cap": 0.22
   },
   {
    "id": "t7",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, shaken] The six-forty never made it to the next station.",
+   "text": "[whispering, shaken] The six-forty never made it to the next station.",
    "show": "The 6:40 never made it to the next station.",
-   "gap": 0.3
+   "gap": 0.3,
+   "cap": 0.22
   },
   {
    "id": "k5",
@@ -138,19 +166,13 @@
    "gap": 0.35
   },
   {
-   "id": "t8",
-   "who": "mira",
-   "kind": "narr",
-   "text": "[inner voice, hesitant, hushed] I couldn't tell him. Not yet.",
-   "gap": 0.35
-  },
-  {
    "id": "t9",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, uneasy] That night, at eleven eleven... it wasn't my phone that lit up.",
+   "text": "[whispering, uneasy] That night, at eleven eleven... it wasn't my phone that lit up.",
    "show": "That night, at 11:11… it wasn't my phone that lit up.",
-   "gap": 0.5
+   "gap": 0.45,
+   "cap": 0.22
   },
   {
    "id": "k6",

@@ -1,0 +1,19 @@
+{
+ "duration": 1.300375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "3854c961-8be9-4549-aee0-19c0930592c3",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0.08,
+   "text": "Every"
+  },
+  {
+   "end": 1.04,
+   "start": 0.4,
+   "text": "day"
+  }
+ ],
+ "text": "Every day."
+}
