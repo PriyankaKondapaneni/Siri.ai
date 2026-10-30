@@ -60,20 +60,20 @@ Part 3 tomorrow at 11:11. Follow so you don't miss it.
 ### Episode 3: "The 6:40 Train"
 - **Publish:** Sun 01 Nov 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-03.mp4` · cover `11-11-episode-03-cover.jpg`
-- **Title:** I spilled coffee on him to save his life… #shorts
+- **Title:** I begged a stranger to miss his train… it never reached the next station. #shorts
 - **Description:**
 
 ```
-He told me not to let him get on the train.
-I brought him two coffees… then "tripped." Both went all over him. ☕
-An hour later, the 6:40 train never made it to the next station.
+Nine minutes to keep him off the 6:40 train. And I couldn't tell him why.
+So I asked him to miss it. Just this once. 🚉
+Forty minutes later, the 6:40 never made it to the next station.
 And that night… his phone lit up with MY voice. 😳
 Part 4 tomorrow at 11:11. Follow so you don't miss it.
 
 #1111 #romance #animatedstory #webtoon #animation #lovestory #mystery #storytime #anime #shorts #reels #fyp
 ```
 
-- **Pinned comment:** Should she tell him the truth? 👀
+- **Pinned comment:** Would you have stayed? 👀
 
 ### Episode 4: "Her Voice"
 - **Publish:** Mon 02 Nov 2026, 11:11 AM IST
