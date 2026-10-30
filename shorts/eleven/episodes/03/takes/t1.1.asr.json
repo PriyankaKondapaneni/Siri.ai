@@ -1,0 +1,28 @@
+{
+ "duration": 3.6688125,
+ "language_code": "en",
+ "request_id": "85f40f93-a248-4891-9bcf-ad4381e8953f",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0,
+   "text": "6"
+  },
+  {
+   "end": 1.44,
+   "start": 0.64,
+   "text": "31"
+  },
+  {
+   "end": 2.64,
+   "start": 2.08,
+   "text": "Nine"
+  },
+  {
+   "end": 3.28,
+   "start": 2.64,
+   "text": "minutes"
+  }
+ ],
+ "text": "6:31. Nine minutes."
+}

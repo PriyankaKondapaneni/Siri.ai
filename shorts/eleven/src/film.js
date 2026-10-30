@@ -73,6 +73,10 @@
   PP.subtitle = function (ctx, ch, t, y = 1500) {
     const a = Math.min(PP.clamp((t - ch.s) / 0.12), PP.clamp((ch.e - t) / 0.15));
     if (a <= 0) return;
+    // Mira's inner voice (narration) reads as a thought: smaller, italic, warm cream, a little higher in the frame;
+    // what anyone says out loud stays bold white at the bottom
+    const thought = ch.kind === 'narr';
+    if (thought) y -= 120;
     const text = ch.words.map((w) => w.w).join(' ').replace(/\.\.\./g, '…');
     // a soft dark band behind the line keeps it readable over bright frames
     PP.with(ctx, () => {
@@ -82,11 +86,11 @@
     });
     PP.with(ctx, () => {
       ctx.globalAlpha = a;
-      ctx.font = `${ch.kind === 'note' ? 'italic 500' : '600'} 52px Inter`;
+      ctx.font = thought ? 'italic 400 46px Inter' : `${ch.kind === 'note' ? 'italic 500' : '600'} 52px Inter`;
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.shadowColor = 'rgba(0,0,0,0.85)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 3;
       ctx.lineWidth = 5; ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.strokeText(text, 540, y);
-      ctx.fillStyle = ch.kind === 'note' ? '#e3ecff' : '#ffffff';
+      ctx.fillStyle = thought ? '#ffe6c4' : ch.kind === 'note' ? '#e3ecff' : '#ffffff';
       ctx.fillText(text, 540, y);
     });
   };

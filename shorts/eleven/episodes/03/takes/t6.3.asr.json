@@ -1,67 +1,67 @@
 {
- "duration": 5.712125,
+ "duration": 5.5728125,
  "language": "English",
  "language_code": "en",
- "request_id": "a03bd8b1-da3f-4275-984e-6a921beda379",
+ "request_id": "4ec9d800-aaba-4f74-b6fb-40ee98db13cf",
  "segments": [
   {
-   "end": 0.56,
+   "end": 0.48,
    "start": 0,
    "text": "40"
   },
   {
-   "end": 0.96,
-   "start": 0.56,
+   "end": 0.88,
+   "start": 0.48,
    "text": "minutes"
   },
   {
    "end": 1.52,
-   "start": 0.96,
+   "start": 0.88,
    "text": "later"
   },
   {
-   "end": 2.4,
-   "start": 1.92,
+   "end": 2.32,
+   "start": 1.84,
    "text": "every"
   },
   {
-   "end": 2.8,
-   "start": 2.4,
+   "end": 2.72,
+   "start": 2.32,
    "text": "phone"
   },
   {
-   "end": 2.96,
-   "start": 2.8,
+   "end": 2.8,
+   "start": 2.72,
    "text": "in"
   },
   {
-   "end": 3.04,
-   "start": 2.96,
+   "end": 2.88,
+   "start": 2.8,
    "text": "the"
   },
   {
-   "end": 3.68,
-   "start": 3.04,
+   "end": 3.6,
+   "start": 2.88,
    "text": "cafe"
   },
   {
-   "end": 4.08,
-   "start": 3.68,
+   "end": 4,
+   "start": 3.6,
    "text": "lit"
   },
   {
-   "end": 4.32,
-   "start": 4.08,
+   "end": 4.24,
+   "start": 4,
    "text": "up"
   },
   {
-   "end": 4.56,
-   "start": 4.4,
+   "end": 4.48,
+   "start": 4.32,
    "text": "at"
   },
   {
-   "end": 5.28,
-   "start": 4.56,
+   "end": 5.2,
+   "start": 4.48,
    "text": "once"
   }
  ],

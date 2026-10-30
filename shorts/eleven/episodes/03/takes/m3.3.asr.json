@@ -1,49 +1,28 @@
 {
- "duration": 6.130125,
- "language": "English",
+ "duration": 1.9040625,
  "language_code": "en",
- "request_id": "732d9a24-d78e-427a-984e-a34a0d7e784f",
+ "request_id": "6a2db27c-a55f-40db-970e-6c4769bf4fbb",
  "segments": [
   {
+   "end": 0.4,
+   "start": 0,
+   "text": "Then"
+  },
+  {
    "end": 0.8,
-   "start": 0.08,
-   "text": "Kabir"
+   "start": 0.4,
+   "text": "come"
   },
   {
-   "end": 2.08,
-   "start": 1.36,
-   "text": "please"
+   "end": 1.12,
+   "start": 0.8,
+   "text": "get"
   },
   {
-   "end": 3.04,
-   "start": 2.56,
-   "text": "just"
-  },
-  {
-   "end": 3.2,
-   "start": 3.04,
-   "text": "this"
-  },
-  {
-   "end": 4,
-   "start": 3.2,
-   "text": "once"
-  },
-  {
-   "end": 4.8,
-   "start": 4.4,
-   "text": "miss"
-  },
-  {
-   "end": 4.96,
-   "start": 4.8,
-   "text": "your"
-  },
-  {
-   "end": 5.68,
-   "start": 4.96,
-   "text": "train"
+   "end": 1.6,
+   "start": 1.12,
+   "text": "it"
   }
  ],
- "text": "Kabir, please, just this once, miss your train."
+ "text": "Then come get it."
 }

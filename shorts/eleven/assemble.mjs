@@ -40,7 +40,7 @@ function voiceEnd(x, from) {
   return end;
 }
 
-const out = { mira: [], live: [], note: [] };
+const out = { mira: [], thought: [], live: [], note: [] };
 const words = [], lines = [];
 let t = S.lines[0].gap ?? GAP[S.lines[0].id] ?? GAP.default;
 const total = [];
@@ -83,7 +83,8 @@ S.lines.forEach((l, li) => {
       clip.push(x[i] * gn);
     }
   });
-  const stem = l.kind === 'note' ? 'note' : l.who === 'mira' ? 'mira' : 'live';
+  // Mira's inner voice (narration) gets its own stem, so the mix can set it apart from her spoken lines
+  const stem = l.kind === 'note' ? 'note' : l.who === 'mira' ? (l.kind === 'narr' ? 'thought' : 'mira') : 'live';
   total.push({ stem, at: t, clip });
   // display words: the script's own words (with punctuation and digits), timed by the transcript's words
   const shown = (l.show || l.text.replace(/\[[^\]]*\]/g, ' ')).replace(/\s+/g, ' ').trim().split(' ');
@@ -101,7 +102,7 @@ S.lines.forEach((l, li) => {
 });
 const duration = t;
 fs.mkdirSync(`eleven/build/ep${ep}`, { recursive: true });
-for (const stem of ['mira', 'live', 'note']) {
+for (const stem of ['mira', 'thought', 'live', 'note']) {
   const y = new Float32Array(Math.ceil((duration + 0.5) * RATE));
   for (const c of total.filter((c) => c.stem === stem)) { const o = Math.round(c.at * RATE); c.clip.forEach((v, i) => (y[o + i] += v)); }
   writeWav(`eleven/build/ep${ep}/${stem}.wav`, RATE, [y]);

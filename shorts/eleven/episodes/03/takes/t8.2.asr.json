@@ -1,17 +1,17 @@
 {
- "duration": 3.6688125,
+ "duration": 3.5294375,
  "language": "English",
  "language_code": "en",
- "request_id": "60a39aa6-45ee-467c-93ac-57212adac238",
+ "request_id": "8b0ac571-efda-4829-8a9f-3df5e2115d94",
  "segments": [
   {
-   "end": 0.24,
-   "start": 0.08,
+   "end": 0.16,
+   "start": 0,
    "text": "I"
   },
   {
    "end": 0.72,
-   "start": 0.32,
+   "start": 0.24,
    "text": "couldn't"
   },
   {
@@ -20,17 +20,17 @@
    "text": "tell"
   },
   {
-   "end": 1.6,
+   "end": 1.52,
    "start": 1.12,
    "text": "him"
   },
   {
-   "end": 2.56,
-   "start": 2.24,
+   "end": 2.48,
+   "start": 2.16,
    "text": "Not"
   },
   {
-   "end": 3.28,
+   "end": 3.2,
    "start": 2.56,
    "text": "yet"
   }

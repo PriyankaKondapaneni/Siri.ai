@@ -1,0 +1,79 @@
+{
+ "duration": 6.2694375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "3f8c68af-fda5-4db9-acb6-dd6314dfc32e",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0,
+   "text": "Mira"
+  },
+  {
+   "end": 1.28,
+   "start": 1.12,
+   "text": "you"
+  },
+  {
+   "end": 1.68,
+   "start": 1.28,
+   "text": "found"
+  },
+  {
+   "end": 1.84,
+   "start": 1.68,
+   "text": "me"
+  },
+  {
+   "end": 2.16,
+   "start": 1.84,
+   "text": "didn't"
+  },
+  {
+   "end": 2.56,
+   "start": 2.16,
+   "text": "you"
+  },
+  {
+   "end": 3.92,
+   "start": 3.12,
+   "text": "Tomorrow"
+  },
+  {
+   "end": 4.64,
+   "start": 4.4,
+   "text": "don't"
+  },
+  {
+   "end": 4.88,
+   "start": 4.72,
+   "text": "let"
+  },
+  {
+   "end": 5.04,
+   "start": 4.88,
+   "text": "me"
+  },
+  {
+   "end": 5.28,
+   "start": 5.04,
+   "text": "get"
+  },
+  {
+   "end": 5.44,
+   "start": 5.28,
+   "text": "on"
+  },
+  {
+   "end": 5.44,
+   "start": 5.44,
+   "text": "the"
+  },
+  {
+   "end": 6,
+   "start": 5.44,
+   "text": "train"
+  }
+ ],
+ "text": "Mira, you found me, didn't you? Tomorrow, don't let me get on the train."
+}

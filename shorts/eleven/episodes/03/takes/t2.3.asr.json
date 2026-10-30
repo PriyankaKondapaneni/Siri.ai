@@ -1,0 +1,28 @@
+{
+ "duration": 2.6935625,
+ "language_code": "en",
+ "request_id": "26e96136-1a36-46c3-9453-f4c39b6876be",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0,
+   "text": "He"
+  },
+  {
+   "end": 0.88,
+   "start": 0.56,
+   "text": "had"
+  },
+  {
+   "end": 1.44,
+   "start": 0.88,
+   "text": "no"
+  },
+  {
+   "end": 2.32,
+   "start": 1.44,
+   "text": "idea"
+  }
+ ],
+ "text": "He had no idea."
+}

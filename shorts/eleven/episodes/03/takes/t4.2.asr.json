@@ -1,0 +1,28 @@
+{
+ "duration": 2.8793125,
+ "language_code": "en",
+ "request_id": "f7a74e0c-a116-413e-b890-7efafbec50bf",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "Ten"
+  },
+  {
+   "end": 1.04,
+   "start": 0.4,
+   "text": "seconds"
+  },
+  {
+   "end": 1.76,
+   "start": 1.44,
+   "text": "No"
+  },
+  {
+   "end": 2.4,
+   "start": 1.76,
+   "text": "plan"
+  }
+ ],
+ "text": "Ten seconds. No plan."
+}

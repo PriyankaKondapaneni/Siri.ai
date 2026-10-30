@@ -1,44 +1,29 @@
 {
- "duration": 3.2508125,
+ "duration": 3.29725,
  "language": "English",
  "language_code": "en",
- "request_id": "3c17ac2a-e32f-4c16-8a0d-bed449a866fe",
+ "request_id": "700c0b0c-03ca-40e7-9fb2-523002c4f688",
  "segments": [
   {
-   "end": 0.56,
-   "start": 0.08,
-   "text": "Okay"
-  },
-  {
-   "end": 1.68,
-   "start": 1.52,
-   "text": "but"
-  },
-  {
-   "end": 1.92,
-   "start": 1.68,
-   "text": "you"
-  },
-  {
-   "end": 2.16,
-   "start": 2,
-   "text": "owe"
-  },
-  {
-   "end": 2.32,
-   "start": 2.16,
-   "text": "me"
+   "end": 1.76,
+   "start": 1.28,
+   "text": "Hey"
   },
   {
    "end": 2.4,
-   "start": 2.32,
-   "text": "a"
+   "start": 2.16,
+   "text": "that's"
+  },
+  {
+   "end": 2.56,
+   "start": 2.4,
+   "text": "my"
   },
   {
    "end": 3.12,
-   "start": 2.4,
-   "text": "coffee"
+   "start": 2.56,
+   "text": "book"
   }
  ],
- "text": "Okay, but you owe me a coffee."
+ "text": "Hey, that's my book."
 }

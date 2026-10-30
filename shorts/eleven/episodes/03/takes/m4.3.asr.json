@@ -1,13 +1,34 @@
 {
- "duration": 2.13625,
+ "duration": 3.0650625,
+ "language": "English",
  "language_code": "en",
- "request_id": "a73d5d11-819d-4538-ac00-f25f9bb08f91",
+ "request_id": "ba571e2b-d8ce-4213-8a55-cbd07881ab04",
  "segments": [
   {
-   "end": 1.76,
+   "end": 1.36,
    "start": 1.12,
-   "text": "Deal"
+   "text": "I'll"
+  },
+  {
+   "end": 1.6,
+   "start": 1.36,
+   "text": "buy"
+  },
+  {
+   "end": 1.84,
+   "start": 1.6,
+   "text": "you"
+  },
+  {
+   "end": 1.92,
+   "start": 1.84,
+   "text": "a"
+  },
+  {
+   "end": 2.64,
+   "start": 1.92,
+   "text": "coffee"
   }
  ],
- "text": "Deal."
+ "text": "I'll buy you a coffee."
 }

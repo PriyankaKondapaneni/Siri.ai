@@ -37,5 +37,8 @@ for (const l of S.lines) {
   pick[l.id] = best.k;
   console.log(`${l.id.padEnd(3)} ${l.who.padEnd(5)} takes ${takes.map((t) => `${t.k}:${t.d.toFixed(2)}s/${(t.w * 100).toFixed(0)}%`).join('  ')}  -> take ${best.k}${best.w > 0 ? `  (heard: ${best.text})` : ''}`);
 }
+// keep the pick of a take borrowed from another episode (a hook can reuse an earlier episode's line)
+const prev = fs.existsSync(`${dir}/picks.json`) ? JSON.parse(fs.readFileSync(`${dir}/picks.json`, 'utf8')) : {};
+for (const l of S.lines) if (l.take && pick[l.take] == null && prev[l.take] != null) pick[l.take] = prev[l.take];
 fs.writeFileSync(`${dir}/picks.json`, JSON.stringify(pick, null, 1));
 console.log(`spent $${(before - (await credit())).toFixed(4)} this run`);

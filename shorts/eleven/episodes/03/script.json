@@ -9,20 +9,26 @@
  "lines": [
   {
    "id": "h0",
-   "who": "mira",
-   "kind": "live",
-   "text": "Please. Just this once... miss your train.",
-   "take": "m3",
-   "from": 1,
-   "gap": 0.06,
-   "cap": 0.1
+   "who": "kabir",
+   "kind": "note",
+   "text": "Don't let me get on the train.",
+   "take": "x4",
+   "from": 7,
+   "gap": 0.06
   },
   {
-   "id": "n1",
+   "id": "t1",
    "who": "mira",
    "kind": "narr",
-   "text": "[low, urgent, intimate] Nine minutes to keep him off the six-forty. And he had no idea.",
-   "show": "Nine minutes to keep him off the 6:40. And he had no idea."
+   "text": "[inner voice, hushed, heart racing] Six thirty-one. Nine minutes.",
+   "show": "6:31. Nine minutes."
+  },
+  {
+   "id": "t2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[inner voice, a dry, almost bitter little laugh] ...and he had no idea.",
+   "gap": 0.35
   },
   {
    "id": "k1",
@@ -46,11 +52,11 @@
    "gap": 0.35
   },
   {
-   "id": "n2",
+   "id": "t3",
    "who": "mira",
    "kind": "narr",
-   "text": "[quiet, embarrassed] I'd never taken this train in my life.",
-   "gap": 0.45
+   "text": "[inner voice, hushed, embarrassed] I'd never taken this train in my life.",
+   "gap": 0.4
   },
   {
    "id": "k3",
@@ -60,52 +66,59 @@
    "gap": 0.8
   },
   {
-   "id": "n3",
+   "id": "t4",
    "who": "mira",
    "kind": "narr",
-   "text": "[fast, breathless] Ten seconds. No plan. No way to explain.",
+   "text": "[inner voice, breathless, panicking] Ten seconds. No plan.",
    "gap": 0.3
-  },
-  {
-   "id": "m3",
-   "who": "mira",
-   "kind": "live",
-   "text": "[desperate, then soft] Kabir. Please. Just this once... miss your train.",
-   "gap": 0.2
   },
   {
    "id": "k4",
    "who": "kabir",
    "kind": "live",
-   "text": "[quiet, then a small smile] ...Okay. But you owe me a coffee.",
-   "gap": 1.0
+   "text": "[startled, half laughing] Hey... that's my book.",
+   "gap": 0.7
+  },
+  {
+   "id": "m3",
+   "who": "mira",
+   "kind": "live",
+   "text": "[breathless, daring, a little smile] Then come get it.",
+   "gap": 0.3
+  },
+  {
+   "id": "k7",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[a disbelieving laugh] ...You just made me miss my train.",
+   "gap": 1.4
   },
   {
    "id": "m4",
    "who": "mira",
    "kind": "live",
-   "text": "[a breathless little laugh] Deal.",
-   "gap": 0.3
+   "text": "[trying not to smile] I'll buy you a coffee.",
+   "gap": 0.35
   },
   {
-   "id": "n4",
+   "id": "t5",
    "who": "mira",
    "kind": "narr",
-   "text": "[soft, wondering] He stayed. He didn't even ask why.",
-   "gap": 0.5
+   "text": "[inner voice, soft, wondering] He didn't even ask why.",
+   "gap": 0.45
   },
   {
-   "id": "n5",
+   "id": "t6",
    "who": "mira",
    "kind": "narr",
-   "text": "[low] Forty minutes later, every phone in the café lit up at once.",
+   "text": "[inner voice, low] Forty minutes later, every phone in the café lit up at once.",
    "gap": 0.9
   },
   {
-   "id": "n6",
+   "id": "t7",
    "who": "mira",
    "kind": "narr",
-   "text": "[shaken, quiet] The six-forty never made it to the next station.",
+   "text": "[inner voice, shaken] The six-forty never made it to the next station.",
    "show": "The 6:40 never made it to the next station.",
    "gap": 0.3
   },
@@ -117,17 +130,17 @@
    "gap": 0.35
   },
   {
-   "id": "n7",
+   "id": "t8",
    "who": "mira",
    "kind": "narr",
-   "text": "[hesitant] I couldn't tell him. Not yet.",
+   "text": "[inner voice, hesitant, hushed] I couldn't tell him. Not yet.",
    "gap": 0.35
   },
   {
-   "id": "n8",
+   "id": "t9",
    "who": "mira",
    "kind": "narr",
-   "text": "[uneasy] That night, at eleven eleven... it wasn't my phone that lit up.",
+   "text": "[inner voice, uneasy] That night, at eleven eleven... it wasn't my phone that lit up.",
    "show": "That night, at 11:11… it wasn't my phone that lit up.",
    "gap": 0.5
   },

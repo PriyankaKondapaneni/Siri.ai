@@ -1,12 +1,12 @@
 {
- "duration": 4.179625,
+ "duration": 4.2725,
  "language": "English",
  "language_code": "en",
- "request_id": "5c15fab0-a74c-45f9-a770-6fd81bf39cc8",
+ "request_id": "675949b2-1840-4159-8b84-b9a9a2f857b3",
  "segments": [
   {
    "end": 0.16,
-   "start": 0,
+   "start": 0.08,
    "text": "The"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
    "end": 1.84,
-   "start": 1.28,
+   "start": 1.2,
    "text": "never"
   },
   {
@@ -30,28 +30,28 @@
    "text": "made"
   },
   {
-   "end": 2.32,
+   "end": 2.24,
    "start": 2.16,
    "text": "it"
   },
   {
-   "end": 2.56,
-   "start": 2.48,
+   "end": 2.4,
+   "start": 2.32,
    "text": "to"
   },
   {
-   "end": 2.64,
-   "start": 2.56,
+   "end": 2.56,
+   "start": 2.4,
    "text": "the"
   },
   {
-   "end": 3.04,
-   "start": 2.64,
+   "end": 2.88,
+   "start": 2.56,
    "text": "next"
   },
   {
    "end": 3.68,
-   "start": 3.04,
+   "start": 2.88,
    "text": "station"
   }
  ],
