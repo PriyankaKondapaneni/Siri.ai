@@ -3,7 +3,7 @@
 // graded. Images load before the page reports ready.
 (function (g) {
   const PP = g.PP;
-  const CUTS = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9', 'K10', 'M10', 'MK1', 'MK2', 'MK3', 'K11', 'M11', 'H1', 'A1', 'F1', 'S1', 'CK', 'HM', 'HK', 'M12', 'K12'];
+  const CUTS = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9', 'K10', 'M10', 'MK1', 'MK2', 'MK3', 'K11', 'M11', 'H1', 'A1', 'F1', 'S1', 'CK', 'HM', 'HK', 'M12', 'K12', 'M13', 'MK4', 'H2'];
   const BGS = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'C1', 'T1'];
   const DIR = 'assets/art/v2';
   PP.CUTS = CUTS;

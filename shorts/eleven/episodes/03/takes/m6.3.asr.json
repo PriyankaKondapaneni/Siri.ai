@@ -1,0 +1,34 @@
+{
+ "duration": 4.736875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "a77c3fff-ca3a-4721-a6aa-a4e34b73c56a",
+ "segments": [
+  {
+   "end": 0.8,
+   "start": 0,
+   "text": "Small"
+  },
+  {
+   "end": 2.24,
+   "start": 1.68,
+   "text": "gold"
+  },
+  {
+   "end": 3.12,
+   "start": 3.04,
+   "text": "a"
+  },
+  {
+   "end": 3.44,
+   "start": 3.12,
+   "text": "little"
+  },
+  {
+   "end": 4.4,
+   "start": 3.44,
+   "text": "flower"
+  }
+ ],
+ "text": "Small, gold, a little flower."
+}

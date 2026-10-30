@@ -1,0 +1,44 @@
+{
+ "duration": 2.832875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "195121d8-14f6-4704-a3f1-246c95c902a6",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "Don't"
+  },
+  {
+   "end": 0.72,
+   "start": 0.24,
+   "text": "move"
+  },
+  {
+   "end": 1.68,
+   "start": 1.52,
+   "text": "What"
+  },
+  {
+   "end": 1.84,
+   "start": 1.68,
+   "text": "does"
+  },
+  {
+   "end": 1.92,
+   "start": 1.84,
+   "text": "it"
+  },
+  {
+   "end": 2.24,
+   "start": 1.92,
+   "text": "look"
+  },
+  {
+   "end": 2.64,
+   "start": 2.24,
+   "text": "like"
+  }
+ ],
+ "text": "Don't move. What does it look like?"
+}

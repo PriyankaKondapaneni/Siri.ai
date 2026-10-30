@@ -1,0 +1,38 @@
+{
+ "duration": 3.29725,
+ "language_code": "en",
+ "request_id": "c895192f-8dcb-4efd-b40d-d9da874f6a6c",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0.08,
+   "text": "Don't"
+  },
+  {
+   "end": 0.64,
+   "start": 0.4,
+   "text": "look"
+  },
+  {
+   "end": 1.04,
+   "start": 0.64,
+   "text": "up"
+  },
+  {
+   "end": 2,
+   "start": 1.68,
+   "text": "Don't"
+  },
+  {
+   "end": 2.32,
+   "start": 2.08,
+   "text": "look"
+  },
+  {
+   "end": 2.88,
+   "start": 2.32,
+   "text": "up"
+  }
+ ],
+ "text": "Don't look up. Don't look up."
+}

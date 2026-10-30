@@ -1,0 +1,28 @@
+{
+ "duration": 2.6006875,
+ "language_code": "en",
+ "request_id": "05ea46c0-48b0-49bf-a38b-ad5446018a9a",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "Oh"
+  },
+  {
+   "end": 0.8,
+   "start": 0.32,
+   "text": "no"
+  },
+  {
+   "end": 1.2,
+   "start": 1.12,
+   "text": "My"
+  },
+  {
+   "end": 2.16,
+   "start": 1.92,
+   "text": "earring"
+  }
+ ],
+ "text": "Oh no! My earring!"
+}

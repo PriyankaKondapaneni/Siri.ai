@@ -1,0 +1,38 @@
+{
+ "duration": 2.832875,
+ "language_code": "en",
+ "request_id": "7f85efd7-60ef-4df1-81d9-875bf0326622",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "I"
+  },
+  {
+   "end": 0.48,
+   "start": 0.16,
+   "text": "can't"
+  },
+  {
+   "end": 0.88,
+   "start": 0.48,
+   "text": "find"
+  },
+  {
+   "end": 1.12,
+   "start": 0.88,
+   "text": "it"
+  },
+  {
+   "end": 2,
+   "start": 1.84,
+   "text": "I'm"
+  },
+  {
+   "end": 2.64,
+   "start": 2,
+   "text": "sorry"
+  }
+ ],
+ "text": "I can't find it. I'm sorry."
+}

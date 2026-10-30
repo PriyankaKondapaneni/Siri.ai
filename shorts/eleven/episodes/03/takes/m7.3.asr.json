@@ -1,0 +1,44 @@
+{
+ "duration": 3.7616875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "19864842-412a-4c81-8b9a-4b69926a4612",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0,
+   "text": "It's"
+  },
+  {
+   "end": 0.96,
+   "start": 0.32,
+   "text": "okay"
+  },
+  {
+   "end": 2.08,
+   "start": 1.6,
+   "text": "Maybe"
+  },
+  {
+   "end": 2.16,
+   "start": 2.08,
+   "text": "it"
+  },
+  {
+   "end": 2.32,
+   "start": 2.16,
+   "text": "was"
+  },
+  {
+   "end": 2.72,
+   "start": 2.32,
+   "text": "never"
+  },
+  {
+   "end": 3.36,
+   "start": 2.72,
+   "text": "here"
+  }
+ ],
+ "text": "It's okay. Maybe it was never here."
+}

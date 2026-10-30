@@ -1,0 +1,54 @@
+{
+ "duration": 3.901,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "54536210-76c0-4bd0-97c1-f03855b97954",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "The"
+  },
+  {
+   "end": 0.8,
+   "start": 0.32,
+   "text": "earring"
+  },
+  {
+   "end": 1.04,
+   "start": 0.8,
+   "text": "was"
+  },
+  {
+   "end": 1.12,
+   "start": 1.04,
+   "text": "in"
+  },
+  {
+   "end": 1.36,
+   "start": 1.12,
+   "text": "my"
+  },
+  {
+   "end": 2,
+   "start": 1.36,
+   "text": "pocket"
+  },
+  {
+   "end": 2.4,
+   "start": 2.08,
+   "text": "the"
+  },
+  {
+   "end": 2.72,
+   "start": 2.4,
+   "text": "whole"
+  },
+  {
+   "end": 3.44,
+   "start": 2.72,
+   "text": "time"
+  }
+ ],
+ "text": "The earring was in my pocket the whole time."
+}

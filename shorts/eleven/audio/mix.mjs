@@ -15,7 +15,7 @@ const graph = (ln) => [
   `[4:a]volume=-9dB[mus]`,
   `[mus][key]sidechaincompress=threshold=0.025:ratio=6:attack=25:release=350:makeup=1[musd]`,
   `[5:a]volume=-3dB[fx]`,
-  `[voice][musd][fx]amix=inputs=3:normalize=0,alimiter=limit=0.95:attack=2:release=60${ln ? ',' + ln : ''}[out]`,
+  `[voice][musd][fx]amix=inputs=3:normalize=0,alimiter=limit=0.89:attack=1:release=60${ln ? ',' + ln + ',alimiter=limit=0.79:attack=1:release=50:level=false' : ''}[out]`,
 ].join(';');
 const inputs = ['mira', 'thought', 'live', 'note', 'music', 'sfx'].flatMap((s) => ['-i', `${d}/${s}.wav`]);
 // pass 1: measure

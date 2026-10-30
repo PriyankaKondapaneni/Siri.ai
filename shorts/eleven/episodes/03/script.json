@@ -21,7 +21,8 @@
    "who": "mira",
    "kind": "narr",
    "text": "[inner voice, hushed, heart racing] Six thirty-one. Nine minutes.",
-   "show": "6:31. Nine minutes."
+   "show": "6:31. Nine minutes.",
+   "gap": 0.45
   },
   {
    "id": "t2",
@@ -38,25 +39,11 @@
    "gap": 0.35
   },
   {
-   "id": "m1",
-   "who": "mira",
-   "kind": "live",
-   "text": "[flustered, too quick] I... take this train too. Sometimes.",
-   "gap": 0.3
-  },
-  {
-   "id": "k2",
-   "who": "kabir",
-   "kind": "live",
-   "text": "[amused, gently] Sometimes.",
-   "gap": 0.35
-  },
-  {
    "id": "t3",
    "who": "mira",
    "kind": "narr",
    "text": "[inner voice, hushed, embarrassed] I'd never taken this train in my life.",
-   "gap": 0.4
+   "gap": 0.35
   },
   {
    "id": "k3",
@@ -73,38 +60,59 @@
    "gap": 0.3
   },
   {
-   "id": "k4",
-   "who": "kabir",
-   "kind": "live",
-   "text": "[startled, half laughing] Hey... that's my book.",
-   "gap": 0.7
-  },
-  {
-   "id": "m3",
+   "id": "m5",
    "who": "mira",
    "kind": "live",
-   "text": "[breathless, daring, a little smile] Then come get it.",
+   "text": "[sudden, alarmed] Oh no... my earring!",
+   "gap": 0.25
+  },
+  {
+   "id": "k8",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[turning back at once, kneeling] Don't move. What does it look like?",
    "gap": 0.3
   },
   {
-   "id": "k7",
-   "who": "kabir",
-   "kind": "live",
-   "text": "[a disbelieving laugh] ...You just made me miss my train.",
-   "gap": 1.4
-  },
-  {
-   "id": "m4",
+   "id": "m6",
    "who": "mira",
    "kind": "live",
-   "text": "[trying not to smile] I'll buy you a coffee.",
+   "text": "[flustered] Small. Gold. A little flower.",
+   "gap": 0.3
+  },
+  {
+   "id": "t10",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[inner voice, holding her breath, hushed] Don't look up. Don't look up.",
+   "gap": 0.45
+  },
+  {
+   "id": "k9",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[sitting back, apologetic] I can't find it. I'm sorry.",
+   "gap": 1.6
+  },
+  {
+   "id": "m7",
+   "who": "mira",
+   "kind": "live",
+   "text": "[gently, a secret in it] It's okay. Maybe it was never here.",
    "gap": 0.35
   },
   {
-   "id": "t5",
+   "id": "k10",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[glancing back at the empty tracks, a rueful laugh] ...And there goes my train.",
+   "gap": 0.5
+  },
+  {
+   "id": "t11",
    "who": "mira",
    "kind": "narr",
-   "text": "[inner voice, soft, wondering] He didn't even ask why.",
+   "text": "[inner voice, soft, a guilty little smile] The earring was in my pocket the whole time.",
    "gap": 0.45
   },
   {
