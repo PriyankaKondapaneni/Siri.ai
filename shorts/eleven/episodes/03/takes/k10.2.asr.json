@@ -1,34 +1,34 @@
 {
- "duration": 3.1115,
+ "duration": 3.2508125,
  "language": "English",
  "language_code": "en",
- "request_id": "9441d2ed-898a-4811-b868-0bf055eeb50e",
+ "request_id": "44b66ac1-7b24-4204-af6d-23288bc785ea",
  "segments": [
   {
-   "end": 1.36,
-   "start": 1.12,
-   "text": "And"
+   "end": 0.48,
+   "start": 0,
+   "text": "Wait"
   },
   {
-   "end": 1.6,
-   "start": 1.36,
-   "text": "there"
+   "end": 1.76,
+   "start": 1.44,
+   "text": "that"
   },
   {
    "end": 1.92,
-   "start": 1.6,
-   "text": "goes"
+   "start": 1.76,
+   "text": "was"
   },
   {
-   "end": 2.08,
+   "end": 2.16,
    "start": 1.92,
    "text": "my"
   },
   {
-   "end": 2.64,
-   "start": 2.08,
+   "end": 2.88,
+   "start": 2.16,
    "text": "train"
   }
  ],
- "text": "And there goes my train."
+ "text": "Wait, that was my train."
 }

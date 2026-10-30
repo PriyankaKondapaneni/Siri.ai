@@ -1,5 +1,5 @@
 {
- "duration": 69.404,
+ "duration": 69.814,
  "words": [
   {
    "w": "Don't",
@@ -63,810 +63,826 @@
    "who": "mira",
    "kind": "narr",
    "s": 2.449,
-   "e": 4.209
+   "e": 3.889
   },
   {
    "w": "Nine",
    "line": "t1",
    "who": "mira",
    "kind": "narr",
-   "s": 3.169,
-   "e": 4.209
+   "s": 3.089,
+   "e": 4.669
   },
   {
    "w": "minutes.",
    "line": "t1",
    "who": "mira",
    "kind": "narr",
-   "s": 4.209,
-   "e": 5.789
+   "s": 4.109,
+   "e": 5.309
   },
   {
    "w": "...and",
    "line": "t2",
    "who": "mira",
    "kind": "narr",
-   "s": 6.249,
-   "e": 6.409
+   "s": 5.839,
+   "e": 6.079
   },
   {
    "w": "he",
    "line": "t2",
    "who": "mira",
    "kind": "narr",
-   "s": 6.489,
-   "e": 6.809
+   "s": 6.079,
+   "e": 6.399
   },
   {
    "w": "had",
    "line": "t2",
    "who": "mira",
    "kind": "narr",
-   "s": 6.809,
-   "e": 7.209
+   "s": 6.399,
+   "e": 6.639
   },
   {
    "w": "no",
    "line": "t2",
    "who": "mira",
    "kind": "narr",
-   "s": 7.289,
-   "e": 8.009
+   "s": 6.639,
+   "e": 7.359
   },
   {
    "w": "idea.",
    "line": "t2",
    "who": "mira",
    "kind": "narr",
-   "s": 8.089,
-   "e": 8.809
+   "s": 7.359,
+   "e": 8.319
   },
   {
    "w": "You",
    "line": "k1",
    "who": "kabir",
    "kind": "live",
-   "s": 9.319,
-   "e": 9.719
+   "s": 8.829,
+   "e": 9.229
   },
   {
    "w": "again.",
    "line": "k1",
    "who": "kabir",
    "kind": "live",
-   "s": 9.719,
-   "e": 10.279
+   "s": 9.229,
+   "e": 9.789
   },
   {
    "w": "Hi...",
    "line": "m8",
    "who": "mira",
    "kind": "live",
-   "s": 10.809,
-   "e": 11.289
+   "s": 10.319,
+   "e": 10.799
   },
   {
    "w": "again.",
    "line": "m8",
    "who": "mira",
    "kind": "live",
-   "s": 11.569,
-   "e": 12.209
+   "s": 11.079,
+   "e": 11.719
   },
   {
    "w": "Do",
    "line": "k11",
    "who": "kabir",
    "kind": "live",
-   "s": 12.669,
-   "e": 12.829
+   "s": 12.179,
+   "e": 12.339
   },
   {
    "w": "you",
    "line": "k11",
    "who": "kabir",
    "kind": "live",
-   "s": 12.829,
-   "e": 12.989
+   "s": 12.339,
+   "e": 12.499
   },
   {
    "w": "take",
    "line": "k11",
    "who": "kabir",
    "kind": "live",
-   "s": 12.989,
-   "e": 13.309
+   "s": 12.499,
+   "e": 12.819
   },
   {
    "w": "this",
    "line": "k11",
    "who": "kabir",
    "kind": "live",
-   "s": 13.309,
-   "e": 13.469
+   "s": 12.819,
+   "e": 12.979
   },
   {
    "w": "train",
    "line": "k11",
    "who": "kabir",
    "kind": "live",
-   "s": 13.469,
-   "e": 13.869
+   "s": 12.979,
+   "e": 13.379
   },
   {
    "w": "too?",
    "line": "k11",
    "who": "kabir",
    "kind": "live",
-   "s": 13.869,
-   "e": 14.269
+   "s": 13.379,
+   "e": 13.779
   },
   {
    "w": "Every",
    "line": "m9",
    "who": "mira",
    "kind": "live",
-   "s": 14.749,
-   "e": 15.069
+   "s": 14.259,
+   "e": 14.579
   },
   {
    "w": "day.",
    "line": "m9",
    "who": "mira",
    "kind": "live",
-   "s": 15.069,
-   "e": 15.709
+   "s": 14.579,
+   "e": 15.219
   },
   {
    "w": "I'd",
    "line": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 16.169,
-   "e": 16.489
+   "s": 15.749,
+   "e": 15.989
   },
   {
    "w": "never",
    "line": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 16.489,
-   "e": 16.969
+   "s": 15.989,
+   "e": 16.469
   },
   {
    "w": "taken",
    "line": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 16.969,
-   "e": 17.449
+   "s": 16.469,
+   "e": 16.869
   },
   {
    "w": "this",
    "line": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 17.449,
-   "e": 17.689
+   "s": 16.869,
+   "e": 17.109
   },
   {
    "w": "train",
    "line": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 17.689,
-   "e": 18.169
+   "s": 17.109,
+   "e": 17.429
   },
   {
    "w": "in",
    "line": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 18.249,
-   "e": 18.409
+   "s": 17.429,
+   "e": 17.589
   },
   {
    "w": "my",
    "line": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 18.409,
-   "e": 18.569
+   "s": 17.589,
+   "e": 17.749
   },
   {
    "w": "life.",
    "line": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 18.789,
-   "e": 19.369
+   "s": 17.749,
+   "e": 18.549
   },
   {
    "w": "Well.",
    "line": "k3",
    "who": "kabir",
    "kind": "live",
-   "s": 20.199,
-   "e": 20.519
+   "s": 19.379,
+   "e": 19.699
   },
   {
    "w": "That's",
    "line": "k3",
    "who": "kabir",
    "kind": "live",
-   "s": 20.799,
-   "e": 21.199
+   "s": 19.979,
+   "e": 20.379
   },
   {
    "w": "mine.",
    "line": "k3",
    "who": "kabir",
    "kind": "live",
-   "s": 21.199,
-   "e": 21.679
+   "s": 20.379,
+   "e": 20.859
   },
   {
    "w": "Ten",
    "line": "t4",
    "who": "mira",
    "kind": "narr",
-   "s": 22.108,
-   "e": 22.428
+   "s": 21.358,
+   "e": 21.678
   },
   {
    "w": "seconds.",
    "line": "t4",
    "who": "mira",
    "kind": "narr",
-   "s": 22.428,
-   "e": 23.228
+   "s": 21.678,
+   "e": 22.318
   },
   {
    "w": "No",
    "line": "t4",
    "who": "mira",
    "kind": "narr",
-   "s": 23.448,
-   "e": 23.768
+   "s": 22.538,
+   "e": 22.778
   },
   {
    "w": "plan.",
    "line": "t4",
    "who": "mira",
    "kind": "narr",
-   "s": 23.848,
-   "e": 24.568
+   "s": 22.778,
+   "e": 23.418
   },
   {
    "w": "Oh",
    "line": "m5",
    "who": "mira",
    "kind": "live",
-   "s": 25.048,
-   "e": 25.208
+   "s": 23.898,
+   "e": 24.058
   },
   {
    "w": "no...",
    "line": "m5",
    "who": "mira",
    "kind": "live",
-   "s": 25.288,
-   "e": 25.768
+   "s": 24.138,
+   "e": 24.618
   },
   {
    "w": "my",
    "line": "m5",
    "who": "mira",
    "kind": "live",
-   "s": 26.048,
-   "e": 26.128
+   "s": 24.898,
+   "e": 24.978
   },
   {
    "w": "earring!",
    "line": "m5",
    "who": "mira",
    "kind": "live",
-   "s": 26.408,
-   "e": 26.648
+   "s": 25.258,
+   "e": 25.498
   },
   {
    "w": "Don't",
    "line": "k8",
    "who": "kabir",
    "kind": "live",
-   "s": 27.108,
-   "e": 27.428
+   "s": 25.958,
+   "e": 26.278
   },
   {
    "w": "move.",
    "line": "k8",
    "who": "kabir",
    "kind": "live",
-   "s": 27.428,
-   "e": 27.908
+   "s": 26.278,
+   "e": 26.758
   },
   {
    "w": "What",
    "line": "k8",
    "who": "kabir",
    "kind": "live",
-   "s": 28.188,
-   "e": 28.428
+   "s": 27.038,
+   "e": 27.278
   },
   {
    "w": "does",
    "line": "k8",
    "who": "kabir",
    "kind": "live",
-   "s": 28.428,
-   "e": 28.588
+   "s": 27.278,
+   "e": 27.438
   },
   {
    "w": "it",
    "line": "k8",
    "who": "kabir",
    "kind": "live",
-   "s": 28.588,
-   "e": 28.668
+   "s": 27.438,
+   "e": 27.518
   },
   {
    "w": "look",
    "line": "k8",
    "who": "kabir",
    "kind": "live",
-   "s": 28.668,
-   "e": 28.908
+   "s": 27.518,
+   "e": 27.758
   },
   {
    "w": "like?",
    "line": "k8",
    "who": "kabir",
    "kind": "live",
-   "s": 28.908,
-   "e": 29.308
+   "s": 27.758,
+   "e": 28.158
   },
   {
    "w": "Small.",
    "line": "m6",
    "who": "mira",
    "kind": "live",
-   "s": 29.768,
-   "e": 30.568
+   "s": 28.618,
+   "e": 29.418
   },
   {
    "w": "Gold.",
    "line": "m6",
    "who": "mira",
    "kind": "live",
-   "s": 30.848,
-   "e": 31.408
+   "s": 29.698,
+   "e": 30.258
   },
   {
    "w": "A",
    "line": "m6",
    "who": "mira",
    "kind": "live",
-   "s": 31.688,
-   "e": 31.768
+   "s": 30.538,
+   "e": 30.618
   },
   {
    "w": "little",
    "line": "m6",
    "who": "mira",
    "kind": "live",
-   "s": 31.768,
-   "e": 32.088
+   "s": 30.618,
+   "e": 30.938
   },
   {
    "w": "flower.",
    "line": "m6",
    "who": "mira",
    "kind": "live",
-   "s": 32.088,
-   "e": 33.048
+   "s": 30.938,
+   "e": 31.898
   },
   {
    "w": "Don't",
    "line": "t10",
    "who": "mira",
    "kind": "narr",
-   "s": 33.728,
-   "e": 33.968
+   "s": 32.578,
+   "e": 32.738
   },
   {
    "w": "look",
    "line": "t10",
    "who": "mira",
    "kind": "narr",
-   "s": 33.968,
-   "e": 34.208
+   "s": 32.738,
+   "e": 32.978
   },
   {
    "w": "up.",
    "line": "t10",
    "who": "mira",
    "kind": "narr",
-   "s": 34.208,
-   "e": 34.608
+   "s": 33.058,
+   "e": 33.298
   },
   {
    "w": "Don't",
    "line": "t10",
    "who": "mira",
    "kind": "narr",
-   "s": 34.888,
-   "e": 35.128
+   "s": 33.578,
+   "e": 33.898
   },
   {
    "w": "look",
    "line": "t10",
    "who": "mira",
    "kind": "narr",
-   "s": 35.208,
-   "e": 35.448
+   "s": 33.898,
+   "e": 34.138
   },
   {
    "w": "up.",
    "line": "t10",
    "who": "mira",
    "kind": "narr",
-   "s": 35.448,
-   "e": 35.848
+   "s": 34.218,
+   "e": 34.538
   },
   {
    "w": "I",
    "line": "k9",
    "who": "kabir",
    "kind": "live",
-   "s": 37.158,
-   "e": 37.318
+   "s": 35.848,
+   "e": 36.008
   },
   {
    "w": "can't",
    "line": "k9",
    "who": "kabir",
    "kind": "live",
-   "s": 37.318,
-   "e": 37.638
+   "s": 36.008,
+   "e": 36.328
   },
   {
    "w": "find",
    "line": "k9",
    "who": "kabir",
    "kind": "live",
-   "s": 37.638,
-   "e": 38.038
+   "s": 36.328,
+   "e": 36.728
   },
   {
    "w": "it.",
    "line": "k9",
    "who": "kabir",
    "kind": "live",
-   "s": 38.038,
-   "e": 38.198
+   "s": 36.728,
+   "e": 36.888
   },
   {
    "w": "I'm",
    "line": "k9",
    "who": "kabir",
    "kind": "live",
-   "s": 38.478,
-   "e": 38.638
+   "s": 37.168,
+   "e": 37.328
   },
   {
    "w": "sorry.",
    "line": "k9",
    "who": "kabir",
    "kind": "live",
-   "s": 38.638,
-   "e": 39.278
+   "s": 37.328,
+   "e": 37.968
   },
   {
    "w": "It's",
    "line": "m7",
    "who": "mira",
    "kind": "live",
-   "s": 39.824,
-   "e": 40.064
+   "s": 38.514,
+   "e": 38.754
   },
   {
    "w": "okay.",
    "line": "m7",
    "who": "mira",
    "kind": "live",
-   "s": 40.064,
-   "e": 40.704
+   "s": 38.754,
+   "e": 39.394
   },
   {
    "w": "Maybe",
    "line": "m7",
    "who": "mira",
    "kind": "live",
-   "s": 40.984,
-   "e": 41.384
+   "s": 39.674,
+   "e": 40.074
   },
   {
    "w": "it",
    "line": "m7",
    "who": "mira",
    "kind": "live",
-   "s": 41.384,
-   "e": 41.464
+   "s": 40.074,
+   "e": 40.154
   },
   {
    "w": "was",
    "line": "m7",
    "who": "mira",
    "kind": "live",
-   "s": 41.464,
-   "e": 41.624
+   "s": 40.154,
+   "e": 40.314
   },
   {
    "w": "never",
    "line": "m7",
    "who": "mira",
    "kind": "live",
-   "s": 41.624,
-   "e": 42.024
+   "s": 40.314,
+   "e": 40.714
   },
   {
    "w": "here.",
    "line": "m7",
    "who": "mira",
    "kind": "live",
-   "s": 42.024,
-   "e": 42.664
+   "s": 40.714,
+   "e": 41.354
   },
   {
-   "w": "...And",
+   "w": "Wait...",
    "line": "k10",
    "who": "kabir",
    "kind": "live",
-   "s": 43.394,
-   "e": 43.554
+   "s": 42.284,
+   "e": 42.684
   },
   {
-   "w": "there",
+   "w": "that",
    "line": "k10",
    "who": "kabir",
    "kind": "live",
-   "s": 43.554,
-   "e": 43.794
+   "s": 43.404,
+   "e": 43.564
   },
   {
-   "w": "goes",
+   "w": "was",
    "line": "k10",
    "who": "kabir",
    "kind": "live",
-   "s": 43.794,
-   "e": 44.034
+   "s": 43.564,
+   "e": 43.724
   },
   {
    "w": "my",
    "line": "k10",
    "who": "kabir",
    "kind": "live",
-   "s": 44.034,
-   "e": 44.274
+   "s": 43.724,
+   "e": 43.964
   },
   {
    "w": "train.",
    "line": "k10",
    "who": "kabir",
    "kind": "live",
-   "s": 44.274,
-   "e": 44.754
+   "s": 43.964,
+   "e": 44.604
   },
   {
    "w": "The",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 45.264,
-   "e": 45.424
+   "s": 45.114,
+   "e": 45.274
   },
   {
    "w": "earring",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 45.424,
-   "e": 45.904
+   "s": 45.354,
+   "e": 45.754
   },
   {
    "w": "was",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 46.064,
-   "e": 46.304
+   "s": 45.754,
+   "e": 45.914
   },
   {
    "w": "in",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 46.384,
-   "e": 46.464
+   "s": 45.914,
+   "e": 46.074
   },
   {
    "w": "my",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 46.464,
-   "e": 46.704
+   "s": 46.074,
+   "e": 46.234
   },
   {
    "w": "pocket",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 46.704,
-   "e": 47.264
+   "s": 46.314,
+   "e": 46.874
   },
   {
    "w": "the",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 47.344,
-   "e": 47.424
+   "s": 46.874,
+   "e": 47.194
   },
   {
    "w": "whole",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 47.424,
-   "e": 47.904
+   "s": 47.194,
+   "e": 47.514
   },
   {
    "w": "time.",
    "line": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 47.984,
-   "e": 48.644
+   "s": 47.514,
+   "e": 48.314
   },
   {
    "w": "Forty",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 49.504,
-   "e": 50.064
+   "s": 49.174,
+   "e": 49.734
   },
   {
    "w": "minutes",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 50.064,
-   "e": 50.544
+   "s": 49.734,
+   "e": 50.134
   },
   {
    "w": "later,",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 50.544,
-   "e": 51.104
+   "s": 50.134,
+   "e": 50.694
   },
   {
    "w": "every",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 51.324,
-   "e": 51.724
+   "s": 50.914,
+   "e": 51.314
   },
   {
    "w": "phone",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 51.724,
-   "e": 52.204
+   "s": 51.314,
+   "e": 51.794
   },
   {
    "w": "in",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 52.204,
-   "e": 52.364
+   "s": 51.794,
+   "e": 51.874
   },
   {
    "w": "the",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 52.364,
-   "e": 52.444
+   "s": 51.874,
+   "e": 51.954
   },
   {
    "w": "café",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 52.444,
-   "e": 53.164
+   "s": 51.954,
+   "e": 52.594
   },
   {
    "w": "lit",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 53.324,
-   "e": 53.564
+   "s": 52.594,
+   "e": 53.074
   },
   {
    "w": "up",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 53.564,
-   "e": 53.804
+   "s": 53.074,
+   "e": 53.314
   },
   {
    "w": "at",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 53.884,
-   "e": 54.124
+   "s": 53.314,
+   "e": 53.474
   },
   {
    "w": "once.",
    "line": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 54.124,
-   "e": 54.924
+   "s": 53.474,
+   "e": 54.274
   },
   {
    "w": "The",
    "line": "t7",
    "who": "mira",
    "kind": "narr",
-   "s": 55.384,
-   "e": 56.024
+   "s": 54.804,
+   "e": 55.364
   },
   {
    "w": "6:40",
    "line": "t7",
    "who": "mira",
    "kind": "narr",
-   "s": 55.544,
-   "e": 56.024
+   "s": 54.884,
+   "e": 56.004
   },
   {
    "w": "never",
    "line": "t7",
    "who": "mira",
    "kind": "narr",
-   "s": 56.024,
-   "e": 56.644
+   "s": 55.444,
+   "e": 56.324
   },
   {
    "w": "made",
    "line": "t7",
    "who": "mira",
    "kind": "narr",
-   "s": 56.244,
-   "e": 56.964
+   "s": 56.004,
+   "e": 56.644
   },
   {
    "w": "it",
    "line": "t7",
    "who": "mira",
    "kind": "narr",
-   "s": 56.644,
-   "e": 57.124
+   "s": 56.324,
+   "e": 56.804
   },
   {
    "w": "to",
+   "line": "t7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 56.644,
+   "e": 56.964
+  },
+  {
+   "w": "the",
+   "line": "t7",
+   "who": "mira",
+   "kind": "narr",
+   "s": 56.884,
+   "e": 57.044
+  },
+  {
+   "w": "next",
    "line": "t7",
    "who": "mira",
    "kind": "narr",
@@ -874,212 +890,196 @@
    "e": 57.364
   },
   {
-   "w": "the",
-   "line": "t7",
-   "who": "mira",
-   "kind": "narr",
-   "s": 57.284,
-   "e": 57.444
-  },
-  {
-   "w": "next",
-   "line": "t7",
-   "who": "mira",
-   "kind": "narr",
-   "s": 57.364,
-   "e": 57.924
-  },
-  {
    "w": "station.",
    "line": "t7",
    "who": "mira",
    "kind": "narr",
-   "s": 57.524,
-   "e": 58.684
+   "s": 57.044,
+   "e": 58.164
   },
   {
    "w": "You",
    "line": "k5",
    "who": "kabir",
    "kind": "live",
-   "s": 59.194,
-   "e": 59.434
+   "s": 58.674,
+   "e": 58.914
   },
   {
    "w": "knew.",
    "line": "k5",
    "who": "kabir",
    "kind": "live",
-   "s": 59.434,
-   "e": 59.994
+   "s": 58.914,
+   "e": 59.474
   },
   {
    "w": "Didn't",
    "line": "k5",
    "who": "kabir",
    "kind": "live",
-   "s": 60.394,
-   "e": 60.714
+   "s": 59.874,
+   "e": 60.194
   },
   {
    "w": "you?",
    "line": "k5",
    "who": "kabir",
    "kind": "live",
-   "s": 60.714,
-   "e": 61.034
+   "s": 60.194,
+   "e": 60.514
   },
   {
    "w": "That",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 61.644,
-   "e": 62.524
+   "s": 61.194,
+   "e": 61.914
   },
   {
    "w": "night,",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 61.964,
-   "e": 62.824
+   "s": 61.434,
+   "e": 62.294
   },
   {
    "w": "at",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 62.744,
-   "e": 63.204
+   "s": 62.134,
+   "e": 62.774
   },
   {
    "w": "11:11…",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 63.044,
-   "e": 63.204
+   "s": 62.294,
+   "e": 63.494
   },
   {
    "w": "it",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 63.204,
-   "e": 63.504
+   "s": 62.774,
+   "e": 63.874
   },
   {
    "w": "wasn't",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 63.424,
-   "e": 64.144
+   "s": 63.714,
+   "e": 64.354
   },
   {
    "w": "my",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 63.664,
-   "e": 64.384
+   "s": 63.874,
+   "e": 64.594
   },
   {
    "w": "phone",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 64.144,
-   "e": 64.624
+   "s": 64.354,
+   "e": 65.154
   },
   {
    "w": "that",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 64.384,
-   "e": 65.004
+   "s": 64.594,
+   "e": 65.314
   },
   {
    "w": "lit",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 64.844,
-   "e": 65.084
+   "s": 65.154,
+   "e": 65.554
   },
   {
    "w": "up.",
    "line": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 65.004,
-   "e": 65.544
+   "s": 65.314,
+   "e": 65.954
   },
   {
    "w": "Mira...",
    "line": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 66.104,
-   "e": 66.744
+   "s": 66.514,
+   "e": 67.154
   },
   {
    "w": "why",
    "line": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 67.244,
-   "e": 67.564
+   "s": 67.654,
+   "e": 67.974
   },
   {
    "w": "is",
    "line": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 67.564,
-   "e": 67.804
+   "s": 67.974,
+   "e": 68.214
   },
   {
    "w": "your",
    "line": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 67.804,
-   "e": 67.884
+   "s": 68.214,
+   "e": 68.294
   },
   {
    "w": "voice",
    "line": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 67.884,
-   "e": 68.364
+   "s": 68.294,
+   "e": 68.774
   },
   {
    "w": "on",
    "line": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 68.364,
-   "e": 68.444
+   "s": 68.774,
+   "e": 68.854
   },
   {
    "w": "my",
    "line": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 68.444,
-   "e": 68.684
+   "s": 68.854,
+   "e": 69.094
   },
   {
    "w": "phone?",
    "line": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 68.684,
-   "e": 69.244
+   "s": 69.094,
+   "e": 69.654
   }
  ],
  "lines": [
@@ -1096,175 +1096,175 @@
    "who": "mira",
    "kind": "narr",
    "s": 2.449,
-   "e": 5.949,
+   "e": 5.469,
    "text": "6:31. Nine minutes."
   },
   {
    "id": "t2",
    "who": "mira",
    "kind": "narr",
-   "s": 6.249,
-   "e": 8.969,
+   "s": 5.769,
+   "e": 8.479,
    "text": "...and he had no idea."
   },
   {
    "id": "k1",
    "who": "kabir",
    "kind": "live",
-   "s": 9.319,
-   "e": 10.439,
+   "s": 8.829,
+   "e": 9.949,
    "text": "You again."
   },
   {
    "id": "m8",
    "who": "mira",
    "kind": "live",
-   "s": 10.739,
-   "e": 12.369,
+   "s": 10.249,
+   "e": 11.879,
    "text": "Hi... again."
   },
   {
    "id": "k11",
    "who": "kabir",
    "kind": "live",
-   "s": 12.669,
-   "e": 14.429,
+   "s": 12.179,
+   "e": 13.939,
    "text": "Do you take this train too?"
   },
   {
    "id": "m9",
    "who": "mira",
    "kind": "live",
-   "s": 14.679,
-   "e": 15.869,
+   "s": 14.189,
+   "e": 15.379,
    "text": "Every day."
   },
   {
    "id": "t3",
    "who": "mira",
    "kind": "narr",
-   "s": 16.169,
-   "e": 19.529,
+   "s": 15.679,
+   "e": 18.709,
    "text": "I'd never taken this train in my life."
   },
   {
    "id": "k3",
    "who": "kabir",
    "kind": "live",
-   "s": 20.129,
-   "e": 21.808,
+   "s": 19.309,
+   "e": 20.988,
    "text": "Well. That's mine."
   },
   {
    "id": "t4",
    "who": "mira",
    "kind": "narr",
-   "s": 22.108,
-   "e": 24.728,
+   "s": 21.288,
+   "e": 23.578,
    "text": "Ten seconds. No plan."
   },
   {
    "id": "m5",
    "who": "mira",
    "kind": "live",
-   "s": 24.978,
-   "e": 26.808,
+   "s": 23.828,
+   "e": 25.658,
    "text": "Oh no... my earring!"
   },
   {
    "id": "k8",
    "who": "kabir",
    "kind": "live",
-   "s": 27.108,
-   "e": 29.468,
+   "s": 25.958,
+   "e": 28.318,
    "text": "Don't move. What does it look like?"
   },
   {
    "id": "m6",
    "who": "mira",
    "kind": "live",
-   "s": 29.768,
-   "e": 33.208,
+   "s": 28.618,
+   "e": 32.058,
    "text": "Small. Gold. A little flower."
   },
   {
    "id": "t10",
    "who": "mira",
    "kind": "narr",
-   "s": 33.658,
-   "e": 36.008,
+   "s": 32.508,
+   "e": 34.698,
    "text": "Don't look up. Don't look up."
   },
   {
    "id": "k9",
    "who": "kabir",
    "kind": "live",
-   "s": 37.158,
-   "e": 39.404,
+   "s": 35.848,
+   "e": 38.094,
    "text": "I can't find it. I'm sorry."
   },
   {
    "id": "m7",
    "who": "mira",
    "kind": "live",
-   "s": 39.754,
-   "e": 42.824,
+   "s": 38.444,
+   "e": 41.514,
    "text": "It's okay. Maybe it was never here."
   },
   {
    "id": "k10",
    "who": "kabir",
    "kind": "live",
-   "s": 43.324,
-   "e": 44.914,
-   "text": "...And there goes my train."
+   "s": 42.214,
+   "e": 44.764,
+   "text": "Wait... that was my train."
   },
   {
    "id": "t11",
    "who": "mira",
    "kind": "narr",
-   "s": 45.264,
-   "e": 48.804,
+   "s": 45.114,
+   "e": 48.474,
    "text": "The earring was in my pocket the whole time."
   },
   {
    "id": "t6",
    "who": "mira",
    "kind": "narr",
-   "s": 49.504,
-   "e": 55.084,
+   "s": 49.174,
+   "e": 54.434,
    "text": "Forty minutes later, every phone in the café lit up at once."
   },
   {
    "id": "t7",
    "who": "mira",
    "kind": "narr",
-   "s": 55.384,
-   "e": 58.844,
+   "s": 54.734,
+   "e": 58.324,
    "text": "The 6:40 never made it to the next station."
   },
   {
    "id": "k5",
    "who": "kabir",
    "kind": "live",
-   "s": 59.194,
-   "e": 61.194,
+   "s": 58.674,
+   "e": 60.674,
    "text": "You knew. Didn't you?"
   },
   {
    "id": "t9",
    "who": "mira",
    "kind": "narr",
-   "s": 61.644,
-   "e": 65.704,
+   "s": 61.124,
+   "e": 66.114,
    "text": "That night, at 11:11… it wasn't my phone that lit up."
   },
   {
    "id": "k6",
    "who": "kabir",
    "kind": "live",
-   "s": 66.104,
-   "e": 69.404,
+   "s": 66.514,
+   "e": 69.814,
    "text": "Mira... why is your voice on my phone?"
   }
  ]

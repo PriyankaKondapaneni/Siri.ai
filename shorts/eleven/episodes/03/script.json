@@ -20,7 +20,7 @@
    "id": "t1",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, hushed, heart racing] Six thirty-one. Nine minutes.",
+   "text": "[quiet, heart racing] Six thirty-one. Nine minutes.",
    "show": "6:31. Nine minutes.",
    "gap": 0.45,
    "cap": 0.22
@@ -29,7 +29,7 @@
    "id": "t2",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, a dry, almost bitter little laugh] ...and he had no idea.",
+   "text": "[a dry, almost bitter little laugh] ...and he had no idea.",
    "gap": 0.3,
    "cap": 0.22
   },
@@ -65,7 +65,7 @@
    "id": "t3",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, hushed, embarrassed] I'd never taken this train in my life.",
+   "text": "[quiet, embarrassed] I'd never taken this train in my life.",
    "gap": 0.3,
    "cap": 0.22
   },
@@ -80,7 +80,7 @@
    "id": "t4",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, breathless, panicking] Ten seconds. No plan.",
+   "text": "[breathless, panicking] Ten seconds. No plan.",
    "gap": 0.3,
    "cap": 0.22
   },
@@ -109,7 +109,7 @@
    "id": "t10",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, holding her breath, hushed] Don't look up. Don't look up.",
+   "text": "[holding her breath] Don't look up. Don't look up.",
    "gap": 0.45
   },
   {
@@ -130,14 +130,15 @@
    "id": "k10",
    "who": "kabir",
    "kind": "live",
-   "text": "[glancing back at the empty tracks, a rueful laugh] ...And there goes my train.",
-   "gap": 0.5
+   "text": "[suddenly realizing, stunned, then a small disbelieving laugh] Wait... that was my train.",
+   "gap": 0.7,
+   "cap": 1.0
   },
   {
    "id": "t11",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, soft, a guilty little smile] The earring was in my pocket the whole time.",
+   "text": "[soft, a guilty little smile] The earring was in my pocket the whole time.",
    "gap": 0.35,
    "cap": 0.22
   },
@@ -145,7 +146,7 @@
    "id": "t6",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, low] Forty minutes later, every phone in the café lit up at once.",
+   "text": "[low] Forty minutes later, every phone in the café lit up at once.",
    "gap": 0.7,
    "cap": 0.22
   },
@@ -153,7 +154,7 @@
    "id": "t7",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, shaken] The six-forty never made it to the next station.",
+   "text": "[shaken] The six-forty never made it to the next station.",
    "show": "The 6:40 never made it to the next station.",
    "gap": 0.3,
    "cap": 0.22
@@ -169,7 +170,7 @@
    "id": "t9",
    "who": "mira",
    "kind": "narr",
-   "text": "[whispering, uneasy] That night, at eleven eleven... it wasn't my phone that lit up.",
+   "text": "[uneasy] That night, at eleven eleven... it wasn't my phone that lit up.",
    "show": "That night, at 11:11… it wasn't my phone that lit up.",
    "gap": 0.45,
    "cap": 0.22

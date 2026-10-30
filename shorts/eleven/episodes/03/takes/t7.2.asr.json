@@ -1,12 +1,12 @@
 {
- "duration": 4.2725,
+ "duration": 3.8545625,
  "language": "English",
  "language_code": "en",
- "request_id": "6a233d43-80df-4f16-80a0-a5225b31ed69",
+ "request_id": "52238503-dd8e-4e7b-ae12-3fe3993d5578",
  "segments": [
   {
    "end": 0.16,
-   "start": 0,
+   "start": 0.08,
    "text": "The"
   },
   {
@@ -15,45 +15,45 @@
    "text": "6"
   },
   {
-   "end": 0.64,
-   "start": 0.64,
+   "end": 1.28,
+   "start": 0.72,
    "text": "40"
   },
   {
-   "end": 1.84,
-   "start": 1.44,
+   "end": 1.6,
+   "start": 1.28,
    "text": "never"
   },
   {
-   "end": 2.16,
-   "start": 1.84,
+   "end": 1.92,
+   "start": 1.6,
    "text": "made"
   },
   {
-   "end": 2.32,
-   "start": 2.16,
+   "end": 2.08,
+   "start": 1.92,
    "text": "it"
   },
   {
-   "end": 2.56,
-   "start": 2.48,
+   "end": 2.24,
+   "start": 2.16,
    "text": "to"
   },
   {
-   "end": 2.64,
-   "start": 2.56,
+   "end": 2.32,
+   "start": 2.24,
    "text": "the"
   },
   {
-   "end": 3.12,
-   "start": 2.72,
+   "end": 2.64,
+   "start": 2.32,
    "text": "next"
   },
   {
-   "end": 3.6,
-   "start": 3.12,
+   "end": 3.44,
+   "start": 2.64,
    "text": "station"
   }
  ],
- "text": "The 6:40 never made it to the next station."
+ "text": "The 6:40 never made it to the next station!"
 }

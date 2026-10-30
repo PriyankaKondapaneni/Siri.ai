@@ -1,26 +1,26 @@
 {
- "duration": 4.365375,
+ "duration": 3.6688125,
  "language_code": "en",
- "request_id": "48de8335-21a6-4ca5-affd-438a094bc6f5",
+ "request_id": "3efb4fa3-8383-4920-aa0b-9b0f558ad4ac",
  "segments": [
   {
-   "end": 0.64,
+   "end": 0.56,
    "start": 0,
    "text": "6"
   },
   {
-   "end": 1.68,
-   "start": 0.64,
+   "end": 1.44,
+   "start": 0.56,
    "text": "31"
   },
   {
-   "end": 2.72,
-   "start": 2.72,
+   "end": 2.08,
+   "start": 2.08,
    "text": "nine"
   },
   {
-   "end": 3.92,
-   "start": 3.2,
+   "end": 3.28,
+   "start": 2.64,
    "text": "minutes"
   }
  ],

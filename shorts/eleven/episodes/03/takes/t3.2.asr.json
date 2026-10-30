@@ -1,49 +1,49 @@
 {
- "duration": 3.993875,
+ "duration": 3.575875,
  "language": "English",
  "language_code": "en",
- "request_id": "f4b3dfbb-5dcb-444c-b545-4b42c47d8abb",
+ "request_id": "2fce04c3-e110-4467-8ff0-ed3f1d489e14",
  "segments": [
   {
-   "end": 0.24,
-   "start": 0,
-   "text": "I've"
+   "end": 0.32,
+   "start": 0.08,
+   "text": "I'd"
   },
   {
-   "end": 0.88,
-   "start": 0.48,
+   "end": 0.8,
+   "start": 0.32,
    "text": "never"
   },
   {
-   "end": 1.44,
-   "start": 0.96,
+   "end": 1.2,
+   "start": 0.8,
    "text": "taken"
   },
   {
-   "end": 1.68,
-   "start": 1.44,
+   "end": 1.44,
+   "start": 1.2,
    "text": "this"
   },
   {
-   "end": 2.24,
-   "start": 1.68,
+   "end": 1.76,
+   "start": 1.44,
    "text": "train"
   },
   {
-   "end": 2.56,
-   "start": 2.32,
+   "end": 1.92,
+   "start": 1.76,
    "text": "in"
   },
   {
-   "end": 2.64,
-   "start": 2.56,
+   "end": 2.08,
+   "start": 1.92,
    "text": "my"
   },
   {
-   "end": 3.6,
-   "start": 2.64,
+   "end": 2.88,
+   "start": 2.08,
    "text": "life"
   }
  ],
- "text": "I've never taken this train in my life."
+ "text": "I'd never taken this train in my life."
 }

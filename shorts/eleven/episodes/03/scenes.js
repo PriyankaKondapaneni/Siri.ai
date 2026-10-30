@@ -365,12 +365,27 @@
     miraTalk(ctx, t, u, 'm7', { h: 2600, y: 2350, rot: 0.03 * tilt, dy: 8 * tilt, blush: 0.4 + 0.5 * tilt, face: 's' });
     foreground(ctx, 'K4', 1260, 2400, 2600, { blur: 22, bright: 0.4 });
   });
-  shot(C.tracks, C.pocket, 'train', (ctx, t, u) => {
-    // he looks over his shoulder at the empty track, then back, laughing at himself
+  // "Wait... that was my train." it lands on him: he turns to the track; the track is empty; he turns back, stunned,
+  // and a small disbelieving laugh gets out
+  const thatCut = word('k10', 'that') - 0.12, emptyCut = word('k10', 'wait') + 0.3;
+  shot(C.tracks, emptyCut, 'train', (ctx, t, u) => {
     trainSet(ctx, t, { x: 0.45, y: 0.42, z: 1.55 }, { variant: 'blur' });
-    const look = kf(t, [[C.tracks, 0], [C.tracks + 0.4, 1, OB], [word('k10', 'goes') - 0.1, 1], [word('k10', 'goes') + 0.35, 0, E.out]]);
-    const laugh = Math.abs(Math.sin(t * 12)) * -9 * tl(t, word('k10', 'train'), word('k10', 'train') + 0.3);
-    char(ctx, t, 'K4', 570 + 70 * look, 930 + laugh, 2250, { id: 'k10', anchor: [0.53, 0.42], rot: -0.08 * look, talk: true, face: (tt) => (tt > word('k10', 'train') - 0.05 ? 'h' : ''), rim: { ...RIM, dx: -7 } });
+    const look = tl(t, C.tracks + 0.05, C.tracks + 0.45, OB);
+    char(ctx, t, 'K3', 580 + 60 * look, 940, 2250, { id: 'k10a', anchor: [0.52, 0.42], rot: -0.07 * look, talk: true, blink: false, rim: { ...RIM, dx: -7 } });
+  });
+  shot(emptyCut, thatCut, 'train', (ctx, t, u) => {
+    // what he sees: the empty track, the last of the wind, dust settling in the light
+    trainSet(ctx, t, lerpCam(u, { x: 0.5, y: 0.4, z: 1.2 }, { x: 0.5, y: 0.4, z: 1.28 }));
+    PP.dust(ctx, t, [0, 200, W, 1300], 34, '255,240,215');
+    // the last of it: two red tail lights sliding away off the left edge
+    const k = tl(t, emptyCut, thatCut, (x) => x);
+    for (const y of [1060, 1150]) PP.glowAt(ctx, PP.lerp(40, -160, k), y, 160, '255,60,50', 0.8 * (1 - k));
+  });
+  shot(thatCut, C.pocket, 'train', (ctx, t, u) => {
+    trainSet(ctx, t, { x: 0.45, y: 0.42, z: 1.6 }, { variant: 'blur' });
+    const back = tl(t, thatCut, thatCut + 0.35, OB), laughAt = word('k10', 'train') + 0.15;
+    const laugh = Math.abs(Math.sin((t - laughAt) * 13)) * -8 * tl(t, laughAt, laughAt + 0.2) * (1 - tl(t, laughAt + 0.8, laughAt + 1.3));
+    char(ctx, t, 'K3', 640 - 60 * back, 930 + laugh, 2300 * (1 + u * 0.05), { id: 'k10b', anchor: [0.52, 0.42], rot: -0.07 * (1 - back), talk: true, blink: t > laughAt, face: (tt) => (tt > laughAt ? 's' : ''), rim: { ...RIM, dx: -7 } });
   });
   // "The earring was in my pocket the whole time." her hand comes out of her pocket and opens: the little gold flower
   shot(C.pocket, C.cafe, 'dark', (ctx, t, u) => {

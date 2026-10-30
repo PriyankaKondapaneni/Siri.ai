@@ -1,11 +1,11 @@
 {
- "duration": 2.7864375,
+ "duration": 2.92575,
  "language_code": "en",
- "request_id": "dc6231cc-4897-43eb-acbe-f3bb729442f9",
+ "request_id": "35badb6a-4c56-42b0-91b6-1c6fa651d6d7",
  "segments": [
   {
    "end": 0.32,
-   "start": 0,
+   "start": 0.16,
    "text": "Don't"
   },
   {
@@ -15,7 +15,7 @@
   },
   {
    "end": 0.88,
-   "start": 0.56,
+   "start": 0.64,
    "text": "up"
   },
   {
@@ -24,13 +24,13 @@
    "text": "Don't"
   },
   {
-   "end": 2.08,
-   "start": 1.84,
+   "end": 2,
+   "start": 1.76,
    "text": "look"
   },
   {
-   "end": 2.48,
-   "start": 2.24,
+   "end": 2.4,
+   "start": 2.08,
    "text": "up"
   }
  ],

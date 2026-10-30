@@ -1,32 +1,32 @@
 {
- "duration": 4.969125,
+ "duration": 3.9474375,
  "language": "English",
  "language_code": "en",
- "request_id": "2921708d-3ccf-470e-9f2f-41283e801826",
+ "request_id": "63c21785-042e-45bf-bc66-f773f4ddccb7",
  "segments": [
   {
-   "end": 2.32,
-   "start": 2.08,
+   "end": 1.52,
+   "start": 1.28,
    "text": "And"
   },
   {
-   "end": 2.72,
-   "start": 2.32,
+   "end": 1.68,
+   "start": 1.52,
    "text": "he"
   },
   {
-   "end": 3.12,
-   "start": 2.72,
+   "end": 2,
+   "start": 1.68,
    "text": "had"
   },
   {
-   "end": 3.84,
-   "start": 3.12,
+   "end": 2.64,
+   "start": 2,
    "text": "no"
   },
   {
-   "end": 4.88,
-   "start": 3.84,
+   "end": 3.6,
+   "start": 2.72,
    "text": "idea"
   }
  ],

@@ -1,26 +1,26 @@
 {
- "duration": 3.1115,
+ "duration": 2.647125,
  "language_code": "en",
- "request_id": "38904d68-bd0e-4122-9a84-68ae599d8f95",
+ "request_id": "29d57197-e3fa-442e-8d36-50008a1b62d0",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0,
+   "end": 0.4,
+   "start": 0.08,
    "text": "Ten"
   },
   {
-   "end": 1.12,
-   "start": 0.32,
+   "end": 1.04,
+   "start": 0.4,
    "text": "seconds"
   },
   {
-   "end": 1.92,
-   "start": 1.6,
+   "end": 1.68,
+   "start": 1.44,
    "text": "No"
   },
   {
-   "end": 2.72,
-   "start": 2,
+   "end": 2.32,
+   "start": 1.68,
    "text": "plan"
   }
  ],

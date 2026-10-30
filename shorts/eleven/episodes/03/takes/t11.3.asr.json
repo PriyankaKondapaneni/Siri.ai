@@ -1,52 +1,52 @@
 {
- "duration": 3.808125,
+ "duration": 3.4365625,
  "language": "English",
  "language_code": "en",
- "request_id": "0c4d342f-c0d0-4df4-9738-8e1753b0facb",
+ "request_id": "7c8c6b64-48d1-44ec-b26a-73636a7cc85b",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0.08,
+   "end": 0.24,
+   "start": 0,
    "text": "The"
   },
   {
-   "end": 0.8,
+   "end": 0.64,
    "start": 0.32,
    "text": "earring"
   },
   {
-   "end": 0.96,
-   "start": 0.8,
+   "end": 0.8,
+   "start": 0.64,
    "text": "was"
   },
   {
-   "end": 1.2,
-   "start": 1.04,
+   "end": 0.96,
+   "start": 0.8,
    "text": "in"
   },
   {
-   "end": 1.44,
-   "start": 1.2,
+   "end": 1.12,
+   "start": 0.96,
    "text": "my"
   },
   {
-   "end": 2,
-   "start": 1.52,
+   "end": 1.76,
+   "start": 1.2,
    "text": "pocket"
   },
   {
-   "end": 2.16,
-   "start": 2.08,
+   "end": 2,
+   "start": 1.76,
    "text": "the"
   },
   {
-   "end": 2.64,
-   "start": 2.16,
+   "end": 2.24,
+   "start": 2,
    "text": "whole"
   },
   {
-   "end": 3.44,
-   "start": 2.72,
+   "end": 3.04,
+   "start": 2.24,
    "text": "time"
   }
  ],
