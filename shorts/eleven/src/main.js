@@ -43,6 +43,15 @@
 
   PP.renderFrame = function (f) {
     const t = f / PP.FPS;
+    // subtitles alone on a transparent frame, to lay over footage made elsewhere (the Wan shots)
+    if (PP.SUBS_ONLY) {
+      const ctx = bufA.getContext('2d');
+      ctx.clearRect(0, 0, W, H);
+      const ch = t < C.endCard && subs.find((c) => t >= c.s && t < c.e);
+      if (ch) PP.subtitle(ctx, ch, t, 1500);
+      out.clearRect(0, 0, W, H); out.drawImage(bufA, 0, 0);
+      return;
+    }
     PP.FRAME.phone = false;
     PP.FRAME.noSubs = false;
     const i = shotAt(t);

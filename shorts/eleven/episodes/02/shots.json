@@ -1,0 +1,453 @@
+{
+ "shots": [
+  [
+   0,
+   0.42,
+   "danger",
+   "",
+   "(ctx, t, u) => { const [sx, sy, sr] = PP.shake(t, 0, 16, 0.4); PP.with(ctx, () => { ctx.translate(sx, sy); ctx.rotate(sr); "
+  ],
+  [
+   0.42,
+   0.86,
+   "dark",
+   "",
+   "(ctx, t, u) => { table(ctx, t, lerpCam(u, { x: 0.5, y: 0.61, z: 1.9 }, { x: 0.5, y: 0.61, z: 2.15 }, E.out), C.touch - 0.3 + (t - hk[1])"
+  ],
+  [
+   0.86,
+   1.3,
+   "train",
+   "",
+   "(ctx, t, u) => { const [hx, hy, hr] = PP.handheld(t, 9, 43); PP.with(ctx, () => { ctx.translate(hx, hy); ctx.rotate(hr); "
+  ],
+  [
+   1.3,
+   2.409,
+   "night",
+   "",
+   "(ctx, t, u) => { PP.drawBg(ctx, 'B1', { x: 0.5, y: 0.45, z: 1.5 }, { variant: 'blur' }); char(ctx, t, 'M10', 540, 860, 3400 * (1 + E"
+  ],
+  [
+   2.409,
+   4.389,
+   "phone",
+   "",
+   "(ctx, t, u) => { // she lowers the phone after reading his last message again phoneShot(ctx, t, 'B5', [lastNight], { u, urgent: true"
+  ],
+  [
+   4.389,
+   7.439,
+   null,
+   "dissolve",
+   "(ctx, t, u) => { const k = PP.clamp((t - C.lapse) / (C.street - C.lapse - 0.2)), [rgb, day] = sky(k); const mins = Math.floor(23 * 6"
+  ],
+  [
+   7.439,
+   8.959000000000001,
+   "dusk",
+   "dissolve",
+   "(ctx, t, u) => { street(ctx, t, lerpCam(u, { x: 0.52, y: 0.5, z: 1.0 }, { x: 0.5, y: 0.52, z: 1.1 }), { lampsOn: (t - C.street) / 0.9 })"
+  ],
+  [
+   8.959000000000001,
+   10.289,
+   "dusk",
+   "",
+   "(ctx, t, u) => { K.F.noSubs = true; street(ctx, t, { x: 0.594, y: 0.3, z: 1.9 + u * 0.15 }, { variant: 'blur', lampsOn: 2 }); PP"
+  ],
+  [
+   10.289,
+   12.189,
+   "dusk",
+   "",
+   "(ctx, t, u) => { street(ctx, t, { x: 0.38, y: 0.42, z: 1.5 }, { variant: 'blur', lampsOn: 2 }); const turn = E.inOut(PP.clamp(u * 1."
+  ],
+  [
+   12.189,
+   17.412,
+   "dusk",
+   "",
+   "(ctx, t, u) => { street(ctx, t, { x: 0.38, y: 0.42, z: 1.5 }, { variant: 'blur', lampsOn: 2 }); // a surprised lift of the head on \""
+  ],
+  [
+   17.412,
+   19.451999999999998,
+   "dusk",
+   "",
+   "(ctx, t, u) => { street(ctx, t, { x: 0.6, y: 0.42, z: 1.5 }, { variant: 'blur', lampsOn: 2 }); char(ctx, t, 'M6', 500, 870, 2250 * ("
+  ],
+  [
+   19.451999999999998,
+   22.032,
+   "dusk",
+   "",
+   "(ctx, t, u) => { street(ctx, t, { x: 0.6, y: 0.42, z: 1.6 }, { variant: 'blur', lampsOn: 2 }); // her face falls a little on \"not on"
+  ],
+  [
+   22.032,
+   24.133,
+   "dusk",
+   "",
+   "(ctx, t, u) => { street(ctx, t, lerpCam(u, { x: 0.4, y: 0.45, z: 1.25 }, { x: 0.42, y: 0.45, z: 1.3 }), { variant: 'soft', lampsOn: 2 })"
+  ],
+  [
+   24.133,
+   25.173,
+   "dark",
+   "dissolve",
+   "(ctx, t, u) => { cafe(ctx, t, lerpCam(u, { x: 0.5, y: 0.55, z: 1.15 }, { x: 0.5, y: 0.55, z: 1.25 })); const sitM = tl(t, C.cafe, C."
+  ],
+  [
+   25.173,
+   27.313000000000002,
+   "dark",
+   "",
+   "(ctx, t, u) => { table(ctx, t, lerpCam(u, { x: 0.5, y: 0.6, z: 1.0 }, { x: 0.5, y: 0.61, z: 1.4 })); }"
+  ],
+  [
+   27.313000000000002,
+   29.572999999999997,
+   "dark",
+   "",
+   "(ctx, t, u) => { cafe(ctx, t, { x: 0.3, y: 0.45, z: 1.5 }, 'blur'); const shy = tl(t, shyCut, shyCut + 1.2), h = 2400 * (1 + u * 0.0"
+  ],
+  [
+   29.572999999999997,
+   30.563000000000002,
+   "dark",
+   "",
+   "(ctx, t, u) => { cafe(ctx, t, { x: 0.4, y: 0.45, z: 1.6 }, 'blur'); const tilt = Math.sin(tl(t, line('k6').s - 0.1, line('k6').s + 0"
+  ],
+  [
+   30.563000000000002,
+   34.142999999999994,
+   "dark",
+   "",
+   "(ctx, t, u) => { const [sx, sy] = PP.shake(t, C.snap, 7, 0.25); PP.with(ctx, () => { ctx.translate(sx, sy); table(ctx, t, lerpCam(u,"
+  ],
+  [
+   34.142999999999994,
+   35.063,
+   "dark",
+   "",
+   "(ctx, t, u) => { cafe(ctx, t, { x: 0.65, y: 0.45, z: 1.5 }, 'blur'); const k = t - laughCut, bob = Math.abs(Math.sin(k * 14)) * -12 "
+  ],
+  [
+   35.063,
+   36.463,
+   "dark",
+   "",
+   "(ctx, t, u) => { table(ctx, t, lerpCam(u, { x: 0.5, y: 0.6, z: 1.15 }, { x: 0.5, y: 0.6, z: 1.22 })); }"
+  ],
+  [
+   36.463,
+   38.952999999999996,
+   "dark",
+   "dissolve",
+   "(ctx, t, u) => { const k = PP.clamp((t - C.closing) / (C.watch - C.closing)); const bg = cafe(ctx, t, lerpCam(u, { x: 0.62, y: 0.5, "
+  ],
+  [
+   38.952999999999996,
+   43.592999999999996,
+   "dark",
+   "",
+   "(ctx, t, u) => { cafe(ctx, t, { x: 0.5, y: 0.5, z: 1.7 }, 'blur', 0.4, 0.45); // his wrist moves as he talks, then goes still on \"St"
+  ],
+  [
+   43.592999999999996,
+   47.693,
+   "dark",
+   "",
+   "(ctx, t, u) => { cafe(ctx, t, { x: 0.4, y: 0.45, z: 1.6 }, 'blur', 0.4, 0.45); const down = tl(t, C.brother - 0.2, C.brother + 0.5) "
+  ],
+  [
+   47.693,
+   49.873000000000005,
+   "night",
+   "dissolve",
+   "(ctx, t, u) => { street(ctx, t, { x: 0.4, y: 0.45, z: 1.45 }, { variant: 'blur', lampsOn: 2 }); // the café door light on him; a sma"
+  ],
+  [
+   49.873000000000005,
+   51.503,
+   "night",
+   "",
+   "(ctx, t, u) => { // the camera tracks her walking home alone under the street lights, smiling street(ctx, t, lerpCam(u, { x: 0.3, y:"
+  ],
+  [
+   51.503,
+   53.203,
+   "night",
+   "dissolve",
+   "(ctx, t, u) => { const k = PP.clamp((t - C.night) / (clockCut - C.night - 0.15)), m = Math.min(10, Math.floor(PP.lerp(2, 10.99, k))); "
+  ],
+  [
+   53.203,
+   53.803000000000004,
+   "night",
+   "",
+   "(ctx, t, u) => { const pulse = t > C.clock1111 ? Math.max(0, 1 - (t - C.clock1111) / 1.4) : 0; bedroom(ctx, t, lerpCam(u, { x: 0.31,"
+  ],
+  [
+   53.803000000000004,
+   56.553000000000004,
+   "night",
+   "",
+   "(ctx, t, u) => { bedroom(ctx, t, { x: 0.55, y: 0.5, z: 1.25 }, { variant: 'blur' }); // the phone lights up her face; she sits up to"
+  ],
+  [
+   56.553000000000004,
+   60.763,
+   "phone",
+   "",
+   "(ctx, t, u) => { phoneShot(ctx, t, 'B5', [msg('k4')], { u, banner: C.buzz[0], seed: 53, rise: -40 * E.out(u) }); }"
+  ],
+  [
+   60.763,
+   63.032,
+   "train",
+   "",
+   "(ctx, t, u) => { const [hx, hy, hr] = PP.handheld(t, 6, 61); PP.with(ctx, () => { ctx.translate(hx, hy); ctx.rotate(hr); PP.drawBgDe"
+  ],
+  [
+   63.032,
+   64.522,
+   "phone",
+   "",
+   "(ctx, t, u) => { phoneShot(ctx, t, 'B5', [msg('k4')], { u, seed: 63, push: 0.12, rise: -60 * E.out(u), rot: -0.02 + 0.03 * E.inOut(u) })"
+  ],
+  [
+   64.522,
+   67.372,
+   "danger",
+   "",
+   "(ctx, t, u) => { phoneShot(ctx, t, 'B5', [msg('k5', { urgent: true })], { u, urgent: true, banner: C.buzz[1], seed: 59 }); }"
+  ],
+  [
+   67.372,
+   70.24199999999999,
+   "night",
+   "",
+   "(ctx, t, u) => { PP.drawBg(ctx, 'B1', { x: 0.5, y: 0.45, z: 1.5 }, { variant: 'blur' }); // her breath catches; a small tremble "
+  ],
+  [
+   70.24199999999999,
+   70.372,
+   null,
+   "",
+   "(ctx) => { ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   70.372,
+   72.152,
+   null,
+   "",
+   "(ctx, t) => { ctx.fillStyle = '#04050a'; ctx.fillRect(0, 0, W, H); const t0 = C.endCard, a = PP.clamp((t - t0 - 0.1) / 0.6); PP."
+  ]
+ ],
+ "total": 2165,
+ "endCard": 70.372,
+ "subs": [
+  {
+   "s": 0.08,
+   "e": 2.15,
+   "kind": "note"
+  },
+  {
+   "s": 2.499,
+   "e": 4.369,
+   "kind": "narr"
+  },
+  {
+   "s": 4.439,
+   "e": 6.329,
+   "kind": "narr"
+  },
+  {
+   "s": 6.359,
+   "e": 7.428999999999999,
+   "kind": "narr"
+  },
+  {
+   "s": 7.589,
+   "e": 8.999,
+   "kind": "narr"
+  },
+  {
+   "s": 9.029,
+   "e": 9.479,
+   "kind": "narr"
+  },
+  {
+   "s": 9.508999999999999,
+   "e": 12.179,
+   "kind": "narr"
+  },
+  {
+   "s": 12.309,
+   "e": 13.079,
+   "kind": "live"
+  },
+  {
+   "s": 13.109,
+   "e": 15.239,
+   "kind": "live"
+  },
+  {
+   "s": 15.269,
+   "e": 17.379,
+   "kind": "live"
+  },
+  {
+   "s": 17.462,
+   "e": 19.472,
+   "kind": "narr"
+  },
+  {
+   "s": 19.502,
+   "e": 21.972,
+   "kind": "narr"
+  },
+  {
+   "s": 22.082,
+   "e": 23.252000000000002,
+   "kind": "live"
+  },
+  {
+   "s": 23.282,
+   "e": 24.192,
+   "kind": "live"
+  },
+  {
+   "s": 24.602999999999998,
+   "e": 26.493000000000002,
+   "kind": "narr"
+  },
+  {
+   "s": 26.523,
+   "e": 27.293000000000003,
+   "kind": "narr"
+  },
+  {
+   "s": 27.323,
+   "e": 29.513,
+   "kind": "narr"
+  },
+  {
+   "s": 29.692999999999998,
+   "e": 30.443,
+   "kind": "live"
+  },
+  {
+   "s": 30.593,
+   "e": 32.173,
+   "kind": "live"
+  },
+  {
+   "s": 32.203,
+   "e": 34.952999999999996,
+   "kind": "live"
+  },
+  {
+   "s": 35.713,
+   "e": 37.603,
+   "kind": "narr"
+  },
+  {
+   "s": 37.633,
+   "e": 38.943,
+   "kind": "narr"
+  },
+  {
+   "s": 39.073,
+   "e": 41.043,
+   "kind": "narr"
+  },
+  {
+   "s": 41.073,
+   "e": 43.583,
+   "kind": "narr"
+  },
+  {
+   "s": 43.713,
+   "e": 45.363,
+   "kind": "live"
+  },
+  {
+   "s": 45.393,
+   "e": 46.163000000000004,
+   "kind": "live"
+  },
+  {
+   "s": 46.193000000000005,
+   "e": 47.583,
+   "kind": "live"
+  },
+  {
+   "s": 47.743,
+   "e": 49.873000000000005,
+   "kind": "narr"
+  },
+  {
+   "s": 49.903000000000006,
+   "e": 52.733,
+   "kind": "narr"
+  },
+  {
+   "s": 53.113,
+   "e": 53.803000000000004,
+   "kind": "narr"
+  },
+  {
+   "s": 53.833000000000006,
+   "e": 56.823,
+   "kind": "narr"
+  },
+  {
+   "s": 57.053000000000004,
+   "e": 57.903,
+   "kind": "note"
+  },
+  {
+   "s": 57.933,
+   "e": 58.623000000000005,
+   "kind": "note"
+  },
+  {
+   "s": 58.653000000000006,
+   "e": 59.663000000000004,
+   "kind": "note"
+  },
+  {
+   "s": 59.693000000000005,
+   "e": 60.783,
+   "kind": "note"
+  },
+  {
+   "s": 60.813,
+   "e": 62.882999999999996,
+   "kind": "note"
+  },
+  {
+   "s": 63.082,
+   "e": 64.712,
+   "kind": "narr"
+  },
+  {
+   "s": 65.022,
+   "e": 67.372,
+   "kind": "note"
+  },
+  {
+   "s": 67.422,
+   "e": 69.392,
+   "kind": "note"
+  },
+  {
+   "s": 69.422,
+   "e": 70.49199999999999,
+   "kind": "note"
+  }
+ ]
+}
