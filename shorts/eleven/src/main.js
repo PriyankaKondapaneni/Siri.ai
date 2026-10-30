@@ -62,7 +62,7 @@
     if (tr === 'fadeIn' && t < start + FADE_IN) PP.with(ctx, () => { ctx.fillStyle = `rgba(0,0,0,${1 - PP.ease.inOut((t - start) / FADE_IN)})`; ctx.fillRect(0, 0, W, H); });
     if (t < C.endCard) {
       const ch = subs.find((c) => t >= c.s && t < c.e);
-      if (ch && !PP.FRAME.noSubs && !(ch.kind === 'note' && PP.FRAME.phone)) PP.subtitle(ctx, ch, t, PP.FRAME.phone ? 1640 : 1500);
+      if (ch && !PP.NO_SUBS && !PP.FRAME.noSubs && !(ch.kind === 'note' && PP.FRAME.phone)) PP.subtitle(ctx, ch, t, PP.FRAME.phone ? 1640 : 1500);
     }
     grain(ctx, t);
     out.drawImage(bufA, 0, 0);

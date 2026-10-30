@@ -213,6 +213,7 @@
    * centre of the frame and z the zoom over a cover fit. o: variant, alpha.
    */
   PP.drawBg = function (ctx, name, cam, o = {}) {
+    if (PP.BG_OVERRIDE && o.variant in PP.BG_OVERRIDE) o = { ...o, variant: PP.BG_OVERRIDE[o.variant] };
     const im = o.variant ? PP.bgVariant(name, o.variant) : PP.IMG[name];
     const cover = Math.max(PP.W / im.width, PP.H / im.height) * (cam.z ?? 1);
     PP.with(ctx, () => {
@@ -233,6 +234,7 @@
    * all bands agree, px an extra sideways drift in screen px for the nearest band. o: horizon (0..1), k, variant.
    */
   PP.drawBgDepth = function (ctx, name, cam, o = {}) {
+    if (PP.BG_OVERRIDE && o.variant in PP.BG_OVERRIDE) o = { ...o, variant: PP.BG_OVERRIDE[o.variant] };
     const im = o.variant ? PP.bgVariant(name, o.variant) : PP.IMG[name];
     const base = Math.max(PP.W / im.width, PP.H / im.height);
     const hz = o.horizon ?? 0.5, k = o.k ?? 1.2, z0 = cam.z0 ?? 1, N = 48;
