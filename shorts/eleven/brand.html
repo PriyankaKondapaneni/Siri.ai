@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>11:11 brand</title>
+<style>
+  @font-face { font-family: 'Inter'; src: url(assets/fonts/Inter-ExtraLight.otf); font-weight: 200; }
+  @font-face { font-family: 'Inter'; src: url(assets/fonts/Inter-Light.otf); font-weight: 300; }
+  @font-face { font-family: 'Inter'; src: url(assets/fonts/Inter-Medium.otf); font-weight: 500; }
+  @font-face { font-family: 'Inter'; src: url(assets/fonts/Inter-SemiBold.otf); font-weight: 600; }
+  html, body { margin: 0; background: #000; }
+</style></head><body>
+<canvas id="c"></canvas>
+<script src="src/core.js"></script>
+<script src="src/paper.js"></script>
+<script src="src/art.js"></script>
+<script src="src/fx.js"></script>
+<script src="src/film.js"></script>
+<script>
+// Channel art for 11:11: the profile picture (800x800, shown as a circle) and the banner (2560x1440; only the
+// centre 1546x423 shows on every device). Drawn from the series art. ?w=&h=&kind=dp|banner
+const q = new URLSearchParams(location.search), kind = q.get('kind');
+const W = +q.get('w'), H = +q.get('h');
+const c = document.getElementById('c'); c.width = W; c.height = H;
+const ctx = c.getContext('2d');
+PP.W = W; PP.H = H;
+function cover(name, cx, cy, z, filter) {
+  const im = PP.IMG[name], s = Math.max(W / im.width, H / im.height) * z;
+  ctx.save(); if (filter) ctx.filter = filter; ctx.translate(W / 2, H / 2); ctx.scale(s, s); ctx.drawImage(im, -cx * im.width, -cy * im.height); ctx.restore();
+}
+function cut(name, x, y, h, ax, ay, rim, fade) {
+  let im = PP.IMG[name];
+  if (fade) {
+    // fade the bottom of the cut-out away, so a cropped ledge never shows a hard edge
+    const o = document.createElement('canvas'); o.width = im.width; o.height = im.height; const oc = o.getContext('2d');
+    oc.drawImage(im, 0, 0); oc.globalCompositeOperation = 'destination-out';
+    const g = oc.createLinearGradient(0, im.height * fade, 0, im.height * (fade + 0.12)); g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,1)');
+    oc.fillStyle = g; oc.fillRect(0, 0, o.width, o.height); im = o;
+  }
+  const s = h / im.height;
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  ctx.save(); ctx.globalAlpha = 0.9; ctx.filter = 'blur(10px) brightness(0) opacity(0.5)'; ctx.drawImage(im, -ax * im.width + 14, -ay * im.height + 24); ctx.restore();
+  if (rim) { ctx.save(); ctx.filter = `drop-shadow(0 0 18px ${rim})`; ctx.drawImage(im, -ax * im.width, -ay * im.height); ctx.restore(); }
+  ctx.drawImage(im, -ax * im.width, -ay * im.height); ctx.restore();
+}
+function grade() {
+  ctx.save(); ctx.globalCompositeOperation = 'soft-light'; ctx.fillStyle = 'rgba(70,110,200,0.22)'; ctx.fillRect(0, 0, W, H); ctx.restore();
+  ctx.save(); const g = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.3, W / 2, H / 2, Math.max(W, H) * 0.75); g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,0.55)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); ctx.restore();
+}
+function text(t, x, y, font, spacing, color, glow, blur) {
+  ctx.save(); ctx.font = font; ctx.letterSpacing = spacing + 'px'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = blur; } ctx.fillStyle = color; ctx.fillText(t, x + spacing / 2, y); ctx.restore();
+}
+window.draw = async () => {
+  await Promise.all(['200 40px Inter', '300 40px Inter', '500 40px Inter', '600 40px Inter'].map((f) => document.fonts.load(f)));
+  await PP.loadArt();
+  if (kind === 'dp') {
+    cover('B7', 0.62, 0.32, 1.25, 'blur(6px) brightness(0.75)');
+    cut('MK1', W * 0.5, H * 0.68, H * 1.95, 0.5, 0.3, 'rgba(255,200,140,0.9)', 0.62);
+    grade();
+    text('11:11', W / 2, H * 0.17, `200 ${Math.round(W * 0.15)}px Inter`, W * 0.01, '#f4f8ff', 'rgba(130,200,255,0.95)', W * 0.05);
+  } else {
+    cover('B7', 0.55, 0.42, 1.0, 'brightness(0.8)');
+    grade();
+    // the safe area (1546x423 at the centre): name and tagline on the left, the couple on the right
+    const sx = (W - 1546) / 2, sy = (H - 423) / 2;
+    cut('MK1', sx + 1546 - 300, sy + 423 - 10, 520, 0.5, 0.72, 'rgba(255,200,140,0.9)', 0.6);
+    text('11:11', sx + 520, sy + 150, '200 180px Inter', 18, '#f4f8ff', 'rgba(130,200,255,0.95)', 60);
+    text('STORIES', sx + 520, sy + 280, '500 44px Inter', 30, 'rgba(235,240,255,0.95)', 'rgba(0,0,0,0.8)', 20);
+    text('A NEW MESSAGE EVERY NIGHT AT 11:11', sx + 520, sy + 350, '300 24px Inter', 8, 'rgba(255,175,165,0.98)', 'rgba(0,0,0,0.85)', 16);
+  }
+  return true;
+};
+</script></body></html>
