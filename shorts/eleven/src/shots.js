@@ -17,6 +17,11 @@
     function char(ctx, t, name, x, y, h, o = {}) {
       let state = o.blink !== false && PP.blinking(t, name + (o.id || '')) && PP.FACES[name]?.eyes?.length ? 'b' : '';
       if (o.talk) { const env = ENV[o.talk === true ? 'live' : o.talk] || [], fr = Math.round(t * 30), v = Math.max(env[fr] || 0, env[fr - 1] || 0); state += v > 0.45 ? 'm2' : v > 0.12 ? 'm1' : ''; }
+      // a face expression for this moment: 'h' happy eyes, 's' soft smile, 'w' worried mouth, 't' teary shine
+      // (a string, or a function of time); a moving mouth always wins over a quiet one
+      const face = typeof o.face === 'function' ? o.face(t) : o.face || '';
+      if (face.includes('h')) state = state.replace('b', '');
+      if (PP.FACES[name]) state += /m\d/.test(state) ? face.replace(/[sw]/g, '') : face;
       const breath = o.breath ?? Math.sin(t * 1.5 + name.length) * 0.005;
       PP.drawCut(ctx, name, x, y, h, { sticker: false, shadow: { a: 0.3, dx: 18, dy: 26 }, ...o, state, breath });
     }

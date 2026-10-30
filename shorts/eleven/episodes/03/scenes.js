@@ -166,6 +166,16 @@
     PP.glowAt(ctx, fx, fy, 520 * bg.s, '255,230,190', 0.12 + 0.12 * sp * (0.5 + 0.5 * Math.sin(t * 40)));
     return bg;
   }
+  function sweat(ctx, t, t0, x, y, s = 1) {
+    const k = PP.clamp((t - t0) / 0.25), slide = PP.clamp((t - t0) / 1.2) * 22 * s;
+    if (k <= 0) return;
+    PP.with(ctx, () => {
+      ctx.globalAlpha = k; ctx.translate(x, y + slide); ctx.scale(s, s);
+      ctx.fillStyle = '#cfeaff'; ctx.strokeStyle = '#1d1a1d'; ctx.lineWidth = 5;
+      ctx.beginPath(); ctx.moveTo(0, -38); ctx.quadraticCurveTo(22, 0, 16, 16); ctx.arc(0, 14, 16, 0.1, Math.PI - 0.1); ctx.quadraticCurveTo(-22, 0, 0, -38); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.ellipse(-5, 8, 4, 7, -0.3, 0, 7); ctx.fill();
+    });
+  }
   const wind = (t) => Math.min(1, Math.abs(trainSpeed(t)) * 1.2);
 
   // ---------------------------------------------------------------- 0. Cold open, built like Episode 2's
@@ -219,19 +229,20 @@
   shot(line('k1').s - 0.1, line('m8').s - 0.1, 'train', (ctx, t, u) => {
     platform(ctx, t, { x: 0.38, y: 0.42, z: 1.5 }, { variant: 'blur' });
     const y = kf(t, [[line('k1').s - 0.1, 950], [line('k1').s + 0.05, 962, E.out], [line('k1').s + 0.45, 905, OB]]);
-    char(ctx, t, 'K4', 600, y, 2150 * (1 + u * 0.04), { id: 'k1', anchor: [0.53, 0.42], talk: true, rim: { ...RIM, dx: -7 } });
+    char(ctx, t, 'K4', 600, y, 2150 * (1 + u * 0.04), { id: 'k1', anchor: [0.53, 0.42], talk: true, face: (tt) => (tt > line('k1').e ? 's' : ''), rim: { ...RIM, dx: -7 } });
     foreground(ctx, 'M14', -170 + Math.sin(t * 1.2) * 12, 2350, 2500, { blur: 20, bright: 0.45 });
   });
   // "Hi... again." a small, embarrassed tilt of her head, a blush
   const miraTalk = (ctx, t, u, id, o = {}) => {
     const h = o.h ?? 2500, x = 540 + (o.dx ?? 0), y = (o.y ?? 2120) + (o.dy ?? 0);
-    char(ctx, t, 'M14', x, y, h * (1 + u * 0.04), { id, talk: 'mira', rot: o.rot ?? 0, sway: { amp: o.sway ?? 4, t, from: 0, to: 0.45, speed: o.speed ?? 2.5 }, rim: { ...RIM, dx: 7 }, light: o.light });
+    char(ctx, t, 'M14', x, y, h * (1 + u * 0.04), { id, talk: 'mira', face: o.face, rot: o.rot ?? 0, sway: { amp: o.sway ?? 4, t, from: 0, to: 0.45, speed: o.speed ?? 2.5 }, rim: { ...RIM, dx: 7 }, light: o.light });
     if (o.blush) for (const [cu, cv] of [[0.4, 0.4], [0.66, 0.38]]) { const [bx, by] = onCut('M14', x, y, h * (1 + u * 0.04), [0.5, 1], cu, cv); PP.glowAt(ctx, bx, by, 70, '255,120,120', 0.3 * o.blush); }
+    if (o.sweat != null) { const [sx, sy] = onCut('M14', x, y, h * (1 + u * 0.04), [0.5, 1], 0.74, 0.25); sweat(ctx, t, o.sweat, sx, sy, h / 2500); }
   };
   shot(line('m8').s - 0.1, line('k11').s - 0.1, 'train', (ctx, t, u) => {
     platform(ctx, t, { x: 0.62, y: 0.45, z: 1.55 }, { variant: 'blur' });
     const tilt = tl(t, line('m8').s, line('m8').s + 0.5, OB);
-    miraTalk(ctx, t, u, 'm8', { rot: 0.04 * tilt, dy: 10 * tilt, blush: tilt });
+    miraTalk(ctx, t, u, 'm8', { rot: 0.04 * tilt, dy: 10 * tilt, blush: tilt, face: 's' });
     foreground(ctx, 'K4', 1260, 2350, 2600, { blur: 22, bright: 0.4 });
   });
   // "Do you take this train too?" curious; leaning a little
@@ -245,7 +256,7 @@
   shot(line('m9').s - 0.1, line('t3').s - 0.1, 'train', (ctx, t, u) => {
     platform(ctx, t, { x: 0.62, y: 0.45, z: 1.6 }, { variant: 'blur' });
     const nod = Math.sin(tl(t, line('m9').s, line('m9').s + 0.35, (x) => x) * Math.PI), away = tl(t, line('m9').e - 0.1, line('m9').e + 0.4, OB);
-    miraTalk(ctx, t, u, 'm9', { h: 2650, dy: 18 * nod, dx: 24 * away, rot: 0.05 * away, blush: 0.6 });
+    miraTalk(ctx, t, u, 'm9', { h: 2650, dy: 18 * nod, dx: 24 * away, rot: 0.05 * away, blush: 0.6, face: 'w', sweat: line('m9').e - 0.05 });
   });
   // "I'd never taken this train in my life." she sits at the far end of his bench; steals a glance; looks away fast
   shot(line('t3').s - 0.1, C.board38, 'train', (ctx, t, u) => {
@@ -267,7 +278,7 @@
     platform(ctx, t, { x: 0.4, y: 0.42, z: 1.5 }, { variant: 'blur', tunnel: 0.6 + 1.6 * u });
     const s0 = line('k3').s - 0.1, y = kf(t, [[s0, 1010], [s0 + 0.18, 1030, E.out], [s0 + 0.65, 900, OB]]);
     const turn = tl(t, word('k3', "that's") - 0.15, word('k3', "that's") + 0.45);
-    char(ctx, t, 'K4', 600 + 50 * turn, y, 2150, { id: 'k3', anchor: [0.53, 0.42], rot: -0.05 * turn, talk: true, sway: { amp: 3 + 6 * u, t, from: 0, to: 0.3 }, light: { x: 0.95, y: 0.4, r: 0.8, color: `rgba(255,240,210,${0.4 * u})` }, rim: { ...RIM, dx: -7 } });
+    char(ctx, t, 'K4', 600 + 50 * turn, y, 2150, { id: 'k3', anchor: [0.53, 0.42], rot: -0.05 * turn, talk: true, face: 's', sway: { amp: 3 + 6 * u, t, from: 0, to: 0.3 }, light: { x: 0.95, y: 0.4, r: 0.8, color: `rgba(255,240,210,${0.4 * u})` }, rim: { ...RIM, dx: -7 } });
   });
 
   // ---------------------------------------------------------------- 4. "Ten seconds. No plan." the train slides in behind her
@@ -288,20 +299,20 @@
     // her hand flies to her ear; then she drops down toward the floor
     trainSet(ctx, t, { x: 0.6, y: 0.45, z: 1.25 }, { variant: 'soft' });
     const up = OB(tl(t, C.earring, C.earring + 0.35, (x) => x)), drop = E.in(tl(t, C.kneel - 0.4, C.kneel, (x) => x));
-    char(ctx, t, 'M13', 420, 2150 + 120 * (1 - up) + 500 * drop, 2200, { talk: 'mira', rot: 0.03 * (1 - up) - 0.04 * drop, sway: { amp: 4 + 10 * wind(t), t, from: 0, to: 0.5, speed: 7 }, rim: { ...RIM, dx: 7 } });
+    char(ctx, t, 'M13', 420, 2150 + 120 * (1 - up) + 500 * drop, 2200, { talk: 'mira', face: 'w', rot: 0.03 * (1 - up) - 0.04 * drop, sway: { amp: 4 + 10 * wind(t), t, from: 0, to: 0.5, speed: 7 }, rim: { ...RIM, dx: 7 } });
   });
   // "Don't move. What does it look like?" he turns straight back from the doors and crouches down to her
   shot(C.kneel, C.search, 'train', (ctx, t, u) => {
     trainSet(ctx, t, { x: 0.45, y: 0.42, z: 1.6 }, { variant: 'blur' });
     const turn = OB(tl(t, C.kneel, C.kneel + 0.45, (x) => x)), down = tl(t, C.kneel + 0.2, C.kneel + 0.9, OB);
-    char(ctx, t, 'K4', PP.lerp(700, 570, turn), 880 + 120 * down, 2300, { id: 'k8', anchor: [0.53, 0.42], rot: PP.lerp(-0.1, 0.02, turn), talk: true, rim: { ...RIM, dx: -7 } });
+    char(ctx, t, 'K13', PP.lerp(700, 570, turn), 1960 + 120 * down, 2300, { id: 'k8', rot: PP.lerp(-0.1, 0.02, turn), talk: true, rim: { ...RIM, dx: -7 } });
   });
   // "Small. Gold. A little flower." flustered, inventing it as she goes
   const flowerCut = word('m6', 'little') - 0.1;
   shot(C.search, flowerCut, 'train', (ctx, t, u) => {
     trainSet(ctx, t, { x: 0.55, y: 0.45, z: 1.6 }, { variant: 'blur' });
     const beats = ['small', 'gold'].map((w) => Math.sin(tl(t, word('m6', w) - 0.05, word('m6', w) + 0.3, (x) => x) * Math.PI));
-    miraTalk(ctx, t, u, 'm6', { h: 2600, y: 2350, dy: 14 * (beats[0] + beats[1]), rot: 0.02 * (beats[0] - beats[1]), blush: 0.5 });
+    miraTalk(ctx, t, u, 'm6', { h: 2600, y: 2350, dy: 14 * (beats[0] + beats[1]), rot: 0.02 * (beats[0] - beats[1]), blush: 0.5, face: 'w', sweat: word('m6', 'gold') });
   });
   // the torch beam sweeping the floor
   function torch(ctx, x, y, ang, a = 1) {
@@ -344,14 +355,14 @@
     // he sits back on his heels, sorry, the torch dropping; behind him the last carriage goes
     trainSet(ctx, t, { x: 0.45, y: 0.42, z: 1.6 }, { variant: 'blur' });
     const back = tl(t, C.sorry, C.sorry + 0.6, OB);
-    char(ctx, t, 'K4', 570, 1000 - 40 * back, 2300 * (1 + u * 0.04), { id: 'k9', anchor: [0.53, 0.42], rot: -0.02 * back, talk: true, sway: { amp: 2 + 8 * wind(t), t, from: 0, to: 0.3 }, light: { x: 0.5, y: 0.9, r: 0.6, color: 'rgba(255,250,235,0.3)' }, rim: { ...RIM, dx: -7 } });
+    char(ctx, t, 'K13', 570, 2080 - 40 * back, 2300 * (1 + u * 0.04), { id: 'k9', rot: -0.02 * back, talk: true, sway: { amp: 2 + 8 * wind(t), t, from: 0, to: 0.3 }, light: { x: 0.5, y: 0.9, r: 0.6, color: 'rgba(255,250,235,0.3)' }, rim: { ...RIM, dx: -7 } });
     foreground(ctx, 'M14', -200, 2400, 2500, { blur: 20, bright: 0.45 });
   });
   shot(C.neverHere, C.tracks, 'train', (ctx, t, u) => {
     // gently, with a secret in it
     trainSet(ctx, t, { x: 0.55, y: 0.45, z: 1.6 }, { variant: 'blur' });
     const tilt = tl(t, word('m7', 'maybe') - 0.2, word('m7', 'maybe') + 0.5, OB);
-    miraTalk(ctx, t, u, 'm7', { h: 2600, y: 2350, rot: 0.03 * tilt, dy: 8 * tilt, blush: 0.4 + 0.5 * tilt });
+    miraTalk(ctx, t, u, 'm7', { h: 2600, y: 2350, rot: 0.03 * tilt, dy: 8 * tilt, blush: 0.4 + 0.5 * tilt, face: 's' });
     foreground(ctx, 'K4', 1260, 2400, 2600, { blur: 22, bright: 0.4 });
   });
   shot(C.tracks, C.pocket, 'train', (ctx, t, u) => {
@@ -359,7 +370,7 @@
     trainSet(ctx, t, { x: 0.45, y: 0.42, z: 1.55 }, { variant: 'blur' });
     const look = kf(t, [[C.tracks, 0], [C.tracks + 0.4, 1, OB], [word('k10', 'goes') - 0.1, 1], [word('k10', 'goes') + 0.35, 0, E.out]]);
     const laugh = Math.abs(Math.sin(t * 12)) * -9 * tl(t, word('k10', 'train'), word('k10', 'train') + 0.3);
-    char(ctx, t, 'K4', 570 + 70 * look, 930 + laugh, 2250, { id: 'k10', anchor: [0.53, 0.42], rot: -0.08 * look, talk: true, rim: { ...RIM, dx: -7 } });
+    char(ctx, t, 'K4', 570 + 70 * look, 930 + laugh, 2250, { id: 'k10', anchor: [0.53, 0.42], rot: -0.08 * look, talk: true, face: (tt) => (tt > word('k10', 'train') - 0.05 ? 'h' : ''), rim: { ...RIM, dx: -7 } });
   });
   // "The earring was in my pocket the whole time." her hand comes out of her pocket and opens: the little gold flower
   shot(C.pocket, C.cafe, 'dark', (ctx, t, u) => {
@@ -423,7 +434,7 @@
   shot(line('k5').e + 0.2, C.night, 'cold', (ctx, t, u) => {
     cafe(ctx, t, { x: 0.65, y: 0.45, z: 1.6 }, 'blur', 0.3);
     const away = tl(t, line('k5').e + 0.3, line('k5').e + 1.2, OB);
-    char(ctx, t, 'M6', 500 - 50 * away, 870 + 34 * away, 2300 * (1 + u * 0.05), { anchor: [0.55, 0.35], rot: -0.06 * away, breath: Math.sin(t * 2.4) * 0.008, rim: { ...RIM, dx: 7 } });
+    char(ctx, t, 'M6', 500 - 50 * away, 870 + 34 * away, 2300 * (1 + u * 0.05), { anchor: [0.55, 0.35], face: 't', rot: -0.06 * away, breath: Math.sin(t * 2.4) * 0.008, rim: { ...RIM, dx: 7 } });
     foreground(ctx, 'K3', 1250, 2350, 2600, { blur: 22, bright: 0.4 });
   });
 

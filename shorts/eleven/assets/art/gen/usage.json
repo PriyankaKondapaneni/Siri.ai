@@ -973,5 +973,18 @@
    "text_tokens": 0
   },
   "total_tokens": 3596
+ },
+ "v2:K13": {
+  "input_tokens": 2730,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 297
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4102
  }
 }

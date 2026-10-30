@@ -3,7 +3,7 @@
 // graded. Images load before the page reports ready.
 (function (g) {
   const PP = g.PP;
-  const CUTS = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9', 'K10', 'M10', 'MK1', 'MK2', 'MK3', 'K11', 'M11', 'H1', 'A1', 'F1', 'S1', 'CK', 'HM', 'HK', 'M12', 'K12', 'M13', 'MK4', 'H2', 'M14'];
+  const CUTS = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9', 'K10', 'M10', 'MK1', 'MK2', 'MK3', 'K11', 'M11', 'H1', 'A1', 'F1', 'S1', 'CK', 'HM', 'HK', 'M12', 'K12', 'M13', 'MK4', 'H2', 'M14', 'K13'];
   const BGS = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'C1', 'T1', 'TR1', 'TD1', 'TD2'];
   const DIR = 'assets/art/v2';
   PP.CUTS = CUTS;
@@ -43,6 +43,31 @@
             cc.beginPath(); cc.moveTo(x + out * w * 0.72, y + h * 0.08); cc.lineTo(x + out * w * 0.98, y - h * 0.12); cc.stroke();
           }
         }
+      }
+      // happy eyes: the eye closes into a soft upward arc, the anime laugh
+      if (state.includes('h')) for (const [ex, ey, ew, eh] of f.eyes) {
+        const x = ex * W, y = ey * H, w = ew * W, h = eh * H;
+        cc.fillStyle = skin; cc.beginPath(); cc.ellipse(x, y - h * 0.08, w * 0.98, h * 0.95, 0, 0, Math.PI * 2); cc.fill();
+        cc.strokeStyle = LINE; cc.lineWidth = W * 0.0075;
+        cc.beginPath(); cc.moveTo(x - w * 0.75, y + h * 0.3); cc.quadraticCurveTo(x, y - h * 0.6, x + w * 0.75, y + h * 0.3); cc.stroke();
+      }
+      // a wet shine along the lower lids, for eyes about to fill
+      if (state.includes('t')) for (const [ex, ey, ew, eh] of f.eyes) {
+        const x = ex * W, y = ey * H, w = ew * W, h = eh * H;
+        cc.strokeStyle = 'rgba(255,255,255,0.85)'; cc.lineWidth = W * 0.004;
+        cc.beginPath(); cc.ellipse(x, y + h * 0.35, w * 0.6, h * 0.45, 0, 0.2 * Math.PI, 0.8 * Math.PI); cc.stroke();
+        cc.fillStyle = 'rgba(255,255,255,0.9)'; cc.beginPath(); cc.arc(x + w * 0.3, y + h * 0.55, W * 0.004, 0, 7); cc.fill();
+      }
+      // a quiet mouth: a soft smile, or a small worried turn
+      const q = !/m\d/.test(state) && f.mouth && (state.includes('s') ? 's' : state.includes('w') ? 'w' : null);
+      if (q) {
+        const [mx, my, mw] = f.mouth, x = mx * W, y = my * H, w = mw * W;
+        cc.fillStyle = skin; cc.beginPath(); cc.ellipse(x, y, w * 0.85, w * 0.42, 0, 0, Math.PI * 2); cc.fill();
+        cc.strokeStyle = LINE; cc.lineWidth = W * 0.0045;
+        cc.beginPath();
+        if (q === 's') { cc.moveTo(x - w * 0.62, y - w * 0.06); cc.quadraticCurveTo(x, y + w * 0.42, x + w * 0.62, y - w * 0.06); }
+        else { cc.moveTo(x - w * 0.42, y + w * 0.14); cc.quadraticCurveTo(x, y - w * 0.18, x + w * 0.42, y + w * 0.14); }
+        cc.stroke();
       }
       const m = state.match(/m(\d)/);
       if (m && f.mouth) {

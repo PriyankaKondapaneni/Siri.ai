@@ -465,6 +465,15 @@
    "size": "1024x1536",
    "style": "Draw a background in exactly the same style as the soft illustrated room backgrounds in the reference image: soft flat pastel colours with gentle texture, simple clean shapes, thin soft outlines, cosy hand-drawn webtoon background art, slightly muted. No people, no characters, no text, no logos.",
    "prompt": "Redraw the SECOND reference image exactly as it is, same camera, same train, same windows, same platform and colours, but the pair of sliding doors in the centre is now fully CLOSED: two door leaves meeting in the middle, each with a narrow window. Nothing else changes. No people, no text."
+  },
+  "K13": {
+   "refs": [
+    "STYLE",
+    "CK4"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image; use the character, outfit and pose from the SECOND image, keeping the face exactly as it is. Waist-up. On a plain flat light grey background. No text, no watermark.",
+   "prompt": "Kabir, the same young man as the second image: same face, messy black hair, dark eyes, charcoal wool coat over a black turtleneck. Close-up from the chest up, facing the viewer, a concerned, gentle, apologetic expression: eyebrows slightly raised and drawn together, eyes soft, MOUTH CLOSED in a small neutral line, absolutely NOT smiling. IMPORTANT: the background must be completely plain flat light grey, with no scenery at all."
   }
  }
 }
