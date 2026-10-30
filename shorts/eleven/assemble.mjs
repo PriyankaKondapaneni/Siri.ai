@@ -25,6 +25,19 @@ const CAP = { default: 0.26, n1: 0.42, n3: 0.36, n6: 0.36, k6: 0.5, k7: 0.55, k5
 // the gap before each line (seconds); voice notes get room for the buzz
 const GAP = { default: 0.12, note: 0.42, after_note: 0.16, h0: 0.25, n1: 0.55, k4: 0.12, n6: 0.3, n7: 0.22, n9: 0.36, k7: 0.36, n8: 0.18 };
 
+// where the voice really stops after time `from`: the transcript can end the last word early (Episode 2's n5 take
+// had a zero-length final "eleven", which cut "eleven eleven" in half), so follow the audio until it stays quiet
+function voiceEnd(x, from) {
+  const w = Math.round(0.02 * RATE), n = Math.floor(x.length / w), rms = new Float32Array(n);
+  for (let k = 0; k < n; k++) { let s = 0; for (let i = k * w; i < (k + 1) * w; i++) s += x[i] * x[i]; rms[k] = Math.sqrt(s / w); }
+  const thr = Math.max(...rms) * 0.05, hold = Math.round(0.15 / 0.02);
+  let k = Math.floor((from * RATE) / w), end = from;
+  for (let quiet = 0; k < n && quiet < hold; k++) {
+    if (rms[k] > thr) { quiet = 0; end = ((k + 1) * w) / RATE; } else quiet++;
+  }
+  return end;
+}
+
 const out = { mira: [], live: [], note: [] };
 const words = [], lines = [];
 let t = GAP[S.lines[0].id] ?? GAP.default;
@@ -38,8 +51,11 @@ S.lines.forEach((l, li) => {
   const segs = JSON.parse(fs.readFileSync(`${dir}/takes/${src}.${k}.asr.json`, 'utf8')).segments.slice(l.from || 0, l.to ?? undefined).map((g) => ({ ...g, start: g.start / TEMPO, end: g.end / TEMPO }));
   // gap before this line
   if (li > 0) t += l.gap ?? (l.kind === 'note' ? GAP.note : GAP[l.id] ?? (prevKind === 'note' ? GAP.after_note : GAP.default));
+  // a hook cut short on purpose (`to`) ends where the transcript says; a full line ends where the voice does
+  const lastWord = segs.at(-1);
+  if (l.to == null) lastWord.end = Math.max(lastWord.end, voiceEnd(x, lastWord.start));
   // the clip: from just before the first word to just after the last, pauses tightened
-  const a = Math.max(0, segs[0].start - 0.07), z = Math.min(x.length / RATE, segs.at(-1).end + 0.16);
+  const a = Math.max(0, segs[0].start - 0.07), z = Math.min(x.length / RATE, lastWord.end + 0.16);
   const cap = CAP[l.id] ?? CAP.default;
   const cuts = [];
   for (let i = 1; i < segs.length; i++) {
