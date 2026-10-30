@@ -1,6 +1,6 @@
 # 11:11 Stories: YouTube upload and schedule sheet
 
-Time zone: **IST**. Every episode publishes at **11:11 PM IST**, one per night, starting **Fri 30 Oct 2026**.
+Time zone: **IST**. Every episode publishes at **11:11 AM IST**, one per day, starting **Fri 30 Oct 2026**.
 
 ## Channel setup (YouTube Studio → Customization)
 
@@ -8,7 +8,7 @@ Time zone: **IST**. Every episode publishes at **11:11 PM IST**, one per night, 
 - **Handle:** @1111stories (or @1111.stories / @elevenelevenstories if taken)
 - **Profile picture:** `brand/profile-800.png`
 - **Banner:** `brand/banner-2560x1440.png`
-- **Description:** Every night at 11:11, a stranger sends Mira a voice message — and everything he says comes true. A hand-drawn animated romance-thriller, one new episode every night at 11:11 PM IST.
+- **Description:** Every night at 11:11, a stranger sends Mira a voice message — and everything he says comes true. A hand-drawn animated romance-thriller, one new episode every day at 11:11 AM IST.
 - **Playlist:** create **"11:11 · Season 1 — Mira & Kabir"** and add every episode to it, in order.
 
 ## For every upload
@@ -17,14 +17,14 @@ Time zone: **IST**. Every episode publishes at **11:11 PM IST**, one per night, 
 2. Paste the title and the description (caption plus hashtags) from below.
 3. Choose **No, it's not made for kids**, and set the playlist above.
 4. Open **Show more**: set Category to **Film & Animation** and Language to **English**. Add tags: `11:11, romance, animated story, webtoon, love story, mystery, time travel, anime, shorts`.
-5. Under **Visibility → Schedule**, enter the date and **11:11 PM** with time zone **(GMT+05:30) India Standard Time**.
+5. Under **Visibility → Schedule**, enter the date and **11:11 AM** with time zone **(GMT+05:30) India Standard Time**.
 6. Once it's published, post the **pinned comment** and pin it.
 7. Shorts can't take an uploaded thumbnail. To set the cover in the YouTube mobile app, edit the Short, choose **Thumbnail**, and pick the frame closest to the cover image.
 
 ## Episodes
 
 ### Episode 1: "The Voice From My Phone"
-- **Publish:** Fri 30 Oct 2026, 11:11 PM IST
+- **Publish:** Fri 30 Oct 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-01.mp4` · cover `11-11-episode-01-cover.jpg`
 - **Title:** Every night at 11:11, a stranger's voice note comes true… #shorts
 - **Description:**
@@ -41,7 +41,7 @@ Part 2 tomorrow at 11:11. Follow so you don't miss it.
 - **Pinned comment:** Would you listen to the next message… or delete it? 👀
 
 ### Episode 2: "Don't Let Me Get On The Train"
-- **Publish:** Sat 31 Oct 2026, 11:11 PM IST
+- **Publish:** Sat 31 Oct 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-02.mp4` · cover `11-11-episode-02-cover.jpg`
 - **Title:** He doesn't remember me… but his voice notes do. #shorts
 - **Description:**
@@ -58,7 +58,7 @@ Part 3 tomorrow at 11:11. Follow so you don't miss it.
 - **Pinned comment:** Would you stop him from getting on that train? 👀
 
 ### Episode 3: "The 6:40 Train"
-- **Publish:** Sun 01 Nov 2026, 11:11 PM IST
+- **Publish:** Sun 01 Nov 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-03.mp4` · cover `11-11-episode-03-cover.jpg`
 - **Title:** I spilled coffee on him to save his life… #shorts
 - **Description:**
@@ -76,7 +76,7 @@ Part 4 tomorrow at 11:11. Follow so you don't miss it.
 - **Pinned comment:** Should she tell him the truth? 👀
 
 ### Episode 4: "Her Voice"
-- **Publish:** Mon 02 Nov 2026, 11:11 PM IST
+- **Publish:** Mon 02 Nov 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-04.mp4` · cover `11-11-episode-04-cover.jpg`
 - **Title:** His phone has voice notes from me… that I never sent. #shorts
 - **Description:**
@@ -93,7 +93,7 @@ Part 5 tomorrow at 11:11. Follow so you don't miss it.
 - **Pinned comment:** Who do you think is really sending these? 👀
 
 ### Episode 5: "The Brother"
-- **Publish:** Tue 03 Nov 2026, 11:11 PM IST
+- **Publish:** Tue 03 Nov 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-05.mp4` · cover `11-11-episode-05-cover.jpg`
 - **Title:** I held a stranger's hand on a bridge… it was his brother. #shorts
 - **Description:**
@@ -110,7 +110,7 @@ Part 6 tomorrow at 11:11. Follow so you don't miss it.
 - **Pinned comment:** Coincidence… or fate? 👀
 
 ### Episode 6: "Not Me"
-- **Publish:** Wed 04 Nov 2026, 11:11 PM IST
+- **Publish:** Wed 04 Nov 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-06.mp4` · cover `11-11-episode-06-cover.jpg`
 - **Title:** Neither of us sent the messages… so who did? #shorts
 - **Description:**
@@ -128,7 +128,7 @@ Part 7 tomorrow at 11:11. Follow so you don't miss it.
 - **Pinned comment:** Who do you think is on the other end? 👀
 
 ### Episode 7: "Day Seven"
-- **Publish:** Thu 05 Nov 2026, 11:11 PM IST
+- **Publish:** Thu 05 Nov 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-07.mp4` · cover `11-11-episode-07-cover.jpg`
 - **Title:** Day seven. 11:11. The bridge. #shorts
 - **Description:**
@@ -146,7 +146,7 @@ Part 8 tomorrow at 11:11. Follow so you don't miss it.
 - **Pinned comment:** Did he make it? Tell me what you think 👀
 
 ### Episode 8: "11:12"
-- **Publish:** Fri 06 Nov 2026, 11:11 PM IST
+- **Publish:** Fri 06 Nov 2026, 11:11 AM IST
 - **File:** `Downloads/1111/11-11-episode-08.mp4` · cover `11-11-episode-08-cover.jpg`
 - **Title:** He survived 11:11… then I got a message from myself. #shorts
 - **Description:**
