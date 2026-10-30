@@ -38,6 +38,26 @@ Every episode must look and sound like a professionally directed short film. Epi
 - **Voices with emotion, never robotic.** Record and assemble at natural speed (`"tempo": 1.0` in the script) with real pauses (`"cap": 0.45`, a 0.25–0.4 s reaction beat between dialogue lines). Give each line a direction with something to play (a nervous laugh, out of breath, voice breaking), kept natural.
 - **Show, don't narrate.** If a beat can be acted on screen (a stolen bite, a laugh), cut the words and show it.
 
+### Write it like a professional screenwriter (every episode)
+- **Stakes in the first five seconds.** The viewer knows what can be lost before any setup. Never open on logistics (sleeping, alarms, errands, getting somewhere).
+- **A goal, an obstacle, a ticking clock.** In every episode Mira (or Kabir) wants something now, something is in the way, and time is running out (a departure board, 11:11, a countdown). Show the clock on screen as it runs down.
+- **Dramatic irony.** Use what the audience knows and the other character doesn't: she knows the train will crash, he's joking about catching it.
+- **Banter with subtext.** Dialogue flirts and spars on the surface while the danger sits underneath. Short lines, real rhythm, no exposition in dialogue.
+- **Romance and danger in the same beat.** The emotional peak of each episode is where the two collide (he chooses to stay because she asked, not because he understood).
+- **Every scene turns.** Each scene ends in a different place than it began, with a button: a look, a line, a laugh, a silence.
+- **Voice-over is only for what can't be shown:** her fear, her guilt, the ticking seconds in her head. Never use it to say what we already see.
+- **Set up and pay off.** Plant a line or object early and bring it back (his "you owe me a coffee", the board reading 6:40, the stopped watch).
+- **The hook is the most charged line of the episode,** romance plus danger, cut from a later take, never the final cliffhanger.
+
+### Direct it like a top film director (every episode)
+- **Shot size follows tension:** wide to set the place, medium for banter, close-ups as the stakes rise, an extreme close-up for the decisive line.
+- **Shot / reverse shot with over-the-shoulder framing** for every conversation; cut on the listener's reaction as often as on the speaker.
+- **Inserts are the ticking clock:** the board flipping 6:38 to 6:39, a watch hand, a phone screen. Return to them as the pressure builds.
+- **Motivated camera:** push in as a character decides, handheld only in panic, a held still frame for the moment that matters.
+- **Silence before the turn.** Drop the music and the room tone for a beat before the decisive line; let sound effects lead into the next shot.
+- **Slow motion sparingly,** for one moment per episode at most.
+- **Tonal whiplash on purpose:** a warm, funny moment right before the danger lands.
+
 ### Things the user rejected (never repeat)
 - **Statue-like shots.** Characters standing still while only the camera moves.
 - **Robotic voices.** The 1.08× time-stretch with tight 0.12 s gaps made the voices sound mechanical.
