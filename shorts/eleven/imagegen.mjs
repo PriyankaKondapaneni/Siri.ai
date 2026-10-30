@@ -6,11 +6,11 @@ import path from 'node:path';
 
 const env = fs.readFileSync('../.env', 'utf8');
 const KEY = process.env.OPENAI_API_KEY || env.match(/^OPENAI_API_KEY=(.+)$/m)[1].trim();
-const ART = JSON.parse(fs.readFileSync(process.env.ARTFILE || 'art.json', 'utf8'));
+const ART = JSON.parse(fs.readFileSync(process.env.ARTFILE || 'art2.json', 'utf8'));
 const name = process.argv[2];
 const job = ART.images[name];
 if (!job) throw new Error(`no ${name} in art.json`);
-const out = `${process.env.OUT || 'assets/art/gen'}/${name}.png`;
+const out = `${process.env.OUT || 'assets/art/v2/gen'}/${name}.png`;
 if (fs.existsSync(out) && !process.argv.includes('--again')) { console.log(`${name}: already made`); process.exit(0); }
 const form = new FormData();
 form.append('model', ART.model);
@@ -30,6 +30,6 @@ if (!r.ok) { console.error(`${name}: ${r.status} ${JSON.stringify(j.error || j).
 fs.writeFileSync(out, Buffer.from(j.data[0].b64_json, 'base64'));
 const usageFile = 'assets/art/gen/usage.json';
 const usage = fs.existsSync(usageFile) ? JSON.parse(fs.readFileSync(usageFile, 'utf8')) : {};
-usage[(process.env.OUT ? 'v2:' : '') + name] = j.usage || null;
+usage['v2:' + name] = j.usage || null;
 fs.writeFileSync(usageFile, JSON.stringify(usage, null, 1));
 console.log(`${name}: ${out} in ${((Date.now() - t0) / 1000).toFixed(0)} s, usage ${JSON.stringify(j.usage)}`);

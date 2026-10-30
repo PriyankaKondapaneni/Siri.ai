@@ -173,7 +173,7 @@ Always reuse it first. It lives in `assets/art/v2/`; `gen/` holds the originals 
 - Add jobs to `art2.json`. Characters use refs `["STYLE", "CM4"]` or `["STYLE", "CK4"]`; backgrounds use `["STYLEBG"]`.
 - Use the exact style strings already in `art2.json`. The character style includes the "do NOT draw stick-figure line arms" rule, a plain flat light grey background, and the waist-up or close-up framing.
 - Always restate the outfit and "warm amber-brown eyes" for Mira.
-- Generate: `ARTFILE=art2.json OUT=assets/art/v2/gen NODE_USE_ENV_PROXY=1 node imagegen.mjs NAME`
+- Generate: `NODE_USE_ENV_PROXY=1 node imagegen.mjs NAME` (defaults to `art2.json` and `assets/art/v2/gen`)
   - This uses `gpt-image-2` at `quality: "medium"`, which the user approved.
   - Run at most 4 jobs in parallel.
 - Cut out: `python cutout.py assets/art/v2/gen/X.png assets/art/v2/cut/X.png --flat`. Use `--tol 7` when the character wears cream or pale colours.
