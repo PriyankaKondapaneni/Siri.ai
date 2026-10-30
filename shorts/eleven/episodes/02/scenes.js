@@ -20,37 +20,53 @@
     PP.glowAt(ctx, lx, ly, 520, '255,190,120', 0.35);
     return bg;
   };
+  // the last cookie: both their hands on it, his watch painted back to a blank dial stopped at 11:11
+  const cookie = (ctx, t, cam, glow = 0) => {
+    const bg = PP.drawBg(ctx, 'C1', cam);
+    const [wx, wy] = bg.map(0.89, 0.574), r = 0.039 * 1024 * bg.s;
+    PP.with(ctx, () => { ctx.fillStyle = 'rgb(251,236,218)'; ctx.beginPath(); ctx.arc(wx, wy, r * 0.7, 0, 7); ctx.fill(); });
+    clockHands(ctx, wx, wy, r * 0.8, 11, 11);
+    PP.with(ctx, () => { ctx.fillStyle = 'rgba(30,14,6,0.2)'; ctx.fillRect(0, 0, W, H); });
+    const [fx, fy] = bg.map(0.5, 0.515);
+    if (glow > 0) PP.glowAt(ctx, fx, fy, 260 * bg.s, '255,205,150', 0.45 * glow);
+    return bg;
+  };
   const DUSK_RIM = { color: 'rgba(255,185,120,1)', a: 0.85 };
   const CAFE_RIM = { color: 'rgba(255,205,150,0.95)', a: 0.75 };
 
-  // ---------------------------------------------------------------- 0. Cold open: four quick shots
-  const hk = [0, 0.52, 1.02, 1.6, C.hookEnd];
+  // ---------------------------------------------------------------- 0. Cold open: love and danger in four quick shots
+  // the voice starts on the first frame; the phone punches out of a shake, then their fingertips, the train, her shock
+  const hk = [0, 0.42, 0.86, 1.3, C.hookEnd];
   shot(hk[0], hk[1], 'danger', (ctx, t, u) => {
-    phoneShot(ctx, t, 'B5', [msg('h0', { urgent: true })], { u, urgent: true, seed: 41, focus: 1.6 + u * 0.15, focusY: 260 });
+    const [sx, sy, sr] = PP.shake(t, 0, 16, 0.4);
+    PP.with(ctx, () => {
+      ctx.translate(sx, sy); ctx.rotate(sr);
+      phoneShot(ctx, t, 'B5', [msg('h0', { urgent: true })], { u, urgent: true, seed: 41, focus: 2.0 - E.out(u) * 0.3, focusY: 260 });
+    });
   });
-  shot(hk[1], hk[2], 'train', (ctx, t, u) => {
-    const [hx, hy, hr] = PP.handheld(t, 8, 43);
+  shot(hk[1], hk[2], 'dark', (ctx, t, u) => {
+    cookie(ctx, t, lerpCam(u, { x: 0.5, y: 0.515, z: 2.0 }, { x: 0.5, y: 0.515, z: 2.25 }, E.out), 0.8);
+  });
+  shot(hk[2], hk[3], 'train', (ctx, t, u) => {
+    const [hx, hy, hr] = PP.handheld(t, 9, 43);
     PP.with(ctx, () => {
       ctx.translate(hx, hy); ctx.rotate(hr);
-      PP.drawBgDepth(ctx, 'B3', { ...lerpCam(u, { x: 0.5, y: 0.42, z: 1.1 }, { x: 0.5, y: 0.42, z: 1.45 }, E.in), z0: 1 }, { horizon: 0.375, k: 1.6 });
+      PP.drawBgDepth(ctx, 'B3', { ...lerpCam(u, { x: 0.5, y: 0.42, z: 1.15 }, { x: 0.5, y: 0.42, z: 1.55 }, E.in), z0: 1 }, { horizon: 0.375, k: 1.6 });
     });
-    const flick = PP.rand('hfl', Math.floor(t * 15)) < 0.3 ? 0.55 : 0.35;
+    const flick = PP.rand('hfl', Math.floor(t * 15)) < 0.3 ? 0.6 : 0.35;
     PP.with(ctx, () => { ctx.fillStyle = `rgba(0,6,10,${flick})`; ctx.fillRect(0, 0, W, H); });
-  });
-  shot(hk[2], hk[3], 'dusk', (ctx, t, u) => {
-    PP.drawBg(ctx, 'B4', { x: 0.4, y: 0.4, z: 1.6 }, { variant: 'blur' });
-    char(ctx, t, 'K3', 540, 900, 4300 * (1 + u * 0.06), { id: 'hk', blink: false, anchor: [0.52, 0.405], light: { x: 0.1, y: 0.35, r: 0.7, color: 'rgba(255,190,120,0.35)' }, rim: { ...DUSK_RIM, dx: -9 } });
   });
   shot(hk[3], hk[4], 'night', (ctx, t, u) => {
     PP.drawBg(ctx, 'B1', { x: 0.5, y: 0.45, z: 1.5 }, { variant: 'blur' });
-    char(ctx, t, 'M6', 540, 860, 3600 * (1 + u * 0.06), { id: 'hk', blink: false, anchor: [0.55, 0.35], tint: 'rgba(20,30,90,0.1)', rim: { color: 'rgba(150,200,255,0.9)', dx: 7, a: 0.7 } });
+    char(ctx, t, 'M10', 540, 860, 3400 * (1 + E.in(u) * 0.12), { id: 'hk', blink: false, anchor: [0.58, 0.36], tint: 'rgba(20,30,90,0.08)', rim: { color: 'rgba(150,200,255,0.9)', dx: 7, a: 0.7 } });
   });
 
   // ---------------------------------------------------------------- 1. "Six days left."
   const toldCut = word('n1', 'he') - 0.1, soCut = word('n1', 'so') - 0.1;
   shot(C.hookEnd, toldCut, 'phone', (ctx, t, u) => {
     phoneShot(ctx, t, 'B5', [lastNight], { u, urgent: true, seed: 47, push: 0.06 });
-    const a = PP.clamp((t - C.hookEnd - 0.15) / 0.4);
+    PP.flash(ctx, t, C.hookEnd, 0.3);
+    const a = PP.clamp((t - C.hookEnd - 0.05) / 0.3);
     PP.spaced(ctx, '6 DAYS LEFT', 540, 200, { font: '500 40px Inter', spacing: 14, color: 'rgba(255,120,110,0.95)', glow: 'rgba(255,60,50,0.6)', blur: 20, alpha: a });
   });
   shot(toldCut, soCut, 'night', (ctx, t, u) => {
@@ -101,17 +117,40 @@
     char(ctx, t, 'K4', 560, 1050, 1800 * (1 + u * 0.04), { id: 'k2', anchor: [0.53, 0.42], talk: true, light: { x: 0.1, y: 0.35, r: 0.7, color: 'rgba(255,190,120,0.3)' }, rim: { ...DUSK_RIM, dx: -7 } });
   });
 
-  // ---------------------------------------------------------------- 4. The café: talking until closing
-  const laughCut = word('n4', 'he') - 0.1, foreverCut = word('n4', 'like') - 0.05;
-  shot(C.cafe, laughCut, 'dark', (ctx, t, u) => {
+  // ---------------------------------------------------------------- 4. The café: the last cookie, then talking until closing
+  const touchCut = word('n4a', 'our') - 0.08, stoleCut = word('n4b', 'then') - 0.08, foreverCut = word('n4', 'like') - 0.05;
+  shot(C.cafe, touchCut, 'dark', (ctx, t, u) => {
     cafe(ctx, t, lerpCam(u, { x: 0.5, y: 0.55, z: 1.2 }, { x: 0.5, y: 0.55, z: 1.28 }));
     char(ctx, t, 'M9', 250, 2230, 1800, { rim: { ...CAFE_RIM, dx: -6 }, light: { x: 0.9, y: 0.4, r: 0.8, color: 'rgba(255,200,140,0.25)' } });
     char(ctx, t, 'K6', 860, 2230, 1800, { rim: { ...CAFE_RIM, dx: 6 }, light: { x: 0.1, y: 0.4, r: 0.8, color: 'rgba(255,200,140,0.25)' } });
   }, 'dissolve');
-  shot(laughCut, foreverCut, 'dark', (ctx, t, u) => {
-    cafe(ctx, t, { x: 0.65, y: 0.45, z: 1.5 }, 'blur');
-    char(ctx, t, 'K6', 520, 900, 2600 * (1 + u * 0.05), { id: 'cu', anchor: [0.54, 0.4], rim: { ...CAFE_RIM, dx: 7 }, light: { x: 0.1, y: 0.4, r: 0.8, color: 'rgba(255,200,140,0.25)' } });
+  // "Our fingers touched... and neither of us let go." The music falls away; a slow push to their fingertips
+  shot(touchCut, line('k6').s - 0.1, 'dark', (ctx, t, u) => {
+    cookie(ctx, t, lerpCam(u, { x: 0.6, y: 0.53, z: 1.05 }, { x: 0.5, y: 0.515, z: 1.6 }, E.inOut), PP.clamp((t - C.touched) / 0.8));
   });
+  // "Half? ...You can have the bigger one."
+  shot(line('k6').s - 0.1, line('n4b').s - 0.1, 'dark', (ctx, t, u) => {
+    cafe(ctx, t, { x: 0.4, y: 0.45, z: 1.6 }, 'blur');
+    char(ctx, t, 'K4', 580, 900, 2150 * (1 + u * 0.05), { id: 'k6', anchor: [0.53, 0.42], talk: true, light: { x: 0.1, y: 0.35, r: 0.7, color: 'rgba(255,190,120,0.3)' }, rim: { ...CAFE_RIM, dx: -7 } });
+    foreground(ctx, 'M9', -260, 2350, 2500, { blur: 20, bright: 0.45 });
+  });
+  // "He gave me the bigger half." / "Then stole a bite of it."
+  shot(line('n4b').s - 0.1, stoleCut, 'dark', (ctx, t, u) => {
+    cafe(ctx, t, { x: 0.3, y: 0.45, z: 1.5 }, 'blur');
+    char(ctx, t, 'M9', 520, 960, 2300 * (1 + u * 0.05), { id: 'n4b', anchor: [0.56, 0.39], rim: { ...CAFE_RIM, dx: -7 }, light: { x: 0.9, y: 0.4, r: 0.8, color: 'rgba(255,200,140,0.28)' } });
+  });
+  shot(stoleCut, C.closing, 'dark', (ctx, t, u) => {
+    cafe(ctx, t, { x: 0.65, y: 0.45, z: 1.5 }, 'blur');
+    const bob = Math.sin((t - stoleCut) * 9) * 6 * (1 - u);
+    char(ctx, t, 'K6', 520, 900 + bob, 2700 * (1 + u * 0.05), { id: 'cu', anchor: [0.54, 0.4], rim: { ...CAFE_RIM, dx: 7 }, light: { x: 0.1, y: 0.4, r: 0.8, color: 'rgba(255,200,140,0.25)' } });
+  });
+  // "We talked until they closed the café. He laughed..." time passes: the room dims around them
+  shot(C.closing, foreverCut, 'dark', (ctx, t, u) => {
+    cafe(ctx, t, lerpCam(u, { x: 0.5, y: 0.55, z: 1.18 }, { x: 0.5, y: 0.55, z: 1.3 }));
+    PP.with(ctx, () => { ctx.fillStyle = `rgba(12,6,3,${0.12 + u * 0.12})`; ctx.fillRect(0, 0, W, H); });
+    char(ctx, t, 'M9', 250, 2230, 1800, { rim: { ...CAFE_RIM, dx: -6 }, light: { x: 0.9, y: 0.4, r: 0.8, color: 'rgba(255,200,140,0.25)' } });
+    char(ctx, t, 'K6', 860, 2230, 1800, { rim: { ...CAFE_RIM, dx: 6 }, light: { x: 0.1, y: 0.4, r: 0.8, color: 'rgba(255,200,140,0.25)' } });
+  }, 'dissolve');
   shot(foreverCut, C.watch, 'dark', (ctx, t, u) => {
     cafe(ctx, t, { x: 0.35, y: 0.45, z: 1.5 }, 'blur');
     char(ctx, t, 'M9', 560, 900, 2600 * (1 + u * 0.06), { id: 'cu', anchor: [0.56, 0.39], rim: { ...CAFE_RIM, dx: -7 }, light: { x: 0.9, y: 0.4, r: 0.8, color: 'rgba(255,200,140,0.25)' } });

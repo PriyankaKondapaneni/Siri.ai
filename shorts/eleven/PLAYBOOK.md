@@ -88,7 +88,7 @@ Every episode must look and sound like a professionally directed short film. Epi
 
 **Extra line options:**
 - `to`: the hook's end word index, exclusive, so the hook stops before the end of the source take.
-- `gap`: seconds of silence before a line, overriding the default. Use it for a dramatic beat, such as the 1.8 s silence before "his watch started ticking".
+- `gap`: seconds of silence before a line, overriding the default. On `h0` it sets the lead-in; keep it near 0.06 s so the voice starts on the first frame. Use it for a dramatic beat, such as the 1.8 s silence before "his watch started ticking".
 - A `note` line can be in either voice. Mira's voice notes go through the phone EQ too.
 
 **The hook line** is line `h0`, the first line. It reuses a powerful line from later in the same episode, without spoiling the final cliffhanger. Use `take` (the source line id) and `from` (the first word's index in that take), so it costs nothing extra. Example: `{ "id": "h0", "who": "kabir", "kind": "note", "take": "k6", "from": 6, "text": "Don't fall in love with me.", "show": "Don't fall in love with me." }`
@@ -155,6 +155,7 @@ Always reuse it first. It lives in `assets/art/v2/`; `gen/` holds the originals 
   - `H1`: their hands holding
   - `A1`: photo of Arjun (Kabir's brother)
   - `F1`: memory/flashback of Mira on the bridge (used full-frame with a sepia filter)
+  - `C1`: full-frame café table, both their hands on the last cookie (registered in `BGS`; his watch at 0.89, 0.574, radius 0.039 of the width, is painted back to a blank dial stopped at 11:11 in code)
 - Backgrounds:
   - `B6`: metro platform
   - `B7`: rooftop at night
@@ -189,6 +190,7 @@ Always reuse it first. It lives in `assets/art/v2/`; `gen/` holds the originals 
 - **New characters:** run a short audition first (`audition.mjs` pattern, about $0.01) and let the user choose.
 - **Generate at speed 1.0:** `NODE_USE_ENV_PROXY=1 node eleven/narrate.mjs NN 3`, run from `shorts/`. This makes 3 takes per line, checks each with ASR (`transcribe-1-pro`) for word errors, and picks the best one.
   - Fish allows one request at a time; never run TTS calls in parallel (429).
+  - The `.asr.json` transcripts are committed but the `.wav` takes are not. If takes are re-recorded, narrate re-transcribes any take newer than its transcript; a stale transcript gives wrong timing and a false 0% word error.
 - **Assemble:** `node eleven/assemble.mjs NN`, run from `shorts/`.
   - Default `TEMPO=1.08`: a pitch-preserving time-stretch, which the user approved as "slightly faster".
   - `CAP` and `GAP` keep pauses tight but natural (defaults: in-line pauses capped at 0.26 s; 0.12 s between lines; 0.42 s before voice notes for the phone buzz).
@@ -245,6 +247,8 @@ Don't rewrite the engine for each episode.
 - Run the audio tools from `shorts/eleven/`: `node audio/score.mjs NN && node audio/sfx.mjs NN && node audio/mix.mjs NN && node audio/envelope.mjs NN`.
 - The score, sound effects and beds are synthesized in code, at no cost.
 - The cue sheet's `sfx`, `beds` and `music` sections drive them. Give the hook a buzz, a heartbeat, a whoosh and a low hit at the smash cut, with music section `hook` (silence under the hook).
+- `c.hush = [[from, to, dB]]` in the cue sheet lets the music fall away under a held moment (Episode 2's fingertips). Effects added for Episode 2: `crunch` (a cookie snapped in half).
+- Assemble ends each line where the voice actually stops, not where the transcript says, so a short last word can't clip the line.
 - The mix sends Kabir's voice notes through a phone EQ, ducks the music under the voice, and masters to −14 LUFS with a true peak of −1.2 dBTP or lower.
 
 ## 8. Render and deliver

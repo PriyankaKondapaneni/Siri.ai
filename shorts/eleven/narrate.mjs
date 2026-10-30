@@ -27,7 +27,8 @@ for (const l of S.lines) {
   for (let k = ONLY ? FIRST : 1; k <= N; k++) {
     const wav = `${dir}/takes/${l.id}.${k}.wav`, aj = `${dir}/takes/${l.id}.${k}.asr.json`;
     if (!fs.existsSync(wav)) fs.writeFileSync(wav, await tts(l.text, { model: S.model, voice: S.voices[l.who], temperature: [0.7, 0.78, 0.64, 0.7, 0.78, 0.64][k - 1], speed: SPEED }));
-    if (!fs.existsSync(aj)) fs.writeFileSync(aj, JSON.stringify(await asr(wav), null, 1));
+    // a transcript older than its take belongs to an earlier recording (the transcripts are committed, the takes are not)
+    if (!fs.existsSync(aj) || fs.statSync(aj).mtimeMs < fs.statSync(wav).mtimeMs) fs.writeFileSync(aj, JSON.stringify(await asr(wav), null, 1));
     const r = JSON.parse(fs.readFileSync(aj, 'utf8'));
     takes.push({ k, w: wer(norm(l.text), norm(r.text)), d: dur(wav), text: r.text.trim() });
   }

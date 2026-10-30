@@ -1,0 +1,69 @@
+{
+ "duration": 4.9226875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "7b1c69a6-2464-4bd7-a09e-4ecbe1adf644",
+ "segments": [
+  {
+   "end": 1.12,
+   "start": 0.88,
+   "text": "He"
+  },
+  {
+   "end": 1.44,
+   "start": 1.12,
+   "text": "gave"
+  },
+  {
+   "end": 1.6,
+   "start": 1.44,
+   "text": "me"
+  },
+  {
+   "end": 1.68,
+   "start": 1.6,
+   "text": "the"
+  },
+  {
+   "end": 2.24,
+   "start": 1.68,
+   "text": "bigger"
+  },
+  {
+   "end": 2.72,
+   "start": 2.24,
+   "text": "half"
+  },
+  {
+   "end": 3.2,
+   "start": 2.96,
+   "text": "then"
+  },
+  {
+   "end": 3.76,
+   "start": 3.28,
+   "text": "stole"
+  },
+  {
+   "end": 3.84,
+   "start": 3.76,
+   "text": "a"
+  },
+  {
+   "end": 4.16,
+   "start": 3.84,
+   "text": "bite"
+  },
+  {
+   "end": 4.24,
+   "start": 4.16,
+   "text": "of"
+  },
+  {
+   "end": 4.48,
+   "start": 4.24,
+   "text": "it"
+  }
+ ],
+ "text": "He gave me the bigger half, then stole a bite of it."
+}

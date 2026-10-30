@@ -11,7 +11,10 @@
     const end = T.duration;
     const c = {
       hookEnd: L('n1').s - 0.14,
-      cafe: L('n4').s - 0.1,
+      cafe: L('n4a').s - 0.1,
+      touched: W('n4a', 'touched'),
+      half: W('k6', 'half', 0, 'e'),
+      closing: L('n4').s - 0.1,
       watch: L('n5').s - 0.1,
       night: L('n6').s - 0.12,
       clock1111: W('n6', '11:11'),
@@ -25,12 +28,20 @@
       noteWords: Object.fromEntries(['h0', 'k4', 'k5'].map((id) => [id, T.words.filter((w) => w.line === id)])),
     };
     c.sfx = [
-      [0.0, 'buzz', -7, 0.1],
+      [0.0, 'buzz', -6, 0.1],
+      [0.0, 'blip', -14, 0.1],
       [0.05, 'heartbeat', -9, 0],
-      [0.5, 'trainIn', -13, 0],
-      [c.hookEnd - 0.03, 'boomSoft', -7, 0],
+      [0.42, 'shimmer', -17, -0.2],
+      [0.86, 'trainIn', -12, 0],
+      [1.3, 'heartbeat', -10, 0],
+      [c.hookEnd - 1.4, 'riser', -14, 0],
+      [c.hookEnd - 0.03, 'boomSoft', -6, 0],
+      [c.hookEnd - 0.03, 'whooshBy', -12, 0],
       [c.thereHeWas - 0.05, 'shimmer', -15, 0],
       [c.cafe + 0.1, 'cafeDoor', -18, -0.4],
+      [c.touched - 0.05, 'heartbeat', -13, 0],
+      [c.half + 0.02, 'crunch', -10, 0.15],
+      [c.closing + 0.2, 'cafeDoor', -22, 0.4],
       [c.watch + 0.1, 'tickTock', -12, 0],
       [c.brother, 'heartbeat', -15, 0],
       [c.night, 'rainStart', -16, 0],
@@ -59,6 +70,8 @@
       { at: c.makeIt, kind: 'cut' },
       { at: c.endCard + 0.1, kind: 'sting' },
     ];
+    // the music falls away when their fingers touch, and comes back with his "Half?"
+    c.hush = [[c.touched - 0.15, L('k6').s - 0.05, -16]];
     return c;
   }
   if (typeof module !== 'undefined' && module.exports) module.exports = build;

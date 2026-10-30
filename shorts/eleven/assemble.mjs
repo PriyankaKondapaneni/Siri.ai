@@ -40,7 +40,7 @@ function voiceEnd(x, from) {
 
 const out = { mira: [], live: [], note: [] };
 const words = [], lines = [];
-let t = GAP[S.lines[0].id] ?? GAP.default;
+let t = S.lines[0].gap ?? GAP[S.lines[0].id] ?? GAP.default;
 const total = [];
 let prevKind = null;
 S.lines.forEach((l, li) => {

@@ -1,47 +1,47 @@
 {
- "duration": 5.340625,
+ "duration": 4.9226875,
  "language": "English",
  "language_code": "en",
- "request_id": "33f53f2a-7b10-40d6-a485-4def676bda41",
+ "request_id": "82e0a7f5-54d5-4f8d-a341-197512ceef6a",
  "segments": [
   {
-   "end": 0.48,
+   "end": 0.56,
    "start": 0,
    "text": "Same"
   },
   {
-   "end": 1.12,
-   "start": 0.48,
+   "end": 1.2,
+   "start": 0.56,
    "text": "corner"
   },
   {
-   "end": 2.08,
-   "start": 1.6,
+   "end": 2,
+   "start": 1.52,
    "text": "6"
   },
   {
-   "end": 2.64,
-   "start": 2.08,
+   "end": 2.56,
+   "start": 2,
    "text": "40"
   },
   {
-   "end": 3.68,
-   "start": 3.36,
+   "end": 3.36,
+   "start": 3.04,
    "text": "and"
   },
   {
-   "end": 4,
-   "start": 3.68,
+   "end": 3.76,
+   "start": 3.36,
    "text": "there"
   },
   {
-   "end": 4.24,
-   "start": 4,
+   "end": 3.92,
+   "start": 3.76,
    "text": "he"
   },
   {
-   "end": 4.96,
-   "start": 4.24,
+   "end": 4.64,
+   "start": 3.92,
    "text": "was"
   }
  ],

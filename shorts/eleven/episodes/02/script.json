@@ -13,7 +13,8 @@
    "kind": "note",
    "text": "Don't let me get on the train.",
    "take": "k4",
-   "from": 8
+   "from": 8,
+   "gap": 0.06
   },
   {
    "id": "n1",

@@ -1,8 +1,8 @@
 {
- "duration": 5.61925,
+ "duration": 5.4799375,
  "language": "English",
  "language_code": "en",
- "request_id": "53f6fb83-bd06-4544-9dc4-6e0059870b22",
+ "request_id": "0755c22b-b170-410c-8ec3-3fd3cb3b9cdc",
  "segments": [
   {
    "end": 0.24,
@@ -25,7 +25,7 @@
    "text": "the"
   },
   {
-   "end": 1.52,
+   "end": 1.6,
    "start": 1.2,
    "text": "way"
   },
@@ -40,23 +40,23 @@
    "text": "You"
   },
   {
-   "end": 4.32,
+   "end": 4.24,
    "start": 4,
    "text": "look"
   },
   {
-   "end": 4.56,
-   "start": 4.32,
+   "end": 4.48,
+   "start": 4.24,
    "text": "like"
   },
   {
-   "end": 4.64,
-   "start": 4.56,
+   "end": 4.56,
+   "start": 4.48,
    "text": "you"
   },
   {
    "end": 4.88,
-   "start": 4.64,
+   "start": 4.56,
    "text": "need"
   },
   {

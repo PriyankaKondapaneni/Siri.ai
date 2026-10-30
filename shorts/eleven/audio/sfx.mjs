@@ -29,6 +29,8 @@ const clips = {
   blip: () => { const o = buf(0.3); const a = mul(osc(n(0.07), 1568), adsr(n(0.07), 0.003, 0.03, 0.5, 0.03)); const b = mul(osc(n(0.16), 2093), adsr(n(0.16), 0.003, 0.05, 0.4, 0.1)); for (let i = 0; i < a.length; i++) o[i] += a[i] * 0.5; for (let i = 0; i < b.length; i++) o[i + n(0.08)] += b[i] * 0.45; return o; },
   swipe: () => { const m = n(0.2), x = noise(m, 14); svf(x, 'bp', (i) => 1800 + 5000 * (i / m), 1.0); return mul(x, adsr(m, 0.04, 0.05, 0.6, 0.1)); },
   trash: () => { const m = n(0.32), x = buf(0.32), r = rng(15); for (let k = 0; k < 40; k++) { const p = Math.floor(r() * (m - 400)); for (let i = 0; i < 300; i++) x[p + i] += (r() * 2 - 1) * Math.exp(-i / 40) * 0.6; } biquad(x, 'hp', 1200); return x; },
+  // a cookie snapped in half: one dry crack, then a few crumbs
+  crunch: () => { const m = n(0.3), x = buf(0.3), r = rng(31); for (let k = 0; k < 16; k++) { const p = k === 0 ? 0 : Math.floor(n(0.02) + Math.pow(r(), 1.6) * (m - 900)), a = k === 0 ? 1 : 0.25 + r() * 0.3, d = k === 0 ? 90 : 25 + r() * 30; for (let i = 0; i < 700; i++) x[p + i] += (r() * 2 - 1) * a * Math.exp(-i / d); } biquad(x, 'bp', 2600, 0.6); return mul(x, 1.3); },
   cafeDoor: () => { const o = buf(2.2); const a = bell(88, 0.3, 0.3, 2.76, 1.2), b = bell(84, 0.3, 0.3, 2.76, 1.2); for (let i = 0; i < a.length && i < o.length; i++) o[i] += a[i]; for (let i = 0; i < b.length && i + n(0.12) < o.length; i++) o[i + n(0.12)] += b[i]; return o; },
   cupTip: () => { const m = n(0.6), x = buf(0.6); for (const [f, a, d] of [[2310, 0.4, 0.18], [3730, 0.25, 0.12], [5120, 0.15, 0.07]]) for (let i = 0; i < m; i++) x[i] += Math.sin((2 * Math.PI * f * i) / RATE) * a * Math.exp(-i / (d * RATE)); return x; },
   splash: () => {

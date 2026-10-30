@@ -1,52 +1,52 @@
 {
- "duration": 5.2013125,
+ "duration": 5.0155625,
  "language": "English",
  "language_code": "en",
- "request_id": "a0d1c733-4a64-4077-a828-7b10ee73ad21",
+ "request_id": "3b0abb95-4224-4566-b6d8-fea8e28b5f1f",
  "segments": [
   {
-   "end": 0.4,
-   "start": 0,
+   "end": 0.32,
+   "start": 0.08,
    "text": "That"
   },
   {
-   "end": 0.8,
-   "start": 0.4,
+   "end": 0.72,
+   "start": 0.32,
    "text": "night"
   },
   {
-   "end": 1.52,
-   "start": 1.36,
+   "end": 1.36,
+   "start": 1.28,
    "text": "at"
   },
   {
-   "end": 2.08,
-   "start": 1.52,
+   "end": 1.92,
+   "start": 1.36,
    "text": "11"
   },
   {
-   "end": 2.72,
-   "start": 2.08,
+   "end": 2.56,
+   "start": 1.92,
    "text": "11"
   },
   {
-   "end": 3.6,
-   "start": 3.36,
+   "end": 3.36,
+   "start": 3.12,
    "text": "my"
   },
   {
-   "end": 4.24,
-   "start": 3.6,
+   "end": 3.92,
+   "start": 3.36,
    "text": "phone"
   },
   {
-   "end": 4.48,
-   "start": 4.24,
+   "end": 4.08,
+   "start": 3.92,
    "text": "lit"
   },
   {
-   "end": 4.8,
-   "start": 4.48,
+   "end": 4.48,
+   "start": 4.08,
    "text": "up"
   }
  ],

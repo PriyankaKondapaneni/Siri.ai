@@ -1,8 +1,8 @@
 {
- "duration": 6.1765625,
+ "duration": 6.4551875,
  "language": "English",
  "language_code": "en",
- "request_id": "74e0433b-bbd2-4e26-95fd-4b55e4b6eea2",
+ "request_id": "9fb47b14-aac3-45df-8d0d-fe42ec0e5e28",
  "segments": [
   {
    "end": 0.24,
@@ -10,23 +10,23 @@
    "text": "We"
   },
   {
-   "end": 0.64,
+   "end": 0.72,
    "start": 0.24,
    "text": "talked"
   },
   {
-   "end": 0.96,
-   "start": 0.64,
+   "end": 1.04,
+   "start": 0.72,
    "text": "until"
   },
   {
-   "end": 1.12,
-   "start": 0.96,
+   "end": 1.2,
+   "start": 1.04,
    "text": "they"
   },
   {
    "end": 1.76,
-   "start": 1.12,
+   "start": 1.2,
    "text": "closed"
   },
   {
@@ -35,43 +35,43 @@
    "text": "the"
   },
   {
-   "end": 2.64,
+   "end": 2.72,
    "start": 1.84,
    "text": "cafe"
   },
   {
-   "end": 3.2,
-   "start": 2.96,
+   "end": 3.36,
+   "start": 3.12,
    "text": "He"
   },
   {
-   "end": 3.76,
-   "start": 3.2,
+   "end": 4,
+   "start": 3.36,
    "text": "laughed"
   },
   {
-   "end": 4.08,
-   "start": 3.76,
+   "end": 4.24,
+   "start": 4,
    "text": "like"
   },
   {
-   "end": 4.24,
-   "start": 4.08,
+   "end": 4.4,
+   "start": 4.24,
    "text": "he'd"
   },
   {
-   "end": 4.64,
-   "start": 4.24,
+   "end": 4.8,
+   "start": 4.4,
    "text": "known"
   },
   {
-   "end": 4.8,
-   "start": 4.64,
+   "end": 5.04,
+   "start": 4.8,
    "text": "me"
   },
   {
-   "end": 5.76,
-   "start": 4.8,
+   "end": 6.08,
+   "start": 5.04,
    "text": "forever"
   }
  ],

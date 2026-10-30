@@ -145,6 +145,15 @@ for (const [kind, gdb] of Object.entries(LEVEL)) {
     ch[i] *= 1 + (g - 1) * Math.max(0, k);
   }
 }
+// hushes: the music falls away under a held moment (C.hush: [[from, to, dB]]), fading out and back over 0.3 s
+for (const [a, b, gdb = -14] of C.hush || []) {
+  const g = db(gdb), f = Math.round(0.3 * RATE), i0 = Math.round(a * RATE), i1 = Math.round(b * RATE);
+  for (const ch of bus) for (let i = i0 - f; i < i1 + f; i++) {
+    if (i < 0 || i >= ch.length) continue;
+    const k = Math.min(1, (i - (i0 - f)) / f, (i1 + f - i) / f);
+    ch[i] *= 1 + (g - 1) * k;
+  }
+}
 // a gentle glue: high-pass the rumble, a touch of saturation
 for (const ch of bus) { biquad(ch, 'hp', 32, 0.7); sat(ch, 1.2); }
 fs.mkdirSync(`build/ep${ep}`, { recursive: true });

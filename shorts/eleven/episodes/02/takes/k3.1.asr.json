@@ -1,8 +1,8 @@
 {
- "duration": 5.2013125,
+ "duration": 5.0155625,
  "language": "English",
  "language_code": "en",
- "request_id": "642d8c6a-473a-4f9d-b66c-e18cfc55ea58",
+ "request_id": "f2a5fac3-464e-450d-bbdf-67b6d41434d3",
  "segments": [
   {
    "end": 0.16,
@@ -10,53 +10,53 @@
    "text": "It"
   },
   {
-   "end": 0.72,
+   "end": 0.8,
    "start": 0.16,
    "text": "stopped"
   },
   {
    "end": 0.8,
-   "start": 0.72,
+   "start": 0.8,
    "text": "the"
   },
   {
-   "end": 1.12,
+   "end": 1.2,
    "start": 0.8,
    "text": "night"
   },
   {
-   "end": 1.28,
-   "start": 1.12,
+   "end": 1.36,
+   "start": 1.2,
    "text": "my"
   },
   {
-   "end": 1.68,
-   "start": 1.28,
+   "end": 1.76,
+   "start": 1.36,
    "text": "brother"
   },
   {
-   "end": 2.24,
-   "start": 1.68,
+   "end": 2.32,
+   "start": 1.76,
    "text": "died"
   },
   {
-   "end": 3.84,
-   "start": 3.68,
+   "end": 3.68,
+   "start": 3.52,
    "text": "I"
   },
   {
-   "end": 4.16,
-   "start": 3.84,
+   "end": 4.08,
+   "start": 3.68,
    "text": "never"
   },
   {
-   "end": 4.64,
-   "start": 4.16,
+   "end": 4.56,
+   "start": 4.08,
    "text": "fixed"
   },
   {
    "end": 4.8,
-   "start": 4.64,
+   "start": 4.56,
    "text": "it"
   }
  ],

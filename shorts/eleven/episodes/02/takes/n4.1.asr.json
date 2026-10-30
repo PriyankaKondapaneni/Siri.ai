@@ -1,27 +1,27 @@
 {
- "duration": 6.3623125,
+ "duration": 6.315875,
  "language": "English",
  "language_code": "en",
- "request_id": "cfcc5b2a-4227-4189-8157-11f237797288",
+ "request_id": "c8dcb75c-a951-412b-9373-82a3fbe526de",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0.08,
+   "end": 0.24,
+   "start": 0,
    "text": "We"
   },
   {
-   "end": 0.8,
-   "start": 0.32,
+   "end": 0.72,
+   "start": 0.24,
    "text": "talked"
   },
   {
-   "end": 1.12,
-   "start": 0.8,
+   "end": 1.04,
+   "start": 0.72,
    "text": "until"
   },
   {
    "end": 1.2,
-   "start": 1.12,
+   "start": 1.04,
    "text": "they"
   },
   {
@@ -40,18 +40,18 @@
    "text": "cafe"
   },
   {
-   "end": 3.28,
-   "start": 3.04,
+   "end": 3.36,
+   "start": 3.12,
    "text": "He"
   },
   {
-   "end": 3.92,
-   "start": 3.28,
+   "end": 3.84,
+   "start": 3.36,
    "text": "laughed"
   },
   {
    "end": 4.16,
-   "start": 3.92,
+   "start": 3.84,
    "text": "like"
   },
   {
@@ -70,7 +70,7 @@
    "text": "me"
   },
   {
-   "end": 6,
+   "end": 5.92,
    "start": 4.88,
    "text": "forever"
   }

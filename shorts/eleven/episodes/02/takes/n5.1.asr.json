@@ -1,57 +1,57 @@
 {
- "duration": 5.897875,
+ "duration": 5.154875,
  "language": "English",
  "language_code": "en",
- "request_id": "e31d8efa-2d57-4391-b4da-6c6aed85c7be",
+ "request_id": "62a684e8-7383-4695-8950-af2c2f43e8c3",
  "segments": [
   {
-   "end": 0.56,
-   "start": 0.08,
+   "end": 0.4,
+   "start": 0,
    "text": "Then"
   },
   {
-   "end": 0.8,
-   "start": 0.64,
+   "end": 0.48,
+   "start": 0.4,
    "text": "I"
   },
   {
-   "end": 1.36,
-   "start": 0.8,
+   "end": 1.04,
+   "start": 0.48,
    "text": "noticed"
   },
   {
-   "end": 1.52,
-   "start": 1.36,
+   "end": 1.2,
+   "start": 1.04,
    "text": "his"
   },
   {
-   "end": 2.24,
-   "start": 1.52,
+   "end": 1.84,
+   "start": 1.2,
    "text": "watch"
   },
   {
-   "end": 3.12,
-   "start": 2.56,
+   "end": 2.72,
+   "start": 2.16,
    "text": "still"
   },
   {
-   "end": 3.76,
-   "start": 3.12,
+   "end": 3.2,
+   "start": 2.72,
    "text": "stopped"
   },
   {
-   "end": 4,
-   "start": 3.84,
+   "end": 3.44,
+   "start": 3.28,
    "text": "at"
   },
   {
-   "end": 4.64,
-   "start": 4,
+   "end": 4,
+   "start": 3.44,
    "text": "11"
   },
   {
-   "end": 5.52,
-   "start": 4.72,
+   "end": 4.72,
+   "start": 4,
    "text": "11"
   }
  ],

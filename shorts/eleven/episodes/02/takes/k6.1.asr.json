@@ -1,0 +1,44 @@
+{
+ "duration": 3.018625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "412aafd6-0291-4aea-bcf5-5a9f88ab24d3",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.08,
+   "text": "Half"
+  },
+  {
+   "end": 1.76,
+   "start": 1.6,
+   "text": "You"
+  },
+  {
+   "end": 1.92,
+   "start": 1.76,
+   "text": "can"
+  },
+  {
+   "end": 2.16,
+   "start": 1.92,
+   "text": "have"
+  },
+  {
+   "end": 2.24,
+   "start": 2.16,
+   "text": "the"
+  },
+  {
+   "end": 2.56,
+   "start": 2.24,
+   "text": "bigger"
+  },
+  {
+   "end": 2.96,
+   "start": 2.56,
+   "text": "one"
+  }
+ ],
+ "text": "Half? You can have the bigger one."
+}

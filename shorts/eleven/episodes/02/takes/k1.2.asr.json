@@ -1,27 +1,27 @@
 {
- "duration": 4.5046875,
+ "duration": 4.365375,
  "language": "English",
  "language_code": "en",
- "request_id": "a1a08eef-a52a-4366-8eeb-b12bedf6a30d",
+ "request_id": "43a42120-7bce-4d22-918c-a0a975f0f128",
  "segments": [
   {
-   "end": 0.32,
+   "end": 0.4,
    "start": 0,
    "text": "You"
   },
   {
    "end": 0.88,
-   "start": 0.32,
+   "start": 0.4,
    "text": "again"
   },
   {
-   "end": 1.6,
+   "end": 1.68,
    "start": 1.6,
    "text": "The"
   },
   {
    "end": 2.08,
-   "start": 1.6,
+   "start": 1.68,
    "text": "girl"
   },
   {
@@ -35,30 +35,30 @@
    "text": "almost"
   },
   {
-   "end": 3.12,
+   "end": 3.04,
    "start": 2.8,
    "text": "got"
   },
   {
-   "end": 3.36,
-   "start": 3.12,
+   "end": 3.2,
+   "start": 3.04,
    "text": "hit"
   },
   {
-   "end": 3.52,
-   "start": 3.36,
+   "end": 3.44,
+   "start": 3.2,
    "text": "by"
   },
   {
-   "end": 3.6,
-   "start": 3.52,
+   "end": 3.52,
+   "start": 3.44,
    "text": "a"
   },
   {
-   "end": 4.16,
-   "start": 3.6,
+   "end": 4.08,
+   "start": 3.52,
    "text": "car"
   }
  ],
- "text": "You again. The girl who almost got hit by a car."
+ "text": "You again? The girl who almost got hit by a car."
 }

@@ -1,8 +1,8 @@
 {
- "duration": 5.0155625,
+ "duration": 4.8298125,
  "language": "English",
  "language_code": "en",
- "request_id": "24b61fb3-5c19-4abc-a593-016ebcb32127",
+ "request_id": "53bc2aa2-d19d-4d3e-8c05-7e130c024a80",
  "segments": [
   {
    "end": 0.24,
@@ -10,13 +10,13 @@
    "text": "He"
   },
   {
-   "end": 0.8,
+   "end": 0.88,
    "start": 0.24,
    "text": "remembered"
   },
   {
    "end": 0.96,
-   "start": 0.8,
+   "start": 0.88,
    "text": "the"
   },
   {
@@ -25,28 +25,28 @@
    "text": "car"
   },
   {
-   "end": 2.4,
-   "start": 2.24,
+   "end": 2.32,
+   "start": 2.16,
    "text": "but"
   },
   {
    "end": 2.8,
-   "start": 2.4,
+   "start": 2.32,
    "text": "not"
   },
   {
-   "end": 2.96,
-   "start": 2.88,
+   "end": 2.88,
+   "start": 2.8,
    "text": "a"
   },
   {
-   "end": 3.76,
-   "start": 2.96,
+   "end": 3.6,
+   "start": 2.88,
    "text": "single"
   },
   {
-   "end": 4.64,
-   "start": 3.76,
+   "end": 4.4,
+   "start": 3.6,
    "text": "message"
   }
  ],
