@@ -338,6 +338,48 @@
    "size": "1024x1536",
    "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Use the outfits from the SECOND and THIRD images. Extreme close-up. No text, no watermark.",
    "prompt": "Extreme close-up, seen from slightly above, of a small round wooden café table top in soft warm evening light. On a little white plate sits ONE large round chocolate-chip cookie. Two hands reach for the same cookie from opposite sides and their fingertips have just touched on top of it: from the left, a girl's slim hand coming from a cornflower-blue sleeve with a bit of chunky red knit scarf fringe; from the right, a young man's hand coming from a charcoal wool coat sleeve over a black turtleneck cuff, with a vintage leather-strap wristwatch. Both hands are relaxed and gentle, fingertips resting against each other. Beside the plate: a mug of hot chocolate with a little steam. The table and the soft blurred café behind it are drawn in the same flat muted pastel webtoon style as the first image (cream, warm wood, soft peach). No faces in the frame. Calm, sweet, romantic."
+  },
+  "T1": {
+   "refs": [
+    "STYLE",
+    "C1"
+   ],
+   "quality": "medium",
+   "size": "1024x1536",
+   "style": "Draw in exactly the same flat, hand-drawn webtoon style as the FIRST reference image: thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, simple and charming. Match the SECOND reference image exactly in drawing style, colours, line weight and scale. No text, no watermark.",
+   "prompt": "Redraw the SECOND reference image exactly as it is, same camera angle, same table, same white plate in the same place, same mug of hot chocolate, same café background, same colours, but with NO hands, NO arms, NO sleeves, NO scarf and NO people at all, and the plate is EMPTY: there is no cookie, just the clean white plate. Nothing else changes."
+  },
+  "CK": {
+   "refs": [
+    "STYLE",
+    "C1"
+   ],
+   "quality": "medium",
+   "size": "1024x1024",
+   "style": "Draw in exactly the same flat, hand-drawn webtoon style as the FIRST reference image: thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, simple and charming. Match the SECOND reference image exactly in drawing style, colours, line weight and scale. No text, no watermark.",
+   "prompt": "Only the large round chocolate-chip cookie from the SECOND reference image, seen from directly above, whole, flat, alone in the middle of the frame, filling about 70% of the frame. No plate, no hands. IMPORTANT: the background must be completely plain flat light grey, with no scenery, no table and no shadow at all."
+  },
+  "HM": {
+   "refs": [
+    "STYLE",
+    "C1",
+    "CM4"
+   ],
+   "quality": "medium",
+   "size": "1536x1024",
+   "style": "Draw in exactly the same flat, hand-drawn webtoon style as the FIRST reference image: thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, simple and charming. Match the SECOND reference image exactly in drawing style, colours, line weight and scale. No text, no watermark.",
+   "prompt": "Only a girl's right forearm and hand, exactly like the left hand in the SECOND reference image: a cornflower-blue knit sleeve with a bit of chunky red knit scarf fringe hanging over the wrist, a slim pale hand with soft rounded fingers outlined in thin black line. The arm enters from the LEFT edge of the frame and reaches horizontally to the right, palm down, fingers relaxed and slightly extended, fingertips pointing right. Seen from above, the same scale as in the reference. Proper proportions, not a stick arm. IMPORTANT: the background must be completely plain flat light grey, with no scenery, no table and no shadow at all."
+  },
+  "HK": {
+   "refs": [
+    "STYLE",
+    "C1",
+    "CK4"
+   ],
+   "quality": "medium",
+   "size": "1536x1024",
+   "style": "Draw in exactly the same flat, hand-drawn webtoon style as the FIRST reference image: thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, simple and charming. Match the SECOND reference image exactly in drawing style, colours, line weight and scale. No text, no watermark.",
+   "prompt": "Only a young man's left forearm and hand, exactly like the right hand in the SECOND reference image: a charcoal wool coat sleeve over a black turtleneck cuff, a vintage leather-strap wristwatch with a plain cream dial with NO hands and NO numbers, a pale hand with soft rounded fingers outlined in thin black line. The arm enters from the RIGHT edge of the frame and reaches horizontally to the left, palm down, fingers relaxed and slightly extended, fingertips pointing left. Seen from above, the same scale as in the reference. Proper proportions, not a stick arm. IMPORTANT: the background must be completely plain flat light grey, with no scenery, no table and no shadow at all."
   }
  }
 }

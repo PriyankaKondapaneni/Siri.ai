@@ -804,5 +804,57 @@
    "text_tokens": 0
   },
   "total_tokens": 5705
+ },
+ "v2:HK": {
+  "input_tokens": 4178,
+  "input_tokens_details": {
+   "image_tokens": 3969,
+   "text_tokens": 209
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 5550
+ },
+ "v2:HM": {
+  "input_tokens": 4166,
+  "input_tokens_details": {
+   "image_tokens": 3969,
+   "text_tokens": 197
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 5538
+ },
+ "v2:T1": {
+  "input_tokens": 2581,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 148
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 3953
+ },
+ "v2:CK": {
+  "input_tokens": 2571,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 138
+  },
+  "output_tokens": 1756,
+  "output_tokens_details": {
+   "image_tokens": 1756,
+   "text_tokens": 0
+  },
+  "total_tokens": 4327
  }
 }
