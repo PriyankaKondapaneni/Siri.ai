@@ -58,6 +58,14 @@ Every episode must look and sound like a professionally directed short film. Epi
 - **Slow motion sparingly,** for one moment per episode at most.
 - **Tonal whiplash on purpose:** a warm, funny moment right before the danger lands.
 
+### Animate it like a professional animation studio (every episode)
+- **Characters act, they are never pictures.** Every shot has at least one real movement by a character (looking up, turning, standing, reaching, grabbing, laughing, walking, stealing a glance), not only a camera push.
+- **Anticipation, action, settle.** Before a move, a small counter-move (a dip before standing); the move itself eased; then an overshoot that settles (`E.outBack`, `E.outElastic`). Use `PP.kf` keyframes for choreography timed to words.
+- **Secondary motion everywhere:** hair and scarves in wind (`sway`), breathing, a tremble in fear, a laugh that shakes the shoulders, blushes that rise.
+- **Hands do things:** catching a hand, sliding a cup, a page turning, an alarm switched off. Build them from cut-out pieces when the story needs it.
+- **Depth and life in every frame:** parallax backgrounds, out-of-focus commuters crossing the lens, dust in the light, steam, rain, light sweeping across faces, doors opening and closing.
+- **Camera moves with purpose:** tracking alongside a walk, a push in on a decision, handheld in panic, a shake on impact, and stillness for the moment that matters.
+
 ### Things the user rejected (never repeat)
 - **Statue-like shots.** Characters standing still while only the camera moves.
 - **Robotic voices.** The 1.08× time-stretch with tight 0.12 s gaps made the voices sound mechanical.

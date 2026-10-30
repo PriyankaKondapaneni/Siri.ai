@@ -1,0 +1,49 @@
+{
+ "duration": 6.4551875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "2b19721f-7020-4534-9092-cd7446293561",
+ "segments": [
+  {
+   "end": 0.64,
+   "start": 0,
+   "text": "Kabir"
+  },
+  {
+   "end": 2.16,
+   "start": 1.44,
+   "text": "please"
+  },
+  {
+   "end": 3.12,
+   "start": 2.8,
+   "text": "just"
+  },
+  {
+   "end": 3.36,
+   "start": 3.12,
+   "text": "this"
+  },
+  {
+   "end": 4,
+   "start": 3.36,
+   "text": "once"
+  },
+  {
+   "end": 5.12,
+   "start": 4.72,
+   "text": "miss"
+  },
+  {
+   "end": 5.2,
+   "start": 5.12,
+   "text": "your"
+  },
+  {
+   "end": 5.92,
+   "start": 5.2,
+   "text": "train"
+  }
+ ],
+ "text": "Kabir, please, just this once, miss your train."
+}

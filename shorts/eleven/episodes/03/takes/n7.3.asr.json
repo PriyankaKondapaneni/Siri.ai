@@ -1,64 +1,39 @@
 {
- "duration": 5.526375,
+ "duration": 3.6688125,
  "language": "English",
  "language_code": "en",
- "request_id": "009c9d75-46b0-4217-b863-d84a49d94893",
+ "request_id": "60a39aa6-45ee-467c-93ac-57212adac238",
  "segments": [
   {
    "end": 0.24,
-   "start": 0,
-   "text": "An"
+   "start": 0.08,
+   "text": "I"
   },
   {
    "end": 0.72,
    "start": 0.32,
-   "text": "hour"
+   "text": "couldn't"
   },
   {
-   "end": 1.28,
+   "end": 1.12,
    "start": 0.72,
-   "text": "later"
+   "text": "tell"
   },
   {
-   "end": 2.16,
-   "start": 1.76,
-   "text": "every"
+   "end": 1.6,
+   "start": 1.12,
+   "text": "him"
   },
   {
-   "end": 2.64,
-   "start": 2.16,
-   "text": "phone"
+   "end": 2.56,
+   "start": 2.24,
+   "text": "Not"
   },
   {
-   "end": 2.72,
-   "start": 2.64,
-   "text": "in"
-  },
-  {
-   "end": 2.8,
-   "start": 2.72,
-   "text": "the"
-  },
-  {
-   "end": 3.44,
-   "start": 2.8,
-   "text": "cafe"
-  },
-  {
-   "end": 4.16,
-   "start": 3.44,
-   "text": "buzzed"
-  },
-  {
-   "end": 4.32,
-   "start": 4.16,
-   "text": "at"
-  },
-  {
-   "end": 5.04,
-   "start": 4.32,
-   "text": "once"
+   "end": 3.28,
+   "start": 2.56,
+   "text": "yet"
   }
  ],
- "text": "An hour later, every phone in the cafe buzzed at once."
+ "text": "I couldn't tell him. Not yet."
 }

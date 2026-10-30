@@ -1,49 +1,39 @@
 {
- "duration": 4.4118125,
+ "duration": 4.2260625,
  "language": "English",
  "language_code": "en",
- "request_id": "19c4e6d1-8307-49e4-908a-118929f233b3",
+ "request_id": "b50018d8-046f-4c03-aae4-33a8ab71891b",
  "segments": [
   {
-   "end": 0.48,
+   "end": 0.32,
    "start": 0,
-   "text": "No"
-  },
-  {
-   "end": 1.28,
-   "start": 0.8,
-   "text": "yes"
-  },
-  {
-   "end": 2.08,
-   "start": 1.68,
-   "text": "sort"
-  },
-  {
-   "end": 2.32,
-   "start": 2.08,
-   "text": "of"
-  },
-  {
-   "end": 2.88,
-   "start": 2.8,
    "text": "I"
   },
   {
-   "end": 3.2,
-   "start": 2.88,
-   "text": "brought"
+   "end": 1.36,
+   "start": 1.04,
+   "text": "take"
   },
   {
-   "end": 3.28,
-   "start": 3.2,
-   "text": "you"
+   "end": 1.52,
+   "start": 1.36,
+   "text": "this"
   },
   {
-   "end": 4,
-   "start": 3.28,
-   "text": "coffee"
+   "end": 1.92,
+   "start": 1.52,
+   "text": "train"
+  },
+  {
+   "end": 2.4,
+   "start": 1.92,
+   "text": "too"
+  },
+  {
+   "end": 3.84,
+   "start": 2.8,
+   "text": "sometimes"
   }
  ],
- "text": "No, yes, sort of. I brought you coffee."
+ "text": "I take this train too, sometimes."
 }

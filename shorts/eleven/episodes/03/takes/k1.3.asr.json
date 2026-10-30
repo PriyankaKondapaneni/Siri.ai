@@ -1,39 +1,19 @@
 {
- "duration": 3.29725,
+ "duration": 1.068125,
  "language": "English",
  "language_code": "en",
- "request_id": "04d72e1e-e8f0-4603-8752-2b92bdcf81fa",
+ "request_id": "3e26343a-231e-4f2d-9fde-a0bdc2a07f5b",
  "segments": [
   {
-   "end": 0.64,
+   "end": 0.4,
    "start": 0,
-   "text": "Mira"
+   "text": "You"
   },
   {
-   "end": 1.76,
-   "start": 1.68,
-   "text": "Do"
-  },
-  {
-   "end": 1.92,
-   "start": 1.76,
-   "text": "you"
-  },
-  {
-   "end": 2.16,
-   "start": 1.92,
-   "text": "live"
-  },
-  {
-   "end": 2.56,
-   "start": 2.16,
-   "text": "around"
-  },
-  {
-   "end": 2.88,
-   "start": 2.56,
-   "text": "here"
+   "end": 0.96,
+   "start": 0.4,
+   "text": "again"
   }
  ],
- "text": "Mira? Do you live around here?"
+ "text": "You again."
 }

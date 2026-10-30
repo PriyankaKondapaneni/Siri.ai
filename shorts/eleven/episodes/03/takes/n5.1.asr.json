@@ -1,49 +1,69 @@
 {
- "duration": 3.29725,
+ "duration": 5.7585625,
  "language": "English",
  "language_code": "en",
- "request_id": "7eb407e0-517e-4c73-81f5-b184f8ad0b54",
+ "request_id": "3e59c001-4646-4af4-80df-c4b1102c37f3",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0.08,
-   "text": "I"
-  },
-  {
    "end": 0.56,
-   "start": 0.16,
-   "text": "didn't"
+   "start": 0,
+   "text": "40"
   },
   {
-   "end": 0.72,
+   "end": 0.96,
    "start": 0.56,
-   "text": "have"
+   "text": "minutes"
   },
   {
-   "end": 0.8,
-   "start": 0.72,
-   "text": "a"
+   "end": 1.52,
+   "start": 0.96,
+   "text": "later"
   },
   {
-   "end": 1.44,
-   "start": 0.8,
-   "text": "plan"
-  },
-  {
-   "end": 1.92,
-   "start": 1.68,
-   "text": "so"
-  },
-  {
-   "end": 2.08,
+   "end": 2.4,
    "start": 1.92,
-   "text": "I"
+   "text": "every"
   },
   {
-   "end": 2.72,
-   "start": 2.08,
-   "text": "tripped"
+   "end": 2.8,
+   "start": 2.4,
+   "text": "phone"
+  },
+  {
+   "end": 2.96,
+   "start": 2.8,
+   "text": "in"
+  },
+  {
+   "end": 3.04,
+   "start": 2.96,
+   "text": "the"
+  },
+  {
+   "end": 3.68,
+   "start": 3.04,
+   "text": "cafe"
+  },
+  {
+   "end": 4.08,
+   "start": 3.68,
+   "text": "lit"
+  },
+  {
+   "end": 4.4,
+   "start": 4.08,
+   "text": "up"
+  },
+  {
+   "end": 4.56,
+   "start": 4.4,
+   "text": "at"
+  },
+  {
+   "end": 5.28,
+   "start": 4.56,
+   "text": "once"
   }
  ],
- "text": "I didn't have a plan, so I tripped."
+ "text": "40 minutes later, every phone in the cafe lit up at once."
 }

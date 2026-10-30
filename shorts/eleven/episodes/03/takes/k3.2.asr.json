@@ -1,39 +1,24 @@
 {
- "duration": 3.018625,
+ "duration": 2.3684375,
  "language": "English",
  "language_code": "en",
- "request_id": "134263a1-b21b-4c03-88e4-6a2eeca7048d",
+ "request_id": "61b62997-7de0-4395-8494-9caa3991f153",
  "segments": [
   {
    "end": 0.4,
    "start": 0.08,
-   "text": "That's"
+   "text": "Well"
   },
   {
-   "end": 0.8,
-   "start": 0.4,
-   "text": "me"
-  },
-  {
-   "end": 2,
-   "start": 1.76,
-   "text": "Thanks"
-  },
-  {
-   "end": 2.08,
-   "start": 2,
-   "text": "for"
+   "end": 1.76,
+   "start": 1.36,
+   "text": "that's"
   },
   {
    "end": 2.24,
-   "start": 2.08,
-   "text": "the"
-  },
-  {
-   "end": 2.8,
-   "start": 2.24,
-   "text": "coffee"
+   "start": 1.76,
+   "text": "mine"
   }
  ],
- "text": "That's me. Thanks for the coffee."
+ "text": "Well, that's mine."
 }

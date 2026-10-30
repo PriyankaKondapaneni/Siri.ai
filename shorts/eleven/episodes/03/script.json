@@ -10,108 +10,99 @@
   {
    "id": "h0",
    "who": "mira",
-   "kind": "narr",
-   "text": "The six-forty never made it to the next station.",
-   "take": "n8",
-   "from": 0,
-   "show": "The 6:40 never made it…",
+   "kind": "live",
+   "text": "Please. Just this once... miss your train.",
+   "take": "m3",
+   "from": 1,
    "gap": 0.06,
-   "to": 6
+   "cap": 0.1
   },
   {
    "id": "n1",
    "who": "mira",
    "kind": "narr",
-   "text": "[quiet, tired] I didn't sleep. I set an alarm anyway."
-  },
-  {
-   "id": "n2",
-   "who": "mira",
-   "kind": "narr",
-   "text": "[softly, a small smile] Five-forty. I bought two coffees... because I didn't know how he takes his.",
-   "show": "5:40. I bought two coffees... because I didn't know how he takes his.",
-   "gap": 0.35
-  },
-  {
-   "id": "n3",
-   "who": "mira",
-   "kind": "narr",
-   "text": "[low] Platform four. He was already there.",
-   "gap": 0.3
+   "text": "[low, urgent, intimate] Nine minutes to keep him off the six-forty. And he had no idea.",
+   "show": "Nine minutes to keep him off the 6:40. And he had no idea."
   },
   {
    "id": "k1",
    "who": "kabir",
    "kind": "live",
-   "text": "[surprised, then a slow smile] Mira? ...Do you live around here?",
-   "gap": 0.3
+   "text": "[surprised, a polite smile] You again.",
+   "gap": 0.35
   },
   {
    "id": "m1",
    "who": "mira",
    "kind": "live",
-   "text": "[too fast, nervous] No. Yes. Sort of. I brought you coffee.",
+   "text": "[flustered, too quick] I... take this train too. Sometimes.",
    "gap": 0.3
   },
   {
    "id": "k2",
    "who": "kabir",
    "kind": "live",
-   "text": "[amused] You don't even know how I take it.",
-   "gap": 0.3
+   "text": "[amused, gently] Sometimes.",
+   "gap": 0.35
   },
   {
-   "id": "m2",
-   "who": "mira",
-   "kind": "live",
-   "text": "[a little laugh] That's why there's two.",
-   "gap": 0.25
-  },
-  {
-   "id": "n4",
+   "id": "n2",
    "who": "mira",
    "kind": "narr",
-   "text": "[tense, quiet] Then the six-forty pulled in. Right on time.",
-   "show": "Then the 6:40 pulled in. Right on time.",
-   "gap": 0.35
+   "text": "[quiet, embarrassed] I'd never taken this train in my life.",
+   "gap": 0.45
   },
   {
    "id": "k3",
    "who": "kabir",
    "kind": "live",
-   "text": "[gently] That's me. Thanks for the coffee.",
+   "text": "[standing up, easy] Well. That's mine.",
+   "gap": 0.8
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[fast, breathless] Ten seconds. No plan. No way to explain.",
    "gap": 0.3
   },
   {
-   "id": "n5",
+   "id": "m3",
    "who": "mira",
-   "kind": "narr",
-   "text": "[rushed] I didn't have a plan. So I tripped.",
+   "kind": "live",
+   "text": "[desperate, then soft] Kabir. Please. Just this once... miss your train.",
    "gap": 0.2
   },
   {
    "id": "k4",
    "who": "kabir",
    "kind": "live",
-   "text": "[shocked, then laughing] Okay. That's twice now. Are you doing this on purpose?",
-   "gap": 0.6
+   "text": "[quiet, then a small smile] ...Okay. But you owe me a coffee.",
+   "gap": 1.0
+  },
+  {
+   "id": "m4",
+   "who": "mira",
+   "kind": "live",
+   "text": "[a breathless little laugh] Deal.",
+   "gap": 0.3
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[soft, wondering] He stayed. He didn't even ask why.",
+   "gap": 0.5
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low] Forty minutes later, every phone in the café lit up at once.",
+   "gap": 0.9
   },
   {
    "id": "n6",
-   "who": "mira",
-   "kind": "narr",
-   "text": "[soft] The doors closed. The train left without him.",
-   "gap": 0.25
-  },
-  {
-   "id": "n7",
-   "who": "mira",
-   "kind": "narr",
-   "text": "[low] An hour later, every phone in the café buzzed at once.",
-   "gap": 0.45
-  },
-  {
-   "id": "n8",
    "who": "mira",
    "kind": "narr",
    "text": "[shaken, quiet] The six-forty never made it to the next station.",
@@ -126,14 +117,14 @@
    "gap": 0.35
   },
   {
-   "id": "n9",
+   "id": "n7",
    "who": "mira",
    "kind": "narr",
    "text": "[hesitant] I couldn't tell him. Not yet.",
    "gap": 0.35
   },
   {
-   "id": "n10",
+   "id": "n8",
    "who": "mira",
    "kind": "narr",
    "text": "[uneasy] That night, at eleven eleven... it wasn't my phone that lit up.",

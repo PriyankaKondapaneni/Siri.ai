@@ -1,39 +1,49 @@
 {
- "duration": 4.5975625,
+ "duration": 3.8545625,
  "language": "English",
  "language_code": "en",
- "request_id": "1841a059-a4e8-47cc-b1b4-b56b3e1ae66c",
+ "request_id": "641cdce0-974a-4c3a-ac7e-8e1c6b9cda02",
  "segments": [
   {
-   "end": 0.8,
-   "start": 0.08,
-   "text": "Platform"
+   "end": 0.32,
+   "start": 0,
+   "text": "Ten"
   },
   {
-   "end": 1.6,
-   "start": 0.8,
-   "text": "four"
+   "end": 0.88,
+   "start": 0.32,
+   "text": "seconds"
   },
   {
-   "end": 2.48,
-   "start": 2.24,
-   "text": "He"
+   "end": 1.44,
+   "start": 1.2,
+   "text": "No"
   },
   {
-   "end": 2.64,
-   "start": 2.48,
-   "text": "was"
+   "end": 2,
+   "start": 1.44,
+   "text": "plan"
   },
   {
-   "end": 3.36,
-   "start": 2.8,
-   "text": "already"
+   "end": 2.32,
+   "start": 2.08,
+   "text": "No"
   },
   {
-   "end": 4,
-   "start": 3.36,
-   "text": "there"
+   "end": 2.56,
+   "start": 2.32,
+   "text": "way"
+  },
+  {
+   "end": 2.72,
+   "start": 2.56,
+   "text": "to"
+  },
+  {
+   "end": 3.44,
+   "start": 2.72,
+   "text": "explain"
   }
  ],
- "text": "Platform four. He was already there."
+ "text": "Ten seconds! No plan! No way to explain!"
 }

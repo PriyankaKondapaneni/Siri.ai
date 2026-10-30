@@ -60,7 +60,7 @@ S.lines.forEach((l, li) => {
   // a hook cut short stops before the next word of its take starts
   const all = JSON.parse(fs.readFileSync(`${dir}/takes/${src}.${k}.asr.json`, 'utf8')).segments, next = l.to != null ? all[l.to] : null;
   const a = Math.max(0, segs[0].start - 0.07), z = Math.min(x.length / RATE, lastWord.end + 0.16, next ? next.start / TEMPO - 0.015 : Infinity);
-  const cap = CAP[l.id] ?? CAP.default;
+  const cap = l.cap ?? CAP[l.id] ?? CAP.default;
   const cuts = [];
   for (let i = 1; i < segs.length; i++) {
     const g = segs[i].start - segs[i - 1].end;

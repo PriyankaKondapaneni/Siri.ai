@@ -1,54 +1,44 @@
 {
- "duration": 4.969125,
+ "duration": 3.6688125,
  "language": "English",
  "language_code": "en",
- "request_id": "be6e9b30-5400-43c9-ac2d-7806e028949a",
+ "request_id": "334df843-63ca-46b2-9299-edb938ac639d",
  "segments": [
   {
-   "end": 0.48,
+   "end": 0.16,
    "start": 0,
-   "text": "Then"
+   "text": "He"
   },
   {
-   "end": 0.56,
-   "start": 0.48,
-   "text": "the"
+   "end": 0.96,
+   "start": 0.16,
+   "text": "stayed"
   },
   {
-   "end": 1.12,
-   "start": 0.56,
-   "text": "6"
+   "end": 1.68,
+   "start": 1.52,
+   "text": "He"
   },
   {
-   "end": 1.12,
-   "start": 1.12,
-   "text": "40"
+   "end": 2,
+   "start": 1.68,
+   "text": "didn't"
   },
   {
-   "end": 2.08,
-   "start": 1.6,
-   "text": "pulled"
+   "end": 2.24,
+   "start": 2,
+   "text": "even"
   },
   {
-   "end": 2.48,
-   "start": 2.08,
-   "text": "in"
+   "end": 2.64,
+   "start": 2.24,
+   "text": "ask"
   },
   {
-   "end": 3.52,
-   "start": 3.04,
-   "text": "right"
-  },
-  {
-   "end": 3.84,
-   "start": 3.52,
-   "text": "on"
-  },
-  {
-   "end": 4.48,
-   "start": 3.84,
-   "text": "time"
+   "end": 3.36,
+   "start": 2.64,
+   "text": "why"
   }
  ],
- "text": "Then the 6:40 pulled in, right on time."
+ "text": "He stayed. He didn't even ask why."
 }

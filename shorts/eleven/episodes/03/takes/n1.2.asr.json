@@ -1,49 +1,79 @@
 {
- "duration": 3.483,
+ "duration": 7.058875,
  "language": "English",
  "language_code": "en",
- "request_id": "db8a7217-8f33-4b8c-bda8-b77d558a178d",
+ "request_id": "fa5bcf5f-55d4-44ed-9734-5eca17eb5005",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0.08,
-   "text": "I"
+   "end": 0.64,
+   "start": 0,
+   "text": "Nine"
   },
   {
-   "end": 0.48,
-   "start": 0.16,
-   "text": "didn't"
+   "end": 1.28,
+   "start": 0.64,
+   "text": "minutes"
   },
   {
-   "end": 1.04,
-   "start": 0.48,
-   "text": "sleep"
+   "end": 1.6,
+   "start": 1.52,
+   "text": "to"
   },
   {
-   "end": 1.84,
+   "end": 2,
    "start": 1.6,
-   "text": "I"
-  },
-  {
-   "end": 2.08,
-   "start": 1.84,
-   "text": "set"
+   "text": "keep"
   },
   {
    "end": 2.16,
-   "start": 2.08,
-   "text": "an"
+   "start": 2,
+   "text": "him"
   },
   {
    "end": 2.64,
-   "start": 2.16,
-   "text": "alarm"
+   "start": 2.24,
+   "text": "off"
   },
   {
-   "end": 3.36,
+   "end": 2.72,
    "start": 2.64,
-   "text": "anyway"
+   "text": "the"
+  },
+  {
+   "end": 2.72,
+   "start": 2.72,
+   "text": "6"
+  },
+  {
+   "end": 3.28,
+   "start": 2.72,
+   "text": "40"
+  },
+  {
+   "end": 4.64,
+   "start": 4.48,
+   "text": "and"
+  },
+  {
+   "end": 4.96,
+   "start": 4.64,
+   "text": "he"
+  },
+  {
+   "end": 5.2,
+   "start": 4.96,
+   "text": "had"
+  },
+  {
+   "end": 5.84,
+   "start": 5.2,
+   "text": "no"
+  },
+  {
+   "end": 6.48,
+   "start": 5.92,
+   "text": "idea"
   }
  ],
- "text": "I didn't sleep. I set an alarm anyway."
+ "text": "Nine minutes to keep him off the 6:40, and he had no idea."
 }

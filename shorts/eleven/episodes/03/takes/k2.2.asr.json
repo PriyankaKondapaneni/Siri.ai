@@ -1,49 +1,14 @@
 {
- "duration": 2.8793125,
+ "duration": 1.3468125,
  "language": "English",
  "language_code": "en",
- "request_id": "68e62ea4-1c89-404a-b714-b04dbc9aa5ee",
+ "request_id": "21063f52-8021-4a44-9c98-c8e94a7f85e9",
  "segments": [
   {
-   "end": 0.32,
+   "end": 0.96,
    "start": 0,
-   "text": "You"
-  },
-  {
-   "end": 0.72,
-   "start": 0.32,
-   "text": "don't"
-  },
-  {
-   "end": 1.2,
-   "start": 0.8,
-   "text": "even"
-  },
-  {
-   "end": 1.52,
-   "start": 1.2,
-   "text": "know"
-  },
-  {
-   "end": 1.76,
-   "start": 1.52,
-   "text": "how"
-  },
-  {
-   "end": 1.92,
-   "start": 1.76,
-   "text": "I"
-  },
-  {
-   "end": 2.32,
-   "start": 1.92,
-   "text": "take"
-  },
-  {
-   "end": 2.56,
-   "start": 2.32,
-   "text": "it"
+   "text": "Sometimes"
   }
  ],
- "text": "You don't even know how I take it."
+ "text": "Sometimes."
 }

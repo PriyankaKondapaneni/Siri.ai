@@ -1,79 +1,49 @@
 {
- "duration": 5.99075,
+ "duration": 3.1115,
  "language": "English",
  "language_code": "en",
- "request_id": "5d3eabb2-eded-42ca-aa25-8f63ec2b19f5",
+ "request_id": "9aa56451-09ed-405b-8149-c05c4cf0f636",
  "segments": [
   {
-   "end": 0.48,
-   "start": 0.08,
-   "text": "5"
+   "end": 0.32,
+   "start": 0,
+   "text": "I'd"
   },
   {
-   "end": 1.12,
-   "start": 0.48,
-   "text": "40"
+   "end": 0.8,
+   "start": 0.32,
+   "text": "never"
+  },
+  {
+   "end": 1.2,
+   "start": 0.8,
+   "text": "taken"
+  },
+  {
+   "end": 1.44,
+   "start": 1.2,
+   "text": "this"
   },
   {
    "end": 1.76,
-   "start": 1.6,
-   "text": "I"
+   "start": 1.44,
+   "text": "train"
   },
   {
-   "end": 2,
+   "end": 1.92,
    "start": 1.76,
-   "text": "bought"
+   "text": "in"
   },
   {
-   "end": 2.4,
+   "end": 2.08,
+   "start": 1.92,
+   "text": "my"
+  },
+  {
+   "end": 2.88,
    "start": 2.08,
-   "text": "two"
-  },
-  {
-   "end": 3.2,
-   "start": 2.48,
-   "text": "coffees"
-  },
-  {
-   "end": 3.6,
-   "start": 3.36,
-   "text": "because"
-  },
-  {
-   "end": 3.76,
-   "start": 3.6,
-   "text": "I"
-  },
-  {
-   "end": 4.08,
-   "start": 3.76,
-   "text": "didn't"
-  },
-  {
-   "end": 4.32,
-   "start": 4.08,
-   "text": "know"
-  },
-  {
-   "end": 4.48,
-   "start": 4.32,
-   "text": "how"
-  },
-  {
-   "end": 4.64,
-   "start": 4.48,
-   "text": "he"
-  },
-  {
-   "end": 5.04,
-   "start": 4.64,
-   "text": "takes"
-  },
-  {
-   "end": 5.52,
-   "start": 5.04,
-   "text": "his"
+   "text": "life"
   }
  ],
- "text": "5:40. I bought two coffees, because I didn't know how he takes his."
+ "text": "I'd never taken this train in my life."
 }

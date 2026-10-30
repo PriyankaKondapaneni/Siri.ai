@@ -1,59 +1,44 @@
 {
- "duration": 5.526375,
+ "duration": 3.390125,
  "language": "English",
  "language_code": "en",
- "request_id": "00a55e0d-6196-4ca5-aa64-04c2b90d0aca",
+ "request_id": "e5ab0fce-ade0-4d5a-802c-3b2a0b70d01a",
  "segments": [
   {
-   "end": 1.12,
-   "start": 0.4,
+   "end": 0.56,
+   "start": 0.08,
    "text": "Okay"
   },
   {
-   "end": 1.84,
-   "start": 1.52,
-   "text": "that's"
+   "end": 1.76,
+   "start": 1.44,
+   "text": "but"
   },
   {
-   "end": 2.4,
-   "start": 1.84,
-   "text": "twice"
-  },
-  {
-   "end": 2.88,
-   "start": 2.4,
-   "text": "now"
-  },
-  {
-   "end": 3.52,
-   "start": 3.44,
-   "text": "Are"
-  },
-  {
-   "end": 3.76,
-   "start": 3.52,
+   "end": 1.92,
+   "start": 1.76,
    "text": "you"
   },
   {
-   "end": 4.16,
-   "start": 3.76,
-   "text": "doing"
+   "end": 2.08,
+   "start": 1.92,
+   "text": "owe"
   },
   {
-   "end": 4.32,
-   "start": 4.16,
-   "text": "this"
+   "end": 2.32,
+   "start": 2.08,
+   "text": "me"
   },
   {
-   "end": 4.48,
-   "start": 4.32,
-   "text": "on"
+   "end": 2.4,
+   "start": 2.32,
+   "text": "a"
   },
   {
-   "end": 5.12,
-   "start": 4.48,
-   "text": "purpose"
+   "end": 3.04,
+   "start": 2.4,
+   "text": "coffee"
   }
  ],
- "text": "Okay, that's twice now. Are you doing this on purpose?"
+ "text": "Okay, but you owe me a coffee."
 }
