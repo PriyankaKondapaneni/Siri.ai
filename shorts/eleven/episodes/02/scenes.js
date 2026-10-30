@@ -22,6 +22,8 @@
       const [x, y] = bg.map(lx, ly);
       PP.glowAt(ctx, x, y, 150 * bg.s / 1.25, '255,205,140', 0.55 * fl);
     });
+    // the low sun at the end of the street: rays across the crossing and dust drifting in the light
+    if (PP.RIG && PP.rays) { const [sx, sy] = bg.map(0.62, 0.42); PP.rays(ctx, t, sx, sy, { angle: 2.25, spread: 1.1, a: 0.1 }); PP.dust(ctx, t, [0, 300, PP.W, 1300], 34); }
     return bg;
   };
   const cafe = (ctx, t, cam, variant = 'soft', lamp = 1, dark = 0.32) => {
@@ -151,7 +153,9 @@
   });
   shot(hk[3], hk[4], 'night', (ctx, t, u) => {
     PP.drawBg(ctx, 'B1', { x: 0.5, y: 0.45, z: 1.5 }, { variant: 'blur' });
-    char(ctx, t, 'M10', 540, 860, 3400 * (1 + E.in(u) * 0.12), { id: 'hk', blink: false, anchor: [0.58, 0.36], tint: 'rgba(20,30,90,0.08)', rim: { color: 'rgba(150,200,255,0.9)', dx: 7, a: 0.7 } });
+    char(ctx, t, 'M10', 540, 860, 3400 * (1 + E.in(u) * 0.12), { id: 'hk', blink: false, anchor: [0.58, 0.36], tint: 'rgba(20,30,90,0.08)', rim: { color: 'rgba(150,200,255,0.9)', dx: 7, a: 0.7 },
+      // the shock: a snap back with her chin up, an overshoot, a small shake as it lands
+      pose: (tt) => ({ pitch: PP.kf(tt, [[hk[3], 0], [hk[3] + 0.12, -0.9, E.out], [hk[3] + 0.4, -0.55, E.outBack], [hk[4], -0.5]]), tilt: PP.kf(tt, [[hk[3], 0], [hk[3] + 0.12, -0.06, E.out], [hk[4], -0.035]]), yaw: 0.25 * Math.sin((tt - hk[3]) * 40) * Math.exp(-(tt - hk[3]) * 6) * (tt > hk[3] ? 1 : 0) }) });
   });
 
   // ---------------------------------------------------------------- 1. "Six days left." Then the whole day passes in her room
@@ -178,7 +182,8 @@
       ctx.globalCompositeOperation = day > 0.2 ? 'screen' : 'soft-light'; ctx.fillStyle = gr; ctx.fillRect(w0x, w0y, w1x - w0x, w1y - w0y);
     });
     const p = POSES[Math.min(POSES.length - 1, Math.floor(k * POSES.length))];
-    if (p[3]) char(ctx, t, 'M2', p[0], p[1], 1250, { rot: p[2], rim: { color: `rgba(${rgb.join(',')},0.9)`, dx: -5, a: 0.6 } });
+    const pi = Math.min(POSES.length - 1, Math.floor(k * POSES.length)), LOOK = [[0.4, 0.04, 0.3], [-0.5, -0.05, -0.2], [0.2, 0.06, 0.5], [-0.3, -0.03, -0.4], [0.55, 0.05, 0.1], [0, 0, 0]][pi];
+    if (p[3]) char(ctx, t, 'M2', p[0], p[1], 1250, { rot: p[2], rim: { color: `rgba(${rgb.join(',')},0.9)`, dx: -5, a: 0.6 }, pose: { yaw: LOOK[0], tilt: LOOK[1], pitch: LOOK[2] } });
     PP.with(ctx, () => {
       ctx.globalCompositeOperation = 'soft-light'; ctx.fillStyle = `rgba(${rgb.join(',')},0.5)`; ctx.fillRect(0, 0, W, H);
       ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(255,236,205,${day * 0.32})`; ctx.fillRect(0, 0, W, H);
@@ -194,7 +199,8 @@
   shot(C.street, timeCut, 'dusk', (ctx, t, u) => {
     street(ctx, t, lerpCam(u, { x: 0.52, y: 0.5, z: 1.0 }, { x: 0.5, y: 0.52, z: 1.1 }), { lampsOn: (t - C.street) / 0.9 });
     const walk = E.out(PP.clamp(u * 1.2));
-    char(ctx, t, 'M8', -150 + walk * 560, 2000 + Math.abs(Math.sin(t * 7)) * -14 * (1 - walk), 1500, { rim: { ...DUSK_RIM, dx: 5, dy: -3 }, breath: Math.sin(t * 9) * 0.006 * (1 - walk) });
+    char(ctx, t, 'M8', -150 + walk * 560, 2000 + Math.abs(Math.sin(t * 7)) * -14 * (1 - walk), 1500, { rim: { ...DUSK_RIM, dx: 5, dy: -3 }, breath: Math.sin(t * 9) * 0.006 * (1 - walk),
+      pose: (tt) => { const w = E.out(PP.clamp((tt - C.street) / (timeCut - C.street) * 1.2)); return { pitch: 0.18 * Math.sin(tt * 14) * (1 - w) - 0.15 * w, yaw: PP.kf(tt, [[C.street, -0.6], [C.street + 0.9, -0.6], [C.street + 1.4, 0.35, E.outBack], [timeCut, 0.2]]), tilt: 0.03 * Math.sin(tt * 7) * (1 - w), lean: 0.02 * (1 - w) }; } });
   }, 'dissolve');
   shot(timeCut, thereCut, 'dusk', (ctx, t, u) => {
     K.F.noSubs = true;
@@ -206,7 +212,8 @@
   shot(thereCut, line('k1').s - 0.1, 'dusk', (ctx, t, u) => {
     street(ctx, t, { x: 0.38, y: 0.42, z: 1.5 }, { variant: 'blur', lampsOn: 2 });
     const turn = E.inOut(PP.clamp(u * 1.3));
-    char(ctx, t, 'K4', PP.lerp(640, 560, turn), 900, 2200 * (1 + u * 0.06), { anchor: [0.53, 0.42], rot: PP.lerp(-0.06, 0, turn), light: WARM, rim: { ...DUSK_RIM, dx: -7 } });
+    char(ctx, t, 'K4', PP.lerp(640, 560, turn), 900, 2200 * (1 + u * 0.06), { anchor: [0.53, 0.42], rot: PP.lerp(-0.06, 0, turn), light: WARM, rim: { ...DUSK_RIM, dx: -7 },
+      pose: (tt) => { const a = thereCut, b = line('k1').s - 0.1, m = (a + b) / 2; return { yaw: PP.kf(tt, [[a, -0.95], [a + 0.25, -1.05, E.inOut], [m, 0.12, E.out], [m + 0.3, 0, E.inOut]]), pitch: PP.kf(tt, [[a, 0.1], [a + 0.25, 0.2], [m, -0.25, E.out], [b, -0.1]]), tilt: PP.kf(tt, [[a, 0.03], [m, -0.04, E.outBack], [b, 0]]) }; } });
     PP.flare(ctx, 160, 420, 0.4 * (1 - u));
   });
 
@@ -216,7 +223,8 @@
     street(ctx, t, { x: 0.38, y: 0.42, z: 1.5 }, { variant: 'blur', lampsOn: 2 });
     // a surprised lift of the head on "Hey", a tilt as he places her
     const lift = Math.sin(tl(t, line('k1').s - 0.05, line('k1').s + 0.5) * Math.PI) * -14, tilt = 0.04 * tl(t, word('k1', 'crosswalk') - 0.3, word('k1', 'crosswalk') + 0.4);
-    char(ctx, t, 'K4', 600, 900 + lift, 2150 * (1 + u * 0.03), { id: 'k1', anchor: [0.53, 0.42], rot: tilt, talk: true, light: WARM, rim: { ...DUSK_RIM, dx: -7 } });
+    char(ctx, t, 'K4', 600, 900 + lift, 2150 * (1 + u * 0.03), { id: 'k1', anchor: [0.53, 0.42], rot: tilt, talk: true, light: WARM, rim: { ...DUSK_RIM, dx: -7 },
+      pose: (tt) => ({ pitch: PP.kf(tt, [[line('k1').s - 0.1, 0], [line('k1').s + 0.15, -0.45, E.out], [line('k1').s + 0.7, -0.1, E.inOut]]), yaw: PP.kf(tt, [[line('k1').s - 0.1, 0.05], [word('k1', 'crosswalk') - 0.3, 0.18], [word('k1', 'crosswalk') + 0.3, -0.12, E.outBack], [line('n3').s, -0.05]]), tilt: PP.kf(tt, [[word('k1', 'crosswalk') - 0.3, 0], [word('k1', 'crosswalk') + 0.2, 0.06, E.outBack], [line('n3').s, 0.03]]) }) });
     foreground(ctx, 'M8', -200 + Math.sin(t * 1.3) * 10, 2300, 2500, { blur: 20, bright: 0.45 });
   });
   shot(line('n3').s - 0.1, butCut, 'dusk', (ctx, t, u) => {

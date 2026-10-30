@@ -15,14 +15,30 @@
 
     // a character, lit by the scene: breathing, blinking, a soft shadow and a rim of the key light; `talk` lip-syncs
     function char(ctx, t, name, x, y, h, o = {}) {
+      // with the rig on, the drawing changes on twos (12 a second) like cel animation; the camera stays smooth
+      const rigOn = PP.RIG && PP.rigImage && o.rig !== false && PP.FACES[name]?.eyes?.length >= 2;
+      const tc = t;
+      if (rigOn) t = PP.twos(t);
       let state = o.blink !== false && PP.blinking(t, name + (o.id || '')) && PP.FACES[name]?.eyes?.length ? 'b' : '';
-      if (o.talk) { const env = ENV[o.talk === true ? 'live' : o.talk] || [], fr = Math.round(t * 30), v = Math.max(env[fr] || 0, env[fr - 1] || 0); state += v > 0.45 ? 'm2' : v > 0.12 ? 'm1' : ''; }
+      if (o.talk) {
+        const env = ENV[o.talk === true ? 'live' : o.talk] || [], fr = Math.round(t * 30), v = Math.max(env[fr] || 0, env[fr - 1] || 0, rigOn ? env[fr + 1] || 0 : 0);
+        state += v > 0.45 ? 'm2' : v > 0.12 ? 'm1' : '';
+        if (rigOn && v > 0.12) state += PP.vowelAt(T, tc) || '';
+      }
+      if (rigOn) {
+        const seed = name + (o.id || ''), extra = o.pose;
+        // a speaker's head moves with the voice: small lifts on stressed syllables, settling between phrases
+        const env = o.talk ? ENV[o.talk === true ? 'live' : o.talk] || [] : null;
+        const speak = (tt) => { if (!env) return 0; let a = 0; for (let k = -5; k <= 0; k++) a += env[Math.round(tt * 30) + k] || 0; return a / 6; };
+        const poseFn = (tt) => { const e = typeof extra === 'function' ? extra(tt) || {} : extra || {}, v = speak(tt); return env ? { ...e, pitch: (e.pitch || 0) - 0.28 * v, tilt: (e.tilt || 0) + 0.02 * v } : e; };
+        o = { ...o, rig: { t, poseAt: (tt) => PP.rigPose(tt, seed, poseFn) } };
+      }
       // a face expression for this moment: 'h' happy eyes, 's' soft smile, 'w' worried mouth, 't' teary shine
       // (a string, or a function of time); a moving mouth always wins over a quiet one
       const face = typeof o.face === 'function' ? o.face(t) : o.face || '';
       if (face.includes('h')) state = state.replace('b', '');
       if (PP.FACES[name]) state += /m\d/.test(state) ? face.replace(/[sw]/g, '') : face;
-      const breath = o.breath ?? Math.sin(t * 1.5 + name.length) * 0.005;
+      const breath = rigOn ? 0 : o.breath ?? Math.sin(t * 1.5 + name.length) * 0.005;
       PP.drawCut(ctx, name, x, y, h, { sticker: false, shadow: { a: 0.3, dx: 18, dy: 26 }, ...o, state, breath });
     }
     const onCut = (name, x, y, h, [ax, ay], u, v) => { const im = PP.IMG[name], s = h / im.height; return [x + (u - ax) * im.width * s, y + (v - ay) * im.height * s, s]; };

@@ -69,17 +69,23 @@
         else { cc.moveTo(x - w * 0.42, y + w * 0.14); cc.quadraticCurveTo(x, y - w * 0.18, x + w * 0.42, y + w * 0.14); }
         cc.stroke();
       }
-      const m = state.match(/m(\d)/);
+      const m = state.match(/m(\d)([AEIO]?)/);
       if (m && f.mouth) {
         const [mx, my, mw, mh] = f.mouth, x = mx * W, y = my * H, w = mw * W, h = Math.max(mh * H, w * 0.3);
         cc.fillStyle = skin;
-        cc.beginPath(); cc.ellipse(x, y, w * 0.72, h * 1.1, 0, 0, Math.PI * 2); cc.fill();
+        cc.beginPath(); cc.ellipse(x, y, w * 0.78, h * 1.25, 0, 0, Math.PI * 2); cc.fill();
         const open = m[1] === '1' ? 0.35 : 0.7;
-        const rw = w * (0.32 + open * 0.12), rh = w * 0.1 + open * w * 0.32;
+        // the vowel shapes the mouth: A tall, E and I wide with the top teeth showing, O small and round
+        const SH = { A: [1, 1.15, 0], E: [1.2, 0.72, 1], I: [1.32, 0.5, 1], O: [0.68, 0.95, 0], '': [1, 1, 0] }[m[2] || ''];
+        const rw = w * (0.32 + open * 0.12) * SH[0], rh = (w * 0.1 + open * w * 0.32) * SH[1];
+        const cy = y + rh * 0.2;
         cc.fillStyle = '#7c2a33'; cc.strokeStyle = LINE; cc.lineWidth = W * 0.005;
-        cc.beginPath(); cc.ellipse(x, y + rh * 0.2, rw, rh, 0, 0, Math.PI * 2); cc.fill();
-        cc.save(); cc.clip(); cc.fillStyle = '#e27b82'; cc.beginPath(); cc.ellipse(x, y + rh * 1.05, rw * 0.8, rh * 0.6, 0, 0, Math.PI * 2); cc.fill(); cc.restore();
-        cc.beginPath(); cc.ellipse(x, y + rh * 0.2, rw, rh, 0, 0, Math.PI * 2); cc.stroke();
+        cc.beginPath(); cc.ellipse(x, cy, rw, rh, 0, 0, Math.PI * 2); cc.fill();
+        cc.save(); cc.clip();
+        cc.fillStyle = '#e27b82'; cc.beginPath(); cc.ellipse(x, cy + rh * 0.85, rw * 0.8, rh * 0.6, 0, 0, Math.PI * 2); cc.fill();
+        if (SH[2]) { cc.fillStyle = '#fbf6ef'; cc.fillRect(x - rw, cy - rh, rw * 2, rh * 0.55); }
+        cc.restore();
+        cc.beginPath(); cc.ellipse(x, cy, rw, rh, 0, 0, Math.PI * 2); cc.stroke();
       }
       return c;
     });
@@ -141,12 +147,16 @@
     const im = PP.IMG[name];
     const s = h / im.height;
     const [ax, ay] = o.anchor || [0.5, 1];
-    const src = st ? st.canvas : o.state ? faceImage(name, o.state) : im, pad = st ? st.pad : 0;
+    const face = o.state ? faceImage(name, o.state) : im;
+    // the rig: the face drawing warped into this frame's pose (see rig.js)
+    const wp = !st && o.rig && PP.rigImage ? PP.rigImage(name, face, o.state || '', o.rig.poseAt, o.rig.t) : null;
+    const src = wp ? wp.canvas : st ? st.canvas : face, pad = wp ? wp.pad : st ? st.pad : 0;
     let img = src;
     if (o.tint || o.light) {
       // lighting on the cut-out only: tint and a key light, applied source-atop on a scratch copy
       const key = `lit:${name}:${o.state || ''}:${JSON.stringify(o.tint)}:${JSON.stringify(o.light)}:${!!st}`;
-      img = PP.sprite(key, () => {
+      const make = (fn) => (wp ? (wp.lit = wp.lit || {})[key] || (wp.lit[key] = fn()) : PP.sprite(key, fn));
+      img = make(() => {
         const c = PP.canvas(src.width, src.height), cc = c.getContext('2d');
         cc.drawImage(src, 0, 0);
         cc.globalCompositeOperation = 'source-atop';
@@ -170,8 +180,8 @@
       if (o.breath) { ctx.translate(0, (1 - ay) * im.height); ctx.scale(1, 1 + o.breath); ctx.translate(0, -(1 - ay) * im.height); }
       const ox = -pad - ax * im.width, oy = -pad - ay * im.height;
       // integration without a sticker border: a soft cast shadow and a rim of the scene's light along one edge
-      if (o.shadow) { const sh = shadowOf(name); PP.with(ctx, () => { ctx.globalAlpha *= o.shadow.a ?? 0.35; ctx.drawImage(sh, ox - 60 + (o.shadow.dx ?? 20) / s, oy - 60 + (o.shadow.dy ?? 30) / s); }); }
-      if (o.rim) { const sl = silhouette(name, o.rim.color); PP.with(ctx, () => { ctx.globalAlpha *= o.rim.a ?? 0.8; ctx.drawImage(sl, ox + (o.rim.dx ?? 0) / s, oy + (o.rim.dy ?? 0) / s); }); }
+      if (o.shadow) { const sh = wp ? wp.shadow() : shadowOf(name), sp = wp ? 0 : 60; PP.with(ctx, () => { ctx.globalAlpha *= o.shadow.a ?? 0.35; ctx.drawImage(sh, ox - sp + (o.shadow.dx ?? 20) / s, oy - sp + (o.shadow.dy ?? 30) / s); }); }
+      if (o.rim) { const sl = wp ? wp.sil(o.rim.color) : silhouette(name, o.rim.color); PP.with(ctx, () => { ctx.globalAlpha *= o.rim.a ?? 0.8; ctx.drawImage(sl, ox + (o.rim.dx ?? 0) / s, oy + (o.rim.dy ?? 0) / s); }); }
       if (o.sway) {
         // hair and cloth in the wind: vertical strips displaced by a travelling wave, weighted away from the face
         const { amp, t, from = 0, to = 0.4, speed = 5 } = o.sway, sw = 6, W2 = img.width;
