@@ -1,84 +1,54 @@
 {
- "duration": 6.687375,
+ "duration": 4.2260625,
  "language": "English",
  "language_code": "en",
- "request_id": "301dffc0-87ab-4777-bc84-30ee4ba1571a",
+ "request_id": "94671da2-cefe-4615-b621-70e2ecb3544d",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0.08,
-   "text": "The"
+   "end": 0.24,
+   "start": 0,
+   "text": "Then"
   },
   {
-   "end": 0.64,
-   "start": 0.16,
-   "text": "doors"
+   "end": 0.32,
+   "start": 0.24,
+   "text": "the"
   },
   {
-   "end": 1.44,
-   "start": 0.64,
-   "text": "closed"
+   "end": 0.88,
+   "start": 0.32,
+   "text": "6"
+  },
+  {
+   "end": 1.28,
+   "start": 0.96,
+   "text": "40"
+  },
+  {
+   "end": 1.68,
+   "start": 1.36,
+   "text": "pulled"
   },
   {
    "end": 2.08,
-   "start": 2,
-   "text": "The"
+   "start": 1.68,
+   "text": "in"
   },
   {
-   "end": 2.56,
-   "start": 2.08,
-   "text": "train"
+   "end": 3.04,
+   "start": 2.72,
+   "text": "right"
   },
   {
-   "end": 2.88,
-   "start": 2.56,
-   "text": "left"
+   "end": 3.28,
+   "start": 3.04,
+   "text": "on"
   },
   {
-   "end": 3.36,
-   "start": 2.88,
-   "text": "without"
-  },
-  {
-   "end": 3.68,
-   "start": 3.36,
-   "text": "him"
-  },
-  {
-   "end": 4.48,
-   "start": 4.32,
-   "text": "I"
-  },
-  {
-   "end": 4.88,
-   "start": 4.48,
-   "text": "didn't"
-  },
-  {
-   "end": 5.12,
-   "start": 4.88,
-   "text": "let"
-  },
-  {
-   "end": 5.36,
-   "start": 5.12,
-   "text": "go"
-  },
-  {
-   "end": 5.52,
-   "start": 5.36,
-   "text": "of"
-  },
-  {
-   "end": 5.76,
-   "start": 5.52,
-   "text": "his"
-  },
-  {
-   "end": 6.24,
-   "start": 5.76,
-   "text": "hand"
+   "end": 3.84,
+   "start": 3.28,
+   "text": "time"
   }
  ],
- "text": "The doors closed. The train left without him. I didn't let go of his hand."
+ "text": "Then the 6:40 pulled in, right on time."
 }

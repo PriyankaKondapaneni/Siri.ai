@@ -1,49 +1,59 @@
 {
- "duration": 3.7616875,
+ "duration": 5.4335,
  "language": "English",
  "language_code": "en",
- "request_id": "ec3dad3a-9daa-4a96-a83a-90a5486dfa45",
+ "request_id": "34e0e977-5130-44a8-8da3-67efbd9e4156",
  "segments": [
   {
-   "end": 0.56,
-   "start": 0.08,
-   "text": "Mira"
+   "end": 0.8,
+   "start": 0.4,
+   "text": "Okay"
   },
   {
-   "end": 1.92,
-   "start": 1.68,
-   "text": "why"
+   "end": 1.84,
+   "start": 1.6,
+   "text": "That's"
   },
   {
-   "end": 2.08,
+   "end": 2.4,
    "start": 1.92,
-   "text": "is"
-  },
-  {
-   "end": 2.24,
-   "start": 2.08,
-   "text": "your"
-  },
-  {
-   "end": 2.64,
-   "start": 2.24,
-   "text": "voice"
+   "text": "twice"
   },
   {
    "end": 2.8,
-   "start": 2.64,
+   "start": 2.4,
+   "text": "now"
+  },
+  {
+   "end": 3.68,
+   "start": 3.68,
+   "text": "Are"
+  },
+  {
+   "end": 3.84,
+   "start": 3.68,
+   "text": "you"
+  },
+  {
+   "end": 4.24,
+   "start": 3.84,
+   "text": "doing"
+  },
+  {
+   "end": 4.4,
+   "start": 4.24,
+   "text": "this"
+  },
+  {
+   "end": 4.56,
+   "start": 4.4,
    "text": "on"
   },
   {
-   "end": 2.96,
-   "start": 2.8,
-   "text": "my"
-  },
-  {
-   "end": 3.52,
-   "start": 2.96,
-   "text": "phone"
+   "end": 5.2,
+   "start": 4.56,
+   "text": "purpose"
   }
  ],
- "text": "Mira, why is your voice on my phone?"
+ "text": "Okay. That's twice now. Are you doing this on purpose?"
 }

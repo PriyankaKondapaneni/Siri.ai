@@ -1,84 +1,49 @@
 {
- "duration": 5.1084375,
+ "duration": 3.8545625,
  "language": "English",
  "language_code": "en",
- "request_id": "1db389d7-86e4-409d-bb90-fbcafd66098b",
+ "request_id": "787e57fc-8c18-4e54-91b5-8c8dd4d87790",
  "segments": [
   {
-   "end": 0.24,
+   "end": 0.16,
    "start": 0,
-   "text": "He"
+   "text": "I"
   },
   {
-   "end": 0.56,
-   "start": 0.24,
-   "text": "told"
+   "end": 0.48,
+   "start": 0.16,
+   "text": "didn't"
   },
   {
-   "end": 0.72,
-   "start": 0.56,
-   "text": "me"
+   "end": 0.96,
+   "start": 0.48,
+   "text": "sleep"
   },
   {
-   "end": 1.12,
-   "start": 0.72,
-   "text": "not"
-  },
-  {
-   "end": 1.28,
-   "start": 1.2,
-   "text": "to"
-  },
-  {
-   "end": 1.6,
-   "start": 1.28,
-   "text": "let"
-  },
-  {
-   "end": 1.76,
-   "start": 1.6,
-   "text": "him"
-  },
-  {
-   "end": 2,
+   "end": 1.92,
    "start": 1.76,
-   "text": "get"
+   "text": "I"
   },
   {
    "end": 2.16,
-   "start": 2,
-   "text": "on"
+   "start": 1.92,
+   "text": "set"
   },
   {
    "end": 2.24,
    "start": 2.16,
-   "text": "the"
+   "text": "an"
   },
   {
-   "end": 2.8,
+   "end": 2.72,
    "start": 2.24,
-   "text": "train"
+   "text": "alarm"
   },
   {
-   "end": 3.6,
-   "start": 3.36,
-   "text": "so"
-  },
-  {
-   "end": 3.68,
-   "start": 3.6,
-   "text": "I"
-  },
-  {
-   "end": 4.08,
-   "start": 3.68,
-   "text": "didn't"
-  },
-  {
-   "end": 4.64,
-   "start": 4.08,
-   "text": "sleep"
+   "end": 3.44,
+   "start": 2.72,
+   "text": "anyway"
   }
  ],
- "text": "He told me not to let him get on the train, so I didn't sleep."
+ "text": "I didn't sleep. I set an alarm anyway."
 }

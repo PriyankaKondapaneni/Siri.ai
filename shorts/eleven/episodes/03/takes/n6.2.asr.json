@@ -1,64 +1,49 @@
 {
- "duration": 5.154875,
+ "duration": 4.2260625,
  "language": "English",
  "language_code": "en",
- "request_id": "e509a553-86c9-4a3a-9939-13974a88706f",
+ "request_id": "65e1377e-bd53-4e27-ab5a-c200d911ee4a",
  "segments": [
   {
-   "end": 0.24,
+   "end": 0.16,
    "start": 0.08,
    "text": "The"
   },
   {
-   "end": 0.72,
-   "start": 0.24,
-   "text": "6"
+   "end": 0.64,
+   "start": 0.16,
+   "text": "doors"
   },
   {
-   "end": 1.12,
-   "start": 0.72,
-   "text": "40"
+   "end": 1.36,
+   "start": 0.64,
+   "text": "closed"
   },
   {
-   "end": 1.76,
-   "start": 1.12,
+   "end": 2,
+   "start": 1.92,
+   "text": "The"
+  },
+  {
+   "end": 2.56,
+   "start": 2,
    "text": "train"
   },
   {
-   "end": 2.88,
-   "start": 2.4,
-   "text": "never"
-  },
-  {
-   "end": 3.2,
-   "start": 2.88,
-   "text": "made"
+   "end": 2.96,
+   "start": 2.56,
+   "text": "left"
   },
   {
    "end": 3.36,
-   "start": 3.2,
-   "text": "it"
+   "start": 2.96,
+   "text": "without"
   },
   {
-   "end": 3.52,
-   "start": 3.44,
-   "text": "to"
-  },
-  {
-   "end": 3.6,
-   "start": 3.52,
-   "text": "the"
-  },
-  {
-   "end": 4,
-   "start": 3.6,
-   "text": "next"
-  },
-  {
-   "end": 4.72,
-   "start": 4,
-   "text": "station"
+   "end": 3.76,
+   "start": 3.36,
+   "text": "him"
   }
  ],
- "text": "The 6:40 train never made it to the next station."
+ "text": "The doors closed. The train left without him."
 }

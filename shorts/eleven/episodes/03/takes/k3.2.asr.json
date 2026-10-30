@@ -1,29 +1,39 @@
 {
- "duration": 2.6935625,
+ "duration": 3.018625,
  "language": "English",
  "language_code": "en",
- "request_id": "8451f974-11ab-40fc-be07-5abaffbdcd8f",
+ "request_id": "134263a1-b21b-4c03-88e4-6a2eeca7048d",
  "segments": [
   {
-   "end": 0.24,
+   "end": 0.4,
    "start": 0.08,
-   "text": "You"
+   "text": "That's"
   },
   {
    "end": 0.8,
-   "start": 0.24,
-   "text": "knew"
+   "start": 0.4,
+   "text": "me"
+  },
+  {
+   "end": 2,
+   "start": 1.76,
+   "text": "Thanks"
   },
   {
    "end": 2.08,
-   "start": 1.76,
-   "text": "didn't"
+   "start": 2,
+   "text": "for"
   },
   {
-   "end": 2.4,
+   "end": 2.24,
    "start": 2.08,
-   "text": "you"
+   "text": "the"
+  },
+  {
+   "end": 2.8,
+   "start": 2.24,
+   "text": "coffee"
   }
  ],
- "text": "You knew, didn't you?"
+ "text": "That's me. Thanks for the coffee."
 }

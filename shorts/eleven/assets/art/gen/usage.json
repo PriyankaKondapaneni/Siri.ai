@@ -856,5 +856,31 @@
    "text_tokens": 0
   },
   "total_tokens": 4327
+ },
+ "v2:K12": {
+  "input_tokens": 2747,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 314
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4119
+ },
+ "v2:M12": {
+  "input_tokens": 2749,
+  "input_tokens_details": {
+   "image_tokens": 2433,
+   "text_tokens": 316
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 4121
  }
 }

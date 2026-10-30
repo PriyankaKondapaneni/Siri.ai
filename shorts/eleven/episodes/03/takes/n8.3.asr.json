@@ -1,69 +1,59 @@
 {
- "duration": 5.6656875,
+ "duration": 3.808125,
  "language": "English",
  "language_code": "en",
- "request_id": "8c2eb774-8e4c-4a5f-968e-9ab66805ec8a",
+ "request_id": "b13807e2-4bd6-4b8b-8d8c-45cd8bfa3f77",
  "segments": [
   {
-   "end": 0.4,
+   "end": 0.16,
    "start": 0,
-   "text": "That"
+   "text": "The"
   },
   {
-   "end": 0.8,
-   "start": 0.4,
-   "text": "night"
+   "end": 0.64,
+   "start": 0.16,
+   "text": "6"
   },
   {
-   "end": 1.28,
-   "start": 1.12,
-   "text": "at"
+   "end": 1.2,
+   "start": 0.64,
+   "text": "40"
   },
   {
-   "end": 1.76,
-   "start": 1.28,
-   "text": "11"
+   "end": 1.52,
+   "start": 1.2,
+   "text": "never"
   },
   {
-   "end": 2.4,
-   "start": 1.76,
-   "text": "11"
+   "end": 1.84,
+   "start": 1.52,
+   "text": "made"
   },
   {
-   "end": 3.28,
-   "start": 2.96,
+   "end": 2,
+   "start": 1.84,
    "text": "it"
   },
   {
-   "end": 3.68,
-   "start": 3.28,
-   "text": "wasn't"
+   "end": 2.16,
+   "start": 2.08,
+   "text": "to"
   },
   {
-   "end": 3.84,
-   "start": 3.68,
-   "text": "my"
+   "end": 2.24,
+   "start": 2.16,
+   "text": "the"
   },
   {
-   "end": 4.32,
-   "start": 3.84,
-   "text": "phone"
+   "end": 2.64,
+   "start": 2.24,
+   "text": "next"
   },
   {
-   "end": 4.48,
-   "start": 4.32,
-   "text": "that"
-  },
-  {
-   "end": 4.72,
-   "start": 4.48,
-   "text": "lit"
-  },
-  {
-   "end": 5.04,
-   "start": 4.72,
-   "text": "up"
+   "end": 3.44,
+   "start": 2.64,
+   "text": "station"
   }
  ],
- "text": "That night, at 11:11, it wasn't my phone that lit up."
+ "text": "The 6:40 never made it to the next station."
 }

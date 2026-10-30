@@ -1,39 +1,39 @@
 {
- "duration": 2.6006875,
+ "duration": 3.29725,
  "language": "English",
  "language_code": "en",
- "request_id": "b0f18a31-52b7-4f93-a3b9-265cceae767c",
+ "request_id": "04d72e1e-e8f0-4603-8752-2b92bdcf81fa",
  "segments": [
   {
    "end": 0.64,
-   "start": 0.08,
+   "start": 0,
    "text": "Mira"
   },
   {
-   "end": 1.44,
-   "start": 1.28,
-   "text": "what"
+   "end": 1.76,
+   "start": 1.68,
+   "text": "Do"
   },
   {
-   "end": 1.44,
-   "start": 1.44,
-   "text": "are"
-  },
-  {
-   "end": 1.6,
-   "start": 1.44,
+   "end": 1.92,
+   "start": 1.76,
    "text": "you"
   },
   {
-   "end": 2,
-   "start": 1.6,
-   "text": "doing"
+   "end": 2.16,
+   "start": 1.92,
+   "text": "live"
   },
   {
-   "end": 2.4,
-   "start": 2,
+   "end": 2.56,
+   "start": 2.16,
+   "text": "around"
+  },
+  {
+   "end": 2.88,
+   "start": 2.56,
    "text": "here"
   }
  ],
- "text": "Mira, what are you doing here?"
+ "text": "Mira? Do you live around here?"
 }

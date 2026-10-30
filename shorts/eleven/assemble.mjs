@@ -57,7 +57,9 @@ S.lines.forEach((l, li) => {
   const lastWord = segs.at(-1);
   if (l.to == null) lastWord.end = Math.max(lastWord.end, voiceEnd(x, lastWord.start));
   // the clip: from just before the first word to just after the last, pauses tightened
-  const a = Math.max(0, segs[0].start - 0.07), z = Math.min(x.length / RATE, lastWord.end + 0.16);
+  // a hook cut short stops before the next word of its take starts
+  const all = JSON.parse(fs.readFileSync(`${dir}/takes/${src}.${k}.asr.json`, 'utf8')).segments, next = l.to != null ? all[l.to] : null;
+  const a = Math.max(0, segs[0].start - 0.07), z = Math.min(x.length / RATE, lastWord.end + 0.16, next ? next.start / TEMPO - 0.015 : Infinity);
   const cap = CAP[l.id] ?? CAP.default;
   const cuts = [];
   for (let i = 1; i < segs.length; i++) {
@@ -68,14 +70,15 @@ S.lines.forEach((l, li) => {
   const pieces = []; let last = a;
   for (const [c0, c1] of cuts) { pieces.push([last, c0]); last = c1; }
   pieces.push([last, z]);
-  const fade = Math.round(0.006 * RATE);
+  const fade = Math.round(0.006 * RATE), tailFade = l.to != null ? Math.round(0.06 * RATE) : fade;
   const clip = [];
   pieces.forEach(([p0, p1], pi) => {
     const i0 = Math.round(p0 * RATE), i1 = Math.round(p1 * RATE);
     for (let i = i0; i < i1; i++) {
       let gn = 1;
       if (i - i0 < fade) gn = (i - i0) / fade;
-      if (i1 - i < fade) gn = Math.min(gn, (i1 - i) / fade);
+      const fo = pi === pieces.length - 1 ? tailFade : fade;
+      if (i1 - i < fo) gn = Math.min(gn, (i1 - i) / fo);
       if (pi === 0 && i - i0 < Math.round(0.02 * RATE)) gn = Math.min(gn, (i - i0) / Math.round(0.02 * RATE));
       clip.push(x[i] * gn);
     }

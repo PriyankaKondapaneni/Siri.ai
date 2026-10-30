@@ -1,59 +1,49 @@
 {
- "duration": 6.1765625,
+ "duration": 3.0650625,
  "language": "English",
  "language_code": "en",
- "request_id": "0bda341f-219d-4e61-8ca2-247758c331d5",
+ "request_id": "4344d657-faa1-4175-8ed2-9f3f22d0f778",
  "segments": [
   {
-   "end": 1.84,
+   "end": 1.04,
+   "start": 0.88,
+   "text": "You"
+  },
+  {
+   "end": 1.28,
+   "start": 1.04,
+   "text": "don't"
+  },
+  {
+   "end": 1.6,
    "start": 1.28,
-   "text": "Okay"
+   "text": "even"
   },
   {
-   "end": 2.72,
-   "start": 2.4,
-   "text": "that's"
+   "end": 1.84,
+   "start": 1.6,
+   "text": "know"
   },
   {
-   "end": 3.36,
-   "start": 2.8,
-   "text": "twice"
+   "end": 2.08,
+   "start": 1.84,
+   "text": "how"
   },
   {
-   "end": 3.68,
-   "start": 3.36,
-   "text": "now"
+   "end": 2.24,
+   "start": 2.08,
+   "text": "I"
   },
   {
-   "end": 4.48,
-   "start": 4.4,
-   "text": "Are"
+   "end": 2.56,
+   "start": 2.24,
+   "text": "take"
   },
   {
-   "end": 4.64,
-   "start": 4.48,
-   "text": "you"
-  },
-  {
-   "end": 5.04,
-   "start": 4.64,
-   "text": "doing"
-  },
-  {
-   "end": 5.2,
-   "start": 5.04,
-   "text": "this"
-  },
-  {
-   "end": 5.36,
-   "start": 5.2,
-   "text": "on"
-  },
-  {
-   "end": 6.08,
-   "start": 5.36,
-   "text": "purpose"
+   "end": 2.88,
+   "start": 2.56,
+   "text": "it"
   }
  ],
- "text": "Okay, that's twice now. Are you doing this on purpose?"
+ "text": "You don't even know how I take it."
 }

@@ -1,49 +1,79 @@
 {
- "duration": 3.901,
+ "duration": 5.805,
  "language": "English",
  "language_code": "en",
- "request_id": "4b708d91-2459-4f77-aac1-6da790a9ca9e",
+ "request_id": "8b37e976-757d-4702-918f-f64e1f75f37a",
  "segments": [
   {
    "end": 0.32,
    "start": 0,
-   "text": "6"
+   "text": "5"
   },
   {
-   "end": 0.8,
+   "end": 0.96,
    "start": 0.32,
-   "text": "30"
+   "text": "40"
   },
   {
    "end": 1.52,
-   "start": 0.96,
-   "text": "platform"
+   "start": 1.44,
+   "text": "I"
   },
   {
-   "end": 1.92,
+   "end": 1.84,
    "start": 1.52,
-   "text": "4"
+   "text": "bought"
   },
   {
-   "end": 2.32,
-   "start": 2.24,
-   "text": "He"
-  },
-  {
-   "end": 2.48,
-   "start": 2.32,
-   "text": "was"
+   "end": 2.24,
+   "start": 1.92,
+   "text": "two"
   },
   {
    "end": 2.96,
-   "start": 2.48,
-   "text": "already"
+   "start": 2.24,
+   "text": "coffees"
+  },
+  {
+   "end": 3.36,
+   "start": 3.04,
+   "text": "because"
   },
   {
    "end": 3.52,
-   "start": 2.96,
-   "text": "there"
+   "start": 3.36,
+   "text": "I"
+  },
+  {
+   "end": 3.84,
+   "start": 3.52,
+   "text": "didn't"
+  },
+  {
+   "end": 4.08,
+   "start": 3.84,
+   "text": "know"
+  },
+  {
+   "end": 4.24,
+   "start": 4.08,
+   "text": "how"
+  },
+  {
+   "end": 4.4,
+   "start": 4.24,
+   "text": "he"
+  },
+  {
+   "end": 4.8,
+   "start": 4.4,
+   "text": "takes"
+  },
+  {
+   "end": 5.36,
+   "start": 4.8,
+   "text": "his"
   }
  ],
- "text": "6:30, platform 4. He was already there."
+ "text": "5:40. I bought two coffees because I didn't know how he takes his."
 }

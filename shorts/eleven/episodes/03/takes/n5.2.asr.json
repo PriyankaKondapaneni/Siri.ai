@@ -1,64 +1,49 @@
 {
- "duration": 5.6656875,
+ "duration": 3.2508125,
  "language": "English",
  "language_code": "en",
- "request_id": "a9845f78-f9d6-40be-90fe-86ae37f419a3",
+ "request_id": "fae5aab2-6b14-4851-92cb-b3e9b854ac59",
  "segments": [
   {
-   "end": 0.24,
+   "end": 0.16,
    "start": 0.08,
-   "text": "An"
+   "text": "I"
+  },
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "didn't"
   },
   {
    "end": 0.72,
-   "start": 0.32,
-   "text": "hour"
+   "start": 0.56,
+   "text": "have"
   },
   {
-   "end": 1.28,
+   "end": 0.8,
    "start": 0.72,
-   "text": "later"
+   "text": "a"
   },
   {
-   "end": 2.24,
-   "start": 1.76,
-   "text": "every"
+   "end": 1.52,
+   "start": 0.8,
+   "text": "plan"
   },
   {
-   "end": 2.72,
-   "start": 2.24,
-   "text": "phone"
+   "end": 2,
+   "start": 1.68,
+   "text": "so"
+  },
+  {
+   "end": 2.08,
+   "start": 2,
+   "text": "I"
   },
   {
    "end": 2.88,
-   "start": 2.72,
-   "text": "on"
-  },
-  {
-   "end": 2.96,
-   "start": 2.88,
-   "text": "the"
-  },
-  {
-   "end": 3.52,
-   "start": 2.96,
-   "text": "street"
-  },
-  {
-   "end": 4.24,
-   "start": 3.76,
-   "text": "buzzed"
-  },
-  {
-   "end": 4.48,
-   "start": 4.32,
-   "text": "at"
-  },
-  {
-   "end": 5.2,
-   "start": 4.48,
-   "text": "once"
+   "start": 2.08,
+   "text": "tripped"
   }
  ],
- "text": "An hour later, every phone on the street buzzed at once."
+ "text": "I didn't have a plan, so I tripped."
 }

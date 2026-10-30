@@ -380,6 +380,24 @@
    "size": "1536x1024",
    "style": "Draw in exactly the same flat, hand-drawn webtoon style as the FIRST reference image: thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, simple and charming. Match the SECOND reference image exactly in drawing style, colours, line weight and scale. No text, no watermark.",
    "prompt": "Only a young man's left forearm and hand, exactly like the right hand in the SECOND reference image: a charcoal wool coat sleeve over a black turtleneck cuff, a vintage leather-strap wristwatch with a plain cream dial with NO hands and NO numbers, a pale hand with soft rounded fingers outlined in thin black line. The arm enters from the RIGHT edge of the frame and reaches horizontally to the left, palm down, fingers relaxed and slightly extended, fingertips pointing left. Seen from above, the same scale as in the reference. Proper proportions, not a stick arm. IMPORTANT: the background must be completely plain flat light grey, with no scenery, no table and no shadow at all."
+  },
+  "M12": {
+   "refs": [
+    "STYLE",
+    "CM4"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image; use the character, outfit and pose from the SECOND image, keeping the face exactly as it is. Waist-up. On a plain flat light grey background. No text, no watermark.",
+   "prompt": "Mira, the same girl as the second image: same face, long dark wavy hair, coral flower hair clip, warm amber-brown eyes, cornflower-blue dress, chunky red knit scarf, a small shoulder bag. Waist-up, standing, holding out two paper takeaway coffee cups with lids, one in each hand, toward the viewer. A shy, nervous, hopeful expression, eyebrows slightly raised, mouth closed in a small awkward smile, absolutely NOT grinning. IMPORTANT: the background must be completely plain flat light grey, with no scenery at all."
+  },
+  "K12": {
+   "refs": [
+    "STYLE",
+    "CK4"
+   ],
+   "quality": "medium",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image; use the character, outfit and pose from the SECOND image, keeping the face exactly as it is. Waist-up. On a plain flat light grey background. No text, no watermark.",
+   "prompt": "Kabir, the same young man as the second image: same face, messy black hair, dark eyes, charcoal wool coat worn open over a black turtleneck with the sleeves pushed up to the forearms, a vintage leather-strap wristwatch. Sitting on a bench, seen from the knees up, a paperback book open in both hands, reading calmly, head slightly down, a small relaxed expression, mouth closed. A small canvas bag beside him. IMPORTANT: the background must be completely plain flat light grey, with no scenery at all."
   }
  }
 }

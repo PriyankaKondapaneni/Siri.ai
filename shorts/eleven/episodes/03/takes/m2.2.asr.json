@@ -1,0 +1,29 @@
+{
+ "duration": 2.92575,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "c43d3c38-337f-4874-bd3f-cb68514b5941",
+ "segments": [
+  {
+   "end": 1.36,
+   "start": 0.96,
+   "text": "That's"
+  },
+  {
+   "end": 1.6,
+   "start": 1.36,
+   "text": "why"
+  },
+  {
+   "end": 1.92,
+   "start": 1.6,
+   "text": "there's"
+  },
+  {
+   "end": 2.56,
+   "start": 1.92,
+   "text": "two"
+  }
+ ],
+ "text": "That's why there's two."
+}

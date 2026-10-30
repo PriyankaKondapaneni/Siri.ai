@@ -1,0 +1,49 @@
+{
+ "duration": 5.61925,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "91e30f85-51bc-46aa-95c8-79d005fdb305",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0.08,
+   "text": "No"
+  },
+  {
+   "end": 1.68,
+   "start": 1.12,
+   "text": "Yes"
+  },
+  {
+   "end": 2.88,
+   "start": 2.56,
+   "text": "Sort"
+  },
+  {
+   "end": 3.2,
+   "start": 2.88,
+   "text": "of"
+  },
+  {
+   "end": 4.16,
+   "start": 4,
+   "text": "I"
+  },
+  {
+   "end": 4.4,
+   "start": 4.16,
+   "text": "brought"
+  },
+  {
+   "end": 4.48,
+   "start": 4.4,
+   "text": "you"
+  },
+  {
+   "end": 5.2,
+   "start": 4.48,
+   "text": "coffee"
+  }
+ ],
+ "text": "No! Yes! Sort of. I brought you coffee."
+}

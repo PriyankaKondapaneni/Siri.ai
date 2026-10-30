@@ -1,74 +1,39 @@
 {
- "duration": 6.2694375,
+ "duration": 3.8545625,
  "language": "English",
  "language_code": "en",
- "request_id": "a62b153d-02db-4f43-821c-456ca9e61cf4",
+ "request_id": "6485fdf9-61f4-4ead-b981-4c1f4d1d5552",
  "segments": [
   {
-   "end": 0.24,
+   "end": 0.72,
    "start": 0,
-   "text": "I"
+   "text": "Platform"
   },
   {
-   "end": 0.64,
-   "start": 0.24,
-   "text": "didn't"
+   "end": 1.36,
+   "start": 0.72,
+   "text": "four"
   },
   {
-   "end": 0.8,
-   "start": 0.64,
-   "text": "have"
+   "end": 2.16,
+   "start": 1.92,
+   "text": "He"
   },
   {
-   "end": 0.88,
-   "start": 0.8,
-   "text": "a"
-  },
-  {
-   "end": 1.6,
-   "start": 0.88,
-   "text": "plan"
-  },
-  {
-   "end": 2.56,
+   "end": 2.32,
    "start": 2.16,
-   "text": "So"
+   "text": "was"
   },
   {
-   "end": 2.8,
-   "start": 2.64,
-   "text": "I"
+   "end": 2.88,
+   "start": 2.4,
+   "text": "already"
   },
   {
-   "end": 3.28,
-   "start": 2.8,
-   "text": "spilled"
-  },
-  {
-   "end": 3.52,
-   "start": 3.28,
-   "text": "my"
-  },
-  {
-   "end": 4.24,
-   "start": 3.52,
-   "text": "coffee"
-  },
-  {
-   "end": 4.88,
-   "start": 4.48,
-   "text": "all"
-  },
-  {
-   "end": 5.36,
-   "start": 4.96,
-   "text": "over"
-  },
-  {
-   "end": 5.84,
-   "start": 5.36,
-   "text": "him"
+   "end": 3.44,
+   "start": 2.88,
+   "text": "there"
   }
  ],
- "text": "I didn't have a plan. So I spilled my coffee all over him."
+ "text": "Platform four. He was already there."
 }
