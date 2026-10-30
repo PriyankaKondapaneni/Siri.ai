@@ -24,27 +24,45 @@
   const CAFE_RIM = { color: 'rgba(255,205,150,0.95)', a: 0.75 };
 
   // ---------------------------------------------------------------- 0. Cold open: four quick shots
-  const hk = [0, 0.52, 1.02, 1.6, C.hookEnd];
-  shot(hk[0], hk[1], 'danger', (ctx, t, u) => {
+  // Re-cut 30 Oct: open on a bright face (not a dark phone) with the premise in big type from frame one,
+  // so a cold scroller knows the stakes before they can swipe. Then Kabir, the red note, and the train on "train".
+  const hk = [0, 0.6, 1.15, 1.68, C.hookEnd];
+  shot(hk[0], hk[1], 'night', (ctx, t, u) => {
+    PP.drawBg(ctx, 'B1', { x: 0.5, y: 0.45, z: 1.5 }, { variant: 'blur' });
+    char(ctx, t, 'M6', 540, 980, 3500 * (1 + u * 0.08), { id: 'hk', blink: false, anchor: [0.55, 0.35], tint: 'rgba(20,30,90,0.06)', rim: { color: 'rgba(150,200,255,0.9)', dx: 7, a: 0.7 } });
+  });
+  shot(hk[1], hk[2], 'dusk', (ctx, t, u) => {
+    PP.drawBg(ctx, 'B4', { x: 0.4, y: 0.4, z: 1.6 }, { variant: 'blur' });
+    char(ctx, t, 'K3', 540, 1000, 4100 * (1 + u * 0.06), { id: 'hk', blink: false, anchor: [0.52, 0.405], light: { x: 0.1, y: 0.35, r: 0.7, color: 'rgba(255,190,120,0.35)' }, rim: { ...DUSK_RIM, dx: -9 } });
+  });
+  shot(hk[2], hk[3], 'danger', (ctx, t, u) => {
     phoneShot(ctx, t, 'B5', [msg('h0', { urgent: true })], { u, urgent: true, seed: 41, focus: 1.6 + u * 0.15, focusY: 260 });
   });
-  shot(hk[1], hk[2], 'train', (ctx, t, u) => {
+  shot(hk[3], hk[4], 'train', (ctx, t, u) => {
     const [hx, hy, hr] = PP.handheld(t, 8, 43);
     PP.with(ctx, () => {
       ctx.translate(hx, hy); ctx.rotate(hr);
       PP.drawBgDepth(ctx, 'B3', { ...lerpCam(u, { x: 0.5, y: 0.42, z: 1.1 }, { x: 0.5, y: 0.42, z: 1.45 }, E.in), z0: 1 }, { horizon: 0.375, k: 1.6 });
     });
-    const flick = PP.rand('hfl', Math.floor(t * 15)) < 0.3 ? 0.55 : 0.35;
+    const flick = PP.rand('hfl', Math.floor(t * 15)) < 0.3 ? 0.5 : 0.3;
     PP.with(ctx, () => { ctx.fillStyle = `rgba(0,6,10,${flick})`; ctx.fillRect(0, 0, W, H); });
   });
-  shot(hk[2], hk[3], 'dusk', (ctx, t, u) => {
-    PP.drawBg(ctx, 'B4', { x: 0.4, y: 0.4, z: 1.6 }, { variant: 'blur' });
-    char(ctx, t, 'K3', 540, 900, 4300 * (1 + u * 0.06), { id: 'hk', blink: false, anchor: [0.52, 0.405], light: { x: 0.1, y: 0.35, r: 0.7, color: 'rgba(255,190,120,0.35)' }, rim: { ...DUSK_RIM, dx: -9 } });
-  });
-  shot(hk[3], hk[4], 'night', (ctx, t, u) => {
-    PP.drawBg(ctx, 'B1', { x: 0.5, y: 0.45, z: 1.5 }, { variant: 'blur' });
-    char(ctx, t, 'M6', 540, 860, 3600 * (1 + u * 0.06), { id: 'hk', blink: false, anchor: [0.55, 0.35], tint: 'rgba(20,30,90,0.1)', rim: { color: 'rgba(150,200,255,0.9)', dx: 7, a: 0.7 } });
-  });
+  // the premise, on screen from the first frame to the smash cut (drawn after grading, see main.js)
+  PP.HOOK_TEXT = (ctx, t) => {
+    PP.with(ctx, () => {
+      const g = ctx.createLinearGradient(0, 120, 0, 700);
+      g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(0.14, 'rgba(0,0,0,0.62)'); g.addColorStop(0.72, 'rgba(0,0,0,0.5)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g; ctx.fillRect(0, 120, W, 580);
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.font = '600 84px Inter'; ctx.letterSpacing = '-1px';
+      ctx.shadowColor = 'rgba(0,0,0,0.85)'; ctx.shadowBlur = 22; ctx.shadowOffsetY = 4;
+      ctx.fillStyle = '#ffffff';
+      ctx.fillText('His voice notes', 540, 330);
+      ctx.fillText('always come true.', 540, 430);
+      ctx.fillStyle = '#ff6a5e'; ctx.shadowColor = 'rgba(0,0,0,0.95)';
+      ctx.fillText('He dies in 6 days.', 540, 545);
+    });
+  };
 
   // ---------------------------------------------------------------- 1. "Six days left."
   const toldCut = word('n1', 'he') - 0.1, soCut = word('n1', 'so') - 0.1;

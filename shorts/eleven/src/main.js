@@ -64,6 +64,7 @@
       const ch = subs.find((c) => t >= c.s && t < c.e);
       if (ch && !PP.FRAME.noSubs && !(ch.kind === 'note' && PP.FRAME.phone)) PP.subtitle(ctx, ch, t, PP.FRAME.phone ? 1640 : 1500);
     }
+    if (PP.HOOK_TEXT && t < C.hookEnd) PP.HOOK_TEXT(ctx, t);
     grain(ctx, t);
     out.drawImage(bufA, 0, 0);
   };
