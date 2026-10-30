@@ -791,5 +791,18 @@
    "text_tokens": 0
   },
   "total_tokens": 5678
+ },
+ "v2:C1": {
+  "input_tokens": 4333,
+  "input_tokens_details": {
+   "image_tokens": 3969,
+   "text_tokens": 364
+  },
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "image_tokens": 1372,
+   "text_tokens": 0
+  },
+  "total_tokens": 5705
  }
 }

@@ -47,6 +47,24 @@
    "text": "[a little shy] I'm Kabir, by the way. Coffee? You look like you need one."
   },
   {
+   "id": "n4a",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[softly, smiling] We both reached for the last cookie. Our fingers touched... and neither of us let go."
+  },
+  {
+   "id": "k6",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[quiet, a shy smile] Half? ...You can have the bigger one."
+  },
+  {
+   "id": "n4b",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[warm, a little laugh] He gave me the bigger half. Then stole a bite of it."
+  },
+  {
    "id": "n4",
    "who": "mira",
    "kind": "narr",

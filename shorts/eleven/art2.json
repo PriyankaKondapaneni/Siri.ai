@@ -327,6 +327,17 @@
    "quality": "medium",
    "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Do not copy the character in the first image. Draw BOTH characters: the girl from the SECOND image and the young man from the THIRD image, keeping both faces exactly as they are. Waist-up. On a plain flat light grey background. No text, no watermark.",
    "prompt": "In the rain at night: Kabir (messy black hair, charcoal coat, black turtleneck, wristwatch) lying on his back on the ground, hurt but alive, a small weak smile, eyes half open, a little scrape on his cheek. Mira (long dark wavy hair, coral flower clip, cornflower-blue dress, red scarf) kneeling beside him holding his face with both hands, crying and smiling at the same time, tears on her cheeks. Both soaked. Seen from the side, slightly above. IMPORTANT: the background must be completely plain flat light grey, with no scenery at all."
+  },
+  "C1": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "CK4"
+   ],
+   "quality": "medium",
+   "size": "1024x1536",
+   "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. Simple, charming, clearly drawn by hand by a webtoon artist. IMPORTANT: do NOT draw stick-figure line arms. Draw full, properly proportioned arms with sleeves, as wide as they should be for the body, and simple cute cartoon hands with soft rounded fingers, outlined in the same thin black line. Use the outfits from the SECOND and THIRD images. Extreme close-up. No text, no watermark.",
+   "prompt": "Extreme close-up, seen from slightly above, of a small round wooden café table top in soft warm evening light. On a little white plate sits ONE large round chocolate-chip cookie. Two hands reach for the same cookie from opposite sides and their fingertips have just touched on top of it: from the left, a girl's slim hand coming from a cornflower-blue sleeve with a bit of chunky red knit scarf fringe; from the right, a young man's hand coming from a charcoal wool coat sleeve over a black turtleneck cuff, with a vintage leather-strap wristwatch. Both hands are relaxed and gentle, fingertips resting against each other. Beside the plate: a mug of hot chocolate with a little steam. The table and the soft blurred café behind it are drawn in the same flat muted pastel webtoon style as the first image (cream, warm wood, soft peach). No faces in the frame. Calm, sweet, romantic."
   }
  }
 }
