@@ -1,54 +1,59 @@
 {
- "duration": 4.8298125,
+ "duration": 4.87625,
  "language": "English",
  "language_code": "en",
- "request_id": "8b7ac6bb-19de-493d-a655-32e1fae98cd1",
+ "request_id": "06e512b7-3c48-4202-bc5a-af85db01da41",
  "segments": [
   {
-   "end": 0.16,
+   "end": 0.24,
    "start": 0,
    "text": "He"
   },
   {
-   "end": 0.8,
-   "start": 0.16,
+   "end": 0.88,
+   "start": 0.24,
    "text": "remembered"
   },
   {
-   "end": 0.88,
-   "start": 0.8,
+   "end": 0.96,
+   "start": 0.88,
    "text": "the"
   },
   {
-   "end": 1.6,
-   "start": 0.88,
+   "end": 1.68,
+   "start": 0.96,
    "text": "car"
   },
   {
-   "end": 2.32,
-   "start": 2.16,
+   "end": 2.4,
+   "start": 2.24,
    "text": "but"
   },
   {
-   "end": 2.72,
-   "start": 2.32,
+   "end": 2.88,
+   "start": 2.4,
    "text": "not"
   },
   {
-   "end": 2.88,
-   "start": 2.8,
-   "text": "a"
-  },
-  {
-   "end": 3.52,
+   "end": 3.12,
    "start": 2.88,
-   "text": "single"
+   "text": "one"
   },
   {
-   "end": 4.4,
-   "start": 3.52,
-   "text": "message"
+   "end": 3.2,
+   "start": 3.12,
+   "text": "of"
+  },
+  {
+   "end": 3.44,
+   "start": 3.2,
+   "text": "his"
+  },
+  {
+   "end": 4.32,
+   "start": 3.44,
+   "text": "messages"
   }
  ],
- "text": "He remembered the car, but not a single message."
+ "text": "He remembered the car, but not one of his messages."
 }

@@ -1,59 +1,54 @@
 {
- "duration": 4.9226875,
+ "duration": 5.1084375,
  "language": "English",
  "language_code": "en",
- "request_id": "61108245-e160-4197-95dd-a7e87ba04d0c",
+ "request_id": "224b6a90-b51a-42a7-8351-23ff0d83116f",
  "segments": [
   {
    "end": 0.32,
-   "start": 0,
+   "start": 0.08,
    "text": "Then"
   },
   {
-   "end": 0.4,
+   "end": 0.48,
    "start": 0.32,
    "text": "I"
   },
   {
-   "end": 0.88,
-   "start": 0.4,
+   "end": 0.96,
+   "start": 0.48,
    "text": "noticed"
   },
   {
-   "end": 1.04,
-   "start": 0.88,
+   "end": 1.12,
+   "start": 0.96,
    "text": "his"
   },
   {
-   "end": 1.76,
-   "start": 1.04,
+   "end": 1.84,
+   "start": 1.12,
    "text": "watch"
   },
   {
-   "end": 2.64,
-   "start": 2.16,
-   "text": "still"
-  },
-  {
-   "end": 3.12,
-   "start": 2.64,
+   "end": 2.96,
+   "start": 2.24,
    "text": "stopped"
   },
   {
-   "end": 3.28,
-   "start": 3.2,
+   "end": 3.2,
+   "start": 3.04,
    "text": "at"
   },
   {
    "end": 3.84,
-   "start": 3.28,
+   "start": 3.2,
    "text": "11"
   },
   {
-   "end": 4.48,
-   "start": 3.84,
+   "end": 4.64,
+   "start": 3.92,
    "text": "11"
   }
  ],
- "text": "Then I noticed his watch, still stopped at 11:11."
+ "text": "Then I noticed his watch, stopped at 11:11."
 }

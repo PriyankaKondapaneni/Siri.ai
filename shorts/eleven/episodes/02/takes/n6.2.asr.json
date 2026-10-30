@@ -1,54 +1,43 @@
 {
- "duration": 5.0155625,
- "language": "English",
+ "duration": 3.6688125,
  "language_code": "en",
- "request_id": "3b0abb95-4224-4566-b6d8-fea8e28b5f1f",
+ "request_id": "ef4f574d-2613-4051-9b0d-f7c03947594d",
  "segments": [
   {
-   "end": 0.32,
+   "end": 0.24,
    "start": 0.08,
-   "text": "That"
+   "text": "At"
   },
   {
    "end": 0.72,
-   "start": 0.32,
-   "text": "night"
-  },
-  {
-   "end": 1.36,
-   "start": 1.28,
-   "text": "at"
-  },
-  {
-   "end": 1.92,
-   "start": 1.36,
+   "start": 0.24,
    "text": "11"
   },
   {
-   "end": 2.56,
-   "start": 1.92,
+   "end": 1.44,
+   "start": 0.72,
    "text": "11"
   },
   {
-   "end": 3.36,
-   "start": 3.12,
+   "end": 2.16,
+   "start": 2,
    "text": "my"
   },
   {
-   "end": 3.92,
-   "start": 3.36,
+   "end": 2.8,
+   "start": 2.16,
    "text": "phone"
   },
   {
-   "end": 4.08,
-   "start": 3.92,
+   "end": 2.96,
+   "start": 2.8,
    "text": "lit"
   },
   {
-   "end": 4.48,
-   "start": 4.08,
+   "end": 3.28,
+   "start": 2.96,
    "text": "up"
   }
  ],
- "text": "That night, at 11:11, my phone lit up."
+ "text": "At 11:11, my phone lit up."
 }

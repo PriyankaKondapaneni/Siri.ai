@@ -1,0 +1,69 @@
+{
+ "duration": 4.8298125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "ec385853-7737-4f98-b7b9-b1db4f263875",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "We"
+  },
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "said"
+  },
+  {
+   "end": 0.96,
+   "start": 0.56,
+   "text": "goodbye"
+  },
+  {
+   "end": 1.12,
+   "start": 0.96,
+   "text": "at"
+  },
+  {
+   "end": 1.2,
+   "start": 1.12,
+   "text": "the"
+  },
+  {
+   "end": 1.76,
+   "start": 1.2,
+   "text": "door"
+  },
+  {
+   "end": 2.4,
+   "start": 2.24,
+   "text": "I"
+  },
+  {
+   "end": 3.12,
+   "start": 2.4,
+   "text": "smiled"
+  },
+  {
+   "end": 3.36,
+   "start": 3.12,
+   "text": "the"
+  },
+  {
+   "end": 3.68,
+   "start": 3.36,
+   "text": "whole"
+  },
+  {
+   "end": 4,
+   "start": 3.68,
+   "text": "way"
+  },
+  {
+   "end": 4.56,
+   "start": 4,
+   "text": "home"
+  }
+ ],
+ "text": "We said goodbye at the door. I smiled the whole way home."
+}

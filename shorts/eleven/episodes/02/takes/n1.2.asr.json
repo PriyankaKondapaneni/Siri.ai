@@ -1,8 +1,8 @@
 {
- "duration": 7.2446875,
+ "duration": 5.062,
  "language": "English",
  "language_code": "en",
- "request_id": "9046a405-f6ef-4613-97fa-637d77858e30",
+ "request_id": "ab903356-9587-4575-a49b-62ea530c3b67",
  "segments": [
   {
    "end": 0.56,
@@ -10,85 +10,55 @@
    "text": "Six"
   },
   {
-   "end": 1.04,
+   "end": 0.88,
    "start": 0.56,
    "text": "days"
   },
   {
-   "end": 1.68,
-   "start": 1.04,
+   "end": 1.52,
+   "start": 0.88,
    "text": "left"
   },
   {
-   "end": 2.24,
-   "start": 2.08,
-   "text": "He"
-  },
-  {
-   "end": 2.72,
-   "start": 2.24,
-   "text": "told"
-  },
-  {
-   "end": 2.88,
-   "start": 2.72,
-   "text": "me"
-  },
-  {
-   "end": 3.28,
-   "start": 2.88,
-   "text": "not"
-  },
-  {
-   "end": 3.36,
-   "start": 3.36,
-   "text": "to"
-  },
-  {
-   "end": 3.76,
-   "start": 3.36,
-   "text": "fall"
-  },
-  {
-   "end": 4,
-   "start": 3.76,
-   "text": "for"
-  },
-  {
-   "end": 4.4,
-   "start": 4,
-   "text": "him"
-  },
-  {
-   "end": 5.04,
-   "start": 4.72,
-   "text": "so"
-  },
-  {
-   "end": 5.28,
-   "start": 5.12,
+   "end": 2.08,
+   "start": 2,
    "text": "I"
   },
   {
-   "end": 5.52,
-   "start": 5.28,
-   "text": "went"
+   "end": 2.48,
+   "start": 2.08,
+   "text": "spent"
   },
   {
-   "end": 6.08,
-   "start": 5.52,
-   "text": "looking"
+   "end": 2.72,
+   "start": 2.48,
+   "text": "the"
   },
   {
-   "end": 6.4,
-   "start": 6.08,
-   "text": "for"
+   "end": 3.04,
+   "start": 2.72,
+   "text": "whole"
   },
   {
-   "end": 6.8,
-   "start": 6.4,
-   "text": "him"
+   "end": 3.36,
+   "start": 3.04,
+   "text": "day"
+  },
+  {
+   "end": 3.92,
+   "start": 3.36,
+   "text": "watching"
+  },
+  {
+   "end": 4,
+   "start": 3.92,
+   "text": "the"
+  },
+  {
+   "end": 4.64,
+   "start": 4,
+   "text": "clock"
   }
  ],
- "text": "Six days left. He told me not to fall for him, so I went looking for him."
+ "text": "Six days left. I spent the whole day watching the clock."
 }

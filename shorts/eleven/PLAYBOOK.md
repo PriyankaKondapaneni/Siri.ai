@@ -31,8 +31,17 @@ Every episode must look and sound like a professionally directed short film. Epi
 - **Opening:** a hook in the first 2 seconds.
 - **Pace:** brisk.
 - **Length:** about 70 seconds.
+- **Theme: slice of life.** The days feel warm and everyday (coffee, walks, small talk, little jokes, rain, the walk home). The thriller breaks through only at 11:11. Music in the day is warm piano and plucked guitar; dark music starts when the phone lights up.
+- **Time flows, never jumps.** Every change of time or place is shown as time passing, not a hard skip of hours: a window going from night to dawn to dusk with the clock racing, a wall clock spinning while the café empties and the lights go out, street lights flickering on, a walk that dissolves into the next place. Use a dissolve or a time-lapse for every jump in time.
+- **Action in every shot, however small.** No shot is a still picture with a camera push. Someone always moves: hands reach, things are picked up, broken, slid across a table, heads tilt, shoulders shake with a laugh, people lean in, look away, walk. Direct each beat like a film director: shot, reverse shot, insert, reaction.
+- **A story, not one-liners.** The two of them talk to each other in scenes, with real back-and-forth. Narration only bridges. Mira's spoken lines are filmed over her shoulder or on Kabir's reaction (her art has no lip-sync mouth yet).
+- **Voices with emotion, never robotic.** Record and assemble at natural speed (`"tempo": 1.0` in the script) with real pauses (`"cap": 0.45`, a 0.25–0.4 s reaction beat between dialogue lines). Give each line a direction with something to play (a nervous laugh, out of breath, voice breaking), kept natural.
+- **Show, don't narrate.** If a beat can be acted on screen (a stolen bite, a laugh), cut the words and show it.
 
 ### Things the user rejected (never repeat)
+- **Statue-like shots.** Characters standing still while only the camera moves.
+- **Robotic voices.** The 1.08× time-stretch with tight 0.12 s gaps made the voices sound mechanical.
+- **Hard jumps in time** with no sense of the hours passing.
 - **Childish scrapbook styling.** No sticker borders around characters, no ransom-note or paper-scrap titles, no torn-paper captions, no yellow highlighter, no red marker circles, no stamps, no stop-motion jitter, no glitch effects.
 - **Characters that look AI-made.** No glossy or painterly rendering, no hyper-detailed hair, no realistic faces.
 - **Stick-figure arms.** Characters always have full, properly proportioned arms with sleeves and real hands.
@@ -192,7 +201,7 @@ Always reuse it first. It lives in `assets/art/v2/`; `gen/` holds the originals 
   - Fish allows one request at a time; never run TTS calls in parallel (429).
   - The `.asr.json` transcripts are committed but the `.wav` takes are not. If takes are re-recorded, narrate re-transcribes any take newer than its transcript; a stale transcript gives wrong timing and a false 0% word error.
 - **Assemble:** `node eleven/assemble.mjs NN`, run from `shorts/`.
-  - Default `TEMPO=1.08`: a pitch-preserving time-stretch, which the user approved as "slightly faster".
+  - From Episode 2's recut on, scripts set `"tempo": 1.0` (natural speed); the old 1.08 default sounded robotic. Fit the length by trimming words, not by speeding up.
   - `CAP` and `GAP` keep pauses tight but natural (defaults: in-line pauses capped at 0.26 s; 0.12 s between lines; 0.42 s before voice notes for the phone buzz).
   - Do not use Fish's `speed` above 1.0, and do not slash pauses further.
 - **Spend guard:** `shorts/budget.json` sets a credit floor, and every paid call checks the wallet first. The user's Fish cap for the project is $4.

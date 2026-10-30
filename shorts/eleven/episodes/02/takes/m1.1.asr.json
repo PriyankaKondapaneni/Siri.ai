@@ -1,0 +1,49 @@
+{
+ "duration": 5.1084375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "b18f25c9-ba73-4d90-afa2-ba2348a80077",
+ "segments": [
+  {
+   "end": 1.6,
+   "start": 0.96,
+   "text": "Yeah"
+  },
+  {
+   "end": 2.16,
+   "start": 1.84,
+   "text": "that"
+  },
+  {
+   "end": 2.32,
+   "start": 2.16,
+   "text": "was"
+  },
+  {
+   "end": 2.8,
+   "start": 2.32,
+   "text": "me"
+  },
+  {
+   "end": 3.44,
+   "start": 3.28,
+   "text": "You"
+  },
+  {
+   "end": 3.84,
+   "start": 3.44,
+   "text": "pulled"
+  },
+  {
+   "end": 4,
+   "start": 3.84,
+   "text": "me"
+  },
+  {
+   "end": 4.64,
+   "start": 4,
+   "text": "back"
+  }
+ ],
+ "text": "Yeah, that was me. You pulled me back."
+}

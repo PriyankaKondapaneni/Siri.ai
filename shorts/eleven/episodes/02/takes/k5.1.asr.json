@@ -1,74 +1,79 @@
 {
- "duration": 5.062,
+ "duration": 5.340625,
  "language": "English",
  "language_code": "en",
- "request_id": "08011170-b394-4771-923c-b7dd619e5e52",
+ "request_id": "39889cf6-7579-4549-8a04-ac372548b1b5",
  "segments": [
   {
-   "end": 0.24,
+   "end": 0.48,
    "start": 0,
-   "text": "If"
+   "text": "Because"
   },
   {
-   "end": 0.32,
-   "start": 0.24,
-   "text": "I"
-  },
-  {
-   "end": 0.56,
-   "start": 0.32,
-   "text": "get"
+   "end": 0.64,
+   "start": 0.48,
+   "text": "if"
   },
   {
    "end": 0.8,
-   "start": 0.56,
-   "text": "on"
+   "start": 0.64,
+   "text": "I"
   },
   {
    "end": 0.96,
    "start": 0.8,
+   "text": "get"
+  },
+  {
+   "end": 1.2,
+   "start": 0.96,
+   "text": "on"
+  },
+  {
+   "end": 1.44,
+   "start": 1.2,
    "text": "that"
   },
   {
-   "end": 1.6,
-   "start": 0.96,
+   "end": 1.92,
+   "start": 1.44,
    "text": "train"
   },
   {
-   "end": 2.8,
-   "start": 2.4,
+   "end": 3.2,
+   "start": 2.8,
    "text": "you're"
   },
   {
-   "end": 2.88,
-   "start": 2.8,
+   "end": 3.28,
+   "start": 3.2,
    "text": "the"
   },
   {
-   "end": 3.36,
-   "start": 2.88,
+   "end": 3.68,
+   "start": 3.28,
    "text": "one"
   },
   {
-   "end": 3.44,
-   "start": 3.36,
+   "end": 3.92,
+   "start": 3.84,
    "text": "who"
   },
   {
-   "end": 3.92,
-   "start": 3.44,
+   "end": 4.4,
+   "start": 4,
    "text": "doesn't"
   },
   {
-   "end": 4.24,
-   "start": 3.92,
+   "end": 4.64,
+   "start": 4.4,
    "text": "come"
   },
   {
-   "end": 4.72,
-   "start": 4.24,
+   "end": 5.12,
+   "start": 4.64,
    "text": "home"
   }
  ],
- "text": "If I get on that train, you're the one who doesn't come home."
+ "text": "Because if I get on that train, you're the one who doesn't come home."
 }

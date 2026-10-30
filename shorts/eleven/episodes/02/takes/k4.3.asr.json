@@ -1,84 +1,79 @@
 {
- "duration": 9.1486875,
+ "duration": 5.8514375,
  "language": "English",
  "language_code": "en",
- "request_id": "b131ba79-314e-4909-aaee-57fdcef89879",
+ "request_id": "3f9503e3-6dd2-4929-8b76-abeaa8571461",
  "segments": [
   {
-   "end": 0.56,
+   "end": 0.48,
    "start": 0,
    "text": "Mira"
   },
   {
-   "end": 1.6,
-   "start": 1.44,
+   "end": 1.12,
+   "start": 1.04,
    "text": "you"
   },
   {
-   "end": 2.08,
-   "start": 1.6,
+   "end": 1.6,
+   "start": 1.12,
    "text": "found"
   },
   {
-   "end": 2.24,
-   "start": 2.08,
+   "end": 1.76,
+   "start": 1.6,
    "text": "me"
   },
   {
-   "end": 2.56,
-   "start": 2.24,
+   "end": 2.08,
+   "start": 1.76,
    "text": "didn't"
   },
   {
-   "end": 2.88,
-   "start": 2.56,
+   "end": 2.32,
+   "start": 2.08,
    "text": "you"
   },
   {
-   "end": 4.72,
-   "start": 4.16,
-   "text": "Listen"
+   "end": 3.6,
+   "start": 2.96,
+   "text": "Tomorrow"
   },
   {
-   "end": 6.24,
-   "start": 5.44,
-   "text": "tomorrow"
-  },
-  {
-   "end": 7.36,
-   "start": 7.12,
+   "end": 4.32,
+   "start": 4.08,
    "text": "don't"
   },
   {
-   "end": 7.68,
-   "start": 7.36,
+   "end": 4.56,
+   "start": 4.32,
    "text": "let"
   },
   {
-   "end": 7.84,
-   "start": 7.68,
+   "end": 4.64,
+   "start": 4.56,
    "text": "me"
   },
   {
-   "end": 8.08,
-   "start": 7.84,
+   "end": 4.88,
+   "start": 4.64,
    "text": "get"
   },
   {
-   "end": 8.24,
-   "start": 8.08,
+   "end": 5.04,
+   "start": 4.88,
    "text": "on"
   },
   {
-   "end": 8.32,
-   "start": 8.24,
+   "end": 5.12,
+   "start": 5.04,
    "text": "the"
   },
   {
-   "end": 8.96,
-   "start": 8.32,
+   "end": 5.76,
+   "start": 5.12,
    "text": "train"
   }
  ],
- "text": "\"Mira, you found me, didn't you? Listen, tomorrow, don't let me get on the train.\""
+ "text": "Mira, you found me, didn't you? Tomorrow, don't let me get on the train."
 }

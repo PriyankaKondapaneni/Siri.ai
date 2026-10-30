@@ -1,0 +1,44 @@
+{
+ "duration": 2.647125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "dc795ca1-9c9c-4c90-86db-fc95a2511e10",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "Then"
+  },
+  {
+   "end": 0.8,
+   "start": 0.48,
+   "text": "why"
+  },
+  {
+   "end": 0.88,
+   "start": 0.8,
+   "text": "are"
+  },
+  {
+   "end": 1.04,
+   "start": 0.88,
+   "text": "you"
+  },
+  {
+   "end": 1.44,
+   "start": 1.04,
+   "text": "still"
+  },
+  {
+   "end": 1.92,
+   "start": 1.44,
+   "text": "holding"
+  },
+  {
+   "end": 2.32,
+   "start": 1.92,
+   "text": "it"
+  }
+ ],
+ "text": "Then why are you still holding it?"
+}

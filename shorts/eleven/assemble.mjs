@@ -11,7 +11,8 @@ const S = JSON.parse(fs.readFileSync(`${dir}/script.json`, 'utf8'));
 const picks = JSON.parse(fs.readFileSync(`${dir}/picks.json`, 'utf8'));
 const RATE = 44100;
 // the delivery tempo: every take is time-stretched (pitch kept) by this factor before assembly
-const TEMPO = Number(process.env.TEMPO || 1.08);
+// (a script can set its own: "tempo": 1.0 plays the takes at their natural speed)
+const TEMPO = Number(process.env.TEMPO || S.tempo || 1.08);
 import { execFileSync } from 'node:child_process';
 function stretched(src) {
   if (TEMPO === 1) return src;
@@ -21,9 +22,9 @@ function stretched(src) {
 }
 
 // pauses inside a line longer than this are cut from the middle; a few lines keep more air on purpose
-const CAP = { default: 0.26, n1: 0.42, n3: 0.36, n6: 0.36, k6: 0.5, k7: 0.55, k5: 0.4, n9: 0.36 };
+const CAP = { default: S.cap ?? 0.26, n1: 0.42, n3: 0.36, n6: 0.36, k6: 0.5, k7: 0.55, k5: 0.4, n9: 0.36 };
 // the gap before each line (seconds); voice notes get room for the buzz
-const GAP = { default: 0.12, note: 0.42, after_note: 0.16, h0: 0.25, n1: 0.55, k4: 0.12, n6: 0.3, n7: 0.22, n9: 0.36, k7: 0.36, n8: 0.18 };
+const GAP = { default: S.gap ?? 0.12, note: 0.42, after_note: 0.16, h0: 0.25, n1: 0.55, k4: 0.12, n6: 0.3, n7: 0.22, n9: 0.36, k7: 0.36, n8: 0.18 };
 
 // where the voice really stops after time `from`: the transcript can end the last word early (Episode 2's n5 take
 // had a zero-length final "eleven", which cut "eleven eleven" in half), so follow the audio until it stays quiet
@@ -31,9 +32,10 @@ function voiceEnd(x, from) {
   const w = Math.round(0.02 * RATE), n = Math.floor(x.length / w), rms = new Float32Array(n);
   for (let k = 0; k < n; k++) { let s = 0; for (let i = k * w; i < (k + 1) * w; i++) s += x[i] * x[i]; rms[k] = Math.sqrt(s / w); }
   const thr = Math.max(...rms) * 0.05, hold = Math.round(0.15 / 0.02);
-  let k = Math.floor((from * RATE) / w), end = from;
+  // silence only counts once the voice has been heard (a take can open with a breath of silence)
+  let k = Math.floor((from * RATE) / w), end = from, heard = false;
   for (let quiet = 0; k < n && quiet < hold; k++) {
-    if (rms[k] > thr) { quiet = 0; end = ((k + 1) * w) / RATE; } else quiet++;
+    if (rms[k] > thr) { quiet = 0; heard = true; end = ((k + 1) * w) / RATE; } else if (heard) quiet++;
   }
   return end;
 }

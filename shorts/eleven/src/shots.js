@@ -41,9 +41,9 @@
     function bedroom(ctx, t, cam, o = {}) {
       const bg = PP.drawBgDepth(ctx, 'B1', { ...cam, z0: 1 }, { horizon: 0.35, k: 0.9, variant: o.variant });
       const [wx, wy] = bg.map(0.57, 0), [wx2, wy2] = bg.map(1, 0.4);
-      PP.rain(ctx, t, [wx, wy, wx2 - wx, wy2 - wy], { n: 60 });
+      if (o.rain !== false) PP.rain(ctx, t, [wx, wy, wx2 - wx, wy2 - wy], { n: Math.round(60 * (o.rainAmount ?? 1)) });
       const [lx, ly] = bg.map(0.19, 0.45);
-      PP.glowAt(ctx, lx, ly, 360 * bg.s / 1.25, '255,196,120', 0.42);
+      PP.glowAt(ctx, lx, ly, 360 * bg.s / 1.25, '255,196,120', 0.42 * (o.lamp ?? 1));
       const [cx, cy] = bg.map(0.31, 0.553);
       const pulse = o.pulse ?? 0;
       PP.glowAt(ctx, cx, cy, (90 + pulse * 140) * bg.s / 1.25, '120,200,255', 0.35 + pulse * 0.45);

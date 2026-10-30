@@ -1,64 +1,69 @@
 {
- "duration": 4.3189375,
+ "duration": 4.5046875,
  "language": "English",
  "language_code": "en",
- "request_id": "14719f50-2c30-448e-9cf2-eceb551f3cab",
+ "request_id": "a0d9ee8f-67b2-4921-af18-c95f7735eb84",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0,
-   "text": "You"
+   "end": 0.48,
+   "start": 0.08,
+   "text": "Hey"
   },
   {
-   "end": 0.8,
-   "start": 0.32,
-   "text": "again"
+   "end": 1.12,
+   "start": 0.96,
+   "text": "you're"
   },
   {
-   "end": 1.68,
-   "start": 1.6,
-   "text": "The"
+   "end": 1.2,
+   "start": 1.12,
+   "text": "the"
   },
   {
-   "end": 2.16,
-   "start": 1.68,
+   "end": 1.52,
+   "start": 1.2,
    "text": "girl"
   },
   {
-   "end": 2.32,
-   "start": 2.16,
-   "text": "who"
+   "end": 1.68,
+   "start": 1.52,
+   "text": "from"
   },
   {
-   "end": 2.8,
-   "start": 2.4,
+   "end": 1.76,
+   "start": 1.68,
+   "text": "the"
+  },
+  {
+   "end": 2.56,
+   "start": 1.76,
+   "text": "crosswalk"
+  },
+  {
+   "end": 3.04,
+   "start": 2.96,
+   "text": "The"
+  },
+  {
+   "end": 3.44,
+   "start": 3.04,
+   "text": "car"
+  },
+  {
+   "end": 3.84,
+   "start": 3.44,
    "text": "almost"
   },
   {
-   "end": 3.2,
-   "start": 2.8,
+   "end": 4.08,
+   "start": 3.84,
    "text": "got"
   },
   {
-   "end": 3.36,
-   "start": 3.2,
-   "text": "hit"
-  },
-  {
-   "end": 3.52,
-   "start": 3.36,
-   "text": "by"
-  },
-  {
-   "end": 3.6,
-   "start": 3.52,
-   "text": "a"
-  },
-  {
-   "end": 4.16,
-   "start": 3.6,
-   "text": "car"
+   "end": 4.4,
+   "start": 4.08,
+   "text": "you"
   }
  ],
- "text": "You again. The girl who almost got hit by a car."
+ "text": "Hey, you're the girl from the crosswalk. The car almost got you."
 }

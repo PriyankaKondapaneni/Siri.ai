@@ -1,12 +1,12 @@
 {
- "duration": 6.966,
+ "duration": 5.062,
  "language": "English",
  "language_code": "en",
- "request_id": "02073c42-1365-4662-84a7-469d29c38612",
+ "request_id": "d1109958-8b27-43c3-944e-b8eed36e303d",
  "segments": [
   {
    "end": 0.24,
-   "start": 0.08,
+   "start": 0,
    "text": "We"
   },
   {
@@ -15,18 +15,18 @@
    "text": "both"
   },
   {
-   "end": 1.2,
+   "end": 1.12,
    "start": 0.72,
    "text": "reached"
   },
   {
-   "end": 1.36,
-   "start": 1.2,
+   "end": 1.28,
+   "start": 1.12,
    "text": "for"
   },
   {
    "end": 1.44,
-   "start": 1.36,
+   "start": 1.28,
    "text": "the"
   },
   {
@@ -40,50 +40,35 @@
    "text": "cookie"
   },
   {
-   "end": 3.04,
+   "end": 3.12,
    "start": 2.88,
-   "text": "Our"
-  },
-  {
-   "end": 3.68,
-   "start": 3.04,
-   "text": "fingers"
-  },
-  {
-   "end": 4.32,
-   "start": 3.68,
-   "text": "touched"
-  },
-  {
-   "end": 4.96,
-   "start": 4.64,
    "text": "and"
   },
   {
-   "end": 5.36,
-   "start": 4.96,
+   "end": 3.52,
+   "start": 3.12,
    "text": "neither"
   },
   {
-   "end": 5.52,
-   "start": 5.36,
+   "end": 3.68,
+   "start": 3.52,
    "text": "of"
   },
   {
-   "end": 5.76,
-   "start": 5.52,
+   "end": 3.92,
+   "start": 3.68,
    "text": "us"
   },
   {
-   "end": 6.08,
-   "start": 5.76,
+   "end": 4.16,
+   "start": 3.92,
    "text": "let"
   },
   {
-   "end": 6.56,
-   "start": 6.08,
+   "end": 4.64,
+   "start": 4.16,
    "text": "go"
   }
  ],
- "text": "We both reached for the last cookie. Our fingers touched, and neither of us let go."
+ "text": "We both reached for the last cookie, and neither of us let go."
 }

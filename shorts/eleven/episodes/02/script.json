@@ -13,101 +13,124 @@
    "kind": "note",
    "text": "Don't let me get on the train.",
    "take": "k4",
-   "from": 8,
+   "from": 7,
    "gap": 0.06
   },
   {
    "id": "n1",
    "who": "mira",
    "kind": "narr",
-   "text": "[quiet, determined] Six days left. He told me not to fall for him... so I went looking for him."
+   "text": "[quiet, a small smile] Six days left. I spent the whole day watching the clock."
   },
   {
    "id": "n2",
    "who": "mira",
    "kind": "narr",
    "text": "[softly] Same corner. Six-forty. And there he was.",
-   "show": "Same corner. 6:40. And there he was."
+   "show": "Same corner. 6:40. And there he was.",
+   "gap": 0.35
   },
   {
    "id": "k1",
    "who": "kabir",
    "kind": "live",
-   "text": "[surprised, a warm smile] You again. The girl who almost got hit by a car."
+   "text": "[surprised, then a warm smile] Hey... you're the girl from the crosswalk. The car almost got you.",
+   "gap": 0.25
   },
   {
    "id": "n3",
    "who": "mira",
    "kind": "narr",
-   "text": "[quietly] He remembered the car. But not a single message."
+   "text": "[quiet, a little hurt] He remembered the car... but not one of his messages.",
+   "gap": 0.3
   },
   {
    "id": "k2",
    "who": "kabir",
    "kind": "live",
-   "text": "[a little shy] I'm Kabir, by the way. Coffee? You look like you need one."
+   "text": "[a little shy] I'm Kabir. Coffee?",
+   "gap": 0.3
   },
   {
    "id": "n4a",
    "who": "mira",
    "kind": "narr",
-   "text": "[softly, smiling] We both reached for the last cookie. Our fingers touched... and neither of us let go."
+   "text": "[softly, smiling] We both reached for the last cookie... and neither of us let go.",
+   "gap": 0.55
   },
   {
    "id": "k6",
    "who": "kabir",
    "kind": "live",
-   "text": "[quiet, a shy smile] Half? ...You can have the bigger one."
+   "text": "[quiet, a shy smile] Half? ...You can have the bigger one.",
+   "gap": 0.3
   },
   {
-   "id": "n4b",
+   "id": "m2",
    "who": "mira",
-   "kind": "narr",
-   "text": "[warm, a little laugh] He gave me the bigger half. Then stole a bite of it."
+   "kind": "live",
+   "text": "[teasing, smiling] Then why are you still holding it?",
+   "gap": 0.25
   },
   {
    "id": "n4",
    "who": "mira",
    "kind": "narr",
-   "text": "[warm, smiling] We talked until they closed the café. He laughed like he'd known me forever."
+   "text": "[warm] We talked until they closed the café.",
+   "gap": 0.95
   },
   {
    "id": "n5",
    "who": "mira",
    "kind": "narr",
-   "text": "[softer] Then I noticed his watch. Still stopped at eleven eleven.",
-   "show": "Then I noticed his watch. Still stopped at 11:11."
+   "text": "[softer] Then I noticed his watch. Stopped at eleven eleven.",
+   "show": "Then I noticed his watch. Stopped at 11:11.",
+   "gap": 0.25
   },
   {
    "id": "k3",
    "who": "kabir",
    "kind": "live",
-   "text": "[quiet, a little sad] It stopped the night my brother died. I never fixed it."
+   "text": "[quiet, a little sad] It stopped the night my brother died. I never fixed it.",
+   "gap": 0.25
+  },
+  {
+   "id": "n5b",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[warm, a little wistful] We said goodbye at the door. I smiled the whole way home.",
+   "gap": 0.35
   },
   {
    "id": "n6",
    "who": "mira",
    "kind": "narr",
-   "text": "[low, uneasy] That night, at eleven eleven... my phone lit up.",
-   "show": "That night, at 11:11… my phone lit up."
+   "text": "[low, uneasy] At eleven eleven... my phone lit up.",
+   "show": "At 11:11… my phone lit up.",
+   "gap": 0.5
   },
   {
    "id": "k4",
    "who": "kabir",
    "kind": "note",
-   "text": "[tense, low] Mira. You found me, didn't you? Listen. Tomorrow... don't let me get on the train."
+   "text": "[urgent, low, out of breath] Mira. You found me, didn't you? Tomorrow... don't let me get on the train."
   },
   {
-   "id": "n7",
+   "id": "m3",
    "who": "mira",
    "kind": "narr",
-   "text": "[confused, quiet] Don't let him get on the train?"
+   "text": "[frightened, barely a whisper] Why...?",
+   "gap": 0.4
   },
   {
    "id": "k5",
    "who": "kabir",
    "kind": "note",
-   "text": "[almost a whisper] If I get on that train... you're the one who doesn't come home."
+   "text": "[almost a whisper, voice breaking] Because if I get on that train... you're the one who doesn't come home.",
+   "gap": 0.5
   }
- ]
+ ],
+ "tempo": 1.0,
+ "cap": 0.32,
+ "gap": 0.22
 }

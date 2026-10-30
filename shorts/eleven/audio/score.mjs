@@ -90,6 +90,19 @@ if (sec.romance) {
   });
   [['E5', 0.3], ['G5', 1.2], ['D5', 2.3], ['C5', 3.4], ['E5', 4.6], ['A4', 5.7], ['C5', 6.8], ['G4', 8.0], ['E5', 9.3]].forEach(([n, dt]) => { if (at + dt < to - 0.3) put(bus, bell(N(n), 0.6, 0.15, 2.0, 1.0), at + dt, 1, 0.3); });
 }
+// ---- cozy: slice of life in the day; a fingerpicked guitar in F major (F - C - Dm - Bb) under a soft piano
+function cozy({ at, to }, seed) {
+  const prog = [['F2', 'C3', 'F3', 'A3', 'C4'], ['C2', 'G2', 'C3', 'E3', 'G3'], ['D2', 'A2', 'D3', 'F3', 'A3'], ['A#1', 'F2', 'A#2', 'D3', 'F3']];
+  const bar = 2.4, pick = [0, 2, 3, 4, 1, 3, 2, 4];
+  for (let k = 0, t = at; t < to - 0.3; k++, t += bar) {
+    const ch = prog[k % 4];
+    chordPiano(ch.slice(2), t, bar, 0.2);
+    pick.forEach((j, i) => { const tt = t + i * 0.3; if (tt < to - 0.15) put(bus, pluck(N(ch[j]), 0.5, i ? 0.22 : 0.3, 0.45, seed + k * 8 + i), tt, 0.85, i % 2 ? 0.3 : -0.3); });
+    if (k % 2 === 1) put(bus, bell(N(['A5', 'G5', 'F5', 'D5'][k % 4]), 0.5, 0.08, 2.0, 0.8), t + 1.2, 1, 0.35);
+  }
+}
+if (sec.cozy) cozy(sec.cozy, 60);
+if (sec.cozy2) cozy(sec.cozy2, 160);
 // ---- ache: single descending piano notes
 if (sec.ache) {
   const { at, to } = sec.ache;
@@ -135,7 +148,7 @@ reverb(bus, { room: 0.86, damp: 0.35, wet: 0.32, width: 1 });
 for (const ch of bus) biquad(ch, 'hp', 70, 0.7);
 for (let c = 0; c < 2; c++) for (let i = 0; i < bus[c].length; i++) bus[c][i] += dry[c][i];
 // section levels: the romance sits a little lower so the voice floats over it; the action pushes forward
-const LEVEL = { romance: -3.5, action: 2, build: 1 };
+const LEVEL = { romance: -3.5, action: 2, build: 1, cozy: -4, cozy2: -5 };
 for (const [kind, gdb] of Object.entries(LEVEL)) {
   if (!sec[kind]) continue;
   const { at, to } = sec[kind], g = db(gdb), f = Math.round(0.25 * RATE);

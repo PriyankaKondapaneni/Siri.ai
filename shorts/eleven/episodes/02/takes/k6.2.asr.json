@@ -1,41 +1,41 @@
 {
- "duration": 3.0650625,
+ "duration": 2.8793125,
  "language": "English",
  "language_code": "en",
- "request_id": "3fde068f-388a-41a9-ae21-201713e2e2d8",
+ "request_id": "ab0f33bf-c200-4c38-9b02-f39ecba13892",
  "segments": [
   {
-   "end": 0.56,
-   "start": 0.16,
+   "end": 0.48,
+   "start": 0.08,
    "text": "Half"
   },
   {
-   "end": 1.6,
+   "end": 1.68,
    "start": 1.52,
    "text": "You"
   },
   {
    "end": 1.84,
-   "start": 1.6,
+   "start": 1.68,
    "text": "can"
   },
   {
-   "end": 2,
+   "end": 2.08,
    "start": 1.84,
    "text": "have"
   },
   {
-   "end": 2.08,
-   "start": 2,
+   "end": 2.16,
+   "start": 2.08,
    "text": "the"
   },
   {
    "end": 2.4,
-   "start": 2.08,
+   "start": 2.16,
    "text": "bigger"
   },
   {
-   "end": 2.72,
+   "end": 2.8,
    "start": 2.4,
    "text": "one"
   }

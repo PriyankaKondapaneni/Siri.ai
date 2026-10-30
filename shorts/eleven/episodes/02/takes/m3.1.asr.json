@@ -1,0 +1,19 @@
+{
+ "duration": 2.6006875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "6ff913cf-6f04-44e4-9dd6-0eab3fdc3a30",
+ "segments": [
+  {
+   "end": 0.64,
+   "start": 0,
+   "text": "Why"
+  },
+  {
+   "end": 2.32,
+   "start": 1.6,
+   "text": "Why"
+  }
+ ],
+ "text": "Why? Why?"
+}

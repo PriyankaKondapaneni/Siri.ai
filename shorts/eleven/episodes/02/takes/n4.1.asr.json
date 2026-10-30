@@ -1,32 +1,32 @@
 {
- "duration": 6.315875,
+ "duration": 3.204375,
  "language": "English",
  "language_code": "en",
- "request_id": "c8dcb75c-a951-412b-9373-82a3fbe526de",
+ "request_id": "3bd9dd0a-3a61-4bb7-9dd8-eed0ce937bb3",
  "segments": [
   {
    "end": 0.24,
-   "start": 0,
+   "start": 0.08,
    "text": "We"
   },
   {
-   "end": 0.72,
+   "end": 0.8,
    "start": 0.24,
    "text": "talked"
   },
   {
-   "end": 1.04,
-   "start": 0.72,
+   "end": 1.12,
+   "start": 0.8,
    "text": "until"
   },
   {
-   "end": 1.2,
-   "start": 1.04,
+   "end": 1.28,
+   "start": 1.12,
    "text": "they"
   },
   {
    "end": 1.84,
-   "start": 1.2,
+   "start": 1.28,
    "text": "closed"
   },
   {
@@ -35,45 +35,10 @@
    "text": "the"
   },
   {
-   "end": 2.72,
+   "end": 2.8,
    "start": 1.92,
    "text": "cafe"
-  },
-  {
-   "end": 3.36,
-   "start": 3.12,
-   "text": "He"
-  },
-  {
-   "end": 3.84,
-   "start": 3.36,
-   "text": "laughed"
-  },
-  {
-   "end": 4.16,
-   "start": 3.84,
-   "text": "like"
-  },
-  {
-   "end": 4.32,
-   "start": 4.16,
-   "text": "he'd"
-  },
-  {
-   "end": 4.72,
-   "start": 4.32,
-   "text": "known"
-  },
-  {
-   "end": 4.88,
-   "start": 4.72,
-   "text": "me"
-  },
-  {
-   "end": 5.92,
-   "start": 4.88,
-   "text": "forever"
   }
  ],
- "text": "We talked until they closed the cafe. He laughed like he'd known me forever."
+ "text": "We talked until they closed the cafe."
 }
