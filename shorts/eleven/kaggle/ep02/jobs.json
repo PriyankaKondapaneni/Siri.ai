@@ -1,55 +1,12 @@
 [
  {
-  "id": "shot09_t1",
-  "frame": "frames/shot09.jpg",
-  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a charcoal coat talks warmly to someone in front of him, his mouth moving as he speaks. He raises his eyebrows in surprise, tilts his head a little and smiles. His hair moves in the breeze. A blurred shoulder in the foreground stays still. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
-  "frames": 121,
-  "seed": 11,
-  "shot": 9,
-  "start": 12.189,
-  "end": 17.412,
-  "t0": 12.229
- },
- {
-  "id": "shot09_t2",
-  "frame": "frames/shot09.jpg",
-  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a charcoal coat talks warmly to someone in front of him, his mouth moving as he speaks. He raises his eyebrows in surprise, tilts his head a little and smiles. His hair moves in the breeze. A blurred shoulder in the foreground stays still. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
-  "frames": 121,
-  "seed": 1111,
-  "shot": 9,
-  "start": 12.189,
-  "end": 17.412,
-  "t0": 12.229
- },
- {
-  "id": "shot22_t1",
-  "frame": "frames/shot22.jpg",
-  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a dim caf\u00e9. His smile fades, he looks down sadly and speaks quietly, his mouth moving slowly, then he blinks and his eyes glisten. Dim warm light. Very slow push in. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
-  "frames": 109,
-  "seed": 11,
-  "shot": 22,
-  "start": 43.592999999999996,
-  "end": 47.693,
-  "t0": 43.633
- },
- {
-  "id": "shot22_t2",
-  "frame": "frames/shot22.jpg",
-  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a dim caf\u00e9. His smile fades, he looks down sadly and speaks quietly, his mouth moving slowly, then he blinks and his eyes glisten. Dim warm light. Very slow push in. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
-  "frames": 109,
-  "seed": 1111,
-  "shot": 22,
-  "start": 43.592999999999996,
-  "end": 47.693,
-  "t0": 43.633
- },
- {
   "id": "shot27_t1",
   "frame": "frames/shot27.jpg",
   "prompt": "Anime animation in a flat, hand-drawn webtoon style. At night in bed, a young woman looks down at her phone as it lights up. Her smile fades into worry, the phone screen glows on her face. Rain on the window. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
   "frames": 77,
   "seed": 11,
   "shot": 27,
+  "part": "",
   "start": 53.803000000000004,
   "end": 56.553000000000004,
   "t0": 53.843
@@ -61,6 +18,7 @@
   "frames": 77,
   "seed": 1111,
   "shot": 27,
+  "part": "",
   "start": 53.803000000000004,
   "end": 56.553000000000004,
   "t0": 53.843
@@ -72,6 +30,7 @@
   "frames": 77,
   "seed": 11,
   "shot": 32,
+  "part": "",
   "start": 67.372,
   "end": 70.24199999999999,
   "t0": 67.412
@@ -83,9 +42,58 @@
   "frames": 77,
   "seed": 1111,
   "shot": 32,
+  "part": "",
   "start": 67.372,
   "end": 70.24199999999999,
   "t0": 67.412
+ },
+ {
+  "id": "shot09a_t1",
+  "frame": "frames/shot09a.jpg",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a charcoal coat looks at someone in front of him with surprise, raises his eyebrows and starts talking, his mouth moving, then smiles warmly. His hair moves in the breeze. A blurred shoulder in the foreground stays still. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 73,
+  "seed": 11,
+  "shot": 9,
+  "part": "a",
+  "start": 12.189,
+  "end": 14.8005,
+  "t0": 12.229
+ },
+ {
+  "id": "shot09a_t2",
+  "frame": "frames/shot09a.jpg",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a charcoal coat looks at someone in front of him with surprise, raises his eyebrows and starts talking, his mouth moving, then smiles warmly. His hair moves in the breeze. A blurred shoulder in the foreground stays still. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 73,
+  "seed": 1111,
+  "shot": 9,
+  "part": "a",
+  "start": 12.189,
+  "end": 14.8005,
+  "t0": 12.229
+ },
+ {
+  "id": "shot09b_t1",
+  "frame": "frames/shot09b.jpg",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a charcoal coat keeps talking to someone in front of him, his mouth moving, a slightly concerned look, then a gentle smile and a small tilt of his head. His hair moves in the breeze. A blurred shoulder in the foreground stays still. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 73,
+  "seed": 11,
+  "shot": 9,
+  "part": "b",
+  "start": 14.8005,
+  "end": 17.412,
+  "t0": 14.84
+ },
+ {
+  "id": "shot09b_t2",
+  "frame": "frames/shot09b.jpg",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a charcoal coat keeps talking to someone in front of him, his mouth moving, a slightly concerned look, then a gentle smile and a small tilt of his head. His hair moves in the breeze. A blurred shoulder in the foreground stays still. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 73,
+  "seed": 1111,
+  "shot": 9,
+  "part": "b",
+  "start": 14.8005,
+  "end": 17.412,
+  "t0": 14.84
  },
  {
   "id": "shot11_t1",
@@ -94,6 +102,7 @@
   "frames": 73,
   "seed": 11,
   "shot": 11,
+  "part": "",
   "start": 19.451999999999998,
   "end": 22.032,
   "t0": 19.492
@@ -105,6 +114,7 @@
   "frames": 73,
   "seed": 1111,
   "shot": 11,
+  "part": "",
   "start": 19.451999999999998,
   "end": 22.032,
   "t0": 19.492
@@ -116,6 +126,7 @@
   "frames": 65,
   "seed": 11,
   "shot": 15,
+  "part": "",
   "start": 27.313000000000002,
   "end": 29.572999999999997,
   "t0": 27.353
@@ -127,6 +138,7 @@
   "frames": 65,
   "seed": 1111,
   "shot": 15,
+  "part": "",
   "start": 27.313000000000002,
   "end": 29.572999999999997,
   "t0": 27.353
@@ -138,6 +150,7 @@
   "frames": 61,
   "seed": 11,
   "shot": 12,
+  "part": "",
   "start": 22.032,
   "end": 24.133,
   "t0": 22.072
@@ -149,6 +162,7 @@
   "frames": 61,
   "seed": 1111,
   "shot": 12,
+  "part": "",
   "start": 22.032,
   "end": 24.133,
   "t0": 22.072
@@ -160,6 +174,7 @@
   "frames": 61,
   "seed": 11,
   "shot": 23,
+  "part": "",
   "start": 47.693,
   "end": 49.873000000000005,
   "t0": 48.143
@@ -171,9 +186,58 @@
   "frames": 61,
   "seed": 1111,
   "shot": 23,
+  "part": "",
   "start": 47.693,
   "end": 49.873000000000005,
   "t0": 48.143
+ },
+ {
+  "id": "shot22a_t1",
+  "frame": "frames/shot22a.jpg",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a dim caf\u00e9. His smile fades and he looks down sadly, speaking quietly, his mouth moving slowly. Dim warm light. Very slow push in. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 57,
+  "seed": 11,
+  "shot": 22,
+  "part": "a",
+  "start": 43.592999999999996,
+  "end": 45.643,
+  "t0": 43.633
+ },
+ {
+  "id": "shot22a_t2",
+  "frame": "frames/shot22a.jpg",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a dim caf\u00e9. His smile fades and he looks down sadly, speaking quietly, his mouth moving slowly. Dim warm light. Very slow push in. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 57,
+  "seed": 1111,
+  "shot": 22,
+  "part": "a",
+  "start": 43.592999999999996,
+  "end": 45.643,
+  "t0": 43.633
+ },
+ {
+  "id": "shot22b_t1",
+  "frame": "frames/shot22b.jpg",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a dim caf\u00e9 looks down, speaking quietly with a sad expression, his mouth moving slowly, then he blinks and his eyes glisten. Dim warm light. Very slow push in. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 57,
+  "seed": 11,
+  "shot": 22,
+  "part": "b",
+  "start": 45.643,
+  "end": 47.693,
+  "t0": 45.683
+ },
+ {
+  "id": "shot22b_t2",
+  "frame": "frames/shot22b.jpg",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A young man in a dim caf\u00e9 looks down, speaking quietly with a sad expression, his mouth moving slowly, then he blinks and his eyes glisten. Dim warm light. Very slow push in. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 57,
+  "seed": 1111,
+  "shot": 22,
+  "part": "b",
+  "start": 45.643,
+  "end": 47.693,
+  "t0": 45.683
  },
  {
   "id": "shot10_t1",
@@ -182,6 +246,7 @@
   "frames": 57,
   "seed": 11,
   "shot": 10,
+  "part": "",
   "start": 17.412,
   "end": 19.451999999999998,
   "t0": 17.452
@@ -193,6 +258,7 @@
   "frames": 57,
   "seed": 1111,
   "shot": 10,
+  "part": "",
   "start": 17.412,
   "end": 19.451999999999998,
   "t0": 17.452
@@ -204,6 +270,7 @@
   "frames": 53,
   "seed": 11,
   "shot": 8,
+  "part": "",
   "start": 10.289,
   "end": 12.189,
   "t0": 10.329
@@ -215,6 +282,7 @@
   "frames": 53,
   "seed": 1111,
   "shot": 8,
+  "part": "",
   "start": 10.289,
   "end": 12.189,
   "t0": 10.329
@@ -226,6 +294,7 @@
   "frames": 49,
   "seed": 11,
   "shot": 3,
+  "part": "",
   "start": 1.3,
   "end": 2.409,
   "t0": 1.34
@@ -237,6 +306,7 @@
   "frames": 49,
   "seed": 1111,
   "shot": 3,
+  "part": "",
   "start": 1.3,
   "end": 2.409,
   "t0": 1.34
@@ -248,6 +318,7 @@
   "frames": 49,
   "seed": 11,
   "shot": 6,
+  "part": "",
   "start": 7.439,
   "end": 8.959000000000001,
   "t0": 8.189
@@ -259,6 +330,7 @@
   "frames": 49,
   "seed": 1111,
   "shot": 6,
+  "part": "",
   "start": 7.439,
   "end": 8.959000000000001,
   "t0": 8.189
@@ -270,6 +342,7 @@
   "frames": 49,
   "seed": 11,
   "shot": 13,
+  "part": "",
   "start": 24.133,
   "end": 25.173,
   "t0": 24.583
@@ -281,6 +354,7 @@
   "frames": 49,
   "seed": 1111,
   "shot": 13,
+  "part": "",
   "start": 24.133,
   "end": 25.173,
   "t0": 24.583
@@ -292,6 +366,7 @@
   "frames": 49,
   "seed": 11,
   "shot": 16,
+  "part": "",
   "start": 29.572999999999997,
   "end": 30.563000000000002,
   "t0": 29.613
@@ -303,6 +378,7 @@
   "frames": 49,
   "seed": 1111,
   "shot": 16,
+  "part": "",
   "start": 29.572999999999997,
   "end": 30.563000000000002,
   "t0": 29.613
@@ -314,6 +390,7 @@
   "frames": 49,
   "seed": 11,
   "shot": 18,
+  "part": "",
   "start": 34.142999999999994,
   "end": 35.063,
   "t0": 34.183
@@ -325,6 +402,7 @@
   "frames": 49,
   "seed": 1111,
   "shot": 18,
+  "part": "",
   "start": 34.142999999999994,
   "end": 35.063,
   "t0": 34.183
@@ -336,6 +414,7 @@
   "frames": 49,
   "seed": 11,
   "shot": 24,
+  "part": "",
   "start": 49.873000000000005,
   "end": 51.503,
   "t0": 49.973
@@ -347,6 +426,7 @@
   "frames": 49,
   "seed": 1111,
   "shot": 24,
+  "part": "",
   "start": 49.873000000000005,
   "end": 51.503,
   "t0": 49.973

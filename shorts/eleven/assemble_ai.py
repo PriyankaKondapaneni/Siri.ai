@@ -43,21 +43,24 @@ def clip_size(path):
     return w, h
 
 
-# the Wan clips, upscaled once to the frame size (cover, centred)
+# the Wan pieces: one per shot, or two parts (a, b) for a long shot
+segs = {}
+for j in jobs:
+    tag = f"shot{j['shot']:02d}{j.get('part', '')}"
+    segs[tag] = dict(tag=tag, shot=j['shot'], part=j.get('part', ''), s=j.get('start', shots[j['shot']][0]), e=j.get('end', shots[j['shot']][1]))
 clip = {}
-for k in ai:
-    take = int(PICKS.get(str(k), 1))
-    path = f'{CLIPS}/shot{k:02d}_t{take}.mp4'
+for tag, g in sorted(segs.items(), key=lambda x: x[1]['s']):
+    take = int(PICKS.get(tag, PICKS.get(str(g['shot']), 1)))
+    path = f'{CLIPS}/{tag}_t{take}.mp4'
     if not os.path.exists(path):
-        alt = f'{CLIPS}/shot{k:02d}_t{3 - take}.mp4'
-        print(f'shot {k}: take {take} missing, using {alt if os.path.exists(alt) else "the code shot"}')
+        alt = f'{CLIPS}/{tag}_t{3 - take}.mp4'
+        print(f'{tag}: take {take} missing, using {alt if os.path.exists(alt) else "the code shot"}')
         if not os.path.exists(alt): continue
         path = alt
     cw, ch = clip_size(path)
-    clip[k] = read_all(path, cw, ch)  # kept small; upscaled frame by frame when used
-    fr = clip[k]
-    s0, e0 = shots[k][0], shots[k][1]
-    print(f'shot {k}: {len(fr)} frames ({len(fr) / 24:.2f} s) for {e0 - s0:.2f} s')
+    clip[tag] = read_all(path, cw, ch)  # kept small; upscaled frame by frame when used
+    print(f"{tag}: {len(clip[tag])} frames ({len(clip[tag]) / 24:.2f} s) for {g['e'] - g['s']:.2f} s")
+ai_shots = {segs[t]['shot'] for t in clip}
 
 # the engine's finish, so Wan frames sit with the rest: a soft vignette and fine grain
 yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
@@ -66,13 +69,12 @@ VIG = (1 - 0.32 * np.clip(r - 0.35, 0, 1) ** 1.6)[..., None]
 rng = np.random.default_rng(11)
 GRAIN = [rng.normal(0, 3.2, (H // 2, W // 2, 1)).astype(np.float32) for _ in range(6)]
 
-
 _up = {}
-def upscale(k, i):
-    """frame i of shot k at 1080x1920 (cover, centred), with a light sharpen for the line work"""
-    key = (k, i)
+def upscale(tag, i):
+    """frame i of a Wan piece at 1080x1920 (cover, centred), with a light sharpen for the line work"""
+    key = (tag, i)
     if key in _up: return _up[key]
-    im = clip[k][i]; ch, cw = im.shape[:2]
+    im = clip[tag][i]; ch, cw = im.shape[:2]
     s = max(W / cw, H / ch); nw, nh = round(cw * s), round(ch * s)
     big = cv2.resize(im, (nw, nh), interpolation=cv2.INTER_LANCZOS4)
     x0, y0 = (nw - W) // 2, (nh - H) // 2
@@ -84,16 +86,26 @@ def upscale(k, i):
     return out
 
 
-def ai_frame(k, t):
-    """Wan shot k at episode time t (may run past the shot's end, for dissolves)."""
-    fr = clip[k]
-    s0, e0 = shots[k][0], shots[k][1]
+def ai_frame(tag, t):
+    """Wan piece `tag` at episode time t (it may run a little past its end, for blends)."""
+    fr, g = clip[tag], segs[tag]
     have = len(fr) / 24
-    rate = min(1.0, have / max(0.01, e0 - s0 + DISSOLVE))  # slow it slightly when the clip is short
-    i = int(np.clip(round((t - s0) * rate * 24), 0, len(fr) - 1))
-    im = upscale(k, i).astype(np.float32) * VIG
-    g = cv2.resize(GRAIN[int(t * 24) % 6], (W, H), interpolation=cv2.INTER_LINEAR)[..., None]
-    return np.clip(im + g, 0, 255)
+    rate = min(1.0, have / max(0.01, g['e'] - g['s'] + DISSOLVE))  # slow it slightly when the clip is short
+    i = int(np.clip(round((t - g['s']) * rate * 24), 0, len(fr) - 1))
+    im = upscale(tag, i).astype(np.float32) * VIG
+    gr = cv2.resize(GRAIN[int(t * 24) % 6], (W, H), interpolation=cv2.INTER_LINEAR)[..., None]
+    return np.clip(im + gr, 0, 255)
+
+
+def piece_at(t):
+    for tag in clip:
+        if segs[tag]['s'] <= t < segs[tag]['e']: return tag
+    return None
+
+
+def last_piece(k):
+    ps = [t for t in clip if segs[t]['shot'] == k]
+    return max(ps, key=lambda t: segs[t]['s']) if ps else None
 
 
 def shot_at(t):
@@ -104,7 +116,7 @@ def shot_at(t):
 
 N = probe_frames(DELIVER)
 # subtitles for the Wan frames, rendered by the engine on transparency
-sub_frames = [f for f in range(N) if shot_at(f / FPS) in clip or (shot_at(f / FPS) > 0 and shot_at(f / FPS) - 1 in clip and f / FPS - shots[shot_at(f / FPS)][0] < DISSOLVE)]
+sub_frames = [f for f in range(N) if piece_at(f / FPS) or (shot_at(f / FPS) - 1 in ai_shots and f / FPS - shots[shot_at(f / FPS)][0] < DISSOLVE)]
 sub_dir = f'build/ep{EP}ai/subs'
 os.makedirs(sub_dir, exist_ok=True)
 todo = [f for f in sub_frames if not os.path.exists(f'{sub_dir}/f{f:05d}.png')]
@@ -126,28 +138,36 @@ src = subprocess.Popen(['ffmpeg', '-v', 'error', '-i', DELIVER, '-f', 'rawvideo'
 enc = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                         '-i', DELIVER, '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p',
                         '-profile:v', 'high', '-c:a', 'copy', '-shortest', '-movflags', '+faststart', OUT], stdin=subprocess.PIPE)
-held = {}  # the last code frame before a shot, for dissolving out of it
-prev_code = None
+held = {}  # the last code frame before a Wan shot, for dissolving out of it
+PART_BLEND = 0.2
 for f in range(N):
     code = np.frombuffer(src.stdout.read(W * H * 3), np.uint8).reshape(H, W, 3)
     t = f / FPS
     k = shot_at(t)
     s0 = shots[k][0]
-    dissolving = shots[k][3] == 'dissolve' and t - s0 < DISSOLVE and k > 0 and (k in clip or k - 1 in clip)
-    if k in clip:
-        im = ai_frame(k, t)
-        if dissolving:
-            a = (t - s0) / DISSOLVE; a = a * a * (3 - 2 * a)
-            before = ai_frame(k - 1, t) if k - 1 in clip else held.get(k, code.astype(np.float32))
+    tag = piece_at(t)
+    dissolving = shots[k][3] == 'dissolve' and t - s0 < DISSOLVE and k > 0 and (k in ai_shots or k - 1 in ai_shots)
+    ease = lambda a: a * a * (3 - 2 * a)
+    if tag:
+        im = ai_frame(tag, t)
+        g = segs[tag]
+        if g['part'] == 'b' and t - g['s'] < PART_BLEND:  # the two parts of a long shot meet in a quick blend
+            a = ease((t - g['s']) / PART_BLEND)
+            im = ai_frame(f"shot{g['shot']:02d}a", t) * (1 - a) + im * a
+        elif dissolving and g['part'] in ('', 'a'):
+            a = ease((t - s0) / DISSOLVE)
+            prev = last_piece(k - 1)
+            before = ai_frame(prev, t) if prev else held.get(k, code.astype(np.float32))
             im = before * (1 - a) + im * a
         im = subs(f, im)
     else:
         im = code.astype(np.float32)
-        if dissolving:  # out of a Wan shot into a code shot
-            a = (t - s0) / DISSOLVE; a = a * a * (3 - 2 * a)
-            im = ai_frame(k - 1, t) * (1 - a) + im * a  # the code frame already carries the subtitle
+        prev = last_piece(k - 1) if k > 0 else None
+        if dissolving and prev:  # out of a Wan shot into a code shot; the code frame already carries the subtitle
+            a = ease((t - s0) / DISSOLVE)
+            im = ai_frame(prev, t) * (1 - a) + im * a
     # remember the code frame just before each Wan shot begins
-    if k + 1 < len(shots) and k + 1 in clip and k not in clip and 0 <= shots[k + 1][0] - t < 1.5 / FPS:
+    if k + 1 < len(shots) and k + 1 in ai_shots and k not in ai_shots and 0 <= shots[k + 1][0] - t < 1.5 / FPS:
         held[k + 1] = code.astype(np.float32)
     enc.stdin.write(np.clip(im, 0, 255).astype(np.uint8).tobytes())
     if f % 300 == 0: print(f'{f}/{N}', flush=True)
