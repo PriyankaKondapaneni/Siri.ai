@@ -1,0 +1,64 @@
+{
+ "duration": 5.3870625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "a2b99f5d-d3a0-4e72-9ed5-bd82674a2715",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0,
+   "text": "Because"
+  },
+  {
+   "end": 0.64,
+   "start": 0.48,
+   "text": "if"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "I"
+  },
+  {
+   "end": 1.44,
+   "start": 0.8,
+   "text": "do"
+  },
+  {
+   "end": 2.8,
+   "start": 2.4,
+   "text": "you're"
+  },
+  {
+   "end": 2.96,
+   "start": 2.8,
+   "text": "the"
+  },
+  {
+   "end": 3.44,
+   "start": 2.96,
+   "text": "one"
+  },
+  {
+   "end": 3.6,
+   "start": 3.44,
+   "text": "who"
+  },
+  {
+   "end": 4.16,
+   "start": 3.68,
+   "text": "doesn't"
+  },
+  {
+   "end": 4.48,
+   "start": 4.16,
+   "text": "come"
+  },
+  {
+   "end": 5.04,
+   "start": 4.48,
+   "text": "home"
+  }
+ ],
+ "text": "Because if I do, you're the one who doesn't come home."
+}

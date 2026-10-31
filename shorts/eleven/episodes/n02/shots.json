@@ -1,0 +1,157 @@
+{
+ "shots": [
+  [
+   0,
+   1.1,
+   "danger",
+   "",
+   "(ctx, t, u) => { const [sx, sy, sr] = PP.shake(t, 0, 14, 0.4); PP.with(ctx, () => { ctx.translate(sx, sy); ctx.rotate(sr); phoneShot"
+  ],
+  [
+   1.1,
+   2.3,
+   "night",
+   "",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   2.3,
+   3.698,
+   "night",
+   "",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   3.698,
+   6.448,
+   "dusk",
+   "",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   6.448,
+   9.048,
+   "dusk",
+   "",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   9.048,
+   12.568,
+   "dusk",
+   "",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   12.568,
+   17.038,
+   "dusk",
+   "",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   17.038,
+   19.938000000000002,
+   "dusk",
+   "",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   19.938000000000002,
+   23.907999999999998,
+   "night",
+   "dissolve",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   23.907999999999998,
+   26.568,
+   "night",
+   "",
+   "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   26.568,
+   26.718,
+   null,
+   "",
+   "(ctx) => { ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); }"
+  ],
+  [
+   26.718,
+   28.518,
+   null,
+   "",
+   "(ctx, t) => { ctx.fillStyle = '#04050a'; ctx.fillRect(0, 0, W, H); const t0 = C.endCard, a = PP.clamp((t - t0 - 0.1) / 0.6); PP."
+  ]
+ ],
+ "total": 856,
+ "endCard": 26.718,
+ "subs": [
+  {
+   "s": 0.27,
+   "e": 3.5799999999999996,
+   "kind": "note"
+  },
+  {
+   "s": 3.898,
+   "e": 5.608,
+   "kind": "narr"
+  },
+  {
+   "s": 5.678,
+   "e": 7.888,
+   "kind": "narr"
+  },
+  {
+   "s": 7.918,
+   "e": 8.988000000000001,
+   "kind": "narr"
+  },
+  {
+   "s": 9.168,
+   "e": 10.738,
+   "kind": "narr"
+  },
+  {
+   "s": 10.767999999999999,
+   "e": 12.558,
+   "kind": "narr"
+  },
+  {
+   "s": 12.738,
+   "e": 14.508,
+   "kind": "narr"
+  },
+  {
+   "s": 14.537999999999998,
+   "e": 15.868,
+   "kind": "narr"
+  },
+  {
+   "s": 15.898,
+   "e": 17.308000000000003,
+   "kind": "narr"
+  },
+  {
+   "s": 17.338,
+   "e": 19.928,
+   "kind": "narr"
+  },
+  {
+   "s": 20.038,
+   "e": 21.608,
+   "kind": "narr"
+  },
+  {
+   "s": 21.637999999999998,
+   "e": 24.568,
+   "kind": "narr"
+  },
+  {
+   "s": 24.598,
+   "e": 26.708000000000002,
+   "kind": "narr"
+  }
+ ]
+}

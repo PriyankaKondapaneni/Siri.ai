@@ -1,0 +1,96 @@
+{
+ "model": "gpt-image-2",
+ "size": "1024x1536",
+ "quality": "medium",
+ "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients on the characters, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. The cheeks have only a soft, natural pink blush, with NO hatching lines, strokes or dashes on the cheeks. Full, properly proportioned arms with sleeves and simple cute cartoon hands; never stick-figure arms. The background is painted in the soft illustrated style of the LAST reference image: soft flat pastel colours, gentle texture, simple clean shapes, thin soft outlines, slightly muted. Vertical 9:16 film frame, the subject centred, cinematic composition with depth. No text, no letters, no numbers, no watermark.",
+ "images": {
+  "kabir_window": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Kabir, the same young man as the SECOND reference image with exactly the same face: messy black hair, dark eyes, a charcoal wool coat over a black turtleneck, a vintage leather-strap watch. Night. He sits by a city bus window, seen from outside through the glass streaked with rain, his face softly lit by passing street lights, looking out, melancholy, mouth closed."
+  },
+  "mira_eyes": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Night, close-up. She lies in bed in a cream sleep top (no scarf), her phone's red glow lighting her face from below, eyes wide, startled, mouth closed."
+  },
+  "street_rain": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Dusk, a city street with shops and street lights just coming on, the first rain falling, wet pavement reflecting orange light. She walks toward the camera, full figure, looking up at the sky."
+  },
+  "bus_away": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Dusk, rain. A city bus with the route number on its sign pulling away from a bus stop, seen from the pavement at a three-quarter angle. Through one of its side windows, small but clear, Kabir, the same young man as the SECOND reference image with exactly the same face: messy black hair, dark eyes, a charcoal wool coat over a black turtleneck, a vintage leather-strap watch. looking out. Tail lights glowing red in the rain."
+  },
+  "shelter_umbrella": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Dusk, heavy rain. She stands inside an empty glass bus shelter, slightly out of breath, wet strands of hair on her cheek, looking down at a closed black umbrella left lying on the shelter's bench. Rain streams off the shelter roof."
+  },
+  "strap_hands": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Close-up of a young woman's hands with cornflower-blue sleeves holding a closed black umbrella; a small folded white paper receipt is tucked under the umbrella's strap. Rainy bus shelter softly blurred behind. Proper cartoon hands with five fingers."
+  },
+  "receipt_close": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Extreme close-up of a small white bakery receipt held between a young woman's fingers, a few raindrops on the paper, the printed lines shown only as soft grey marks (no readable text). Warm street light, shallow depth of field."
+  },
+  "mira_think": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Dusk, rain. She stands under the bus shelter holding the closed black umbrella against her chest, looking down the wet street with a thoughtful expression, street lights reflecting on the road. Waist-up."
+  },
+  "lane_bakery": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Night, light rain. She walks down a quiet narrow residential lane holding the open black umbrella, passing a small corner bakery with its shutters down, warm lit windows in the old buildings above. Full figure, seen from the front."
+  },
+  "lane_building": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Night, drizzle. Seen from behind at a slight angle, she stands under the open black umbrella in front of a small old apartment building whose front steps are lit by a warm porch light."
+  },
+  "steps_kabir": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Kabir, the same young man as the SECOND reference image with exactly the same face: messy black hair, dark eyes, a charcoal wool coat over a black turtleneck, a vintage leather-strap watch. Night. He sits on the front steps of an old apartment building under a warm porch light, hair wet from the rain, a paper bakery bag resting on his knee, looking up toward the camera with quiet surprise, mouth closed. Waist-up, slightly low angle."
+  }
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "duration": 3.0650625,
+ "language_code": "en",
+ "request_id": "8926b352-ffe8-4270-9fb3-23e626d3d822",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0.08,
+   "text": "Don't"
+  },
+  {
+   "end": 0.56,
+   "start": 0.32,
+   "text": "let"
+  },
+  {
+   "end": 0.64,
+   "start": 0.56,
+   "text": "me"
+  },
+  {
+   "end": 0.96,
+   "start": 0.64,
+   "text": "get"
+  },
+  {
+   "end": 1.12,
+   "start": 0.96,
+   "text": "on"
+  },
+  {
+   "end": 1.2,
+   "start": 1.12,
+   "text": "the"
+  },
+  {
+   "end": 1.6,
+   "start": 1.2,
+   "text": "6"
+  },
+  {
+   "end": 2.72,
+   "start": 1.6,
+   "text": "40"
+  },
+  {
+   "end": 2.72,
+   "start": 2.72,
+   "text": "train"
+  }
+ ],
+ "text": "Don't let me get on the 6:40 train."
+}

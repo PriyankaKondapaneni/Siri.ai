@@ -1,0 +1,46 @@
+{
+ "episode": "n06",
+ "title": "The Six-Forty",
+ "card": "5 DAYS LEFT",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "tempo": 1.0,
+ "cap": 0.45,
+ "gap": 0.3,
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "text": "Don't let me get on the six-forty a.m. train.",
+   "take": "k2",
+   "from": 7,
+   "show": "Don't let me get on the 6:40 a.m. train."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[out of breath, urgent, low] Mira. You found me, didn't you? Tomorrow... don't let me get on the six-forty a.m. train.",
+   "show": "Mira. You found me, didn't you? Tomorrow... don't let me get on the 6:40 a.m. train.",
+   "gap": 2.4
+  },
+  {
+   "id": "m1",
+   "who": "mira",
+   "kind": "live",
+   "text": "[barely a whisper] Why?",
+   "gap": 0.5
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[voice breaking] Because if I do... you're the one who doesn't come home.",
+   "gap": 0.6
+  }
+ ]
+}

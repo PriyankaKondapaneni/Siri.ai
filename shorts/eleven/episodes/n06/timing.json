@@ -1,0 +1,335 @@
+{
+ "duration": 19.396,
+ "words": [
+  {
+   "w": "Don't",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 0.32,
+   "e": 0.8
+  },
+  {
+   "w": "let",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 0.56,
+   "e": 0.96
+  },
+  {
+   "w": "me",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 0.8,
+   "e": 1.2
+  },
+  {
+   "w": "get",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 0.96,
+   "e": 1.36
+  },
+  {
+   "w": "on",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 1.2,
+   "e": 1.76
+  },
+  {
+   "w": "the",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 1.44,
+   "e": 2.24
+  },
+  {
+   "w": "6:40",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 1.76,
+   "e": 2.48
+  },
+  {
+   "w": "a.m.",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 2.32,
+   "e": 2.72
+  },
+  {
+   "w": "train.",
+   "line": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 2.48,
+   "e": 3.36
+  },
+  {
+   "w": "Mira.",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 5.92,
+   "e": 7.01
+  },
+  {
+   "w": "You",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 6.93,
+   "e": 7.49
+  },
+  {
+   "w": "found",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 7.01,
+   "e": 7.65
+  },
+  {
+   "w": "me,",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 7.49,
+   "e": 8.05
+  },
+  {
+   "w": "didn't",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 7.65,
+   "e": 8.37
+  },
+  {
+   "w": "you?",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 8.05,
+   "e": 9.54
+  },
+  {
+   "w": "Tomorrow...",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 8.82,
+   "e": 10.23
+  },
+  {
+   "w": "don't",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 9.99,
+   "e": 10.47
+  },
+  {
+   "w": "let",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 10.47,
+   "e": 10.87
+  },
+  {
+   "w": "me",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 10.63,
+   "e": 11.03
+  },
+  {
+   "w": "get",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 10.87,
+   "e": 11.11
+  },
+  {
+   "w": "on",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 11.03,
+   "e": 11.43
+  },
+  {
+   "w": "the",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 11.11,
+   "e": 11.91
+  },
+  {
+   "w": "6:40",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 11.43,
+   "e": 12.15
+  },
+  {
+   "w": "a.m.",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 11.99,
+   "e": 12.39
+  },
+  {
+   "w": "train.",
+   "line": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 12.15,
+   "e": 13.03
+  },
+  {
+   "w": "Why?",
+   "line": "m1",
+   "who": "mira",
+   "kind": "live",
+   "s": 13.76,
+   "e": 14.4
+  },
+  {
+   "w": "Because",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 15.186,
+   "e": 15.586
+  },
+  {
+   "w": "if",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 15.586,
+   "e": 15.746
+  },
+  {
+   "w": "I",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 15.746,
+   "e": 15.906
+  },
+  {
+   "w": "do...",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 15.906,
+   "e": 16.386
+  },
+  {
+   "w": "you're",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 16.836,
+   "e": 17.236
+  },
+  {
+   "w": "the",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 17.236,
+   "e": 17.396
+  },
+  {
+   "w": "one",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 17.396,
+   "e": 17.876
+  },
+  {
+   "w": "who",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 17.876,
+   "e": 17.956
+  },
+  {
+   "w": "doesn't",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 17.956,
+   "e": 18.436
+  },
+  {
+   "w": "come",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 18.436,
+   "e": 18.756
+  },
+  {
+   "w": "home.",
+   "line": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 18.756,
+   "e": 19.236
+  }
+ ],
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "s": 0.25,
+   "e": 3.52,
+   "text": "Don't let me get on the 6:40 a.m. train."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "note",
+   "s": 5.92,
+   "e": 13.19,
+   "text": "Mira. You found me, didn't you? Tomorrow... don't let me get on the 6:40 a.m. train."
+  },
+  {
+   "id": "m1",
+   "who": "mira",
+   "kind": "live",
+   "s": 13.69,
+   "e": 14.516,
+   "text": "Why?"
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "note",
+   "s": 15.116,
+   "e": 19.396,
+   "text": "Because if I do... you're the one who doesn't come home."
+  }
+ ]
+}

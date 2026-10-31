@@ -1,0 +1,19 @@
+{
+ "duration": 0.8359375,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "c4f3018d-b730-426c-a8c3-a65bb75826b4",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "I"
+  },
+  {
+   "end": 0.64,
+   "start": 0.16,
+   "text": "know"
+  }
+ ],
+ "text": "I know."
+}

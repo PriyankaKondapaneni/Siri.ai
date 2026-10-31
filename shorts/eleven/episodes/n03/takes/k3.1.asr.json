@@ -1,0 +1,29 @@
+{
+ "duration": 1.7183125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "3fa51bc1-2dc6-43b5-ac06-c8fb0240ce67",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "It"
+  },
+  {
+   "end": 0.4,
+   "start": 0.16,
+   "text": "was"
+  },
+  {
+   "end": 0.64,
+   "start": 0.4,
+   "text": "my"
+  },
+  {
+   "end": 1.36,
+   "start": 0.64,
+   "text": "brother's"
+  }
+ ],
+ "text": "It was my brother's."
+}

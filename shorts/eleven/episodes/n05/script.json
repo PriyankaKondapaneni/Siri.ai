@@ -1,0 +1,50 @@
+{
+ "episode": "n05",
+ "title": "Get Home Safe",
+ "card": "6 DAYS LEFT",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "tempo": 1.0,
+ "cap": 0.45,
+ "gap": 0.3,
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "text": "The night he didn't come home.",
+   "take": "k5",
+   "from": 5,
+   "show": "The night he didn't come home."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, certain] A mechanical watch doesn't stop by itself. Someone has to stop winding it."
+  },
+  {
+   "id": "k5",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[after a while, very quietly] Eleven eleven. Three years ago. The night he didn't come home.",
+   "show": "11:11. Three years ago. The night he didn't come home."
+  },
+  {
+   "id": "k6",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[at the gate, easy and warm] Get home safe.",
+   "gap": 1.8
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quiet] He said it like it was the easiest thing in the world."
+  }
+ ]
+}

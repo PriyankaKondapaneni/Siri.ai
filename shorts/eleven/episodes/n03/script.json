@@ -1,0 +1,83 @@
+{
+ "episode": "n03",
+ "title": "Arjun",
+ "card": "6 DAYS LEFT",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "tempo": 1.0,
+ "cap": 0.45,
+ "gap": 0.3,
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "live",
+   "text": "It was my brother's.",
+   "take": "k3",
+   "show": "It was my brother's."
+  },
+  {
+   "id": "m1",
+   "who": "mira",
+   "kind": "live",
+   "text": "[quietly, holding it out] You left this."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[looking at it, then at her, softly] You followed a bus in the rain. For an umbrella."
+  },
+  {
+   "id": "m2",
+   "who": "mira",
+   "kind": "live",
+   "text": "[plainly] It looked expensive."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[a small breath] It isn't."
+  },
+  {
+   "id": "m3",
+   "who": "mira",
+   "kind": "live",
+   "text": "[gently] Then it looked important."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[quiet, careful] It was my brother's."
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low] The name stitched inside the strap said Arjun. Not his, then."
+  },
+  {
+   "id": "k4",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[practical, kind] You're soaked. I'll make tea."
+  },
+  {
+   "id": "m4",
+   "who": "mira",
+   "kind": "live",
+   "text": "[soft] You don't have to."
+  },
+  {
+   "id": "k5",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[simply] I know."
+  }
+ ]
+}

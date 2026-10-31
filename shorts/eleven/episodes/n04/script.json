@@ -1,0 +1,72 @@
+{
+ "episode": "n04",
+ "title": "Blue",
+ "card": "6 DAYS LEFT",
+ "model": "drama-3",
+ "voices": {
+  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
+  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+ },
+ "tempo": 1.0,
+ "cap": 0.45,
+ "gap": 0.3,
+ "lines": [
+  {
+   "id": "h0",
+   "who": "mira",
+   "kind": "narr",
+   "text": "From a night he hasn't lived yet.",
+   "take": "n2",
+   "from": 9,
+   "show": "From a night he hasn't lived yet."
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[observing, low] Two mugs on the rack, one never used. A photograph, turned to face the wall."
+  },
+  {
+   "id": "k1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[not quite looking at her] Blue suits you."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[hushed] He'd said that to me before. In a message. From a night he hasn't lived yet."
+  },
+  {
+   "id": "k2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[offhand] Sugar?"
+  },
+  {
+   "id": "m1",
+   "who": "mira",
+   "kind": "live",
+   "text": "[quiet] No."
+  },
+  {
+   "id": "k3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[a faint smile] Good. I don't have any."
+  },
+  {
+   "id": "m2",
+   "who": "mira",
+   "kind": "live",
+   "text": "[gently] Your watch has stopped."
+  },
+  {
+   "id": "k4",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[flat, quiet] Has it."
+  }
+ ]
+}

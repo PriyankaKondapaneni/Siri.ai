@@ -1,0 +1,64 @@
+{
+ "duration": 5.99075,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "447c9d98-a0b1-4974-bbcf-99c05f376f6f",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0,
+   "text": "The"
+  },
+  {
+   "end": 0.64,
+   "start": 0.16,
+   "text": "name"
+  },
+  {
+   "end": 1.28,
+   "start": 0.64,
+   "text": "stitched"
+  },
+  {
+   "end": 1.76,
+   "start": 1.28,
+   "text": "inside"
+  },
+  {
+   "end": 1.84,
+   "start": 1.76,
+   "text": "the"
+  },
+  {
+   "end": 2.4,
+   "start": 1.84,
+   "text": "strap"
+  },
+  {
+   "end": 2.88,
+   "start": 2.48,
+   "text": "said"
+  },
+  {
+   "end": 3.76,
+   "start": 3.04,
+   "text": "Arjun"
+  },
+  {
+   "end": 4.8,
+   "start": 4.32,
+   "text": "Not"
+  },
+  {
+   "end": 5.2,
+   "start": 4.8,
+   "text": "his"
+  },
+  {
+   "end": 5.6,
+   "start": 5.2,
+   "text": "then"
+  }
+ ],
+ "text": "The name stitched inside the strap said Arjun. Not his then."
+}

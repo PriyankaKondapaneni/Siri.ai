@@ -1,0 +1,54 @@
+{
+ "duration": 3.6688125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "5d69c499-937b-4c80-8a1d-f622f92138a9",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0,
+   "text": "And"
+  },
+  {
+   "end": 0.48,
+   "start": 0.32,
+   "text": "he'd"
+  },
+  {
+   "end": 0.96,
+   "start": 0.48,
+   "text": "left"
+  },
+  {
+   "end": 1.04,
+   "start": 0.96,
+   "text": "his"
+  },
+  {
+   "end": 1.68,
+   "start": 1.04,
+   "text": "umbrella"
+  },
+  {
+   "end": 2.32,
+   "start": 1.68,
+   "text": "behind"
+  },
+  {
+   "end": 2.4,
+   "start": 2.32,
+   "text": "in"
+  },
+  {
+   "end": 2.48,
+   "start": 2.4,
+   "text": "the"
+  },
+  {
+   "end": 3.2,
+   "start": 2.48,
+   "text": "rain"
+  }
+ ],
+ "text": "And he'd left his umbrella behind in the rain."
+}

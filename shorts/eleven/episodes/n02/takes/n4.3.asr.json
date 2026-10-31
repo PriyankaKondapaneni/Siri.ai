@@ -1,0 +1,99 @@
+{
+ "duration": 6.7338125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "5625d307-437a-4ce1-908c-2ff0522cebde",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0,
+   "text": "People"
+  },
+  {
+   "end": 0.56,
+   "start": 0.4,
+   "text": "who"
+  },
+  {
+   "end": 0.8,
+   "start": 0.56,
+   "text": "buy"
+  },
+  {
+   "end": 1.28,
+   "start": 0.8,
+   "text": "bread"
+  },
+  {
+   "end": 1.52,
+   "start": 1.36,
+   "text": "at"
+  },
+  {
+   "end": 1.6,
+   "start": 1.52,
+   "text": "the"
+  },
+  {
+   "end": 2.08,
+   "start": 1.6,
+   "text": "same"
+  },
+  {
+   "end": 2.56,
+   "start": 2.16,
+   "text": "hour"
+  },
+  {
+   "end": 3.2,
+   "start": 2.72,
+   "text": "every"
+  },
+  {
+   "end": 3.68,
+   "start": 3.2,
+   "text": "day"
+  },
+  {
+   "end": 4.32,
+   "start": 3.92,
+   "text": "don't"
+  },
+  {
+   "end": 4.56,
+   "start": 4.32,
+   "text": "live"
+  },
+  {
+   "end": 5.04,
+   "start": 4.56,
+   "text": "far"
+  },
+  {
+   "end": 5.28,
+   "start": 5.04,
+   "text": "from"
+  },
+  {
+   "end": 5.44,
+   "start": 5.28,
+   "text": "where"
+  },
+  {
+   "end": 5.6,
+   "start": 5.44,
+   "text": "they"
+  },
+  {
+   "end": 5.92,
+   "start": 5.6,
+   "text": "buy"
+  },
+  {
+   "end": 6.32,
+   "start": 5.92,
+   "text": "it"
+  }
+ ],
+ "text": "People who buy bread at the same hour every day don't live far from where they buy it."
+}
