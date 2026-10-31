@@ -1,54 +1,79 @@
 {
- "duration": 3.2,
+ "duration": 5.12,
  "language": "English",
  "language_code": "en",
- "request_id": "0d2f0f74-1f0a-4eb5-b973-1c94d5c279f0",
+ "request_id": "76d79d50-00f7-4b96-8825-07fa1e4bf769",
  "segments": [
   {
-   "end": 0.48,
-   "start": 0.16,
-   "text": "And"
+   "end": 0.4,
+   "start": 0.08,
+   "text": "He'd"
   },
   {
-   "end": 0.72,
-   "start": 0.56,
-   "text": "he'd"
+   "end": 0.64,
+   "start": 0.4,
+   "text": "pulled"
   },
   {
-   "end": 1.04,
-   "start": 0.72,
-   "text": "left"
+   "end": 0.8,
+   "start": 0.64,
+   "text": "me"
   },
   {
-   "end": 1.12,
-   "start": 1.04,
-   "text": "his"
+   "end": 0.96,
+   "start": 0.8,
+   "text": "off"
+  },
+  {
+   "end": 1.2,
+   "start": 0.96,
+   "text": "that"
   },
   {
    "end": 1.68,
-   "start": 1.12,
-   "text": "umbrella"
-  },
-  {
-   "end": 2.16,
-   "start": 1.68,
-   "text": "behind"
+   "start": 1.2,
+   "text": "curb"
   },
   {
    "end": 2.24,
-   "start": 2.16,
-   "text": "in"
+   "start": 1.92,
+   "text": "caught"
   },
   {
-   "end": 2.32,
+   "end": 2.4,
    "start": 2.24,
-   "text": "the"
+   "text": "his"
   },
   {
-   "end": 2.88,
-   "start": 2.32,
-   "text": "rain"
+   "end": 2.96,
+   "start": 2.4,
+   "text": "bus"
+  },
+  {
+   "end": 3.52,
+   "start": 3.36,
+   "text": "and"
+  },
+  {
+   "end": 3.76,
+   "start": 3.52,
+   "text": "left"
+  },
+  {
+   "end": 3.92,
+   "start": 3.76,
+   "text": "his"
+  },
+  {
+   "end": 4.32,
+   "start": 3.92,
+   "text": "umbrella"
+  },
+  {
+   "end": 4.96,
+   "start": 4.32,
+   "text": "behind"
   }
  ],
- "text": "And he'd left his umbrella behind in the rain."
+ "text": "He'd pulled me off that curb, caught his bus, and left his umbrella behind."
 }

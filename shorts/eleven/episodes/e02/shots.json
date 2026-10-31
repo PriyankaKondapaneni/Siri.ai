@@ -30,147 +30,147 @@
   ],
   [
    5.18,
-   6.57,
+   9.99,
    "dusk",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   6.57,
-   9.77,
+   9.99,
+   11.94,
    "dusk",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   9.77,
-   14,
+   11.94,
+   16.169999999999998,
    "dusk",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   14,
-   16.26,
+   16.169999999999998,
+   18.43,
    "dusk",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   16.26,
-   19.5,
+   18.43,
+   21.669999999999998,
    "night",
    "dissolve",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   19.5,
-   22.31,
+   21.669999999999998,
+   24.479999999999997,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   22.31,
-   24.080000000000002,
+   24.479999999999997,
+   26.25,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   24.080000000000002,
-   27.94,
+   26.25,
+   30.110000000000003,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   27.94,
-   30.02,
+   30.110000000000003,
+   32.19,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   30.02,
-   31.14,
+   32.19,
+   33.31,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   31.14,
-   33.559999999999995,
+   33.31,
+   35.73,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   33.559999999999995,
-   35.37,
+   35.73,
+   37.54,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   35.37,
-   39.28,
+   37.54,
+   41.45,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   39.28,
-   40.620000000000005,
+   41.45,
+   42.79,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   40.620000000000005,
-   46.58,
+   42.79,
+   48.75,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   46.58,
-   50.27,
+   48.75,
+   52.440000000000005,
    "night",
    "dissolve",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   50.27,
-   53.07,
+   52.440000000000005,
+   55.239999999999995,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   53.07,
-   54.5,
+   55.239999999999995,
+   56.67,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   54.5,
-   60.59,
+   56.67,
+   62.76,
    "night",
    "",
    "(ctx) => { ctx.fillStyle = '#0b0c12'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   60.59,
-   60.74,
+   62.76,
+   62.91,
    null,
    "",
    "(ctx) => { ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); }"
   ],
   [
-   60.74,
-   62.540000000000006,
+   62.91,
+   64.71,
    null,
    "",
    "(ctx, t) => {\n    ctx.fillStyle = '#04050a'; ctx.fillRect(0, 0, W, H);\n    const t0 = C.endCard, a = PP.clamp((t - t0 - 0.1) / 0.6);\n    PP."

@@ -16,7 +16,7 @@
       hookC: 1.5,
       hookEnd: L('n1').s - 0.25,
       bus: L('n1').s + 2.5,
-      shelter: L('n2').s - 0.1,
+      shelter: W('n2', 'left') - 0.2,
       receipt: L('n3').s - 0.15,
       think: W('n3', '6:20') - 0.35,
       lane: L('n4').s - 0.15,

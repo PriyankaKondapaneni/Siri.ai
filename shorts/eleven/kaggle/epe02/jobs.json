@@ -19,8 +19,8 @@
   "seed": 0,
   "shot": 5,
   "part": "",
-  "start": 6.57,
-  "end": 9.77,
+  "start": 9.99,
+  "end": 11.94,
   "reuse": true
  },
  {
@@ -31,8 +31,8 @@
   "seed": 0,
   "shot": 7,
   "part": "",
-  "start": 14,
-  "end": 16.26,
+  "start": 16.169999999999998,
+  "end": 18.43,
   "reuse": true
  },
  {
@@ -43,20 +43,32 @@
   "seed": 0,
   "shot": 9,
   "part": "",
-  "start": 19.5,
-  "end": 22.31,
+  "start": 21.669999999999998,
+  "end": 24.479999999999997,
   "reuse": true
  },
  {
-  "id": "shot04",
+  "id": "shot04a",
   "frame": "frames/bus_away.png",
   "prompt": "Anime animation in a flat, hand-drawn webtoon style. A city bus pulls away from a rainy bus stop at dusk, a young man visible in its side window, the bus drives off, tail lights glowing, rain falling. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
   "frames": 77,
   "seed": 0,
   "shot": 4,
-  "part": "",
+  "part": "a",
   "start": 5.18,
-  "end": 6.57,
+  "end": 8.44,
+  "reuse": true
+ },
+ {
+  "id": "shot04b",
+  "frame": "frames/bus_away.png",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A city bus pulls away from a rainy bus stop at dusk, a young man visible in its side window, the bus drives off, tail lights glowing, rain falling. Static camera. Keep exactly the same character design, face, outfit, flat colours and thin ink outlines. One continuous shot, no scene change.",
+  "frames": 77,
+  "seed": 0,
+  "shot": 4,
+  "part": "b",
+  "start": 8.44,
+  "end": 9.99,
   "reuse": true
  },
  {
@@ -67,8 +79,8 @@
   "seed": 0,
   "shot": 6,
   "part": "a",
-  "start": 9.77,
-  "end": 11.885,
+  "start": 11.94,
+  "end": 14.055,
   "reuse": true
  },
  {
@@ -79,8 +91,8 @@
   "seed": 0,
   "shot": 6,
   "part": "b",
-  "start": 11.885,
-  "end": 14,
+  "start": 14.055,
+  "end": 16.169999999999998,
   "reuse": true
  },
  {
@@ -91,8 +103,8 @@
   "seed": 0,
   "shot": 8,
   "part": "a",
-  "start": 16.26,
-  "end": 17.880000000000003,
+  "start": 18.43,
+  "end": 20.049999999999997,
   "reuse": true
  },
  {
@@ -103,8 +115,8 @@
   "seed": 0,
   "shot": 8,
   "part": "b",
-  "start": 17.880000000000003,
-  "end": 19.5,
+  "start": 20.049999999999997,
+  "end": 21.669999999999998,
   "reuse": true
  },
  {
@@ -115,8 +127,8 @@
   "seed": 11,
   "shot": 10,
   "part": "",
-  "start": 22.31,
-  "end": 24.080000000000002
+  "start": 24.479999999999997,
+  "end": 26.25
  },
  {
   "id": "shot10_t2",
@@ -126,8 +138,8 @@
   "seed": 2026,
   "shot": 10,
   "part": "",
-  "start": 22.31,
-  "end": 24.080000000000002
+  "start": 24.479999999999997,
+  "end": 26.25
  },
  {
   "id": "shot11_t1",
@@ -137,8 +149,8 @@
   "seed": 11,
   "shot": 11,
   "part": "",
-  "start": 24.080000000000002,
-  "end": 27.94
+  "start": 26.25,
+  "end": 30.110000000000003
  },
  {
   "id": "shot11_t2",
@@ -148,8 +160,8 @@
   "seed": 2026,
   "shot": 11,
   "part": "",
-  "start": 24.080000000000002,
-  "end": 27.94
+  "start": 26.25,
+  "end": 30.110000000000003
  },
  {
   "id": "shot12_t1",
@@ -159,8 +171,8 @@
   "seed": 11,
   "shot": 12,
   "part": "",
-  "start": 27.94,
-  "end": 30.02
+  "start": 30.110000000000003,
+  "end": 32.19
  },
  {
   "id": "shot12_t2",
@@ -170,8 +182,8 @@
   "seed": 2026,
   "shot": 12,
   "part": "",
-  "start": 27.94,
-  "end": 30.02
+  "start": 30.110000000000003,
+  "end": 32.19
  },
  {
   "id": "shot13_t1",
@@ -181,8 +193,8 @@
   "seed": 7,
   "shot": 13,
   "part": "",
-  "start": 30.02,
-  "end": 31.14
+  "start": 32.19,
+  "end": 33.31
  },
  {
   "id": "shot13_t2",
@@ -192,8 +204,8 @@
   "seed": 99,
   "shot": 13,
   "part": "",
-  "start": 30.02,
-  "end": 31.14
+  "start": 32.19,
+  "end": 33.31
  },
  {
   "id": "shot14_t1",
@@ -203,8 +215,8 @@
   "seed": 11,
   "shot": 14,
   "part": "",
-  "start": 31.14,
-  "end": 33.559999999999995
+  "start": 33.31,
+  "end": 35.73
  },
  {
   "id": "shot14_t2",
@@ -214,8 +226,8 @@
   "seed": 2026,
   "shot": 14,
   "part": "",
-  "start": 31.14,
-  "end": 33.559999999999995
+  "start": 33.31,
+  "end": 35.73
  },
  {
   "id": "shot15_t1",
@@ -225,8 +237,8 @@
   "seed": 11,
   "shot": 15,
   "part": "",
-  "start": 33.559999999999995,
-  "end": 35.37
+  "start": 35.73,
+  "end": 37.54
  },
  {
   "id": "shot15_t2",
@@ -236,8 +248,8 @@
   "seed": 2026,
   "shot": 15,
   "part": "",
-  "start": 33.559999999999995,
-  "end": 35.37
+  "start": 35.73,
+  "end": 37.54
  },
  {
   "id": "shot16_t1",
@@ -247,8 +259,8 @@
   "seed": 11,
   "shot": 16,
   "part": "",
-  "start": 35.37,
-  "end": 39.28
+  "start": 37.54,
+  "end": 41.45
  },
  {
   "id": "shot16_t2",
@@ -258,8 +270,8 @@
   "seed": 2026,
   "shot": 16,
   "part": "",
-  "start": 35.37,
-  "end": 39.28
+  "start": 37.54,
+  "end": 41.45
  },
  {
   "id": "shot17_t1",
@@ -269,8 +281,8 @@
   "seed": 11,
   "shot": 17,
   "part": "",
-  "start": 39.28,
-  "end": 40.620000000000005
+  "start": 41.45,
+  "end": 42.79
  },
  {
   "id": "shot17_t2",
@@ -280,8 +292,8 @@
   "seed": 2026,
   "shot": 17,
   "part": "",
-  "start": 39.28,
-  "end": 40.620000000000005
+  "start": 41.45,
+  "end": 42.79
  },
  {
   "id": "shot18a_t1",
@@ -291,8 +303,8 @@
   "seed": 11,
   "shot": 18,
   "part": "a",
-  "start": 40.620000000000005,
-  "end": 43.24
+  "start": 42.79,
+  "end": 45.41
  },
  {
   "id": "shot18a_t2",
@@ -302,8 +314,8 @@
   "seed": 2026,
   "shot": 18,
   "part": "a",
-  "start": 40.620000000000005,
-  "end": 43.24
+  "start": 42.79,
+  "end": 45.41
  },
  {
   "id": "shot18b_t1",
@@ -313,8 +325,8 @@
   "seed": 11,
   "shot": 18,
   "part": "b",
-  "start": 43.24,
-  "end": 46.58
+  "start": 45.41,
+  "end": 48.75
  },
  {
   "id": "shot18b_t2",
@@ -324,8 +336,8 @@
   "seed": 2026,
   "shot": 18,
   "part": "b",
-  "start": 43.24,
-  "end": 46.58
+  "start": 45.41,
+  "end": 48.75
  },
  {
   "id": "shot19_t1",
@@ -335,8 +347,8 @@
   "seed": 11,
   "shot": 19,
   "part": "",
-  "start": 46.58,
-  "end": 50.27
+  "start": 48.75,
+  "end": 52.440000000000005
  },
  {
   "id": "shot19_t2",
@@ -346,8 +358,8 @@
   "seed": 2026,
   "shot": 19,
   "part": "",
-  "start": 46.58,
-  "end": 50.27
+  "start": 48.75,
+  "end": 52.440000000000005
  },
  {
   "id": "shot20_t1",
@@ -357,8 +369,8 @@
   "seed": 11,
   "shot": 20,
   "part": "",
-  "start": 50.27,
-  "end": 53.07
+  "start": 52.440000000000005,
+  "end": 55.239999999999995
  },
  {
   "id": "shot20_t2",
@@ -368,8 +380,8 @@
   "seed": 2026,
   "shot": 20,
   "part": "",
-  "start": 50.27,
-  "end": 53.07
+  "start": 52.440000000000005,
+  "end": 55.239999999999995
  },
  {
   "id": "shot21_t1",
@@ -379,8 +391,8 @@
   "seed": 11,
   "shot": 21,
   "part": "",
-  "start": 53.07,
-  "end": 54.5
+  "start": 55.239999999999995,
+  "end": 56.67
  },
  {
   "id": "shot21_t2",
@@ -390,8 +402,8 @@
   "seed": 2026,
   "shot": 21,
   "part": "",
-  "start": 53.07,
-  "end": 54.5
+  "start": 55.239999999999995,
+  "end": 56.67
  },
  {
   "id": "shot22a_t1",
@@ -401,8 +413,8 @@
   "seed": 11,
   "shot": 22,
   "part": "a",
-  "start": 54.5,
-  "end": 57.545
+  "start": 56.67,
+  "end": 59.715
  },
  {
   "id": "shot22a_t2",
@@ -412,8 +424,8 @@
   "seed": 2026,
   "shot": 22,
   "part": "a",
-  "start": 54.5,
-  "end": 57.545
+  "start": 56.67,
+  "end": 59.715
  },
  {
   "id": "shot22b_t1",
@@ -423,8 +435,8 @@
   "seed": 11,
   "shot": 22,
   "part": "b",
-  "start": 57.545,
-  "end": 60.59
+  "start": 59.715,
+  "end": 62.76
  },
  {
   "id": "shot22b_t2",
@@ -434,8 +446,8 @@
   "seed": 2026,
   "shot": 22,
   "part": "b",
-  "start": 57.545,
-  "end": 60.59
+  "start": 59.715,
+  "end": 62.76
  },
  {
   "id": "shot00",
