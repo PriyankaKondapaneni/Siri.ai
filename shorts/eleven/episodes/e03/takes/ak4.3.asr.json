@@ -1,0 +1,18 @@
+{
+ "duration": 1.12,
+ "language_code": "en",
+ "request_id": "b130742b-8b7d-43ad-b018-1d13f7da6847",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0.24,
+   "text": "Has"
+  },
+  {
+   "end": 0.8,
+   "start": 0.48,
+   "text": "it"
+  }
+ ],
+ "text": "Has it."
+}

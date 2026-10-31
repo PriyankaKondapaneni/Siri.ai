@@ -1,0 +1,104 @@
+{
+ "duration": 7.76,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "ed4b453a-90ab-4983-90ce-c529cc0ca55a",
+ "segments": [
+  {
+   "end": 0.64,
+   "start": 0.24,
+   "text": "11"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "09"
+  },
+  {
+   "end": 2.08,
+   "start": 1.92,
+   "text": "My"
+  },
+  {
+   "end": 2.4,
+   "start": 2.08,
+   "text": "phone"
+  },
+  {
+   "end": 2.56,
+   "start": 2.4,
+   "text": "was"
+  },
+  {
+   "end": 3.04,
+   "start": 2.56,
+   "text": "already"
+  },
+  {
+   "end": 3.36,
+   "start": 3.04,
+   "text": "face"
+  },
+  {
+   "end": 3.52,
+   "start": 3.36,
+   "text": "up"
+  },
+  {
+   "end": 3.68,
+   "start": 3.52,
+   "text": "on"
+  },
+  {
+   "end": 3.68,
+   "start": 3.68,
+   "text": "the"
+  },
+  {
+   "end": 4.24,
+   "start": 3.68,
+   "text": "pillow"
+  },
+  {
+   "end": 4.88,
+   "start": 4.8,
+   "text": "I"
+  },
+  {
+   "end": 5.12,
+   "start": 4.88,
+   "text": "told"
+  },
+  {
+   "end": 5.68,
+   "start": 5.12,
+   "text": "myself"
+  },
+  {
+   "end": 5.84,
+   "start": 5.76,
+   "text": "I"
+  },
+  {
+   "end": 6.32,
+   "start": 5.84,
+   "text": "wasn't"
+  },
+  {
+   "end": 6.64,
+   "start": 6.32,
+   "text": "waiting"
+  },
+  {
+   "end": 6.88,
+   "start": 6.64,
+   "text": "for"
+  },
+  {
+   "end": 7.6,
+   "start": 6.96,
+   "text": "anything"
+  }
+ ],
+ "text": "11:09. My phone was already face up on the pillow. I told myself I wasn't waiting for anything."
+}

@@ -1,0 +1,64 @@
+{
+ "duration": 3.84,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "7ae509fb-6596-4f7b-b6b1-41614425f7ed",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.16,
+   "text": "I"
+  },
+  {
+   "end": 0.48,
+   "start": 0.24,
+   "text": "took"
+  },
+  {
+   "end": 0.64,
+   "start": 0.48,
+   "text": "the"
+  },
+  {
+   "end": 0.96,
+   "start": 0.64,
+   "text": "long"
+  },
+  {
+   "end": 1.12,
+   "start": 0.96,
+   "text": "way"
+  },
+  {
+   "end": 1.52,
+   "start": 1.12,
+   "text": "home"
+  },
+  {
+   "end": 2.32,
+   "start": 2.16,
+   "text": "I"
+  },
+  {
+   "end": 2.56,
+   "start": 2.32,
+   "text": "didn't"
+  },
+  {
+   "end": 2.8,
+   "start": 2.56,
+   "text": "ask"
+  },
+  {
+   "end": 3.28,
+   "start": 2.8,
+   "text": "myself"
+  },
+  {
+   "end": 3.84,
+   "start": 3.28,
+   "text": "why"
+  }
+ ],
+ "text": "I took the long way home. I didn't ask myself why."
+}

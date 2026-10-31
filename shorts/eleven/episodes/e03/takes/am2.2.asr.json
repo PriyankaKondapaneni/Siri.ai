@@ -1,0 +1,29 @@
+{
+ "duration": 2.16,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "6b105639-c02b-4fce-82af-e6854646396c",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.24,
+   "text": "Your"
+  },
+  {
+   "end": 1.12,
+   "start": 0.56,
+   "text": "watch"
+  },
+  {
+   "end": 1.2,
+   "start": 1.12,
+   "text": "has"
+  },
+  {
+   "end": 1.84,
+   "start": 1.28,
+   "text": "stopped"
+  }
+ ],
+ "text": "Your watch has stopped."
+}

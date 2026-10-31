@@ -11,7 +11,7 @@ const FIRST = Number(process.argv[4] || 1), SPEED = Number(process.argv[5] || 1)
 const ONLY = FIRST > 1; // when adding faster takes, pick among those only
 const dir = `eleven/episodes/${ep}`;
 const S = JSON.parse(fs.readFileSync(`${dir}/script.json`, 'utf8'));
-const norm = (s) => s.toLowerCase().replace(/\[[^\]]*\]/g, ' ').replace(/11:11/g, 'eleven eleven').replace(/eleven-eleven/g, 'eleven eleven').replace(/\b8:02\b/g, 'eight oh two').replace(/\b6:40\b/g, 'six forty').replace(/eight-oh-two/g, 'eight oh two').replace(/six-forty/g, 'six forty').replace(/\b6:20\b/g, 'six twenty').replace(/six-twenty/g, 'six twenty').replace(/\b5th\b/g, 'fifth').replace(/[^a-z\s']/g, ' ').split(/\s+/).filter(Boolean);
+const norm = (s) => s.toLowerCase().replace(/\[[^\]]*\]/g, ' ').replace(/11:11/g, 'eleven eleven').replace(/eleven-eleven/g, 'eleven eleven').replace(/\b11:09\b/g, 'eleven oh nine').replace(/eleven-oh-nine/g, 'eleven oh nine').replace(/\b8:02\b/g, 'eight oh two').replace(/\b6:40\b/g, 'six forty').replace(/eight-oh-two/g, 'eight oh two').replace(/six-forty/g, 'six forty').replace(/\b6:20\b/g, 'six twenty').replace(/six-twenty/g, 'six twenty').replace(/\b5th\b/g, 'fifth').replace(/[^a-z\s']/g, ' ').split(/\s+/).filter(Boolean);
 function wer(r, h) {
   const d = Array.from({ length: r.length + 1 }, (_, i) => [i, ...Array(h.length).fill(0)]);
   for (let j = 1; j <= h.length; j++) d[0][j] = j;

@@ -1,0 +1,69 @@
+{
+ "duration": 3.36,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "9186ebeb-b958-401d-b82d-bcf80e31a0a0",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0.08,
+   "text": "He"
+  },
+  {
+   "end": 0.72,
+   "start": 0.4,
+   "text": "said"
+  },
+  {
+   "end": 0.88,
+   "start": 0.72,
+   "text": "it"
+  },
+  {
+   "end": 1.12,
+   "start": 0.88,
+   "text": "like"
+  },
+  {
+   "end": 1.2,
+   "start": 1.12,
+   "text": "it"
+  },
+  {
+   "end": 1.36,
+   "start": 1.2,
+   "text": "was"
+  },
+  {
+   "end": 1.52,
+   "start": 1.36,
+   "text": "the"
+  },
+  {
+   "end": 2.24,
+   "start": 1.6,
+   "text": "easiest"
+  },
+  {
+   "end": 2.4,
+   "start": 2.24,
+   "text": "thing"
+  },
+  {
+   "end": 2.56,
+   "start": 2.4,
+   "text": "in"
+  },
+  {
+   "end": 2.64,
+   "start": 2.56,
+   "text": "the"
+  },
+  {
+   "end": 3.2,
+   "start": 2.72,
+   "text": "world"
+  }
+ ],
+ "text": "He said it like it was the easiest thing in the world."
+}

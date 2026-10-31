@@ -1,0 +1,24 @@
+{
+ "duration": 1.36,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "efb4ef52-67ae-4d20-a426-ca591f71aef1",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0.16,
+   "text": "Get"
+  },
+  {
+   "end": 0.56,
+   "start": 0.4,
+   "text": "home"
+  },
+  {
+   "end": 1.12,
+   "start": 0.56,
+   "text": "safe"
+  }
+ ],
+ "text": "Get home safe."
+}

@@ -1,0 +1,117 @@
+{
+ "episode": "e03",
+ "title": "The Six-Forty",
+ "card": "5 DAYS LEFT",
+ "model": "eleven_v4",
+ "voices": {
+  "mira": "yj30vwTGJxSHezdAGsv9",
+  "mira_narr": "Z3R5wn05IrDiVCyEkUrK",
+  "kabir": "tzX5paJ07p5hyWFcU3uG"
+ },
+ "tempo": 1.0,
+ "cap": 0.45,
+ "gap": 0.3,
+ "lines": [
+  {
+   "id": "h0",
+   "who": "kabir",
+   "kind": "note",
+   "take": "ck2",
+   "from": 7,
+   "text": "Don't let me get on the six-forty a.m. train.",
+   "gap": 0.06
+  },
+  {
+   "id": "ak2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[offhand] Sugar?",
+   "gap": 0.55
+  },
+  {
+   "id": "am1",
+   "who": "mira",
+   "kind": "live",
+   "text": "[plainly] No."
+  },
+  {
+   "id": "ak3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[a faint smile] Good. I don't have any."
+  },
+  {
+   "id": "am2",
+   "who": "mira",
+   "kind": "live",
+   "text": "[curious, careful] Your watch has stopped."
+  },
+  {
+   "id": "ak4",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[flat, quiet] Has it."
+  },
+  {
+   "id": "bn3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[softer, a spark of curiosity] A mechanical watch doesn't stop by itself. [low, certain] Someone has to stop winding it."
+  },
+  {
+   "id": "bk5",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[after a long pause, very quietly] Eleven-eleven. Three years ago. The night he didn't come home.",
+   "show": "11:11. Three years ago. The night he didn't come home."
+  },
+  {
+   "id": "bk6",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[easy and warm] Get home safe.",
+   "gap": 1.8
+  },
+  {
+   "id": "bn4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quiet, a little shaken] He said it like it was the easiest thing in the world."
+  },
+  {
+   "id": "dn1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, steady] I took the long way home. I didn't ask myself why.",
+   "gap": 0.9
+  },
+  {
+   "id": "dn2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[dry, a little wry] Eleven-oh-nine. My phone was already face-up on the pillow. I told myself I wasn't waiting for anything."
+  },
+  {
+   "id": "ck2",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[out of breath, urgent, low] Mira. You found me, didn't you? Tomorrow... don't let me get on the six-forty a.m. train.",
+   "show": "Mira. You found me, didn't you? Tomorrow... don't let me get on the 6:40 a.m. train.",
+   "gap": 1.4
+  },
+  {
+   "id": "cm1",
+   "who": "mira",
+   "kind": "live",
+   "text": "[stunned, quiet] Why?",
+   "gap": 0.5
+  },
+  {
+   "id": "ck3",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[voice breaking] Because if I do... you're the one who doesn't come home.",
+   "gap": 0.6
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "duration": 5.52,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "a7b6d477-9e68-4ac1-ba7a-54046dfc55be",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0.16,
+   "text": "A"
+  },
+  {
+   "end": 0.88,
+   "start": 0.16,
+   "text": "mechanical"
+  },
+  {
+   "end": 1.36,
+   "start": 0.88,
+   "text": "watch"
+  },
+  {
+   "end": 1.68,
+   "start": 1.36,
+   "text": "doesn't"
+  },
+  {
+   "end": 2,
+   "start": 1.68,
+   "text": "stop"
+  },
+  {
+   "end": 2.24,
+   "start": 2,
+   "text": "by"
+  },
+  {
+   "end": 3.04,
+   "start": 2.24,
+   "text": "itself"
+  },
+  {
+   "end": 3.92,
+   "start": 3.44,
+   "text": "Someone"
+  },
+  {
+   "end": 4.16,
+   "start": 3.92,
+   "text": "has"
+  },
+  {
+   "end": 4.32,
+   "start": 4.24,
+   "text": "to"
+  },
+  {
+   "end": 4.64,
+   "start": 4.32,
+   "text": "stop"
+  },
+  {
+   "end": 5.04,
+   "start": 4.64,
+   "text": "winding"
+  },
+  {
+   "end": 5.44,
+   "start": 5.04,
+   "text": "it"
+  }
+ ],
+ "text": "A mechanical watch doesn't stop by itself. Someone has to stop winding it."
+}
