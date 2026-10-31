@@ -1,0 +1,34 @@
+{
+ "duration": 3.2508125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "55cb3275-5fe2-4fcb-a561-dab4be14d1a4",
+ "segments": [
+  {
+   "end": 1.28,
+   "start": 0.88,
+   "text": "Good"
+  },
+  {
+   "end": 2.16,
+   "start": 2.08,
+   "text": "I"
+  },
+  {
+   "end": 2.4,
+   "start": 2.16,
+   "text": "don't"
+  },
+  {
+   "end": 2.64,
+   "start": 2.4,
+   "text": "have"
+  },
+  {
+   "end": 3.04,
+   "start": 2.64,
+   "text": "any"
+  }
+ ],
+ "text": "Good. I don't have any."
+}

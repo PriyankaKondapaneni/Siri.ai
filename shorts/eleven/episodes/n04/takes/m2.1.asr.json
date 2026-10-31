@@ -1,27 +1,27 @@
 {
- "duration": 1.9505,
+ "duration": 2.08,
  "language": "English",
  "language_code": "en",
- "request_id": "7cbf56fd-6a66-455d-9389-4d7dfbc47c16",
+ "request_id": "308453f1-4494-432d-9996-69b040b520ed",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0.08,
+   "end": 0.56,
+   "start": 0.16,
    "text": "Your"
   },
   {
-   "end": 0.72,
-   "start": 0.32,
+   "end": 1.12,
+   "start": 0.56,
    "text": "watch"
   },
   {
-   "end": 0.88,
-   "start": 0.72,
+   "end": 1.2,
+   "start": 1.12,
    "text": "has"
   },
   {
-   "end": 1.6,
-   "start": 0.88,
+   "end": 1.84,
+   "start": 1.2,
    "text": "stopped"
   }
  ],

@@ -1,11 +1,11 @@
 {
- "duration": 1.3468125,
+ "duration": 0.96,
  "language_code": "en",
- "request_id": "109f94d1-b517-4388-ab36-bef765fcea69",
+ "request_id": "f968ec43-ac7f-4f8b-a63a-fa006e31a6ba",
  "segments": [
   {
-   "end": 0.64,
-   "start": 0.08,
+   "end": 0.56,
+   "start": 0.16,
    "text": "No"
   }
  ],

@@ -5,3 +5,4 @@ build/
 paper-planes/episodes/*/takes/*.wav
 eleven/episodes/*/takes/*.wav
 eleven/build/
+eleven/episodes/*/takes-fish/*.wav

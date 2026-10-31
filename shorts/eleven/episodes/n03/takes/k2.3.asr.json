@@ -1,16 +1,16 @@
 {
- "duration": 1.300375,
+ "duration": 1.68,
  "language_code": "en",
- "request_id": "52a2eeee-3166-4763-bd3f-cd502302e95f",
+ "request_id": "538d4e9f-f32b-43d6-bb0e-3999c621d0d5",
  "segments": [
   {
-   "end": 0.64,
-   "start": 0.48,
+   "end": 0.88,
+   "start": 0.64,
    "text": "It"
   },
   {
-   "end": 1.12,
-   "start": 0.8,
+   "end": 1.36,
+   "start": 0.88,
    "text": "isn't"
   }
  ],

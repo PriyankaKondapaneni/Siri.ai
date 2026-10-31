@@ -1,8 +1,8 @@
 {
- "duration": 6.9195625,
+ "duration": 6.24,
  "language": "English",
  "language_code": "en",
- "request_id": "9f9ca43f-a2b0-4dbd-85d4-d37422fcc65a",
+ "request_id": "1cf14d84-e4e5-4618-bafa-9c126d33535c",
  "segments": [
   {
    "end": 0.16,
@@ -16,7 +16,7 @@
   },
   {
    "end": 0.8,
-   "start": 0.72,
+   "start": 0.64,
    "text": "in"
   },
   {
@@ -25,7 +25,7 @@
    "text": "the"
   },
   {
-   "end": 1.44,
+   "end": 1.6,
    "start": 0.88,
    "text": "strap"
   },
@@ -41,32 +41,32 @@
   },
   {
    "end": 3.6,
-   "start": 3.12,
+   "start": 3.2,
    "text": "same"
   },
   {
-   "end": 4.16,
-   "start": 3.68,
+   "end": 4.08,
+   "start": 3.6,
    "text": "order"
   },
   {
-   "end": 4.8,
-   "start": 4.4,
+   "end": 4.72,
+   "start": 4.48,
    "text": "6"
   },
   {
-   "end": 5.36,
-   "start": 4.8,
+   "end": 5.2,
+   "start": 4.72,
    "text": "20"
   },
   {
-   "end": 5.84,
-   "start": 5.44,
+   "end": 5.6,
+   "start": 5.36,
    "text": "every"
   },
   {
-   "end": 6.48,
-   "start": 5.84,
+   "end": 6.08,
+   "start": 5.6,
    "text": "morning"
   }
  ],

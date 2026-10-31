@@ -1,17 +1,17 @@
 {
- "duration": 1.068125,
+ "duration": 1.12,
  "language": "English",
  "language_code": "en",
- "request_id": "2718a758-fcfc-49b9-8076-7f8d45ef1df9",
+ "request_id": "cebc8f11-c592-4d23-a316-7408f16d6c4a",
  "segments": [
   {
-   "end": 0.24,
-   "start": 0,
+   "end": 0.32,
+   "start": 0.16,
    "text": "I"
   },
   {
    "end": 0.72,
-   "start": 0.24,
+   "start": 0.32,
    "text": "know"
   }
  ],

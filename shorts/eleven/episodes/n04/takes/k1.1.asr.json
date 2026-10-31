@@ -1,21 +1,21 @@
 {
- "duration": 1.2075,
+ "duration": 1.44,
  "language_code": "en",
- "request_id": "0ca0ac93-a6f9-4b90-b9a6-269f83952500",
+ "request_id": "d7eaa3fa-f113-48a1-a3ce-ee7cdc83356b",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0.08,
+   "end": 0.48,
+   "start": 0.24,
    "text": "Blue"
   },
   {
-   "end": 0.8,
-   "start": 0.32,
+   "end": 0.88,
+   "start": 0.48,
    "text": "suits"
   },
   {
-   "end": 1.12,
-   "start": 0.8,
+   "end": 1.04,
+   "start": 0.88,
    "text": "you"
   }
  ],

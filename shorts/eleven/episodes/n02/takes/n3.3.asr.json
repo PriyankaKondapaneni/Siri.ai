@@ -1,8 +1,8 @@
 {
- "duration": 7.662625,
+ "duration": 6.24,
  "language": "English",
  "language_code": "en",
- "request_id": "55b2ee18-00e9-434e-8f29-f7ca2f4ea151",
+ "request_id": "0fc5492f-a09f-4813-a789-6e2610f77bed",
  "segments": [
   {
    "end": 0.16,
@@ -10,63 +10,63 @@
    "text": "A"
   },
   {
-   "end": 0.72,
+   "end": 0.64,
    "start": 0.16,
    "text": "receipt"
   },
   {
-   "end": 0.96,
-   "start": 0.8,
+   "end": 0.8,
+   "start": 0.64,
    "text": "in"
   },
   {
-   "end": 0.96,
-   "start": 0.96,
+   "end": 0.8,
+   "start": 0.8,
    "text": "the"
   },
   {
-   "end": 1.6,
-   "start": 0.96,
+   "end": 1.44,
+   "start": 0.8,
    "text": "strap"
   },
   {
-   "end": 2.56,
-   "start": 2.08,
+   "end": 2.24,
+   "start": 1.84,
    "text": "Same"
   },
   {
-   "end": 3.28,
-   "start": 2.56,
+   "end": 2.88,
+   "start": 2.24,
    "text": "bakery"
   },
   {
-   "end": 4,
-   "start": 3.44,
+   "end": 3.44,
+   "start": 3.04,
    "text": "same"
   },
   {
-   "end": 4.56,
-   "start": 4,
+   "end": 4,
+   "start": 3.52,
    "text": "order"
   },
   {
-   "end": 5.44,
-   "start": 4.88,
+   "end": 4.72,
+   "start": 4.4,
    "text": "6"
   },
   {
-   "end": 6,
-   "start": 5.44,
+   "end": 5.2,
+   "start": 4.72,
    "text": "20"
   },
   {
-   "end": 6.64,
-   "start": 6.24,
+   "end": 5.6,
+   "start": 5.36,
    "text": "every"
   },
   {
-   "end": 7.28,
-   "start": 6.64,
+   "end": 6.08,
+   "start": 5.6,
    "text": "morning"
   }
  ],

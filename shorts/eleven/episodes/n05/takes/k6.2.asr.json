@@ -1,21 +1,21 @@
 {
- "duration": 1.3468125,
+ "duration": 1.28,
  "language": "English",
  "language_code": "en",
- "request_id": "2621e6dc-8282-42af-bb0a-264a62ee589f",
+ "request_id": "e91c4c8c-ed23-4561-9d54-9fbb4fcef220",
  "segments": [
   {
-   "end": 0.24,
+   "end": 0.32,
    "start": 0.08,
    "text": "Get"
   },
   {
    "end": 0.48,
-   "start": 0.24,
+   "start": 0.32,
    "text": "home"
   },
   {
-   "end": 0.96,
+   "end": 1.04,
    "start": 0.48,
    "text": "safe"
   }

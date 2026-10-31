@@ -1,52 +1,52 @@
 {
- "duration": 4.8298125,
+ "duration": 4,
  "language": "English",
  "language_code": "en",
- "request_id": "c5002acc-453c-41ac-aaf8-197964403eed",
+ "request_id": "440311a1-b33f-4b27-8be4-1a38072bb4ba",
  "segments": [
   {
-   "end": 0.56,
-   "start": 0,
+   "end": 0.64,
+   "start": 0.16,
    "text": "Six"
   },
   {
-   "end": 1.28,
-   "start": 0.56,
+   "end": 1.12,
+   "start": 0.64,
    "text": "days"
   },
   {
-   "end": 2.08,
+   "end": 2,
    "start": 1.76,
    "text": "That's"
   },
   {
-   "end": 2.56,
-   "start": 2.24,
+   "end": 2.4,
+   "start": 2.08,
    "text": "all"
   },
   {
-   "end": 2.8,
-   "start": 2.56,
+   "end": 2.56,
+   "start": 2.4,
    "text": "his"
   },
   {
-   "end": 3.28,
-   "start": 2.8,
+   "end": 2.88,
+   "start": 2.56,
    "text": "last"
   },
   {
-   "end": 3.84,
-   "start": 3.28,
+   "end": 3.28,
+   "start": 2.88,
    "text": "message"
   },
   {
-   "end": 4.08,
-   "start": 3.84,
+   "end": 3.6,
+   "start": 3.28,
    "text": "gave"
   },
   {
-   "end": 4.48,
-   "start": 4.08,
+   "end": 3.84,
+   "start": 3.6,
    "text": "him"
   }
  ],

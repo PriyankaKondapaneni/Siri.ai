@@ -1,12 +1,12 @@
 {
- "duration": 5.2941875,
+ "duration": 3.76,
  "language": "English",
  "language_code": "en",
- "request_id": "ca328601-e2ed-4ca7-bd60-cd042fd9cf44",
+ "request_id": "839099ab-388b-456b-8db5-8ebf6d402535",
  "segments": [
   {
    "end": 0.48,
-   "start": 0.08,
+   "start": 0.16,
    "text": "Because"
   },
   {
@@ -20,43 +20,43 @@
    "text": "I"
   },
   {
-   "end": 1.28,
+   "end": 1.2,
    "start": 0.8,
    "text": "do"
   },
   {
-   "end": 2.88,
-   "start": 2.48,
+   "end": 2.16,
+   "start": 1.76,
    "text": "you're"
   },
   {
-   "end": 3.04,
-   "start": 2.88,
+   "end": 2.24,
+   "start": 2.16,
    "text": "the"
   },
   {
-   "end": 3.52,
-   "start": 3.04,
+   "end": 2.56,
+   "start": 2.24,
    "text": "one"
   },
   {
-   "end": 3.6,
-   "start": 3.52,
+   "end": 2.56,
+   "start": 2.56,
    "text": "who"
   },
   {
-   "end": 4.08,
-   "start": 3.6,
+   "end": 2.88,
+   "start": 2.56,
    "text": "doesn't"
   },
   {
-   "end": 4.4,
-   "start": 4.08,
+   "end": 3.2,
+   "start": 2.88,
    "text": "come"
   },
   {
-   "end": 4.88,
-   "start": 4.4,
+   "end": 3.6,
+   "start": 3.2,
    "text": "home"
   }
  ],

@@ -1,84 +1,84 @@
 {
- "duration": 7.662625,
+ "duration": 6.08,
  "language": "English",
  "language_code": "en",
- "request_id": "8258f290-0876-4943-ac4e-e2a086c8e1dd",
+ "request_id": "09f84ceb-97ac-4a4b-8bf2-0448b2649401",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0.08,
+   "end": 0.4,
+   "start": 0.16,
    "text": "Two"
   },
   {
-   "end": 0.8,
-   "start": 0.32,
+   "end": 0.72,
+   "start": 0.4,
    "text": "mugs"
   },
   {
-   "end": 0.96,
-   "start": 0.8,
+   "end": 0.88,
+   "start": 0.72,
    "text": "on"
   },
   {
-   "end": 1.04,
-   "start": 0.96,
+   "end": 0.96,
+   "start": 0.88,
    "text": "the"
   },
   {
    "end": 1.6,
-   "start": 1.04,
+   "start": 0.96,
    "text": "rack"
   },
   {
-   "end": 2.64,
-   "start": 2.16,
-   "text": "One"
+   "end": 2.24,
+   "start": 1.92,
+   "text": "one"
   },
   {
-   "end": 2.96,
-   "start": 2.64,
+   "end": 2.48,
+   "start": 2.24,
    "text": "never"
   },
   {
-   "end": 3.68,
-   "start": 2.96,
+   "end": 3.12,
+   "start": 2.48,
    "text": "used"
   },
   {
-   "end": 4.32,
-   "start": 4.24,
+   "end": 3.68,
+   "start": 3.6,
    "text": "A"
   },
   {
-   "end": 5.28,
-   "start": 4.32,
+   "end": 4.48,
+   "start": 3.68,
    "text": "photograph"
   },
   {
-   "end": 6,
-   "start": 5.52,
+   "end": 4.96,
+   "start": 4.72,
    "text": "turned"
   },
   {
-   "end": 6.16,
-   "start": 6.08,
+   "end": 5.04,
+   "start": 5.04,
    "text": "to"
   },
   {
-   "end": 6.56,
-   "start": 6.16,
+   "end": 5.36,
+   "start": 5.04,
    "text": "face"
   },
   {
-   "end": 6.72,
-   "start": 6.56,
+   "end": 5.44,
+   "start": 5.36,
    "text": "the"
   },
   {
-   "end": 7.36,
-   "start": 6.72,
+   "end": 5.92,
+   "start": 5.44,
    "text": "wall"
   }
  ],
- "text": "Two mugs on the rack. One never used. A photograph turned to face the wall."
+ "text": "Two mugs on the rack, one never used. A photograph turned to face the wall."
 }

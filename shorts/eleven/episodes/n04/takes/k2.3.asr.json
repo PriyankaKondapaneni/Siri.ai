@@ -1,11 +1,11 @@
 {
- "duration": 0.60375,
+ "duration": 0.88,
  "language_code": "en",
- "request_id": "98283c36-4745-4a60-a00a-76a227d34287",
+ "request_id": "8e20202e-4921-4663-8a7d-c323e03ef342",
  "segments": [
   {
-   "end": 0.56,
-   "start": 0,
+   "end": 0.48,
+   "start": 0.08,
    "text": "Sugar"
   }
  ],

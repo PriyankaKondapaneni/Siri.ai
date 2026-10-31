@@ -2,10 +2,11 @@
  "episode": "n06",
  "title": "The Six-Forty",
  "card": "5 DAYS LEFT",
- "model": "drama-3",
+ "model": "eleven_v4",
  "voices": {
-  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
-  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+  "mira": "yj30vwTGJxSHezdAGsv9",
+  "mira_narr": "Z3R5wn05IrDiVCyEkUrK",
+  "kabir": "tzX5paJ07p5hyWFcU3uG"
  },
  "tempo": 1.0,
  "cap": 0.45,
@@ -32,7 +33,7 @@
    "id": "m1",
    "who": "mira",
    "kind": "live",
-   "text": "[barely a whisper] Why?",
+   "text": "[stunned, quiet] Why?",
    "gap": 0.5
   },
   {

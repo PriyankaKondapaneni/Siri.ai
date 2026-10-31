@@ -1,62 +1,62 @@
 {
- "duration": 5.1084375,
+ "duration": 3.92,
  "language": "English",
  "language_code": "en",
- "request_id": "b9198121-4037-4c0f-a85e-f4954c3ed9b7",
+ "request_id": "ba5149be-d9ae-4dba-8836-e0ec839877ba",
  "segments": [
   {
-   "end": 0.4,
-   "start": 0.08,
+   "end": 0.48,
+   "start": 0.16,
    "text": "Because"
   },
   {
    "end": 0.64,
-   "start": 0.4,
+   "start": 0.48,
    "text": "if"
   },
   {
-   "end": 0.72,
+   "end": 0.8,
    "start": 0.64,
    "text": "I"
   },
   {
-   "end": 1.28,
-   "start": 0.72,
+   "end": 1.2,
+   "start": 0.8,
    "text": "do"
   },
   {
-   "end": 2.56,
-   "start": 2.24,
+   "end": 2.24,
+   "start": 1.84,
    "text": "you're"
+  },
+  {
+   "end": 2.32,
+   "start": 2.24,
+   "text": "the"
+  },
+  {
+   "end": 2.56,
+   "start": 2.32,
+   "text": "one"
   },
   {
    "end": 2.64,
    "start": 2.56,
-   "text": "the"
-  },
-  {
-   "end": 3.12,
-   "start": 2.64,
-   "text": "one"
-  },
-  {
-   "end": 3.44,
-   "start": 3.2,
    "text": "who"
   },
   {
-   "end": 3.84,
-   "start": 3.44,
+   "end": 2.96,
+   "start": 2.64,
    "text": "doesn't"
   },
   {
-   "end": 4.16,
-   "start": 3.84,
+   "end": 3.28,
+   "start": 2.96,
    "text": "come"
   },
   {
-   "end": 4.64,
-   "start": 4.16,
+   "end": 3.6,
+   "start": 3.28,
    "text": "home"
   }
  ],

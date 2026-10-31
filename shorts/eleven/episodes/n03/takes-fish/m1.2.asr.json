@@ -1,0 +1,24 @@
+{
+ "duration": 1.5325625,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "4d74f0a2-f02d-458e-81b4-aadaf02c2c24",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "You"
+  },
+  {
+   "end": 0.64,
+   "start": 0.24,
+   "text": "left"
+  },
+  {
+   "end": 1.2,
+   "start": 0.64,
+   "text": "this"
+  }
+ ],
+ "text": "You left this."
+}

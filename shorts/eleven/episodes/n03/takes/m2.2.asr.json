@@ -1,22 +1,22 @@
 {
- "duration": 2.322,
+ "duration": 2,
  "language": "English",
  "language_code": "en",
- "request_id": "67581a2d-b2be-446b-bdd2-f8d538702f8d",
+ "request_id": "cc27e2f8-96fe-4559-8323-b022ba59f491",
  "segments": [
   {
-   "end": 0.24,
-   "start": 0,
+   "end": 0.32,
+   "start": 0.16,
    "text": "It"
   },
   {
-   "end": 0.72,
-   "start": 0.24,
+   "end": 0.64,
+   "start": 0.32,
    "text": "looked"
   },
   {
-   "end": 1.84,
-   "start": 0.72,
+   "end": 1.6,
+   "start": 0.64,
    "text": "expensive"
   }
  ],

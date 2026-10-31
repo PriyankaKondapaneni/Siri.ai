@@ -1,27 +1,27 @@
 {
- "duration": 1.7183125,
+ "duration": 1.76,
  "language": "English",
  "language_code": "en",
- "request_id": "644c9bd0-dc04-487d-800b-f804ca912a32",
+ "request_id": "79f2c42b-cd3a-4311-b2cf-4742622e77ae",
  "segments": [
   {
-   "end": 0.24,
-   "start": 0,
+   "end": 0.4,
+   "start": 0.08,
    "text": "You"
   },
   {
-   "end": 0.48,
-   "start": 0.24,
+   "end": 0.64,
+   "start": 0.4,
    "text": "don't"
   },
   {
-   "end": 0.88,
-   "start": 0.56,
+   "end": 1.04,
+   "start": 0.64,
    "text": "have"
   },
   {
-   "end": 1.36,
-   "start": 0.96,
+   "end": 1.52,
+   "start": 1.12,
    "text": "to"
   }
  ],

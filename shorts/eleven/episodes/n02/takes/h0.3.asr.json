@@ -1,26 +1,26 @@
 {
- "duration": 3.0650625,
+ "duration": 2.48,
  "language_code": "en",
- "request_id": "8926b352-ffe8-4270-9fb3-23e626d3d822",
+ "request_id": "ae6965d6-88c5-4fd4-b59e-c0a74bb1bc36",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0.08,
+   "end": 0.4,
+   "start": 0.16,
    "text": "Don't"
   },
   {
-   "end": 0.56,
-   "start": 0.32,
+   "end": 0.64,
+   "start": 0.4,
    "text": "let"
   },
   {
-   "end": 0.64,
-   "start": 0.56,
+   "end": 0.72,
+   "start": 0.64,
    "text": "me"
   },
   {
    "end": 0.96,
-   "start": 0.64,
+   "start": 0.72,
    "text": "get"
   },
   {
@@ -29,23 +29,23 @@
    "text": "on"
   },
   {
-   "end": 1.2,
+   "end": 1.12,
    "start": 1.12,
    "text": "the"
   },
   {
-   "end": 1.6,
-   "start": 1.2,
+   "end": 1.44,
+   "start": 1.12,
    "text": "6"
   },
   {
-   "end": 2.72,
-   "start": 1.6,
+   "end": 1.84,
+   "start": 1.44,
    "text": "40"
   },
   {
-   "end": 2.72,
-   "start": 2.72,
+   "end": 2.24,
+   "start": 1.84,
    "text": "train"
   }
  ],

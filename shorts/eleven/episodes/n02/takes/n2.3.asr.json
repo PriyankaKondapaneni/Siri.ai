@@ -1,52 +1,52 @@
 {
- "duration": 3.6688125,
+ "duration": 3.04,
  "language": "English",
  "language_code": "en",
- "request_id": "5d69c499-937b-4c80-8a1d-f622f92138a9",
+ "request_id": "a4673ea3-ea82-4adb-a7a5-a38dd4ef3937",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0,
+   "end": 0.48,
+   "start": 0.24,
    "text": "And"
   },
   {
-   "end": 0.48,
-   "start": 0.32,
+   "end": 0.64,
+   "start": 0.48,
    "text": "he'd"
   },
   {
    "end": 0.96,
-   "start": 0.48,
+   "start": 0.64,
    "text": "left"
   },
   {
-   "end": 1.04,
+   "end": 1.12,
    "start": 0.96,
    "text": "his"
   },
   {
-   "end": 1.68,
-   "start": 1.04,
+   "end": 1.6,
+   "start": 1.12,
    "text": "umbrella"
   },
   {
-   "end": 2.32,
-   "start": 1.68,
+   "end": 2.08,
+   "start": 1.6,
    "text": "behind"
   },
   {
-   "end": 2.4,
-   "start": 2.32,
+   "end": 2.24,
+   "start": 2.08,
    "text": "in"
   },
   {
-   "end": 2.48,
-   "start": 2.4,
+   "end": 2.32,
+   "start": 2.24,
    "text": "the"
   },
   {
-   "end": 3.2,
-   "start": 2.48,
+   "end": 2.8,
+   "start": 2.32,
    "text": "rain"
   }
  ],

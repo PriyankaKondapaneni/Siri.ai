@@ -1,64 +1,64 @@
 {
- "duration": 5.712125,
+ "duration": 5.76,
  "language": "English",
  "language_code": "en",
- "request_id": "693e5816-3dc2-47eb-b020-2badce5adcb1",
+ "request_id": "7c1dbb00-489f-4dcc-b1d2-90be8ca48f20",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0,
+   "end": 0.24,
+   "start": 0.16,
    "text": "The"
   },
   {
-   "end": 0.56,
-   "start": 0.16,
+   "end": 0.64,
+   "start": 0.24,
    "text": "name"
   },
   {
-   "end": 1.12,
-   "start": 0.56,
+   "end": 1.2,
+   "start": 0.64,
    "text": "stitched"
   },
   {
    "end": 1.68,
-   "start": 1.12,
+   "start": 1.2,
    "text": "inside"
   },
   {
-   "end": 1.76,
+   "end": 1.68,
    "start": 1.68,
    "text": "the"
   },
   {
    "end": 2.32,
-   "start": 1.76,
+   "start": 1.68,
    "text": "strap"
   },
   {
-   "end": 2.72,
-   "start": 2.4,
+   "end": 2.8,
+   "start": 2.32,
    "text": "said"
   },
   {
-   "end": 3.52,
-   "start": 2.88,
+   "end": 3.68,
+   "start": 3.04,
    "text": "Arjun"
   },
   {
-   "end": 4.56,
-   "start": 4.16,
+   "end": 4.8,
+   "start": 4.48,
    "text": "Not"
   },
   {
-   "end": 4.88,
-   "start": 4.56,
+   "end": 5.12,
+   "start": 4.8,
    "text": "his"
   },
   {
-   "end": 5.28,
-   "start": 4.88,
+   "end": 5.36,
+   "start": 5.12,
    "text": "then"
   }
  ],
- "text": "The name stitched inside the strap said \"Arjun.\" Not his then."
+ "text": "The name stitched inside the strap said, \"Arjun.\" Not his then."
 }

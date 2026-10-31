@@ -1,97 +1,97 @@
 {
- "duration": 7.848375,
+ "duration": 6.16,
  "language": "English",
  "language_code": "en",
- "request_id": "f8e70a3d-c94d-45c0-8a7c-e638b896813c",
+ "request_id": "1979b041-b402-4a3b-babf-d2df4f91987a",
  "segments": [
   {
    "end": 0.56,
-   "start": 0,
+   "start": 0.08,
    "text": "Mira"
   },
   {
-   "end": 1.28,
-   "start": 1.2,
+   "end": 1.2,
+   "start": 1.12,
    "text": "you"
   },
   {
-   "end": 1.76,
-   "start": 1.28,
+   "end": 1.52,
+   "start": 1.2,
    "text": "found"
+  },
+  {
+   "end": 1.68,
+   "start": 1.52,
+   "text": "me"
   },
   {
    "end": 1.92,
    "start": 1.76,
-   "text": "me"
-  },
-  {
-   "end": 2.32,
-   "start": 1.92,
    "text": "didn't"
   },
   {
-   "end": 2.64,
-   "start": 2.32,
+   "end": 2.16,
+   "start": 1.92,
    "text": "you"
   },
   {
-   "end": 4.08,
-   "start": 3.36,
+   "end": 3.36,
+   "start": 2.72,
    "text": "Tomorrow"
   },
   {
-   "end": 4.88,
-   "start": 4.64,
+   "end": 4,
+   "start": 3.84,
    "text": "don't"
   },
   {
-   "end": 5.12,
-   "start": 4.88,
+   "end": 4.16,
+   "start": 4,
    "text": "let"
   },
   {
-   "end": 5.28,
-   "start": 5.12,
+   "end": 4.24,
+   "start": 4.16,
    "text": "me"
   },
   {
-   "end": 5.52,
-   "start": 5.28,
+   "end": 4.4,
+   "start": 4.24,
    "text": "get"
   },
   {
-   "end": 5.68,
-   "start": 5.52,
+   "end": 4.56,
+   "start": 4.4,
    "text": "on"
   },
   {
-   "end": 5.76,
-   "start": 5.68,
+   "end": 4.56,
+   "start": 4.56,
    "text": "the"
   },
   {
-   "end": 6.08,
-   "start": 5.76,
+   "end": 4.88,
+   "start": 4.56,
    "text": "6"
   },
   {
-   "end": 6.56,
-   "start": 6.08,
+   "end": 5.2,
+   "start": 4.88,
    "text": "40"
   },
   {
-   "end": 6.8,
-   "start": 6.64,
+   "end": 5.28,
+   "start": 5.2,
    "text": "a"
   },
   {
-   "end": 7.04,
-   "start": 6.8,
+   "end": 5.44,
+   "start": 5.28,
    "text": "m"
   },
   {
-   "end": 7.68,
-   "start": 7.04,
+   "end": 5.84,
+   "start": 5.44,
    "text": "train"
   }
  ],

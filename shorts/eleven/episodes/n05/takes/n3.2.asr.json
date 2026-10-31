@@ -1,17 +1,17 @@
 {
- "duration": 6.6409375,
+ "duration": 5.52,
  "language": "English",
  "language_code": "en",
- "request_id": "522f484a-7c52-42f1-85ed-c1fca33bf9da",
+ "request_id": "a7b6d477-9e68-4ac1-ba7a-54046dfc55be",
  "segments": [
   {
-   "end": 0.08,
-   "start": 0,
+   "end": 0.16,
+   "start": 0.16,
    "text": "A"
   },
   {
    "end": 0.88,
-   "start": 0.08,
+   "start": 0.16,
    "text": "mechanical"
   },
   {
@@ -20,53 +20,53 @@
    "text": "watch"
   },
   {
-   "end": 1.84,
-   "start": 1.44,
+   "end": 1.68,
+   "start": 1.36,
    "text": "doesn't"
   },
   {
-   "end": 2.24,
-   "start": 1.84,
+   "end": 2,
+   "start": 1.68,
    "text": "stop"
   },
   {
-   "end": 2.56,
-   "start": 2.32,
+   "end": 2.24,
+   "start": 2,
    "text": "by"
   },
   {
-   "end": 3.28,
-   "start": 2.56,
+   "end": 3.04,
+   "start": 2.24,
    "text": "itself"
   },
   {
-   "end": 4.48,
-   "start": 3.68,
+   "end": 3.92,
+   "start": 3.44,
    "text": "Someone"
   },
   {
-   "end": 4.72,
-   "start": 4.48,
+   "end": 4.16,
+   "start": 3.92,
    "text": "has"
   },
   {
-   "end": 4.8,
-   "start": 4.72,
+   "end": 4.32,
+   "start": 4.24,
    "text": "to"
   },
   {
-   "end": 5.28,
-   "start": 4.8,
+   "end": 4.64,
+   "start": 4.32,
    "text": "stop"
   },
   {
-   "end": 5.76,
-   "start": 5.28,
+   "end": 5.04,
+   "start": 4.64,
    "text": "winding"
   },
   {
-   "end": 6.24,
-   "start": 5.76,
+   "end": 5.44,
+   "start": 5.04,
    "text": "it"
   }
  ],

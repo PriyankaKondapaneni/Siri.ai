@@ -1,37 +1,37 @@
 {
- "duration": 6.9195625,
+ "duration": 5.6,
  "language": "English",
  "language_code": "en",
- "request_id": "86e2fd26-887d-4a15-9af1-b9cb79ef3fc9",
+ "request_id": "f82ff15d-7232-4302-bf30-092713e95752",
  "segments": [
   {
-   "end": 0.32,
-   "start": 0,
+   "end": 0.48,
+   "start": 0.16,
    "text": "He'd"
   },
   {
-   "end": 0.64,
-   "start": 0.32,
+   "end": 0.8,
+   "start": 0.48,
    "text": "said"
   },
   {
-   "end": 0.88,
-   "start": 0.64,
+   "end": 0.96,
+   "start": 0.8,
    "text": "that"
   },
   {
-   "end": 1.04,
-   "start": 1.04,
+   "end": 1.12,
+   "start": 1.12,
    "text": "to"
   },
   {
-   "end": 1.2,
-   "start": 1.04,
+   "end": 1.28,
+   "start": 1.12,
    "text": "me"
   },
   {
-   "end": 2,
-   "start": 1.2,
+   "end": 1.92,
+   "start": 1.28,
    "text": "before"
   },
   {
@@ -45,43 +45,43 @@
    "text": "a"
   },
   {
-   "end": 3.52,
+   "end": 3.28,
    "start": 2.64,
    "text": "message"
   },
   {
-   "end": 4.16,
-   "start": 3.92,
+   "end": 3.92,
+   "start": 3.68,
    "text": "from"
   },
   {
-   "end": 4.24,
-   "start": 4.16,
+   "end": 4,
+   "start": 3.92,
    "text": "a"
   },
   {
-   "end": 4.8,
-   "start": 4.24,
+   "end": 4.4,
+   "start": 4,
    "text": "night"
   },
   {
-   "end": 4.96,
-   "start": 4.8,
+   "end": 4.48,
+   "start": 4.4,
    "text": "he"
   },
   {
-   "end": 5.52,
-   "start": 4.96,
+   "end": 4.8,
+   "start": 4.48,
    "text": "hasn't"
   },
   {
-   "end": 6,
-   "start": 5.52,
+   "end": 5.12,
+   "start": 4.8,
    "text": "lived"
   },
   {
-   "end": 6.56,
-   "start": 6,
+   "end": 5.52,
+   "start": 5.12,
    "text": "yet"
   }
  ],

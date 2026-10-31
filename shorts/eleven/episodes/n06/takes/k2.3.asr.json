@@ -1,99 +1,99 @@
 {
- "duration": 8.637875,
+ "duration": 6,
  "language": "English",
  "language_code": "en",
- "request_id": "e8c5d7eb-85a4-40e2-93ef-2bf53e7d88d0",
+ "request_id": "151da424-f9d5-4d18-b0c1-2e527dad9678",
  "segments": [
   {
-   "end": 0.56,
-   "start": 0,
-   "text": "Mira"
+   "end": 0.64,
+   "start": 0.08,
+   "text": "Meera"
+  },
+  {
+   "end": 1.12,
+   "start": 1.04,
+   "text": "you"
   },
   {
    "end": 1.44,
-   "start": 1.28,
-   "text": "you"
-  },
-  {
-   "end": 1.92,
-   "start": 1.44,
+   "start": 1.12,
    "text": "found"
   },
   {
-   "end": 2.08,
-   "start": 1.92,
+   "end": 1.6,
+   "start": 1.44,
    "text": "me"
   },
   {
-   "end": 2.4,
-   "start": 2.08,
+   "end": 1.84,
+   "start": 1.6,
    "text": "didn't"
   },
   {
-   "end": 2.64,
-   "start": 2.4,
+   "end": 2,
+   "start": 1.84,
    "text": "you"
   },
   {
-   "end": 4.4,
-   "start": 3.68,
+   "end": 3.2,
+   "start": 2.56,
    "text": "Tomorrow"
   },
   {
-   "end": 5.44,
-   "start": 5.2,
+   "end": 3.84,
+   "start": 3.6,
    "text": "don't"
   },
   {
-   "end": 5.68,
-   "start": 5.44,
+   "end": 4,
+   "start": 3.84,
    "text": "let"
   },
   {
-   "end": 5.84,
-   "start": 5.68,
+   "end": 4.08,
+   "start": 4,
    "text": "me"
   },
   {
-   "end": 6.16,
-   "start": 5.84,
+   "end": 4.24,
+   "start": 4.08,
    "text": "get"
   },
   {
-   "end": 6.32,
-   "start": 6.16,
+   "end": 4.32,
+   "start": 4.24,
    "text": "on"
   },
   {
-   "end": 6.4,
-   "start": 6.32,
+   "end": 4.4,
+   "start": 4.32,
    "text": "the"
   },
   {
-   "end": 6.8,
-   "start": 6.4,
+   "end": 4.64,
+   "start": 4.4,
    "text": "6"
   },
   {
-   "end": 7.28,
-   "start": 6.8,
+   "end": 4.96,
+   "start": 4.64,
    "text": "40"
   },
   {
-   "end": 7.36,
-   "start": 7.36,
+   "end": 4.96,
+   "start": 4.96,
    "text": "a"
   },
   {
-   "end": 7.76,
-   "start": 7.36,
+   "end": 5.28,
+   "start": 4.96,
    "text": "m"
   },
   {
-   "end": 8.4,
-   "start": 7.76,
+   "end": 5.68,
+   "start": 5.28,
    "text": "train"
   }
  ],
- "text": "Mira, you found me, didn't you? Tomorrow, don't let me get on the 6:40 a.m. train."
+ "text": "Meera, you found me, didn't you? Tomorrow, don't let me get on the 6:40 a.m. train."
 }

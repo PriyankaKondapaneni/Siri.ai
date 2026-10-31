@@ -2,10 +2,11 @@
  "episode": "n03",
  "title": "Arjun",
  "card": "6 DAYS LEFT",
- "model": "drama-3",
+ "model": "eleven_v4",
  "voices": {
-  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
-  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+  "mira": "yj30vwTGJxSHezdAGsv9",
+  "mira_narr": "Z3R5wn05IrDiVCyEkUrK",
+  "kabir": "tzX5paJ07p5hyWFcU3uG"
  },
  "tempo": 1.0,
  "cap": 0.45,
@@ -23,19 +24,19 @@
    "id": "m1",
    "who": "mira",
    "kind": "live",
-   "text": "[quietly, holding it out] You left this."
+   "text": "[plainly] You left this."
   },
   {
    "id": "k1",
    "who": "kabir",
    "kind": "live",
-   "text": "[looking at it, then at her, softly] You followed a bus in the rain. For an umbrella."
+   "text": "[softly, a little amazed] You followed a bus in the rain. For an umbrella."
   },
   {
    "id": "m2",
    "who": "mira",
    "kind": "live",
-   "text": "[plainly] It looked expensive."
+   "text": "[dry, unimpressed] It looked expensive."
   },
   {
    "id": "k2",
@@ -47,7 +48,7 @@
    "id": "m3",
    "who": "mira",
    "kind": "live",
-   "text": "[gently] Then it looked important."
+   "text": "[simply, not backing down] Then it looked important."
   },
   {
    "id": "k3",
@@ -59,7 +60,7 @@
    "id": "n1",
    "who": "mira",
    "kind": "narr",
-   "text": "[low] The name stitched inside the strap said Arjun. Not his, then."
+   "text": "[low, piecing it together] The name stitched inside the strap said Arjun. Not his, then."
   },
   {
    "id": "k4",
@@ -71,13 +72,13 @@
    "id": "m4",
    "who": "mira",
    "kind": "live",
-   "text": "[soft] You don't have to."
+   "text": "[polite, a little awkward] You don't have to."
   },
   {
    "id": "k5",
    "who": "kabir",
    "kind": "live",
-   "text": "[simply] I know."
+   "text": "[simply, warm] I know."
   }
  ]
 }

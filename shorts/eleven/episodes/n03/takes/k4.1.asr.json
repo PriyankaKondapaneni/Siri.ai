@@ -1,32 +1,32 @@
 {
- "duration": 2.6006875,
+ "duration": 2.4,
  "language": "English",
  "language_code": "en",
- "request_id": "c83b2687-c055-4d3f-9a0d-eb4734b50109",
+ "request_id": "db40beb1-f1cf-4643-bbea-8d64cc40c68e",
  "segments": [
   {
-   "end": 0.16,
+   "end": 0.24,
    "start": 0,
    "text": "You're"
   },
   {
-   "end": 0.8,
-   "start": 0.16,
+   "end": 1.04,
+   "start": 0.24,
    "text": "soaked"
   },
   {
-   "end": 1.6,
-   "start": 1.44,
+   "end": 1.52,
+   "start": 1.36,
    "text": "I'll"
   },
   {
-   "end": 1.92,
-   "start": 1.6,
+   "end": 1.84,
+   "start": 1.52,
    "text": "make"
   },
   {
-   "end": 2.32,
-   "start": 1.92,
+   "end": 2.16,
+   "start": 1.84,
    "text": "tea"
   }
  ],

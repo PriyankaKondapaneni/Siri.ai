@@ -1,0 +1,99 @@
+{
+ "duration": 8.637875,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "e8c5d7eb-85a4-40e2-93ef-2bf53e7d88d0",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0,
+   "text": "Mira"
+  },
+  {
+   "end": 1.44,
+   "start": 1.28,
+   "text": "you"
+  },
+  {
+   "end": 1.92,
+   "start": 1.44,
+   "text": "found"
+  },
+  {
+   "end": 2.08,
+   "start": 1.92,
+   "text": "me"
+  },
+  {
+   "end": 2.4,
+   "start": 2.08,
+   "text": "didn't"
+  },
+  {
+   "end": 2.64,
+   "start": 2.4,
+   "text": "you"
+  },
+  {
+   "end": 4.4,
+   "start": 3.68,
+   "text": "Tomorrow"
+  },
+  {
+   "end": 5.44,
+   "start": 5.2,
+   "text": "don't"
+  },
+  {
+   "end": 5.68,
+   "start": 5.44,
+   "text": "let"
+  },
+  {
+   "end": 5.84,
+   "start": 5.68,
+   "text": "me"
+  },
+  {
+   "end": 6.16,
+   "start": 5.84,
+   "text": "get"
+  },
+  {
+   "end": 6.32,
+   "start": 6.16,
+   "text": "on"
+  },
+  {
+   "end": 6.4,
+   "start": 6.32,
+   "text": "the"
+  },
+  {
+   "end": 6.8,
+   "start": 6.4,
+   "text": "6"
+  },
+  {
+   "end": 7.28,
+   "start": 6.8,
+   "text": "40"
+  },
+  {
+   "end": 7.36,
+   "start": 7.36,
+   "text": "a"
+  },
+  {
+   "end": 7.76,
+   "start": 7.36,
+   "text": "m"
+  },
+  {
+   "end": 8.4,
+   "start": 7.76,
+   "text": "train"
+  }
+ ],
+ "text": "Mira, you found me, didn't you? Tomorrow, don't let me get on the 6:40 a.m. train."
+}

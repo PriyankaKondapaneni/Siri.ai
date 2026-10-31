@@ -1,29 +1,49 @@
 {
- "duration": 2.55425,
+ "duration": 3.92,
  "language": "English",
  "language_code": "en",
- "request_id": "1eea6a8b-bcf9-4d4a-91de-0aebc97d6250",
+ "request_id": "97dd37ef-d793-4488-87fc-8a84ca9e9ccf",
  "segments": [
   {
    "end": 0.48,
-   "start": 0.08,
+   "start": 0,
    "text": "Then"
   },
   {
-   "end": 0.72,
-   "start": 0.56,
+   "end": 0.8,
+   "start": 0.64,
    "text": "it"
   },
   {
-   "end": 1.12,
-   "start": 0.72,
+   "end": 1.04,
+   "start": 0.8,
    "text": "looked"
   },
   {
-   "end": 2.16,
-   "start": 1.2,
+   "end": 1.84,
+   "start": 1.04,
+   "text": "important"
+  },
+  {
+   "end": 2.56,
+   "start": 2.24,
+   "text": "Then"
+  },
+  {
+   "end": 2.72,
+   "start": 2.56,
+   "text": "it"
+  },
+  {
+   "end": 2.96,
+   "start": 2.72,
+   "text": "looked"
+  },
+  {
+   "end": 3.76,
+   "start": 2.96,
    "text": "important"
   }
  ],
- "text": "Then it looked important."
+ "text": "Then it looked important. Then it looked important."
 }

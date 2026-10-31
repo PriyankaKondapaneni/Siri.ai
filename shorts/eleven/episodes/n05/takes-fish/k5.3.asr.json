@@ -1,0 +1,64 @@
+{
+ "duration": 6.78025,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "4d881182-74f2-49e3-83d4-bcb79cf95209",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0.08,
+   "text": "11"
+  },
+  {
+   "end": 0.96,
+   "start": 0.48,
+   "text": "11"
+  },
+  {
+   "end": 2.48,
+   "start": 2.16,
+   "text": "three"
+  },
+  {
+   "end": 2.88,
+   "start": 2.48,
+   "text": "years"
+  },
+  {
+   "end": 3.36,
+   "start": 2.88,
+   "text": "ago"
+  },
+  {
+   "end": 4.8,
+   "start": 4.72,
+   "text": "the"
+  },
+  {
+   "end": 5.28,
+   "start": 4.8,
+   "text": "night"
+  },
+  {
+   "end": 5.28,
+   "start": 5.28,
+   "text": "he"
+  },
+  {
+   "end": 5.68,
+   "start": 5.28,
+   "text": "didn't"
+  },
+  {
+   "end": 5.92,
+   "start": 5.68,
+   "text": "come"
+  },
+  {
+   "end": 6.4,
+   "start": 6,
+   "text": "home"
+  }
+ ],
+ "text": "11:11, three years ago, the night he didn't come home."
+}

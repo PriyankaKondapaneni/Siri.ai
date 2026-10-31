@@ -2,10 +2,11 @@
  "episode": "n02",
  "title": "The Umbrella",
  "card": "6 DAYS LEFT",
- "model": "drama-3",
+ "model": "eleven_v4",
  "voices": {
-  "mira": "f3a2b90078d54a65af4b95f63bc7798e",
-  "kabir": "bf322df2096a46f18c579d0baa36f41d"
+  "mira": "yj30vwTGJxSHezdAGsv9",
+  "mira_narr": "Z3R5wn05IrDiVCyEkUrK",
+  "kabir": "tzX5paJ07p5hyWFcU3uG"
  },
  "tempo": 1.0,
  "cap": 0.45,
@@ -27,20 +28,20 @@
    "id": "n2",
    "who": "mira",
    "kind": "narr",
-   "text": "[quiet, a little wry] And he'd left his umbrella behind in the rain."
+   "text": "[dry, a little wry] And he'd left his umbrella behind in the rain."
   },
   {
    "id": "n3",
    "who": "mira",
    "kind": "narr",
-   "text": "[thoughtful, matter-of-fact] A receipt in the strap. Same bakery. Same order. Six-twenty, every morning.",
+   "text": "[thinking it through, matter-of-fact] A receipt in the strap. Same bakery. Same order. Six-twenty, every morning.",
    "show": "A receipt in the strap. Same bakery. Same order. 6:20, every morning."
   },
   {
    "id": "n4",
    "who": "mira",
    "kind": "narr",
-   "text": "[dry, certain] People who buy bread at the same hour every day don't live far from where they buy it."
+   "text": "[dry, quietly certain] People who buy bread at the same hour every day don't live far from where they buy it."
   }
  ]
 }

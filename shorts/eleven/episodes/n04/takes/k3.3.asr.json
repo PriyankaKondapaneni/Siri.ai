@@ -1,32 +1,32 @@
 {
- "duration": 3.2508125,
+ "duration": 2.72,
  "language": "English",
  "language_code": "en",
- "request_id": "55cb3275-5fe2-4fcb-a561-dab4be14d1a4",
+ "request_id": "3996751a-771e-4265-93f2-1721ab7eab6b",
  "segments": [
   {
-   "end": 1.28,
-   "start": 0.88,
+   "end": 1.04,
+   "start": 0.64,
    "text": "Good"
   },
   {
-   "end": 2.16,
-   "start": 2.08,
+   "end": 1.68,
+   "start": 1.52,
    "text": "I"
   },
   {
-   "end": 2.4,
-   "start": 2.16,
+   "end": 1.84,
+   "start": 1.68,
    "text": "don't"
   },
   {
-   "end": 2.64,
-   "start": 2.4,
+   "end": 2.08,
+   "start": 1.84,
    "text": "have"
   },
   {
-   "end": 3.04,
-   "start": 2.64,
+   "end": 2.4,
+   "start": 2.08,
    "text": "any"
   }
  ],

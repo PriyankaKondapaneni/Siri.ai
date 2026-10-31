@@ -1,21 +1,21 @@
 {
- "duration": 1.6254375,
+ "duration": 1.36,
  "language": "English",
  "language_code": "en",
- "request_id": "477379eb-fdfd-4314-9b70-6b2dc1b82179",
+ "request_id": "763f238e-cb3a-49bd-b0a4-f9df5984f3ff",
  "segments": [
   {
-   "end": 0.24,
-   "start": 0,
+   "end": 0.32,
+   "start": 0.16,
    "text": "You"
   },
   {
    "end": 0.64,
-   "start": 0.24,
+   "start": 0.32,
    "text": "left"
   },
   {
-   "end": 1.28,
+   "end": 1.04,
    "start": 0.64,
    "text": "this"
   }

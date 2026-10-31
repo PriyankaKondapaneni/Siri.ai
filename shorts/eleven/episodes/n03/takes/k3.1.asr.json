@@ -1,27 +1,27 @@
 {
- "duration": 1.7183125,
+ "duration": 1.76,
  "language": "English",
  "language_code": "en",
- "request_id": "3fa51bc1-2dc6-43b5-ac06-c8fb0240ce67",
+ "request_id": "15ff5511-7cae-4fdb-bee5-fcf36cc9f65d",
  "segments": [
   {
-   "end": 0.16,
-   "start": 0,
+   "end": 0.32,
+   "start": 0.16,
    "text": "It"
   },
   {
-   "end": 0.4,
-   "start": 0.16,
+   "end": 0.56,
+   "start": 0.32,
    "text": "was"
   },
   {
-   "end": 0.64,
-   "start": 0.4,
+   "end": 0.72,
+   "start": 0.56,
    "text": "my"
   },
   {
-   "end": 1.36,
-   "start": 0.64,
+   "end": 1.44,
+   "start": 0.8,
    "text": "brother's"
   }
  ],

@@ -1,0 +1,29 @@
+{
+ "duration": 1.7183125,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "644c9bd0-dc04-487d-800b-f804ca912a32",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "You"
+  },
+  {
+   "end": 0.48,
+   "start": 0.24,
+   "text": "don't"
+  },
+  {
+   "end": 0.88,
+   "start": 0.56,
+   "text": "have"
+  },
+  {
+   "end": 1.36,
+   "start": 0.96,
+   "text": "to"
+  }
+ ],
+ "text": "You don't have to."
+}
