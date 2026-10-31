@@ -35,6 +35,8 @@
       }
       // a face expression for this moment: 'h' happy eyes, 's' soft smile, 'w' worried mouth, 't' teary shine
       // (a string, or a function of time); a moving mouth always wins over a quiet one
+      // a debug aid for lip sync: every talking face wide open, so its mouth can be located in a frame
+      if (PP.FORCE_MOUTH && o.talk) state = state.replace(/m\d[AEIO]?/, '').replace('b', '') + 'm2';
       const face = typeof o.face === 'function' ? o.face(t) : o.face || '';
       if (face.includes('h')) state = state.replace('b', '');
       if (PP.FACES[name]) state += /m\d/.test(state) ? face.replace(/[sw]/g, '') : face;

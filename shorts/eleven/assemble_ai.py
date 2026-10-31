@@ -14,7 +14,7 @@ import numpy as np
 import cv2
 
 EP = sys.argv[1]
-CLIPS = sys.argv[2]
+CLIPS = sys.argv[2].split(':')  # one or more folders of clips
 PICKS = json.load(open(sys.argv[3])) if len(sys.argv) > 3 and sys.argv[3].endswith('.json') else {}
 OUT = sys.argv[4] if len(sys.argv) > 4 else f'build/ep{EP}ai/11-11-episode-{EP}-ai.mp4'
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -24,6 +24,13 @@ SKIP = 6  # Wan frames to drop at the start of each clip
 
 shots = json.load(open(f'{ROOT}/episodes/{EP}/shots.json'))['shots']  # [s, e, look, transition, ...]
 jobs = json.load(open(f'{ROOT}/kaggle/ep{EP}/jobs.json'))
+if os.path.exists(f'{ROOT}/kaggle/ep{EP}/jobs2.json'): jobs += json.load(open(f'{ROOT}/kaggle/ep{EP}/jobs2.json'))
+import lipsync as LS
+TIMING = json.load(open(f'{ROOT}/episodes/{EP}/timing.json'))
+ENV = LS.load_envelope(f'{ROOT}/episodes/{EP}/envelope.js')
+MOUTHS = json.load(open(f'{ROOT}/kaggle/ep{EP}/mouths.json')) if os.path.exists(f'{ROOT}/kaggle/ep{EP}/mouths.json') else {}
+TALK = json.load(open(f'{ROOT}/kaggle/ep{EP}/talk.json')) if os.path.exists(f'{ROOT}/kaggle/ep{EP}/talk.json') else {}  # piece -> live line id
+CLOCKS = json.load(open(f'{ROOT}/kaggle/ep{EP}/clocks.json')) if os.path.exists(f'{ROOT}/kaggle/ep{EP}/clocks.json') else []  # pieces that keep the code clock
 ai = sorted({j['shot'] for j in jobs})
 os.makedirs(os.path.dirname(OUT) or '.', exist_ok=True)
 
@@ -49,19 +56,26 @@ segs = {}
 for j in jobs:
     tag = f"shot{j['shot']:02d}{j.get('part', '')}"
     segs[tag] = dict(tag=tag, shot=j['shot'], part=j.get('part', ''), s=j.get('start', shots[j['shot']][0]), e=j.get('end', shots[j['shot']][1]))
-clip = {}
+def find(stem):
+    for d in CLIPS:
+        if os.path.exists(f'{d}/{stem}.mp4'): return f'{d}/{stem}.mp4'
+    return None
+
+
+clip, mouth_path = {}, {}
 for tag, g in sorted(segs.items(), key=lambda x: x[1]['s']):
-    take = int(PICKS.get(tag, PICKS.get(str(g['shot']), 1)))
-    if take == 0: print(f'{tag}: kept as the code shot'); continue
-    path = f'{CLIPS}/{tag}_t{take}.mp4'
-    if not os.path.exists(path):
-        alt = f'{CLIPS}/{tag}_t{3 - take}.mp4'
-        print(f'{tag}: take {take} missing, using {alt if os.path.exists(alt) else "the code shot"}')
-        if not os.path.exists(alt): continue
-        path = alt
+    pick = PICKS.get(tag, 1)
+    if pick == 0: print(f'{tag}: kept as the code shot'); continue
+    stems = [pick] if isinstance(pick, str) else [f'{tag}_t{pick}', f'{tag}_t{3 - int(pick)}']
+    path = next((find(st) for st in stems if find(st)), None)
+    if not path: print(f'{tag}: no clip, kept as the code shot'); continue
     cw, ch = clip_size(path)
     clip[tag] = read_all(path, cw, ch)  # kept small; upscaled frame by frame when used
-    print(f"{tag}: {len(clip[tag])} frames ({len(clip[tag]) / 24:.2f} s) for {g['e'] - g['s']:.2f} s")
+    print(f"{tag}: {os.path.basename(path)} {len(clip[tag])} frames ({len(clip[tag]) / 24:.2f} s) for {g['e'] - g['s']:.2f} s")
+    if tag in TALK and tag in MOUTHS:
+        v = MOUTHS[tag]; (mx, my), sc0 = LS.start_to_clip(v['cx'], v['cy'], cw, ch)
+        mw = v['w'] * sc0
+        mouth_path[tag] = (LS.refine(clip[tag], LS.track(clip[tag], mx, my, mw), mw), mw)
 ai_shots = {segs[t]['shot'] for t in clip}
 
 # the engine's finish, so Wan frames sit with the rest: a soft vignette and fine grain
@@ -95,7 +109,16 @@ def ai_frame(tag, t):
     have = (len(fr) - SKIP) / 24
     rate = min(1.0, have / max(0.01, g['e'] - g['s'] + DISSOLVE))  # slow it slightly when the clip is short
     i = int(np.clip(SKIP + round((t - g['s']) * rate * 24), 0, len(fr) - 1))
-    im = upscale(tag, i).astype(np.float32) * VIG
+    im = upscale(tag, i).astype(np.float32)
+    if tag in mouth_path:
+        line = next(l for l in TIMING['lines'] if l['id'] == TALK[tag])
+        if line['s'] - 0.04 <= t <= line['e'] + 0.08:
+            (x, y, sc, ang), mw = mouth_path[tag][0][i], mouth_path[tag][1]
+            ch, cw = clip[tag].shape[1:3]; s_up = max(W / cw, H / ch)
+            ox, oy = (cw * s_up - W) / 2, (ch * s_up - H) / 2
+            words = [w for w in TIMING['words'] if w['line'] == line['id']]
+            im = LS.paint(im, x * s_up - ox, y * s_up - oy, mw * sc * s_up, ang, LS.mouth_state(ENV['live'], words, t))
+    im = im * VIG
     gr = cv2.resize(GRAIN[int(t * 24) % 6], (W, H), interpolation=cv2.INTER_LINEAR)[..., None]
     return np.clip(im + gr, 0, 255)
 
@@ -137,6 +160,21 @@ def subs(f, im):
     return im * (1 - a) + rgb * a
 
 
+def paste_clock(im, code):
+    """The bedside clock from the code frame (its glowing blue digits and a margin), feathered onto the Wan frame."""
+    c = code.astype(np.int16)
+    blue = (c[..., 2] - c[..., 0] > 50) & (c[..., 2] > 150)
+    blue[:H // 3] = False
+    ys, xs = np.nonzero(blue)
+    if len(xs) < 30: return im
+    x0, x1, y0, y1 = np.percentile(xs, 3), np.percentile(xs, 97), np.percentile(ys, 3), np.percentile(ys, 97)
+    cx, cy, rx, ry = (x0 + x1) / 2, (y0 + y1) / 2, (x1 - x0) * 0.75 + 20, (y1 - y0) * 1.1 + 20
+    m = np.zeros((H, W), np.float32)
+    cv2.ellipse(m, (int(cx), int(cy)), (int(rx), int(ry)), 0, 0, 360, 1.0, -1)
+    m = cv2.GaussianBlur(m, (0, 0), 10)[..., None]
+    return im * (1 - m) + code.astype(np.float32) * m
+
+
 src = subprocess.Popen(['ffmpeg', '-v', 'error', '-i', DELIVER, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], stdout=subprocess.PIPE)
 enc = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                         '-i', DELIVER, '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p',
@@ -153,6 +191,7 @@ for f in range(N):
     ease = lambda a: a * a * (3 - 2 * a)
     if tag:
         im = ai_frame(tag, t)
+        if tag in CLOCKS: im = paste_clock(im, code)
         g = segs[tag]
         if g['part'] == 'b' and t - g['s'] < PART_BLEND:  # the two parts of a long shot meet in a quick blend
             a = ease((t - g['s']) / PART_BLEND)
