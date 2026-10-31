@@ -1,0 +1,29 @@
+{
+ "duration": 2.32,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "6f8d8e4a-6536-48f9-a97f-444ce77ac64c",
+ "segments": [
+  {
+   "end": 0.72,
+   "start": 0.16,
+   "text": "Then"
+  },
+  {
+   "end": 1.04,
+   "start": 0.72,
+   "text": "it"
+  },
+  {
+   "end": 1.28,
+   "start": 1.04,
+   "text": "looked"
+  },
+  {
+   "end": 2,
+   "start": 1.28,
+   "text": "important"
+  }
+ ],
+ "text": "Then it looked important."
+}

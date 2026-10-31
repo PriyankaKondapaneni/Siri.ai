@@ -1,0 +1,89 @@
+{
+ "duration": 6,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "7cc6a1af-2c07-4232-9470-beaf9aa874d4",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.08,
+   "text": "He'd"
+  },
+  {
+   "end": 0.96,
+   "start": 0.56,
+   "text": "said"
+  },
+  {
+   "end": 1.12,
+   "start": 0.96,
+   "text": "that"
+  },
+  {
+   "end": 1.28,
+   "start": 1.2,
+   "text": "to"
+  },
+  {
+   "end": 1.36,
+   "start": 1.28,
+   "text": "me"
+  },
+  {
+   "end": 2.08,
+   "start": 1.36,
+   "text": "before"
+  },
+  {
+   "end": 2.72,
+   "start": 2.64,
+   "text": "in"
+  },
+  {
+   "end": 2.8,
+   "start": 2.72,
+   "text": "a"
+  },
+  {
+   "end": 3.52,
+   "start": 2.8,
+   "text": "message"
+  },
+  {
+   "end": 4.24,
+   "start": 4,
+   "text": "from"
+  },
+  {
+   "end": 4.32,
+   "start": 4.24,
+   "text": "a"
+  },
+  {
+   "end": 4.72,
+   "start": 4.32,
+   "text": "night"
+  },
+  {
+   "end": 4.8,
+   "start": 4.72,
+   "text": "he"
+  },
+  {
+   "end": 5.2,
+   "start": 4.8,
+   "text": "hasn't"
+  },
+  {
+   "end": 5.52,
+   "start": 5.2,
+   "text": "lived"
+  },
+  {
+   "end": 5.92,
+   "start": 5.52,
+   "text": "yet"
+  }
+ ],
+ "text": "He'd said that to me before, in a message from a night he hasn't lived yet."
+}

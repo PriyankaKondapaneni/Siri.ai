@@ -1,0 +1,23 @@
+{
+ "duration": 1.44,
+ "language_code": "en",
+ "request_id": "d7eaa3fa-f113-48a1-a3ce-ee7cdc83356b",
+ "segments": [
+  {
+   "end": 0.48,
+   "start": 0.24,
+   "text": "Blue"
+  },
+  {
+   "end": 0.88,
+   "start": 0.48,
+   "text": "suits"
+  },
+  {
+   "end": 1.04,
+   "start": 0.88,
+   "text": "you"
+  }
+ ],
+ "text": "Blue suits you."
+}

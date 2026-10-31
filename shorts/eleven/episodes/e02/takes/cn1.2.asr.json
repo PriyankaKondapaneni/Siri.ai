@@ -1,0 +1,84 @@
+{
+ "duration": 6.08,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "09f84ceb-97ac-4a4b-8bf2-0448b2649401",
+ "segments": [
+  {
+   "end": 0.4,
+   "start": 0.16,
+   "text": "Two"
+  },
+  {
+   "end": 0.72,
+   "start": 0.4,
+   "text": "mugs"
+  },
+  {
+   "end": 0.88,
+   "start": 0.72,
+   "text": "on"
+  },
+  {
+   "end": 0.96,
+   "start": 0.88,
+   "text": "the"
+  },
+  {
+   "end": 1.6,
+   "start": 0.96,
+   "text": "rack"
+  },
+  {
+   "end": 2.24,
+   "start": 1.92,
+   "text": "one"
+  },
+  {
+   "end": 2.48,
+   "start": 2.24,
+   "text": "never"
+  },
+  {
+   "end": 3.12,
+   "start": 2.48,
+   "text": "used"
+  },
+  {
+   "end": 3.68,
+   "start": 3.6,
+   "text": "A"
+  },
+  {
+   "end": 4.48,
+   "start": 3.68,
+   "text": "photograph"
+  },
+  {
+   "end": 4.96,
+   "start": 4.72,
+   "text": "turned"
+  },
+  {
+   "end": 5.04,
+   "start": 5.04,
+   "text": "to"
+  },
+  {
+   "end": 5.36,
+   "start": 5.04,
+   "text": "face"
+  },
+  {
+   "end": 5.44,
+   "start": 5.36,
+   "text": "the"
+  },
+  {
+   "end": 5.92,
+   "start": 5.44,
+   "text": "wall"
+  }
+ ],
+ "text": "Two mugs on the rack, one never used. A photograph turned to face the wall."
+}

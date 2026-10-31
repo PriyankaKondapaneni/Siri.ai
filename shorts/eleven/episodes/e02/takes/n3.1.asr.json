@@ -1,0 +1,74 @@
+{
+ "duration": 6.16,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "41e115fb-7e0a-4859-89df-c2b723694626",
+ "segments": [
+  {
+   "end": 0.16,
+   "start": 0.08,
+   "text": "A"
+  },
+  {
+   "end": 0.64,
+   "start": 0.16,
+   "text": "receipt"
+  },
+  {
+   "end": 0.8,
+   "start": 0.64,
+   "text": "in"
+  },
+  {
+   "end": 0.88,
+   "start": 0.8,
+   "text": "the"
+  },
+  {
+   "end": 1.6,
+   "start": 0.88,
+   "text": "strap"
+  },
+  {
+   "end": 2.4,
+   "start": 1.92,
+   "text": "Same"
+  },
+  {
+   "end": 3.04,
+   "start": 2.4,
+   "text": "bakery"
+  },
+  {
+   "end": 3.52,
+   "start": 3.2,
+   "text": "same"
+  },
+  {
+   "end": 4,
+   "start": 3.52,
+   "text": "order"
+  },
+  {
+   "end": 4.72,
+   "start": 4.32,
+   "text": "6"
+  },
+  {
+   "end": 5.12,
+   "start": 4.72,
+   "text": "20"
+  },
+  {
+   "end": 5.52,
+   "start": 5.28,
+   "text": "every"
+  },
+  {
+   "end": 6,
+   "start": 5.52,
+   "text": "morning"
+  }
+ ],
+ "text": "A receipt in the strap. Same bakery, same order. 6:20 every morning."
+}

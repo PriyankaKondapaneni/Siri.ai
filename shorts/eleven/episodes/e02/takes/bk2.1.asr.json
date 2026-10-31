@@ -1,0 +1,18 @@
+{
+ "duration": 1.92,
+ "language_code": "en",
+ "request_id": "853bc5dc-193e-40ed-9e95-b7043bbc9f1c",
+ "segments": [
+  {
+   "end": 1.12,
+   "start": 0.88,
+   "text": "It"
+  },
+  {
+   "end": 1.6,
+   "start": 1.12,
+   "text": "isn't"
+  }
+ ],
+ "text": "It isn't."
+}

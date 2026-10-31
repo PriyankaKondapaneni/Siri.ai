@@ -1,0 +1,112 @@
+{
+ "model": "gpt-image-2",
+ "size": "1024x1536",
+ "quality": "medium",
+ "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients on the characters, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. The cheeks have only a soft, natural pink blush, with NO hatching lines, strokes or dashes on the cheeks. Full, properly proportioned arms with sleeves and simple cute cartoon hands; never stick-figure arms. The background is painted in the soft illustrated style of the LAST reference image: soft flat pastel colours, gentle texture, simple clean shapes, thin soft outlines, slightly muted. Vertical 9:16 film frame, the subject centred, cinematic composition with depth. No text, no letters, no numbers, no watermark.",
+ "images": {
+  "handover_ots": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira is the girl in the SECOND reference image (long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf). Kabir is the young man in the THIRD reference image (messy black hair, dark eyes, a charcoal wool coat over a black turtleneck). Keep both faces exactly the same as their references. Night, the front steps of a small old apartment building at night, a warm porch light, light drizzle, wet stone. Over-the-shoulder shot from just behind Mira (we see her back, her wet hair and red scarf, her face not visible) as she holds a closed black umbrella out toward Kabir, who sits on the steps looking up at her, surprised, mouth closed."
+  },
+  "kabir_steps_close": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Kabir, the same young man as the SECOND reference image with exactly the same face: messy black hair, dark eyes, a charcoal wool coat over a black turtleneck, a vintage leather-strap watch. Night, the front steps of a small old apartment building at night, a warm porch light, light drizzle, wet stone. Medium close-up: he sits on the steps, hair damp from the rain, looking up at someone just off camera with a soft, puzzled expression, mouth closed, face lit warm by the porch light."
+  },
+  "kabir_takes": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Kabir, the same young man as the SECOND reference image with exactly the same face: messy black hair, dark eyes, a charcoal wool coat over a black turtleneck, a vintage leather-strap watch. Night, the front steps of a small old apartment building at night, a warm porch light, light drizzle, wet stone. Close shot: he holds a closed black umbrella across his lap in both hands and looks down at it, quiet and thoughtful, mouth closed. Proper cartoon hands with five fingers."
+  },
+  "two_shot_wide": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira is the girl in the SECOND reference image (long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf). Kabir is the young man in the THIRD reference image (messy black hair, dark eyes, a charcoal wool coat over a black turtleneck). Keep both faces exactly the same as their references. Night, the front steps of a small old apartment building at night, a warm porch light, light drizzle, wet stone. A wide side view of the whole building entrance: Kabir sits on the steps holding the closed black umbrella, Mira stands at the bottom of the steps in the drizzle, facing him; both small in the frame, the porch light making a warm pool around them in the dark blue night."
+  },
+  "kabir_umbrella_close": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Kabir, the same young man as the SECOND reference image with exactly the same face: messy black hair, dark eyes, a charcoal wool coat over a black turtleneck, a vintage leather-strap watch. Night, the front steps of a small old apartment building at night, a warm porch light, light drizzle, wet stone. Close-up of his face, eyes lowered to the umbrella in his hands, a quiet sadness, mouth closed, the porch light warm on one side of his face."
+  },
+  "strap_name": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Extreme close-up of a man's hands in charcoal wool sleeves opening the fabric strap of a closed black umbrella: inside the strap the name ARJUN is stitched in small neat white thread letters. Warm porch light, raindrops on the fabric, shallow depth of field. Proper cartoon hands with five fingers."
+  },
+  "mira_look": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Night, the front steps of a small old apartment building at night, a warm porch light, light drizzle, wet stone. Medium close-up: she stands in the drizzle at the bottom of the steps, wet strands of hair on her cheek, looking at someone just off camera with a quiet, careful, curious expression, mouth closed."
+  },
+  "kabir_door": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Kabir, the same young man as the SECOND reference image with exactly the same face: messy black hair, dark eyes, a charcoal wool coat over a black turtleneck, a vintage leather-strap watch. Night. Medium close-up: he stands in the open front door of an old apartment building, warm light from the hallway behind him, holding the door open with one hand and the closed black umbrella in the other, looking back toward someone just off camera with a small kind smile, mouth closed."
+  },
+  "mugs_rack": {
+   "refs": [
+    "STYLE",
+    "STYLEBG"
+   ],
+   "prompt": "Night, a small, tidy, sparse rented flat at night: warm lamp light, a rain-streaked window, a tiny kitchen corner. Close shot of a small wooden dish rack by the sink holding exactly two ceramic mugs: one chipped and well used, the other brand new and spotless. Warm lamp light, rain shadows from the window. No people."
+  },
+  "photo_wall": {
+   "refs": [
+    "STYLE",
+    "STYLEBG"
+   ],
+   "prompt": "Night, a small, tidy, sparse rented flat at night: warm lamp light, a rain-streaked window, a tiny kitchen corner. On a narrow bookshelf, a single small picture frame stands turned around so its back faces the room and the photo faces the wall. Warm lamp light, soft shadows, rain on the window behind. No people."
+  },
+  "kabir_kitchen": {
+   "refs": [
+    "STYLE",
+    "CK4",
+    "STYLEBG"
+   ],
+   "prompt": "Kabir, the same young man as the SECOND reference image with exactly the same face: messy black hair still damp, dark eyes, a black turtleneck (coat off), a vintage leather-strap watch. Night, a small, tidy, sparse rented flat at night: warm lamp light, a rain-streaked window, a tiny kitchen corner. Medium close-up: he stands in the tiny kitchen pouring tea, not quite looking at the camera, a quiet almost-smile, mouth closed."
+  },
+  "mira_mug": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Her hair is damp. Night, a small, tidy, sparse rented flat at night: warm lamp light, a rain-streaked window, a tiny kitchen corner. Medium close-up: she sits holding a warm mug of tea in both hands, and has just frozen, eyes widening, looking at someone off camera, unsettled, mouth closed."
+  },
+  "mira_eyes_close": {
+   "refs": [
+    "STYLE",
+    "CM4",
+    "STYLEBG"
+   ],
+   "prompt": "Mira, the same girl as the SECOND reference image with exactly the same face: long dark wavy hair, warm amber-brown eyes, a small coral flower hair clip, a cornflower-blue dress and a chunky red knit scarf. Night, a small, tidy, sparse rented flat at night: warm lamp light, a rain-streaked window, a tiny kitchen corner. Extreme close-up of her eyes and the top of a mug of tea, steam rising, her eyes wide, realising something frightening, warm lamp light reflected in them."
+  }
+ }
+}

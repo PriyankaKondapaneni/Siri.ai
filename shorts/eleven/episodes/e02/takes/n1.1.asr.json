@@ -1,0 +1,54 @@
+{
+ "duration": 3.92,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "e493736d-ed8b-4657-be6b-81567bdbcc20",
+ "segments": [
+  {
+   "end": 0.56,
+   "start": 0.08,
+   "text": "Six"
+  },
+  {
+   "end": 1.12,
+   "start": 0.56,
+   "text": "days"
+  },
+  {
+   "end": 1.92,
+   "start": 1.76,
+   "text": "That's"
+  },
+  {
+   "end": 2.32,
+   "start": 2.08,
+   "text": "all"
+  },
+  {
+   "end": 2.48,
+   "start": 2.32,
+   "text": "his"
+  },
+  {
+   "end": 2.8,
+   "start": 2.48,
+   "text": "last"
+  },
+  {
+   "end": 3.2,
+   "start": 2.8,
+   "text": "message"
+  },
+  {
+   "end": 3.52,
+   "start": 3.2,
+   "text": "gave"
+  },
+  {
+   "end": 3.76,
+   "start": 3.52,
+   "text": "him"
+  }
+ ],
+ "text": "Six days. That's all his last message gave him."
+}

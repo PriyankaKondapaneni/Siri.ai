@@ -1,0 +1,131 @@
+{
+ "episode": "e02",
+ "title": "The Umbrella",
+ "card": "6 DAYS LEFT",
+ "model": "eleven_v4",
+ "voices": {
+  "mira": "yj30vwTGJxSHezdAGsv9",
+  "mira_narr": "Z3R5wn05IrDiVCyEkUrK",
+  "kabir": "tzX5paJ07p5hyWFcU3uG"
+ },
+ "tempo": 1.0,
+ "cap": 0.45,
+ "gap": 0.3,
+ "lines": [
+  {
+   "id": "h0",
+   "who": "mira",
+   "kind": "narr",
+   "take": "cn2",
+   "from": 9,
+   "text": "From a night he hasn't lived yet.",
+   "gap": 0.06
+  },
+  {
+   "id": "n1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, steady] Six days. That's all his last message gave him."
+  },
+  {
+   "id": "n2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[dry, a little wry] And he'd left his umbrella behind in the rain."
+  },
+  {
+   "id": "n3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[thinking it through, matter-of-fact] A receipt in the strap. Same bakery. Same order. Six-twenty, every morning.",
+   "show": "A receipt in the strap. Same bakery. Same order. 6:20, every morning."
+  },
+  {
+   "id": "n4",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[dry, quietly certain] People who buy bread at the same hour every day don't live far from where they buy it."
+  },
+  {
+   "id": "bm1",
+   "who": "mira",
+   "kind": "live",
+   "text": "[plainly] You left this.",
+   "gap": 0.9
+  },
+  {
+   "id": "bk1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[softly, a little amazed] You followed a bus in the rain. For an umbrella."
+  },
+  {
+   "id": "bm2",
+   "who": "mira",
+   "kind": "live",
+   "text": "[dry, unimpressed] It looked expensive."
+  },
+  {
+   "id": "bk2",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[a small breath] It isn't."
+  },
+  {
+   "id": "bm3",
+   "who": "mira",
+   "kind": "live",
+   "text": "[simply, not backing down] Then it looked important."
+  },
+  {
+   "id": "bk3",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[quiet, careful] It was my brother's."
+  },
+  {
+   "id": "bn1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, piecing it together] The name stitched inside the strap said Arjun. Not his, then."
+  },
+  {
+   "id": "bk4",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[practical, kind] You're soaked. I'll make tea."
+  },
+  {
+   "id": "bm4",
+   "who": "mira",
+   "kind": "live",
+   "text": "[polite, a little awkward] You don't have to."
+  },
+  {
+   "id": "bk5",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[simply, warm] I know."
+  },
+  {
+   "id": "cn1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, observing] Two mugs on the rack, one never used. A photograph, turned to face the wall.",
+   "gap": 0.7
+  },
+  {
+   "id": "ck1",
+   "who": "kabir",
+   "kind": "live",
+   "text": "[quietly] Blue suits you."
+  },
+  {
+   "id": "cn2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, unsettled] He'd said that to me before. In a message. From a night he hasn't lived yet.",
+   "gap": 0.6
+  }
+ ]
+}

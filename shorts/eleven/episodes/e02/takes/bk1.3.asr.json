@@ -1,0 +1,59 @@
+{
+ "duration": 3.6,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "49906a74-d1aa-428b-96aa-1573d0dd1a84",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "You"
+  },
+  {
+   "end": 0.72,
+   "start": 0.24,
+   "text": "followed"
+  },
+  {
+   "end": 0.8,
+   "start": 0.72,
+   "text": "a"
+  },
+  {
+   "end": 1.28,
+   "start": 0.96,
+   "text": "bus"
+  },
+  {
+   "end": 1.36,
+   "start": 1.28,
+   "text": "in"
+  },
+  {
+   "end": 1.44,
+   "start": 1.36,
+   "text": "the"
+  },
+  {
+   "end": 2,
+   "start": 1.44,
+   "text": "rain"
+  },
+  {
+   "end": 2.72,
+   "start": 2.4,
+   "text": "for"
+  },
+  {
+   "end": 2.8,
+   "start": 2.72,
+   "text": "an"
+  },
+  {
+   "end": 3.52,
+   "start": 2.8,
+   "text": "umbrella"
+  }
+ ],
+ "text": "You followed a bus in the rain for an umbrella?"
+}

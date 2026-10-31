@@ -1,0 +1,24 @@
+{
+ "duration": 2,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "d9b00f6d-b9d2-4bb0-930b-1403e15a62b0",
+ "segments": [
+  {
+   "end": 0.32,
+   "start": 0.16,
+   "text": "It"
+  },
+  {
+   "end": 0.56,
+   "start": 0.32,
+   "text": "looked"
+  },
+  {
+   "end": 1.6,
+   "start": 0.56,
+   "text": "expensive"
+  }
+ ],
+ "text": "It looked expensive."
+}

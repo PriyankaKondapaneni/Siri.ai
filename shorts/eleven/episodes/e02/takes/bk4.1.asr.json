@@ -1,0 +1,34 @@
+{
+ "duration": 2.4,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "db40beb1-f1cf-4643-bbea-8d64cc40c68e",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0,
+   "text": "You're"
+  },
+  {
+   "end": 1.04,
+   "start": 0.24,
+   "text": "soaked"
+  },
+  {
+   "end": 1.52,
+   "start": 1.36,
+   "text": "I'll"
+  },
+  {
+   "end": 1.84,
+   "start": 1.52,
+   "text": "make"
+  },
+  {
+   "end": 2.16,
+   "start": 1.84,
+   "text": "tea"
+  }
+ ],
+ "text": "You're soaked. I'll make tea."
+}
