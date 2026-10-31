@@ -1,1 +1,14 @@
-{"shot00": "shot20_t1", "shot01": "shot21_t1", "shot02": "shot22b_t1"}
+{
+ "shot00": "shot20_t1",
+ "shot01": "shot21_t1",
+ "shot02": "shot22b_t1",
+ "shot03": 1,
+ "shot04": 1,
+ "shot05": 1,
+ "shot06a": 2,
+ "shot06b": 1,
+ "shot07": 1,
+ "shot08a": 1,
+ "shot08b": 1,
+ "shot09": 2
+}
