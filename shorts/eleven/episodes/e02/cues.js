@@ -28,8 +28,8 @@
       kIsnt: L('bk2').s - 0.1,
       wide: L('bm3').s - 0.15,
       brother: L('bk3').s - 0.1,
-      strapName: L('bn1').s - 0.1,
-      miraLook: W('bn1', 'not') - 0.15,
+      strapName: W('bn1', 'strap') - 0.6,
+      miraLook: W('bn1', 'arjun') + 0.45,
       door: L('bk4').s - 0.15,
       doorB: L('bm4').s - 0.15,
       // his flat

@@ -1,7 +1,7 @@
 {
- "shot00": "shot20_t1",
- "shot01": "shot21_t1",
- "shot02": "shot22b_t1",
+ "shot00": "shot21_t2",
+ "shot01": "shot22a_t1",
+ "shot02": "shot22b_t2",
  "shot03": 1,
  "shot05": 1,
  "shot06a": 2,
@@ -11,5 +11,20 @@
  "shot08b": 1,
  "shot09": 2,
  "shot04a": "shot04_t1",
- "shot04b": "shot01_t1"
+ "shot04b": "shot01_t1",
+ "shot10": 1,
+ "shot11": 1,
+ "shot12": 1,
+ "shot13": 2,
+ "shot14": 1,
+ "shot15": 1,
+ "shot16": 1,
+ "shot17": 1,
+ "shot18a": 1,
+ "shot18b": 1,
+ "shot19": 1,
+ "shot20": "shot90_t1",
+ "shot21": 2,
+ "shot22a": 2,
+ "shot22b": 1
 }

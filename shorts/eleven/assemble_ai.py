@@ -103,6 +103,15 @@ def upscale(tag, i):
     return out
 
 
+_gain = {}
+def line_gain(line):
+    """Scale a line's envelope so its own peak reads as fully open: a soft line would otherwise barely move the mouth."""
+    if line['id'] not in _gain:
+        seg = ENV['live'][int(line['s'] * 30):int(line['e'] * 30) + 1]
+        _gain[line['id']] = min(3.0, 0.8 / max(0.05, max(seg) if len(seg) else 1))
+    return _gain[line['id']]
+
+
 def ai_frame(tag, t):
     """Wan piece `tag` at episode time t (it may run a little past its end, for blends)."""
     fr, g = clip[tag], segs[tag]
@@ -118,7 +127,7 @@ def ai_frame(tag, t):
             ch, cw = clip[tag].shape[1:3]; s_up = max(W / cw, H / ch)
             ox, oy = (cw * s_up - W) / 2, (ch * s_up - H) / 2
             words = [w for w in TIMING['words'] if w['line'] == line['id']]
-            im = LS.paint(im, x * s_up - ox, y * s_up - oy, mw * sc * s_up, ang, LS.mouth_state(ENV['live'], words, t), cover=(cw0 * s_up, ch0 * s_up))
+            im = LS.paint(im, x * s_up - ox, y * s_up - oy, mw * sc * s_up, ang, LS.mouth_state(ENV['live'], words, t, gain=line_gain(line)), cover=(cw0 * s_up, ch0 * s_up))
     im = im * VIG
     gr = cv2.resize(GRAIN[int(t * 24) % 6], (W, H), interpolation=cv2.INTER_LINEAR)[..., None]
     return np.clip(im + gr, 0, 255)

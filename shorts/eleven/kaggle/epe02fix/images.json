@@ -1,0 +1,14 @@
+{
+ "model": "gpt-image-2",
+ "size": "1024x1536",
+ "quality": "medium",
+ "style": "Draw in exactly the same drawing style as the FIRST reference image: a simple, flat, hand-drawn webtoon doodle. Thin slightly uneven black ink outlines, flat solid colours with no shading and no gradients on the characters, big dark glossy eyes with two small white highlights and a few separate lash strokes, a tiny nose, a simple expressive mouth, a pale flat skin tone, hair as one flat dark shape with a few thin white highlight lines. The cheeks have only a soft, natural pink blush, with NO hatching lines, strokes or dashes on the cheeks. Full, properly proportioned arms with sleeves and simple cute cartoon hands; never stick-figure arms. The background is painted in the soft illustrated style of the LAST reference image: soft flat pastel colours, gentle texture, simple clean shapes, thin soft outlines, slightly muted. Vertical 9:16 film frame, the subject centred, cinematic composition with depth. No text, no letters, no numbers, no watermark.",
+ "images": {
+  "photo_wall_v2": {
+   "refs": [
+    "STYLEBG"
+   ],
+   "prompt": "A still life with NO people, NO characters, NO faces anywhere in the picture. Night, inside a small sparse rented flat lit by a warm lamp, rain on the dark window behind. Close-up of a narrow wooden bookshelf with a few books. On it stands one small wooden picture frame that has been turned around: we see only the plain brown cardboard back of the frame and its little fold-out stand, because the photo faces the wall. The turned-around frame is the clear subject, in the centre of the image. Soft lamp light, soft shadows."
+  }
+ }
+}

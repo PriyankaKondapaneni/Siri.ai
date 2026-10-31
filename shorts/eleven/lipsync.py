@@ -80,11 +80,11 @@ def vowel_at(words, t):
     return ''
 
 
-def mouth_state(env, words, t, on_twos=True):
+def mouth_state(env, words, t, on_twos=True, gain=1.0):
     """'' (closed), or (openness 1|2, vowel) for episode time t, held on twos like the rest of the animation."""
     if on_twos: t = np.floor(t * 12) / 12
     fr = int(round(t * 30))
-    v = max(env[fr] if fr < len(env) else 0, env[fr + 1] if fr + 1 < len(env) else 0)
+    v = gain * max(env[fr] if fr < len(env) else 0, env[fr + 1] if fr + 1 < len(env) else 0)
     if v <= 0.12: return ''
     return (2 if v > 0.45 else 1, vowel_at(words, t) or 'E')
 

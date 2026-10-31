@@ -1,0 +1,24 @@
+[
+ {
+  "id": "shot20_t1",
+  "frame": "frames/photo_wall_v2.png",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A still life with no people: a picture frame turned to face the wall on a bookshelf, warm lamp light, rain shadows drifting slowly down across the shelf. The camera holds still. Keep exactly the same flat colours and thin ink outlines. One continuous shot, no scene change, no people appear.",
+  "frames": 81,
+  "seed": 11,
+  "shot": 20,
+  "part": "",
+  "start": 52.440000000000005,
+  "end": 55.239999999999995
+ },
+ {
+  "id": "shot20_t2",
+  "frame": "frames/photo_wall_v2.png",
+  "prompt": "Anime animation in a flat, hand-drawn webtoon style. A still life with no people: a picture frame turned to face the wall on a bookshelf, warm lamp light, rain shadows drifting slowly down across the shelf. The camera holds still. Keep exactly the same flat colours and thin ink outlines. One continuous shot, no scene change, no people appear.",
+  "frames": 81,
+  "seed": 2026,
+  "shot": 20,
+  "part": "",
+  "start": 52.440000000000005,
+  "end": 55.239999999999995
+ }
+]
