@@ -20,6 +20,7 @@ OUT = sys.argv[4] if len(sys.argv) > 4 else f'build/ep{EP}ai/11-11-episode-{EP}-
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DELIVER = f'{ROOT}/deliver/11-11-episode-{EP}.mp4'
 W, H, FPS, DISSOLVE = 1080, 1920, 30, 0.35
+SKIP = 6  # Wan frames to drop at the start of each clip
 
 shots = json.load(open(f'{ROOT}/episodes/{EP}/shots.json'))['shots']  # [s, e, look, transition, ...]
 jobs = json.load(open(f'{ROOT}/kaggle/ep{EP}/jobs.json'))
@@ -51,6 +52,7 @@ for j in jobs:
 clip = {}
 for tag, g in sorted(segs.items(), key=lambda x: x[1]['s']):
     take = int(PICKS.get(tag, PICKS.get(str(g['shot']), 1)))
+    if take == 0: print(f'{tag}: kept as the code shot'); continue
     path = f'{CLIPS}/{tag}_t{take}.mp4'
     if not os.path.exists(path):
         alt = f'{CLIPS}/{tag}_t{3 - take}.mp4'
@@ -89,9 +91,10 @@ def upscale(tag, i):
 def ai_frame(tag, t):
     """Wan piece `tag` at episode time t (it may run a little past its end, for blends)."""
     fr, g = clip[tag], segs[tag]
-    have = len(fr) / 24
+    # skip the first quarter second, where Wan is still settling from the start frame into its own drawing
+    have = (len(fr) - SKIP) / 24
     rate = min(1.0, have / max(0.01, g['e'] - g['s'] + DISSOLVE))  # slow it slightly when the clip is short
-    i = int(np.clip(round((t - g['s']) * rate * 24), 0, len(fr) - 1))
+    i = int(np.clip(SKIP + round((t - g['s']) * rate * 24), 0, len(fr) - 1))
     im = upscale(tag, i).astype(np.float32) * VIG
     gr = cv2.resize(GRAIN[int(t * 24) % 6], (W, H), interpolation=cv2.INTER_LINEAR)[..., None]
     return np.clip(im + gr, 0, 255)
