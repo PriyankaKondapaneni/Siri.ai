@@ -9,7 +9,7 @@ Dissolves into or out of a Wan shot cross-fade over 0.35 s.
   python3 assemble_ai.py 02 <clips_dir> [picks.json] [out.mp4]
 picks.json maps shot number to take ({"9": 2}); take 1 by default.
 """
-import json, os, subprocess, sys
+import json, os, re, subprocess, sys
 import numpy as np
 import cv2
 
@@ -72,8 +72,9 @@ for tag, g in sorted(segs.items(), key=lambda x: x[1]['s']):
     cw, ch = clip_size(path)
     clip[tag] = read_all(path, cw, ch)  # kept small; upscaled frame by frame when used
     print(f"{tag}: {os.path.basename(path)} {len(clip[tag])} frames ({len(clip[tag]) / 24:.2f} s) for {g['e'] - g['s']:.2f} s")
-    if tag in TALK and tag in MOUTHS:
-        v = MOUTHS[tag]; (mx, my), sc0 = LS.start_to_clip(v['cx'], v['cy'], cw, ch)
+    mkey = re.match(r'shot\d+[ab]?', os.path.basename(path)).group()  # the start frame this clip grew from
+    if tag in TALK and mkey in MOUTHS:
+        v = MOUTHS[mkey]; (mx, my), sc0 = LS.start_to_clip(v['cx'], v['cy'], cw, ch)
         mw = v['w'] * sc0
         mouth_path[tag] = (LS.refine(clip[tag], LS.track(clip[tag], mx, my, mw), mw), mw)
 ai_shots = {segs[t]['shot'] for t in clip}
@@ -113,11 +114,11 @@ def ai_frame(tag, t):
     if tag in mouth_path:
         line = next(l for l in TIMING['lines'] if l['id'] == TALK[tag])
         if line['s'] - 0.04 <= t <= line['e'] + 0.08:
-            (x, y, sc, ang), mw = mouth_path[tag][0][i], mouth_path[tag][1]
+            (x, y, sc, ang, cw0, ch0), mw = mouth_path[tag][0][i], mouth_path[tag][1]
             ch, cw = clip[tag].shape[1:3]; s_up = max(W / cw, H / ch)
             ox, oy = (cw * s_up - W) / 2, (ch * s_up - H) / 2
             words = [w for w in TIMING['words'] if w['line'] == line['id']]
-            im = LS.paint(im, x * s_up - ox, y * s_up - oy, mw * sc * s_up, ang, LS.mouth_state(ENV['live'], words, t))
+            im = LS.paint(im, x * s_up - ox, y * s_up - oy, mw * sc * s_up, ang, LS.mouth_state(ENV['live'], words, t), cover=(cw0 * s_up, ch0 * s_up))
     im = im * VIG
     gr = cv2.resize(GRAIN[int(t * 24) % 6], (W, H), interpolation=cv2.INTER_LINEAR)[..., None]
     return np.clip(im + gr, 0, 255)

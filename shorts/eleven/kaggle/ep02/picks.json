@@ -1,3 +1,8 @@
-{"shot03": 2, "shot06": 1, "shot08": 1, "shot09a": 2, "shot09b": 2, "shot10": 1, "shot11": 1, "shot12": 1,
- "shot13": 2, "shot15": 2, "shot16": 1, "shot18": 2, "shot22a": 2, "shot22b": 1, "shot23": 0, "shot24": 1,
- "shot27": 2, "shot32": 2}
+{"shot01": "shot01_t1", "shot02": 0, "shot03": "shot03_t2", "shot05a": "shot05a_t2", "shot05b": "shot05b_t1",
+ "shot06": "shot06_t1", "shot08": "shot08_t1",
+ "shot09a": "shot09b_m_t1", "shot09b": "shot09b_m_t2",
+ "shot10": "shot10_t1", "shot11": "shot11_t1", "shot12": "shot12_m_t1", "shot13": "shot13_t2",
+ "shot14": "shot14_t1", "shot15": "shot15_t2", "shot16": "shot16_m_t1", "shot17a": "shot17a_t1", "shot17b": "shot17b_t2",
+ "shot18": "shot18_t2", "shot19": "shot19_t1", "shot20": "shot20_t1", "shot21a": "shot21a_t2", "shot21b": "shot21b_t1",
+ "shot22a": "shot22a_m_t2", "shot22b": "shot22b_m_t2", "shot23": "shot23_t1", "shot24": "shot24_t1", "shot25": "shot25_t2",
+ "shot27": "shot27_t2", "shot29": 0, "shot32": "shot32_t2"}

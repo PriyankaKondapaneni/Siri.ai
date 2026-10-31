@@ -102,13 +102,15 @@ def skin_tone(img, x, y, r):
     return np.median(px, 0)
 
 
-def paint(img, x, y, mw, ang, state, alpha=1.0):
-    """Paint a mouth on img (float RGB, output resolution) centred at (x, y), width mw, tilted by ang."""
-    skin = skin_tone(img, x, y, mw * 0.5)
+def paint(img, x, y, mw, ang, state, alpha=1.0, cover=(0, 0)):
+    """Paint a mouth on img (float RGB, output resolution) centred at (x, y), width mw, tilted by ang.
+    cover: the size of the mouth Wan drew there (output pixels), so the patch hides all of it."""
+    skin = skin_tone(img, x, y, max(mw * 0.5, cover[0] * 0.6))
     layer = img.copy()
     # cover what Wan drew there with the face's own tone, feathered
     patch = np.zeros(img.shape[:2], np.float32)
-    cv2.ellipse(patch, (int(x), int(y + mw * 0.05)), (int(mw * 0.72), int(mw * 0.5)), np.degrees(ang), 0, 360, 1.0, -1)
+    ax, ay = max(mw * 0.72, cover[0] * 0.62 + mw * 0.12), max(mw * 0.5, cover[1] * 0.62 + mw * 0.12)
+    cv2.ellipse(patch, (int(x), int(y + mw * 0.05)), (int(ax), int(ay)), np.degrees(ang), 0, 360, 1.0, -1)
     patch = cv2.GaussianBlur(patch, (0, 0), mw * 0.08)[..., None]
     layer = layer * (1 - patch) + skin[None, None, :] * patch
     lw = max(2, int(round(mw * 0.06)))
@@ -153,27 +155,39 @@ def refine(frames, path, mw):
     for f, (x, y, sc, a) in zip(frames, path):
         h, w = f.shape[:2]
         r = mw * sc
-        x0, x1 = int(max(0, x - 0.9 * r)), int(min(w, x + 0.9 * r))
-        y0, y1 = int(max(0, y - 0.55 * r)), int(min(h, y + 0.9 * r))
+        x0, x1 = int(max(0, x - 1.2 * r)), int(min(w, x + 1.2 * r))
+        y0, y1 = int(max(0, y - 0.6 * r)), int(min(h, y + 1.6 * r))
         win = f[y0:y1, x0:x1].astype(np.float32)
-        if win.size == 0: out.append((x, y, sc, a)); continue
+        if win.size == 0: out.append((x, y, sc, a, 0, 0)); continue
         lum = win.mean(2)
         skin = np.percentile(lum, 70)
-        red = (win[..., 0] - win[..., 1] > 45) & (win[..., 0] > 90)
-        dark = lum < skin * 0.62
-        m = ((red | dark) * 255).astype(np.uint8)
-        n, lab, st, cen = cv2.connectedComponentsWithStats(m, 8)
+        # the inside of a mouth: a deeper, darker red than warm-lit skin
+        red = (win[..., 0] - win[..., 1] > 70) & (win[..., 1] < 140) & (lum < skin * 0.9) & (win[..., 0] > 90)
         best, bd = None, 1e9
+        # an open mouth first: its red inside, wherever it is near the prediction (a turned head drags it sideways)
+        n, lab, st, cen = cv2.connectedComponentsWithStats(red.astype(np.uint8) * 255, 8)
         for i in range(1, n):
             bx, by, bw, bh, area = st[i]
-            if area < 4 or bw < 0.18 * r or bw > 1.6 * r: continue
-            if bx == 0 or by == 0 or bx + bw >= x1 - x0 or by + bh >= y1 - y0: continue  # touches the window: hair, chin, collar
+            if area < 0.02 * r * r or bw > 2.4 * r: continue
             cx, cy = cen[i]
-            d = np.hypot(cx + x0 - x, (cy + y0 - y) * 1.5)
-            if d < bd: best, bd = (cx + x0, cy + y0), d
-        out.append((best[0], best[1], sc, a) if best and bd < 0.7 * r else (x, y, sc, a))
+            d = np.hypot(cx + x0 - x, (cy + y0 - y - 0.25 * r) * 1.2)
+            if d < bd: best, bd = (cx + x0, by + y0 + bh * 0.45, bw * 1.25, bh * 1.35), d
+        if not best:
+            dark = lum < skin * 0.62
+            n, lab, st, cen = cv2.connectedComponentsWithStats((dark * 255).astype(np.uint8), 8)
+            for i in range(1, n):
+                bx, by, bw, bh, area = st[i]
+                if area < 4 or bw < 0.18 * r or bw > 2.0 * r or bh > 1.6 * r: continue
+                if bx == 0 or by == 0 or bx + bw >= x1 - x0 or by + bh >= y1 - y0: continue  # touches the window: hair, chin, collar
+                cx, cy = cen[i]
+                d = np.hypot(cx + x0 - x, (cy + y0 - y) * 1.5)
+                if d < bd: best, bd = (cx + x0, cy + y0, bw, bh), d
+        out.append((best[0], best[1], sc, a, best[2], best[3]) if best and bd < 1.0 * r else (x, y, sc, a, 0, 0))
     a = np.array(out)
     k = np.array([1, 2, 3, 2, 1], float); k /= k.sum()
     for c in range(2):
         pad = np.pad(a[:, c], 2, mode='edge'); a[:, c] = np.convolve(pad, k, mode='valid')
+    # the cover patch must hide whatever Wan drew: keep the largest drawn size over a few frames
+    for c in (4, 5):
+        a[:, c] = np.maximum.reduce([np.roll(a[:, c], d) for d in (-2, -1, 0, 1, 2)])
     return [tuple(r) for r in a]
