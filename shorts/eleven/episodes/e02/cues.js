@@ -18,25 +18,21 @@
       shelter: W('n2', 'left') - 0.2,
       receipt: L('n3').s - 0.15,
       receiptB: W('n3', 'same') - 0.1,
-      think: W('n3', '6:20') - 0.35,
-      lane: L('n4').s - 0.15,
-      building: W('n4', "don't") - 0.1,
-      steps: W('n5', 'he') - 0.15,                   // "He was sitting on his steps..."
+      think: L('n4').s - 0.15,
+      lane: W('n4', "don't") - 0.1,
+      laneB: L('n5').s - 0.1,                       // "So I walked every lane around it."
+      building: W('n5', 'almost') - 0.15,
+      steps: W('n5', 'there') - 0.15,               // "...there he was. Waiting, like he knew."
       handover: L('bm1').s - 0.35,
       kTalk: L('bk1').s - 0.15,
-      kTake: L('bm2').s - 0.15,
-      kIsnt: L('bk2').s - 0.1,
-      wide: L('bm3').s - 0.15,
       brother: L('bk3').s - 0.1,
       strapName: W('bn1', 'strap') - 0.6,
-      miraLook: W('bn1', 'arjun') + 0.45,
       door: L('bk4').s - 0.15,
-      doorB: L('bm4').s - 0.15,
       photo: L('cn1').s - 0.3,
       kitchen: L('ck1').s - 0.2,
       mug: L('ck1').e + 0.2,
       mugB: W('cn2', 'in') - 0.1,
-      buzz: L('en1').s - 0.25,                       // the new message
+      buzz: L('en2').s - 0.95,                      // the new message
       him: W('en2', 'from') - 0.15,
       her: W('en3', 'he', 1) - 0.15,                 // "He hadn't touched his phone."
       endCard: end + 0.35,
@@ -56,7 +52,7 @@
       [c.steps - 0.02, 'tickTock', -20, 0],
       [c.steps + 0.25, 'heartbeat', -16, 0],
       [c.handover + 0.15, 'clothShift', -19, 0.1],
-      [c.kTake + 0.2, 'grab', -21, 0],
+      [c.kTalk + 0.3, 'grab', -21, 0],
       [c.strapName + 0.3, 'shimmer', -21, 0],
       [c.door + 0.4, 'cafeDoor', -20, 0.2],
       [c.photo + 0.2, 'cupTip', -24, -0.2],

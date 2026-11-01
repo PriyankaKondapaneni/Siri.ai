@@ -1,8 +1,8 @@
 {
- "duration": 6.24,
+ "duration": 4.8,
  "language": "English",
  "language_code": "en",
- "request_id": "1cf14d84-e4e5-4618-bafa-9c126d33535c",
+ "request_id": "58fb1415-5b0f-404d-ac5a-37aeb04b3f0e",
  "segments": [
   {
    "end": 0.16,
@@ -20,55 +20,45 @@
    "text": "in"
   },
   {
-   "end": 0.88,
+   "end": 0.8,
    "start": 0.8,
    "text": "the"
   },
   {
-   "end": 1.6,
-   "start": 0.88,
+   "end": 1.44,
+   "start": 0.8,
    "text": "strap"
   },
   {
    "end": 2.32,
-   "start": 1.92,
+   "start": 1.84,
    "text": "Same"
   },
   {
-   "end": 3.04,
+   "end": 2.88,
    "start": 2.32,
    "text": "bakery"
   },
   {
-   "end": 3.6,
-   "start": 3.2,
-   "text": "same"
-  },
-  {
-   "end": 4.08,
-   "start": 3.6,
-   "text": "order"
-  },
-  {
-   "end": 4.72,
-   "start": 4.48,
+   "end": 3.28,
+   "start": 2.96,
    "text": "6"
   },
   {
-   "end": 5.2,
-   "start": 4.72,
+   "end": 3.84,
+   "start": 3.28,
    "text": "20"
   },
   {
-   "end": 5.6,
-   "start": 5.36,
+   "end": 4.24,
+   "start": 3.92,
    "text": "every"
   },
   {
-   "end": 6.08,
-   "start": 5.6,
+   "end": 4.72,
+   "start": 4.24,
    "text": "morning"
   }
  ],
- "text": "A receipt in the strap. Same bakery, same order. 6:20 every morning."
+ "text": "A receipt in the strap. Same bakery, 6:20 every morning."
 }

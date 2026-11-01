@@ -1,89 +1,89 @@
 {
- "duration": 5.92,
+ "duration": 7.6,
  "language": "English",
  "language_code": "en",
- "request_id": "95a42de4-2b0c-4596-876c-a7e87cbbd419",
+ "request_id": "4665d5a0-732b-4d6c-a761-d771b69628ae",
  "segments": [
   {
-   "end": 0.24,
+   "end": 0.4,
    "start": 0.16,
-   "text": "It"
+   "text": "So"
   },
   {
-   "end": 0.48,
-   "start": 0.32,
-   "text": "was"
+   "end": 0.56,
+   "start": 0.4,
+   "text": "I"
   },
   {
-   "end": 0.96,
-   "start": 0.48,
-   "text": "almost"
+   "end": 1.04,
+   "start": 0.56,
+   "text": "walked"
   },
   {
    "end": 1.52,
-   "start": 1.04,
+   "start": 1.12,
+   "text": "every"
+  },
+  {
+   "end": 1.84,
+   "start": 1.52,
+   "text": "lane"
+  },
+  {
+   "end": 2.24,
+   "start": 1.84,
+   "text": "around"
+  },
+  {
+   "end": 2.56,
+   "start": 2.24,
+   "text": "it"
+  },
+  {
+   "end": 3.44,
+   "start": 3.04,
+   "text": "Almost"
+  },
+  {
+   "end": 4,
+   "start": 3.44,
    "text": "11"
   },
   {
-   "end": 2.4,
-   "start": 2.24,
-   "text": "He"
+   "end": 4.64,
+   "start": 4.4,
+   "text": "there"
   },
   {
-   "end": 2.48,
-   "start": 2.4,
-   "text": "was"
-  },
-  {
-   "end": 2.88,
-   "start": 2.56,
-   "text": "sitting"
-  },
-  {
-   "end": 3.04,
-   "start": 2.88,
-   "text": "on"
-  },
-  {
-   "end": 3.12,
-   "start": 3.04,
-   "text": "his"
-  },
-  {
-   "end": 3.76,
-   "start": 3.12,
-   "text": "steps"
-  },
-  {
-   "end": 4.32,
-   "start": 4.24,
-   "text": "like"
-  },
-  {
-   "end": 4.48,
-   "start": 4.32,
+   "end": 4.72,
+   "start": 4.64,
    "text": "he"
   },
   {
-   "end": 4.64,
-   "start": 4.48,
+   "end": 5.28,
+   "start": 4.72,
    "text": "was"
   },
   {
-   "end": 5.04,
-   "start": 4.72,
+   "end": 6.24,
+   "start": 5.76,
    "text": "waiting"
   },
   {
-   "end": 5.2,
-   "start": 5.04,
-   "text": "for"
+   "end": 6.96,
+   "start": 6.72,
+   "text": "like"
   },
   {
-   "end": 5.68,
-   "start": 5.2,
-   "text": "someone"
+   "end": 7.04,
+   "start": 6.96,
+   "text": "he"
+  },
+  {
+   "end": 7.36,
+   "start": 7.04,
+   "text": "knew"
   }
  ],
- "text": "It was almost 11. He was sitting on his steps, like he was waiting for someone."
+ "text": "So I walked every lane around it. Almost 11, there he was, waiting, like he knew."
 }
