@@ -1,0 +1,89 @@
+{
+ "duration": 5.92,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "95a42de4-2b0c-4596-876c-a7e87cbbd419",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.16,
+   "text": "It"
+  },
+  {
+   "end": 0.48,
+   "start": 0.32,
+   "text": "was"
+  },
+  {
+   "end": 0.96,
+   "start": 0.48,
+   "text": "almost"
+  },
+  {
+   "end": 1.52,
+   "start": 1.04,
+   "text": "11"
+  },
+  {
+   "end": 2.4,
+   "start": 2.24,
+   "text": "He"
+  },
+  {
+   "end": 2.48,
+   "start": 2.4,
+   "text": "was"
+  },
+  {
+   "end": 2.88,
+   "start": 2.56,
+   "text": "sitting"
+  },
+  {
+   "end": 3.04,
+   "start": 2.88,
+   "text": "on"
+  },
+  {
+   "end": 3.12,
+   "start": 3.04,
+   "text": "his"
+  },
+  {
+   "end": 3.76,
+   "start": 3.12,
+   "text": "steps"
+  },
+  {
+   "end": 4.32,
+   "start": 4.24,
+   "text": "like"
+  },
+  {
+   "end": 4.48,
+   "start": 4.32,
+   "text": "he"
+  },
+  {
+   "end": 4.64,
+   "start": 4.48,
+   "text": "was"
+  },
+  {
+   "end": 5.04,
+   "start": 4.72,
+   "text": "waiting"
+  },
+  {
+   "end": 5.2,
+   "start": 5.04,
+   "text": "for"
+  },
+  {
+   "end": 5.68,
+   "start": 5.2,
+   "text": "someone"
+  }
+ ],
+ "text": "It was almost 11. He was sitting on his steps, like he was waiting for someone."
+}

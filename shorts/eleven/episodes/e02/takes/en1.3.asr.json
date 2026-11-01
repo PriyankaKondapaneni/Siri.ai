@@ -1,0 +1,29 @@
+{
+ "duration": 2.4,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "0bd3227b-5689-4b1a-be9a-15195fccc2f5",
+ "segments": [
+  {
+   "end": 0.72,
+   "start": 0.32,
+   "text": "Then"
+  },
+  {
+   "end": 1.04,
+   "start": 0.88,
+   "text": "my"
+  },
+  {
+   "end": 1.52,
+   "start": 1.04,
+   "text": "phone"
+  },
+  {
+   "end": 2,
+   "start": 1.52,
+   "text": "buzzed"
+  }
+ ],
+ "text": "Then, my phone buzzed."
+}

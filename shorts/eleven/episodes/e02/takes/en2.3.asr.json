@@ -1,0 +1,44 @@
+{
+ "duration": 4.24,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "29ba9027-8a87-4411-83ce-a00d7f6b4dde",
+ "segments": [
+  {
+   "end": 0.8,
+   "start": 0.24,
+   "text": "11"
+  },
+  {
+   "end": 1.36,
+   "start": 0.8,
+   "text": "11"
+  },
+  {
+   "end": 1.36,
+   "start": 1.36,
+   "text": "A"
+  },
+  {
+   "end": 2.4,
+   "start": 2.16,
+   "text": "new"
+  },
+  {
+   "end": 3.04,
+   "start": 2.4,
+   "text": "message"
+  },
+  {
+   "end": 3.68,
+   "start": 3.36,
+   "text": "from"
+  },
+  {
+   "end": 4.08,
+   "start": 3.68,
+   "text": "him"
+  }
+ ],
+ "text": "11:11. A new message from him."
+}

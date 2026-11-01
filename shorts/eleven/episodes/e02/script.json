@@ -10,22 +10,22 @@
  },
  "tempo": 1.0,
  "cap": 0.45,
- "gap": 0.3,
+ "gap": 0.25,
  "lines": [
   {
    "id": "h0",
-   "who": "mira",
-   "kind": "narr",
-   "take": "cn2",
-   "from": 9,
-   "text": "From a night he hasn't lived yet.",
+   "who": "kabir",
+   "kind": "note",
+   "text": "[almost a whisper, holding back] In seven days... I don't make it.",
    "gap": 0.06
   },
   {
    "id": "n1",
    "who": "mira",
    "kind": "narr",
-   "text": "[low, steady] Six days. That's all his last message gave him."
+   "text": "Six days.",
+   "take": "n1",
+   "to": 2
   },
   {
    "id": "n2",
@@ -45,6 +45,13 @@
    "who": "mira",
    "kind": "narr",
    "text": "[dry, quietly certain] People who buy bread at the same hour every day don't live far from where they buy it."
+  },
+  {
+   "id": "n5",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, tense] It was almost eleven. He was sitting on his steps... like he was waiting for someone.",
+   "gap": 0.45
   },
   {
    "id": "bm1",
@@ -111,8 +118,10 @@
    "id": "cn1",
    "who": "mira",
    "kind": "narr",
-   "text": "[low, observing] Two mugs on the rack, one never used. A photograph, turned to face the wall.",
-   "gap": 0.7
+   "text": "A photograph, turned to face the wall.",
+   "gap": 0.7,
+   "take": "cn1",
+   "from": 7
   },
   {
    "id": "ck1",
@@ -126,6 +135,25 @@
    "kind": "narr",
    "text": "[low, unsettled] He'd said that to me before. In a message. From a night he hasn't lived yet.",
    "gap": 0.6
+  },
+  {
+   "id": "en1",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[quiet, a chill creeping in] Then my phone buzzed.",
+   "gap": 0.7
+  },
+  {
+   "id": "en2",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[barely steady] Eleven eleven. A new message. From him."
+  },
+  {
+   "id": "en3",
+   "who": "mira",
+   "kind": "narr",
+   "text": "[low, frightened] He was standing right in front of me. He hadn't touched his phone."
   }
  ]
 }

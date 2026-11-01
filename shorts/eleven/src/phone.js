@@ -60,10 +60,10 @@
         if (o.emptyText && !(o.msgs || []).length) { ctx.fillStyle = 'rgba(200,210,240,0.45)'; ctx.font = '500 32px Inter'; ctx.textAlign = 'center'; ctx.fillText(o.emptyText, W / 2, H / 2 + 40); ctx.textAlign = 'left'; }
         // messages: newest at the bottom
         let by = H - 120;
-        const shown = (o.msgs || []).filter((m) => t >= m.s - 0.5);
+        const shown = (o.msgs || []).filter((m) => t >= (m.show ?? m.s - 0.5));
         for (let i = shown.length - 1; i >= 0; i--) {
           const m = shown[i];
-          const age = t - (m.s - 0.5);
+          const age = t - (m.show ?? m.s - 0.5);
           const pop = PP.ease.outBack(PP.clamp(age / 0.3), 1.8);
           ctx.font = '500 30px Inter';
           const lines = wrap(ctx, m.text, W - 160);
@@ -77,8 +77,8 @@
             ctx.fillStyle = m.urgent ? '#4a1418' : '#202a40';
             ctx.fill();
             // play button and waveform: bars light up as the message plays
-            const playing = t >= m.s && t < m.e;
-            const prog = PP.clamp((t - m.s) / (m.e - m.s));
+            const playing = !m.idle && t >= m.s && t < m.e; // idle: a new message that hasn't been played
+            const prog = m.idle ? 0 : PP.clamp((t - m.s) / (m.e - m.s));
             ctx.fillStyle = m.urgent ? '#ff6b6b' : '#7fb2ff';
             ctx.beginPath(); ctx.arc(bx + 62, top + 70, 34, 0, 7); ctx.fill();
             ctx.fillStyle = '#0d1018';
@@ -88,7 +88,7 @@
             for (let k = 0; k < nb; k++) {
               const tk = m.s + ((k + 0.5) / nb) * (m.e - m.s);
               const fr = Math.round(tk * 30);
-              const live = Math.max(ENV.note[fr] || 0, ENV.note[fr + 1] || 0);
+              const live = m.idle ? 0.2 + 0.55 * Math.abs(Math.sin(k * 1.9 + 0.7) * Math.cos(k * 0.6)) : Math.max(ENV.note[fr] || 0, ENV.note[fr + 1] || 0);
               const hgt = 8 + live * 52 + (playing && Math.abs(k / nb - prog) < 0.04 ? 6 : 0);
               ctx.fillStyle = k / nb <= prog ? (m.urgent ? '#ff8a8a' : '#a9ccff') : 'rgba(180,195,230,0.35)';
               roundRect(ctx, x0 + (k * span) / nb, top + 70 - hgt / 2, (span / nb) * 0.6, hgt, 3);

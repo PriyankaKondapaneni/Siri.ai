@@ -1,0 +1,74 @@
+{
+ "duration": 4.48,
+ "language": "English",
+ "language_code": "en",
+ "request_id": "dec19c71-e995-451f-b10f-e6848879597b",
+ "segments": [
+  {
+   "end": 0.24,
+   "start": 0.08,
+   "text": "He"
+  },
+  {
+   "end": 0.4,
+   "start": 0.32,
+   "text": "was"
+  },
+  {
+   "end": 0.96,
+   "start": 0.4,
+   "text": "standing"
+  },
+  {
+   "end": 1.28,
+   "start": 1.12,
+   "text": "right"
+  },
+  {
+   "end": 1.44,
+   "start": 1.28,
+   "text": "in"
+  },
+  {
+   "end": 1.68,
+   "start": 1.44,
+   "text": "front"
+  },
+  {
+   "end": 1.84,
+   "start": 1.68,
+   "text": "of"
+  },
+  {
+   "end": 2.16,
+   "start": 1.84,
+   "text": "me"
+  },
+  {
+   "end": 2.88,
+   "start": 2.72,
+   "text": "He"
+  },
+  {
+   "end": 3.2,
+   "start": 2.88,
+   "text": "hadn't"
+  },
+  {
+   "end": 3.6,
+   "start": 3.2,
+   "text": "touched"
+  },
+  {
+   "end": 3.68,
+   "start": 3.6,
+   "text": "his"
+  },
+  {
+   "end": 4.08,
+   "start": 3.68,
+   "text": "phone"
+  }
+ ],
+ "text": "He was standing right in front of me. He hadn't touched his phone."
+}
